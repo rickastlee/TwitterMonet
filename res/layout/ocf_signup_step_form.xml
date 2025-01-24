@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="start"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <include
+        layout="@layout/ocf_top_toolbar" />
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:fillViewport="true"
+        android:layout_weight="1.0">
+        <RelativeLayout
+            android:paddingBottom="@dimen/ocf_screen_padding_wide"
+            android:focusableInTouchMode="true"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/ocf_screen_padding_wide"
+            android:paddingEnd="@dimen/ocf_screen_padding_wide">
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:id="@id/primary_text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ocf_standard_spacing"
+                android:maxLines="2"
+                style="@style/OcfTitle3Text" />
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:id="@id/form_container"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@id/primary_text">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@id/name_field"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/OcfTextInputLayout">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@id/name_edit_text"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/OcfTextInputEditText" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@id/phone_or_email_field"
+                    android:paddingBottom="2.0dip"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/OcfTextInputLayout">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@id/phone_or_email_edit_text"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/OcfTextInputEditText" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@id/birthday_field"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:windowSoftInputMode="adjustNothing|stateAlwaysHidden"
+                    style="@style/OcfTextInputLayout">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@id/birthday_edit_text"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/OcfTextInputEditText" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+    <include
+        layout="@layout/ocf_signup_step_form_bottom_nav" />
+    <com.twitter.ui.view.TwitterSafeDefaultsWebView
+        android:id="@id/tim_webview"
+        android:visibility="gone"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip" />
+</LinearLayout>

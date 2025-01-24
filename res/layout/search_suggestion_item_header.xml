@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:background="@drawable/suggestion_row_background"
+    android:descendantFocusability="blocksDescendants"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:importantForAccessibility="yes"
+    android:paddingStart="@dimen/search_suggestion_padding"
+    android:paddingEnd="@dimen/space_4"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/suggestion_header"
+        android:paddingTop="@dimen/search_suggestion_header_text_padding"
+        android:paddingBottom="@dimen/search_suggestion_header_text_padding"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:textDirection="locale"
+        style="?searchSuggestionItemHeaderStyle" />
+    <ImageView
+        android:id="@id/clear"
+        android:padding="@dimen/clear_icon_padding"
+        android:layout_width="@dimen/clear_icon_size"
+        android:layout_height="@dimen/clear_icon_size"
+        android:src="@drawable/vector_close_circle_fill"
+        android:contentDescription="@string/button_clear"
+        app:tint="?coreColorInlineAction" />
+</LinearLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_gravity="end|center|top"
+            android:id="@id/stop_broadcasting"
+            android:nextFocusDown="@id/swap_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ps__ic_close"
+            android:contentDescription="@string/ps__accessibility_stop_broadcast"
+            android:layout_marginEnd="@dimen/ps__standard_spacing_16"
+            android:accessibilityTraversalBefore="@id/swap_camera"
+            style="@style/ps__AccessibilityControlBtn" />
+        <ImageView
+            android:layout_gravity="end|center|top"
+            android:id="@id/swap_camera"
+            android:nextFocusUp="@id/stop_broadcasting"
+            android:nextFocusDown="@id/broadcaster_info_panel_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20.0dip"
+            android:src="@drawable/ps__ic_cameraflip"
+            android:contentDescription="@string/ps__accessibility_flip_camera"
+            android:layout_marginEnd="@dimen/ps__standard_spacing_16"
+            android:accessibilityTraversalAfter="@id/stop_broadcasting"
+            style="@style/ps__AccessibilityControlBtn" />
+        <ImageView
+            android:layout_gravity="end|center|top"
+            android:id="@id/broadcaster_info_panel_btn"
+            android:nextFocusUp="@id/swap_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20.0dip"
+            android:src="@drawable/ps__ic_information_outline"
+            android:contentDescription="@string/ps__accessibility_show_broadcast_info"
+            android:layout_marginEnd="@dimen/ps__standard_spacing_16"
+            android:accessibilityTraversalAfter="@id/swap_camera"
+            style="@style/ps__AccessibilityControlBtn" />
+    </LinearLayout>
+</ScrollView>

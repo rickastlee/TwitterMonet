@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <ScrollView
+        android:id="@id/scrollView2"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        twitter:layout_constraintBottom_toTopOf="@id/create_button"
+        twitter:layout_constraintStart_toStartOf="parent"
+        twitter:layout_constraintTop_toTopOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:paddingBottom="5.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <com.twitter.ui.components.inlinecallout.HorizonInlineCalloutView
+                android:id="@id/delegate_account_banner"
+                android:visibility="gone"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_12"
+                android:layout_marginBottom="@dimen/space_12"
+                android:layout_marginStart="@dimen/space_16"
+                android:layout_marginEnd="@dimen/space_16"
+                twitter:layout_constraintBottom_toTopOf="@id/list_banner_layout"
+                twitter:layout_constraintEnd_toEndOf="parent"
+                twitter:layout_constraintStart_toStartOf="parent"
+                twitter:layout_constraintTop_toTopOf="parent" />
+            <include
+                android:id="@id/list_banner_layout"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                twitter:layout_constraintBottom_toTopOf="@id/name"
+                twitter:layout_constraintEnd_toEndOf="parent"
+                twitter:layout_constraintStart_toStartOf="parent"
+                layout="@layout/list_banner" />
+            <com.twitter.ui.widget.TwitterEditText
+                android:id="@id/name"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5.0dip"
+                android:hint="@string/list_create_name_hint"
+                android:inputType="textAutoCorrect|textCapSentences"
+                android:paddingHorizontal="@dimen/list_row_padding_horizontal"
+                twitter:labelText="@string/create_edit_list_name_label"
+                twitter:layout_constraintBottom_toTopOf="@id/description"
+                twitter:layout_constraintEnd_toEndOf="parent"
+                twitter:layout_constraintStart_toStartOf="parent"
+                style="@style/TwitterEditText">
+                <tag
+                    android:value="EditText"
+                    android:id="@id/weaverComponent" />
+            </com.twitter.ui.widget.TwitterEditText>
+            <com.twitter.ui.widget.TwitterEditText
+                android:gravity="top"
+                android:id="@id/description"
+                android:paddingBottom="@dimen/section_padding"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:minLines="3"
+                android:maxLength="100"
+                android:inputType="textAutoCorrect|textCapSentences|textMultiLine"
+                android:paddingStart="@dimen/list_row_padding_horizontal"
+                android:paddingEnd="@dimen/list_row_padding_horizontal"
+                twitter:labelText="@string/create_edit_list_description_label"
+                twitter:layout_constraintBottom_toTopOf="@id/privacy_checbox_view"
+                twitter:layout_constraintEnd_toEndOf="parent"
+                twitter:layout_constraintStart_toStartOf="parent"
+                style="@style/TwitterEditText">
+                <tag
+                    android:value="EditText"
+                    android:id="@id/weaverComponent" />
+            </com.twitter.ui.widget.TwitterEditText>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:id="@id/privacy_checbox_view"
+                android:background="@drawable/list_row_background"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/list_row_padding_horizontal"
+                android:paddingVertical="@dimen/section_padding"
+                twitter:layout_constraintBottom_toTopOf="@id/manage_members_view"
+                twitter:layout_constraintEnd_toEndOf="parent"
+                twitter:layout_constraintStart_toStartOf="parent">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0">
+                    <com.twitter.ui.components.text.legacy.TypefacesTextView
+                        android:textSize="@dimen/font_size_normal"
+                        android:textColor="?coreColorPrimaryText"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/create_edit_list_privacy_check" />
+                    <com.twitter.ui.components.text.legacy.TypefacesTextView
+                        android:textSize="@dimen/font_size_small"
+                        android:textColor="?coreColorSecondaryText"
+                        android:id="@id/channel_privacy_checkbox_description"
+                        android:paddingTop="3.0dip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/create_edit_list_privacy_check_description" />
+                </LinearLayout>
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@id/privacy_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textSize="@dimen/font_size_normal"
+                android:textStyle="normal"
+                android:textColor="?abstractColorLink"
+                android:id="@id/manage_members_view"
+                android:background="@drawable/list_row_background"
+                android:paddingBottom="@dimen/section_padding"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:text="@string/create_edit_list_manage_members"
+                android:textAlignment="viewStart"
+                android:paddingStart="@dimen/list_row_padding_horizontal"
+                android:paddingEnd="@dimen/list_row_padding_horizontal"
+                twitter:layout_constraintBottom_toTopOf="@id/delete_list_view"
+                twitter:layout_constraintEnd_toEndOf="parent"
+                twitter:layout_constraintStart_toStartOf="parent" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textSize="@dimen/font_size_normal"
+                android:textStyle="normal"
+                android:textColor="@color/destructive_red"
+                android:id="@id/delete_list_view"
+                android:background="@drawable/list_row_background"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:text="@string/lists_delete_list"
+                android:textAlignment="viewStart"
+                android:paddingHorizontal="@dimen/list_row_padding_horizontal"
+                android:paddingVertical="@dimen/section_padding"
+                twitter:layout_constraintBottom_toBottomOf="parent"
+                twitter:layout_constraintEnd_toEndOf="parent"
+                twitter:layout_constraintStart_toStartOf="parent" />
+            <androidx.constraintlayout.widget.Group
+                android:id="@id/edit_list_group"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                twitter:constraint_referenced_ids="manage_members_view, delete_list_view" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+    <tag
+        android:value="CreateEdit"
+        android:id="@id/weaverComponent" />
+    <com.twitter.ui.components.button.compose.HorizonComposeButton
+        android:id="@id/create_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/section_padding"
+        android:text="@string/create"
+        android:layout_marginEnd="@dimen/list_row_padding_horizontal"
+        twitter:layout_constraintBottom_toBottomOf="parent"
+        twitter:layout_constraintEnd_toEndOf="parent"
+        style="@style/TwitterButtonMediumPrimaryFilled" />
+</androidx.constraintlayout.widget.ConstraintLayout>

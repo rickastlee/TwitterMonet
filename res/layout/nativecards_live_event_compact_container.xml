@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:background="@drawable/card_border_with_rounded_corners"
+    android:clickable="true"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:foreground="@drawable/bg_nativecards_rounded_corners_clickable"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textColor="?coreColorSecondaryText"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@id/error_text"
+        android:background="@drawable/bg_liveevent_card_error"
+        android:padding="@dimen/liveevent_card_spacing"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:minHeight="@dimen/guide_summary_card_thumbnail_size" />
+    <include
+        layout="@layout/nativecards_live_event_compact" />
+</FrameLayout>

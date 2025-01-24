@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:minHeight="@dimen/ps__user_reporting_reasons_list_min_height"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <tv.periscope.android.view.PsTextView
+        android:textSize="@dimen/font_size_large"
+        android:gravity="center"
+        android:id="@id/report_reason"
+        android:paddingTop="@dimen/ps__standard_spacing_5"
+        android:paddingBottom="@dimen/ps__standard_spacing_5"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/ps__standard_spacing_24"
+        android:paddingEnd="@dimen/ps__standard_spacing_24" />
+    <tv.periscope.android.view.PsTextView
+        android:textSize="@dimen/font_size_xsmall"
+        android:gravity="center"
+        android:id="@id/report_reason_description"
+        android:paddingBottom="@dimen/ps__standard_spacing_5"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/report_reason"
+        android:paddingStart="@dimen/ps__standard_spacing_24"
+        android:paddingEnd="@dimen/ps__standard_spacing_24" />
+</RelativeLayout>

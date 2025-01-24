@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:paddingTop="@dimen/space_8"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/space_8"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditText
+        android:textSize="@dimen/font_size_normal"
+        android:textColorHint="?coreColorSecondaryText"
+        android:ellipsize="end"
+        android:id="@id/search_bar"
+        android:background="@drawable/round_input_box_background"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_8"
+        android:hint="@string/search_emojis_hint"
+        android:maxLines="1"
+        android:inputType="text"
+        android:paddingHorizontal="@dimen/space_16"
+        android:paddingVertical="@dimen/space_8" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@id/recyclerView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_4" />
+    <tag
+        android:value="EmojiPickerBottomSheets"
+        android:id="@id/weaverComponent" />
+</LinearLayout>

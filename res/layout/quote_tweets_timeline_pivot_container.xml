@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:visibility="gone"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <include
+        layout="@layout/divider" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textColor="?abstractColorLink"
+        android:gravity="center_vertical"
+        android:id="@id/quote_tweets_pivot_text"
+        android:background="@drawable/ripple_pressed_selector_rectangle"
+        android:layout_width="fill_parent"
+        android:layout_height="48.0dip"
+        android:text="@string/view_quote_tweets"
+        android:layout_marginStart="16.0dip"
+        android:layout_marginEnd="16.0dip" />
+    <tag
+        android:value="com.twitter.tweetview.focal.ui.quotetweetspivot.FocalTweetQuoteTweetsTimelinePivotViewDelegateBinder"
+        android:id="@id/viewBinder" />
+    <tag
+        android:value="com.twitter.tweetview.core.TweetViewViewModel"
+        android:id="@id/viewModel" />
+</LinearLayout>

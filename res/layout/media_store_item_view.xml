@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.media.ui.image.FixedSizeImageView
+        android:id="@id/gallery_image_image"
+        android:background="?galleryPlaceholderColor"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/image_gallery" />
+    <com.twitter.gallerygrid.widget.MediaBadgeOverlayView
+        android:id="@id/gallery_image_badge_overlay"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+    <View
+        android:id="@id/selected_dark_overlay"
+        android:background="#60000000"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+    <ImageView
+        android:id="@id/gallery_image_selected_overlay"
+        android:background="?gallerySelectedMarkColor"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="center"
+        android:contentDescription="@null" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_body"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@id/gallery_image_selected_number"
+        android:background="@drawable/bg_selected_media_count"
+        android:visibility="gone"
+        android:layout_width="@dimen/gallery_image_selected_mark"
+        android:layout_height="@dimen/gallery_image_selected_mark"
+        android:contentDescription="@null" />
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@id/gallery_image_selected_mark"
+        android:visibility="gone"
+        android:layout_width="@dimen/gallery_image_selected_mark"
+        android:layout_height="@dimen/gallery_image_selected_mark"
+        android:src="?gallerySelectedMark"
+        android:contentDescription="@null" />
+    <ImageView
+        android:id="@id/gallery_selected_outline"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:src="@drawable/selected_stroke"
+        android:contentDescription="@null" />
+    <View
+        android:id="@id/gallery_image_disabled_mask"
+        android:background="?galleryDisabledMaskColor"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+</FrameLayout>

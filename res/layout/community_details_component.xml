@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@id/root"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/space_4"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <View
+        android:id="@id/top_divider_view"
+        android:background="@color/white"
+        android:layout_width="fill_parent"
+        android:layout_height="5.0dip"
+        android:alpha="0.1"
+        twitter:layout_constraintEnd_toEndOf="parent"
+        twitter:layout_constraintStart_toStartOf="parent"
+        twitter:layout_constraintTop_toTopOf="parent" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_xlarge"
+        android:textStyle="bold"
+        android:textColor="@color/community_text_color"
+        android:ellipsize="end"
+        android:gravity="start"
+        android:id="@id/community_title_text"
+        android:paddingTop="@dimen/space_8"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:paddingHorizontal="@dimen/space_12"
+        twitter:layout_constraintBottom_toTopOf="@id/members_info_container"
+        twitter:layout_constraintEnd_toEndOf="parent"
+        twitter:layout_constraintStart_toStartOf="parent"
+        twitter:layout_constraintTop_toBottomOf="@id/top_divider_view" />
+    <LinearLayout
+        android:gravity="start"
+        android:orientation="horizontal"
+        android:id="@id/members_info_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_8"
+        twitter:layout_constraintBottom_toBottomOf="parent"
+        twitter:layout_constraintEnd_toEndOf="parent"
+        twitter:layout_constraintStart_toStartOf="parent"
+        twitter:layout_constraintTop_toBottomOf="@id/community_title_text">
+        <com.twitter.ui.widget.FacepileView
+            android:id="@id/community_members_facepile"
+            android:paddingLeft="@dimen/space_4"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_4"
+            android:layout_marginBottom="@dimen/space_4"
+            twitter:avatarSize="@dimen/nano_user_image_size"
+            twitter:maxAvatars="5"
+            twitter:overlapPercent="0.25" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_small"
+            android:textColor="@color/community_text_color"
+            android:ellipsize="end"
+            android:gravity="start|center"
+            android:id="@id/community_member_count_text"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:maxLines="1"
+            android:paddingHorizontal="@dimen/space_8" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

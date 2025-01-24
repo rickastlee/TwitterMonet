@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.media.ui.image.AspectRatioFrameLayout
+        android:id="@id/aspect_ratio_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <View
+            android:id="@id/fatal_error_background"
+            android:background="@drawable/fatal_error_background"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+        <include
+            layout="@layout/camera_preview" />
+        <include
+            layout="@layout/camera_review" />
+        <include
+            layout="@layout/camera_preview_frame" />
+    </com.twitter.media.ui.image.AspectRatioFrameLayout>
+    <View
+        android:id="@id/live_scrim"
+        android:background="@color/black_opacity_50"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+    <View
+        android:layout_gravity="bottom"
+        android:id="@id/camera_shutter_gradient"
+        android:background="@drawable/camera_capture_shutter_gradient"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/camera_shutter_gradient_height" />
+    <include
+        layout="@layout/camera_capture" />
+    <include
+        layout="@layout/speed_bump_context" />
+    <include
+        layout="@layout/typeahead_suggestions" />
+    <include
+        layout="@layout/location_suggestions" />
+</FrameLayout>

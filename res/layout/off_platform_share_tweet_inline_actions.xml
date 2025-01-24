@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="start|center"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:divider="@drawable/divider_small"
+    android:showDividers="middle"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:layout_width="@dimen/off_platform_share_inline_action_icon_size"
+        android:layout_height="@dimen/off_platform_share_inline_action_icon_size"
+        android:src="@drawable/ic_vector_heart_stroke"
+        android:importantForAccessibility="no"
+        app:tint="?inlineActionTintDefault" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_subtext_1"
+        android:textColor="?inlineActionTintDefault"
+        android:id="@id/like_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:layout_marginEnd="@dimen/space_8">
+        <tag
+            android:value="OffPlatformShareTweetLikeCount"
+            android:id="@id/weaverComponent" />
+    </com.twitter.ui.components.text.legacy.TypefacesTextView>
+    <ImageView
+        android:layout_width="@dimen/off_platform_share_inline_action_icon_size"
+        android:layout_height="@dimen/off_platform_share_inline_action_icon_size"
+        android:src="@drawable/ic_vector_reply_stroke"
+        android:importantForAccessibility="no"
+        app:tint="?inlineActionTintDefault" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_subtext_1"
+        android:textColor="?inlineActionTintDefault"
+        android:id="@id/reply_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:layout_marginEnd="@dimen/space_8">
+        <tag
+            android:value="OffPlatformShareTweetReplyCount"
+            android:id="@id/weaverComponent" />
+    </com.twitter.ui.components.text.legacy.TypefacesTextView>
+</LinearLayout>

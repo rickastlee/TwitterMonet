@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.media.av.ui.AutoPlayBadgeView
+    android:gravity="center_vertical"
+    android:layout_gravity="start|bottom|center"
+    android:id="@id/av_badge_container_view_counts"
+    android:padding="0.0dip"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@id/av_autoplay_time_viewcount_badge"
+        android:background="@drawable/bg_badge_gray_left_rounded"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/av_badge_duration_text"
+            style="@style/AutoPlayBadgeText" />
+        <ImageView
+            android:id="@id/av_badge_image"
+            android:padding="@dimen/bg_media_badge_padding"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/video_badge_type_indicator" />
+    </LinearLayout>
+    <View
+        android:layout_width="@dimen/autoplay_view_count_badges_gap"
+        android:layout_height="fill_parent" />
+    <ViewStub
+        android:id="@id/view_count_view_stub"
+        android:layout="@layout/layout_av_view_count_badge_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</com.twitter.media.av.ui.AutoPlayBadgeView>

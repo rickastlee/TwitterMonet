@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.ui.widget.touchintercept.TouchInterceptingFrameLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_small"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@id/tap_to_seek_popup"
+        android:background="@drawable/bg_seek_popup"
+        android:paddingTop="28.0dip"
+        android:visibility="gone"
+        android:layout_width="@dimen/tap_to_seek_popup_size"
+        android:layout_height="@dimen/tap_to_seek_popup_size"
+        android:scaleType="centerInside"
+        android:drawablePadding="-14.0dip" />
+</com.twitter.ui.widget.touchintercept.TouchInterceptingFrameLayout>

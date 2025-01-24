@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.twitter.ui.widget.PopupEditText
+        android:textSize="@dimen/font_size_normal"
+        android:textColorHint="?coreColorSecondaryText"
+        android:ellipsize="end"
+        android:id="@id/query"
+        android:background="?inputBoxBackground"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:drawablePadding="@dimen/space_12"
+        android:inputType="textFilter|textNoSuggestions"
+        android:imeOptions="actionSearch|flagNoExtractUi"
+        android:drawableStart="@drawable/ic_vector_search_stroke"
+        android:textAlignment="viewStart"
+        android:drawableTint="?coreColorSecondaryText"
+        android:paddingHorizontal="@dimen/space_16"
+        android:paddingVertical="@dimen/space_12" />
+    <ImageView
+        android:id="@id/clear_text"
+        android:background="?selectableItemBackground"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:src="?searchClearDrawable"
+        android:contentDescription="@string/button_clear"
+        android:layout_marginEnd="@dimen/space_16"
+        app:tint="?coreColorPrimary" />
+</LinearLayout>

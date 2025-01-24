@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <include
+        android:id="@id/toolbar"
+        twitter:layout_constraintStart_toStartOf="parent"
+        layout="@layout/app_toolbar" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/product_media_header"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:text="@string/product_media_label"
+        twitter:layout_constraintStart_toStartOf="parent"
+        twitter:layout_constraintTop_toBottomOf="@id/toolbar"
+        style="@style/BusinessInfoListHeaderText" />
+    <com.twitter.media.ui.fresco.FrescoMediaImageView
+        android:id="@id/product_image_upload_view"
+        android:background="@drawable/image_upload_button_background"
+        android:layout_width="@dimen/product_image_height_width"
+        android:layout_height="@dimen/product_image_height_width"
+        android:importantForAccessibility="no"
+        android:layout_marginStart="?listPreferredItemPaddingStart"
+        twitter:layout_constraintStart_toStartOf="parent"
+        twitter:layout_constraintTop_toBottomOf="@id/product_media_header"
+        twitter:scaleType="fill" />
+    <ImageView
+        android:id="@id/add_edit_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_vector_plus"
+        android:importantForAccessibility="no"
+        twitter:layout_constraintBottom_toBottomOf="@id/product_image_upload_view"
+        twitter:layout_constraintEnd_toEndOf="@id/product_image_upload_view"
+        twitter:layout_constraintHorizontal_bias="0.5"
+        twitter:layout_constraintStart_toStartOf="@id/product_image_upload_view"
+        twitter:layout_constraintTop_toTopOf="@id/product_image_upload_view"
+        twitter:layout_constraintVertical_bias="0.5"
+        twitter:tint="@color/black" />
+    <View
+        android:id="@id/image_upload_view_overlay"
+        android:clickable="true"
+        android:layout_width="@dimen/product_image_height_width"
+        android:layout_height="@dimen/product_image_height_width"
+        android:contentDescription="@string/a11y_product_image_action"
+        android:importantForAccessibility="yes"
+        twitter:layout_constraintBottom_toBottomOf="@id/product_image_upload_view"
+        twitter:layout_constraintEnd_toEndOf="@id/product_image_upload_view"
+        twitter:layout_constraintStart_toStartOf="@id/product_image_upload_view"
+        twitter:layout_constraintTop_toTopOf="@id/product_image_upload_view" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/product_media_requirements_header"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:text="@string/product_media_requirement_label"
+        twitter:layout_constraintStart_toStartOf="parent"
+        twitter:layout_constraintTop_toBottomOf="@id/product_image_upload_view"
+        style="@style/BusinessInfoHeaderText" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/product_media_requirements_message"
+        android:paddingBottom="@dimen/space_4"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:text="@string/product_image_message"
+        twitter:layout_constraintStart_toStartOf="parent"
+        twitter:layout_constraintTop_toBottomOf="@id/product_media_requirements_header"
+        style="@style/BusinessInfoDetailText" />
+    <tag
+        android:value="ProductImageInputScreen"
+        android:id="@id/weaverComponent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

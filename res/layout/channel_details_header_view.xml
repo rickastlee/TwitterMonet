@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.twitter.channels.details.HeaderImageView
+        android:id="@id/channelsBanner"
+        android:background="@color/twitter_blue"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:crossfadeDuration="@integer/profile_header_crossfade_duration"
+        app:filterColor="@android:color/transparent"
+        app:filterMaxOpacity="0.0"
+        app:imageType="profile_header"
+        app:layout_constraintTop_toTopOf="parent"
+        app:overlayDrawable="@android:color/transparent" />
+    <include
+        android:id="@id/list_details"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16.0dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/channelsBanner"
+        layout="@layout/channel_details_header_details_view" />
+</androidx.constraintlayout.widget.ConstraintLayout>

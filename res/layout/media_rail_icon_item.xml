@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:background="@drawable/media_rail_icon_bg"
+    android:layout_width="@dimen/media_rail_tile_size"
+    android:layout_height="@dimen/media_rail_tile_size"
+    android:layout_margin="@dimen/space_4"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@id/icon_image"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/media_rail_icon_size"
+            android:scaleType="centerInside"
+            android:adjustViewBounds="true"
+            android:contentDescription="@null" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_small"
+            android:textColor="?coreColorSecondaryText"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:id="@id/media_rail_icon_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false" />
+    </LinearLayout>
+</FrameLayout>

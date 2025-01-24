@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:id="@id/buttons"
+    android:background="@drawable/image_editor_button_bar_transition"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/filter_controls_height_enhanced_flow"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <com.twitter.ui.widget.ToggleImageButton
+        android:id="@id/enhance"
+        android:background="?selectableItemBackgroundBorderless"
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:src="?iconFiltersEnhance"
+        android:scaleType="centerInside"
+        android:layout_weight="1.0"
+        android:contentDescription="@string/button_enhance"
+        twitter:tintColorList="@color/ic_color_composer_icons_edit_image" />
+    <com.twitter.ui.widget.ToggleImageButton
+        android:id="@id/show_filters"
+        android:background="?selectableItemBackgroundBorderless"
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:src="?iconFiltersAll"
+        android:scaleType="centerInside"
+        android:layout_weight="1.0"
+        android:contentDescription="@string/button_enhance"
+        twitter:tintColorList="@color/ic_color_composer_icons_edit_image" />
+    <ImageButton
+        android:id="@id/crop"
+        android:background="?selectableItemBackgroundBorderless"
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:src="?iconFiltersCrop"
+        android:scaleType="centerInside"
+        android:layout_weight="1.0"
+        android:contentDescription="@string/button_crop"
+        twitter:tint="@color/white" />
+    <ImageButton
+        android:id="@id/stickers"
+        android:background="?selectableItemBackgroundBorderless"
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:src="?iconFiltersStickers"
+        android:scaleType="centerInside"
+        android:layout_weight="1.0"
+        android:contentDescription="@string/button_stickers"
+        twitter:tint="@color/white" />
+    <ImageButton
+        android:id="@id/alt"
+        android:background="?selectableItemBackgroundBorderless"
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:src="?iconFiltersAlt"
+        android:scaleType="centerInside"
+        android:layout_weight="1.0"
+        android:contentDescription="@string/button_alt"
+        twitter:tint="@color/white" />
+    <ImageButton
+        android:id="@id/sensitive_media"
+        android:background="?selectableItemBackgroundBorderless"
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:src="?iconFiltersSensitiveMedia"
+        android:scaleType="centerInside"
+        android:layout_weight="1.0"
+        android:contentDescription="@string/button_sensitive_media"
+        twitter:tint="@color/white" />
+</LinearLayout>

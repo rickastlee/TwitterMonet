@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="abc_action_bar_default_height_material">48.0dip</dimen>
+    <dimen name="abc_text_size_subtitle_material_toolbar">12.0dip</dimen>
+    <dimen name="abc_text_size_title_material_toolbar">14.0dip</dimen>
+    <dimen name="addressbook_connection_secondary_button_top">5.0dip</dimen>
+    <dimen name="community_empty_state_vertical_offset">60.0dip</dimen>
+    <dimen name="event_header_image_height">48.0dip</dimen>
+    <dimen name="filter_crop_padding">10.0dip</dimen>
+    <dimen name="material_time_picker_minimum_screen_height">450.0dip</dimen>
+    <dimen name="material_time_picker_minimum_screen_width">600.0dip</dimen>
+    <dimen name="mtrl_alert_dialog_background_inset_bottom">24.0dip</dimen>
+    <dimen name="mtrl_alert_dialog_background_inset_top">24.0dip</dimen>
+    <dimen name="mtrl_calendar_days_of_week_height">20.0dip</dimen>
+    <dimen name="mtrl_calendar_header_content_padding">4.0dip</dimen>
+    <dimen name="mtrl_calendar_header_height_fullscreen">96.0dip</dimen>
+    <dimen name="mtrl_calendar_header_toggle_margin_bottom">0.0dip</dimen>
+    <dimen name="mtrl_calendar_header_toggle_margin_top">0.0dip</dimen>
+    <dimen name="mtrl_calendar_landscape_header_width">104.0dip</dimen>
+    <dimen name="mtrl_calendar_selection_baseline_to_top_fullscreen">68.0dip</dimen>
+    <dimen name="mtrl_calendar_selection_text_baseline_to_bottom_fullscreen">28.0dip</dimen>
+    <dimen name="mtrl_calendar_selection_text_baseline_to_top">64.0dip</dimen>
+    <dimen name="mtrl_calendar_text_input_padding_top">32.0dip</dimen>
+    <dimen name="mtrl_calendar_title_baseline_to_top">24.0dip</dimen>
+    <dimen name="mtrl_calendar_title_baseline_to_top_fullscreen">32.0dip</dimen>
+    <dimen name="prompt_fullscreen_text_padding_horizontal">64.0dip</dimen>
+    <dimen name="search_field_inset_vertical">4.0dip</dimen>
+    <dimen name="search_field_underline_top_margin_default">43.0dip</dimen>
+    <dimen name="search_field_underline_top_margin_focused">42.0dip</dimen>
+    <dimen name="tablet_inset_horizontal">24.0dip</dimen>
+    <dimen name="glad_you_are_here_checkbox_margin_bottom">21.0dip</dimen>
+    <dimen name="glad_you_are_here_cta_margin_bottom">15.0dip</dimen>
+    <dimen name="photo_row_height">100.0dip</dimen>
+    <dimen name="welcome_screen_desc_margin_bottom">30.0dip</dimen>
+    <dimen name="welcome_screen_logo_margin_top">30.0dip</dimen>
+    <dimen name="welcome_screen_title_margin_bottom">8.0dip</dimen>
+    <item type="dimen" name="csat_feedback_score_button_horiz_margin">@dimen/csat_feedback_score_button_horiz_margin_landscape</item>
+    <dimen name="live_event_message_vertical_margin">8.0dip</dimen>
+    <item type="dimen" name="live_event_prompt_message_font_size">@dimen/font_size_small</item>
+    <item type="dimen" name="profile_preview_content_weight">50</item>
+    <item type="dimen" name="profile_preview_side_weight">25</item>
+</resources>

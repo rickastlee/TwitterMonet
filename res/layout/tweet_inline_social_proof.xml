@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <tag
+        android:value="InlineSocialProof"
+        android:id="@id/weaverComponent" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:background="@drawable/ripple_pressed_selector_rectangle"
+        android:paddingTop="2.0dip"
+        android:paddingBottom="4.0dip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <include
+            android:layout_gravity="center_vertical"
+            android:id="@id/inline_social_proof_face_pile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/social_proof_facepile_margin"
+            layout="@layout/tweet_social_proof_facepile" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_small"
+            android:textColor="?android:textColorSecondary"
+            android:layout_gravity="center_vertical"
+            android:id="@id/inline_social_proof_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jack and 10 others liked"
+            android:maxLines="@integer/double_lines" />
+    </LinearLayout>
+    <include
+        android:background="?coreColorSectionDivider"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/border_thickness"
+        android:layout_marginTop="@dimen/content_top_margin"
+        layout="@layout/divider_no_margin" />
+</LinearLayout>

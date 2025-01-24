@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@id/docker_room"
+    android:paddingBottom="@dimen/space_32"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.twitter.core.ui.components.dialog.bottomsheet.GripperView
+        android:id="@id/handle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@id/room_settings_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_32"
+        android:src="@drawable/ic_studio_microphone"
+        android:contentDescription="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/handle" />
+    <View
+        android:id="@id/room_settings_divider"
+        android:background="?coreColorBorder"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:layout_marginTop="@dimen/space_32"
+        app:layout_constraintTop_toBottomOf="@id/room_settings_microphone_container" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@id/room_settings_microphone_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_56"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/room_settings_title">
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@id/room_settings_mic_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/space_20"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <View
+            android:id="@id/room_settings_mic_switch_disabled"
+            android:background="@color/white_opacity_50"
+            android:focusable="true"
+            android:visibility="visible"
+            android:clickable="true"
+            android:layout_width="0.0dip"
+            android:layout_height="0.0dip"
+            app:layout_constraintBottom_toBottomOf="@id/room_settings_mic_switch"
+            app:layout_constraintEnd_toEndOf="@id/room_settings_mic_switch"
+            app:layout_constraintStart_toStartOf="@id/room_settings_mic_switch"
+            app:layout_constraintTop_toTopOf="@id/room_settings_mic_switch" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_normal"
+            android:textStyle="bold"
+            android:textColor="?coreColorPrimaryText"
+            android:id="@id/room_settings_mic_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_32"
+            android:text="@string/spaces_settings_mic_title"
+            android:layout_marginStart="@dimen/space_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_small"
+            android:textColor="?coreColorSecondaryText"
+            android:id="@id/room_settings_mic_description"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_8"
+            android:text="@string/spaces_settings_mic_subtitle"
+            android:layout_marginStart="@dimen/space_24"
+            android:layout_marginEnd="@dimen/space_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/room_settings_mic_label" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <com.twitter.ui.components.button.legacy.TwitterButton
+        android:id="@id/room_settings_app_info"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_32"
+        android:text="@string/go_to_app_info"
+        app:largeTextBoldOverride="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/room_settings_divider"
+        style="@style/TwitterButtonLargeBrandFilled" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@id/room_settings_transcription_container"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/room_settings_divider">
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@id/room_settings_transcription_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/space_20"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_normal"
+            android:textStyle="bold"
+            android:textColor="?coreColorPrimaryText"
+            android:id="@id/room_settings_transcription_slabel"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_32"
+            android:text="@string/spaces_settings_captions_title"
+            android:layout_marginStart="@dimen/space_24"
+            android:layout_marginEnd="@dimen/space_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_small"
+            android:textColor="?coreColorSecondaryText"
+            android:id="@id/room_settings_transcription_description"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_8"
+            android:text="@string/spaces_settings_captions_subtitle"
+            android:layout_marginStart="@dimen/space_24"
+            android:layout_marginEnd="@dimen/space_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/room_settings_transcription_slabel" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_xlarge"
+        android:textStyle="bold"
+        android:textColor="?coreColorPrimaryText"
+        android:id="@id/room_settings_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_32"
+        android:text="@string/spaces_settings_title"
+        android:layout_marginStart="@dimen/space_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/room_settings_icon" />
+</androidx.constraintlayout.widget.ConstraintLayout>

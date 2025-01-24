@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:clickable="true"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:importantForAccessibility="no"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.twitter.media.ui.fresco.FrescoMediaImageView
+        android:id="@id/start_image"
+        app:layout_constraintEnd_toStartOf="@id/middle_image"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        style="@style/MediaGalleryImageItem" />
+    <com.twitter.media.ui.fresco.FrescoMediaImageView
+        android:id="@id/middle_image"
+        app:layout_constraintEnd_toStartOf="@id/end_image"
+        app:layout_constraintStart_toEndOf="@id/start_image"
+        style="@style/MediaGalleryImageItem" />
+    <com.twitter.media.ui.fresco.FrescoMediaImageView
+        android:id="@id/end_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/middle_image"
+        style="@style/MediaGalleryImageItem" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@id/room_guest_management"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include
+        android:id="@id/_header"
+        layout="@layout/layout_space_header" />
+    <include
+        android:id="@id/_search"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_12"
+        android:layout_marginStart="@dimen/space_16"
+        android:layout_marginEnd="@dimen/space_16"
+        app:layout_constraintTop_toBottomOf="@id/_header"
+        layout="@layout/layout_search_bar" />
+    <include
+        android:id="@id/tab_speakers_filter"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_12"
+        app:layout_constraintTop_toBottomOf="@id/_search"
+        layout="@layout/layout_speakers_filter_bar" />
+    <com.twitter.rooms.subsystem.api.utils.BottomSheetRecyclerView
+        android:id="@id/recycler_speakers"
+        android:paddingBottom="@dimen/space_48"
+        android:clipToPadding="false"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_default="wrap"
+        app:layout_constraintTop_toBottomOf="@id/tab_speakers_filter" />
+</androidx.constraintlayout.widget.ConstraintLayout>

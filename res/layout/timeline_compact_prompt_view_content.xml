@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_32">
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textSize="@dimen/font_size_title_3"
+                android:textStyle="bold"
+                android:layout_gravity="start"
+                android:id="@id/header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/space_32"
+                android:paddingEnd="@dimen/space_32" />
+            <FrameLayout
+                android:layout_gravity="center_vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_gravity="end"
+                    android:id="@id/caret"
+                    android:paddingTop="@dimen/caret_spacing"
+                    android:paddingBottom="@dimen/caret_spacing"
+                    android:clickable="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_chevron_down"
+                    android:contentDescription="@string/timeline_message_caret_content_description"
+                    android:paddingStart="@dimen/space_32"
+                    android:paddingEnd="@dimen/space_32"
+                    app:tint="?coreColorInlineAction" />
+            </FrameLayout>
+        </LinearLayout>
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_body"
+            android:textColor="?coreColorSecondaryText"
+            android:id="@id/body"
+            android:paddingTop="@dimen/space_8"
+            android:paddingBottom="@dimen/space_32"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/space_32"
+            android:paddingEnd="@dimen/space_32" />
+        <FrameLayout
+            android:id="@id/buttons_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_32"
+            android:layout_marginEnd="@dimen/space_32">
+            <com.twitter.ui.components.button.compose.HorizonComposeButton
+                android:id="@id/primary_action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TwitterButtonSmallPrimaryOutlined" />
+        </FrameLayout>
+    </LinearLayout>
+</merge>

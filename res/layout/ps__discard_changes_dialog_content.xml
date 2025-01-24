@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:paddingTop="@dimen/ps__dialog_content_padding_Top_Bottom"
+    android:paddingBottom="@dimen/ps__dialog_content_padding_Top_Bottom"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/ps__dialog_content_padding"
+    android:paddingEnd="@dimen/ps__dialog_content_padding"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <tv.periscope.android.view.PsTextView
+        android:textSize="20.0sp"
+        android:textColor="@color/ps__primary_text"
+        android:id="@id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/ps__delete_broadcast_dialog" />
+    <tv.periscope.android.view.PsTextView
+        android:textColor="@color/ps__primary_text"
+        android:id="@id/description"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ps__standard_spacing_20"
+        android:text="@string/ps__discard_changes_description" />
+    <tv.periscope.android.view.PsButton
+        android:textSize="@dimen/ps__dialog_btn_text_size"
+        android:gravity="center"
+        android:id="@id/discard_changes"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24.0dip"
+        android:minHeight="@dimen/ps__dialog_btn_min_height_45"
+        android:text="@string/ps__discard_changes_text"
+        android:textAllCaps="false"
+        style="@style/ps__Button" />
+    <tv.periscope.android.view.PsButton
+        android:textSize="@dimen/ps__dialog_btn_text_size"
+        android:gravity="center"
+        android:id="@id/cancel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ps__standard_spacing_10"
+        android:minHeight="@dimen/ps__dialog_btn_min_height_45"
+        android:text="@string/ps__dialog_cancel"
+        android:textAllCaps="false"
+        style="@style/ps__Button.Hollow" />
+</LinearLayout>

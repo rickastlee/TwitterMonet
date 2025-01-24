@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.ui.view.carousel.CarouselRowView
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    twitter:carouselTitleTextSize="?headersFontSizeForSmall"
+    twitter:gapSize="@dimen/carousel_gap_size"
+    twitter:pageMargin="0.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto" />

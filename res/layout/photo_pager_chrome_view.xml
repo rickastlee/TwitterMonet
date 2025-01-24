@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.app.gallery.chrome.GalleryVideoChromeView
+    android:id="@id/video_chrome"
+    android:visibility="invisible"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_above="@id/gallery_chrome_control_container"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12.0dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        layout="@layout/video_fullscreen_attribution" />
+    <include
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/video_control_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        layout="@layout/av_player_chrome_cta_button" />
+    <com.twitter.media.av.ui.control.VideoControlView
+        android:id="@id/video_control_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent" />
+</com.twitter.app.gallery.chrome.GalleryVideoChromeView>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:id="@id/card_container"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <include
+        layout="@layout/website_card_media" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_small"
+        android:textColor="?coreColorSecondaryText"
+        android:id="@id/card_url"
+        android:paddingTop="@dimen/website_card_vertical_margin"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:textAlignment="viewStart"
+        android:paddingStart="@dimen/card_horizontal_margin"
+        android:paddingEnd="@dimen/card_horizontal_margin" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textColor="?coreColorPrimaryText"
+        android:ellipsize="end"
+        android:id="@id/card_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_8"
+        android:maxLines="2"
+        android:textAlignment="viewStart"
+        android:paddingStart="@dimen/card_horizontal_margin"
+        android:paddingEnd="@dimen/card_horizontal_margin" />
+</LinearLayout>

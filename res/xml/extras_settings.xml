@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference
+        android:selectable="false"
+        android:summary="@string/extras_subtitle"
+        android:order="1" />
+    <Preference
+        android:icon="@drawable/ic_vector_pin_stroke"
+        android:title="@string/custom_navigation"
+        android:key="tab_customization"
+        android:summary="@string/custom_navigation_summary"
+        android:order="2"
+        android:widgetLayout="@layout/settings_navigation_indicator" />
+    <Preference
+        android:icon="@drawable/ic_vector_device_phone"
+        android:title="@string/app_icon"
+        android:key="app_icon_settings"
+        android:summary="@string/app_icon_pref_summary"
+        android:order="3"
+        android:widgetLayout="@layout/settings_navigation_indicator" />
+</PreferenceScreen>

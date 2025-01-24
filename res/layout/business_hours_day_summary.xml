@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="@drawable/ripple_pressed_selector_rectangle"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/day_text"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@id/day_enabled_switch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/DaySummaryHeader" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:ellipsize="end"
+        android:id="@id/closed_text"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:text="@string/closed"
+        android:singleLine="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/day_enabled_switch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/day_text"
+        style="@style/DaySummarySubtext" />
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@id/day_enabled_switch"
+        android:paddingTop="@dimen/space_16"
+        android:paddingRight="@dimen/space_32"
+        android:paddingBottom="@dimen/space_4"
+        android:clickable="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:importantForAccessibility="no"
+        android:paddingEnd="@dimen/space_4"
+        app:layout_constraintBottom_toBottomOf="@id/day_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/day_text" />
+    <Space
+        android:id="@id/text_spacer"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/space_12"
+        app:layout_constraintTop_toBottomOf="@id/day_text" />
+</androidx.constraintlayout.widget.ConstraintLayout>

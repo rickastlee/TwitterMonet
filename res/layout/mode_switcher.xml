@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout
+        android:id="@id/mode_switch_list_accessibility_container"
+        android:descendantFocusability="beforeDescendants"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:importantForAccessibility="yes"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <androidx.recyclerview.widget.RecyclerView
+            android:orientation="horizontal"
+            android:id="@id/mode_switch_list"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="noHideDescendants"
+            android:layoutDirection="ltr"
+            app:layoutManager="com.twitter.camera.controller.util.EnableableLayoutManager" />
+    </FrameLayout>
+    <com.twitter.camera.view.capture.ModeSwitchPill
+        android:id="@id/mode_switch_pill"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_marginTop="@dimen/mode_switcher_pill_top_margin"
+        android:layout_marginBottom="@dimen/mode_switcher_pill_bottom_margin"
+        app:layout_constraintBottom_toBottomOf="@id/mode_switch_list_accessibility_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/mode_switch_list_accessibility_container" />
+</androidx.constraintlayout.widget.ConstraintLayout>

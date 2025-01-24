@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple
+    android:color="?coreColorGlobalRippleSelector"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape
+            android:shape="rectangle">
+            <corners
+                android:radius="@dimen/birdwatch_pivot_corner_radius" />
+            <stroke
+                android:width="@dimen/birdwatch_pivot_tentative_stroke_width"
+                android:color="@color/gray_300_opacity_30"
+                android:dashWidth="@dimen/birdwatch_pivot_dash_size"
+                android:dashGap="@dimen/birdwatch_pivot_dash_size" />
+        </shape>
+    </item>
+    <item
+        android:id="@android:id/mask">
+        <shape
+            android:shape="rectangle">
+            <corners
+                android:radius="@dimen/birdwatch_pivot_corner_radius" />
+            <solid
+                android:color="@color/white" />
+        </shape>
+    </item>
+</ripple>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.moments.core.ui.AutoPlayableViewHost
+    android:id="@id/trend_autoplayable_view_host"
+    android:paddingTop="@dimen/space_12"
+    android:paddingBottom="@dimen/space_12"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/guide_trend_min_height"
+    android:paddingStart="@dimen/space_16"
+    android:paddingEnd="@dimen/space_16"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0">
+            <LinearLayout
+                android:layout_gravity="top"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0">
+                    <ViewStub
+                        android:id="@id/trend_ranked_domain_context_stub"
+                        android:layout="@layout/trend_ranked_domain_context"
+                        android:inflatedId="@id/trend_ranked_domain_context"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/space_4" />
+                    <com.twitter.ui.components.text.legacy.TypefacesTextView
+                        android:id="@id/trend_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="4"
+                        twitter:largeTextBoldOverride="false"
+                        style="?guideCellStrongTitleStyle" />
+                </LinearLayout>
+                <ImageView
+                    android:id="@id/trend_curation_action"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:paddingTop="@dimen/space_8"
+                    android:paddingBottom="@dimen/space_8"
+                    android:layout_marginTop="@dimen/curation_action_vertical_inset"
+                    android:layout_marginBottom="@dimen/curation_action_vertical_inset"
+                    android:src="?iconOverflow"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="@string/button_action_options_trend"
+                    android:importantForAccessibility="no"
+                    android:paddingStart="@dimen/space_8"
+                    android:layout_marginEnd="@dimen/curation_action_end_inset"
+                    twitter:tint="?coreColorCaret"
+                    style="@style/ModuleCaretIcon" />
+            </LinearLayout>
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:ellipsize="end"
+                android:id="@id/trend_description"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_4"
+                android:maxLines="4"
+                android:textAlignment="viewStart"
+                style="@style/GuideText.Small.Primary" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@id/trend_related_content_container"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_8"
+                android:divider="@drawable/divider_micro"
+                android:showDividers="middle">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:id="@id/card_list"
+                    android:visibility="gone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@drawable/divider_micro"
+                    android:showDividers="middle" />
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:id="@id/associated_tweets"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:divider="@drawable/divider_micro"
+                    android:showDividers="middle" />
+            </LinearLayout>
+            <ViewStub
+                android:id="@id/trend_social_proof_metadata_view_stub"
+                android:layout="@layout/trend_social_proof_metadata"
+                android:inflatedId="@id/trend_social_proof_metadata"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_4" />
+            <ViewStub
+                android:id="@id/promoted_trend_container_view_stub"
+                android:layout="@layout/promoted_trend_container"
+                android:inflatedId="@id/promoted_trend_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_4" />
+            <ViewStub
+                android:id="@id/trend_social_context"
+                android:layout="@layout/trend_social_context"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_8" />
+            <include
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_4"
+                layout="@layout/grouped_trends" />
+        </LinearLayout>
+        <com.twitter.media.ui.fresco.FrescoMediaImageView
+            android:id="@id/thumbnail_view"
+            android:layout_width="@dimen/guide_trend_thumbnail_size"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/trend_thumbnail_content_description"
+            twitter:aspect_ratio="1.0"
+            twitter:defaultDrawable="@drawable/drawable_color_placeholder_bg"
+            twitter:imageCornerRadius="@dimen/corner_radius_medium"
+            twitter:scaleType="fill" />
+    </LinearLayout>
+</com.twitter.moments.core.ui.AutoPlayableViewHost>

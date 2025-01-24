@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@id/camera_capture"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <com.twitter.ui.components.button.legacy.TwitterButton
+        android:layout_gravity="center_horizontal"
+        android:id="@id/recording_timer"
+        android:padding="@dimen/space_8"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_16"
+        custom:layout_constraintEnd_toEndOf="parent"
+        custom:layout_constraintStart_toStartOf="parent"
+        custom:layout_constraintTop_toTopOf="parent"
+        style="@style/CameraRecordingTimerDefault" />
+    <FrameLayout
+        android:id="@id/camera_capture_controls_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_16"
+        android:layout_marginBottom="@dimen/space_16"
+        android:layout_marginStart="@dimen/space_16"
+        custom:layout_constraintEnd_toEndOf="parent"
+        custom:layout_constraintTop_toTopOf="parent" />
+    <ScrollView
+        android:id="@id/live_text_scroll_container"
+        android:visibility="gone"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_16"
+        custom:layout_constrainedHeight="true"
+        custom:layout_constraintBottom_toTopOf="@id/camera_live_button"
+        custom:layout_constraintEnd_toEndOf="parent"
+        custom:layout_constraintStart_toStartOf="parent"
+        custom:layout_constraintTop_toBottomOf="@id/camera_capture_controls_container"
+        custom:layout_constraintVertical_bias="0.0">
+        <include
+            layout="@layout/camera_live_context" />
+    </ScrollView>
+    <View
+        android:id="@id/live_text_scroll_divider_top"
+        android:background="@drawable/tweet_text_scroll_divider"
+        android:visibility="gone"
+        android:layout_width="0.0dip"
+        android:layout_height="0.5dip"
+        custom:layout_constraintBottom_toTopOf="@id/live_text_scroll_container"
+        custom:layout_constraintEnd_toEndOf="@id/live_text_scroll_container"
+        custom:layout_constraintStart_toStartOf="@id/live_text_scroll_container" />
+    <View
+        android:id="@id/live_text_scroll_divider_bottom"
+        android:background="@drawable/tweet_text_scroll_divider"
+        android:visibility="gone"
+        android:layout_width="0.0dip"
+        android:layout_height="0.5dip"
+        custom:layout_constraintEnd_toEndOf="@id/live_text_scroll_container"
+        custom:layout_constraintStart_toStartOf="@id/live_text_scroll_container"
+        custom:layout_constraintTop_toBottomOf="@id/live_text_scroll_container" />
+    <FrameLayout
+        android:id="@id/shutter_container"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        custom:layout_constraintBottom_toTopOf="@id/mode_switch_container"
+        custom:layout_constraintEnd_toEndOf="parent"
+        custom:layout_constraintStart_toStartOf="parent" />
+    <ViewStub
+        android:id="@id/view_stub_twitter_hydra_button"
+        android:layout="@layout/ps__hydra_button"
+        android:inflatedId="@id/twitter_hydra_button"
+        android:layout_width="@dimen/camera_button_height"
+        android:layout_height="@dimen/camera_button_height"
+        android:layout_marginStart="@dimen/space_16"
+        custom:layout_constraintBottom_toBottomOf="@id/camera_live_button"
+        custom:layout_constraintStart_toEndOf="@id/camera_live_button"
+        style="@style/ps__IconButton" />
+    <ViewStub
+        android:id="@id/view_stub_twitter_hydra_button_text"
+        android:visibility="visible"
+        android:layout="@layout/ps__hydra_button_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5.0dip"
+        custom:layout_constraintBottom_toTopOf="@id/twitter_hydra_button"
+        custom:layout_constraintEnd_toEndOf="@id/twitter_hydra_button"
+        style="@style/ps__IconButton" />
+    <com.twitter.ui.components.button.legacy.TwitterButton
+        android:id="@id/camera_live_button"
+        android:visibility="gone"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        custom:layout_constraintBottom_toBottomOf="@id/shutter_container"
+        custom:layout_constraintEnd_toEndOf="parent"
+        custom:layout_constraintStart_toStartOf="parent"
+        custom:layout_constraintTop_toTopOf="@id/shutter_container"
+        custom:layout_constraintWidth_percent="0.4"
+        custom:layout_goneMarginBottom="@dimen/live_button_gone_margin"
+        style="@style/CameraLiveButton.Disabled" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textColor="@color/white"
+        android:id="@id/invite_friends_label"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_12"
+        android:layout_marginBottom="@dimen/space_12"
+        android:foreground="?selectableItemBackground"
+        android:text="@string/invite_friends"
+        android:drawablePadding="@dimen/space_4"
+        android:alpha="0.0"
+        android:textAllCaps="false"
+        android:drawableStart="@drawable/ps__ic_hydra"
+        android:layout_marginEnd="@dimen/space_12"
+        custom:drawableTintColor="@color/white"
+        custom:iconSize="@dimen/font_size_normal"
+        custom:layout_constraintBottom_toTopOf="@id/camera_live_button"
+        custom:layout_constraintEnd_toEndOf="@id/camera_live_button"
+        custom:layout_constraintStart_toStartOf="@id/camera_live_button" />
+    <tv.periscope.android.view.WaitingTextView
+        android:id="@id/hydra_text_waiting_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        custom:dotsColor="@color/white"
+        custom:layout_constraintBottom_toTopOf="@id/camera_live_button"
+        custom:layout_constraintEnd_toEndOf="@id/camera_live_button"
+        custom:layout_constraintStart_toStartOf="@id/camera_live_button"
+        custom:textColor="@color/white"
+        custom:waitingText="@string/connecting"
+        custom:waitingTextSize="@dimen/font_size_small" />
+    <ViewStub
+        android:id="@id/pre_live_count_progress_bar_container_stub"
+        android:layout="@layout/camera_composer_count_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="0.0dip"
+        android:layout_marginEnd="@dimen/space_16"
+        custom:layout_constraintBottom_toBottomOf="@id/camera_live_button"
+        custom:layout_constraintEnd_toEndOf="parent"
+        custom:layout_constraintTop_toTopOf="@id/camera_live_button" />
+    <FrameLayout
+        android:id="@id/mode_switch_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        custom:layout_constraintBottom_toBottomOf="@id/capture_controls_bottom_guideline"
+        custom:layout_constraintEnd_toEndOf="parent"
+        custom:layout_constraintStart_toStartOf="parent" />
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="horizontal"
+        android:id="@id/capture_controls_bottom_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        custom:layout_constraintGuide_end="0.0dip" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_xlarge"
+        android:textColor="@color/white"
+        android:id="@id/capture_fatal_error_primary_text"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/camera_fatal_error_primary"
+        custom:layout_constraintBottom_toTopOf="@id/shutter_container"
+        custom:layout_constraintEnd_toEndOf="parent"
+        custom:layout_constraintStart_toStartOf="parent"
+        custom:layout_constraintTop_toBottomOf="@id/camera_capture_controls_container" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textColor="?abstractColorDeepGray"
+        android:id="@id/capture_fatal_error_secondary_text"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_12"
+        android:text="@string/camera_fatal_error_secondary"
+        custom:layout_constraintEnd_toEndOf="parent"
+        custom:layout_constraintStart_toStartOf="parent"
+        custom:layout_constraintTop_toBottomOf="@id/capture_fatal_error_primary_text" />
+    <ViewStub
+        android:id="@id/embedded_permissions_layout_stub"
+        android:layout="@layout/embedded_permissions"
+        android:inflatedId="@id/embedded_permissions_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        custom:layout_constraintBottom_toTopOf="@id/mode_switch_container"
+        custom:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

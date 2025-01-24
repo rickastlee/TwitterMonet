@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:id="@id/room_shared_content"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@id/room_shared_content_pager"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <com.google.android.material.tabs.TabLayout
+        android:layout_gravity="bottom"
+        android:id="@id/room_shared_content_tab_layout"
+        android:background="@android:color/transparent"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0.0dip"
+        app:tabBackground="@drawable/room_shared_content_tab_selector"
+        app:tabGravity="center"
+        app:tabIndicatorHeight="0.0dip" />
+</LinearLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@id/sensitive_media_image"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        twitter:actualImageScaleType="centerCrop"
+        twitter:layout_constraintBottom_toBottomOf="parent"
+        twitter:layout_constraintEnd_toEndOf="parent"
+        twitter:layout_constraintStart_toStartOf="parent"
+        twitter:layout_constraintTop_toTopOf="parent"
+        twitter:roundedCornerRadius="@dimen/corner_radius_large"
+        twitter:viewAspectRatio="1.0" />
+    <com.twitter.ui.widget.TintableImageView
+        android:id="@id/sensitive_media_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_16"
+        android:src="@drawable/ic_vector_eye_off"
+        android:contentDescription="@null"
+        twitter:layout_constraintEnd_toEndOf="parent"
+        twitter:layout_constraintStart_toStartOf="parent"
+        twitter:layout_constraintTop_toTopOf="parent"
+        twitter:tint="@color/white" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:id="@id/sensitive_media_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_16"
+        android:layout_marginStart="@dimen/space_24"
+        android:layout_marginEnd="@dimen/space_24"
+        twitter:layout_constraintEnd_toEndOf="parent"
+        twitter:layout_constraintStart_toStartOf="parent"
+        twitter:layout_constraintTop_toBottomOf="@id/sensitive_media_icon" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textColor="@color/white"
+        android:id="@id/sensitive_media_message"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_16"
+        android:text="@string/sensitive_media_interstitial_message"
+        twitter:layout_constraintEnd_toEndOf="@id/sensitive_media_title"
+        twitter:layout_constraintStart_toStartOf="@id/sensitive_media_title"
+        twitter:layout_constraintTop_toBottomOf="@id/sensitive_media_title" />
+    <com.twitter.ui.components.button.legacy.TwitterButton
+        android:id="@id/media_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_16"
+        android:layout_marginBottom="@dimen/media_button_spacing"
+        android:text="@string/sensitive_media_interstitial_show"
+        android:contentDescription="@string/sensitive_media_interstitial_show_sensitive_media"
+        android:layout_marginEnd="@dimen/media_button_spacing"
+        twitter:fillColor="@color/black"
+        twitter:labelColor="@color/white"
+        twitter:layout_constraintBottom_toBottomOf="parent"
+        twitter:layout_constraintEnd_toEndOf="parent"
+        twitter:layout_constraintTop_toBottomOf="@id/sensitive_media_message"
+        style="@style/TwitterButtonSmallCondensed" />
+</merge>

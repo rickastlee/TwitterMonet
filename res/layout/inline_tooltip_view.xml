@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout
+        android:id="@id/inline_tooltip_top_pointer_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/space_12"
+        app:layout_constraintBottom_toTopOf="@id/inline_tooltip_content"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:id="@id/inline_tooltip_top_pointer"
+            android:visibility="gone"
+            android:layout_width="@dimen/inline_tooltip_anchor_width"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_2"
+            android:layout_marginBottom="-1.0dip"
+            android:src="@drawable/inline_tooltip_anchor_top"
+            android:importantForAccessibility="no" />
+    </FrameLayout>
+    <androidx.cardview.widget.CardView
+        android:id="@id/inline_tooltip_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="?dynamicColorBlue0"
+        app:cardCornerRadius="@dimen/corner_radius_medium"
+        app:cardElevation="0.0dip"
+        app:layout_constraintBottom_toTopOf="@id/inline_tooltip_bottom_pointer_container"
+        app:layout_constraintTop_toBottomOf="@id/inline_tooltip_top_pointer_container">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/space_16"
+            android:paddingVertical="@dimen/space_12">
+            <com.twitter.media.ui.fresco.FrescoMediaImageView
+                android:layout_gravity="top"
+                android:id="@id/inline_tooltip_image"
+                android:layout_width="@dimen/inline_tooltip_icon_size"
+                android:layout_height="@dimen/inline_tooltip_icon_size"
+                android:importantForAccessibility="no"
+                android:layout_marginEnd="@dimen/space_8"
+                app:defaultDrawable="@color/clear"
+                app:errorDrawable="@drawable/drawable_color_placeholder_bg">
+                <com.twitter.media.ui.fresco.FrescoDraweeView
+                    android:id="@id/image"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:scaleType="centerInside"
+                    app:viewAspectRatio="1.0" />
+            </com.twitter.media.ui.fresco.FrescoMediaImageView>
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textAppearance="@style/TextAppearance.InlineTooltip.Label"
+                android:layout_gravity="center_vertical"
+                android:id="@id/inline_tooltip_label_text"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0" />
+            <FrameLayout
+                android:id="@id/inline_tooltip_dismiss"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:paddingStart="@dimen/space_12">
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:padding="@dimen/inline_tooltip_close_button_padding"
+                    android:layout_width="@dimen/inline_tooltip_close_button_size"
+                    android:layout_height="@dimen/inline_tooltip_close_button_size"
+                    android:src="@drawable/ic_vector_close"
+                    android:scaleType="centerInside"
+                    android:contentDescription="@string/button_action_dismiss"
+                    app:tint="?coreColorPrimaryText" />
+            </FrameLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <FrameLayout
+        android:id="@id/inline_tooltip_bottom_pointer_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/space_12"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inline_tooltip_content">
+        <ImageView
+            android:id="@id/inline_tooltip_bottom_pointer"
+            android:visibility="gone"
+            android:layout_width="@dimen/inline_tooltip_anchor_width"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-1.0dip"
+            android:layout_marginBottom="@dimen/space_2"
+            android:src="@drawable/inline_tooltip_anchor_bottom"
+            android:importantForAccessibility="no" />
+    </FrameLayout>
+</merge>

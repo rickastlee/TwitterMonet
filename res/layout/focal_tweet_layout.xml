@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:id="@id/outer_layout_row_view_tweet"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ViewStub
+        android:id="@id/tweet_conversation_banner"
+        android:layout="@layout/tweet_conversation_banner"
+        android:inflatedId="@id/tweet_conversation_banner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/space_8"
+        android:layout_marginVertical="@dimen/space_4">
+        <tag
+            android:value="ConversationBannerStub"
+            android:id="@id/weaverComponent" />
+    </ViewStub>
+    <ViewStub
+        android:id="@id/interstitial_view_stub"
+        android:layout="@layout/withheld_tweet_tombstone"
+        android:inflatedId="@id/interstitial_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <tag
+            android:value="WithheldTombstoneStub"
+            android:id="@id/weaverComponent" />
+    </ViewStub>
+    <com.twitter.tweetview.core.TweetView
+        android:id="@id/row"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@style/TweetView.Focal" />
+    <View
+        android:id="@id/bottom_divider"
+        android:background="?coreColorBorder"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/border_thickness"
+        style="@style/HorizontalRule" />
+</LinearLayout>

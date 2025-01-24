@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="center_vertical"
+    android:layout_gravity="bottom"
+    android:id="@id/crop_buttons"
+    android:background="@color/black_opacity_75"
+    android:visibility="gone"
+    android:clickable="true"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/filter_controls_height"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:id="@id/orig_crop_button"
+        android:background="?selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0"
+        android:layout_marginStart="20.0dip">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="?iconCropOriginal"
+            android:scaleType="fitCenter"
+            android:contentDescription="@null"
+            app:tint="@color/white" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_xsmall"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_original_crop_ratio" />
+    </LinearLayout>
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:id="@id/wide_crop_button"
+        android:background="?selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="?iconCropWide"
+            android:scaleType="fitCenter"
+            android:contentDescription="@null"
+            app:tint="@color/white" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_xsmall"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_wide_crop_ratio" />
+    </LinearLayout>
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:id="@id/square_crop_button"
+        android:background="?selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="?iconCropSquare"
+            android:scaleType="fitCenter"
+            android:contentDescription="@null"
+            app:tint="@color/white" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_xsmall"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_square_crop_ratio" />
+    </LinearLayout>
+    <ImageButton
+        android:layout_gravity="center"
+        android:id="@id/rotate"
+        android:background="?selectableItemBackgroundBorderless"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:src="?iconRotate"
+        android:scaleType="fitCenter"
+        android:layout_weight="1.0"
+        android:contentDescription="@string/button_rotate"
+        android:layout_marginEnd="20.0dip"
+        app:tint="@color/white" />
+</LinearLayout>

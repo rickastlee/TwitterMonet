@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:id="@id/bottom_bar_container"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.twitter.ui.components.button.compose.HorizonComposeButton
+        android:textSize="@dimen/font_size_large"
+        android:id="@id/cta_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_12"
+        android:layout_marginBottom="@dimen/space_12"
+        android:layout_marginStart="@dimen/space_16"
+        android:layout_marginEnd="@dimen/space_16"
+        style="@style/TimelineMessagePrimaryAction" />
+    <com.twitter.ui.components.button.compose.HorizonComposeButton
+        android:textSize="@dimen/font_size_large"
+        android:id="@id/secondary_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_12"
+        android:layout_marginStart="@dimen/space_16"
+        android:layout_marginEnd="@dimen/space_16"
+        style="@style/TwitterButtonLargePrimaryText" />
+</LinearLayout>

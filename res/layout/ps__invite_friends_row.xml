@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:gravity="center_vertical"
+    android:id="@id/invite_friends_row_container"
+    android:background="?android:selectableItemBackground"
+    android:paddingTop="8.0dip"
+    android:paddingBottom="8.0dip"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="locale"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <tv.periscope.android.view.PsImageView
+        android:id="@id/invite_friends_icon"
+        android:layout_width="@dimen/ps__feed_row_height"
+        android:layout_height="@dimen/ps__feed_row_height"
+        android:src="@drawable/ps__ic_invite"
+        android:layout_marginStart="@dimen/ps__standard_spacing_16" />
+    <tv.periscope.android.view.PsTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textStyle="bold"
+        android:textColor="@color/ps__blue"
+        android:id="@id/invite_friends_cta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ps__invite_friends_to_periscope"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/ps__standard_spacing_16"
+        android:layout_toEndOf="@id/invite_friends_icon" />
+</RelativeLayout>

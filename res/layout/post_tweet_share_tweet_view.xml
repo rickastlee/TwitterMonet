@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="@drawable/off_platform_share_tweet_bg"
+    android:padding="@dimen/space_12"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <include
+        android:id="@id/base_tweet_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/base_share_tweet_view" />
+</LinearLayout>

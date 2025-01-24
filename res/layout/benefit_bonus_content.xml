@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:layout_gravity="center_horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_16"
+        android:layout_marginBottom="@dimen/space_24"
+        android:importantForAccessibility="noHideDescendants"
+        android:layout_marginStart="@dimen/space_24"
+        android:layout_marginEnd="@dimen/space_24"
+        android:outlineSpotShadowColor="?abstractColorText"
+        android:outlineAmbientShadowColor="?abstractColorText"
+        app:cardBackgroundColor="@color/clear"
+        app:cardCornerRadius="@dimen/space_12"
+        app:cardElevation="@dimen/space_8">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:background="@drawable/bg_rounded_rect"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/space_24"
+            android:paddingEnd="@dimen/space_24">
+            <ImageView
+                android:id="@id/tweet_dash"
+                android:layout_width="0.0dip"
+                android:layout_height="@dimen/space_24"
+                android:layout_marginBottom="@dimen/space_16"
+                android:src="@drawable/ic_tweet_text"
+                android:contentDescription="@null"
+                app:layout_constraintBottom_toTopOf="@id/text_container"
+                app:layout_constraintEnd_toEndOf="@id/text_container"
+                app:layout_constraintStart_toStartOf="@id/text_container"
+                app:layout_constraintTop_toTopOf="parent" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:id="@id/text_container"
+                android:background="@drawable/exclusive_tweet_education_bg"
+                android:padding="@dimen/space_12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/space_16"
+                app:layout_constraintBottom_toTopOf="@id/actions"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tweet_dash">
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/space_24"
+                    android:src="@drawable/ic_exclusive_tweet_fill"
+                    android:contentDescription="@null" />
+                <com.twitter.ui.components.text.legacy.TypefacesTextView
+                    android:textSize="@dimen/font_size_small"
+                    android:textColor="?coreColorPrimaryText"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bonus_content_asset_education_label"
+                    android:layout_marginStart="@dimen/space_4" />
+            </LinearLayout>
+            <ImageView
+                android:id="@id/actions"
+                android:layout_width="0.0dip"
+                android:layout_height="@dimen/space_24"
+                android:layout_marginBottom="@dimen/space_16"
+                android:src="@drawable/ic_action_bar"
+                android:scaleType="centerCrop"
+                android:contentDescription="@null"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/text_container"
+                app:layout_constraintStart_toStartOf="@id/text_container"
+                app:layout_constraintTop_toBottomOf="@id/text_container"
+                app:tint="?abstractColorDeepGray" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+    <ImageView
+        android:background="@drawable/bg_bonus_content"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/space_56"
+        android:contentDescription="@null"
+        android:elevation="@dimen/space_8" />
+</FrameLayout>

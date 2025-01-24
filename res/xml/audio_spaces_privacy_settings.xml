@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <com.twitter.ui.widget.TwitterPreferenceCategory>
+        <com.twitter.settings.widget.LinkableSwitchPreferenceCompat
+            android:title="@string/settings_audiospace_share_listening_data_title"
+            android:key="pref_audiospaces_share_listening_data"
+            android:summary="@string/settings_audiospace_share_listening_data_summary"
+            twitter:clickableUrl="@string/settings_audiospace_share_listening_data_url" />
+    </com.twitter.ui.widget.TwitterPreferenceCategory>
+    <com.twitter.ui.widget.TwitterPreferenceCategory>
+        <Preference
+            android:title="@string/settings_audiospace_history_management_title"
+            android:key="pref_audiospaces_history_management"
+            android:summary="@string/settings_audiospace_history_management_summary" />
+    </com.twitter.ui.widget.TwitterPreferenceCategory>
+    <com.twitter.ui.widget.TwitterPreferenceCategory>
+        <Preference
+            android:title="@string/settings_audiospace_scheduled_spaces_title"
+            android:key="pref_multi_scheduled_spaces"
+            android:summary="@string/settings_audiospace_scheduled_spaces_summary" />
+    </com.twitter.ui.widget.TwitterPreferenceCategory>
+</PreferenceScreen>

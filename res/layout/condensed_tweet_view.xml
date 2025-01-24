@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    android:orientation="vertical"
+    android:id="@id/tweet_view_linear_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <tag
+        android:value="LinearLayoutTweetView"
+        android:id="@id/weaverComponent" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/image_margin_end">
+            <FrameLayout
+                android:id="@id/tweet_profile_image_container"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <FrameLayout
+                    android:id="@id/animation_container"
+                    android:visibility="gone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" />
+                <com.twitter.media.ui.image.UserImageView
+                    android:id="@id/tweet_profile_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="?tweetViewProfileImageStyle">
+                    <tag
+                        android:value="RingedUserImage"
+                        android:id="@id/weaverComponent" />
+                </com.twitter.media.ui.image.UserImageView>
+                <ImageView
+                    android:layout_gravity="end|bottom|center"
+                    android:id="@id/audio_space_live_live_badge"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="@null"
+                    app:srcCompat="@drawable/ic_vector_audio_space_indicator" />
+                <tag
+                    android:value="OuterUserImage"
+                    android:id="@id/weaverComponent" />
+            </FrameLayout>
+            <com.twitter.media.ui.image.UserImageView
+                android:layout_gravity="center_horizontal"
+                android:id="@id/tweet_connector_avatar"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/space_4"
+                style="?tweetViewConnectorAvatarStyle">
+                <tag
+                    android:value="ConnectorUserImageView"
+                    android:id="@id/weaverComponent" />
+            </com.twitter.media.ui.image.UserImageView>
+        </LinearLayout>
+        <include
+            android:layout_gravity="center_vertical"
+            android:id="@id/tweet_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            layout="@layout/tweet_header_view" />
+        <ViewStub
+            android:layout_gravity="center_vertical"
+            android:id="@id/tweet_ad_badge_top_right"
+            android:layout="@layout/ad_badge"
+            android:inflatedId="@id/tweet_ad_badge_top_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_4">
+            <tag
+                android:value="AdBadgeStub"
+                android:id="@id/weaverComponent" />
+        </ViewStub>
+    </LinearLayout>
+    <com.twitter.ui.widget.UnpaddedTextLayoutView
+        android:textColorLink="?abstractColorLink"
+        android:id="@id/tweet_reply_context"
+        android:paddingTop="@dimen/reply_context_reduced_vertical_padding"
+        android:paddingBottom="@dimen/reply_context_reduced_vertical_padding"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="?tweetViewReplyContextStyle">
+        <tag
+            android:value="ReplyContext"
+            android:id="@id/weaverComponent" />
+    </com.twitter.ui.widget.UnpaddedTextLayoutView>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@id/tweet_auto_playable_content_parent"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8.0dip"
+        android:baselineAligned="false">
+        <FrameLayout
+            android:id="@id/media_container"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="4.0"
+            android:layout_marginEnd="8.0dip">
+            <ViewStub
+                android:id="@id/twitter_sensitive_interstitial"
+                android:inflatedId="@id/twitter_sensitive_interstitial"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/content_top_margin">
+                <tag
+                    android:value="SensitiveMediaInterstitialStub"
+                    android:id="@id/weaverComponent" />
+            </ViewStub>
+            <ViewStub
+                android:id="@id/user_sensitive_interstitial"
+                android:inflatedId="@id/user_sensitive_interstitial"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/content_top_margin">
+                <tag
+                    android:value="UserSensitiveInterstitialStub"
+                    android:id="@id/weaverComponent" />
+            </ViewStub>
+            <com.twitter.tweetview.core.TweetViewContentHostContainer
+                android:id="@id/card_media_tweet_container"
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                app:fullBleedOffsetStart="0.0dip"
+                style="?tweetViewTweetViewContentHostContainer">
+                <tag
+                    android:value="ContentHostContainer"
+                    android:id="@id/weaverComponent" />
+            </com.twitter.tweetview.core.TweetViewContentHostContainer>
+            <ViewStub
+                android:id="@id/tweet_promoted_badge_bottom"
+                android:layout="@layout/promoted_badge"
+                android:inflatedId="@id/tweet_promoted_badge_bottom"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="?timelineRowVerticalPadding">
+                <tag
+                    android:value="PromotedBadgeStub"
+                    android:id="@id/weaverComponent" />
+            </ViewStub>
+        </FrameLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="6.0">
+            <com.twitter.ui.user.UserLabelView
+                android:id="@id/user_label_view"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/curation_action_size"
+                style="?tweetViewUserLabelStyle">
+                <tag
+                    android:value="UserLabel"
+                    android:id="@id/weaverComponent" />
+            </com.twitter.ui.user.UserLabelView>
+            <FrameLayout
+                android:id="@id/text_content_container"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <com.twitter.ui.widget.TextContentView
+                    android:id="@id/tweet_content_text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_2"
+                    android:maxLines="6"
+                    android:importantForAccessibility="no"
+                    app:contentSize="@dimen/font_size_normal"
+                    app:ellipsizeEnd="true"
+                    style="?tweetViewContentStyle">
+                    <tag
+                        android:value="TextContent"
+                        android:id="@id/weaverComponent" />
+                </com.twitter.ui.widget.TextContentView>
+                <ViewStub
+                    android:id="@id/tweet_preview"
+                    android:layout="@layout/tweet_preview_overlay"
+                    android:inflatedId="@id/tweet_preview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+                    <tag
+                        android:value="TweetPreviewOverlay"
+                        android:id="@id/weaverComponent" />
+                </ViewStub>
+            </FrameLayout>
+            <ViewStub
+                android:id="@id/article_preview"
+                android:layout="@layout/twitter_article_card"
+                android:inflatedId="@id/article_preview"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_8">
+                <tag
+                    android:value="ArticlePreviewStub"
+                    android:id="@id/weaverComponent" />
+            </ViewStub>
+            <com.twitter.ui.widget.TextLayoutView
+                android:id="@id/tweet_additional_context_text"
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/space_8"
+                style="@style/TweetViewAdditionalContextTextView">
+                <tag
+                    android:value="AdditionalContext"
+                    android:id="@id/weaverComponent" />
+            </com.twitter.ui.widget.TextLayoutView>
+        </LinearLayout>
+    </LinearLayout>
+    <ViewStub
+        android:id="@id/soft_intervention_forward_pivot"
+        android:layout="@layout/tweet_view_soft_intervention_pivot_v2"
+        android:inflatedId="@id/soft_intervention_forward_pivot"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/list_row_half_padding_vertical">
+        <tag
+            android:value="SoftInterventionForwardPivotStub"
+            android:id="@id/weaverComponent" />
+    </ViewStub>
+    <ViewStub
+        android:id="@id/non_compliant_interstitial"
+        android:layout="@layout/tweet_non_compliant_tombstone_layout_no_constraint_layout_padding"
+        android:inflatedId="@id/non_compliant_interstitial"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_top_margin">
+        <tag
+            android:value="NonCompliantTombstoneStub"
+            android:id="@id/weaverComponent" />
+    </ViewStub>
+    <ViewStub
+        android:id="@id/birdwatch_pivot"
+        android:layout="@layout/tweet_view_birdwatch_pivot"
+        android:inflatedId="@id/birdwatch_pivot"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_top_margin">
+        <tag
+            android:value="BirdwatchPivotStub"
+            android:id="@id/weaverComponent" />
+    </ViewStub>
+</merge>

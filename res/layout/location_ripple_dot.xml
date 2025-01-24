@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <View
+        android:layout_gravity="center"
+        android:id="@id/location_ripple"
+        android:background="@drawable/location_blue_ripple"
+        android:padding="@dimen/space_2"
+        android:visibility="invisible"
+        android:layout_width="@dimen/location_ripple_size"
+        android:layout_height="@dimen/location_ripple_size" />
+    <View
+        android:layout_gravity="center"
+        android:id="@id/location_dot"
+        android:background="@drawable/location_blue_dot"
+        android:visibility="invisible"
+        android:layout_width="@dimen/location_ripple_dot_size"
+        android:layout_height="@dimen/location_ripple_dot_size"
+        android:elevation="@dimen/location_ripple_dot_elevation" />
+</merge>

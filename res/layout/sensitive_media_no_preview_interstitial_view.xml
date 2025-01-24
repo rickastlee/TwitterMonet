@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textStyle="bold"
+        android:id="@id/sensitive_media_title"
+        android:paddingTop="@dimen/space_8"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/possibly_sensitive_title"
+        android:paddingStart="@dimen/space_8"
+        android:paddingEnd="@dimen/space_8" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/sensitive_media_message"
+        android:paddingTop="@dimen/space_8"
+        android:paddingBottom="@dimen/space_8"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/possibly_sensitive_message"
+        android:paddingStart="@dimen/space_8"
+        android:paddingEnd="@dimen/space_8" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_8"
+        android:layout_marginHorizontal="@dimen/space_8">
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textColor="?coreColorTextLink"
+            android:id="@id/media_display"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="@string/possibly_sensitive_allow" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textColor="?abstractColorDeepGray"
+            android:id="@id/media_round_dot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/en_dot"
+            android:contentDescription="@null" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textColor="?coreColorTextLink"
+            android:id="@id/media_display_always"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="@string/possibly_sensitive_always_allow" />
+    </LinearLayout>
+</merge>

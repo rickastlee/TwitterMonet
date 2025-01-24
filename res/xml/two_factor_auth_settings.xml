@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <Preference
+        android:title="@string/login_verification_check"
+        android:key="login_verification_check_requests"
+        android:order="13" />
+    <com.twitter.ui.widget.TwitterPreferenceCategory
+        android:title="@string/settings_two_factor_auth_additional_methods_category_title"
+        android:key="two_factor_auth_additional_methods_category"
+        android:order="20">
+        <com.twitter.settings.widget.LinkablePreferenceCompat
+            android:persistent="false"
+            android:title="@string/login_verification_generated_code"
+            android:key="two_factor_auth_backup_code"
+            android:summary="@string/two_factor_settings_backup_code_summary"
+            android:order="21"
+            twitter:clickableUrl="@string/two_factor_auth_support_url" />
+    </com.twitter.ui.widget.TwitterPreferenceCategory>
+    <PreferenceScreen
+        android:persistent="false"
+        android:title="@string/settings_two_factor_auth_in_app_totp_code_generator_title"
+        android:key="two_factor_auth_in_app_totp_code_generator"
+        android:order="23" />
+    <PreferenceScreen
+        android:title="@string/login_verification_generated_code"
+        android:key="login_verification_generate_code"
+        android:order="24" />
+    <com.twitter.settings.widget.LinkableCheckBoxPreferenceCompat
+        android:persistent="false"
+        android:title="@string/settings_two_factor_auth_login_verification_title"
+        android:key="two_factor_auth"
+        android:summary="@string/settings_login_verification_summary"
+        android:order="1"
+        android:defaultValue="false"
+        twitter:clickableUrl="@string/two_factor_auth_support_url" />
+    <com.twitter.ui.widget.PreferenceTopCategoryCompat
+        android:title="@string/two_factor_auth_title"
+        android:key="two_factor_auth_verification_methods_category"
+        android:order="10">
+        <CheckBoxPreference
+            android:persistent="false"
+            android:title="@string/settings_two_factor_auth_text_message_title"
+            android:key="two_factor_auth_sms_checkbox"
+            android:summary="@string/two_factor_settings_text_message_summary"
+            android:order="11"
+            android:defaultValue="false" />
+        <SwitchPreference
+            android:persistent="false"
+            android:title="@string/settings_two_factor_auth_text_message_title"
+            android:key="two_factor_auth_sms_switch"
+            android:summary="@string/two_factor_settings_text_message_summary"
+            android:order="12"
+            android:defaultValue="false" />
+        <CheckBoxPreference
+            android:persistent="false"
+            android:title="@string/two_factor_settings_mobile_authenticator_app_title"
+            android:key="two_factor_auth_mobile_security_app_checkbox"
+            android:summary="@string/two_factor_settings_mobile_authenticator_summary"
+            android:order="13"
+            android:defaultValue="false" />
+        <SwitchPreference
+            android:persistent="false"
+            android:title="@string/two_factor_settings_mobile_authenticator_app_title"
+            android:key="two_factor_auth_mobile_security_app_switch"
+            android:summary="@string/two_factor_settings_mobile_authenticator_summary"
+            android:order="14"
+            android:defaultValue="false" />
+        <com.twitter.settings.widget.LinkableCheckBoxPreferenceCompat
+            android:persistent="false"
+            android:title="@string/settings_two_factor_auth_u2f_security_key_title"
+            android:key="two_factor_auth_u2f_security_key_checkbox"
+            android:summary="@string/two_factor_settings_u2f_security_key_summary"
+            android:order="15"
+            android:defaultValue="false"
+            twitter:clickableUrl="@string/two_factor_auth_support_url" />
+        <com.twitter.settings.widget.LinkableSwitchPreferenceCompat
+            android:persistent="false"
+            android:title="@string/settings_two_factor_auth_u2f_security_key_title"
+            android:key="two_factor_auth_u2f_security_key_switch"
+            android:summary="@string/two_factor_settings_u2f_security_key_summary"
+            android:order="16"
+            android:defaultValue="false"
+            twitter:clickableUrl="@string/two_factor_auth_support_url" />
+        <Preference
+            android:persistent="false"
+            android:title="@string/two_factor_settings_u2f_key_management_title"
+            android:key="two_factor_auth_manage_u2f_keys"
+            android:order="17" />
+    </com.twitter.ui.widget.PreferenceTopCategoryCompat>
+</PreferenceScreen>

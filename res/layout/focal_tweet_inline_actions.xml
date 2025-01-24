@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.ui.tweet.inlineactions.InlineActionBar
+    android:layout_gravity="center"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.ui.tweet.inlineactions.InlineActionView
+        android:id="@id/inline_reply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/InlineActionView.Focal.Reply" />
+    <com.twitter.ui.tweet.inlineactions.InlineActionView
+        android:id="@id/inline_retweet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/InlineActionView.Focal.Retweet" />
+    <com.twitter.ui.tweet.inlineactions.InlineActionView
+        android:id="@id/inline_like"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/InlineActionView.Focal.Like" />
+    <com.twitter.ui.tweet.inlineactions.InlineActionView
+        android:id="@id/inline_bookmark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/InlineActionView.Focal.Bookmark" />
+    <com.twitter.ui.tweet.inlineactions.InlineActionView
+        android:id="@id/twitter_share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/InlineActionView.Focal.TwitterShare" />
+</com.twitter.ui.tweet.inlineactions.InlineActionBar>

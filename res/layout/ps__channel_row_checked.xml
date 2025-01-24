@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:gravity="center_vertical"
+    android:id="@id/channel_row_container"
+    android:background="?android:selectableItemBackground"
+    android:paddingTop="8.0dip"
+    android:paddingBottom="8.0dip"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="locale"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:id="@id/thumbnail_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/ps__standard_spacing_16">
+        <tv.periscope.android.view.PsImageView
+            android:id="@id/thumbnail"
+            android:layout_width="@dimen/ps__feed_row_height"
+            android:layout_height="@dimen/ps__feed_row_height"
+            android:scaleType="centerCrop" />
+        <tv.periscope.android.view.PsImageView
+            android:id="@id/thumbnail_info_icon"
+            android:background="@drawable/ps__bg_channel_info_icon"
+            android:visibility="gone"
+            android:layout_width="16.0dip"
+            android:layout_height="16.0dip"
+            android:src="@drawable/ps__ic_i"
+            android:scaleType="center"
+            android:layout_alignBottom="@id/thumbnail"
+            android:layout_alignStart="@id/thumbnail" />
+    </RelativeLayout>
+    <tv.periscope.android.view.PsCheckButton
+        android:id="@id/check"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="8.0dip"
+        android:layout_marginEnd="8.0dip"
+        android:layout_alignParentEnd="true"
+        style="@style/ps__IconButton" />
+    <tv.periscope.android.view.PsTextView
+        android:theme="@style/ps__AudienceSelectionRow"
+        android:id="@id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/ps__standard_spacing_16"
+        android:layout_toStartOf="@id/check"
+        android:layout_toEndOf="@id/thumbnail_container" />
+</RelativeLayout>

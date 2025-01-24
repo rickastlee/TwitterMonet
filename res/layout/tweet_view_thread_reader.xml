@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    android:id="@id/tweet_view_constraint_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <tag
+        android:value="ReaderModeViewDelegateBinder"
+        android:id="@id/viewBinderNamed" />
+    <tag
+        android:value="com.twitter.tweetview.core.ui.TweetViewViewDelegateBinder"
+        android:id="@id/viewBinder" />
+    <tag
+        android:value="com.twitter.tweetview.core.TweetViewViewModel"
+        android:id="@id/viewModel" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_xlarge"
+        android:id="@id/tweet_content_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_16"
+        android:layout_marginHorizontal="@dimen/space_16"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/TweetContentView.Focal.Selectable">
+        <tag
+            android:value="FocalTextContent"
+            android:id="@id/weaverComponent" />
+    </com.twitter.ui.components.text.legacy.TypefacesTextView>
+    <ViewStub
+        android:id="@id/non_compliant_interstitial"
+        android:layout="@layout/tweet_non_compliant_tombstone_layout_no_constraint_layout_padding"
+        android:inflatedId="@id/non_compliant_interstitial"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_12"
+        android:layout_marginHorizontal="@dimen/space_16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tweet_content_text">
+        <tag
+            android:value="NonCompliantTombstoneStub"
+            android:id="@id/weaverComponent" />
+    </ViewStub>
+    <ViewStub
+        android:id="@id/twitter_sensitive_interstitial"
+        android:inflatedId="@id/twitter_sensitive_interstitial"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_12"
+        android:layout_marginHorizontal="@dimen/space_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/non_compliant_interstitial"
+        app:layout_goneMarginTop="@dimen/space_12">
+        <tag
+            android:value="SensitiveMediaInterstitialStub"
+            android:id="@id/weaverComponent" />
+    </ViewStub>
+    <ViewStub
+        android:id="@id/user_sensitive_interstitial"
+        android:inflatedId="@id/user_sensitive_interstitial"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_12"
+        android:layout_marginHorizontal="@dimen/space_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/twitter_sensitive_interstitial"
+        app:layout_goneMarginTop="@dimen/space_12">
+        <tag
+            android:value="UserSensitiveInterstitialStub"
+            android:id="@id/weaverComponent" />
+    </ViewStub>
+    <com.twitter.tweetview.core.TweetViewContentHostContainer
+        android:id="@id/card_media_tweet_container"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_12"
+        app:fullBleedOffsetEnd="0.0dip"
+        app:fullBleedOffsetStart="0.0dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/user_sensitive_interstitial"
+        app:layout_goneMarginTop="@dimen/space_16"
+        style="?tweetViewTweetViewContentHostContainer">
+        <tag
+            android:value="FocalEdgeToEdgeContentHostContainer"
+            android:id="@id/weaverComponent" />
+    </com.twitter.tweetview.core.TweetViewContentHostContainer>
+    <ViewStub
+        android:id="@id/soft_intervention_forward_pivot"
+        android:layout="@layout/tweet_view_soft_intervention_pivot_v2"
+        android:inflatedId="@id/soft_intervention_forward_pivot"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/list_row_half_padding_vertical"
+        android:layout_marginHorizontal="@dimen/space_16"
+        app:layout_constraintTop_toBottomOf="@id/card_media_tweet_container">
+        <tag
+            android:value="SoftInterventionForwardPivotStub"
+            android:id="@id/weaverComponent" />
+    </ViewStub>
+    <com.twitter.ui.widget.TextLayoutView
+        android:textSize="@dimen/font_size_small"
+        android:textColor="?abstractColorDeepGray"
+        android:id="@id/tweet_media_tags"
+        android:paddingBottom="3.0dip"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_8"
+        android:layout_marginHorizontal="@dimen/space_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/soft_intervention_forward_pivot">
+        <tag
+            android:value="MediaTags"
+            android:id="@id/weaverComponent" />
+    </com.twitter.ui.widget.TextLayoutView>
+    <com.twitter.tweetview.core.QuoteView
+        android:id="@id/tweet_quote"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?tweetQuoteLayoutMarginTop"
+        android:importantForAccessibility="noHideDescendants"
+        android:layout_marginHorizontal="@dimen/space_16"
+        app:layout_constraintEnd_toEndOf="@id/content_end"
+        app:layout_constraintStart_toStartOf="@id/content_start"
+        app:layout_constraintTop_toBottomOf="@id/tweet_media_tags"
+        style="?tweetViewQuoteViewStyle">
+        <tag
+            android:value="com.twitter.tweetview.core.ui.quote.QuoteViewDelegateBinder"
+            android:id="@id/viewBinder" />
+        <tag
+            android:value="com.twitter.tweetview.core.TweetViewViewModel"
+            android:id="@id/viewModel" />
+    </com.twitter.tweetview.core.QuoteView>
+    <ViewStub
+        android:id="@id/tweet_inner_tombstone"
+        android:layout="@layout/tweet_inner_tombstone_layout_no_constraint_layout_padding"
+        android:inflatedId="@id/tweet_inner_tombstone"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_12"
+        app:layout_constraintEnd_toEndOf="@id/content_end"
+        app:layout_constraintStart_toStartOf="@id/content_start"
+        app:layout_constraintTop_toBottomOf="@id/tweet_quote">
+        <tag
+            android:value="InnerTombstoneStub"
+            android:id="@id/weaverComponent" />
+    </ViewStub>
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:barrierMargin="@dimen/space_16"
+        app:constraint_referenced_ids="tweet_content_text, non_compliant_interstitial, possibly_sensitive_warning, card_media_tweet_container, soft_intervention_forward_pivot, tweet_media_tags, tweet_quote, tweet_inner_tombstone" />
+    <View
+        android:id="@id/divider"
+        android:background="#ffccd6dd"
+        android:layout_width="@dimen/space_32"
+        android:layout_height="1.0px"
+        android:layout_marginHorizontal="@dimen/space_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barrier" />
+</merge>

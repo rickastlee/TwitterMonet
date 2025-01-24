@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include
+        android:id="@id/scroll_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        layout="@layout/super_follow_main" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@id/toolbar_layout"
+        android:background="@color/clear"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:layout_scrollFlags="scroll|exitUntilCollapsed">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@id/toolbar"
+            android:background="@color/clear"
+            android:layoutDirection="?forceLayoutDirection"
+            android:outlineAmbientShadowColor="@color/clear"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:navigationContentDescription="@string/back"
+            app:navigationIcon="@drawable/ic_vector_arrow_left"
+            style="@style/ToolBarStyle" />
+        <ImageView
+            android:id="@id/logo"
+            android:layout_width="?toolbarIconSize"
+            android:layout_height="?toolbarIconSize"
+            android:contentDescription="@null"
+            app:layout_constraintBottom_toBottomOf="@id/toolbar"
+            app:layout_constraintEnd_toEndOf="@id/toolbar"
+            app:layout_constraintStart_toStartOf="@id/toolbar"
+            app:layout_constraintTop_toTopOf="@id/toolbar"
+            app:srcCompat="@drawable/ic_vector_twitter_white" />
+        <ImageView
+            android:id="@id/share_button"
+            android:padding="@dimen/space_16"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:foreground="@drawable/ripple_selector_oval"
+            android:src="?toolbarShareIcon"
+            android:contentDescription="@string/button_action_share"
+            app:layout_constraintBottom_toBottomOf="@id/toolbar"
+            app:layout_constraintEnd_toEndOf="@id/toolbar"
+            app:layout_constraintTop_toTopOf="@id/toolbar" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <include
+        android:layout_gravity="bottom"
+        android:id="@id/terms_subscribe_container_sticky"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/terms_subscribe" />
+    <tag
+        android:value="com.twitter.superfollows.SuperFollowsSubscriptionViewModel"
+        android:id="@id/viewModel" />
+    <tag
+        android:value="com.twitter.weaver.base.WeaverViewDelegateBinder"
+        android:id="@id/viewBinder" />
+    <tag
+        android:value="SuperFollowsSubscription"
+        android:id="@id/viewBinderNamed" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

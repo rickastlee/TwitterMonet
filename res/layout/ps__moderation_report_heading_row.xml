@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <tv.periscope.android.view.PsTextView
+        android:textSize="14.0sp"
+        android:textColor="@color/ps__white_50"
+        android:id="@id/text"
+        android:paddingTop="@dimen/ps__standard_spacing_16"
+        android:paddingBottom="@dimen/ps__standard_spacing_8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="true"
+        android:layout_marginStart="@dimen/ps__standard_spacing_10"
+        android:layout_marginEnd="@dimen/ps__standard_spacing_10"
+        android:layout_toStartOf="@id/action"
+        android:layout_alignParentStart="true" />
+    <tv.periscope.android.view.PsTextView
+        android:textSize="14.0sp"
+        android:textColor="@color/ps__blue"
+        android:id="@id/action"
+        android:paddingTop="@dimen/ps__standard_spacing_16"
+        android:paddingBottom="@dimen/ps__standard_spacing_8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="true"
+        android:layout_marginStart="@dimen/ps__standard_spacing_10"
+        android:layout_marginEnd="@dimen/ps__standard_spacing_10"
+        android:layout_alignParentEnd="true" />
+</RelativeLayout>

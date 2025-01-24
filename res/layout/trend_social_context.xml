@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.twitter.ui.widget.FacepileView
+        android:id="@id/social_context_facepile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:avatarSize="@dimen/nano_user_image_size"
+        app:maxAvatars="10" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_small"
+        android:textColor="?coreColorSecondaryText"
+        android:ellipsize="end"
+        android:layout_gravity="center_vertical"
+        android:id="@id/social_context_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:layout_marginStart="@dimen/space_8" />
+</LinearLayout>

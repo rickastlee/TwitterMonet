@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="?coreColorAppBackground"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@id/dismiss_button"
+            android:padding="@dimen/space_12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_action_dismiss"
+            android:contentDescription="@string/cancel"
+            fresco:layout_constraintStart_toStartOf="parent"
+            fresco:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@id/twitter_icon"
+            android:focusable="false"
+            android:clickable="false"
+            android:layout_width="@dimen/space_28"
+            android:layout_height="@dimen/space_28"
+            android:src="?iconTwitter"
+            android:contentDescription="@null"
+            android:layout_marginVertical="@dimen/space_16"
+            fresco:layout_constraintEnd_toEndOf="parent"
+            fresco:layout_constraintStart_toStartOf="parent"
+            fresco:layout_constraintTop_toTopOf="parent"
+            fresco:tint="?coreColorBadgeVerified" />
+        <com.twitter.media.ui.fresco.FrescoDraweeView
+            android:id="@id/image_view"
+            android:layout_width="0.0dip"
+            android:layout_height="200.0dip"
+            android:layout_marginTop="@dimen/space_12"
+            android:layout_marginBottom="@dimen/space_32"
+            fresco:actualImageScaleType="fitCenter"
+            fresco:layout_constraintBottom_toTopOf="@id/content_container"
+            fresco:layout_constraintEnd_toEndOf="parent"
+            fresco:layout_constraintStart_toStartOf="parent"
+            fresco:layout_constraintTop_toBottomOf="@id/dismiss_button"
+            fresco:layout_constraintVertical_chainStyle="packed" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@id/content_container"
+            android:paddingBottom="@dimen/space_32"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/space_32"
+            fresco:layout_constraintBottom_toTopOf="@id/detail_text"
+            fresco:layout_constraintEnd_toEndOf="parent"
+            fresco:layout_constraintStart_toStartOf="parent"
+            fresco:layout_constraintTop_toBottomOf="@id/image_view">
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textSize="@dimen/font_size_xlarge"
+                android:id="@id/primary_text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                style="@style/PrimaryText" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textSize="@dimen/font_size_normal"
+                android:id="@id/secondary_text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_8"
+                style="@style/SecondaryText" />
+            <com.twitter.ui.components.button.compose.HorizonComposeButton
+                android:id="@id/primary_button"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_32"
+                style="@style/TwitterButtonXLargePrimaryFilled" />
+            <com.twitter.ui.components.button.compose.HorizonComposeButton
+                android:id="@id/secondary_button"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_16"
+                style="@style/TwitterButtonXLargePrimaryOutlined" />
+        </LinearLayout>
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_small"
+            android:textColor="?coreColorSecondaryText"
+            android:id="@id/detail_text"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_24"
+            android:layout_marginHorizontal="@dimen/space_32"
+            fresco:layout_constraintBottom_toBottomOf="parent"
+            fresco:layout_constraintEnd_toEndOf="parent"
+            fresco:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

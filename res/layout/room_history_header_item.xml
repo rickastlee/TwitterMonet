@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textColor="?coreColorSecondaryText"
+        android:id="@id/header_content"
+        android:paddingTop="@dimen/space_12"
+        android:paddingBottom="@dimen/space_12"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/history_management_header_fmt"
+        android:paddingStart="@dimen/space_16"
+        android:paddingEnd="@dimen/space_16" />
+    <View
+        android:layout_gravity="bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/border_thickness"
+        style="@style/HorizontalRule" />
+</FrameLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:icon="@drawable/ic_vector_search_shortcut"
+        android:enabled="true"
+        android:shortcutId="search"
+        android:shortcutShortLabel="@string/shortcut_search"
+        android:shortcutLongLabel="@string/shortcut_search">
+        <intent
+            android:targetPackage="com.twitter.android"
+            android:action="android.intent.action.VIEW"
+            android:data="twitter://search"
+            android:targetClass="com.twitter.deeplink.implementation.UrlInterpreterActivity">
+            <extra
+                android:name="shortcut"
+                android:value="search" />
+        </intent>
+    </shortcut>
+    <shortcut
+        android:icon="@drawable/ic_vector_camera_shortcut"
+        android:enabled="true"
+        android:shortcutId="capture"
+        android:shortcutShortLabel="@string/shortcut_capture"
+        android:shortcutLongLabel="@string/shortcut_capture">
+        <intent
+            android:targetPackage="com.twitter.android"
+            android:action="android.intent.action.VIEW"
+            android:data="twitter://camera"
+            android:targetClass="com.twitter.deeplink.implementation.UrlInterpreterActivity">
+            <extra
+                android:name="shortcut"
+                android:value="capture" />
+        </intent>
+    </shortcut>
+    <shortcut
+        android:icon="@drawable/ic_vector_compose_shortcut"
+        android:enabled="true"
+        android:shortcutId="tweet"
+        android:shortcutShortLabel="@string/shortcut_tweet"
+        android:shortcutLongLabel="@string/shortcut_tweet">
+        <intent
+            android:targetPackage="com.twitter.android"
+            android:action="android.intent.action.VIEW"
+            android:data="twitter://post"
+            android:targetClass="com.twitter.deeplink.implementation.UrlInterpreterActivity">
+            <extra
+                android:name="shortcut"
+                android:value="tweet" />
+        </intent>
+    </shortcut>
+    <shortcut
+        android:icon="@drawable/ic_vector_compose_dm_shortcut"
+        android:enabled="false"
+        android:shortcutId="direct_message"
+        android:shortcutShortLabel="@string/shortcut_dm"
+        android:shortcutLongLabel="@string/shortcut_dm"
+        android:shortcutDisabledMessage="@string/shortcut_disabled_reason">
+        <intent
+            android:targetPackage="com.twitter.android"
+            android:action="android.intent.action.VIEW"
+            android:data="twitter://messages/compose"
+            android:targetClass="com.twitter.deeplink.implementation.UrlInterpreterActivity">
+            <extra
+                android:name="shortcut"
+                android:value="direct_message" />
+        </intent>
+    </shortcut>
+    <share-target
+        android:targetClass="com.twitter.app.dm.DMActivity">
+        <data
+            android:mimeType="text/plain" />
+        <data
+            android:mimeType="video/*" />
+        <data
+            android:mimeType="image/*" />
+        <category
+            android:name="android.intent.category.DEFAULT" />
+    </share-target>
+</shortcuts>

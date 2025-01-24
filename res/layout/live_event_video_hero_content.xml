@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <com.twitter.android.liveevent.ui.SlateView
+        android:id="@id/activity_live_event_hero_slate"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        twitter:showDisplayName="false"
+        twitter:showImageGradient="always"
+        twitter:showTitle="false" />
+    <com.twitter.media.av.autoplay.ui.VideoContainerHost
+        android:layout_gravity="center"
+        android:id="@id/player"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+    <View
+        android:id="@id/activity_live_event_hero_content_fade_overlay"
+        android:background="@color/black"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:alpha="0.0" />
+</merge>

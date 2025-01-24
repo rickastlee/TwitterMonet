@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.twitter.settings.widget.LinkablePreferenceCompat
+        android:selectable="false"
+        android:key="page_summary"
+        android:order="10"
+        app:clickableUrls="@array/settings_policy" />
+    <com.twitter.settings.widget.RadioButtonPreference
+        android:title="@string/settings_sensitive_media_warn"
+        android:key="warn"
+        android:order="20" />
+    <com.twitter.settings.widget.RadioButtonPreference
+        android:title="@string/settings_sensitive_media_show_all"
+        android:key="show_all"
+        android:order="30" />
+    <com.twitter.settings.widget.RadioButtonPreference
+        android:title="@string/settings_sensitive_media_never_show"
+        android:key="never_show"
+        android:order="40" />
+</PreferenceScreen>

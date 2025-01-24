@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@id/list_empty_text"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/empty_title"
+        android:paddingTop="@dimen/space_36"
+        android:paddingBottom="@dimen/space_8"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/space_32"
+        app:layout_constraintBottom_toTopOf="@id/empty_desc"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        style="@style/TLEmptyViewText" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/empty_desc"
+        android:paddingBottom="@dimen/space_12"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/space_32"
+        app:layout_constraintBottom_toTopOf="@id/empty_button_positive"
+        app:layout_constraintTop_toBottomOf="@id/empty_title"
+        app:layout_constraintVertical_chainStyle="packed"
+        style="@style/TLEmptyViewDescriptionText" />
+    <com.twitter.ui.components.button.legacy.TwitterButton
+        android:id="@id/empty_button_positive"
+        android:paddingBottom="@dimen/space_16"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_16"
+        android:layout_marginHorizontal="@dimen/space_32"
+        app:layout_constraintBottom_toTopOf="@id/empty_button_neutral"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/empty_desc"
+        app:layout_constraintVertical_chainStyle="packed"
+        style="?listEmptyButtonPositiveStyle" />
+    <com.twitter.ui.components.button.legacy.TwitterButton
+        android:id="@id/empty_button_neutral"
+        android:paddingBottom="@dimen/space_16"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_16"
+        android:layout_marginHorizontal="@dimen/space_32"
+        app:layout_constraintBottom_toTopOf="@id/empty_button_graphql_errors"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/empty_button_positive"
+        app:layout_constraintVertical_chainStyle="packed"
+        style="?listEmptyButtonNeutralStyle" />
+    <com.twitter.ui.components.button.compose.HorizonComposeButton
+        android:id="@id/empty_button_graphql_errors"
+        android:paddingBottom="@dimen/space_16"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_8"
+        android:layout_marginHorizontal="@dimen/space_32"
+        app:iconSrc="@drawable/ic_vector_information_circle_red"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/empty_button_neutral"
+        app:layout_constraintVertical_chainStyle="packed"
+        style="@style/TwitterButtonMediumRegularRed" />
+</androidx.constraintlayout.widget.ConstraintLayout>

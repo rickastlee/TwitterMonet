@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:paddingTop="@dimen/space_12"
+    android:paddingBottom="@dimen/space_4"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/space_12"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@id/icon"
+        android:background="@drawable/ic_vector_lists"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        android:importantForAccessibility="no"
+        android:backgroundTint="?android:textColorSecondary"
+        twitter:layout_constraintBottom_toBottomOf="@id/icon_context"
+        twitter:layout_constraintDimensionRatio="1:1"
+        twitter:layout_constraintStart_toStartOf="parent"
+        twitter:layout_constraintTop_toTopOf="@id/icon_context" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_small"
+        android:textStyle="bold"
+        android:textColor="@color/subtext"
+        android:id="@id/icon_context"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/list"
+        android:layout_marginStart="@dimen/space_4"
+        twitter:layout_constraintStart_toEndOf="@id/icon"
+        twitter:layout_constraintTop_toTopOf="parent" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_small"
+        android:textStyle="bold"
+        android:textColor="?android:textColorSecondary"
+        android:id="@id/middle_dot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/en_dot"
+        twitter:layout_constraintStart_toEndOf="@id/icon_context"
+        twitter:layout_constraintTop_toTopOf="parent" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_small"
+        android:textStyle="normal"
+        android:textColor="?android:textColorSecondary"
+        android:id="@id/member_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        twitter:layout_constraintStart_toEndOf="@id/middle_dot"
+        twitter:layout_constraintTop_toTopOf="parent" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textStyle="bold"
+        android:ellipsize="end"
+        android:id="@id/content"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:textAlignment="viewStart"
+        android:paddingVertical="@dimen/space_4"
+        twitter:layout_constraintEnd_toEndOf="parent"
+        twitter:layout_constraintStart_toStartOf="parent"
+        twitter:layout_constraintTop_toBottomOf="@id/icon_context" />
+    <com.twitter.ui.user.BaseUserView
+        android:id="@id/user_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/verified_icon_intrinsic_height"
+        twitter:layout_constraintBottom_toBottomOf="parent"
+        twitter:layout_constraintStart_toStartOf="parent"
+        twitter:layout_constraintTop_toBottomOf="@id/content">
+        <com.twitter.media.ui.image.UserImageView
+            android:id="@id/user_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/space_4"
+            android:layout_toStartOf="@id/user_view" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_small"
+            android:ellipsize="end"
+            android:id="@id/name_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/user_image"
+            style="?userInfoNameStyle" />
+        <ImageView
+            android:id="@id/protected_item"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/font_size_small"
+            android:src="?iconProtected"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/icon_protected"
+            android:layout_toEndOf="@id/name_item"
+            twitter:tint="?protectedBadgeColor" />
+        <ImageView
+            android:id="@id/verified_item"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/font_size_small"
+            android:src="?iconVerified"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/icon_verified"
+            android:layout_toEndOf="@id/protected_item"
+            twitter:tint="?verifiedBadgeColor" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_small"
+            android:textStyle="normal"
+            android:textColor="?android:textColorSecondary"
+            android:ellipsize="end"
+            android:id="@id/screenname_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/space_4"
+            android:layout_toEndOf="@id/verified_item" />
+    </com.twitter.ui.user.BaseUserView>
+</androidx.constraintlayout.widget.ConstraintLayout>

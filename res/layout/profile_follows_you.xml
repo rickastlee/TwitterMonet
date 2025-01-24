@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="?followsYouTextSize"
+        android:textColor="?coreColorSecondaryText"
+        android:id="@id/follows_you"
+        android:text="?followsYouText"
+        style="?profileFollowsYouStyle" />
+</merge>

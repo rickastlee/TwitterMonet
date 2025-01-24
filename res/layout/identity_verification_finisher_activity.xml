@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingHorizontal="@dimen/space_24"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_jumbo"
+        android:textStyle="bold"
+        android:textColor="?coreColorPrimaryText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_32"
+        android:layout_marginBottom="@dimen/space_16"
+        android:text="@string/identity_error_title" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textColor="?coreColorSecondaryText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/identity_error_description" />
+    <LinearLayout
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <com.twitter.ui.components.button.legacy.TwitterButton
+            android:id="@id/identity_error_retry"
+            android:padding="@dimen/space_12"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_12"
+            android:layout_marginBottom="@dimen/space_12"
+            android:text="@string/retry"
+            style="@style/TwitterButtonLargePrimaryFilled" />
+        <com.twitter.ui.components.button.legacy.TwitterButton
+            android:id="@id/identity_error_cancel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_8"
+            android:text="@string/skip"
+            style="@style/TwitterButtonLargePrimaryOutlined" />
+    </LinearLayout>
+    <tag
+        android:value="IdentityVerificationFinisherActivity"
+        android:id="@id/weaverComponent" />
+</LinearLayout>

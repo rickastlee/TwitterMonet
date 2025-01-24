@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@id/toast_icon"
+        android:layout_width="@dimen/space_20"
+        android:layout_height="@dimen/space_20"
+        android:importantForAccessibility="no"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/ToastIcon" />
+    <com.twitter.media.ui.image.UserImageView
+        android:id="@id/toast_avatar"
+        android:layout_width="@dimen/space_16"
+        android:layout_height="@dimen/space_16"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="@id/toast_icon"
+        app:layout_constraintEnd_toEndOf="@id/toast_icon"
+        app:layout_constraintStart_toEndOf="@id/toast_icon"
+        app:layout_constraintTop_toBottomOf="@id/toast_icon" />
+</androidx.constraintlayout.widget.ConstraintLayout>

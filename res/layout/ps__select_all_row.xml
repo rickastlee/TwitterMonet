@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@id/row_container"
+    android:background="?android:selectableItemBackground"
+    android:paddingTop="8.0dip"
+    android:paddingBottom="8.0dip"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="locale"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <tv.periscope.android.view.PsCheckButton
+        android:id="@id/check"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="8.0dip"
+        android:layout_marginEnd="8.0dip"
+        android:layout_alignParentEnd="true"
+        style="@style/ps__IconButton" />
+    <tv.periscope.android.view.PsTextView
+        android:textSize="14.0sp"
+        android:textStyle="bold"
+        android:textColor="@color/ps__main_primary"
+        android:id="@id/select_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ps__select_all"
+        android:layout_centerVertical="true"
+        android:textAllCaps="true"
+        android:paddingStart="@dimen/ps__indented_list_left_padding"
+        android:layout_toStartOf="@id/check"
+        android:layout_alignParentStart="true" />
+</RelativeLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <tag
+        android:value="BroadcastDeeplink"
+        android:id="@id/weaverComponent" />
+    <tv.periscope.android.view.PsLoading
+        android:id="@id/loading_animation"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/ps__loading_view_full_screen" />
+</FrameLayout>

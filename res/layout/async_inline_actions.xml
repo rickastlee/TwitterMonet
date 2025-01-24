@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.ui.view.AsyncView
+    android:id="@id/async_view"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/inline_action_bar_height"
+    app:layout="@layout/main_inline_actions"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <tag
+        android:value="InlineActionBar"
+        android:id="@id/weaverComponent" />
+</com.twitter.ui.view.AsyncView>

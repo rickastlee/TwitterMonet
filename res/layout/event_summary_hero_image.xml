@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.media.ui.fresco.FrescoMediaImageView
+    android:id="@id/thumbnail_view"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    twitter:defaultDrawable="@drawable/drawable_color_placeholder_bg"
+    twitter:errorDrawable="@drawable/ic_vector_photo_error_white_alpha"
+    twitter:scaleType="fill"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto" />

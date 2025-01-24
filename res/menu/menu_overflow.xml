@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@id/menu_following"
+        android:visible="false"
+        android:title="@string/overflow_menu_following" />
+    <item
+        android:id="@id/menu_account_notifications"
+        android:visible="false"
+        android:title="@string/overflow_menu_account_notifications" />
+    <item
+        android:id="@id/menu_direct_message"
+        android:visible="false"
+        android:title="@string/overflow_menu_direct_message" />
+    <item
+        android:id="@id/menu_tipjar"
+        android:visible="false"
+        android:title="@string/overflow_menu_tipjar" />
+    <item
+        android:id="@id/menu_super_follow"
+        android:visible="false"
+        android:title="@string/overflow_menu_super_follow" />
+</menu>

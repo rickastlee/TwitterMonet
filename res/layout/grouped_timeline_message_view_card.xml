@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.ui.view.GroupedRowView
+    android:focusable="true"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.ui.widget.timeline.CardTimelineInlinePromptView
+        android:id="@id/timeline_inline_prompt_view_card"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+</com.twitter.ui.view.GroupedRowView>

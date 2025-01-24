@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:clipToPadding="false"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.AppCompatEditText
+        android:textSize="@dimen/font_size_normal"
+        android:id="@id/suggestion_edit_text"
+        android:background="@null"
+        android:paddingTop="6.0dip"
+        android:paddingBottom="6.0dip"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/toolbar_height"
+        android:maxLines="3"
+        android:drawablePadding="@dimen/space_16"
+        android:inputType="textMultiLine|textNoSuggestions"
+        android:imeOptions="flagNoExtractUi"
+        android:drawableStart="@drawable/ic_vector_search_stroke"
+        android:paddingStart="@dimen/space_16"
+        android:paddingEnd="@dimen/space_16"
+        android:drawableTint="?coreColorSecondaryText"
+        android:lineHeight="44.0dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="?suggestionEditTextStyle">
+        <tag
+            android:value="DMComposeText"
+            android:id="@id/weaverComponent" />
+    </androidx.appcompat.widget.AppCompatEditText>
+    <View
+        android:id="@id/divider"
+        android:background="?coreColorBorder"
+        android:layout_width="0.0dip"
+        android:layout_height="@dimen/border_thickness"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/suggestion_edit_text" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:orientation="vertical"
+        android:id="@id/recycler_view"
+        android:background="?listBackground"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider" />
+    <tag
+        android:value="DMCompose"
+        android:id="@id/weaverComponent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

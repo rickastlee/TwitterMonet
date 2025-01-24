@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@id/coordinator_layout_container"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        app:layout_constraintBottom_toTopOf="@id/room_barrier"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@id/appbar"
+            android:background="@color/clear"
+            android:fitsSystemWindows="true"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:elevation="0.0dip"
+            app:expanded="?communityDetailHeaderExpanded">
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@id/collapsing_toolbar"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                app:contentScrim="@color/clear"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:titleEnabled="false">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+                    <com.twitter.communities.detail.header.CommunitiesDetailHeaderView
+                        android:id="@id/header_view"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+                    <ViewStub
+                        android:id="@id/community_active_chat_card_stub"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@id/toolbar"
+                    android:layout_width="fill_parent"
+                    android:layout_height="?toolBarSize"
+                    android:layoutDirection="?forceLayoutDirection"
+                    app:layout_collapseMode="pin"
+                    style="?toolBarStyle" />
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+            <com.twitter.ui.navigation.HorizonTabLayout
+                android:layout_gravity="bottom"
+                android:id="@id/tabs_layout"
+                app:tabMode="fixed"
+                style="@style/TabLayoutStyle.Main" />
+        </com.google.android.material.appbar.AppBarLayout>
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@id/viewpager"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        <tag
+            android:value="CommunitiesDetail"
+            android:id="@id/weaverComponent" />
+        <ViewStub
+            android:id="@id/fab_menu_background_overlay"
+            android:layout="@layout/fab_background_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+        <ViewStub
+            android:layout_gravity="end|bottom|center"
+            android:id="@id/compose_fab_viewstub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ViewStub
+            android:id="@id/community_not_found_container"
+            android:visibility="gone"
+            android:layout="@layout/community_not_found_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@id/room_barrier"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top"
+        app:constraint_referenced_ids="docker_room,room_replay_dock" />
+    <include
+        android:id="@id/docker_room"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/docker_height"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_goneMarginTop="0.0dip"
+        layout="@layout/room_docker_viewstub" />
+    <include
+        android:id="@id/room_replay_dock"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/docker_height"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_goneMarginTop="0.0dip"
+        layout="@layout/room_replay_dock_viewstub" />
+</androidx.constraintlayout.widget.ConstraintLayout>

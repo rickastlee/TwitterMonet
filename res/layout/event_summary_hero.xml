@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.media.ui.image.AspectRatioFrameLayout
+    android:id="@id/content_container"
+    android:background="?coreColorPlaceholderBg"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:foreground="@drawable/ripple_selector_rectangle"
+    twitter:aspect_ratio="@dimen/guide_hero_aspect_ratio"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <com.twitter.moments.ui.AutoplayableVideoFillCropFrameLayout
+        android:id="@id/media_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:minHeight="196.0dip" />
+    <FrameLayout
+        android:id="@id/gradient_overlay_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+    <include
+        android:layout_gravity="bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/event_summary_hero_overlay" />
+    <ImageView
+        android:layout_gravity="end|center|top"
+        android:id="@id/overflow_icon"
+        android:background="@drawable/event_summary_hero_overflow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="?iconOverflow"
+        android:contentDescription="@string/button_action_options_trend"
+        android:importantForAccessibility="no"
+        twitter:tint="@color/white"
+        style="@style/PromotedSpotlightOverflowIcon" />
+</com.twitter.media.ui.image.AspectRatioFrameLayout>

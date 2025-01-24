@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:paddingTop="@dimen/ps__standard_spacing_8"
+    android:paddingBottom="@dimen/ps__standard_spacing_8"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <tv.periscope.android.view.PsImageView
+        android:id="@id/avatar"
+        android:layout_width="@dimen/ps__large_avatar_size"
+        android:layout_height="@dimen/ps__large_avatar_size"
+        android:contentDescription="@null"
+        android:layout_marginStart="@dimen/ps__standard_spacing_16"
+        android:layout_alignParentStart="true" />
+    <tv.periscope.android.view.PsTextView
+        android:textSize="16.0sp"
+        android:textColor="@color/ps__white"
+        android:id="@id/display_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3.0dip"
+        android:layout_marginStart="@dimen/ps__standard_spacing_16"
+        android:layout_toEndOf="@id/avatar" />
+    <tv.periscope.android.view.PsTextView
+        android:textSize="14.0sp"
+        android:textColor="@color/ps__white_50"
+        android:id="@id/muted_comments_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ps__standard_spacing_5"
+        android:drawablePadding="@dimen/ps__standard_spacing_5"
+        android:layout_below="@id/display_name"
+        android:drawableStart="@drawable/ps__ic_shield_empty"
+        android:layout_toEndOf="@id/avatar"
+        android:layout_alignStart="@id/display_name" />
+</RelativeLayout>

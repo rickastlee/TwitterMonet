@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <com.twitter.media.ui.image.FixedSizeImageView
+        android:layout_gravity="bottom|center|left"
+        android:id="@id/gallery_gif_badge"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/inset_medium"
+        android:src="@drawable/gif_badge"
+        android:contentDescription="@null" />
+    <com.twitter.media.ui.image.VideoDurationView
+        android:layout_gravity="bottom|center|left"
+        android:id="@id/video_duration"
+        android:background="@drawable/bg_media_badge"
+        android:padding="@dimen/bg_media_badge_padding"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/inset_medium"
+        twitter:text_color="@color/white"
+        twitter:text_face="bold"
+        twitter:text_size="@dimen/font_size_small" />
+</merge>

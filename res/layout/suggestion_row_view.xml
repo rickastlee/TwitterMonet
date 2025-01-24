@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:background="@drawable/suggestion_row_background"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false"
+    android:paddingStart="@dimen/space_16"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="vertical"
+        android:paddingTop="@dimen/list_row_padding_vertical"
+        android:paddingBottom="@dimen/list_row_padding_vertical"
+        android:descendantFocusability="blocksDescendants"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:importantForAccessibility="yes">
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_normal"
+            android:textColor="?coreColorPrimaryText"
+            android:ellipsize="end"
+            android:id="@id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            twitter:largeTextBoldOverride="false" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:divider="@drawable/divider_micro"
+            android:showDividers="middle">
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:id="@id/context_icon"
+                android:visibility="gone"
+                android:layout_width="@dimen/space_16"
+                android:layout_height="@dimen/space_16"
+                android:contentDescription="@null"
+                twitter:tint="?coreColorSecondaryText" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textSize="@dimen/font_size_small"
+                android:textColor="?coreColorSecondaryText"
+                android:ellipsize="end"
+                android:id="@id/context_text"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                twitter:largeTextBoldOverride="false" />
+        </LinearLayout>
+    </LinearLayout>
+    <FrameLayout
+        android:layout_gravity="center_vertical"
+        android:id="@id/tapahead"
+        android:padding="@dimen/space_16"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="@dimen/tapahead_icon_size"
+            android:layout_height="@dimen/tapahead_icon_size"
+            android:src="?iconTapAhead"
+            android:contentDescription="@string/button_tapahead"
+            twitter:tint="?coreColorInlineAction" />
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:background="?coreColorAppBackground"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@id/fleetline_recyclerview"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:importantForAccessibility="noHideDescendants"
+        android:paddingStart="6.0dip"
+        android:paddingEnd="6.0dip" />
+    <ViewStub
+        android:id="@id/fleetline_error_stub"
+        android:layout="@layout/error_fleetline"
+        android:inflatedId="@id/fleetline_failed_to_load"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@id/fleetline_loading_holder"
+        android:clipToPadding="false"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:paddingStart="@dimen/space_8"
+        android:paddingEnd="@dimen/space_8" />
+    <View
+        android:layout_gravity="bottom"
+        android:background="@color/border_color"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/border_thickness" />
+    <tag
+        android:value="com.twitter.rooms.ui.spacebar.FleetlineViewModel"
+        android:id="@id/viewModel" />
+    <tag
+        android:value="com.twitter.rooms.ui.spacebar.FleetlineViewBinder"
+        android:id="@id/viewBinder" />
+</FrameLayout>

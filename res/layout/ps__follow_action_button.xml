@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <View
+        android:id="@id/fill"
+        android:background="@drawable/ps__bg_follow_action_button_fill"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@id/follow_container"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/ps__follow_action_button_height"
+        android:paddingStart="@dimen/ps__standard_spacing_16"
+        android:paddingEnd="@dimen/ps__standard_spacing_16"
+        android:layout_alignParentEnd="true">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:src="@drawable/ps__btn_follow"
+            android:scaleType="centerInside"
+            android:contentDescription="@null"
+            android:layout_marginEnd="@dimen/ps__standard_spacing_5" />
+        <tv.periscope.android.view.PsTextView
+            android:textSize="@dimen/font_size_normal"
+            android:textStyle="bold"
+            android:textColor="@color/ps__white"
+            android:ellipsize="none"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ps__follow"
+            android:singleLine="true" />
+    </LinearLayout>
+    <ImageView
+        android:layout_gravity="end"
+        android:id="@id/followed_check"
+        android:layout_width="@dimen/ps__follow_action_button_height"
+        android:layout_height="@dimen/ps__follow_action_button_height"
+        android:src="@drawable/ps__follow_action_button_check"
+        android:scaleType="fitXY"
+        android:contentDescription="@null"
+        android:layout_alignParentEnd="true" />
+</merge>

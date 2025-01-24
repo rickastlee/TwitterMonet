@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@color/ps__light_grey"
+        android:paddingTop="@dimen/ps__dialog_content_padding"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/ps__dialog_content_padding"
+        android:paddingEnd="@dimen/ps__dialog_content_padding">
+        <tv.periscope.android.view.PsTextView
+            android:textSize="18.0sp"
+            android:textColor="@color/ps__white"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:id="@id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ps__dialog_content_padding"
+            android:layout_marginBottom="@dimen/ps__dialog_content_padding"
+            android:text="@string/ps__chat_warning_dialog_title" />
+    </LinearLayout>
+    <include
+        android:layout_gravity="center_horizontal"
+        android:id="@id/chat_row"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-8.0dip"
+        android:layout_marginStart="@dimen/ps__dialog_content_padding"
+        android:layout_marginEnd="@dimen/ps__dialog_content_padding"
+        layout="@layout/ps__chat_row" />
+    <tv.periscope.android.view.PsTextView
+        android:textSize="14.0sp"
+        android:textColor="@color/ps__secondary_text"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ps__standard_spacing_16"
+        android:layout_marginBottom="48.0dip"
+        android:text="@string/ps__chat_warning_dialog_message"
+        android:paddingStart="@dimen/ps__dialog_content_padding"
+        android:paddingEnd="@dimen/ps__dialog_content_padding" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/ps__dialog_content_padding"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/ps__dialog_content_padding"
+        android:paddingEnd="@dimen/ps__dialog_content_padding">
+        <tv.periscope.android.view.PsButton
+            android:gravity="center"
+            android:id="@id/positive"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/ps__dialog_btn_spacing"
+            android:text="@string/ps__chat_warning_dialog_btn_send"
+            style="@style/ps__DialogButton" />
+        <tv.periscope.android.view.PsButton
+            android:gravity="center"
+            android:id="@id/negative"
+            android:background="@drawable/ps__bg_button_blue_hollow"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ps__chat_warning_dialog_btn_cancel"
+            style="@style/ps__DialogButton" />
+    </LinearLayout>
+</LinearLayout>

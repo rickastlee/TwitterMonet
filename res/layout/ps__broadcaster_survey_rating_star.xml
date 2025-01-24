@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tv.periscope.android.ui.broadcast.survey.view.RatingStar
+    android:layout_gravity="center_horizontal"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@id/broadcaster_survey_rating_star"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/ps__broadcaster_survey_star_margin"
+        android:src="@drawable/ps__broadcaster_survey_star_grey"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:contentDescription="@null" />
+    <tv.periscope.android.view.PsTextView
+        android:textSize="@dimen/font_size_xsmall"
+        android:textColor="@color/ps__white_60"
+        android:gravity="center"
+        android:id="@id/broadcaster_survey_rating_star_caption"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="3"
+        android:scrollHorizontally="false" />
+</tv.periscope.android.ui.broadcast.survey.view.RatingStar>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@id/root_coordinator_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/docks">
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@id/fab_anchor_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@id/tabs_dock"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                style="?tabsDockStyle">
+                <include
+                    layout="@layout/toolbar_container" />
+                <com.twitter.ui.navigation.FullTabLayout
+                    android:id="@id/search_activity_tabs"
+                    style="@style/TabLayoutStyle" />
+            </LinearLayout>
+            <com.twitter.ui.widget.DockLayout
+                android:id="@id/dock"
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:layout_weight="1.0">
+                <com.twitter.ui.view.RtlViewPager
+                    android:id="@id/pager"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" />
+                <ViewStub
+                    android:id="@id/hashfetti_container_view_stub"
+                    android:layout="@layout/search_hashfetti_container"
+                    android:inflatedId="@id/search_hashfetti_container"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" />
+            </com.twitter.ui.widget.DockLayout>
+        </LinearLayout>
+        <com.twitter.ui.widget.FloatingActionButton
+            android:id="@id/composer_write"
+            android:visibility="gone"
+            app:layout_anchor="@id/fab_anchor_layout"
+            style="@style/FabStyle" />
+        <include
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="@dimen/toolbar_height"
+            layout="@layout/search_suggestions_layout_with_toolbar_border" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <FrameLayout
+        android:id="@id/docks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+        <include
+            android:layout_gravity="bottom"
+            android:id="@id/docker_room"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/docker_height"
+            layout="@layout/room_docker_viewstub" />
+        <include
+            android:layout_gravity="bottom"
+            android:id="@id/room_replay_dock"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/docker_height"
+            layout="@layout/room_replay_dock_viewstub" />
+    </FrameLayout>
+</RelativeLayout>

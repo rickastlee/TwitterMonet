@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="inline_action_bar_gallery_height">48.0dip</dimen>
+    <dimen name="inline_action_bar_height">40.0dip</dimen>
+    <dimen name="inline_action_gallery_icon_padding">12.0dip</dimen>
+    <dimen name="inline_action_gallery_icon_padding_small">9.0dip</dimen>
+    <dimen name="inline_action_gallery_icon_size">20.0dip</dimen>
+    <dimen name="inline_action_gallery_label_max_text_size">16.0dip</dimen>
+    <dimen name="inline_action_icon_padding_normal">11.0dip</dimen>
+    <dimen name="inline_action_icon_padding_small">8.0dip</dimen>
+    <dimen name="inline_action_icon_size">18.0dip</dimen>
+    <dimen name="inline_action_label_margin">2.0dip</dimen>
+    <dimen name="inline_action_label_max_text_size">13.0dip</dimen>
+    <dimen name="tweet_avatar_start_margin_negative">-10.0dip</dimen>
+</resources>

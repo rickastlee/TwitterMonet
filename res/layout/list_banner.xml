@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <FrameLayout
+        android:id="@id/list_banner_container"
+        android:focusable="true"
+        android:clickable="true"
+        android:layout_width="0.0dip"
+        android:layout_height="124.0dip"
+        twitter:layout_constraintEnd_toEndOf="parent"
+        twitter:layout_constraintStart_toStartOf="parent"
+        twitter:layout_constraintTop_toTopOf="parent">
+        <ProgressBar
+            android:layout_gravity="center"
+            android:id="@id/banner_progress"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            style="?android:progressBarStyleLarge" />
+        <com.twitter.media.ui.fresco.FrescoMediaImageView
+            android:id="@id/list_banner"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:foreground="@color/black_opacity_60"
+            twitter:scaleType="fill" />
+        <com.twitter.ui.widget.TintableImageView
+            android:layout_gravity="center"
+            android:id="@id/camera"
+            android:layout_width="@dimen/profile_camera_size"
+            android:layout_height="@dimen/profile_camera_size"
+            android:src="@drawable/ic_vector_camera_plus_stroke"
+            android:contentDescription="@string/button_camera"
+            twitter:tintColorList="@color/white_opacity_85" />
+    </FrameLayout>
+    <tag
+        android:value="com.twitter.channels.crud.weaver.ListBannerViewModel"
+        android:id="@id/viewModel" />
+    <tag
+        android:value="com.twitter.weaver.base.WeaverViewDelegateBinder"
+        android:id="@id/viewBinder" />
+    <tag
+        android:value="ListBanner"
+        android:id="@id/weaverComponent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

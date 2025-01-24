@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:id="@id/product_metadata_and_cta_container"
+    android:visibility="gone"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/space_12"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_2">
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_normal"
+            android:textStyle="bold"
+            android:textColor="@color/dpa_sale_price_color"
+            android:ellipsize="end"
+            android:id="@id/sale_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="viewStart"
+            android:layout_marginEnd="@dimen/space_4" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_normal"
+            android:textColor="@color/dpa_regular_price_strikethrough_color"
+            android:ellipsize="end"
+            android:id="@id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/space_2" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_normal"
+            android:textColor="?coreColorPrimaryText"
+            android:ellipsize="end"
+            android:id="@id/product_rating_separator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="·"
+            android:layout_marginEnd="@dimen/space_2" />
+        <RatingBar
+            android:id="@id/product_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rating="4.0"
+            android:stepSize="0.1"
+            android:layout_marginEnd="@dimen/space_2"
+            android:progressTint="?coreColorSecondaryText"
+            android:progressBackgroundTint="?coreColorSecondaryText"
+            android:secondaryProgressTint="@color/clear"
+            style="@style/Widget.AppCompat.RatingBar.Small" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_normal"
+            android:textColor="?coreColorPrimaryText"
+            android:id="@id/product_num_ratings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/space_2" />
+    </LinearLayout>
+    <Space
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0" />
+    <com.twitter.ui.components.button.legacy.HashflagTwitterButton
+        android:layout_gravity="bottom"
+        android:id="@id/dpa_cta_button"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_4"
+        android:text="@string/cta_shop_now"
+        android:layout_marginStart="@dimen/space_4"
+        android:layout_marginEnd="@dimen/space_4"
+        style="@style/TwitterButtonMediumPrimaryFilled" />
+</LinearLayout>

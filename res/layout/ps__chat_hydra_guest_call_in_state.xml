@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/ps__chat_message_margin_6"
+    android:layout_marginStart="@dimen/ps__chat_container_spacing"
+    android:layout_marginEnd="@dimen/ps__chat_container_spacing"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@id/ps__call_in_state_contents"
+        android:background="@drawable/ps__bg_card_white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/ps__chat_avatar_size">
+        <tv.periscope.android.view.PsTextView
+            android:textSize="@dimen/ps__description_text_size"
+            android:textColor="@android:color/white"
+            android:gravity="start"
+            android:id="@id/ps__call_in_state_text"
+            android:padding="@dimen/ps__standard_spacing_8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            custom:layout_constrainedWidth="true"
+            custom:layout_constraintBottom_toBottomOf="parent"
+            custom:layout_constraintEnd_toStartOf="@id/ps__call_in_state_icon_bg"
+            custom:layout_constraintStart_toStartOf="parent"
+            custom:layout_constraintTop_toTopOf="parent" />
+        <View
+            android:id="@id/ps__call_in_state_icon_bg"
+            android:background="@drawable/ps__hydra_call_in_state"
+            android:layout_width="@dimen/ps__hydra_call_in_state_background"
+            android:layout_height="0.0dip"
+            custom:layout_constraintBottom_toBottomOf="parent"
+            custom:layout_constraintEnd_toEndOf="parent"
+            custom:layout_constraintStart_toEndOf="@id/ps__call_in_state_text"
+            custom:layout_constraintTop_toTopOf="parent" />
+        <tv.periscope.android.view.PsImageView
+            android:gravity="center"
+            android:id="@id/ps__call_in_state_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/ps__chat_message_margin_8"
+            android:paddingEnd="@dimen/ps__chat_message_margin_8"
+            custom:layout_constrainedWidth="true"
+            custom:layout_constraintBottom_toBottomOf="parent"
+            custom:layout_constraintEnd_toEndOf="@id/ps__call_in_state_icon_bg"
+            custom:layout_constraintStart_toStartOf="@id/ps__call_in_state_icon_bg"
+            custom:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

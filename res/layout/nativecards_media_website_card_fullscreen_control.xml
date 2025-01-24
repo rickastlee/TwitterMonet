@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:id="@id/media_ui_controls"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/title"
+        android:paddingTop="@dimen/space_8"
+        android:paddingStart="@dimen/space_32"
+        android:paddingEnd="0.0dip"
+        style="@style/MediaTitleText" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_xsmall"
+        android:ellipsize="start"
+        android:id="@id/subtitle"
+        android:paddingStart="@dimen/space_32"
+        android:paddingEnd="0.0dip"
+        style="@style/MediaTitleText" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_small"
+        android:ellipsize="start"
+        android:layout_gravity="center"
+        android:id="@id/media_title_pill"
+        android:background="@drawable/bg_vwc_title_pill_background"
+        android:paddingLeft="@dimen/space_12"
+        android:paddingTop="@dimen/vwc_title_pill_top_down_padding"
+        android:paddingRight="@dimen/space_12"
+        android:paddingBottom="@dimen/vwc_title_pill_top_down_padding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/vwc_title_pill_top_down_margin"
+        android:layout_marginBottom="@dimen/vwc_title_pill_top_down_margin"
+        android:layout_marginStart="0.0dip"
+        android:layout_marginEnd="0.0dip"
+        style="@style/MediaTitleText" />
+</LinearLayout>

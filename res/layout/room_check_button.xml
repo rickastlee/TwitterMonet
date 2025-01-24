@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <View
+        android:layout_gravity="center"
+        android:id="@id/button_checked"
+        android:background="@drawable/green_circle_checked"
+        android:visibility="visible"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:contentDescription="@string/checked"
+        android:alpha="1.0" />
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@id/checked_icon"
+        android:visibility="visible"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="@dimen/ps__standard_spacing_5"
+        android:src="@drawable/ps__ic_accept_check_white"
+        android:scaleType="centerInside"
+        android:contentDescription="@null" />
+</FrameLayout>

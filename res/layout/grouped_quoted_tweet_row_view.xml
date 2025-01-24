@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.ui.view.GroupedRowView
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.tweetview.core.QuoteView
+        android:id="@id/tweet_quote"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/list_row_padding_vertical"
+        android:layout_marginStart="?timelineRowHorizontalPadding"
+        android:layout_marginEnd="?timelineRowHorizontalPadding"
+        style="@style/QuoteView" />
+</com.twitter.ui.view.GroupedRowView>

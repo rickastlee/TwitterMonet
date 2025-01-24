@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference
+        android:persistent="false"
+        android:title="@string/settings_precise_location_title"
+        android:key="pref_precise_location"
+        android:summary="@string/settings_precise_location_summary"
+        android:defaultValue="false" />
+    <com.twitter.settings.widget.LinkablePreference
+        android:persistent="false"
+        android:selectable="false"
+        android:key="pref_location_permission_message"
+        android:summary="@string/settings_no_location_permission_message">
+        <intent
+            android:action="android.settings.APPLICATION_DETAILS_SETTINGS"
+            android:data="package:com.twitter.android" />
+    </com.twitter.settings.widget.LinkablePreference>
+    <com.twitter.settings.widget.LinkablePreference
+        android:persistent="false"
+        android:selectable="false"
+        android:key="pref_system_location_message"
+        android:summary="@string/settings_location_services_message">
+        <intent
+            android:action="android.settings.LOCATION_SOURCE_SETTINGS" />
+    </com.twitter.settings.widget.LinkablePreference>
+</PreferenceScreen>

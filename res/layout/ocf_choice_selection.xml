@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <include
+        android:id="@id/top_toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/ocf_top_toolbar" />
+    <include
+        android:id="@id/focused_search_edit_text"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/ocf_focused_search_bar" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textColor="?textColorPrimary"
+        android:gravity="center_horizontal"
+        android:id="@id/empty_search_results_text"
+        android:paddingTop="@dimen/space_16"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/no_matching_search_results_found_text" />
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@id/choice_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+    </FrameLayout>
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/detail_text"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_16"
+        android:layout_marginBottom="@dimen/space_16"
+        android:paddingStart="@dimen/space_32"
+        android:paddingEnd="@dimen/space_32"
+        style="@style/OcfSubtext2Text" />
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/bottom_cta_navigation_bar" />
+</LinearLayout>

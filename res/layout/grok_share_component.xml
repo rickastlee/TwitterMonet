@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="?selectableItemBackground"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/space_8"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:x="http://schemas.android.com/apk/res-auto">
+    <com.twitter.ui.user.BaseUserView
+        android:id="@id/user_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:importantForAccessibility="no">
+        <com.twitter.media.ui.image.UserImageView
+            android:id="@id/user_image"
+            android:paddingTop="@dimen/space_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="@dimen/space_8"
+            android:layout_alignParentStart="true"
+            x:userImageSize="nano" />
+        <com.twitter.ui.user.MultilineUsernameView
+            android:textSize="@dimen/font_size_normal"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            android:id="@id/name_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/user_image" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textColor="?textColorSecondary"
+            android:ellipsize="end"
+            android:id="@id/screenname_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:layout_centerVertical="true"
+            android:paddingStart="@dimen/space_4"
+            android:layout_toEndOf="@id/name_item" />
+    </com.twitter.ui.user.BaseUserView>
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:ellipsize="end"
+        android:id="@id/user_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="4"
+        android:paddingVertical="@dimen/space_8" />
+    <com.twitter.ui.user.BaseUserView
+        android:id="@id/agent_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:importantForAccessibility="no">
+        <com.twitter.media.ui.image.UserImageView
+            android:id="@id/user_image"
+            android:paddingTop="@dimen/space_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="@dimen/space_8"
+            android:layout_alignParentStart="true"
+            x:userImageSize="nano" />
+        <com.twitter.ui.user.MultilineUsernameView
+            android:textSize="@dimen/font_size_normal"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            android:id="@id/name_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/user_image" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textColor="?textColorSecondary"
+            android:ellipsize="end"
+            android:id="@id/screenname_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:layout_centerVertical="true"
+            android:paddingStart="@dimen/space_4"
+            android:layout_toEndOf="@id/name_item" />
+    </com.twitter.ui.user.BaseUserView>
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:ellipsize="end"
+        android:id="@id/agent_text"
+        android:paddingTop="@dimen/space_8"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="4" />
+</LinearLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tv.periscope.android.view.BroadcastActionSheet
+    android:id="@id/broadcast__action_sheet"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    style="@style/ps__BroadcastActionSheet"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

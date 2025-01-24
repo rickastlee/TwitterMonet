@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.ui.view.GroupedRowView
+    android:background="@drawable/bg_module_header"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:id="@id/list_row_header"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="100.0"
+            style="?listRowHeaderStyle">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:id="@id/title_banner"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_gravity="top"
+                    android:id="@id/icon"
+                    android:visibility="gone"
+                    android:layout_width="@dimen/space_24"
+                    android:layout_height="@dimen/space_24"
+                    android:src="@drawable/ic_vector_feedback_stroke"
+                    android:scaleType="centerInside"
+                    android:contentDescription="@null"
+                    android:layout_marginEnd="@dimen/space_4"
+                    app:tint="@color/twitter_blue" />
+                <com.twitter.ui.components.text.legacy.TypefacesTextView
+                    android:gravity="start"
+                    android:id="@id/title"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:textDirection="locale"
+                    style="@style/ListRowHeaderText" />
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_gravity="center_vertical"
+                    android:id="@id/module_pivot"
+                    android:visibility="gone"
+                    android:layout_width="@dimen/space_20"
+                    android:layout_height="@dimen/space_20"
+                    android:scaleType="fitCenter"
+                    android:importantForAccessibility="no"
+                    app:tint="?coreColorPrimaryText"
+                    style="@style/RowHeaderArrow" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:id="@id/social_proof"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <com.twitter.media.ui.image.UserImageView
+                    android:id="@id/social_proof_avatar"
+                    android:visibility="gone"
+                    style="@style/SocialProofAvatar" />
+                <com.twitter.ui.components.text.legacy.TypefacesTextView
+                    android:textSize="@dimen/font_size_small"
+                    android:textColor="?coreColorSecondaryText"
+                    android:ellipsize="end"
+                    android:id="@id/social_proof_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_4"
+                    android:maxLines="2"
+                    android:textDirection="locale" />
+            </LinearLayout>
+        </LinearLayout>
+        <com.twitter.ui.components.button.legacy.TwitterButton
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:id="@id/primary_action"
+            android:padding="@dimen/space_12"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TwitterButtonMediumBrandText" />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_gravity="top"
+            android:id="@id/module_caret"
+            android:paddingTop="@dimen/space_8"
+            android:paddingBottom="@dimen/space_8"
+            android:visibility="gone"
+            android:layout_marginTop="7.0dip"
+            android:src="@drawable/ic_vector_overflow"
+            android:scaleType="fitCenter"
+            android:contentDescription="@string/button_action_options_module"
+            android:paddingStart="@dimen/space_8"
+            android:layout_marginEnd="@dimen/space_8"
+            app:tint="?coreColorInlineAction"
+            style="@style/ModuleCaretIcon" />
+    </LinearLayout>
+</com.twitter.ui.view.GroupedRowView>

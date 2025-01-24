@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tv.periscope.android.shimmer.ShimmerLinearLayout
+    android:orientation="vertical"
+    android:paddingTop="@dimen/toolbar_drawer_max_icon_size"
+    android:saveEnabled="false"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingHorizontal="12.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@id/shimmer_placeholder_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <FrameLayout
+            android:id="@id/tweet_profile_image_container_placeholder_1"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/image_margin_end"
+            app:layout_constraintStart_toStartOf="parent">
+            <com.twitter.media.ui.image.UserImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="12.0dip"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                style="?tweetViewProfileImageStyle" />
+        </FrameLayout>
+        <androidx.constraintlayout.widget.Guideline
+            android:orientation="vertical"
+            android:id="@id/content_end_guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_end="?timelineRowHorizontalPadding" />
+        <View
+            android:id="@id/user_label_view_placeholder_1"
+            android:background="@drawable/placeholder_shimmer_rectangle"
+            android:layout_width="120.0dip"
+            android:layout_height="20.0dip"
+            app:layout_constraintStart_toEndOf="@id/tweet_profile_image_container_placeholder_1"
+            style="?tweetViewUserLabelStyle" />
+        <View
+            android:id="@id/tweet_1_content_text_placeholder_1"
+            android:background="@drawable/placeholder_shimmer_rectangle"
+            android:layout_width="200.0dip"
+            android:layout_height="14.0dip"
+            android:layout_marginTop="@dimen/line_spacing_extra"
+            app:layout_constraintStart_toEndOf="@id/tweet_profile_image_container_placeholder_1"
+            app:layout_constraintTop_toBottomOf="@id/user_label_view_placeholder_1"
+            style="?tweetViewContentStyle" />
+        <View
+            android:id="@id/tweet_1_content_text_placeholder_2"
+            android:background="@drawable/placeholder_shimmer_rectangle"
+            android:layout_width="150.0dip"
+            android:layout_height="14.0dip"
+            android:layout_marginTop="@dimen/line_spacing_extra"
+            app:layout_constraintStart_toEndOf="@id/tweet_profile_image_container_placeholder_1"
+            app:layout_constraintTop_toBottomOf="@id/tweet_1_content_text_placeholder_1"
+            style="?tweetViewContentStyle" />
+        <View
+            android:id="@id/card_media_tweet_container_placeholder"
+            android:background="@drawable/placeholder_shimmer_rectangle"
+            android:layout_width="0.0dip"
+            android:layout_height="200.0dip"
+            android:layout_marginTop="@dimen/content_top_margin"
+            android:contentDescription="Tweet media container"
+            app:layout_constraintEnd_toEndOf="@id/content_end_guide"
+            app:layout_constraintStart_toEndOf="@id/tweet_profile_image_container_placeholder_1"
+            app:layout_constraintTop_toBottomOf="@id/tweet_1_content_text_placeholder_2"
+            style="?tweetViewTweetViewContentHostContainer" />
+        <LinearLayout
+            android:layout_gravity="end|center"
+            android:orientation="horizontal"
+            android:id="@id/actions_placeholder_1"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/content_top_margin"
+            app:layout_constraintEnd_toEndOf="@id/content_end_guide"
+            app:layout_constraintStart_toEndOf="@id/tweet_profile_image_container_placeholder_1"
+            app:layout_constraintTop_toBottomOf="@id/card_media_tweet_container_placeholder">
+            <View
+                android:background="@drawable/placeholder_shimmer_rectangle"
+                android:layout_width="20.0dip"
+                android:layout_height="15.0dip"
+                android:layout_weight="1.0"
+                android:contentDescription="Button placeholder" />
+            <Space
+                android:layout_width="0.0dip"
+                android:layout_height="1.0dip"
+                android:layout_weight="1.0" />
+            <View
+                android:background="@drawable/placeholder_shimmer_rectangle"
+                android:layout_width="20.0dip"
+                android:layout_height="15.0dip"
+                android:layout_weight="1.0"
+                android:contentDescription="Button placeholder" />
+            <Space
+                android:layout_width="0.0dip"
+                android:layout_height="1.0dip"
+                android:layout_weight="1.0" />
+            <View
+                android:background="@drawable/placeholder_shimmer_rectangle"
+                android:layout_width="20.0dip"
+                android:layout_height="15.0dip"
+                android:layout_weight="1.0"
+                android:contentDescription="Button placeholder" />
+            <Space
+                android:layout_width="0.0dip"
+                android:layout_height="1.0dip"
+                android:layout_weight="1.0" />
+            <View
+                android:background="@drawable/placeholder_shimmer_rectangle"
+                android:layout_width="20.0dip"
+                android:layout_height="15.0dip"
+                android:layout_weight="1.0"
+                android:contentDescription="Button placeholder" />
+        </LinearLayout>
+        <include
+            android:id="@id/divider_1"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/border_thickness"
+            android:layout_marginTop="12.0dip"
+            app:layout_constraintTop_toBottomOf="@id/actions_placeholder_1"
+            layout="@layout/divider_no_margin" />
+        <FrameLayout
+            android:id="@id/tweet_profile_image_container_placeholder_2"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12.0dip"
+            android:layout_marginEnd="@dimen/image_margin_end"
+            app:layout_constraintTop_toBottomOf="@id/divider_1">
+            <com.twitter.media.ui.image.UserImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="12.0dip"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                style="?tweetViewProfileImageStyle" />
+        </FrameLayout>
+        <View
+            android:id="@id/user_label_view_placeholder_2"
+            android:background="@drawable/placeholder_shimmer_rectangle"
+            android:layout_width="120.0dip"
+            android:layout_height="20.0dip"
+            app:layout_constraintStart_toEndOf="@id/tweet_profile_image_container_placeholder_2"
+            app:layout_constraintTop_toTopOf="@id/tweet_profile_image_container_placeholder_2"
+            style="?tweetViewUserLabelStyle" />
+        <View
+            android:id="@id/tweet_2_content_text_placeholder_1"
+            android:background="@drawable/placeholder_shimmer_rectangle"
+            android:layout_width="200.0dip"
+            android:layout_height="14.0dip"
+            android:layout_marginTop="@dimen/line_spacing_extra"
+            app:layout_constraintStart_toEndOf="@id/tweet_profile_image_container_placeholder_2"
+            app:layout_constraintTop_toBottomOf="@id/user_label_view_placeholder_2"
+            style="?tweetViewContentStyle" />
+        <View
+            android:id="@id/tweet_2_content_text_placeholder_2"
+            android:background="@drawable/placeholder_shimmer_rectangle"
+            android:layout_width="150.0dip"
+            android:layout_height="14.0dip"
+            android:layout_marginTop="@dimen/line_spacing_extra"
+            app:contentSize="@dimen/font_size_normal"
+            app:layout_constraintStart_toEndOf="@id/tweet_profile_image_container_placeholder_2"
+            app:layout_constraintTop_toBottomOf="@id/tweet_2_content_text_placeholder_1"
+            style="?tweetViewContentStyle" />
+        <View
+            android:id="@id/card_media_tweet_container_placeholder_2"
+            android:background="@drawable/placeholder_shimmer_rectangle"
+            android:layout_width="0.0dip"
+            android:layout_height="200.0dip"
+            android:layout_marginTop="@dimen/content_top_margin"
+            android:contentDescription="Tweet media container"
+            app:layout_constraintEnd_toEndOf="@id/content_end_guide"
+            app:layout_constraintStart_toEndOf="@id/tweet_profile_image_container_placeholder_2"
+            app:layout_constraintTop_toBottomOf="@id/tweet_2_content_text_placeholder_2"
+            style="?tweetViewTweetViewContentHostContainer" />
+        <LinearLayout
+            android:layout_gravity="end|center"
+            android:orientation="horizontal"
+            android:id="@id/actions_placeholder_2"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/content_top_margin"
+            app:layout_constraintEnd_toEndOf="@id/content_end_guide"
+            app:layout_constraintStart_toEndOf="@id/tweet_profile_image_container_placeholder_2"
+            app:layout_constraintTop_toBottomOf="@id/card_media_tweet_container_placeholder_2">
+            <View
+                android:background="@drawable/placeholder_shimmer_rectangle"
+                android:layout_width="20.0dip"
+                android:layout_height="15.0dip"
+                android:layout_weight="1.0"
+                android:contentDescription="Button placeholder" />
+            <Space
+                android:layout_width="0.0dip"
+                android:layout_height="1.0dip"
+                android:layout_weight="1.0" />
+            <View
+                android:background="@drawable/placeholder_shimmer_rectangle"
+                android:layout_width="20.0dip"
+                android:layout_height="15.0dip"
+                android:layout_weight="1.0"
+                android:contentDescription="Button placeholder" />
+            <Space
+                android:layout_width="0.0dip"
+                android:layout_height="1.0dip"
+                android:layout_weight="1.0" />
+            <View
+                android:background="@drawable/placeholder_shimmer_rectangle"
+                android:layout_width="20.0dip"
+                android:layout_height="15.0dip"
+                android:layout_weight="1.0"
+                android:contentDescription="Button placeholder" />
+            <Space
+                android:layout_width="0.0dip"
+                android:layout_height="1.0dip"
+                android:layout_weight="1.0" />
+            <View
+                android:background="@drawable/placeholder_shimmer_rectangle"
+                android:layout_width="20.0dip"
+                android:layout_height="15.0dip"
+                android:layout_weight="1.0"
+                android:contentDescription="Button placeholder" />
+        </LinearLayout>
+        <include
+            android:id="@id/divider_2"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/border_thickness"
+            android:layout_marginTop="12.0dip"
+            app:layout_constraintTop_toBottomOf="@id/actions_placeholder_2"
+            layout="@layout/divider_no_margin" />
+        <FrameLayout
+            android:id="@id/tweet_profile_image_container_placeholder_3"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12.0dip"
+            android:layout_marginEnd="@dimen/image_margin_end"
+            app:layout_constraintTop_toBottomOf="@id/divider_2">
+            <com.twitter.media.ui.image.UserImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="12.0dip"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                style="?tweetViewProfileImageStyle" />
+        </FrameLayout>
+        <View
+            android:id="@id/user_label_view_placeholder_3"
+            android:background="@drawable/placeholder_shimmer_rectangle"
+            android:layout_width="120.0dip"
+            android:layout_height="20.0dip"
+            app:layout_constraintStart_toEndOf="@id/tweet_profile_image_container_placeholder_3"
+            app:layout_constraintTop_toTopOf="@id/tweet_profile_image_container_placeholder_3"
+            style="?tweetViewUserLabelStyle" />
+        <View
+            android:id="@id/tweet_3_content_text_placeholder_1"
+            android:background="@drawable/placeholder_shimmer_rectangle"
+            android:layout_width="200.0dip"
+            android:layout_height="14.0dip"
+            android:layout_marginTop="@dimen/line_spacing_extra"
+            app:contentSize="@dimen/font_size_normal"
+            app:layout_constraintStart_toEndOf="@id/tweet_profile_image_container_placeholder_3"
+            app:layout_constraintTop_toBottomOf="@id/user_label_view_placeholder_3"
+            style="?tweetViewContentStyle" />
+        <View
+            android:id="@id/tweet_3_content_text_placeholder_2"
+            android:background="@drawable/placeholder_shimmer_rectangle"
+            android:layout_width="150.0dip"
+            android:layout_height="14.0dip"
+            android:layout_marginTop="@dimen/line_spacing_extra"
+            app:contentSize="@dimen/font_size_normal"
+            app:layout_constraintStart_toEndOf="@id/tweet_profile_image_container_placeholder_3"
+            app:layout_constraintTop_toBottomOf="@id/tweet_3_content_text_placeholder_1"
+            style="?tweetViewContentStyle" />
+        <View
+            android:id="@id/card_media_tweet_container_placeholder_3"
+            android:background="@drawable/placeholder_shimmer_rectangle"
+            android:layout_width="0.0dip"
+            android:layout_height="200.0dip"
+            android:layout_marginTop="@dimen/content_top_margin"
+            android:contentDescription="Tweet media container"
+            app:layout_constraintEnd_toEndOf="@id/content_end_guide"
+            app:layout_constraintStart_toEndOf="@id/tweet_profile_image_container_placeholder_3"
+            app:layout_constraintTop_toBottomOf="@id/tweet_3_content_text_placeholder_2"
+            style="?tweetViewTweetViewContentHostContainer" />
+        <LinearLayout
+            android:layout_gravity="end|center"
+            android:orientation="horizontal"
+            android:id="@id/actions_placeholder_3"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/content_top_margin"
+            app:layout_constraintEnd_toEndOf="@id/content_end_guide"
+            app:layout_constraintStart_toEndOf="@id/tweet_profile_image_container_placeholder_3"
+            app:layout_constraintTop_toBottomOf="@id/card_media_tweet_container_placeholder_3">
+            <View
+                android:background="@drawable/placeholder_shimmer_rectangle"
+                android:layout_width="20.0dip"
+                android:layout_height="15.0dip"
+                android:layout_weight="1.0"
+                android:contentDescription="Button placeholder" />
+            <Space
+                android:layout_width="0.0dip"
+                android:layout_height="1.0dip"
+                android:layout_weight="1.0" />
+            <View
+                android:background="@drawable/placeholder_shimmer_rectangle"
+                android:layout_width="20.0dip"
+                android:layout_height="15.0dip"
+                android:layout_weight="1.0"
+                android:contentDescription="Button placeholder" />
+            <Space
+                android:layout_width="0.0dip"
+                android:layout_height="1.0dip"
+                android:layout_weight="1.0" />
+            <View
+                android:background="@drawable/placeholder_shimmer_rectangle"
+                android:layout_width="20.0dip"
+                android:layout_height="15.0dip"
+                android:layout_weight="1.0"
+                android:contentDescription="Button placeholder" />
+            <Space
+                android:layout_width="0.0dip"
+                android:layout_height="1.0dip"
+                android:layout_weight="1.0" />
+            <View
+                android:background="@drawable/placeholder_shimmer_rectangle"
+                android:layout_width="20.0dip"
+                android:layout_height="15.0dip"
+                android:layout_weight="1.0"
+                android:contentDescription="Button placeholder" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</tv.periscope.android.shimmer.ShimmerLinearLayout>

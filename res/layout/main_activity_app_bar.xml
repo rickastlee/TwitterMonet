@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.ui.view.MultiPointerDrawerLayout
+    android:id="@id/drawer_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@id/root_coordinator_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@id/app_bar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            style="@style/TwitterAppBar">
+            <include
+                android:id="@id/toolbar"
+                layout="@layout/toolbar_container" />
+        </com.google.android.material.appbar.AppBarLayout>
+        <ViewStub
+            android:id="@id/pagerViewStub"
+            android:inflatedId="@id/pager"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            app:layout_behavior="com.twitter.app.main.behavior.AppBarWithBottomBarScrollingViewBehavior" />
+        <com.twitter.media.ui.AnimatingProgressBar
+            android:id="@id/main_progress_bar"
+            android:visibility="gone"
+            style="@style/AnimatingProgressBarStyle" />
+        <ViewStub
+            android:id="@id/search_suggestions_container"
+            android:layout="@layout/search_suggestions_layout_with_toolbar_border"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="@dimen/toolbar_smaller_height" />
+        <com.twitter.ui.navigation.BottomBarsContainer
+            android:layout_gravity="bottom"
+            android:orientation="vertical"
+            android:id="@id/bottom_bar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <include
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/docker_height"
+                layout="@layout/room_docker_viewstub" />
+            <include
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/docker_height"
+                layout="@layout/room_replay_dock_viewstub" />
+            <include
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/docker_height"
+                layout="@layout/voice_docker_viewstub" />
+            <include
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/main_login_signup_bottom_bar_stub" />
+            <FrameLayout
+                android:id="@id/tabsContainer"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                style="?tabsDockStyle">
+                <com.twitter.app.main.MainBadgeableTabLayout
+                    android:id="@id/tabs"
+                    android:splitMotionEvents="false"
+                    style="?mainNavBarStyle" />
+            </FrameLayout>
+        </com.twitter.ui.navigation.BottomBarsContainer>
+        <ViewStub
+            android:id="@id/fab_menu_background_overlay"
+            android:layout="@layout/fab_background_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+        <ViewStub
+            android:layout_gravity="top"
+            android:id="@id/compose_fab_viewstub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_anchor="@id/bottom_bar"
+            app:layout_anchorGravity="end|top|center" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <FrameLayout
+        android:layout_gravity="?forceGravityDirectionLeft"
+        android:id="@id/drawer"
+        android:fitsSystemWindows="true"
+        android:layout_width="@dimen/navigation_drawer_width"
+        android:layout_height="fill_parent"
+        style="?drawerViewStyle" />
+</com.twitter.ui.view.MultiPointerDrawerLayout>

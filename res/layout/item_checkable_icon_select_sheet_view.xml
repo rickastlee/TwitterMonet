@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="?selectableItemBackground"
+    android:paddingTop="@dimen/space_16"
+    android:paddingBottom="@dimen/space_16"
+    android:clipToPadding="false"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/space_24"
+    android:paddingEnd="@dimen/space_8"
+    style="@style/ActionSheetItem"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@id/checkable_icon_select_sheet_item_icon"
+        android:background="@drawable/blue_circle_bg"
+        android:layout_width="@dimen/checkable_icon_select_sheet_icon_size"
+        android:layout_height="@dimen/checkable_icon_select_sheet_icon_size"
+        android:scaleType="centerInside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/white" />
+    <View
+        android:id="@id/checkable_icon_select_sheet_item_checkmark_selector"
+        android:background="@drawable/green_checkmark_selectable"
+        android:layout_width="@dimen/space_24"
+        android:layout_height="@dimen/space_24"
+        android:button="@android:color/transparent"
+        app:layout_constraintCircle="@id/checkable_icon_select_sheet_item_icon"
+        app:layout_constraintCircleAngle="135.0"
+        app:layout_constraintCircleRadius="@dimen/space_28" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_large"
+        android:textColor="?coreColorPrimaryText"
+        android:id="@id/checkable_icon_select_sheet_item_title"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"
+        android:layout_marginStart="@dimen/space_16"
+        app:largeTextBoldOverride="false"
+        app:layout_constraintBottom_toTopOf="@id/checkable_icon_select_sheet_item_subtitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/checkable_icon_select_sheet_item_icon"
+        app:layout_constraintTop_toTopOf="@id/checkable_icon_select_sheet_item_icon" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_small"
+        android:textColor="?coreColorSecondaryText"
+        android:id="@id/checkable_icon_select_sheet_item_subtitle"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        app:layout_constraintBottom_toBottomOf="@id/checkable_icon_select_sheet_item_icon"
+        app:layout_constraintEnd_toEndOf="@id/checkable_icon_select_sheet_item_title"
+        app:layout_constraintStart_toStartOf="@id/checkable_icon_select_sheet_item_title"
+        app:layout_constraintTop_toBottomOf="@id/checkable_icon_select_sheet_item_title" />
+</androidx.constraintlayout.widget.ConstraintLayout>

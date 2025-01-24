@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:theme="@style/ThemeBase.Notification"
+    android:orientation="horizontal"
+    android:clipChildren="false"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:id="@id/notification_background_fill"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:src="@drawable/rounded_rectangle_text_border"
+        android:contentDescription="@null" />
+    <LinearLayout
+        android:id="@id/notification_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:baselineAligned="false">
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="3.0"
+            android:paddingEnd="@dimen/space_4">
+            <LinearLayout
+                android:clipChildren="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textAppearance="@style/TextAppearance.Compat.Notification.Title"
+                    android:ellipsize="end"
+                    android:id="@id/notification_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Title"
+                    android:maxLines="1" />
+                <include
+                    layout="@layout/verify_icon" />
+            </LinearLayout>
+            <RelativeLayout
+                android:ellipsize="end"
+                android:orientation="horizontal"
+                android:clipChildren="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1">
+                <TextView
+                    android:textAppearance="@style/MaterialTextAppearance.App.Subtitle2"
+                    android:ellipsize="end"
+                    android:id="@id/notification_subtitle"
+                    android:visibility="gone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="this is a subtitle: "
+                    android:maxLines="1"
+                    android:layout_alignParentStart="true" />
+                <TextView
+                    android:textAppearance="@style/TextAppearance.Compat.Notification"
+                    android:ellipsize="end"
+                    android:id="@id/notification_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="this is my tweet"
+                    android:maxLines="1"
+                    android:layout_alignWithParentIfMissing="true"
+                    android:layout_toStartOf="@id/cta_text"
+                    android:layout_toEndOf="@id/notification_subtitle" />
+                <TextView
+                    android:textAppearance="@style/TextAppearance.Compat.Notification"
+                    android:textStyle="bold"
+                    android:ellipsize="end"
+                    android:id="@id/cta_text"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tap to see more"
+                    android:maxLines="1"
+                    android:paddingStart="@dimen/space_2"
+                    android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@id/profile_picture"
+                android:layout_width="@dimen/space_56"
+                android:layout_height="@dimen/space_56"
+                android:contentDescription="@null" />
+            <ImageView
+                android:id="@id/action_icon"
+                android:layout_width="?notificationHeaderIconSize"
+                android:layout_height="?notificationHeaderIconSize"
+                android:layout_alignBottom="@id/profile_picture"
+                android:contentDescription="@null"
+                android:layout_alignEnd="@id/profile_picture" />
+        </RelativeLayout>
+    </LinearLayout>
+</FrameLayout>

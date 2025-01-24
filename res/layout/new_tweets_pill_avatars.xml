@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.media.ui.fresco.FrescoMediaImageView
+    android:gravity="center_vertical"
+    android:visibility="gone"
+    android:layout_width="@dimen/new_item_image_size"
+    android:layout_height="@dimen/new_item_image_size"
+    android:layout_marginRight="2.0dip"
+    android:scaleType="center"
+    android:contentDescription="@null"
+    app:roundingStrategy="circle"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" />

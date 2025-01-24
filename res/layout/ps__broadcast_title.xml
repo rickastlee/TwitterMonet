@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="bottom"
+    android:layout_gravity="bottom"
+    android:orientation="vertical"
+    android:id="@id/broadcast_title_container"
+    android:paddingTop="@dimen/ps__standard_spacing_16"
+    android:paddingBottom="@dimen/ps__standard_spacing_16"
+    android:visibility="gone"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/ps__standard_spacing_16"
+    android:paddingEnd="@dimen/ps__standard_spacing_16"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10.0dip">
+        <LinearLayout
+            android:layout_gravity="start|center"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layoutDirection="locale">
+            <FrameLayout
+                android:layout_gravity="center"
+                android:id="@id/left_segment_container"
+                android:background="@drawable/ps__bg_start_segment_live"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/ps__pill_label_padding"
+                android:paddingEnd="@dimen/ps__pill_label_padding">
+                <tv.periscope.android.view.PsTextView
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:id="@id/left_segment_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/BroadcastLabel.Live" />
+            </FrameLayout>
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:id="@id/participants_container"
+                android:background="@drawable/ps__bg_end_segment"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:paddingStart="@dimen/ps__pill_label_padding"
+                android:paddingEnd="@dimen/ps__pill_label_padding"
+                android:layout_marginStart="1.0dip">
+                <tv.periscope.android.view.PsImageView
+                    android:id="@id/participants_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ps__ic_viewers_badge"
+                    android:scaleType="center"
+                    android:layout_marginEnd="5.0dip"
+                    custom:ps__tint="@color/ps__white" />
+                <tv.periscope.android.view.PsTextView
+                    android:gravity="center"
+                    android:id="@id/participants_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/BroadcastLabel" />
+            </LinearLayout>
+        </LinearLayout>
+        <tv.periscope.android.view.PsPillTextView
+            android:layout_gravity="end"
+            android:id="@id/featured_label"
+            android:visibility="gone"
+            android:text="@string/ps__featured"
+            style="@style/ps__Pill.Featured" />
+        <tv.periscope.android.view.PsTextView
+            android:textSize="14.0sp"
+            android:textStyle="bold"
+            android:textColor="@color/ps__white"
+            android:ellipsize="end"
+            android:layout_gravity="end|center"
+            android:id="@id/social_info"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1" />
+    </FrameLayout>
+    <tv.periscope.android.view.PsTextView
+        android:textSize="@dimen/font_size_large"
+        android:textStyle="bold"
+        android:textColor="@color/ps__white"
+        android:id="@id/broadcast_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/ps__standard_spacing_10"
+        android:includeFontPadding="false" />
+    <tv.periscope.android.view.PsTextView
+        android:textSize="@dimen/font_size_small"
+        android:textColor="@color/ps__white"
+        android:id="@id/broadcast_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/ps__standard_spacing_10"
+        android:includeFontPadding="false" />
+    <RelativeLayout
+        android:id="@id/user_info_container"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <tv.periscope.android.view.PsImageView
+            android:id="@id/profile_image"
+            android:layout_width="30.0dip"
+            android:layout_height="30.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/ps__standard_spacing_10"
+            android:layout_alignParentStart="true" />
+        <tv.periscope.android.view.PsTextView
+            android:textSize="@dimen/font_size_normal"
+            android:textStyle="bold"
+            android:textColor="@color/ps__white"
+            android:id="@id/user_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/profile_image"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+</LinearLayout>

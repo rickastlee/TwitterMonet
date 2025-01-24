@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/from_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/from"
+        android:importantForAccessibility="no"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/HourIntervalHeader" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/from_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:importantForAccessibility="no"
+        app:layout_constraintStart_toStartOf="@id/from_header"
+        app:layout_constraintTop_toBottomOf="@id/from_header"
+        style="@style/HourIntervalContent" />
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@id/from_end_barrier"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        app:barrierDirection="start"
+        app:constraint_referenced_ids="to_header,to_content" />
+    <View
+        android:id="@id/from_click_overlay"
+        android:background="@drawable/ripple_pressed_selector_rectangle"
+        android:clickable="true"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        app:layout_constraintBottom_toBottomOf="@id/from_content"
+        app:layout_constraintEnd_toEndOf="@id/from_end_barrier"
+        app:layout_constraintStart_toStartOf="@id/from_header"
+        app:layout_constraintTop_toTopOf="@id/from_header" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/to_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/to"
+        android:importantForAccessibility="no"
+        android:layout_marginStart="@dimen/space_64"
+        app:layout_constraintStart_toEndOf="@id/from_header"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/HourIntervalHeader" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/to_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:importantForAccessibility="no"
+        app:layout_constraintStart_toStartOf="@id/to_header"
+        app:layout_constraintTop_toBottomOf="@id/to_header"
+        style="@style/HourIntervalContent" />
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@id/to_end_barrier"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        app:barrierDirection="end"
+        app:constraint_referenced_ids="to_header,to_content" />
+    <View
+        android:id="@id/to_click_overlay"
+        android:background="@drawable/ripple_pressed_selector_rectangle"
+        android:clickable="true"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        app:layout_constraintBottom_toBottomOf="@id/to_content"
+        app:layout_constraintEnd_toEndOf="@id/to_end_barrier"
+        app:layout_constraintStart_toStartOf="@id/to_header"
+        app:layout_constraintTop_toTopOf="@id/to_header" />
+    <ImageView
+        android:id="@id/remove_hour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_vector_close"
+        android:contentDescription="@string/a11y_remove"
+        android:paddingEnd="@dimen/space_12"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

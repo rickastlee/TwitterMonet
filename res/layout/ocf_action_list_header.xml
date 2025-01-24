@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/space_32"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <com.twitter.media.ui.fresco.FrescoDraweeView
+        android:id="@id/image_drawee_view"
+        android:visibility="gone"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:importantForAccessibility="no"
+        twitter:layout_constraintEnd_toEndOf="parent"
+        twitter:layout_constraintStart_toStartOf="parent"
+        twitter:layout_constraintTop_toTopOf="parent"
+        twitter:placeholderImage="?abstractColorFadedGray" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/primary_text"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ocf_screen_padding_wide"
+        android:layout_marginStart="@dimen/ocf_screen_padding_wide"
+        android:layout_marginEnd="@dimen/ocf_screen_padding_wide"
+        twitter:layout_constraintEnd_toEndOf="parent"
+        twitter:layout_constraintStart_toStartOf="parent"
+        twitter:layout_constraintTop_toBottomOf="@id/image_drawee_view"
+        style="@style/OcfTitle3Text" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/secondary_text"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_20"
+        android:layout_marginStart="@dimen/ocf_screen_padding_wide"
+        android:layout_marginEnd="@dimen/ocf_screen_padding_wide"
+        twitter:layout_constraintEnd_toEndOf="parent"
+        twitter:layout_constraintStart_toStartOf="parent"
+        twitter:layout_constraintTop_toBottomOf="@id/primary_text"
+        style="@style/OcfBodyText" />
+</androidx.constraintlayout.widget.ConstraintLayout>

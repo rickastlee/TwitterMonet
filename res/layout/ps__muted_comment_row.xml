@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:paddingTop="@dimen/ps__standard_spacing_8"
+    android:paddingBottom="@dimen/ps__standard_spacing_8"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <tv.periscope.android.view.PsCheckButton
+        android:id="@id/check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ps__standard_spacing_16"
+        android:layout_marginEnd="@dimen/ps__standard_spacing_16"
+        android:layout_alignParentEnd="true"
+        custom:ps__checkedColorFilter="@color/ps__white"
+        custom:ps__uncheckedColorFilter="@color/ps__white" />
+    <include
+        android:id="@id/chat_row"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ps__standard_spacing_16"
+        android:layout_marginEnd="@dimen/ps__standard_spacing_16"
+        android:layout_toStartOf="@id/check"
+        android:layout_alignParentStart="true"
+        layout="@layout/ps__chat_row" />
+    <tv.periscope.android.view.PsTextView
+        android:textSize="12.0sp"
+        android:textColor="@color/ps__white_50"
+        android:id="@id/muted_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ps__standard_spacing_5"
+        android:layout_below="@id/chat_row"
+        android:layout_marginStart="@dimen/ps__standard_spacing_16"
+        android:layout_marginEnd="@dimen/ps__standard_spacing_16"
+        android:layout_alignParentStart="true" />
+    <tv.periscope.android.view.PsTextView
+        android:textSize="12.0sp"
+        android:textColor="@color/ps__white_50"
+        android:id="@id/unmuted_description"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ps__standard_spacing_5"
+        android:layout_below="@id/muted_description"
+        android:layout_marginStart="@dimen/ps__standard_spacing_16"
+        android:layout_marginEnd="@dimen/ps__standard_spacing_16"
+        android:layout_alignParentStart="true" />
+</RelativeLayout>

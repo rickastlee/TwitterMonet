@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="@color/ps__black_70"
+    android:padding="@dimen/ps__standard_spacing_20"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <tv.periscope.android.view.PsTextView
+        android:textSize="@dimen/font_size_xlarge"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:id="@id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/ps__standard_spacing_30"
+        android:text="@string/ps__hydra_pick_call_in_type_disclaimer_title"
+        app:layout_constraintBottom_toTopOf="@id/line_one"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+    <tv.periscope.android.view.PsTextView
+        android:textColor="@color/white"
+        android:id="@id/bullet_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bullet"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/line_one" />
+    <tv.periscope.android.view.PsTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textColor="@color/white"
+        android:id="@id/line_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/ps__standard_spacing_16"
+        android:text="@string/ps__hydra_pick_call_in_type_disclaimer_line_one"
+        android:layout_marginStart="@dimen/ps__standard_spacing_20"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toTopOf="@id/line_two"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/bullet_one" />
+    <tv.periscope.android.view.PsTextView
+        android:textColor="@color/white"
+        android:id="@id/bullet_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bullet"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/line_two" />
+    <tv.periscope.android.view.PsTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textColor="@color/white"
+        android:id="@id/line_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/ps__standard_spacing_50"
+        android:text="@string/ps__hydra_pick_call_in_type_disclaimer_line_two"
+        android:layout_marginStart="@dimen/ps__standard_spacing_20"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toTopOf="@id/confirm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/bullet_two" />
+    <tv.periscope.android.view.PsButton
+        android:textColor="@color/white"
+        android:id="@id/confirm"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/ps__standard_spacing_30"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@id/done"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        style="@style/ps__Button" />
+    <View
+        android:id="@id/divider"
+        android:background="@color/white_opacity_50"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        app:layout_constraintBottom_toTopOf="@id/done" />
+    <tv.periscope.android.view.PsTextView
+        android:textSize="16.0sp"
+        android:textStyle="bold"
+        android:textColor="@color/white_opacity_50"
+        android:gravity="center"
+        android:id="@id/done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="@dimen/ps__min_touch_target_size"
+        android:minHeight="@dimen/ps__min_touch_target_size"
+        android:text="@string/ps__hydra_pick_call_in_type_done"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProgressBar
+    android:id="@id/tombstone_progress"
+    android:visibility="gone"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:indeterminateOnly="true"
+    android:layout_centerInParent="true"
+    android:indeterminateTint="?coreColorSecondaryText"
+    android:indeterminateTintMode="src_in"
+    style="?android:progressBarStyleSmall"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

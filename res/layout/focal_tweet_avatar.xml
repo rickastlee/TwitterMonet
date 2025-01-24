@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.media.ui.image.UserImageView
+    android:id="@id/tweet_profile_image"
+    android:layout_width="0.0dip"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/list_row_half_padding_vertical"
+    android:layout_marginStart="?timelineRowHorizontalPadding"
+    android:layout_marginEnd="@dimen/image_margin_end"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/focal_tweet_social_context_badge"
+    app:layout_goneMarginTop="?timelineRowVerticalPadding"
+    style="?tweetViewProfileImageStyle"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <tag
+        android:value="RingedUserImage"
+        android:id="@id/weaverComponent" />
+</com.twitter.media.ui.image.UserImageView>

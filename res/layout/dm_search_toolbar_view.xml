@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@id/search_toolbar"
+    android:paddingTop="@dimen/space_8"
+    android:paddingBottom="@dimen/space_8"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingStart="0.0dip"
+    android:paddingEnd="@dimen/space_8"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageButton
+        android:id="@id/clear_button"
+        android:background="@drawable/ripple_selector_rectangle"
+        android:padding="@dimen/space_8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_vector_close"
+        android:contentDescription="@string/clear"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/query_view"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/twitter_blue" />
+    <com.twitter.ui.widget.TwitterEditText
+        android:gravity="start|center"
+        android:id="@id/query_view"
+        android:focusableInTouchMode="true"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        android:imeOptions="actionSearch"
+        android:paddingStart="@dimen/space_8"
+        android:paddingEnd="@dimen/space_8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/clear_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/DMInboxSearchView" />
+    <tag
+        android:value="DMSearchToolbarComponent"
+        android:id="@id/weaverComponent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

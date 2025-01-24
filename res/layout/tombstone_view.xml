@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:id="@id/tombstone_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@style/TombstoneItem">
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_normal"
+            android:textColor="?coreColorSecondaryText"
+            android:id="@id/tombstone_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TombstoneLabel" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_normal"
+            android:textStyle="bold"
+            android:textColor="?coreColorSecondaryText"
+            android:id="@id/tombstone_action"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TombstoneAction" />
+        <include
+            layout="@layout/tombstone_progress_bar" />
+    </RelativeLayout>
+</merge>

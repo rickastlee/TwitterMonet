@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.widget.Space
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="0.225" />
+    <LinearLayout
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="0.55">
+        <ImageView
+            android:id="@id/image"
+            android:layout_width="wrap_content"
+            android:layout_height="0.0dip"
+            android:scaleType="centerInside"
+            android:layout_weight="1.0"
+            android:contentDescription="@string/button_action_camera" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_normal"
+            android:textColor="?coreColorSecondaryText"
+            android:gravity="top"
+            android:layout_gravity="center_horizontal"
+            android:id="@id/media_forward_label"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <android.widget.Space
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="0.225" />
+</LinearLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@id/root_coordinator_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/docks">
+        <RelativeLayout
+            android:id="@id/root_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <include
+                layout="@layout/toolbar_container" />
+            <FrameLayout
+                android:id="@id/fragment_container"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_above="@id/docker_voice"
+                android:layout_below="?toolbarContainerId" />
+            <ViewStub
+                android:layout="@layout/overlay_view_stub"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/space_16"
+                android:layout_above="@id/persistent_reply"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/space_12"
+                android:layout_marginEnd="@dimen/space_12">
+                <tag
+                    android:value="TweetDetailDestinationOverlayStub"
+                    android:id="@id/weaverComponent" />
+            </ViewStub>
+            <include
+                layout="@layout/persistent_reply_container" />
+            <ViewStub
+                android:visibility="gone"
+                android:layout="@layout/tweet_detail_new_replies_banner"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+                <tag
+                    android:value="TweetDetailNewRepliesBannerStub"
+                    android:id="@id/weaverComponent" />
+            </ViewStub>
+            <ViewStub
+                android:id="@id/empty_view_stub"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="?toolbarContainerId" />
+            <include
+                android:id="@id/docker_voice"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/docker_height"
+                android:layout_above="@id/persistent_reply"
+                android:layout_alignWithParentIfMissing="true"
+                layout="@layout/voice_docker_viewstub" />
+            <androidx.core.widget.ContentLoadingProgressBar
+                android:id="@id/progress_Bar"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                style="?android:progressBarStyle" />
+        </RelativeLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <ViewStub
+        android:id="@id/reader_mode_actions"
+        android:layout="@layout/reader_mode_actions"
+        android:inflatedId="@id/reader_mode_actions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_16"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+        <tag
+            android:value="ReaderModeActionsStub"
+            android:id="@id/weaverComponent" />
+    </ViewStub>
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@id/docks"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+        <include
+            android:layout_gravity="bottom"
+            android:id="@id/docker_room"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/docker_height"
+            layout="@layout/room_docker_viewstub" />
+        <include
+            android:layout_gravity="bottom"
+            android:id="@id/room_replay_dock"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/docker_height"
+            layout="@layout/room_replay_dock_viewstub" />
+    </LinearLayout>
+</RelativeLayout>

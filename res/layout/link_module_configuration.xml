@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include
+        android:id="@id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        layout="@layout/app_toolbar" />
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:id="@id/preview_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/preview_message"
+                app:layout_constraintBottom_toTopOf="@id/preview_divider"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                style="@style/BusinessInfoDetailText" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textSize="@dimen/font_size_small"
+                android:textStyle="bold"
+                android:textColor="?abstractColorText"
+                android:id="@id/preview_title"
+                android:paddingTop="@dimen/space_16"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/preview_header"
+                android:layout_marginHorizontal="@dimen/space_16"
+                app:layout_constraintBottom_toTopOf="@id/module_preview"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <FrameLayout
+                android:id="@id/module_preview"
+                android:paddingBottom="@dimen/space_12"
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@id/preview_divider"
+                app:layout_constraintStart_toStartOf="parent">
+                <include
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/link_module" />
+            </FrameLayout>
+            <androidx.constraintlayout.widget.Group
+                android:id="@id/preview_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="preview_title,module_preview" />
+            <View
+                android:id="@id/preview_divider"
+                android:background="?abstractColorDivider"
+                android:focusable="false"
+                android:layout_width="0.0dip"
+                android:layout_height="@dimen/channels_item_separator_height"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/settings_header" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:id="@id/settings_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_header_text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/preview_divider"
+                style="@style/BusinessInfoListHeaderText" />
+            <include
+                android:id="@id/link_row"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/settings_header"
+                layout="@layout/link_module_configuration_row_template" />
+            <include
+                android:id="@id/call_to_action_label_row"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/link_row"
+                layout="@layout/link_module_configuration_row_template" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:id="@id/clear_data_button"
+                android:background="@drawable/ripple_pressed_selector_rectangle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/clear_data"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/call_to_action_label_row"
+                style="@style/ClearDataButton" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+    <tag
+        android:value="LinkModuleConfiguration"
+        android:id="@id/weaverComponent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

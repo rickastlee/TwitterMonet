@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:padding="@dimen/space_12"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <com.twitter.ui.components.button.legacy.ToggleTwitterButton
+        android:layout_gravity="end"
+        android:id="@id/follow_all_button"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/follow_all"
+        android:contentDescription="@string/follow_all"
+        twitter:iconSize="@dimen/follow_button_icon_size"
+        twitter:iconSrc="?iconFollow"
+        twitter:shouldToggleOnClick="false"
+        twitter:styleIdOff="?mediumToggledOffButtonStyle"
+        twitter:styleIdOn="?mediumToggledOnButtonStyle"
+        twitter:toggleIconSize="@dimen/follow_button_icon_size"
+        twitter:toggleIconSrc="?iconFollowing"
+        style="@style/TwitterButtonMediumBrandOutlined" />
+</LinearLayout>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:id="@id/low_quality_section"
+        android:background="@drawable/list_row_background"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <View
+            android:id="@id/top_divider"
+            android:background="?coreColorAppBackground"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/section_divider_height" />
+        <View
+            android:id="@id/top_line_divider"
+            android:background="?coreColorBorder"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/border_thickness" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_normal"
+            android:textColor="?abstractColorLink"
+            android:gravity="center"
+            android:id="@id/content"
+            android:paddingTop="@dimen/show_more_threads_padding"
+            android:paddingBottom="@dimen/show_more_threads_padding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tweet_conversation_show_more_replies"
+            android:layout_centerInParent="true" />
+        <ProgressBar
+            android:id="@id/progress"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            style="?android:progressBarStyleSmall" />
+        <View
+            android:id="@id/bottom_divider"
+            android:background="?coreColorAppBackground"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/section_divider_height"
+            android:layout_below="@id/content" />
+    </RelativeLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:orientation="vertical"
+        android:id="@id/abusive_section"
+        android:paddingBottom="@dimen/space_24"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <View
+            android:id="@id/top_line_divider_abusive"
+            android:background="?coreColorBorder"
+            android:visibility="visible"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/border_thickness"
+            android:layout_marginBottom="@dimen/space_24"
+            app:layout_constraintBottom_toTopOf="@id/title_abusive"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_body"
+            android:textColor="?coreColorPrimaryText"
+            android:id="@id/title_abusive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/other_replies"
+            android:layout_marginStart="@dimen/space_24"
+            android:layout_marginEnd="@dimen/space_24"
+            app:layout_constraintBottom_toTopOf="@id/subtitle_abusive"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/top_line_divider_abusive"
+            style="@style/PrimaryText" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_small"
+            android:textColor="?coreColorSecondaryText"
+            android:id="@id/subtitle_abusive"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_4"
+            android:text="@string/other_replies_subtitle"
+            android:layout_marginStart="@dimen/space_24"
+            android:layout_marginEnd="@dimen/space_24"
+            app:layout_constraintBottom_toTopOf="@id/content_abusive"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title_abusive" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_normal"
+            android:textColor="?abstractColorLink"
+            android:id="@id/content_abusive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_4"
+            android:text="@string/tweet_conversation_show_more_replies"
+            android:layout_marginStart="@dimen/space_24"
+            android:layout_marginEnd="@dimen/space_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/subtitle_abusive" />
+        <ProgressBar
+            android:id="@id/progress_abusive"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            style="?android:progressBarStyleSmall" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <tag
+        android:value="ThirdRepliesSectionCursor"
+        android:id="@id/weaverComponent" />
+</LinearLayout>

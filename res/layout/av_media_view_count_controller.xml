@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:gravity="bottom"
+    android:layout_gravity="bottom"
+    android:id="@id/media_controller_container"
+    android:visibility="invisible"
+    android:clipChildren="false"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingEnd="2.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.twitter.media.av.ui.control.SeekBarContainer
+        android:id="@id/seekbar_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <SeekBar
+            android:id="@id/mediacontroller_progress"
+            android:layout_width="fill_parent"
+            android:layout_height="32.0dip"
+            android:layout_marginBottom="-8.0dip"
+            android:maxHeight="7.0dip"
+            android:minHeight="7.0dip"
+            android:paddingStart="13.659973dip"
+            android:paddingEnd="11.659973dip"
+            style="@style/AVViewCountMediaSeekBar" />
+    </com.twitter.media.av.ui.control.SeekBarContainer>
+    <ImageButton
+        android:layout_gravity="center|left|top"
+        android:id="@id/pause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-4.0dip"
+        android:layout_marginBottom="@dimen/space_2"
+        android:layout_below="@id/seekbar_container"
+        android:contentDescription="@string/play"
+        android:layout_marginStart="@dimen/space_4"
+        style="@style/PlayPauseButton" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_small"
+        android:textColor="@color/white"
+        android:id="@id/view_count"
+        android:background="@color/clear"
+        android:paddingTop="@dimen/av_view_count_text_top_padding"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/seekbar_container"
+        android:layout_toEndOf="@id/pause"
+        android:paddingHorizontal="4.0dip" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_small"
+        android:textColor="@color/white"
+        android:id="@id/countdown"
+        android:background="@color/clear"
+        android:paddingTop="@dimen/av_view_count_text_top_padding"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/seekbar_container"
+        android:layout_alignWithParentIfMissing="true"
+        android:paddingEnd="4.0dip"
+        android:layout_toEndOf="@id/pause" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_small"
+        android:textColor="@color/white"
+        android:id="@id/time_current"
+        android:background="@color/clear"
+        android:paddingTop="@dimen/av_view_count_text_top_padding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/seekbar_container"
+        android:layout_alignTop="@id/time"
+        android:paddingEnd="2.0dip"
+        android:layout_toStartOf="@id/time" />
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:id="@id/skip"
+        android:paddingBottom="4.0dip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/pause"
+        android:layout_alignBottom="@id/pause"
+        android:layout_alignWithParentIfMissing="true"
+        android:paddingEnd="6.0dip"
+        android:layout_alignParentEnd="true">
+        <include
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/bg_media_badge_padding"
+            layout="@layout/av_autoplay_skip_badge_count_down" />
+        <ViewStub
+            android:id="@id/skip_badge_with_pip_count_down"
+            android:layout="@layout/av_autoplay_skip_badge_with_pip_count_down"
+            android:inflatedId="@id/skip_badge_with_pip_count_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_small"
+        android:textColor="@color/white"
+        android:id="@id/time"
+        android:paddingTop="@dimen/av_view_count_text_top_padding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/seekbar_container"
+        android:layout_alignWithParentIfMissing="true"
+        android:paddingStart="1.0dip"
+        android:paddingEnd="11.0dip"
+        android:layout_toStartOf="@id/skip" />
+</RelativeLayout>

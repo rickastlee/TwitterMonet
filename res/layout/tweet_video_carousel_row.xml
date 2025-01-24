@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.android.mediacarousel.carousel.CarouselRecyclerView
+    android:id="@id/recycler_view"
+    android:clipToPadding="false"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:contentDescription="@string/carousel_content_description"
+    android:paddingHorizontal="?timelineRowHorizontalPadding"
+    android:paddingVertical="?timelineRowVerticalPadding"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="horizontal"
+    android:id="@id/name_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingEnd="@dimen/space_8"
+    android:layout_alignParentEnd="false"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.twitter.ui.user.MultilineUsernameView
+        android:ellipsize="end"
+        android:id="@id/name_item"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        style="?userInfoNameStyle" />
+    <ImageView
+        android:layout_gravity="center_vertical"
+        android:id="@id/verified_item"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/font_size_normal"
+        android:src="?iconVerified"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/icon_verified"
+        android:layout_marginStart="@dimen/space_4"
+        android:layout_marginEnd="@dimen/space_4"
+        app:tint="?verifiedBadgeColor" />
+    <ImageView
+        android:layout_gravity="center_vertical"
+        android:id="@id/protected_item"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/font_size_normal"
+        android:src="?iconProtected"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/icon_protected"
+        android:layout_marginStart="@dimen/space_4"
+        app:tint="?protectedBadgeColor" />
+</LinearLayout>

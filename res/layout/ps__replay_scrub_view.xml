@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:orientation="vertical"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+        <FrameLayout
+            android:layout_gravity="center"
+            android:id="@id/thumb_container"
+            android:focusable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/ps__standard_spacing_40">
+            <ImageView
+                android:id="@id/thumb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:contentDescription="@string/ps__accessibility_broadcast_thumbnail"
+                style="@style/ps__ReplayThumb" />
+        </FrameLayout>
+    </LinearLayout>
+    <tv.periscope.android.view.ReplayScrubberBar
+        android:id="@id/bar"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_alignParentBottom="true"
+        android:accessibilityTraversalAfter="@id/time" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@id/controls_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/ps__standard_spacing_10"
+        android:layout_above="@id/bar">
+        <FrameLayout
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:layout_width="200.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/ps__standard_spacing_20">
+            <tv.periscope.android.view.PsTextView
+                android:textSize="24.0dip"
+                android:textColor="@color/ps__white"
+                android:layout_gravity="center"
+                android:id="@id/time"
+                android:focusable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <tv.periscope.android.view.PsImageView
+                android:layout_gravity="end|center"
+                android:id="@id/share"
+                android:background="@drawable/ps__bg_toolbar_btn"
+                android:padding="@dimen/ps__standard_spacing_16"
+                android:focusable="true"
+                android:clickable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="-16.0dip"
+                android:src="@drawable/ps__ic_share"
+                android:contentDescription="@string/ps__share_broadcast_action" />
+        </FrameLayout>
+    </LinearLayout>
+    <ViewStub
+        android:id="@id/playback_controls"
+        android:visibility="gone"
+        android:layout="@layout/ps__accessibility_playback_controls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40.0dip"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+    <FrameLayout
+        android:id="@id/close_confirm_container"
+        android:background="@drawable/ps__bg_toolbar_btn"
+        android:focusable="true"
+        android:clickable="true"
+        android:layout_width="@dimen/ps__min_touch_target_size"
+        android:layout_height="@dimen/ps__min_touch_target_size"
+        android:layout_alignParentRight="true"
+        android:contentDescription="@string/ps__accessibility_done"
+        android:layout_alignParentEnd="true">
+        <tv.periscope.android.ui.broadcast.CloseConfirmView
+            android:layout_gravity="center"
+            android:id="@id/close_confirm"
+            android:layout_width="21.0dip"
+            android:layout_height="21.0dip" />
+    </FrameLayout>
+</RelativeLayout>

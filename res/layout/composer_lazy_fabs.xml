@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="center_horizontal"
+    android:layout_gravity="end|bottom|center"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_gravity="end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/live_fab_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_4"
+            android:text="@string/live_fab_item"
+            style="@style/FabMenuLabel" />
+        <com.twitter.ui.widget.FloatingActionButton
+            android:id="@id/go_live_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_4"
+            android:src="@drawable/ic_vector_camera_video_stroke"
+            android:contentDescription="@string/live_fab_item"
+            android:layout_marginEnd="@dimen/space_20"
+            style="@style/FabMenuStyle" />
+    </LinearLayout>
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_gravity="end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/spaces_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_4"
+            android:text="@string/spaces_fab_item"
+            style="@style/FabMenuLabel" />
+        <com.twitter.ui.widget.FloatingActionButton
+            android:id="@id/create_space_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_4"
+            android:src="@drawable/ic_vector_compose_spaces"
+            android:contentDescription="@string/open_audio_space"
+            android:layout_marginEnd="@dimen/space_20"
+            style="@style/FabMenuStyle">
+            <tag
+                android:value="RoomEntrypoint"
+                android:id="@id/weaverComponent" />
+        </com.twitter.ui.widget.FloatingActionButton>
+    </LinearLayout>
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_gravity="end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/photos_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_4"
+            android:text="@string/photos_fab_item"
+            style="@style/FabMenuLabel" />
+        <com.twitter.ui.widget.FloatingActionButton
+            android:id="@id/compose_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_4"
+            android:src="@drawable/ic_vector_compose_photos"
+            android:contentDescription="@string/photos_fab_label"
+            android:layout_marginEnd="@dimen/space_20"
+            style="@style/FabMenuStyle" />
+    </LinearLayout>
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_gravity="end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/tweet_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tweet_fab_item"
+            style="@style/FabMenuLabel" />
+        <com.twitter.ui.widget.FloatingActionButton
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_vector_compose_spaces"
+            android:contentDescription="@string/tweet_fab_item"
+            android:layout_marginEnd="@dimen/space_20"
+            style="@style/FabMenuStyle" />
+    </LinearLayout>
+</LinearLayout>

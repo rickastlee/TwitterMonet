@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.twitter.home.tabbed.navigation.DropdownActionTabLayout
+        android:id="@id/tab_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@style/TabLayoutStyle.Channels" />
+    <com.twitter.ui.widget.NestedCoordinatorLayout
+        android:id="@id/nested_coordinator_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@id/fleetline_app_bar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            style="@style/TwitterAppBar">
+            <FrameLayout
+                android:id="@id/fleetline_holder"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                app:layout_scrollFlags="scroll|enterAlways|snap" />
+        </com.google.android.material.appbar.AppBarLayout>
+        <com.twitter.ui.view.RtlViewPager
+            android:id="@id/view_pager"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    </com.twitter.ui.widget.NestedCoordinatorLayout>
+</LinearLayout>

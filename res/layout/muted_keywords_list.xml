@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:id="@id/root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@id/root_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <include
+            layout="@layout/toolbar_container" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@id/recycler_view"
+            android:paddingBottom="?fabListPaddingBottom"
+            android:clipToPadding="false"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+        <include
+            android:id="@id/empty_state"
+            layout="@layout/empty_state" />
+    </LinearLayout>
+    <com.twitter.ui.widget.FloatingActionButton
+        android:id="@id/floating_action_button"
+        android:src="?toolbarAddIcon"
+        android:contentDescription="@string/mute_keyword_add_description"
+        twitter:layout_anchor="@id/root_layout"
+        style="@style/FabStyle" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

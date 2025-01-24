@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout
+        android:background="@drawable/bg_nudge_grey_circle"
+        android:layout_width="@dimen/space_72"
+        android:layout_height="@dimen/space_72">
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@id/nudge_sheet_button_image"
+            android:layout_width="@dimen/space_24"
+            android:layout_height="@dimen/space_24" />
+    </FrameLayout>
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_small"
+        android:textColor="?coreColorSecondaryText"
+        android:layout_gravity="center_horizontal"
+        android:id="@id/nudge_sheet_button_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_12"
+        app:layout_constraintEnd_toEndOf="@id/button_primary_container"
+        app:layout_constraintStart_toStartOf="@id/button_primary_container"
+        app:layout_constraintTop_toBottomOf="@id/button_primary_container" />
+</merge>

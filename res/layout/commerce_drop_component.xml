@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <com.twitter.media.ui.fresco.FrescoMediaImageView
+        android:id="@id/cover_image"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        twitter:imageCornerRadius="@dimen/product_drop_image_corner_radius"
+        twitter:layout_constraintDimensionRatio="1:1"
+        twitter:layout_constraintEnd_toEndOf="parent"
+        twitter:layout_constraintStart_toStartOf="parent"
+        twitter:layout_constraintTop_toTopOf="parent"
+        twitter:scaleType="fill" />
+    <View
+        android:background="@drawable/commerce_drop_image_gradient"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        twitter:layout_constraintBottom_toBottomOf="@id/cover_image"
+        twitter:layout_constraintEnd_toEndOf="@id/cover_image"
+        twitter:layout_constraintStart_toStartOf="@id/cover_image"
+        twitter:layout_constraintTop_toTopOf="@id/cover_image" />
+    <include
+        android:id="@id/countdown_view_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/product_drop_card_padding"
+        android:layout_marginEnd="@dimen/product_drop_card_padding"
+        twitter:layout_constraintEnd_toEndOf="@id/cover_image"
+        twitter:layout_constraintTop_toTopOf="@id/cover_image"
+        layout="@layout/product_drop_countdown_text" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_subtext_1"
+        android:id="@id/product_drop_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_8"
+        android:text="@string/product_drop"
+        android:paddingStart="@dimen/product_drop_card_padding"
+        twitter:layout_constraintBottom_toTopOf="@id/title_text"
+        style="@style/ProductDropDetailText" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_large"
+        android:textStyle="bold"
+        android:id="@id/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_8"
+        android:paddingStart="@dimen/product_drop_card_padding"
+        twitter:layout_constraintBottom_toTopOf="@id/shopping_icon"
+        style="@style/ProductDropDetailText" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/available_date"
+        android:paddingBottom="@dimen/product_drop_card_padding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_4"
+        twitter:layout_constraintBottom_toBottomOf="@id/shopping_icon"
+        twitter:layout_constraintStart_toEndOf="@id/shopping_icon"
+        twitter:layout_constraintTop_toTopOf="@id/shopping_icon"
+        style="@style/ProductDropDetailText" />
+    <ImageView
+        android:id="@id/shopping_icon"
+        android:paddingBottom="@dimen/product_drop_card_padding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="shopping icon"
+        android:importantForAccessibility="no"
+        android:paddingStart="14.0dip"
+        twitter:layout_constraintBottom_toBottomOf="@id/cover_image"
+        twitter:layout_constraintStart_toStartOf="@id/cover_image"
+        twitter:srcCompat="@drawable/ic_vector_shopping_stroke"
+        twitter:tint="@color/white" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_subtext_3"
+        android:textColor="?abstractColorDeepGray"
+        android:id="@id/subscription_count_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_4"
+        twitter:layout_constraintTop_toBottomOf="@id/cover_image" />
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_12"
+        twitter:layout_constraintTop_toBottomOf="@id/subscription_count_text"
+        layout="@layout/product_drop_card_buttons" />
+</androidx.constraintlayout.widget.ConstraintLayout>

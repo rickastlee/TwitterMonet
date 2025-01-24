@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@id/user_header"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Space
+        android:orientation="vertical"
+        android:id="@id/user_image_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/user_image"
+        app:layout_constraintStart_toEndOf="@id/user_image"
+        app:layout_constraintTop_toTopOf="@id/user_image" />
+    <com.twitter.media.ui.image.UserImageView
+        android:id="@id/user_image"
+        android:padding="@dimen/space_2"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:importantForAccessibility="no"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:scaleMode="fit"
+        app:userImageSize="normal" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textStyle="bold"
+        android:textColor="?coreColorPrimaryText"
+        android:ellipsize="end"
+        android:layout_gravity="start"
+        android:id="@id/user_names_text"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_2"
+        android:singleLine="true"
+        android:importantForAccessibility="no"
+        android:layout_marginStart="@dimen/space_8"
+        app:layout_constraintBottom_toTopOf="@id/user_image_center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/user_image"
+        style="@style/OcfBodyText" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:ellipsize="end"
+        android:layout_gravity="start"
+        android:id="@id/user_handle_text"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:importantForAccessibility="no"
+        app:antiSpoofing="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/user_names_text"
+        app:layout_constraintTop_toBottomOf="@id/user_image_center"
+        style="@style/OcfSubtext1Text" />
+</androidx.constraintlayout.widget.ConstraintLayout>

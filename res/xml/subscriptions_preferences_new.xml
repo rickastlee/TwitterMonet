@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <Preference
+        android:title="@string/new_subscription_title"
+        android:selectable="false"
+        android:key="new_subscription_title"
+        twitter:allowDividerAbove="false"
+        twitter:allowDividerBelow="false" />
+    <Preference
+        android:title="@string/settings_identity_title"
+        android:key="identity"
+        android:summary="@string/settings_identity_subtitle"
+        android:widgetLayout="@layout/settings_navigation_indicator"
+        twitter:allowDividerAbove="false"
+        twitter:allowDividerBelow="false" />
+    <Preference
+        android:icon="@drawable/ic_vector_book_stroke_on"
+        android:title="@string/settings_news_title"
+        android:key="news"
+        android:summary="@string/settings_news_subtitle"
+        android:widgetLayout="@layout/settings_navigation_indicator"
+        twitter:allowDividerAbove="false"
+        twitter:allowDividerBelow="false" />
+    <Preference
+        android:icon="@drawable/ic_vector_gift_box"
+        android:title="@string/settings_early_access_title"
+        android:key="early_access"
+        android:summary="@string/settings_early_access_subtitle"
+        android:widgetLayout="@layout/settings_navigation_indicator"
+        twitter:allowDividerAbove="false"
+        twitter:allowDividerBelow="false" />
+    <Preference
+        android:icon="@drawable/ic_vector_star"
+        android:title="@string/settings_extras_title"
+        android:key="extras"
+        android:summary="@string/settings_extras_subtitle"
+        android:widgetLayout="@layout/settings_navigation_indicator"
+        twitter:allowDividerAbove="false"
+        twitter:allowDividerBelow="false" />
+    <com.twitter.feature.subscriptions.ui.preference.TwitterBlueRevampPreferenceCategory
+        android:title="@string/subscription_title"
+        android:key="manage_subscription_header"
+        twitter:allowDividerAbove="false"
+        twitter:allowDividerBelow="false">
+        <Preference
+            android:icon="@drawable/ic_vector_creditcard_back"
+            android:title="@string/manage_subscription"
+            android:key="manage_subscription"
+            android:summary="@string/manage_subscription_pref_summary"
+            android:widgetLayout="@layout/settings_navigation_indicator" />
+        <Preference
+            android:title="@string/subscriptions_help_center_label"
+            android:key="help_center"
+            android:widgetLayout="@layout/settings_external_navigation_indicator" />
+        <Preference
+            android:title="@string/subscriptions_support_label"
+            android:key="get_support"
+            android:widgetLayout="@layout/settings_external_navigation_indicator" />
+        <Preference
+            android:title="@string/subscriptions_twitter_blue_profile_label"
+            android:key="twitter_blue_profile"
+            android:widgetLayout="@layout/settings_external_navigation_indicator" />
+    </com.twitter.feature.subscriptions.ui.preference.TwitterBlueRevampPreferenceCategory>
+</PreferenceScreen>

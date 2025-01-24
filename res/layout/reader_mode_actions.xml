@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="@drawable/reader_mode_actions_background"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:divider="@drawable/reader_mode_actions_divider"
+    android:showDividers="middle"
+    android:elevation="@dimen/space_8"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageButton
+        android:id="@id/bookmark"
+        android:background="?android:selectableItemBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_vector_bookmark_plus_stroke"
+        android:contentDescription="@string/reader_mode_bookmark_action_content_description"
+        android:paddingHorizontal="16.0dip"
+        android:paddingVertical="12.0dip"
+        app:tint="?coreColorPrimaryText" />
+    <ImageButton
+        android:id="@id/text_size"
+        android:background="?android:selectableItemBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_vector_text_size"
+        android:contentDescription="@string/reader_mode_font_size_action_content_description"
+        android:paddingHorizontal="16.0dip"
+        android:paddingVertical="12.0dip"
+        app:tint="?coreColorPrimaryText" />
+    <tag
+        android:value="ReaderModeActions"
+        android:id="@id/weaverComponent" />
+</LinearLayout>

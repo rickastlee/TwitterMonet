@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.ui.components.text.legacy.TypefacesTextView
+    android:textSize="@dimen/font_size_normal"
+    android:textColor="?textColorSecondary"
+    android:gravity="start|center"
+    android:layout_gravity="center_vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="42.0dip"
+    android:paddingStart="@dimen/space_16"
+    android:paddingEnd="@dimen/space_16"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

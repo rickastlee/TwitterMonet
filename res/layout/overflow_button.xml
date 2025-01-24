@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageButton
+    android:gravity="center"
+    android:id="@id/overflow_button"
+    android:background="@color/clear"
+    android:padding="@dimen/space_12"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:foreground="@drawable/ripple_selector_oval"
+    android:src="@drawable/ic_vector_overflow"
+    android:contentDescription="@string/menu_open_video_options"
+    app:tint="?coreColorPrimary"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <tag
+        android:value="OverflowButton"
+        android:id="@id/weaverComponent" />
+</ImageButton>

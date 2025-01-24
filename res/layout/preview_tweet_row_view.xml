@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.tweetview.core.TweetView
+        android:id="@id/row"
+        android:background="@drawable/list_row_background"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@style/TweetView.ListRow" />
+    <ViewStub
+        android:id="@id/tweet_preview_undo_send_container_stub"
+        android:layout="@layout/undo_send"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <tag
+            android:value="UndoSendStub"
+            android:id="@id/weaverComponent" />
+    </ViewStub>
+</LinearLayout>

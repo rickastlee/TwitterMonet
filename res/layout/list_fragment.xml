@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <include
+        layout="@layout/timeline_pinned_header" />
+    <include
+        android:visibility="gone"
+        layout="@layout/new_item_banner" />
+    <ViewStub
+        android:id="@id/empty_view_stub"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+</FrameLayout>

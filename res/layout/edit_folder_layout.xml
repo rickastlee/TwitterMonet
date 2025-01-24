@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@id/create_folder_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.twitter.ui.widget.TwitterEditText
+        android:gravity="start|center|top"
+        android:id="@id/edit_folder_text"
+        android:paddingBottom="@dimen/space_8"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_16"
+        android:ems="10"
+        android:maxLength="@integer/max_folder_title_length"
+        android:inputType="textMultiLine"
+        android:layout_marginStart="@dimen/space_16"
+        android:layout_marginEnd="@dimen/space_16"
+        app:labelText="@string/folder_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/TwitterEditText">
+        <tag
+            android:value="EditText"
+            android:id="@id/weaverComponent" />
+    </com.twitter.ui.widget.TwitterEditText>
+    <include
+        android:id="@id/gap"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_folder_text"
+        layout="@layout/bookmark_gap_preference" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textStyle="normal"
+        android:textColor="@color/destructive_red"
+        android:id="@id/delete_folder_view"
+        android:background="?selectableItemBackground"
+        android:paddingTop="@dimen/section_padding"
+        android:paddingBottom="@dimen/section_padding"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:text="@string/delete_folder"
+        android:textAlignment="center"
+        android:paddingStart="@dimen/list_row_padding_horizontal"
+        android:paddingEnd="@dimen/list_row_padding_horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gap" />
+    <View
+        android:id="@id/bottom_rule"
+        android:layout_width="0.0dip"
+        android:layout_height="@dimen/border_thickness"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/delete_folder_view"
+        style="@style/HorizontalRule" />
+    <View
+        android:id="@id/bottom_background"
+        android:background="?coreColorAppBackground"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bottom_rule" />
+    <tag
+        android:value="FolderEdit"
+        android:id="@id/weaverComponent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

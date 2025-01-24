@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="@drawable/rounded_rectangle_text_border"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/space_16"
+    android:paddingStart="@dimen/space_16"
+    android:paddingEnd="@dimen/space_16"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <Switch
+        android:enabled="false"
+        android:textColor="?coreColorPrimaryText"
+        android:id="@id/safety_mode_toggle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_8"
+        android:text="@string/safety_mode" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_8"
+        android:layout_marginBottom="@dimen/space_8"
+        android:text="@string/settings_safety_mode_summary"
+        style="@style/OcfSubtext2Text" />
+    <include
+        layout="@layout/divider_no_margin" />
+    <RelativeLayout
+        android:layout_gravity="center_vertical"
+        android:id="@id/safety_mode_duration_container"
+        android:clickable="true"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_16"
+        android:layout_marginBottom="@dimen/space_16">
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_normal"
+            android:textColor="?coreColorPrimaryText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_safety_mode_duration_title" />
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:gravity="end|center"
+            android:id="@id/safety_mode_duration"
+            android:background="@null"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dropdown"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+</LinearLayout>

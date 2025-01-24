@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textColor="?abstractColorLink"
+        android:gravity="left"
+        android:id="@id/content"
+        android:paddingLeft="18.0dip"
+        android:paddingTop="18.0dip"
+        android:paddingBottom="18.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Default Value"
+        android:layout_centerInParent="true" />
+    <tag
+        android:value="GenericTimelineItem"
+        android:id="@id/weaverComponent" />
+</RelativeLayout>

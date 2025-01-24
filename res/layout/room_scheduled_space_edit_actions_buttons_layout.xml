@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:id="@id/scheduled_space_edit_actions"
+    android:visibility="gone"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.rooms.ui.core.schedule.details.RoomTicketPurchaseButton
+        android:layout_gravity="center"
+        android:id="@id/scheduled_space_purchase_button"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_12" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textColor="@color/white"
+        android:layout_gravity="center"
+        android:id="@id/scheduled_space_reminder_button"
+        android:background="@drawable/rounded_rectangle_purple_gradient"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_12"
+        style="@style/SpacesCustomButton" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textColor="@color/white"
+        android:layout_gravity="center"
+        android:id="@id/scheduled_space_start_button"
+        android:background="@drawable/rounded_rectangle_purple_gradient"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_12"
+        android:text="@string/schedule_button_start"
+        style="@style/SpacesCustomButton" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textColor="@color/spaces_scheduled_detail_button_text_color"
+        android:id="@id/scheduled_space_add_to_calendar_button"
+        android:background="@drawable/rounded_rectangle_grey"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_12"
+        android:foreground="@drawable/ripple_selector_rounded_rectangle"
+        android:text="@string/add_room_to_calendar_button"
+        style="@style/SpacesCustomButton" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textColor="@color/spaces_scheduled_detail_button_text_color"
+        android:id="@id/scheduled_space_share_button"
+        android:background="@drawable/rounded_rectangle_grey"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_12"
+        android:foreground="@drawable/ripple_selector_rounded_rectangle"
+        android:text="@string/share_room_button"
+        style="@style/SpacesCustomButton" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textColor="@color/spaces_scheduled_detail_button_text_color"
+        android:id="@id/scheduled_space_edit_button"
+        android:background="@drawable/rounded_rectangle_grey"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_12"
+        android:foreground="@drawable/ripple_selector_rounded_rectangle"
+        android:text="@string/edit_room_button"
+        style="@style/SpacesCustomButton" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textStyle="bold"
+        android:textColor="@color/destructive_red"
+        android:gravity="center"
+        android:id="@id/scheduled_space_cancel_button"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_12"
+        android:text="@string/schedule_button_cancel" />
+</LinearLayout>

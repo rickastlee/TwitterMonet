@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar
+    android:id="@id/toolbar"
+    android:layout_width="fill_parent"
+    android:layout_height="?toolBarSize"
+    android:layoutDirection="?forceLayoutDirection"
+    android:elevation="8.0dip"
+    app:menu="@menu/menu_branded_like_preview"
+    app:navigationIcon="@drawable/ic_vector_arrow_left"
+    app:title="@string/preview_title"
+    style="?toolBarStyle"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <tag
+        android:value="Toolbar"
+        android:id="@id/weaverComponent" />
+</androidx.appcompat.widget.Toolbar>

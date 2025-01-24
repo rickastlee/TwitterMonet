@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:left="@dimen/birdwatch_pivot_stroke_width"
+        android:right="@dimen/birdwatch_pivot_stroke_width"
+        android:bottom="@dimen/birdwatch_pivot_stroke_width">
+        <shape
+            android:shape="rectangle"
+            xmlns:android="http://schemas.android.com/apk/res/android">
+            <solid
+                android:color="?abstractColorFaintGray" />
+        </shape>
+    </item>
+</layer-list>

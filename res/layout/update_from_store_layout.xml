@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@id/update_from_store_layout"
+    android:padding="@dimen/space_16"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_xlarge"
+        android:gravity="center"
+        android:id="@id/update_from_store_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_80"
+        android:layout_marginBottom="@dimen/space_8"
+        android:text="@string/app_update_title"
+        app:layout_constraintBottom_toTopOf="@id/update_from_store_message"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/PrimaryText" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:gravity="center"
+        android:id="@id/update_from_store_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/update_from_store"
+        app:layout_constraintBottom_toTopOf="@id/update_from_store_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/update_from_store_title"
+        style="@style/SecondaryText" />
+    <com.twitter.ui.components.button.legacy.TwitterButton
+        android:id="@id/update_from_store_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_40"
+        android:text="@string/start_update"
+        android:textAllCaps="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/update_from_store_message"
+        style="@style/TwitterButtonLargeBrandFilled" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_small"
+        android:id="@id/update_from_store_legal_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/prompt_vertical_subtitle_margin"
+        android:text=""
+        android:paddingStart="@dimen/prompt_fullscreen_text_padding_horizontal"
+        android:paddingEnd="@dimen/prompt_fullscreen_text_padding_horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        style="@style/SecondaryText" />
+    <tag
+        android:value="UpdateFromStore"
+        android:id="@id/weaverComponent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

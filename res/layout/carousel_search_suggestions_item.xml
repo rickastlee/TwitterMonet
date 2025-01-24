@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:layout_width="@dimen/carousel_search_suggestion_item_width"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/space_12"
+    android:layout_marginBottom="@dimen/space_12"
+    android:layout_marginStart="@dimen/space_4"
+    android:layout_marginEnd="@dimen/space_4"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@id/audio_space_purple_background"
+            android:visibility="gone"
+            android:layout_width="@dimen/user_image_size"
+            android:layout_height="@dimen/user_image_size"
+            android:src="@drawable/search_audiospace_avatar_ring"
+            android:contentDescription="@null"
+            android:importantForAccessibility="no" />
+        <com.twitter.media.ui.image.UserImageView
+            android:layout_gravity="center"
+            android:id="@id/image"
+            android:background="@drawable/user_image_placeholder_bg"
+            android:layout_width="@dimen/user_image_size"
+            android:layout_height="@dimen/user_image_size"
+            android:importantForAccessibility="no" />
+        <ImageView
+            android:layout_gravity="end|bottom|center"
+            android:id="@id/audio_space_live_badge"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            android:contentDescription="@null"
+            android:importantForAccessibility="no"
+            app:srcCompat="@drawable/ic_vector_audio_space_indicator" />
+    </FrameLayout>
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/space_8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <com.twitter.ui.user.MultilineUsernameView
+            android:textSize="@dimen/font_size_small"
+            android:textColor="?coreColorPrimaryText"
+            android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:id="@id/title"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:layout_weight="1.0" />
+    </LinearLayout>
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_xsmall"
+        android:textColor="?coreColorSecondaryText"
+        android:ellipsize="end"
+        android:gravity="center_horizontal"
+        android:id="@id/subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1" />
+</LinearLayout>

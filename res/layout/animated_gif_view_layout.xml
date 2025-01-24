@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.media.ui.image.AnimatedGifView
+    android:visibility="gone"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:scaleType="centerCrop"
+    android:adjustViewBounds="true"
+    android:contentDescription="@string/attached_gif"
+    twitter:GifBackgroundColor="#ffffffff"
+    twitter:MinimumDurationMs="2000"
+    twitter:MinimumRepeatCount="3"
+    twitter:cornerRadius="@dimen/corner_radius_large"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto" />

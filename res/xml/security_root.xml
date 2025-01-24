@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference
+        android:summary="@string/settings_security_account_access_item_detail"
+        android:order="10" />
+    <Preference
+        android:icon="@drawable/ic_vector_lock_stroke"
+        android:title="@string/settings_security_title"
+        android:key="pref_security"
+        android:summary="@string/settings_security_item_detail"
+        android:order="20" />
+    <Preference
+        android:icon="@drawable/ic_vector_layers_stroke"
+        android:title="@string/settings_apps_sessions_item_title"
+        android:key="pref_apps_and_sessions"
+        android:summary="@string/settings_apps_sessions_item_detail"
+        android:order="30" />
+    <Preference
+        android:icon="@drawable/ic_vector_follow_arrows"
+        android:title="@string/settings_connected_accounts_item_title"
+        android:key="pref_connected_accounts"
+        android:summary="@string/settings_connected_accounts_item_detail"
+        android:order="40" />
+    <Preference
+        android:icon="@drawable/ic_vector_people_stroke"
+        android:title="@string/settings_twitter_delegate_item_title"
+        android:key="pref_twitter_delegate"
+        android:summary="@string/settings_twitter_delegate_item_detail"
+        android:order="50" />
+</PreferenceScreen>

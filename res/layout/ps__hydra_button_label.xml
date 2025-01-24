@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.ui.widget.TextLayoutView
+    android:textSize="@dimen/font_size_small"
+    android:textColor="@color/white"
+    android:id="@id/twitter_hydra_button_text"
+    android:background="@drawable/ps__bg_hydra_label"
+    android:paddingTop="5.0dip"
+    android:paddingBottom="10.0dip"
+    android:visibility="visible"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/guests_off"
+    android:singleLine="true"
+    android:layout_centerInParent="true"
+    android:paddingStart="5.0dip"
+    android:paddingEnd="5.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

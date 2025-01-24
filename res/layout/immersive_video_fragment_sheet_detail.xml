@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="@dimen/space_16"
+    app:layout_behavior="@string/twitter_bottom_sheet_behavior"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@id/immersive_sheet_captions_layout"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:foreground="@drawable/ripple_pressed_selector_rounded_rectangle"
+        android:paddingHorizontal="@dimen/space_24"
+        android:paddingVertical="8.0dip">
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:id="@id/immersive_sheet_captions_icon"
+            android:layout_width="30.0dip"
+            android:layout_height="30.0dip"
+            android:src="@drawable/ic_closed_captions_toggle_off"
+            android:importantForAccessibility="no"
+            app:tint="?coreColorPrimaryText" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_headline_2"
+            android:textStyle="bold"
+            android:textColor="?coreColorPrimaryText"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:text="@string/immersive_video_captions_option"
+            android:layout_weight="1.0"
+            android:layout_marginStart="@dimen/space_20"
+            android:lineHeight="@dimen/line_height_headline_2" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/immersive_sheet_captions_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/off_titlecase" />
+    </LinearLayout>
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@id/immersive_sheet_playback_speed_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:foreground="@drawable/ripple_pressed_selector_rounded_rectangle"
+        android:paddingHorizontal="@dimen/space_24"
+        android:paddingVertical="8.0dip">
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:layout_width="30.0dip"
+            android:layout_height="30.0dip"
+            android:src="@drawable/ic_vector_play_circle"
+            android:importantForAccessibility="no"
+            app:tint="?coreColorPrimaryText" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_headline_2"
+            android:textStyle="bold"
+            android:textColor="?coreColorPrimaryText"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/space_8"
+            android:text="@string/immersive_video_playback_speed_option"
+            android:layout_weight="1.0"
+            android:layout_marginStart="@dimen/space_20"
+            android:lineHeight="@dimen/line_height_headline_2" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/immersive_sheet_playback_speed_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1.0" />
+    </LinearLayout>
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@id/immersive_sheet_share_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:foreground="@drawable/ripple_pressed_selector_rounded_rectangle"
+        android:paddingHorizontal="@dimen/space_24"
+        android:paddingVertical="8.0dip">
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:layout_width="30.0dip"
+            android:layout_height="30.0dip"
+            android:src="@drawable/ic_vector_share_android"
+            android:importantForAccessibility="no"
+            app:tint="?coreColorPrimaryText" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_headline_2"
+            android:textStyle="bold"
+            android:textColor="?coreColorPrimaryText"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/space_8"
+            android:text="@string/immersive_video_share_video_option"
+            android:layout_weight="1.0"
+            android:layout_marginStart="@dimen/space_20"
+            android:lineHeight="@dimen/line_height_headline_2" />
+    </LinearLayout>
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@id/immersive_sheet_download_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:foreground="@drawable/ripple_pressed_selector_rounded_rectangle"
+        android:paddingHorizontal="@dimen/space_24"
+        android:paddingVertical="8.0dip">
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:layout_width="30.0dip"
+            android:layout_height="30.0dip"
+            android:src="@drawable/ic_vector_incoming"
+            android:importantForAccessibility="no"
+            app:tint="?coreColorPrimaryText" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_headline_2"
+            android:textStyle="bold"
+            android:textColor="?coreColorPrimaryText"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/space_8"
+            android:text="@string/download_video_option"
+            android:layout_weight="1.0"
+            android:layout_marginStart="@dimen/space_20"
+            android:lineHeight="@dimen/line_height_headline_2" />
+    </LinearLayout>
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:foreground="@drawable/ripple_pressed_selector_rounded_rectangle"
+        android:paddingHorizontal="@dimen/space_24"
+        android:paddingVertical="8.0dip">
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:layout_width="30.0dip"
+            android:layout_height="30.0dip"
+            android:src="@drawable/ic_vector_flag"
+            android:importantForAccessibility="no"
+            app:tint="?coreColorPrimaryText" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_headline_2"
+            android:textStyle="bold"
+            android:textColor="?coreColorPrimaryText"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/space_8"
+            android:text="@string/immersive_video_report_video_option"
+            android:layout_weight="1.0"
+            android:layout_marginStart="@dimen/space_20"
+            android:lineHeight="@dimen/line_height_headline_2" />
+    </LinearLayout>
+    <tag
+        android:value="ImmersiveMediaSheet"
+        android:id="@id/weaverComponent" />
+    <FrameLayout
+        android:id="@id/share_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <tag
+            android:value="ImmersiveShare"
+            android:id="@id/weaverComponent" />
+    </FrameLayout>
+</LinearLayout>

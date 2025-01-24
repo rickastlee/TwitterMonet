@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="0.0dip"
+    android:layout_marginTop="@dimen/space_12"
+    android:layout_marginBottom="@dimen/space_12"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View
+        android:background="@drawable/round_input_box_background"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        android:layout_marginStart="@dimen/space_16"
+        android:layout_marginEnd="@dimen/space_16"
+        app:layout_constraintBottom_toBottomOf="@id/search_edit_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/search_edit_text" />
+    <com.twitter.ui.widget.TwitterEditText
+        android:enabled="true"
+        android:textColor="?coreColorPrimaryText"
+        android:textColorHint="?coreColorSecondaryText"
+        android:id="@id/search_edit_text"
+        android:background="@android:color/transparent"
+        android:layout_width="fill_parent"
+        android:layout_height="?android:listPreferredItemHeightSmall"
+        android:maxLines="1"
+        android:drawablePadding="@dimen/space_8"
+        android:inputType="text"
+        android:imeOptions="actionDone|flagNoExtractUi"
+        android:drawableStart="@drawable/ic_vector_search"
+        android:textAlignment="viewStart"
+        android:paddingEnd="@dimen/space_12"
+        android:layout_marginStart="@dimen/ocf_screen_padding_wide"
+        android:drawableTint="?coreColorSecondaryText"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toStartOf="@id/close_query_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@id/close_query_button"
+        android:paddingLeft="@dimen/space_8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:foreground="?android:selectableItemBackground"
+        android:contentDescription="@string/focused_search_close_button_content_description"
+        android:layout_marginEnd="@dimen/space_32"
+        app:layout_constraintBottom_toBottomOf="@id/search_edit_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/search_edit_text"
+        app:srcCompat="@drawable/ic_vector_close_circle"
+        app:tint="?textColorSecondary" />
+    <View
+        android:id="@id/divider"
+        android:background="?abstractColorDivider"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/channels_item_separator_height"
+        android:layout_marginTop="@dimen/space_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search_edit_text" />
+</androidx.constraintlayout.widget.ConstraintLayout>

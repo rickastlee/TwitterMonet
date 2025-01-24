@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_headline_2"
+        android:textColor="?coreColorSecondaryText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16.0dip"
+        android:text="@string/animation_preview_title"
+        android:layout_marginHorizontal="16.0dip" />
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_gravity="center_horizontal"
+        android:id="@id/animationPreview"
+        android:layout_width="220.0dip"
+        android:layout_height="220.0dip"
+        android:layout_marginTop="16.0dip"
+        app:lottie_scale="5.0">
+        <tag
+            android:value="PreviewView"
+            android:id="@id/weaverComponent" />
+    </com.airbnb.lottie.LottieAnimationView>
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16.0dip"
+        android:layout_marginHorizontal="16.0dip">
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@id/playPauseButton"
+            android:background="?selectableItemBackgroundBorderless"
+            android:padding="10.0dip"
+            android:layout_width="40.0dip"
+            android:layout_height="40.0dip"
+            android:src="@drawable/ic_vector_play"
+            android:layout_marginEnd="8.0dip"
+            app:tint="?textColorPrimary">
+            <tag
+                android:value="PlayPause"
+                android:id="@id/weaverComponent" />
+        </ImageView>
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_normal"
+            android:id="@id/framePreview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="70.0dip"
+            android:text="160/190">
+            <tag
+                android:value="PreviewCounter"
+                android:id="@id/weaverComponent" />
+        </com.twitter.ui.components.text.legacy.TypefacesTextView>
+        <com.google.android.material.slider.Slider
+            android:id="@id/frameSlider"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:stepSize="1.0"
+            android:layout_weight="1.0"
+            android:valueFrom="0"
+            android:layout_marginStart="8.0dip">
+            <tag
+                android:value="PreviewSlider"
+                android:id="@id/weaverComponent" />
+        </com.google.android.material.slider.Slider>
+    </LinearLayout>
+</LinearLayout>

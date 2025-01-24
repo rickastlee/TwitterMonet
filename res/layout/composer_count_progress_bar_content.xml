@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar
+        android:layout_gravity="end|center"
+        android:id="@id/tweet_character_count_progress"
+        android:background="@drawable/tweet_character_progress_indicator_background"
+        android:layout_width="@dimen/character_count_progress_bar_dimensions"
+        android:layout_height="@dimen/character_count_progress_bar_dimensions"
+        android:indeterminate="false"
+        android:progressDrawable="@drawable/tweet_character_indicator_progress_bar"
+        android:rotation="270.0"
+        style="?android:progressBarStyleHorizontal" />
+    <com.twitter.subsystem.composer.ComposerCountView
+        android:textSize="@dimen/font_size_small"
+        android:layout_gravity="center"
+        android:id="@id/tweet_character_warning_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        style="@style/CharCount" />
+    <com.twitter.subsystem.composer.DualPhaseCountdownCircle
+        android:layout_gravity="center"
+        android:id="@id/dual_phase_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</merge>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="@drawable/ripple_pressed_selector_rectangle"
+    android:focusable="true"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.twitter.media.ui.fresco.FrescoMediaImageView
+        android:id="@id/mobile_app_icon_preview"
+        android:background="@drawable/mobile_app_plus_icon"
+        android:layout_margin="@dimen/space_12"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/MobileAppConfigurationIconStyle" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textStyle="bold"
+        android:id="@id/row_header"
+        android:focusable="false"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:textAlignment="viewStart"
+        app:layout_constraintEnd_toStartOf="@id/edit_arrow_image_view"
+        app:layout_constraintStart_toEndOf="@id/mobile_app_icon_preview"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/MobileAppConfigurationHeaderText" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textStyle="normal"
+        android:id="@id/row_subtext"
+        android:focusable="false"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:textAlignment="viewStart"
+        app:layout_constraintBottom_toTopOf="@id/divider"
+        app:layout_constraintEnd_toStartOf="@id/edit_arrow_image_view"
+        app:layout_constraintStart_toEndOf="@id/mobile_app_icon_preview"
+        app:layout_constraintTop_toBottomOf="@id/row_header"
+        style="@style/MobileAppConfigurationDetailText" />
+    <ImageView
+        android:id="@id/edit_arrow_image_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="24.0dip"
+        android:src="@drawable/ic_chevron_right_gray"
+        android:contentDescription="@string/edit"
+        app:layout_constraintBottom_toBottomOf="@id/row_header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/row_header" />
+    <View
+        android:id="@id/divider"
+        android:background="?abstractColorDivider"
+        android:focusable="false"
+        android:layout_width="0.0dip"
+        android:layout_height="@dimen/channels_item_separator_height"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

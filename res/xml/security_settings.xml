@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <Preference
+        android:selectable="false"
+        android:summary="@string/settings_security_item_detail" />
+    <com.twitter.ui.widget.PreferenceTopCategoryCompat
+        android:title="@string/two_factor_auth_title"
+        twitter:allowDividerAbove="true"
+        twitter:allowDividerBelow="false">
+        <com.twitter.settings.widget.LinkablePreferenceCompat
+            android:selectable="false"
+            android:summary="@string/settings_2fa_item_detail"
+            android:order="10"
+            twitter:clickableUrl="@string/two_factor_auth_support_url" />
+        <Preference
+            android:title="@string/two_factor_auth_title"
+            android:key="pref_security_settings_2fa"
+            android:order="20" />
+    </com.twitter.ui.widget.PreferenceTopCategoryCompat>
+    <com.twitter.ui.widget.PreferenceTopCategoryCompat
+        android:title="@string/settings_identity_item_title"
+        android:key="top_pref_security_settings_identity"
+        twitter:allowDividerAbove="true"
+        twitter:allowDividerBelow="false">
+        <com.twitter.settings.widget.LinkablePreferenceCompat
+            android:selectable="false"
+            android:summary="@string/settings_identity__item_detail"
+            android:order="30"
+            twitter:clickableUrl="@string/identity_verification_support_url" />
+        <Preference
+            android:title="@string/settings_identity_item_title"
+            android:key="pref_security_settings_identity"
+            android:order="40" />
+    </com.twitter.ui.widget.PreferenceTopCategoryCompat>
+    <com.twitter.ui.widget.PreferenceTopCategoryCompat
+        android:title="@string/settings_password_protection_item_title"
+        twitter:allowDividerAbove="true"
+        twitter:allowDividerBelow="false">
+        <SwitchPreference
+            android:title="@string/settings_password_reset_protect_title_modern"
+            android:key="pref_security_settings_password_reset_protect"
+            android:summary="@string/settings_password_protection_item_detail"
+            android:order="50" />
+        <SwitchPreference
+            android:title="@string/settings_password_passkey"
+            android:key="pref_security_settings_passkey"
+            android:summary="@string/settings_password_passkey_item_summary_off"
+            android:order="60" />
+    </com.twitter.ui.widget.PreferenceTopCategoryCompat>
+</PreferenceScreen>

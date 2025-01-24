@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    android:background="@color/ps__transparent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <View
+        android:id="@id/tweet_sheet_scrim"
+        android:background="@color/ps__black_scrim"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+    <RelativeLayout
+        android:id="@id/container"
+        android:background="@drawable/ps__bg_modal"
+        android:layout_width="400.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32.0dip"
+        android:layout_marginBottom="100.0dip"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="32.0dip"
+        android:layout_marginEnd="32.0dip">
+        <ImageView
+            android:id="@id/twitter_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ps__standard_spacing_16"
+            android:src="@drawable/ps__ic_as_twitter"
+            android:contentDescription="@null"
+            android:layout_marginStart="@dimen/ps__standard_spacing_16" />
+        <ImageView
+            android:id="@id/close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ps__ic_close"
+            android:contentDescription="@string/ps__accessibility_close"
+            android:layout_alignParentEnd="true"
+            style="@style/ps__IconButton" />
+        <tv.periscope.android.view.PsTextView
+            android:textSize="14.0sp"
+            android:textColor="@color/ps__secondary_text"
+            android:id="@id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ps__standard_spacing_16"
+            android:layout_marginStart="@dimen/ps__standard_spacing_16"
+            android:layout_toStartOf="@id/close"
+            android:layout_toEndOf="@id/twitter_icon" />
+        <RelativeLayout
+            android:id="@id/tweet_content_container"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32.0dip"
+            android:layout_below="@id/twitter_icon"
+            android:layout_marginStart="@dimen/ps__standard_spacing_16"
+            android:layout_marginEnd="@dimen/ps__standard_spacing_16">
+            <ImageView
+                android:id="@id/image_preview"
+                android:visibility="gone"
+                android:layout_width="50.0dip"
+                android:layout_height="50.0dip"
+                android:scaleType="centerCrop"
+                android:contentDescription="@null"
+                android:layout_marginStart="8.0dip"
+                android:layout_alignParentEnd="true" />
+            <tv.periscope.android.view.PsEditText
+                android:textSize="16.0sp"
+                android:textColor="@color/ps__primary_text"
+                android:id="@id/tweet_text"
+                android:background="@null"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.1"
+                android:layout_toStartOf="@id/image_preview" />
+        </RelativeLayout>
+        <tv.periscope.android.view.PsTextView
+            android:textSize="12.0sp"
+            android:textColor="@color/ps__secondary_text"
+            android:id="@id/tweet_url"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ps__standard_spacing_16"
+            android:layout_below="@id/tweet_content_container"
+            android:layout_marginStart="@dimen/ps__standard_spacing_16"
+            android:layout_marginEnd="@dimen/ps__standard_spacing_16" />
+        <tv.periscope.android.view.PsButton
+            android:textSize="14.0sp"
+            android:textColor="@color/ps__white"
+            android:id="@id/tweet_button"
+            android:background="@drawable/ps__bg_button_blue_filled"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ps__standard_spacing_16"
+            android:layout_marginBottom="@dimen/ps__standard_spacing_16"
+            android:text="@string/ps__share_post_tweet"
+            android:layout_below="@id/tweet_url"
+            android:textAllCaps="true"
+            android:layout_marginEnd="@dimen/ps__standard_spacing_16"
+            android:layout_alignParentEnd="true" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="14.0sp"
+            android:textColor="@color/ps__secondary_text"
+            android:id="@id/tweet_counter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32.0dip"
+            android:layout_below="@id/tweet_url"
+            android:layout_marginEnd="@dimen/ps__standard_spacing_16"
+            android:layout_toStartOf="@id/tweet_button" />
+    </RelativeLayout>
+</RelativeLayout>

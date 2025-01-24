@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:id="@id/room_topics_tagging_container"
+    android:visibility="gone"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:id="@id/space_topics_tagging_add_text"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:foreground="@drawable/ripple_selector_rectangle">
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:padding="@dimen/space_4"
+            android:layout_width="@dimen/space_16"
+            android:layout_height="@dimen/space_16"
+            android:src="@drawable/ic_plus"
+            android:importantForAccessibility="no"
+            app:tint="@color/twitter_blue" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_subtext_1"
+            android:textColor="@color/twitter_blue"
+            android:layout_gravity="center_vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/space_topics_browsing_title" />
+    </LinearLayout>
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textColor="?coreColorPrimaryText"
+        android:id="@id/space_topics_tagging_description_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_8"
+        android:textAlignment="textStart" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@id/space_topics_tagging_recycler"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <View
+            android:id="@id/space_topics_tagging_add_button_background"
+            android:background="@drawable/bg_room_add_topics_button"
+            android:layout_width="@dimen/space_48"
+            android:layout_height="0.0dip"
+            android:layout_marginEnd="8.0dip"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:textSize="@dimen/font_size_normal"
+            android:textColor="?coreColorPrimaryText"
+            android:id="@id/space_topics_tagging_add_button"
+            android:background="@drawable/room_topic_bg_selector"
+            android:padding="@dimen/space_8"
+            android:layout_width="@dimen/space_32"
+            android:layout_height="@dimen/space_32"
+            android:foreground="@drawable/ripple_selector_oval"
+            android:src="@drawable/ic_plus"
+            android:contentDescription="@string/space_topics_browsing_title"
+            android:layout_marginEnd="@dimen/space_8"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="?coreColorPrimaryText" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <tag
+        android:value="RoomTopicsTagging"
+        android:id="@id/weaverComponent" />
+</LinearLayout>

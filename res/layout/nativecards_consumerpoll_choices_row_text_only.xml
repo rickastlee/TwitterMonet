@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Button
+    android:textSize="@dimen/font_size_normal"
+    android:textColor="@color/twitter_blue"
+    android:ellipsize="end"
+    android:background="@drawable/consumer_poll_choice_button_text_only_bg"
+    android:paddingTop="@dimen/consumer_poll_card_button_padding_top_bottom"
+    android:paddingBottom="@dimen/consumer_poll_card_button_padding_top_bottom"
+    android:focusable="false"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/consumer_poll_card_button_row_min_height"
+    android:layout_marginTop="@dimen/consumer_poll_card_button_top_row_margin_top"
+    android:layout_marginBottom="@dimen/consumer_poll_card_button_top_row_margin_bottom"
+    android:minHeight="@dimen/consumer_poll_card_button_row_min_height"
+    android:maxLines="1"
+    android:textAllCaps="false"
+    android:fontFamily="?fontFamilyMedium"
+    android:paddingStart="@dimen/consumer_poll_card_button_padding_left_right"
+    android:paddingEnd="@dimen/consumer_poll_card_button_padding_left_right"
+    android:layout_marginStart="@dimen/consumer_poll_card_button_margin_left_right"
+    android:layout_marginEnd="@dimen/consumer_poll_card_button_margin_left_right"
+    style="?android:borderlessButtonStyle"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

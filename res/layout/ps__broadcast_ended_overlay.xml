@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@id/broadcast_ended_overlay"
+    android:visibility="gone"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@id/broadcast_ended_overlay_actions"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ps__standard_spacing_60"
+        custom:layout_constraintBottom_toBottomOf="parent"
+        custom:layout_constraintTop_toTopOf="parent">
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:id="@id/action_view_stats"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            custom:layout_constraintBottom_toTopOf="@id/action_moderator_actions"
+            custom:layout_constraintEnd_toStartOf="@id/action_edit_broadcast"
+            custom:layout_constraintStart_toStartOf="parent"
+            custom:layout_constraintTop_toTopOf="parent">
+            <ImageButton
+                android:layout_gravity="center_horizontal"
+                android:id="@id/broadcast_ended_icon"
+                android:background="@drawable/ps__circular_overlay_button"
+                android:layout_width="@dimen/ps__broadcast_ended_overlay_action_icon_size"
+                android:layout_height="@dimen/ps__broadcast_ended_overlay_action_icon_size"
+                android:layout_marginTop="@dimen/ps__standard_spacing_40"
+                android:layout_marginBottom="@dimen/ps__standard_spacing_16"
+                android:src="@drawable/ps__ic_stats_action"
+                android:contentDescription="@string/ps__view_stats" />
+            <tv.periscope.android.view.PsTextView
+                android:textSize="@dimen/font_size_small"
+                android:textStyle="bold"
+                android:textColor="@color/ps__white"
+                android:layout_gravity="center_horizontal"
+                android:id="@id/broadcast_ended_overlay_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:id="@id/action_edit_broadcast"
+            android:visibility="gone"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            custom:layout_constraintEnd_toEndOf="parent"
+            custom:layout_constraintStart_toEndOf="@id/action_view_stats"
+            custom:layout_constraintTop_toTopOf="parent">
+            <ImageButton
+                android:layout_gravity="center_horizontal"
+                android:id="@id/edit_broadcast_ended_overlay_icon"
+                android:background="@drawable/ps__circular_overlay_button"
+                android:layout_width="@dimen/ps__broadcast_ended_overlay_action_icon_size"
+                android:layout_height="@dimen/ps__broadcast_ended_overlay_action_icon_size"
+                android:layout_marginTop="@dimen/ps__standard_spacing_40"
+                android:layout_marginBottom="@dimen/ps__standard_spacing_16"
+                android:src="@drawable/ps__ic_edit_broadcast_action_black"
+                android:contentDescription="@string/ps__action_edit_broadcast" />
+            <tv.periscope.android.view.PsTextView
+                android:textSize="@dimen/ps__broadcast_ended_overlay_action_text_size"
+                android:textColor="@color/ps__white"
+                android:layout_gravity="center_horizontal"
+                android:id="@id/edit_broadcast_ended_overlay_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ps__action_edit_broadcast" />
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:id="@id/action_moderator_actions"
+            android:visibility="gone"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            custom:layout_constraintBottom_toBottomOf="parent"
+            custom:layout_constraintEnd_toEndOf="@id/action_view_stats"
+            custom:layout_constraintStart_toStartOf="@id/action_view_stats"
+            custom:layout_constraintTop_toBottomOf="@id/action_view_stats">
+            <ImageButton
+                android:layout_gravity="center_horizontal"
+                android:id="@id/moderator_actions_overlay_icon"
+                android:background="@drawable/ps__circular_overlay_button"
+                android:layout_width="@dimen/ps__broadcast_ended_overlay_action_icon_size"
+                android:layout_height="@dimen/ps__broadcast_ended_overlay_action_icon_size"
+                android:layout_marginTop="@dimen/ps__standard_spacing_40"
+                android:layout_marginBottom="@dimen/ps__standard_spacing_16"
+                android:src="@drawable/ps__ic_moderator_action"
+                android:contentDescription="@string/ps__moderator_actions_label" />
+            <tv.periscope.android.view.PsTextView
+                android:textSize="@dimen/font_size_small"
+                android:textStyle="bold"
+                android:textColor="@color/ps__white"
+                android:layout_gravity="center_horizontal"
+                android:id="@id/moderator_actions_overlay_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <ViewStub
+        android:id="@id/broadcast_ended_overlay_survey"
+        android:layout="@layout/ps__broadcaster_survey_ratings_question"
+        android:inflatedId="@id/broadcast_ended_overlay_survey"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/ps__standard_spacing_70"
+        android:foregroundGravity="center"
+        custom:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.ui.tweet.inlineactions.InlineActionBar
+    android:layout_gravity="end|center"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.ui.tweet.inlineactions.InlineActionView
+        android:id="@id/inline_reply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/InlineActionView.Reply" />
+    <com.twitter.ui.tweet.inlineactions.InlineActionView
+        android:id="@id/inline_retweet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/InlineActionView.Retweet" />
+    <com.twitter.ui.tweet.inlineactions.InlineActionView
+        android:id="@id/inline_like"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/InlineActionView.Like" />
+    <com.twitter.ui.tweet.inlineactions.InlineActionView
+        android:id="@id/inline_view_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/InlineActionView.Analytics" />
+    <com.twitter.ui.tweet.inlineactions.InlineActionView
+        android:id="@id/inline_bookmark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/InlineActionView.Bookmark" />
+    <com.twitter.ui.tweet.inlineactions.InlineActionView
+        android:id="@id/inline_twitter_share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/InlineActionView.TwitterShare" />
+    <com.twitter.ui.tweet.inlineactions.InlineActionView
+        android:id="@id/inline_analytics"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/InlineActionView.Analytics" />
+</com.twitter.ui.tweet.inlineactions.InlineActionBar>

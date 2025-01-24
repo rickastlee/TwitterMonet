@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RatingBar
+        android:id="@id/rating_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_2"
+        android:stepSize="0.1"
+        android:layout_marginStart="@dimen/space_8"
+        android:layout_marginEnd="@dimen/space_8"
+        android:progressTint="?coreColorSecondaryText"
+        android:progressBackgroundTint="?coreColorSecondaryText"
+        android:secondaryProgressTint="@color/clear"
+        app:layout_constraintStart_toEndOf="@id/bottom_bar_preview_image"
+        app:layout_constraintTop_toBottomOf="@id/bottom_bar_title"
+        app:layout_goneMarginStart="@dimen/space_12"
+        style="@style/Widget.AppCompat.RatingBar.Small" />
+    <com.twitter.media.ui.fresco.FrescoMediaImageView
+        android:id="@id/bottom_bar_preview_image"
+        android:layout_width="@dimen/bottom_bar_icon_size"
+        android:layout_height="@dimen/bottom_bar_icon_size"
+        android:layout_marginTop="@dimen/space_12"
+        android:layout_marginBottom="@dimen/space_12"
+        android:foreground="@drawable/preview_image_border"
+        android:layout_marginEnd="@dimen/space_12"
+        app:imageCornerRadius="@dimen/playable_preview_image_radius"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:scaleType="fit" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textStyle="bold"
+        android:textColor="?coreColorPrimaryText"
+        android:ellipsize="end"
+        android:id="@id/bottom_bar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:includeFontPadding="false"
+        android:layout_marginStart="@dimen/space_12"
+        android:layout_marginEnd="@dimen/space_12"
+        app:layout_constraintStart_toEndOf="@id/bottom_bar_preview_image"
+        app:layout_constraintTop_toTopOf="@id/bottom_bar_preview_image" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textColor="?coreColorSecondaryText"
+        android:ellipsize="end"
+        android:id="@id/bottom_bar_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"
+        app:layout_constraintStart_toStartOf="@id/bottom_bar_title"
+        app:layout_constraintTop_toBottomOf="@id/rating_bar" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textColor="?coreColorSecondaryText"
+        android:ellipsize="end"
+        android:id="@id/num_ratings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:includeFontPadding="false"
+        android:textAlignment="viewStart"
+        android:layout_marginStart="@dimen/space_4"
+        app:layout_constraintStart_toEndOf="@id/rating_bar"
+        app:layout_constraintTop_toTopOf="@id/rating_bar" />
+</androidx.constraintlayout.widget.ConstraintLayout>

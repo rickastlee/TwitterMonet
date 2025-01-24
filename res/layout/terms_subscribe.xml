@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="?coreColorAppBackground"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <View
+        android:id="@id/divider"
+        android:background="?abstractColorDivider"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/border_thickness" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_xsmall"
+        android:id="@id/terms"
+        android:paddingBottom="@dimen/space_4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_20"
+        android:text="@string/super_follows_subscription_terms"
+        android:layout_marginHorizontal="@dimen/space_24"
+        style="@style/SecondaryText" />
+    <com.twitter.iap.ui.InAppPurchaseProductButton
+        android:id="@id/super_follow_subscribe"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/space_24"
+        android:layout_marginVertical="@dimen/space_16" />
+</LinearLayout>

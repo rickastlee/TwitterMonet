@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tv.periscope.android.ui.broadcast.survey.view.BroadcasterSurveyPillView
+    android:textSize="@dimen/font_size_small"
+    android:textStyle="bold"
+    android:textColor="@color/white"
+    android:background="@drawable/ps__bg_broadcaster_survey_pill"
+    android:padding="@dimen/ps__btn_vertical_padding"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:minHeight="0.0dip"
+    android:textAllCaps="false"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/ps__standard_spacing_16"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <tv.periscope.android.view.PsTextView
+        android:textColor="@color/ps__primary_text"
+        android:id="@id/navigation_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ps__accessibility_broadcaster_stats_graph_navigation"
+        android:layout_centerHorizontal="true" />
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@id/line_chart"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_width="fill_parent"
+        android:layout_height="100.0dip"
+        android:layout_marginBottom="@dimen/ps__standard_spacing_5" />
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line_chart"
+        android:layoutDirection="ltr">
+        <tv.periscope.android.view.PsTextView
+            android:textColor="@color/ps__primary_text"
+            android:id="@id/current_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/ps__graph_right_offset"
+            android:layout_alignParentEnd="true" />
+        <tv.periscope.android.view.PsTextView
+            android:textSize="@dimen/font_size_xsmall"
+            android:textColor="@color/ps__secondary_text"
+            android:id="@id/end_time"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/ps__drawable_padding"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+</RelativeLayout>

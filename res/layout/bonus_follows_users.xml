@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_margin="@dimen/bonus_follows_padding"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@id/bonus_follows_recycler_view"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:maxHeight="@dimen/bonus_follows_dialog_max_height"
+        android:layout_weight="1.0"
+        android:overScrollMode="ifContentScrolls"
+        twitter:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    <com.twitter.ui.components.button.legacy.ToggleTwitterButton
+        android:layout_gravity="center_horizontal"
+        android:id="@id/follow_all_button"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/bonus_follows_padding"
+        android:text="@string/follow_all"
+        android:contentDescription="@string/follow_all"
+        twitter:iconSize="@dimen/follow_button_icon_size"
+        twitter:iconSrc="?iconFollow"
+        twitter:shouldToggleOnClick="false"
+        twitter:styleIdOff="?largeToggledOffButtonStyle"
+        twitter:styleIdOn="?largeToggledOnButtonStyle"
+        twitter:toggleIconSize="@dimen/follow_button_icon_size"
+        twitter:toggleIconSrc="?iconFollowing"
+        style="@style/TwitterButtonLargeBrandOutlined" />
+</LinearLayout>

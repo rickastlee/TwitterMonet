@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.ui.widget.BadgeView
+    android:id="@id/tweet_promoted_badge"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    style="@style/BadgeView"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <tag
+        android:value="com.twitter.tweetview.focal.ui.badge.FocalTweetBadgeViewDelegateBinder"
+        android:id="@id/viewBinder" />
+    <tag
+        android:value="com.twitter.tweetview.core.TweetViewViewModel"
+        android:id="@id/viewModel" />
+</com.twitter.ui.widget.BadgeView>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference
+        android:key="about_version" />
+    <com.twitter.ui.widget.LegacyTwitterPreferenceCategory
+        android:title="@string/legal_title">
+        <Preference
+            android:title="@string/settings_ad_info"
+            android:key="ads_info" />
+        <Preference
+            android:title="@string/cookies_use_title"
+            android:key="cu" />
+        <Preference
+            android:title="@string/privacy_policy_title"
+            android:key="pp" />
+        <Preference
+            android:title="@string/login_terms"
+            android:key="tos" />
+        <Preference
+            android:title="@string/legal_notices_title"
+            android:key="legal" />
+    </com.twitter.ui.widget.LegacyTwitterPreferenceCategory>
+    <com.twitter.ui.widget.LegacyTwitterPreferenceCategory
+        android:title="@string/settings_miscellaneous_title">
+        <Preference
+            android:title="@string/settings_about"
+            android:key="about" />
+        <Preference
+            android:title="@string/settings_accessibility"
+            android:key="accessibility" />
+        <Preference
+            android:title="@string/settings_advertising"
+            android:key="advertising" />
+        <Preference
+            android:title="@string/settings_blog"
+            android:key="blog" />
+        <Preference
+            android:title="@string/settings_brand_resources"
+            android:key="brand_resources" />
+        <Preference
+            android:title="@string/settings_career"
+            android:key="careers" />
+        <Preference
+            android:title="@string/settings_developers"
+            android:key="developers" />
+        <Preference
+            android:title="@string/settings_directory"
+            android:key="directory" />
+        <Preference
+            android:title="@string/help_center"
+            android:key="help_center" />
+        <Preference
+            android:title="@string/settings_marketing"
+            android:key="marketing" />
+        <Preference
+            android:title="@string/settings_status"
+            android:key="status" />
+        <Preference
+            android:title="@string/setting_twitter_business"
+            android:key="twitter_business" />
+    </com.twitter.ui.widget.LegacyTwitterPreferenceCategory>
+</PreferenceScreen>

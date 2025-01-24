@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <Preference
+        android:selectable="false"
+        android:summary="@string/settings_inferred_identity_item_detail"
+        android:order="10" />
+    <com.twitter.settings.widget.LinkableSwitchPreferenceCompat
+        android:layout="@layout/switch_preference"
+        android:title="@string/settings_link_devices_title"
+        android:key="inferred_identity_personalization"
+        android:summary="@string/settings_link_devices_summary"
+        android:order="30"
+        twitter:alwaysDisplayUrl="true"
+        twitter:clickableUrl="@string/learn_more_link_your_devices"
+        twitter:multilineTitle="true" />
+</PreferenceScreen>

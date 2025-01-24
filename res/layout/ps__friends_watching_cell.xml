@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@id/avatar_container"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="@dimen/ps__friends_watching_avatar_cell_size"
+    android:layout_height="@dimen/ps__friends_watching_avatar_cell_size"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <tv.periscope.android.ui.chat.AvatarImageView
+        android:layout_gravity="center"
+        android:id="@id/avatar"
+        android:layout_width="@dimen/ps__friends_watching_avatar_cell_size"
+        android:layout_height="@dimen/ps__friends_watching_avatar_cell_size" />
+    <tv.periscope.android.ui.love.SmallHeartView
+        android:layout_gravity="end|center|top"
+        android:id="@id/heart"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.0" />
+    <tv.periscope.android.ui.love.AvatarSuperHeartView
+        android:layout_gravity="end|center|top"
+        android:id="@id/super_heart"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.0" />
+</FrameLayout>

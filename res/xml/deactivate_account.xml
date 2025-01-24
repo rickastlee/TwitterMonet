@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <com.twitter.android.widget.UserPreference
+        android:key="deactivate_account_user" />
+    <com.twitter.android.widget.DividerPreference />
+    <com.twitter.android.settings.CustomizablePreference
+        android:title="@string/will_deactivate_account_title"
+        android:selectable="false"
+        android:summary="@string/will_deactivate_account"
+        twitter:titleStyle="bold" />
+    <com.twitter.android.widget.DividerPreference />
+    <com.twitter.android.settings.CustomizablePreference
+        android:title="@string/settings_category_before_deactivation_title"
+        android:selectable="false"
+        android:key="deactivation_detail_restore"
+        android:summary="@string/before_deactivation_to_know_detail_one"
+        twitter:titleStyle="bold" />
+    <com.twitter.android.widget.DividerPreference
+        android:key="data_retention_period_gap_top" />
+    <Preference
+        android:title="@string/data_retention_period_title"
+        android:key="data_retention_period"
+        android:summary="@string/select_data_retention_period_title" />
+    <com.twitter.android.widget.DividerPreference
+        android:key="data_retention_period_gap_bottom" />
+    <com.twitter.settings.widget.LinkablePreference
+        android:selectable="false"
+        android:summary="@string/before_deactivation_to_know_detail_two"
+        twitter:clickableUrl="@string/search_engine_indexing" />
+    <com.twitter.settings.widget.LinkablePreference
+        android:selectable="false"
+        android:key="deactivate_account_edit_account_settings"
+        android:summary="@string/before_deactivation_to_know_detail_three" />
+    <com.twitter.settings.widget.LinkablePreference
+        android:selectable="false"
+        android:key="deactivate_account_change_account_settings"
+        android:summary="@string/before_deactivation_to_know_detail_four" />
+    <com.twitter.settings.widget.LinkablePreference
+        android:selectable="false"
+        android:key="deactivate_account_your_twitter_data"
+        android:summary="@string/before_deactivation_to_know_detail_five" />
+    <com.twitter.android.widget.DividerPreference />
+    <com.twitter.android.settings.CustomizablePreference
+        android:title="@string/confirm_deactivate_button_title"
+        android:selectable="true"
+        android:key="deactivate_account"
+        twitter:titleCentered="true"
+        twitter:titleTextColor="@color/destructive_red" />
+</PreferenceScreen>

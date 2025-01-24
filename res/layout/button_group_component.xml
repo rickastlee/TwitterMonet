@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:id="@id/button_group_container"
+    android:paddingTop="@dimen/space_4"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingStart="@dimen/space_8"
+    android:paddingEnd="@dimen/space_8"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

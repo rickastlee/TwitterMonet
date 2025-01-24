@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.ui.components.text.legacy.TypefacesTextView
+    android:ellipsize="end"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:maxLines="4"
+    style="@style/ActivityTweetView"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

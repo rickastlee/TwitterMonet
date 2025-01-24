@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@id/identity_education_header"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/verification_background"
+                android:scaleType="centerCrop"
+                android:contentDescription="@null" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textSize="@dimen/font_size_jumbo"
+                android:textStyle="bold"
+                android:textColor="?coreColorPrimaryText"
+                android:id="@id/identity_education_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_12"
+                android:text="@string/identity_education_title"
+                android:layout_marginHorizontal="@dimen/space_24" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textSize="@dimen/font_size_normal"
+                android:textColor="?coreColorSecondaryText"
+                android:id="@id/identity_education_subtitle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/identity_education_sub_title"
+                android:layout_marginHorizontal="@dimen/space_24"
+                android:layout_marginVertical="@dimen/space_16" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textSize="@dimen/font_size_normal"
+                android:textStyle="bold"
+                android:textColor="?coreColorPrimaryText"
+                android:id="@id/identity_education_description"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/identity_education_description"
+                android:layout_marginHorizontal="@dimen/space_24"
+                android:layout_marginVertical="@dimen/space_8" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textSize="@dimen/font_size_normal"
+                android:textStyle="bold"
+                android:textColor="?coreColorPrimaryText"
+                android:id="@id/identity_education_requirement_one"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/identity_education_requirement_one"
+                android:drawablePadding="@dimen/space_16"
+                android:drawableStart="@drawable/ic_vector_check_black_circle_fill"
+                android:drawableTint="?coreColorPrimaryText"
+                android:layout_marginHorizontal="@dimen/space_24"
+                android:layout_marginVertical="@dimen/space_8" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textSize="@dimen/font_size_normal"
+                android:textStyle="bold"
+                android:textColor="?coreColorPrimaryText"
+                android:id="@id/identity_education_requirement_two"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/identity_education_requirement_two"
+                android:drawablePadding="@dimen/space_16"
+                android:drawableStart="@drawable/ic_vector_check_black_circle_fill"
+                android:drawableTint="?coreColorPrimaryText"
+                android:layout_marginHorizontal="@dimen/space_24"
+                android:layout_marginVertical="@dimen/space_8" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textSize="@dimen/font_size_normal"
+                android:textStyle="bold"
+                android:textColor="?coreColorPrimaryText"
+                android:id="@id/identity_education_requirement_three"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/identity_education_requirement_three"
+                android:drawablePadding="@dimen/space_16"
+                android:drawableStart="@drawable/ic_vector_check_black_circle_fill"
+                android:drawableTint="?coreColorPrimaryText"
+                android:layout_marginHorizontal="@dimen/space_24"
+                android:layout_marginVertical="@dimen/space_8" />
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <CheckBox
+            android:textSize="@dimen/font_size_small"
+            android:textColor="?coreColorSecondaryText"
+            android:gravity="top"
+            android:id="@id/identity_education_conditions"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/identity_education_conditions"
+            android:layout_marginHorizontal="@dimen/space_24"
+            android:layout_marginVertical="@dimen/space_12" />
+        <com.twitter.ui.components.button.legacy.TwitterButton
+            android:id="@id/identity_education_next"
+            android:padding="@dimen/space_12"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_12"
+            android:layout_marginBottom="@dimen/space_12"
+            android:text="@string/identity_education_start"
+            android:layout_marginHorizontal="@dimen/space_24"
+            style="@style/TwitterButtonLargePrimaryFilled" />
+        <com.twitter.ui.components.button.legacy.TwitterButton
+            android:id="@id/identity_education_cancel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_8"
+            android:text="@string/identity_education_cancel"
+            android:layout_marginHorizontal="@dimen/space_24"
+            style="@style/TwitterButtonLargePrimaryOutlined" />
+    </LinearLayout>
+    <tag
+        android:value="IdentityVerificationEducationActivity"
+        android:id="@id/weaverComponent" />
+</LinearLayout>

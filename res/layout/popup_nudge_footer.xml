@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@id/popup_nudge"
+    android:background="?abstractColorUnread"
+    android:visibility="gone"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View
+        android:id="@id/top_divider"
+        android:background="?abstractColorMediumGray"
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dip"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <com.twitter.ui.widget.TintableImageView
+        android:id="@id/close_button"
+        android:background="?selectableItemBackgroundBorderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_12"
+        android:src="@drawable/ic_vector_close"
+        android:layout_marginHorizontal="@dimen/space_12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_divider"
+        app:tint="?abstractColorMediumGray" />
+    <FrameLayout
+        android:id="@id/content_view_container"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/close_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_divider" />
+</androidx.constraintlayout.widget.ConstraintLayout>

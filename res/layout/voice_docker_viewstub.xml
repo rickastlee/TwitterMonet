@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewStub
+    android:id="@id/docker_voice"
+    android:layout="@layout/voice_docker"
+    android:inflatedId="@id/docker_voice"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <tag
+        android:value="VoicePlayerDockStub"
+        android:id="@id/weaverComponent" />
+</ViewStub>

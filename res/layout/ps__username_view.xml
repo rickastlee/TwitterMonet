@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_gravity="center"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <tv.periscope.android.view.PsTextView
+        android:textSize="12.0sp"
+        android:textColor="@color/ps__secondary_text"
+        android:layout_gravity="center_horizontal"
+        android:id="@id/username_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:layout_gravity="center_vertical"
+        android:id="@id/vip_badge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:contentDescription="@null"
+        android:layout_marginStart="4.0dip" />
+    <ImageView
+        android:layout_gravity="center_vertical"
+        android:id="@id/superfans_badge"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ps__superfans_lit"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/ps__accessibility_superfan_icon"
+        android:layout_marginStart="4.0dip" />
+</LinearLayout>

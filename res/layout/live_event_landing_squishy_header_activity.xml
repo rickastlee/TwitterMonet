@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:id="@id/root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.twitter.media.ui.AnimatingProgressBar
+        android:id="@id/main_progress_bar"
+        android:visibility="gone"
+        style="@style/AnimatingProgressBarStyle" />
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@id/activity_live_event_swipe_container"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0">
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@id/content"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0">
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@id/toolbar_container"
+                android:clipChildren="false"
+                android:layout_width="fill_parent"
+                android:layout_height="?toolBarSize"
+                app:layout_anchor="@id/activity_live_event_appbar">
+                <include
+                    layout="@layout/toolbar_container" />
+            </LinearLayout>
+            <ViewStub
+                android:id="@id/empty_view_stub"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+            <com.google.android.material.appbar.AppBarLayout
+                android:orientation="vertical"
+                android:id="@id/activity_live_event_appbar"
+                android:background="?coreColorToolbarBg"
+                android:fitsSystemWindows="true"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                app:elevation="0.0dip">
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:id="@id/activity_live_event_header_content"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="?toolBarSize"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed">
+                    <include
+                        android:id="@id/activity_live_event_media_container_wrapper"
+                        android:background="@color/black"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        layout="@layout/live_event_hero" />
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:id="@id/activity_live_event_cover_wrapper"
+                        android:background="?coreColorToolbarBg"
+                        android:visibility="gone"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+                        <include
+                            layout="@layout/live_event_cover_content" />
+                    </LinearLayout>
+                    <ViewStub
+                        android:id="@id/activity_live_event_carousel_stub"
+                        android:layout="@layout/live_event_carousel_content"
+                        android:inflatedId="@id/live_event_carousel"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <ViewStub
+                    android:id="@id/live_event_activity_appbar_score_card_stub"
+                    android:layout="@layout/list_item_score_overlay"
+                    android:inflatedId="@id/score_card_container"
+                    style="@style/LiveEventScoreCard" />
+                <ViewStub
+                    android:id="@id/betting_odds_stub"
+                    android:visibility="gone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+                <View
+                    android:id="@id/activity_live_event_section_divider"
+                    android:background="?coreColorBorder"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/space_1" />
+                <com.twitter.ui.navigation.FullTabLayout
+                    android:id="@id/activity_live_event_timeline_tabs"
+                    android:background="@drawable/navbar_bg"
+                    android:visibility="gone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    app:tabMaxWidth="0.0dip"
+                    style="@style/TabLayoutStyle" />
+            </com.google.android.material.appbar.AppBarLayout>
+            <com.twitter.ui.view.RtlViewPager
+                android:id="@id/activity_live_event_timeline_pager"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+            <com.twitter.ui.widget.FloatingActionButton
+                android:layout_gravity="end|bottom|center"
+                android:id="@id/activity_live_event_share_fab"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_vector_share_android"
+                android:contentDescription="@string/moments_share"
+                style="@style/FabStyle" />
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    <include
+        android:id="@id/activity_live_event_inline_composer"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/inline_tweet_composer" />
+    <FrameLayout
+        android:id="@id/docks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <include
+            android:layout_gravity="bottom"
+            android:id="@id/docker_room"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/docker_height"
+            layout="@layout/room_docker_viewstub" />
+        <include
+            android:layout_gravity="bottom"
+            android:id="@id/room_replay_dock"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/docker_height"
+            layout="@layout/room_replay_dock_viewstub" />
+    </FrameLayout>
+</LinearLayout>

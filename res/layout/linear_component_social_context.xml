@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.twitter.ui.widget.TintableImageView
+        android:id="@id/social_context_badge"
+        android:layout_width="?tweetViewUserImageSize"
+        android:layout_height="16.0dip"
+        android:layout_marginTop="@dimen/social_context_badge_padding"
+        android:scaleType="fitEnd"
+        android:layout_marginEnd="@dimen/tweet_avatar_start_margin">
+        <tag
+            android:value="SocialContextBadge"
+            android:id="@id/weaverComponent" />
+    </com.twitter.ui.widget.TintableImageView>
+    <com.twitter.ui.widget.UnpaddedTypefacesTextView
+        android:textSize="@dimen/font_size_small"
+        android:textColor="?textColorSecondary"
+        android:id="@id/social_context_text"
+        android:paddingTop="@dimen/social_context_line_top_padding"
+        android:paddingBottom="@dimen/social_context_line_bottom_padding"
+        android:duplicateParentState="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:importantForAccessibility="no" />
+    <com.twitter.ui.widget.TintableImageView
+        android:layout_gravity="center_vertical"
+        android:id="@id/social_context_dot_divider"
+        android:paddingTop="@dimen/space_4"
+        android:paddingBottom="@dimen/space_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_dot_divider"
+        android:importantForAccessibility="no"
+        android:paddingStart="@dimen/space_4"
+        android:paddingEnd="@dimen/space_4" />
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="36.0dip">
+            <com.twitter.ui.widget.TintableImageView
+                android:layout_gravity="center|top"
+                android:id="@id/social_context_education_arrow"
+                android:visibility="gone"
+                android:layout_width="@dimen/space_16"
+                android:layout_height="@dimen/space_8"
+                android:src="@drawable/ic_tooltip_triangle"
+                android:adjustViewBounds="true"
+                android:contentDescription="@null"
+                android:rotation="180.0"
+                app:tint="@color/twitter_blue" />
+            <com.twitter.ui.widget.UnpaddedTypefacesTextView
+                android:textSize="@dimen/font_size_small"
+                android:textColor="@color/twitter_blue"
+                android:id="@id/social_context_button"
+                android:paddingTop="@dimen/social_context_line_top_padding"
+                android:paddingBottom="@dimen/social_context_line_bottom_padding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/social_context_button_follow_topic" />
+        </FrameLayout>
+        <com.twitter.ui.widget.TintableImageView
+            android:layout_gravity="end|center|top"
+            android:id="@id/social_context_curation_action"
+            android:paddingTop="@dimen/social_context_line_top_padding"
+            android:paddingBottom="@dimen/social_context_line_bottom_padding"
+            android:layout_width="32.0dip"
+            android:layout_height="32.0dip"
+            android:scaleType="fitCenter"
+            android:importantForAccessibility="no"
+            android:paddingStart="@dimen/space_8"
+            android:paddingEnd="@dimen/space_8"
+            android:layout_marginEnd="@dimen/space_4"
+            app:tint="?coreColorCaret" />
+    </FrameLayout>
+    <tag
+        android:value="SocialContext"
+        android:id="@id/weaverComponent" />
+</LinearLayout>

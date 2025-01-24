@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_gravity="center_horizontal"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/ps__standard_spacing_20"
+    android:paddingEnd="@dimen/ps__standard_spacing_20"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:layout_gravity="center_horizontal"
+        android:id="@id/scrub_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ps__standard_spacing_10"
+        android:maxHeight="@dimen/ps__timecode_seekbar_background_height"
+        android:progressDrawable="@drawable/ps__bg_timecode_seekbar"
+        android:minHeight="@dimen/ps__timecode_seekbar_background_height"
+        android:thumb="@drawable/ps__thumb_timecode_seekbar"
+        android:paddingStart="@dimen/ps__timecode_seekbar_horizontal_padding"
+        android:paddingEnd="@dimen/ps__timecode_seekbar_horizontal_padding" />
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/ps__standard_spacing_20"
+        android:paddingStart="@dimen/ps__timecode_seekbar_horizontal_padding"
+        android:paddingEnd="@dimen/ps__timecode_seekbar_horizontal_padding">
+        <tv.periscope.android.view.PsTextView
+            android:textSize="12.0sp"
+            android:textColor="@color/ps__white_50"
+            android:layout_gravity="start"
+            android:id="@id/scrubbing_start_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <tv.periscope.android.view.PsTextView
+            android:textSize="12.0sp"
+            android:textColor="@color/ps__white"
+            android:layout_gravity="center_horizontal"
+            android:id="@id/error_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ps__share_broadcast_timecode_error" />
+        <tv.periscope.android.view.PsTextView
+            android:textSize="12.0sp"
+            android:textColor="@color/ps__white_50"
+            android:layout_gravity="end"
+            android:id="@id/scrubbing_end_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+</LinearLayout>

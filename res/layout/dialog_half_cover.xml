@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@id/half_cover_recycler_view_holder"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <com.twitter.media.ui.fresco.FrescoMediaImageView
+            android:layout_gravity="center"
+            android:id="@id/header_image"
+            android:visibility="gone"
+            android:layout_width="@dimen/half_cover_illustration_width"
+            android:layout_height="@dimen/half_cover_illustration_height"
+            android:layout_marginTop="@dimen/space_12"
+            android:scaleType="fitCenter"
+            android:contentDescription="@null" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_xlarge"
+            android:id="@id/primary_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_16"
+            android:layout_marginStart="@dimen/space_16"
+            android:layout_marginEnd="@dimen/space_16"
+            style="@style/PrimaryText" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_normal"
+            android:id="@id/secondary_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/space_16"
+            android:minLines="3"
+            style="@style/SecondaryText" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference
+        android:summary="@string/settings_notification_item_detail"
+        android:order="10" />
+    <Preference
+        android:icon="@drawable/ic_vector_filter"
+        android:title="@string/settings_filters_item_title"
+        android:key="pref_filters"
+        android:summary="@string/settings_filters_item_detail"
+        android:order="20" />
+    <Preference
+        android:icon="@drawable/ic_vector_device_notification"
+        android:title="@string/settings_notification_pref_item_title"
+        android:key="pref_preferences"
+        android:summary="@string/settings_notification_pref_item_detail"
+        android:order="30" />
+    <com.twitter.ui.widget.PreferenceTopCategoryCompat
+        android:title="@string/settings_notification_data_item_title"
+        android:key="pref_data_push_learn_more"
+        android:order="40">
+        <Preference
+            android:key="pref_data_push_learn_more_summary"
+            android:summary="@string/settings_notification_data_item_detail"
+            android:order="50" />
+    </com.twitter.ui.widget.PreferenceTopCategoryCompat>
+</PreferenceScreen>

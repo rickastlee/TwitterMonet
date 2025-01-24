@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Preference
+        android:title="@string/username_association_settings_title"
+        android:key="account_info_username_association" />
+    <Preference
+        android:title="@string/phone_association_settings_title"
+        android:key="account_info_phone_association" />
+    <Preference
+        android:title="@string/email_association_settings_title"
+        android:key="account_info_email_association" />
+    <com.twitter.app.settings.country.CountryPreferenceCompat
+        android:title="@string/settings_country_select_label"
+        android:key="account_info_select_country"
+        android:summary="@string/settings_country_select_title"
+        app:allowDividerAbove="false"
+        app:allowDividerBelow="false" />
+    <Preference
+        android:title="@string/automation"
+        android:key="automation_opt_in"
+        android:summary="@string/automation_preference_details" />
+    <Preference
+        android:key="account_info_sign_out" />
+</PreferenceScreen>

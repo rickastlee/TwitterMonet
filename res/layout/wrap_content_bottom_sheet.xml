@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <tv.periscope.android.profile.ui.views.BottomSheetTouchBlockView
+        android:id="@id/touch_block"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@id/bottom_sheet"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        custom:behavior_hideable="true"
+        custom:behavior_peekHeight="@dimen/ps__profile_sheet_peek_height"
+        custom:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@id/sheet_contents"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            custom:layout_constraintBottom_toBottomOf="parent"
+            custom:layout_constraintEnd_toEndOf="parent"
+            custom:layout_constraintStart_toStartOf="parent"
+            custom:layout_constraintTop_toTopOf="parent">
+            <ImageView
+                android:id="@id/handle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ps__sheet_handle"
+                android:scaleType="fitXY"
+                android:importantForAccessibility="no" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</merge>

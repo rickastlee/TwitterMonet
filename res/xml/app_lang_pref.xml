@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.ui.widget.TwitterPreferenceCategory
+        android:title="@string/settings_selected_language_title"
+        android:key="category_preferred_language">
+        <Preference
+            android:title="@string/settings_update_language_subtitle"
+            android:key="pref_preferred_lang" />
+    </com.twitter.ui.widget.TwitterPreferenceCategory>
+</PreferenceScreen>

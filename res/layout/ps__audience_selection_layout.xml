@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="@color/ps__app_background"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginTop="72.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:id="@id/audience_search_header"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <tv.periscope.android.view.PsImageView
+            android:id="@id/audience_search_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3.0dip"
+            android:src="@drawable/ps__ic_back"
+            custom:ps__tint="@color/ps__bg_blue"
+            style="@style/ps__ToolbarBtn" />
+        <tv.periscope.android.view.PsEditText
+            android:textColor="@color/ps__primary_text"
+            android:textColorHint="@color/ps__light_grey"
+            android:id="@id/audience_search_query"
+            android:background="@null"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ps__standard_spacing_16"
+            android:hint="@string/ps__search_people_hint"
+            android:inputType="text"
+            android:imeOptions="actionSearch"
+            android:layout_marginStart="@dimen/ps__indented_list_left_padding"
+            android:layout_marginEnd="@dimen/ps__standard_spacing_16"
+            android:layout_alignParentStart="true"
+            style="@style/ps__ToolbarTitle" />
+        <tv.periscope.android.view.PsImageView
+            android:id="@id/audience_search_clear"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3.0dip"
+            android:src="@drawable/ps__ic_close"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            custom:ps__tint="@color/ps__bg_blue"
+            style="@style/ps__ToolbarBtn" />
+    </RelativeLayout>
+    <tv.periscope.android.view.PsRecyclerView
+        android:id="@id/audience_selection_items"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0" />
+</LinearLayout>

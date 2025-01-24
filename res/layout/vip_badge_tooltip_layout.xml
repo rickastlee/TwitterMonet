@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="@color/ps__transparent"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@id/carrot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ps__tooltip_triangle"
+        android:adjustViewBounds="true"
+        android:contentDescription="@null" />
+    <RelativeLayout
+        android:id="@id/tooltip_content"
+        android:clickable="true"
+        android:clipToPadding="false"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <tv.periscope.android.view.PsImageView
+            android:id="@id/close_button"
+            android:background="@drawable/ps__bg_toolbar_btn"
+            android:padding="10.0dip"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ps__ic_close"
+            android:layout_alignParentTop="true"
+            android:contentDescription="@string/ps__accessibility_close"
+            android:layout_alignParentEnd="true"
+            custom:ps__tint="@color/ps__bg_action_bar_pressable" />
+        <tv.periscope.android.view.PsTextView
+            android:textSize="12.0sp"
+            android:textColor="@color/ps__white"
+            android:id="@id/badge_info"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25.0dip"
+            android:text="@string/ps__vip_badge_description"
+            android:layout_marginStart="20.0dip"
+            android:layout_marginEnd="30.0dip" />
+        <tv.periscope.android.view.PsTextView
+            android:textSize="12.0sp"
+            android:textColor="@color/ps__blue"
+            android:id="@id/learn_more"
+            android:padding="20.0dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ps__vip_badge_learn_more"
+            android:layout_below="@id/badge_info" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@id/badge_containers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20.0dip"
+            android:layout_below="@id/learn_more"
+            android:layout_centerHorizontal="true">
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@id/bronze_badge_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="30.0dip">
+                <ImageView
+                    android:id="@id/bronze_badge"
+                    android:src="@drawable/ps__bronze_tooltip"
+                    android:contentDescription="@string/ps__accessibility_more_info"
+                    style="@style/ps__VipTooltipBadge" />
+                <tv.periscope.android.view.PsTextView
+                    android:textColor="@color/ps__vip_badge_bronze"
+                    android:id="@id/bronze_badge_label"
+                    android:text="@string/ps__vip_badge_bronze"
+                    style="@style/ps__VipTooltipBadgeLabel" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@id/silver_badge_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="30.0dip">
+                <ImageView
+                    android:id="@id/silver_badge"
+                    android:src="@drawable/ps__silver_tooltip"
+                    android:contentDescription="@string/ps__accessibility_more_info"
+                    style="@style/ps__VipTooltipBadge" />
+                <tv.periscope.android.view.PsTextView
+                    android:textColor="@color/ps__vip_badge_silver"
+                    android:id="@id/silver_badge_label"
+                    android:text="@string/ps__vip_badge_silver"
+                    style="@style/ps__VipTooltipBadgeLabel" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@id/gold_badge_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@id/gold_badge"
+                    android:src="@drawable/ps__gold_tooltip"
+                    android:contentDescription="@string/ps__accessibility_more_info"
+                    style="@style/ps__VipTooltipBadge" />
+                <tv.periscope.android.view.PsTextView
+                    android:textColor="@color/ps__vip_badge_gold"
+                    android:id="@id/gold_badge_label"
+                    android:text="@string/ps__vip_badge_gold"
+                    style="@style/ps__VipTooltipBadgeLabel" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_gravity="start"
+    android:orientation="vertical"
+    android:id="@id/fragment_sheet_room_open_radio_group"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/space_16"
+    android:layout_marginBottom="@dimen/space_16"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <com.twitter.rooms.utils.CheckableRowView
+        android:id="@id/option1"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/background_check_button_size"
+        custom:drawable="@drawable/ic_room_privacy_one_background"
+        custom:text="@string/open_audio_space_choice1"
+        custom:textColor="?coreColorPrimaryText" />
+    <com.twitter.rooms.utils.CheckableRowView
+        android:id="@id/option2"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/background_check_button_size"
+        custom:drawable="@drawable/ic_people"
+        custom:text="@string/open_audio_space_choice2"
+        custom:textColor="?coreColorPrimaryText" />
+    <com.twitter.rooms.utils.CheckableRowView
+        android:id="@id/option3"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/background_check_button_size"
+        custom:drawable="@drawable/ic_people_small"
+        custom:text="@string/open_audio_space_choice3"
+        custom:textColor="?coreColorPrimaryText" />
+</LinearLayout>

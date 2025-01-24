@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageButton
+    android:gravity="center"
+    android:id="@id/back_button"
+    android:background="@color/clear"
+    android:padding="@dimen/space_12"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:foreground="@drawable/ripple_selector_oval"
+    android:src="@drawable/ic_vector_arrow_left"
+    android:contentDescription="@string/button_toolbar_back"
+    app:tint="?coreColorPrimary"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <tag
+        android:value="BackButton"
+        android:id="@id/weaverComponent" />
+</ImageButton>

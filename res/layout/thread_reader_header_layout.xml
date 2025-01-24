@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="horizontal"
+    android:clipChildren="false"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:foreground="?selectableItemBackground"
+    android:paddingHorizontal="@dimen/space_16"
+    android:paddingVertical="@dimen/space_12"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.twitter.media.ui.image.UserImageView
+        android:id="@id/header_profile_image"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:userImageSize="48.0dip"
+        style="?tweetViewProfileImageStyle" />
+    <com.twitter.ui.tweet.TweetHeaderView
+        android:layout_gravity="center_vertical"
+        android:id="@id/header"
+        android:focusable="true"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/tweet_avatar_start_margin"
+        app:shouldStackUsername="true"
+        app:timestampNextToUsername="false" />
+    <tag
+        android:value="ThreadReaderHeader"
+        android:id="@id/weaverComponent" />
+</LinearLayout>

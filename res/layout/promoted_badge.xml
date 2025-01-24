@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.ui.widget.BadgeView
+    android:id="@id/tweet_promoted_badge"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    style="?tweetViewPromotedBadgeStyle"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <tag
+        android:value="PromotedBadge"
+        android:id="@id/weaverComponent" />
+</com.twitter.ui.widget.BadgeView>

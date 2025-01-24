@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:clickable="true"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textAppearance="?textAppearanceListItem"
+        android:textColor="@color/twitter_blue"
+        android:id="@id/configure_row"
+        android:paddingTop="@dimen/space_16"
+        android:paddingBottom="@dimen/space_16"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:importantForAccessibility="no"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/ModuleOverviewHorizontalPadding" />
+    <View
+        android:id="@id/configure_row_overlay"
+        android:background="@drawable/ripple_pressed_selector_rectangle"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="@id/configure_row"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/configure_row" />
+</androidx.constraintlayout.widget.ConstraintLayout>

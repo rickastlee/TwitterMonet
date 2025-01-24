@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="@drawable/toast_color_bg_rounded_corners"
+    android:padding="@dimen/space_16"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@id/icon"
+        android:background="@drawable/blue_circle_bg"
+        android:padding="@dimen/space_8"
+        android:layout_width="32.0dip"
+        android:layout_height="32.0dip"
+        android:layout_marginTop="@dimen/space_4"
+        android:src="@drawable/ic_vector_people_group"
+        android:importantForAccessibility="no"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/white" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textStyle="bold"
+        android:textColor="?coreColorPrimaryText"
+        android:id="@id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/conversation_control_edu_title"
+        android:layout_marginStart="@dimen/space_16"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/icon"
+        app:layout_constraintTop_toTopOf="parent" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textColor="?coreColorPrimaryText"
+        android:id="@id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/title"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+    <tag
+        android:value="com.twitter.tweetview.focal.ui.conversationcontrols.FocalTweetConversationControlsViewDelegateBinder"
+        android:id="@id/viewBinder" />
+    <tag
+        android:value="com.twitter.tweetview.core.TweetViewViewModel"
+        android:id="@id/viewModel" />
+</androidx.constraintlayout.widget.ConstraintLayout>

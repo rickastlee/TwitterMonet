@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include
+        android:id="@id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        layout="@layout/app_toolbar" />
+    <com.twitter.ui.widget.TwitterEditText
+        android:id="@id/mobile_app_url_edit_text"
+        android:paddingLeft="@dimen/space_16"
+        android:paddingTop="@dimen/space_32"
+        android:paddingRight="@dimen/space_16"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        style="@style/TwitterEditText">
+        <tag
+            android:value="EditText"
+            android:id="@id/weaverComponent" />
+    </com.twitter.ui.widget.TwitterEditText>
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/mobile_app_url_location_link"
+        android:paddingBottom="@dimen/space_12"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mobile_app_url_location_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mobile_app_url_edit_text"
+        style="@style/MobileAppConfigurationSubtext2" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:enabled="true"
+        android:id="@id/mobile_app_remove_app_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_32"
+        android:layout_marginBottom="@dimen/space_12"
+        android:text="@string/mobile_app_remove_app"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mobile_app_url_location_link"
+        style="@style/MobileAppModuleConfigurationRemoveAppButton" />
+    <tag
+        android:value="MobileAppUrlInput"
+        android:id="@id/weaverComponent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

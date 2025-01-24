@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.twitter.ui.widget.PreferenceTopCategoryCompat
+        app:key="location_category"
+        app:title="@string/location_category_title">
+        <SwitchPreferenceCompat
+            app:enabled="false"
+            app:key="my_location"
+            app:summary="@string/localize_explore_summary"
+            app:title="@string/localize_explore_title" />
+        <Preference
+            app:key="select_location"
+            app:summary="@string/select_location_summary"
+            app:title="@string/select_location_title" />
+    </com.twitter.ui.widget.PreferenceTopCategoryCompat>
+    <com.twitter.ui.widget.TwitterPreferenceCategory
+        app:isPreferenceVisible="false"
+        app:key="personalization_category"
+        app:title="@string/personalization_category_title">
+        <SwitchPreferenceCompat
+            app:enabled="false"
+            app:key="personalized_trends"
+            app:summary="@string/trends_for_you_summary"
+            app:title="@string/trends_for_you_title" />
+    </com.twitter.ui.widget.TwitterPreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.ui.user.UserSocialView
+    android:background="?suggestionRowBackground"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    style="@style/ListRow.WhoToFollow"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <com.twitter.ui.socialproof.SocialBylineView
+        android:id="@id/social_byline"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@style/SocialProof.Typeahead" />
+    <RelativeLayout
+        android:descendantFocusability="blocksDescendants"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/social_byline"
+        android:importantForAccessibility="yes">
+        <FrameLayout
+            android:id="@id/audio_space_avatar_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/list_row_padding_horizontal">
+            <ImageView
+                android:layout_gravity="center"
+                android:id="@id/audio_space_purple_background"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/search_audiospace_avatar_ring"
+                android:contentDescription="@null"
+                android:importantForAccessibility="no" />
+            <com.twitter.media.ui.image.UserImageView
+                android:layout_gravity="center"
+                android:id="@id/user_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:importantForAccessibility="no"
+                twitter:userImageSize="small" />
+            <ImageView
+                android:layout_gravity="end|bottom|center"
+                android:id="@id/audio_space_live_badge"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitCenter"
+                android:contentDescription="@null"
+                android:importantForAccessibility="no"
+                twitter:srcCompat="@drawable/ic_vector_audio_space_indicator" />
+        </FrameLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@id/name_container"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@id/audio_space_avatar_container">
+            <include
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                layout="@layout/user_info_name_legacy" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:id="@id/screenname_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Username" />
+        </LinearLayout>
+        <com.twitter.ui.widget.BadgeView
+            android:id="@id/promoted"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name_container"
+            android:layout_marginStart="0.0dip"
+            android:layout_toEndOf="@id/audio_space_avatar_container"
+            style="@style/BadgeView" />
+    </RelativeLayout>
+</com.twitter.ui.user.UserSocialView>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Preference
+        android:selectable="false"
+        android:summary="@string/settings_content_you_see_item_detail"
+        android:order="10" />
+    <SwitchPreference
+        android:title="@string/settings_display_possibly_sensitive_media_title"
+        android:key="content_you_see_display_sensitive_media"
+        android:order="20"
+        app:isPreferenceVisible="true" />
+    <Preference
+        android:key="content_you_see_trends_or_explore"
+        android:order="30" />
+    <Preference
+        android:title="@string/search_settings"
+        android:key="content_you_see_search"
+        android:order="40" />
+    <Preference
+        android:title="@string/settings_sensitive_media_title"
+        android:key="content_you_see_display_sensitive_media_settings"
+        android:order="50"
+        app:isPreferenceVisible="false" />
+</PreferenceScreen>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:icon="@drawable/ic_vector_align_left"
+        android:id="@id/toolbar_grok_history"
+        android:visible="false"
+        android:menuCategory="secondary"
+        android:title="@string/chat_history"
+        app:showAsAction="ifRoom" />
+    <item
+        android:icon="@drawable/ic_vector_grok_create"
+        android:id="@id/toolbar_grok_clear"
+        android:visible="false"
+        android:menuCategory="secondary"
+        android:title="@string/clear_chat_history"
+        app:showAsAction="ifRoom" />
+</menu>

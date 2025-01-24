@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.ui.widget.NestedCoordinatorLayout
+    android:id="@id/nested_coordinator_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@id/communities_app_bar"
+        android:background="@null"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <com.twitter.communities.carousel.CommunitiesCarouselComposeView
+            android:id="@id/communities_carousel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <FrameLayout
+        android:id="@id/timeline_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <include
+            layout="@layout/timeline_pinned_header" />
+        <include
+            android:visibility="gone"
+            layout="@layout/new_item_banner" />
+        <ViewStub
+            android:id="@id/empty_view_stub"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+    </FrameLayout>
+</com.twitter.ui.widget.NestedCoordinatorLayout>

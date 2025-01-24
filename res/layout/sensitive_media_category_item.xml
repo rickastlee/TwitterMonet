@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_body"
+        android:textColor="@color/white"
+        android:layout_gravity="start|center"
+        android:id="@id/sensitive_media_category_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_16" />
+    <CheckBox
+        android:layout_gravity="end|center"
+        android:id="@id/sensitive_media_category_checkbox"
+        android:focusable="false"
+        android:clickable="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/space_16"
+        android:buttonTint="@color/sensitive_media_checkbox_state_list" />
+</merge>

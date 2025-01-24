@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <include
+        android:id="@id/folder_list_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        layout="@layout/folder_list_viewstub" />
+    <include
+        android:id="@id/create_folder_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        layout="@layout/create_folder_viewstub" />
+    <include
+        android:id="@id/edit_folder_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        layout="@layout/edit_folder_viewstub" />
+    <include
+        android:id="@id/folder_timeline_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        layout="@layout/folder_timeline_viewstub" />
+    <tag
+        android:value="BookmarkFolder"
+        android:id="@id/weaverComponent" />
+</FrameLayout>

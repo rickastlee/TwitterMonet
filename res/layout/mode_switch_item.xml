@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.ui.components.text.legacy.TypefacesTextView
+    android:textSize="@dimen/font_size_small"
+    android:textStyle="bold"
+    android:textColor="@color/white"
+    android:paddingTop="@dimen/space_16"
+    android:paddingBottom="@dimen/space_32"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:includeFontPadding="false"
+    android:alpha="@dimen/mode_switch_label_deselected_alpha"
+    android:textAllCaps="true"
+    android:paddingStart="@dimen/space_12"
+    android:paddingEnd="@dimen/space_12"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

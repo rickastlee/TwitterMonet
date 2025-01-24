@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ViewStub
+        android:layout_gravity="center"
+        android:id="@id/interstitial_view_stub"
+        android:layout="@layout/withheld_tweet_tombstone"
+        android:inflatedId="@id/interstitial_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <tag
+            android:value="WithheldTombstoneStub"
+            android:id="@id/weaverComponent" />
+    </ViewStub>
+    <com.twitter.tweetview.core.TweetView
+        android:id="@id/row"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        style="@style/TweetView.Immersive.WithMedia" />
+</FrameLayout>

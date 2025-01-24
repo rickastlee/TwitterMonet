@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/ocf_standard_spacing"
+    android:layout_marginBottom="@dimen/ocf_standard_spacing"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.twitter.tweetview.core.TweetView
+        android:id="@id/tweet"
+        android:clickable="false"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@style/TweetView" />
+    <tag
+        android:value="TweetOcfComponent"
+        android:id="@id/weaverComponent" />
+</LinearLayout>

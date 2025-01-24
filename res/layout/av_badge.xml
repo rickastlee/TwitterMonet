@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.media.av.ui.AutoPlayBadgeView
+    android:layout_gravity="start|bottom|center"
+    android:id="@id/av_badge_container"
+    android:padding="0.0dip"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout
+        android:gravity="center_vertical"
+        android:background="@drawable/bg_media_text_badge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/av_badge_duration_text"
+            style="@style/MixedMediaTextBadge" />
+        <ViewStub
+            android:id="@id/av_badge_gif"
+            android:layout="@layout/av_badge_gif"
+            android:inflatedId="@id/av_badge_gif"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ViewStub
+            android:id="@id/av_badge_image"
+            android:layout="@layout/av_badge_image"
+            android:inflatedId="@id/av_badge_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+    <ViewStub
+        android:id="@id/av_badge_hd"
+        android:layout="@layout/av_badge_hd"
+        android:inflatedId="@id/av_badge_hd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_8" />
+    <ViewStub
+        android:id="@id/av_badge_alt"
+        android:layout="@layout/av_badge_alt"
+        android:inflatedId="@id/av_badge_alt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_8" />
+    <ViewStub
+        android:id="@id/vanity_url_stub"
+        android:layout="@layout/website_vanity_url_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_8" />
+</com.twitter.media.av.ui.AutoPlayBadgeView>

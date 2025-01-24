@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ViewStub
+        android:id="@id/upper_video_attribution"
+        android:layout="@layout/in_stream_ads_intro_text"
+        android:inflatedId="@id/upper_video_attribution"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <com.twitter.ui.widget.LandscapeAwareAspectRatioFrameLayout
+        android:id="@id/video_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <ViewStub
+            android:id="@id/error_view"
+            android:layout="@layout/video_error_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+    </com.twitter.ui.widget.LandscapeAwareAspectRatioFrameLayout>
+    <ViewStub
+        android:id="@id/video_attribution_stub"
+        android:inflatedId="@id/inflated_video_attribution"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

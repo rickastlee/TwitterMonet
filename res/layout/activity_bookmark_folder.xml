@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include
+        android:id="@id/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        layout="@layout/app_toolbar" />
+    <include
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        layout="@layout/bookmark_folder_all_screen_stubs" />
+    <com.twitter.ui.widget.FloatingActionButton
+        android:id="@id/plus_fab"
+        android:src="@drawable/ic_vector_bookmark_collections_plus_stroke"
+        android:contentDescription="@string/button_action_create_folder"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        style="@style/FabStyle">
+        <tag
+            android:value="BookmarkFolderFab"
+            android:id="@id/weaverComponent" />
+    </com.twitter.ui.widget.FloatingActionButton>
+</androidx.constraintlayout.widget.ConstraintLayout>

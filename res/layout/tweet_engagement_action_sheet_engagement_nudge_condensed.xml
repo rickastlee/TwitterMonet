@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@id/engagement_nudge_condensed"
+    android:padding="@dimen/space_12"
+    android:visibility="gone"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_headline_1"
+        android:textColor="?coreColorPrimaryText"
+        android:id="@id/condensed_label"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/retweet_dialog_article_nudge_condensed_title"
+        android:drawablePadding="@dimen/space_12"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/space_12"
+        android:layout_toStartOf="@id/feedback_button"
+        android:layout_alignParentStart="true" />
+    <com.twitter.ui.widget.TintableImageView
+        android:id="@id/feedback_button"
+        android:background="?android:selectableItemBackgroundBorderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_vector_information_circle"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/learn_more"
+        android:layout_alignParentEnd="true"
+        custom:tint="?coreColorSecondaryText" />
+</RelativeLayout>

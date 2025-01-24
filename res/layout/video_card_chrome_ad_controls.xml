@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_gravity="bottom"
+    android:id="@id/video_chrome_ad_controls_container"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <include
+        android:layout_gravity="start|bottom|center"
+        android:id="@id/av_badge_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/inset_medium"
+        android:layout_marginStart="@dimen/inset_medium"
+        layout="@layout/av_badge" />
+    <include
+        android:layout_gravity="end|bottom|center"
+        android:id="@id/av_autoplay_skip_outer_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/inset_medium"
+        android:layout_marginEnd="@dimen/inset_medium"
+        layout="@layout/av_autoplay_skip_badge_count_down" />
+</FrameLayout>

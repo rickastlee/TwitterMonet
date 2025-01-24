@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:id="@id/toggle_wrapper_container"
+    android:background="@drawable/tombstone_background"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/ocf_standard_spacing"
+    android:paddingEnd="@dimen/ocf_standard_spacing"
+    android:layout_marginStart="@dimen/space_1"
+    android:layout_marginEnd="@dimen/space_1"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <com.twitter.ui.components.button.legacy.TwitterButton
+            android:textColor="@color/subtext"
+            android:id="@id/action_text"
+            android:layout_width="wrap_content"
+            android:layout_height="0.0dip"
+            android:layout_marginTop="4.0dip"
+            twitter:iconAndLabelMargin="0.0dip"
+            twitter:labelMargin="0.0dip"
+            twitter:layout_constraintEnd_toEndOf="parent"
+            twitter:layout_constraintTop_toTopOf="parent"
+            style="@style/TwitterButtonMediumPrimaryText" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/title_text"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ocf_standard_spacing"
+            android:layout_marginEnd="@dimen/ocf_small_spacing"
+            twitter:layout_constraintEnd_toStartOf="@id/action_text"
+            twitter:layout_constraintStart_toStartOf="parent"
+            twitter:layout_constraintTop_toTopOf="parent"
+            style="@style/OcfBodyText.PrimaryBold" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@id/contents"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:nestedScrollingEnabled="false"
+        twitter:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+</LinearLayout>

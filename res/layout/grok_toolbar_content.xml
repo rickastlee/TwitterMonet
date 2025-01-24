@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.ui.components.text.legacy.TypefacesTextView
+    android:textSize="@dimen/font_size_normal"
+    android:textStyle="bold"
+    android:textColor="?coreColorPrimaryText"
+    android:id="@id/grok_toolbar_content"
+    android:background="?selectableItemBackground"
+    android:padding="@dimen/space_4"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/grok_tab_title"
+    android:drawablePadding="@dimen/space_4"
+    android:drawableStart="@drawable/ic_vector_grok"
+    android:drawableEnd="@drawable/ic_chevron_down"
+    android:drawableTint="?coreColorPrimaryText"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

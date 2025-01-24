@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@id/name_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentEnd="false"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:layout_gravity="center_vertical"
+        android:id="@id/verified_item"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/font_size_normal"
+        android:src="?iconVerified"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/icon_verified"
+        android:layout_marginStart="@dimen/space_4"
+        android:layout_marginEnd="@dimen/space_4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/protected_item"
+        app:layout_constraintStart_toEndOf="@id/name_item"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="?verifiedBadgeColor" />
+    <ImageView
+        android:layout_gravity="center_vertical"
+        android:id="@id/protected_item"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/font_size_normal"
+        android:src="?iconProtected"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/icon_protected"
+        android:layout_marginStart="@dimen/space_4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/name_item"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="?protectedBadgeColor" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:ellipsize="end"
+        android:id="@id/name_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/verified_item"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="?userInfoNameStyle" />
+</androidx.constraintlayout.widget.ConstraintLayout>

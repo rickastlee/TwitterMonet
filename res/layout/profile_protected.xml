@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <View
+        android:layout_marginBottom="@dimen/space_32"
+        style="@style/HorizontalRule" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/profile_protected_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@style/TLEmptyViewTextLegacy" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/profile_protected_body"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@style/TLEmptyViewDescriptionTextLegacy" />
+</LinearLayout>

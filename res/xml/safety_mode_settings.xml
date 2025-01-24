@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <com.twitter.settings.widget.LinkablePreferenceCompat
+        android:key="safety_mode_description"
+        android:summary="@string/settings_what_is_safety_mode"
+        twitter:alwaysDisplayUrl="true"
+        twitter:clickableUrl="@string/privacy_policy_url"
+        twitter:multilineTitle="true" />
+    <com.twitter.settings.widget.LinkableSwitchPreferenceCompat
+        android:persistent="false"
+        android:title="@string/safety_mode"
+        android:key="safety_mode_enabled"
+        android:summaryOn="@string/settings_safety_mode_summary"
+        android:summaryOff="@string/settings_safety_mode_summary" />
+    <ListPreference
+        android:persistent="false"
+        android:enabled="false"
+        android:entries="@array/safety_mode_duration_entries"
+        android:title="@string/settings_safety_mode_duration_title"
+        android:key="safety_mode_duration"
+        android:summary="%s"
+        android:entryValues="@array/safety_mode_duration_values"
+        twitter:state_deactivated="true" />
+    <com.twitter.ui.widget.TwitterPreferenceCategory
+        android:title="@string/settings_autoblocks_title">
+        <Preference
+            android:title="@string/settings_autoblocked_accounts_header_title"
+            android:key="safety_mode_autoblocked_accounts" />
+    </com.twitter.ui.widget.TwitterPreferenceCategory>
+</PreferenceScreen>

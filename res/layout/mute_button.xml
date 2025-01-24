@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.ui.widget.ToggleImageButton
+    android:id="@id/mute_button"
+    android:background="@drawable/black_opacity_40_circle_button_bg"
+    android:padding="6.0dip"
+    android:visibility="gone"
+    android:layout_width="@dimen/camera_button_height"
+    android:layout_height="@dimen/camera_button_height"
+    android:layout_margin="@dimen/space_16"
+    android:foreground="@drawable/ripple_selector_oval"
+    android:src="@drawable/ic_mute_sound"
+    app:contentDescriptionOff="@string/unmute"
+    app:contentDescriptionOn="@string/mute"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:on="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" />

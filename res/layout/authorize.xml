@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <include
+        layout="@layout/toolbar_container" />
+    <ProgressBar
+        android:layout_gravity="center"
+        android:id="@id/progress"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:layout_below="?toolbarContainerId"
+        style="?android:progressBarStyle" />
+    <ScrollView
+        android:id="@id/authorization_ui"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="?toolbarContainerId">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/list_row_padding_vertical"
+            android:layout_marginEnd="@dimen/list_row_padding_vertical">
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textSize="@dimen/font_size_large"
+                android:textStyle="bold"
+                android:id="@id/title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/list_row_padding_horizontal"
+                android:layout_marginBottom="@dimen/list_row_padding_horizontal" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textSize="@dimen/font_size_xsmall"
+                android:textColor="?coreColorSecondaryText"
+                android:id="@id/description"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/list_row_padding_horizontal" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textSize="@dimen/font_size_xsmall"
+                android:textColor="?coreColorSecondaryText"
+                android:id="@id/url"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/list_row_padding_horizontal" />
+            <com.twitter.ui.user.UserView
+                android:id="@id/account_row"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/list_row_padding_horizontal"
+                android:layout_marginBottom="@dimen/list_row_padding_horizontal">
+                <include
+                    layout="@layout/user_with_bio_and_follow_button" />
+            </com.twitter.ui.user.UserView>
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textSize="@dimen/font_size_normal"
+                android:textStyle="bold"
+                android:textColor="?coreColorSecondaryText"
+                android:id="@id/account_row_label"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/list_row_padding_horizontal"
+                android:text="@string/account_row_label" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:id="@id/permissions_granted_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/list_row_padding_horizontal" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textSize="@dimen/font_size_xsmall"
+                android:textColor="?coreColorSecondaryText"
+                android:id="@id/permissions_granted"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/list_row_padding_horizontal" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textSize="@dimen/font_size_xsmall"
+                android:textColor="?coreColorSecondaryText"
+                android:id="@id/learn_more_help_center"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/list_row_padding_horizontal" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textSize="@dimen/font_size_xsmall"
+                android:textColor="?coreColorSecondaryText"
+                android:id="@id/third_party_tos"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/list_row_padding_horizontal" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textSize="@dimen/font_size_xsmall"
+                android:textColor="?coreColorSecondaryText"
+                android:id="@id/revoke_access"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/list_row_padding_horizontal"
+                android:layout_marginBottom="@dimen/list_row_padding_horizontal" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textSize="@dimen/font_size_xsmall"
+                android:textColor="?coreColorSecondaryText"
+                android:id="@id/authorize_twitter_tos"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/list_row_padding_horizontal" />
+            <LinearLayout
+                android:gravity="end"
+                android:orientation="horizontal"
+                android:background="@drawable/bg_app_background_with_top_border"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <com.twitter.ui.components.button.legacy.TwitterButton
+                    android:textSize="@dimen/font_size_large"
+                    android:id="@id/cancel_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cancel"
+                    android:textAllCaps="true"
+                    style="@style/TwitterButtonLargeBrandText" />
+                <com.twitter.ui.components.button.legacy.TwitterButton
+                    android:textSize="@dimen/font_size_large"
+                    android:id="@id/ok_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/authorize_app_connect"
+                    android:textAllCaps="true"
+                    style="@style/TwitterButtonLargeBrandText" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

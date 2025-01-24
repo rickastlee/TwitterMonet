@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="?coreColorAppBackground"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@id/folders_empty_image"
+        android:layout_width="@dimen/folder_empty_spot_image_size"
+        android:layout_height="@dimen/folder_empty_spot_image_size"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toTopOf="@id/title_empty_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.26999998"
+        app:layout_constraintVertical_chainStyle="packed" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textStyle="bold"
+        android:id="@id/title_empty_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_32"
+        app:layout_constraintBottom_toTopOf="@id/message_empty_text"
+        app:layout_constraintEnd_toEndOf="@id/folders_empty_image"
+        app:layout_constraintStart_toStartOf="@id/folders_empty_image"
+        app:layout_constraintTop_toBottomOf="@id/folders_empty_image"
+        style="@style/TLEmptyViewTextLegacy" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:gravity="start"
+        android:id="@id/message_empty_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/title_empty_text"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/title_empty_text"
+        app:layout_constraintTop_toBottomOf="@id/title_empty_text"
+        style="@style/TLEmptyViewDescriptionTextLegacy" />
+    <tag
+        android:value="FolderEmpty"
+        android:id="@id/weaverComponent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

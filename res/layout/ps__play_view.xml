@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <FrameLayout
+        android:id="@id/preview_container"
+        android:clipChildren="false"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <ViewStub
+            android:id="@id/fuzzy_balls_stub"
+            android:layout="@layout/ps__fuzzy_balls_import"
+            android:inflatedId="@id/fuzzy_ball"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+        <FrameLayout
+            android:id="@id/preview_frame"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <ViewStub
+                android:id="@id/hydra_view_stub"
+                android:layout="@layout/ps__hydra_view"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+        </FrameLayout>
+        <tv.periscope.android.view.PsTopCropImageView
+            android:id="@id/thumb"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+        <ViewStub
+            android:id="@id/hydra_audio_indicator"
+            android:layout="@layout/ps__hydra_focused_audio_chrome"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+        <tv.periscope.android.ui.broadcast.replay.ReplayScrubView
+            android:id="@id/replay_scrubber"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+        <View
+            android:layout_gravity="top"
+            android:id="@id/top_gradient"
+            android:background="@drawable/ps__bg_gradient_down_overlay"
+            android:layout_width="fill_parent"
+            android:layout_height="92.0dip" />
+        <View
+            android:layout_gravity="bottom"
+            android:id="@id/bottom_gradient"
+            android:background="@drawable/ps__bg_gradient_up_overlay"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/ps__text_protection_scrim_height" />
+    </FrameLayout>
+    <tv.periscope.android.view.PsLoading
+        android:id="@id/loading_animation"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/ps__loading_view_full_screen" />
+    <tv.periscope.android.view.PsTextView
+        android:textSize="15.0sp"
+        android:textColor="@color/ps__white"
+        android:layout_gravity="start"
+        android:id="@id/loading_text"
+        android:padding="@dimen/ps__standard_spacing_16"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60.0dip" />
+    <tv.periscope.android.ui.broadcast.ChatRoomView
+        android:id="@id/chatroom_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        custom:bottomTrayAvatarViewPosition="aboveDivider"
+        custom:ps__includeModeration="true" />
+</merge>

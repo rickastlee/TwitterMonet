@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.rooms.subsystem.api.utils.BottomSheetScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/space_12">
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_large"
+            android:textStyle="bold"
+            android:textColor="?coreColorPrimaryText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_4"
+            android:text="@string/room_settings_captions"
+            android:paddingHorizontal="@dimen/space_12" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_normal"
+            android:textColor="?coreColorSecondaryText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_16"
+            android:text="@string/room_settings_captions_description"
+            android:paddingHorizontal="@dimen/space_12" />
+        <com.twitter.rooms.utils.TwoLineSwitchView
+            android:id="@id/option_transcription_show"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:subtitle="@string/room_settings_captions_show_subtitle"
+            app:title="@string/room_settings_captions_show_title" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@id/clip_settings"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_28">
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textSize="@dimen/font_size_large"
+                android:textStyle="bold"
+                android:textColor="?coreColorPrimaryText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/space_4"
+                android:text="@string/room_settings_clips"
+                android:paddingHorizontal="@dimen/space_12" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textSize="@dimen/font_size_normal"
+                android:textColor="?coreColorSecondaryText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/space_16"
+                android:text="@string/room_settings_clips_description"
+                android:paddingHorizontal="@dimen/space_12" />
+            <com.twitter.rooms.utils.TwoLineSwitchView
+                android:id="@id/option_enable_clips"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                app:subtitle="@string/room_settings_clips_show_subtitle"
+                app:title="@string/room_settings_clips_show_title" />
+        </LinearLayout>
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_large"
+            android:textStyle="bold"
+            android:textColor="?coreColorPrimaryText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_28"
+            android:layout_marginBottom="@dimen/space_4"
+            android:text="@string/room_settings_sound"
+            android:paddingHorizontal="@dimen/space_12" />
+        <com.twitter.rooms.utils.TwoLineSwitchView
+            android:id="@id/option_sound_effects"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:title="@string/room_settings_sound_effects" />
+        <tag
+            android:value="RoomSettings"
+            android:id="@id/weaverComponent" />
+    </LinearLayout>
+</com.twitter.rooms.subsystem.api.utils.BottomSheetScrollView>

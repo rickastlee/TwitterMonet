@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/ps__standard_spacing_30"
+    android:layoutDirection="locale"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <tv.periscope.android.view.PsTextView
+        android:textSize="@dimen/ps__banner_text_size_24"
+        android:textColor="@color/ps__white"
+        android:layout_gravity="center_horizontal"
+        android:id="@id/banner_title"
+        android:padding="@dimen/ps__standard_spacing_16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ps__activity_horizontal_margin" />
+    <tv.periscope.android.view.PsTextView
+        android:textSize="12.0sp"
+        android:textColor="@color/ps__white_alpha_half"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_horizontal"
+        android:id="@id/banner_description"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="48.0dip"
+        android:layout_marginRight="48.0dip" />
+</LinearLayout>

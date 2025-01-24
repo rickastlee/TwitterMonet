@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View
+        android:layout_gravity="center"
+        android:id="@id/shutter_base"
+        android:background="@drawable/camera_shutter_base_default"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:elevation="5.0dip" />
+    <com.twitter.ui.widget.RingView
+        android:layout_gravity="center"
+        android:id="@id/shutter_ring_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:elevation="5.0dip"
+        app:color="@color/white"
+        app:width="@dimen/shutter_ring_width_initial" />
+</merge>

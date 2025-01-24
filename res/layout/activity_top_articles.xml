@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:id="@id/root_coordinator_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.tabs.TabLayout
+        android:id="@id/tab_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:tabMode="scrollable" />
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@id/view_pager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+    <tag
+        android:value="TopArticleTimeline"
+        android:id="@id/weaverComponent" />
+</LinearLayout>

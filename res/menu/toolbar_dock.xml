@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:icon="@drawable/ps__ic_settings_gear"
+        android:id="@id/video_settings_menu"
+        android:visible="false"
+        android:title="@string/av_player_button_settings"
+        app:showAsAction="always" />
+    <item
+        android:icon="@drawable/ic_action_dock"
+        android:id="@id/menu_dock"
+        android:visible="false"
+        android:title="@string/av_player_button_dock"
+        app:showAsAction="always" />
+</menu>

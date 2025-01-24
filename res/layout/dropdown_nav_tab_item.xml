@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textAppearance="?tabLayoutTextStyle"
+        android:textColor="@color/tab_text_color"
+        android:id="@android:id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:layout_gravity="center_vertical"
+        android:id="@id/dropdown_icon"
+        android:layout_width="16.0dip"
+        android:layout_height="16.0dip"
+        android:importantForAccessibility="no"
+        android:layout_marginStart="@dimen/space_4"
+        app:tint="@color/dropdown_nav_tab_icon_color" />
+</LinearLayout>

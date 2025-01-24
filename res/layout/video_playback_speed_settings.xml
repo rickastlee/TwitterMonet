@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RadioGroup
+        android:id="@id/playbackSelectionRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_24"
+        android:layout_marginBottom="@dimen/space_40"
+        android:layout_marginStart="@dimen/space_24"
+        android:layout_marginEnd="@dimen/space_40"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/playbackSpeedTitleTextView"
+        app:layout_constraintVertical_bias="0.0">
+        <RadioButton
+            android:textColor="?coreColorSecondaryText"
+            android:id="@id/playback0.25xradioButton"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/speed_zero_point_two_five" />
+        <RadioButton
+            android:textColor="?coreColorSecondaryText"
+            android:id="@id/playback0.5xradioButton"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/speed_zero_point_five" />
+        <RadioButton
+            android:textColor="?coreColorSecondaryText"
+            android:id="@id/playback0.75xradioButton"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/speed_zero_point_seven_five" />
+        <RadioButton
+            android:textColor="?coreColorSecondaryText"
+            android:id="@id/playback1.0xradioButton"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/speed_one" />
+        <RadioButton
+            android:textColor="?coreColorSecondaryText"
+            android:id="@id/playback1.25xradioButton"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/speed_one_point_twenty_five" />
+        <RadioButton
+            android:textColor="?coreColorSecondaryText"
+            android:id="@id/playback1.5xradioButton"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/speed_one_point_five" />
+        <RadioButton
+            android:textColor="?coreColorSecondaryText"
+            android:id="@id/playback1.75xradioButton"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/speed_one_point_seventy_five" />
+        <RadioButton
+            android:textColor="?coreColorSecondaryText"
+            android:id="@id/playback2.0xradioButton"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/speed_two" />
+        <RadioButton
+            android:textColor="?coreColorSecondaryText"
+            android:id="@id/playback2.5xradioButton"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/speed_two_point_five" />
+        <RadioButton
+            android:textColor="?coreColorSecondaryText"
+            android:id="@id/playback3.0xradioButton"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/speed_three" />
+    </RadioGroup>
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_title_1"
+        android:textStyle="bold"
+        android:textColor="?coreColorPrimaryText"
+        android:id="@id/playbackSpeedTitleTextView"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_24"
+        android:text="@string/playback_speed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <com.twitter.core.ui.components.dialog.bottomsheet.GripperView
+        android:id="@id/gripper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="?coreColorAppBackground"
+    android:paddingTop="@dimen/space_8"
+    android:paddingBottom="@dimen/space_16"
+    android:focusable="false"
+    android:focusableInTouchMode="false"
+    android:layout_width="fill_parent"
+    android:layout_height="0.0dip"
+    android:paddingHorizontal="@dimen/space_16"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View
+        android:id="@id/room_nudge_divider"
+        android:background="?coreColorBorder"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/room_divider_height" />
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/space_12">
+        <ImageView
+            android:layout_gravity="top"
+            android:id="@id/room_nudge_icon"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:layout_width="@dimen/nudge_icon_size"
+            android:layout_height="@dimen/nudge_icon_size"
+            android:layout_margin="@dimen/space_8"
+            android:src="@drawable/ic_room_share"
+            android:contentDescription="@null" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_normal"
+            android:layout_gravity="top"
+            android:id="@id/room_nudge_description"
+            android:padding="0.0dip"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:text="@string/space_nudge_share_tweet_description"
+            android:layout_weight="2.0"
+            android:layout_marginHorizontal="@dimen/space_12" />
+        <ImageView
+            android:layout_gravity="top"
+            android:id="@id/room_nudge_dismiss_button"
+            android:layout_width="@dimen/nudge_dismiss_button_size"
+            android:layout_height="@dimen/nudge_dismiss_button_size"
+            android:src="?toolbarCloseIcon"
+            android:contentDescription="@string/button_action_dismiss"
+            android:layout_marginHorizontal="@dimen/space_8"
+            app:tint="?abstractColorMediumGray" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_gravity="fill_horizontal"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:layout_marginHorizontal="@dimen/space_8">
+        <LinearLayout
+            android:layout_gravity="center"
+            android:id="@id/room_nudge_button_primary"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.0"
+            style="@style/SpacePrimaryButton">
+            <ImageView
+                android:id="@id/room_nudge_button_primary_icon"
+                android:src="@drawable/ic_vector_messages"
+                android:tint="@color/white"
+                style="@style/SpaceButtonIcon" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textColor="@color/white"
+                android:id="@id/room_nudge_button_primary_text"
+                android:text="@string/space_nudge_share_tweet"
+                style="@style/SpaceButtonText" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_gravity="center"
+            android:id="@id/room_nudge_button_secondary"
+            android:visibility="gone"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.0"
+            android:layout_marginStart="@dimen/space_8"
+            style="@style/SpaceSecondaryButton">
+            <ImageView
+                android:id="@id/room_nudge_button_secondary_icon"
+                android:src="@drawable/ic_vector_link"
+                android:tint="@color/black"
+                style="@style/SpaceButtonIcon" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textColor="@color/black"
+                android:id="@id/room_nudge_button_secondary_text"
+                android:text="@string/space_nudge_copy_link"
+                style="@style/SpaceButtonText" />
+        </LinearLayout>
+    </LinearLayout>
+    <tag
+        android:value="RoomNudge"
+        android:id="@id/weaverComponent" />
+</LinearLayout>

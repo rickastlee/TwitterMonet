@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@id/ad_attribution_container"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textColor="?abstractColorDeepGray"
+        android:gravity="center_vertical"
+        android:id="@id/ad_by"
+        android:paddingTop="@dimen/space_8"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textColor="?abstractColorDeepGray"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:id="@id/clickable_preroll_cta"
+        android:paddingTop="@dimen/space_8"
+        android:paddingBottom="@dimen/space_8"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:singleLine="true"
+        android:drawablePadding="@dimen/space_8" />
+</FrameLayout>

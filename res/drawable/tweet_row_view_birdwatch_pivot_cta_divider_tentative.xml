@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+    android:shape="line"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <stroke
+        android:width="@dimen/birdwatch_pivot_tentative_stroke_width"
+        android:color="@color/gray_300_opacity_30"
+        android:dashWidth="@dimen/birdwatch_pivot_dash_size"
+        android:dashGap="@dimen/birdwatch_pivot_dash_size" />
+</shape>

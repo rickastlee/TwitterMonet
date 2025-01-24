@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:paddingTop="@dimen/space_16"
+    android:paddingBottom="@dimen/space_16"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:foreground="@drawable/ripple_selector_rectangle"
+    android:layout_marginStart="@dimen/ocf_screen_padding_wide"
+    android:layout_marginEnd="@dimen/ocf_screen_padding_wide"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@id/leading_icon"
+        android:padding="@dimen/space_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        twitter:layout_constraintEnd_toStartOf="@id/item_text"
+        twitter:layout_constraintStart_toStartOf="parent"
+        twitter:layout_constraintTop_toTopOf="parent" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textColor="?coreColorPrimaryText"
+        android:id="@id/item_text"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_20"
+        android:layout_marginEnd="@dimen/space_20"
+        twitter:layout_constraintEnd_toStartOf="@id/right_chevron"
+        twitter:layout_constraintStart_toEndOf="@id/leading_icon"
+        twitter:layout_constraintTop_toTopOf="parent" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_small"
+        android:textColor="?coreColorPrimaryText"
+        android:id="@id/item_detail_text"
+        android:visibility="gone"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_8"
+        android:layout_marginStart="@dimen/space_20"
+        android:layout_marginEnd="@dimen/space_20"
+        twitter:layout_constraintBottom_toBottomOf="parent"
+        twitter:layout_constraintEnd_toStartOf="@id/right_chevron"
+        twitter:layout_constraintStart_toEndOf="@id/leading_icon"
+        twitter:layout_constraintTop_toBottomOf="@id/item_text" />
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@id/right_chevron"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        twitter:layout_constraintBottom_toBottomOf="parent"
+        twitter:layout_constraintEnd_toEndOf="parent"
+        twitter:layout_constraintStart_toEndOf="@id/item_text"
+        twitter:layout_constraintTop_toTopOf="parent"
+        twitter:srcCompat="@drawable/ic_vector_chevron_right"
+        twitter:tint="?textColorSecondary" />
+</androidx.constraintlayout.widget.ConstraintLayout>

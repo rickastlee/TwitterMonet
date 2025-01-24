@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.twitter.media.ui.fresco.FrescoMediaImageView
+        android:id="@id/loading_indicator_background_image"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        android:foreground="@color/black_opacity_90"
+        app:layout_constraintBottom_toTopOf="@id/bottom_bar_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:scaleType="fill" />
+    <com.twitter.media.ui.fresco.FrescoMediaImageView
+        android:id="@id/bottom_loading_spinner_preview_image"
+        android:visibility="invisible"
+        android:layout_width="@dimen/pop_up_loading_indicator_icon_size"
+        android:layout_height="@dimen/pop_up_loading_indicator_icon_size"
+        app:imageCornerRadius="@dimen/pop_up_loading_indicator_icon_corner_radius"
+        app:layout_constraintBottom_toTopOf="@id/bottom_bar_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:scaleType="fill" />
+    <ProgressBar
+        android:layout_gravity="center"
+        android:id="@id/browser_loading_spinner"
+        android:background="@drawable/playable_pop_up_loading_background"
+        android:visibility="invisible"
+        android:layout_width="@dimen/pop_up_loading_indicator_size"
+        android:layout_height="@dimen/pop_up_loading_indicator_size"
+        android:indeterminate="true"
+        android:indeterminateOnly="true"
+        android:indeterminateDrawable="@drawable/playable_pop_up_loading_progress"
+        android:indeterminateDuration="1200"
+        android:indeterminateBehavior="repeat"
+        app:layout_constraintBottom_toTopOf="@id/bottom_bar_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</merge>

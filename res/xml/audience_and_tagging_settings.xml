@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <Preference
+        android:selectable="false"
+        android:summary="@string/settings_audience_item_detail"
+        android:order="10" />
+    <com.twitter.settings.widget.LinkableSwitchPreferenceCompat
+        android:title="@string/settings_protected_title"
+        android:key="protected"
+        android:summary="@string/settings_protected_summary"
+        android:order="20"
+        twitter:clickableUrl="@string/protect_tweets_learn_more_url" />
+    <com.twitter.settings.widget.LinkableSwitchPreferenceCompat
+        android:title="@string/settings_protect_videos_title"
+        android:key="videos_protected"
+        android:summary="@string/settings_protect_videos_summary"
+        android:order="21"
+        twitter:clickableUrl="@string/protect_videos_learn_more_url"
+        twitter:isPreferenceVisible="false" />
+    <ListPreference
+        android:entries="@array/media_tagging_setting_entries"
+        android:title="@string/settings_media_tagging_title"
+        android:key="allow_media_tagging"
+        android:summary="%s"
+        android:order="30"
+        android:defaultValue="none"
+        android:entryValues="@array/media_tagging_setting_values" />
+    <Preference
+        android:title="@string/settings_global_mentions_settings_title"
+        android:key="global_mention_settings"
+        android:order="40"
+        twitter:isPreferenceVisible="false" />
+</PreferenceScreen>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <include
+        layout="@layout/rooms_profile_user_with_bio" />
+    <FrameLayout
+        android:id="@id/tipjar_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/name_container"
+        android:layout_alignBottom="@id/name_container"
+        android:layout_toStartOf="@id/dm_container">
+        <com.twitter.ui.components.button.legacy.TwitterButton
+            android:id="@id/tipjar_button"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/button_tipjar"
+            android:layout_marginEnd="@dimen/space_8"
+            twitter:iconSrc="?iconMonetize"
+            style="?profileBarButtonStyle" />
+    </FrameLayout>
+    <FrameLayout
+        android:id="@id/dm_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/name_container"
+        android:layout_alignBottom="@id/name_container"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@id/action_button_layout">
+        <com.twitter.ui.components.button.legacy.TwitterButton
+            android:id="@id/send_dm_button"
+            android:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/button_direct_message"
+            twitter:iconSrc="?iconComposeDm"
+            style="?profileBarButtonStyle" />
+    </FrameLayout>
+    <LinearLayout
+        android:id="@id/action_button_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/name_container"
+        android:layout_alignBottom="@id/name_container"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/space_4"
+        android:layout_alignParentEnd="true">
+        <com.twitter.ui.widget.TintableImageButton
+            android:id="@id/delete_user_button"
+            android:background="?selectableItemBackgroundBorderless"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="?iconClose"
+            twitter:tintColorList="@color/ic_color_action_button_tint" />
+        <com.twitter.ui.components.button.legacy.TwitterButton
+            android:id="@id/block_button_button"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/blocked"
+            twitter:iconColor="@color/destructive_red"
+            twitter:iconSrc="?iconBlocked"
+            style="@style/TwitterButtonMediumRegularRed" />
+        <com.twitter.ui.components.button.legacy.TwitterButton
+            android:id="@id/pending_button"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pending"
+            android:height="@dimen/user_follow_btn_min_height"
+            android:layout_marginStart="@dimen/space_4"
+            twitter:iconSrc="?iconPending"
+            twitter:toggleIconSize="@dimen/follow_button_icon_size"
+            style="@style/TwitterButtonMediumRegular" />
+        <com.twitter.ui.components.button.legacy.ToggleTwitterButton
+            android:id="@id/follow_button"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/follow"
+            android:height="@dimen/user_follow_btn_min_height"
+            android:layout_marginStart="@dimen/space_4"
+            twitter:iconSize="@dimen/follow_button_icon_size"
+            twitter:iconSrc="?iconFollow"
+            twitter:shouldToggleOnClick="false"
+            twitter:styleIdOff="?mediumToggledOffButtonStyle"
+            twitter:styleIdOn="?mediumToggledOnButtonStyle"
+            twitter:toggleIconSize="@dimen/follow_button_icon_size"
+            twitter:toggleIconSrc="?iconFollowing"
+            style="@style/TwitterButtonMediumBrandOutlined" />
+    </LinearLayout>
+</merge>

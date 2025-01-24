@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="@drawable/actionbar_item_clickable_bg"
+    android:clickable="true"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_small"
+        android:textStyle="bold"
+        android:textColor="?coreColorPrimaryText"
+        android:gravity="center"
+        android:layout_width="@dimen/open_in_browser_width"
+        android:layout_height="fill_parent"
+        android:text="@string/open_in_browser" />
+</LinearLayout>

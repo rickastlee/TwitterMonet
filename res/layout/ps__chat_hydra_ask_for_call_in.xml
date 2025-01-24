@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tv.periscope.android.view.PsTextView
+    android:textSize="@dimen/ps__hydra_pick_call_in_type_normal_text_size"
+    android:textColor="@color/ps__white"
+    android:id="@id/action_call_ins_text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/ps__chat_message_margin_4"
+    android:drawablePadding="@dimen/ps__chat_message_drawable_padding_8"
+    android:layout_centerVertical="true"
+    android:paddingStart="@dimen/ps__chat_message_margin_8"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

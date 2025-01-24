@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:icon="?iconSettings"
+        android:id="@id/toolbar_settings_dm"
+        android:visible="true"
+        android:title="@string/settings_direct_messages"
+        app:showAsAction="always" />
+</menu>

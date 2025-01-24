@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    android:id="@id/room_audio_space_container"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:id="@id/scheduled_space_container"
+        android:paddingBottom="@dimen/space_20"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/space_20"
+        android:paddingEnd="@dimen/space_20">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_12">
+            <ImageView
+                android:layout_gravity="end|center"
+                android:id="@id/dismiss_room"
+                android:paddingTop="@dimen/space_8"
+                android:layout_width="@dimen/space_24"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_vector_close"
+                android:contentDescription="@string/close_room_button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:tint="?coreColorPrimaryText" />
+            <ImageView
+                android:layout_gravity="end|center"
+                android:id="@id/report_room"
+                android:paddingTop="@dimen/space_8"
+                android:layout_width="@dimen/space_24"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_room_action_more"
+                android:contentDescription="@string/more_room_button"
+                android:layout_marginEnd="@dimen/space_8"
+                app:layout_constraintEnd_toStartOf="@id/dismiss_room" />
+            <View
+                android:id="@id/view_spacer_a"
+                android:layout_width="@dimen/space_24"
+                android:layout_height="0.0dip"
+                app:layout_constraintEnd_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <View
+                android:id="@id/view_spacer_b"
+                android:layout_width="@dimen/space_24"
+                android:layout_height="0.0dip"
+                android:layout_marginStart="@dimen/space_8"
+                app:layout_constraintStart_toEndOf="@id/view_spacer_a"
+                app:layout_constraintTop_toTopOf="parent" />
+            <androidx.constraintlayout.widget.Group
+                android:id="@id/report_room_group"
+                android:layout_width="0.0dip"
+                android:layout_height="0.0dip"
+                app:constraint_referenced_ids="report_room,view_spacer_b" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textSize="@dimen/font_size_xlarge"
+                android:textStyle="bold"
+                android:textColor="?coreColorPrimaryText"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:id="@id/scheduled_space_title"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:maxLines="4"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/report_room"
+                app:layout_constraintStart_toEndOf="@id/view_spacer_b" />
+            <ImageView
+                android:id="@id/room_scheduled_space_checked"
+                android:padding="@dimen/space_4"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_48"
+                android:layout_marginBottom="@dimen/space_12"
+                android:src="@drawable/ic_space_checked"
+                android:contentDescription="@null"
+                app:layout_constraintBottom_toTopOf="@id/scheduled_space_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_subtext_1"
+            android:textColor="?coreColorPrimaryText"
+            android:id="@id/super_followers_label"
+            android:background="@drawable/recording_icon"
+            android:paddingTop="@dimen/space_4"
+            android:paddingBottom="@dimen/space_4"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/super_followers_label"
+            android:drawablePadding="@dimen/space_4"
+            android:drawableStart="@drawable/ic_super_follow_spaces"
+            android:paddingStart="@dimen/space_8"
+            android:paddingEnd="@dimen/space_8"
+            android:drawableTint="@color/plum_500"
+            style="@style/TextBold" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_xlarge"
+            android:textStyle="bold"
+            android:textColor="?coreColorPrimaryText"
+            android:ellipsize="end"
+            android:gravity="start"
+            android:id="@id/sf_text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_12"
+            android:text="@string/audio_space_connected"
+            android:maxLines="1"
+            android:layout_marginEnd="@dimen/space_8" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_normal"
+            android:textColor="?coreColorSecondaryText"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:id="@id/scheduled_space_tickets_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <FrameLayout
+            android:id="@id/spaces_card"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_12"
+            android:layout_marginBottom="@dimen/space_24" />
+        <ViewStub
+            android:id="@id/disallow_join"
+            android:layout="@layout/no_access_exclusive_preview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/scheduled_space_title">
+            <tag
+                android:value="true"
+                android:id="@id/weaverOnViewStubInflated" />
+        </ViewStub>
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_small"
+            android:textColor="?coreColorSecondaryText"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:id="@id/scheduled_space_super_follows_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_8" />
+        <include
+            android:id="@id/scheduled_space_edit_actions_buttons"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/room_scheduled_space_edit_actions_buttons_layout" />
+        <include
+            android:id="@id/scheduled_space_action_buttons"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/room_scheduled_space_action_buttons_layout" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_normal"
+            android:textColor="?coreColorSecondaryText"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:id="@id/scheduled_space_tickets_terms"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/schedule_tickets_terms" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

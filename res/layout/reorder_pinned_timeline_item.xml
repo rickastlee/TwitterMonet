@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="?selectableItemBackground"
+    android:padding="@dimen/space_16"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@id/protected_badge"
+        android:layout_width="12.0dip"
+        android:layout_height="12.0dip"
+        android:src="?iconProtected"
+        android:contentDescription="@string/icon_protected"
+        app:layout_constraintBottom_toBottomOf="@id/timeline_title"
+        app:layout_constraintStart_toEndOf="@id/timeline_title"
+        app:layout_constraintTop_toTopOf="@id/timeline_title"
+        app:tint="?coreColorBadgeProtected" />
+    <ImageView
+        android:id="@id/drag_timeline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_vector_draggable_vertical"
+        android:contentDescription="@string/drag_handle_label"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="?abstractColorDeepGray" />
+    <com.twitter.media.ui.fresco.FrescoMediaImageView
+        android:id="@id/thumbnail"
+        android:layout_width="40.0dip"
+        android:layout_height="40.0dip"
+        app:defaultDrawable="@drawable/drawable_color_placeholder_bg"
+        app:errorDrawable="@drawable/ic_vector_photo_error_white_alpha"
+        app:imageCornerRadius="@dimen/corner_radius_small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_subtext_1"
+        android:textStyle="normal"
+        android:textColor="?coreColorSecondaryText"
+        android:id="@id/timeline_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_8"
+        app:layout_constraintBottom_toTopOf="@id/timeline_title"
+        app:layout_constraintStart_toEndOf="@id/thumbnail"
+        app:layout_constraintTop_toTopOf="@id/thumbnail"
+        app:layout_constraintVertical_chainStyle="spread" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_headline_2"
+        android:textStyle="bold"
+        android:textColor="?coreColorPrimaryText"
+        android:ellipsize="end"
+        android:id="@id/timeline_title"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:layout_marginEnd="@dimen/space_4"
+        app:layout_constraintBottom_toBottomOf="@id/thumbnail"
+        app:layout_constraintEnd_toStartOf="@id/drag_timeline"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/timeline_type"
+        app:layout_constraintTop_toBottomOf="@id/timeline_type"
+        app:layout_constraintWidth_default="wrap"
+        app:layout_goneMarginStart="@dimen/space_8" />
+</androidx.constraintlayout.widget.ConstraintLayout>

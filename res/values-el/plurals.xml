@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="admin_tools_subtitle_members">
+        <item quantity="other">%d μέλη</item>
+        <item quantity="one">%d μέλος</item>
+    </plurals>
+    <plurals name="badge_item_count">
+        <item quantity="other">%d νέα στοιχεία</item>
+        <item quantity="one">%d νέο στοιχείο</item>
+    </plurals>
+    <plurals name="cohost_current_count">
+        <item quantity="other">%1$d συνδιοργ.</item>
+        <item quantity="one">%1$d συνδιοργ.</item>
+    </plurals>
+    <plurals name="community_member_count">
+        <item quantity="other">%d μέλη κοινότητας</item>
+        <item quantity="one">%d μέλος κοινότητας</item>
+    </plurals>
+    <plurals name="community_moderator_count">
+        <item quantity="other">%d επόπτες</item>
+        <item quantity="one">%d επόπτης</item>
+    </plurals>
+    <plurals name="community_navigation_join_requests_label">
+        <item quantity="other">%s αιτήματα</item>
+        <item quantity="one">%s αίτημα</item>
+    </plurals>
+    <plurals name="community_navigation_new_unread_tweets_label">
+        <item quantity="other">%s νέες αναρτήσεις</item>
+        <item quantity="one">%s νέα ανάρτηση</item>
+    </plurals>
+    <plurals name="community_navigation_pending_reports_label">
+        <item quantity="other">%s αναφορές</item>
+        <item quantity="one">%s αναφορά</item>
+    </plurals>
+    <plurals name="composer_count_progress_overflow_warning">
+        <item quantity="other">%d χαρακτήρες παραπάνω</item>
+        <item quantity="one">%d χαρακτήρες παραπάνω</item>
+    </plurals>
+    <plurals name="composer_count_progress_warning">
+        <item quantity="other">%d χαρακτήρες ακόμα</item>
+        <item quantity="one">%d χαρακτήρες ακόμα</item>
+    </plurals>
+    <plurals name="content_description_fleet_item_space_with_others">
+        <item quantity="other">Ο χώρος του χρήστη %1$s με %2$d ακόμη</item>
+        <item quantity="one">Ο χώρος του χρήστη %1$s με %2$d ακόμη</item>
+    </plurals>
+    <plurals name="data_sync_notif_title">
+        <item quantity="other">%d νέες αλληλεπιδράσεις</item>
+        <item quantity="one">%d νέα αλληλεπίδραση</item>
+    </plurals>
+    <plurals name="days">
+        <item quantity="other">%d ημέρες</item>
+        <item quantity="one">%d ημέρα</item>
+    </plurals>
+    <plurals name="dm_add_people_failure">
+        <item quantity="other">Δεν ήταν δυνατή η προσθήκη των %d χρηστών σε αυτή την ομάδα.</item>
+        <item quantity="one">Δεν ήταν δυνατή η προσθήκη του χρήστη σε αυτή την ομάδα.</item>
+    </plurals>
+    <plurals name="dm_add_people_success">
+        <item quantity="other">Οι %d χρήστες προστέθηκαν στην ομάδα.</item>
+        <item quantity="one">Ο χρήστης προστέθηκε στην ομάδα.</item>
+    </plurals>
+    <plurals name="dm_follower_count_no_joined_date">
+        <item quantity="other">{num_followers} ακόλουθοι</item>
+        <item quantity="one">{num_followers} ακόλουθος</item>
+    </plurals>
+    <plurals name="dm_group_account_name">
+        <item quantity="other">%d άτομα</item>
+        <item quantity="one">1 άτομο</item>
+    </plurals>
+    <plurals name="dm_group_chat_count">
+        <item quantity="other">Πραγματοποιήστε ομαδική συνομιλία με %d άτομα</item>
+        <item quantity="one">Πραγματοποιήστε ομαδική συνομιλία με %d άτομο</item>
+    </plurals>
+    <plurals name="dm_group_conversation_participant_count">
+        <item quantity="other">%1$d άτομα</item>
+        <item quantity="one">%1$d άτομο</item>
+    </plurals>
+    <plurals name="dm_group_participant_count">
+        <item quantity="other">Υπάρχουν %1$s άτομα σε αυτήν την ομάδα</item>
+        <item quantity="one">Υπάρχει %1$s άτομο σε αυτήν την ομάδα</item>
+    </plurals>
+    <plurals name="dm_group_participant_count_person_details">
+        <item quantity="other">%1$s ακόμη άτομα</item>
+        <item quantity="one">%1$s ακόμη άτομο</item>
+    </plurals>
+    <plurals name="dm_image_profile">
+        <item quantity="other">Εικόνες προφίλ για %s</item>
+        <item quantity="one">Εικόνα προφίλ για %s</item>
+    </plurals>
+    <plurals name="dm_new_people_you_may_know">
+        <item quantity="other">%d νέα άτομα που ίσως γνωρίζετε</item>
+        <item quantity="one">%d νέο άτομο που ίσως γνωρίζετε</item>
+    </plurals>
+    <plurals name="dm_new_requests">
+        <item quantity="other">%d νέα αιτήματα</item>
+        <item quantity="one">%d νέο αίτημα</item>
+    </plurals>
+    <plurals name="dm_participant_added_by_deleted_user">
+        <item quantity="other">προστέθηκαν {participants}</item>
+        <item quantity="one">προστέθηκε {participants}</item>
+    </plurals>
+    <plurals name="dm_pending_requests">
+        <item quantity="other">%s αιτήματα σε εκκρεμότητα</item>
+        <item quantity="one">%d αίτημα σε εκκρεμότητα</item>
+    </plurals>
+    <plurals name="dm_people_you_may_know">
+        <item quantity="other">%d άτομα που ίσως γνωρίζετε</item>
+        <item quantity="one">%d άτομο που ίσως γνωρίζετε</item>
+    </plurals>
+    <plurals name="dm_pinned_conversations_max_count_exceeded_title">
+        <item quantity="other">Μπορείτε να καρφιτσώσετε έως %d συνομιλίες</item>
+        <item quantity="one">Μπορείτε να καρφιτσώσετε μόνο %d συνομιλία</item>
+    </plurals>
+    <plurals name="dm_state_seen_by">
+        <item quantity="other">Διαβάστηκε από %d άτομα</item>
+        <item quantity="one">Διαβάστηκε από %d άτομο</item>
+    </plurals>
+    <plurals name="dm_unread_messages">
+        <item quantity="other">%d μη αναγνωσμένα μηνύματα</item>
+        <item quantity="one">%d μη αναγνωσμένο μήνυμα</item>
+    </plurals>
+    <plurals name="dm_user_joined_and_follower_count">
+        <item quantity="other">Έγινε μέλος στις {joined_date} • {num_followers} ακόλουθοι</item>
+        <item quantity="one">Έγινε μέλος στις {joined_date} • {num_followers} ακόλουθος</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="other">Γρήγορη προώθηση κατά %d δευτερόλεπτα</item>
+        <item quantity="one">Γρήγορη προώθηση κατά %d δευτερόλεπτο</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="other">Μετάβαση προς τα πίσω κατά %d δευτερόλεπτα</item>
+        <item quantity="one">Μετάβαση προς τα πίσω κατά %d δευτερόλεπτο</item>
+    </plurals>
+    <plurals name="facepile_content_description">
+        <item quantity="other">Εικόνες προφίλ για %s</item>
+        <item quantity="one">Εικόνα προφίλ για %s</item>
+    </plurals>
+    <plurals name="full_screen_gallery_header_add">
+        <item quantity="other">Προσθήκη %d</item>
+        <item quantity="one">Προσθήκη %d</item>
+    </plurals>
+    <plurals name="graphql_errors_button">
+        <item quantity="other">%d σφάλματα</item>
+        <item quantity="one">%d σφάλμα</item>
+    </plurals>
+    <plurals name="guest_management_max_cohost_count_label">
+        <item quantity="other">Μπορείτε να έχετε μόνο %1$d συνδιοργ.</item>
+        <item quantity="one">Μπορείτε να έχετε μόνο %1$d συνδιοργ.</item>
+    </plurals>
+    <plurals name="guest_management_open_cohost_count_label">
+        <item quantity="other">Προσθέστε έως %1$d ακόμη άτομα.</item>
+        <item quantity="one">Προσθέστε έως %1$d ακόμη άτομο.</item>
+    </plurals>
+    <plurals name="host_kudos_num_followers_gained">
+        <item quantity="other">Έχετε %1$d νέους ακόλουθους!</item>
+        <item quantity="one">Έχετε %1$d νέο ακόλουθο!</item>
+    </plurals>
+    <plurals name="hours">
+        <item quantity="other">%d ώρες</item>
+        <item quantity="one">%d ώρα</item>
+    </plurals>
+    <plurals name="humanization_prompt_followers">
+        <item quantity="other">Οι χρήστες %1$s ακολουθούν το θέμα %2$s.</item>
+        <item quantity="one">Ο χρήστης %1$s ακολουθεί το θέμα %2$s.</item>
+    </plurals>
+    <plurals name="humanization_prompt_topics">
+        <item quantity="other">Εσείς και ο χρήστης %1$s ακολουθείτε τα θέματα %2$s.</item>
+        <item quantity="one">Εσείς και ο χρήστης %1$s ακολουθείτε το θέμα %2$s.</item>
+    </plurals>
+    <plurals name="likes">
+        <item quantity="other">%d επισημάνσεις \"Μου αρέσει\"</item>
+        <item quantity="one">%d επισήμανση \"Μου αρέσει\"</item>
+    </plurals>
+    <plurals name="list_member_count">
+        <item quantity="other">Μέλη</item>
+        <item quantity="one">Μέλος</item>
+    </plurals>
+    <plurals name="media_alt_text_prompt_dialog_message">
+        <item quantity="other">"Οι καλές περιγραφές εικόνων είναι συνοπτικές αλλά λεπτομερείς. Φροντίστε να συνοψίσετε ή να γράψετε οποιοδήποτε κείμενο στην ίδια την εικόνα.
+
+Οι περιγραφές σας καθιστούν το Χ προσβάσιμο σε άτομα με αναπηρίες και σε όλους όσους θέλουν περισσότερα συμφραζόμενα.
+
+Μπορείτε να απενεργοποιήσετε αυτήν την υπενθύμιση στις Ρυθμίσεις προσβασιμότητας."</item>
+        <item quantity="one">"Οι καλές περιγραφές εικόνων είναι συνοπτικές αλλά λεπτομερείς. Φροντίστε να συνοψίσετε ή να γράψετε οποιοδήποτε κείμενο στην ίδια την εικόνα.
+
+Η περιγραφή σας καθιστά το Χ προσβάσιμο σε άτομα με αναπηρίες και σε όλους όσους θέλουν περισσότερα συμφραζόμενα.
+
+Μπορείτε να απενεργοποιήσετε αυτήν την υπενθύμιση στις Ρυθμίσεις προσβασιμότητας."</item>
+    </plurals>
+    <plurals name="media_alt_text_prompt_dialog_positive_btn_text">
+        <item quantity="other">Προσθήκη περιγραφών</item>
+        <item quantity="one">Προσθήκη περιγραφής</item>
+    </plurals>
+    <plurals name="media_alt_text_prompt_dialog_title">
+        <item quantity="other">Μην ξεχάσετε να κάνετε τις εικόνες σας προσβάσιμες</item>
+        <item quantity="one">Μην ξεχάσετε να κάνετε την εικόνα σας προσβάσιμη</item>
+    </plurals>
+    <plurals name="media_monetization_settings_categories_selected">
+        <item quantity="other">Επιλέχθηκαν %d κατηγορίες</item>
+        <item quantity="one">%d κατηγορία επιλέχθηκε</item>
+    </plurals>
+    <plurals name="media_tag_remaining">
+        <item quantity="other">Προσθέστε με ετικέτα μέχρι %d άτομα ακόμα.</item>
+        <item quantity="one">Προσθέστε με ετικέτα μέχρι %d άτομο ακόμη.</item>
+    </plurals>
+    <plurals name="media_tag_tagged">
+        <item quantity="other">%d άτομα προστέθηκαν με ετικέτα</item>
+        <item quantity="one">%d άτομο προστέθηκε με ετικέτα</item>
+    </plurals>
+    <plurals name="member_count">
+        <item quantity="other">%s μέλη</item>
+        <item quantity="one">%s μέλος</item>
+    </plurals>
+    <plurals name="members">
+        <item quantity="other">%s μέλη</item>
+        <item quantity="one">%s μέλος</item>
+    </plurals>
+    <plurals name="minutes">
+        <item quantity="other">%d λεπτά</item>
+        <item quantity="one">%d λεπτό</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d νέες ειδοποιήσεις</item>
+        <item quantity="one">%d νέα ειδοποίηση</item>
+    </plurals>
+    <plurals name="muted_keyword_bulk_delete_success">
+        <item quantity="other">Έγινε διαγραφή %d λέξεων</item>
+        <item quantity="one">Έγινε διαγραφή %d λέξης</item>
+    </plurals>
+    <plurals name="muted_keyword_selected_count">
+        <item quantity="other">%d επιλεγμένα</item>
+        <item quantity="one">%d επιλεγμένο</item>
+    </plurals>
+    <plurals name="narrowcast_community_member_count">
+        <item quantity="other">%s μέλη</item>
+        <item quantity="one">%s μέλος</item>
+    </plurals>
+    <plurals name="narrowcast_trusted_friends_count">
+        <item quantity="other">%s άτομα</item>
+        <item quantity="one">%s άτομο</item>
+    </plurals>
+    <plurals name="others">
+        <item quantity="other">%d ακόμη</item>
+        <item quantity="one">1 ακόμη</item>
+    </plurals>
+    <plurals name="product_count">
+        <item quantity="other">%1$d προϊόντα</item>
+        <item quantity="one">%1$d προϊόν</item>
+    </plurals>
+    <plurals name="profile_creator_subscriptions_count">
+        <item quantity="other">Συνδρομές</item>
+        <item quantity="one">Συνδρομή</item>
+    </plurals>
+    <plurals name="profile_follower_count">
+        <item quantity="other">Ακόλουθοι</item>
+        <item quantity="one">Ακόλουθος</item>
+    </plurals>
+    <plurals name="profile_friends_following_others">
+        <item quantity="other">%d ακόμη</item>
+        <item quantity="one">%d ακόμη</item>
+    </plurals>
+    <plurals name="profile_super_followers_count">
+        <item quantity="other">Συνδρομητές</item>
+        <item quantity="one">Συνδρομητής</item>
+    </plurals>
+    <plurals name="profile_toolbar_subtitle_articles">
+        <item quantity="other">%s Άρθρα</item>
+        <item quantity="one">%s Άρθρο</item>
+    </plurals>
+    <plurals name="profile_toolbar_subtitle_likes">
+        <item quantity="other">Αρέσει στους χρήστες %s</item>
+        <item quantity="one">Αρέσει στο χρήστη %s</item>
+    </plurals>
+    <plurals name="profile_toolbar_subtitle_media">
+        <item quantity="other">Φωτογραφίες και βίντεο του χρήστη %s</item>
+        <item quantity="one">%s Φωτογραφία</item>
+    </plurals>
+    <plurals name="profile_toolbar_subtitle_timeline">
+        <item quantity="other">%s αναρτήσεις</item>
+        <item quantity="one">%s ανάρτηση</item>
+    </plurals>
+    <plurals name="ps__accessibility_broadcaster_stats_graph_peak_msg">
+        <item quantity="other">Γράφημα θεατών εκπομπής. Φτάσατε τον κορυφαίο αριθμό των %1$d θεατών στις %2$s.</item>
+        <item quantity="zero">Γράφημα θεατών εκπομπής</item>
+        <item quantity="one">Γράφημα θεατών εκπομπής. Φτάσατε τον κορυφαίο αριθμό του %1$d θεατή στις %2$s.</item>
+    </plurals>
+    <plurals name="ps__accessibility_broadcaster_stats_graph_point_msg">
+        <item quantity="other">Είχατε %1$d θεατές στις %2$s.</item>
+        <item quantity="one">Είχατε %1$d θεατή στις %2$s.</item>
+    </plurals>
+    <plurals name="ps__invite_follower">
+        <item quantity="other">%d ακόλουθοι</item>
+        <item quantity="zero">Δεν υπάρχουν ακόλουθοι</item>
+        <item quantity="one">%d ακόλουθος</item>
+    </plurals>
+    <plurals name="ps__invited_num_followers_embolden">
+        <item quantity="other">Ο χρήστης*%1$s* προσκάλεσε %2$s άτομα</item>
+        <item quantity="one">Ο χρήστης *%1$s* προσκάλεσε %2$s άτομο</item>
+    </plurals>
+    <plurals name="ps__moderation_report_muted_by_moderator">
+        <item quantity="other">*Σε σίγαση από τους διαχειριστές* %1$s (%2$d)</item>
+        <item quantity="one">*Έγινε σίγαση από τους διαχειριστές* %1$s</item>
+    </plurals>
+    <plurals name="ps__moderation_report_unmuted_by_moderator">
+        <item quantity="other">*Έγινε άρση σίγασης από τους διαχειριστές* %1$s (%2$d)</item>
+        <item quantity="one">*Έγινε άρση σίγασης από τους διαχειριστές* %1$s</item>
+    </plurals>
+    <plurals name="ps__new_messages">
+        <item quantity="other">%1$d νέα μηνύματα</item>
+        <item quantity="one">%1$d νέο μήνυμα</item>
+    </plurals>
+    <plurals name="ps__num_hearts">
+        <item quantity="other">%s καρδιές</item>
+        <item quantity="one">%s καρδιά</item>
+    </plurals>
+    <plurals name="ps__stats_live_viewers">
+        <item quantity="other">ΖΩΝΤΑΝΟΙ ΘΕΑΤΕΣ</item>
+        <item quantity="one">ΖΩΝΤΑΝΟΣ ΘΕΑΤΗΣ</item>
+    </plurals>
+    <plurals name="ps__stats_replay_viewers">
+        <item quantity="other">ΘΕΑΤΕΣ ΕΠΑΝΑΛΗΨΗΣ</item>
+        <item quantity="one">ΘΕΑΤΗΣ ΕΠΑΝΑΛΗΨΗΣ</item>
+    </plurals>
+    <plurals name="ps__time_format_days">
+        <item quantity="other">%d ημέρες</item>
+        <item quantity="one">%d ημέρα</item>
+    </plurals>
+    <plurals name="ps__time_format_hours">
+        <item quantity="other">%d ώρες</item>
+        <item quantity="one">%d ώρα</item>
+    </plurals>
+    <plurals name="ps__time_format_minutes">
+        <item quantity="other">%d λεπτά</item>
+        <item quantity="one">%d λεπτό</item>
+    </plurals>
+    <plurals name="ps__time_format_seconds">
+        <item quantity="other">%d δευτερόλεπτα</item>
+        <item quantity="one">%d δευτερόλεπτο</item>
+    </plurals>
+    <plurals name="recording_replay_count_preview">
+        <item quantity="other">%s επαναλήψεις αναπαραγωγής</item>
+        <item quantity="one">%s επανάληψη αναπαραγωγής</item>
+    </plurals>
+    <plurals name="relationship_followers_following_others">
+        <item quantity="other">%d ακόμη</item>
+        <item quantity="one">%d ακόμη</item>
+    </plurals>
+    <plurals name="replies">
+        <item quantity="other">%d απαντήσεις</item>
+        <item quantity="one">%d απάντηση</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_and_n_others">
+        <item quantity="other">Απάντηση στο χρήστη ﻿%1$s και σε %2$d άλλους﻿</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_and_n_others_exclusive">
+        <item quantity="other">Απάντηση στους χρήστες ﻿%1$s και %2$d άλλους﻿. Η απάντησή σας θα είναι επίσης ορατή σε άλλους Συνδρομητές.</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_and_n_others_in_space">
+        <item quantity="other">Απάντηση στον χρήστη ﻿%1$s και σε %2$d ακόμη﻿ στον χώρο ﻿%3$s﻿</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_someone_and_n_others">
+        <item quantity="other">Απάντηση στους χρήστες ﻿%1$s, %2$s και σε %3$d ακόμη﻿</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_someone_and_n_others_exclusive">
+        <item quantity="other">Απάντηση στους χρήστες ﻿%1$s %2$s και %3$dάλλους﻿. Η απάντησή σας θα είναι επίσης ορατή σε άλλους Συνδρομητές.</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_someone_and_n_others_in_space">
+        <item quantity="other">Απάντηση στον χρήστη ﻿%1$s, %2$s και σε %3$d ακόμη﻿ στον χώρο ﻿ %4$s﻿</item>
+    </plurals>
+    <plurals name="reported_tweet_reported_by">
+        <item quantity="other">Αναφέρθηκε από {{}}%1$s μέλη{{}}</item>
+        <item quantity="one">Αναφέρθηκε από {{}}%1$s{{}}</item>
+    </plurals>
+    <plurals name="retweets">
+        <item quantity="other">%d αναδημοσιεύσεις</item>
+        <item quantity="one">%d αναδημοσίευση</item>
+    </plurals>
+    <plurals name="safety_mode_preview_description">
+        <item quantity="other">Επισημάναμε %d ενδεχομένως προσβλητικούς ή ανεπιθύμητους λογαριασμούς.</item>
+        <item quantity="one">Επισημάναμε %d ενδεχομένως προσβλητικό ή ανεπιθύμητο λογαριασμό.</item>
+    </plurals>
+    <plurals name="seconds">
+        <item quantity="other">%d δευτερόλεπτα</item>
+        <item quantity="one">%d δευτερόλεπτο</item>
+    </plurals>
+    <plurals name="send_cohost_invite">
+        <item quantity="other">Αποστολή προσκλήσεων συνδιοργ.</item>
+        <item quantity="one">Αποστολή πρόσκλησης για συνδιοργ.</item>
+    </plurals>
+    <plurals name="settings_notif_tweets_count">
+        <item quantity="other">%d άτομα</item>
+        <item quantity="one">%d άτομο</item>
+    </plurals>
+    <plurals name="social_follow_and_follow_and_others">
+        <item quantity="other">Οι χρήστες %1$s, %2$s και %3$d άλλοι χρήστες ακολουθούν</item>
+        <item quantity="one">Οι χρήστες %1$s, %2$s και άλλοι %3$d ακολουθούν</item>
+    </plurals>
+    <plurals name="spaces_additional_participants">
+        <item quantity="other">+%1$s ακόμα ακροατές</item>
+        <item quantity="one">+%1$s ακόμα ακροατής</item>
+    </plurals>
+    <plurals name="spaces_blocked_warning">
+        <item quantity="other">Έχετε αποκλείσει %1$d άτομα που μιλούν</item>
+        <item quantity="one">Έχετε αποκλείσει %1$d άτομο που μιλάει</item>
+    </plurals>
+    <plurals name="spaces_card_social_proof_in_progress">
+        <item quantity="other">%1$s βρίσκονται σε αυτόν τον Χώρο</item>
+        <item quantity="one">%1$s βρίσκεται σε αυτόν τον Χώρο</item>
+    </plurals>
+    <plurals name="spaces_card_social_proof_replay">
+        <item quantity="other">%1$s βρίσκονταν σε αυτόν τον Χώρο</item>
+        <item quantity="one">%1$s βρισκόταν σε αυτόν τον Χώρο</item>
+    </plurals>
+    <plurals name="spaces_invite_confirmation">
+        <item quantity="other">%1$d άτομα έχουν προσκληθεί σε αυτόν τον Χώρο</item>
+        <item quantity="one">%1$d άτομο έχει προσκληθεί σε αυτόν τον Χώρο</item>
+    </plurals>
+    <plurals name="speakers_current_count">
+        <item quantity="other">%1$d ομιλητές</item>
+        <item quantity="one">%1$d ομιλητής</item>
+    </plurals>
+    <plurals name="speakers_listeners_count">
+        <item quantity="other">%1$d άτομα ακούνε</item>
+        <item quantity="one">%1$d άτομο ακούει</item>
+    </plurals>
+    <plurals name="speakers_open_spots_count">
+        <item quantity="other">%1$d κενές θέσεις</item>
+        <item quantity="one">%1$d κενή θέση</item>
+    </plurals>
+    <plurals name="speakers_requests_count">
+        <item quantity="other">%1$d αιτήματα</item>
+        <item quantity="one">%1$d αίτημα</item>
+    </plurals>
+    <plurals name="stat_label_bookmarks">
+        <item quantity="other">Σελιδοδείκτες</item>
+        <item quantity="one">Σελιδοδείκτης</item>
+    </plurals>
+    <plurals name="stat_label_likes_sentence_case">
+        <item quantity="other">Επισημάνσεις \"Μου αρέσει\"</item>
+        <item quantity="one">Επισήμανση \"Μου αρέσει\"</item>
+    </plurals>
+    <plurals name="stat_label_quote_tweets">
+        <item quantity="other">Παραθέσεις</item>
+        <item quantity="one">Παράθεση</item>
+    </plurals>
+    <plurals name="stat_label_retweets_sentence_case">
+        <item quantity="other">Αναδημοσιεύσεις</item>
+        <item quantity="one">Αναδημοσίευση</item>
+    </plurals>
+    <plurals name="stat_label_verified_views_sentence_case">
+        <item quantity="other">Επαληθευμένες προβολές</item>
+        <item quantity="one">Επαληθευμένη προβολή</item>
+    </plurals>
+    <plurals name="stat_label_views_sentence_case">
+        <item quantity="other">Προβολές</item>
+        <item quantity="one">Προβολή</item>
+    </plurals>
+    <plurals name="subscription_duration_days">
+        <item quantity="other">%d ημέρες</item>
+        <item quantity="one">ημέρα</item>
+    </plurals>
+    <plurals name="subscription_duration_months">
+        <item quantity="other">%d μήνες</item>
+        <item quantity="one">μήνας</item>
+    </plurals>
+    <plurals name="subscription_duration_years">
+        <item quantity="other">%d έτη</item>
+        <item quantity="one">έτος</item>
+    </plurals>
+    <plurals name="time_days">
+        <item quantity="other">%d η</item>
+        <item quantity="one">%d η</item>
+    </plurals>
+    <plurals name="time_days_ago">
+        <item quantity="other">%d ΗΜΕΡΕΣ ΠΡΙΝ</item>
+        <item quantity="one">%d ΗΜΕΡΑ ΠΡΙΝ</item>
+    </plurals>
+    <plurals name="time_hours">
+        <item quantity="other">%d ώ</item>
+        <item quantity="one">%d ώ</item>
+    </plurals>
+    <plurals name="time_hours_ago">
+        <item quantity="other">%d ΩΡΕΣ ΠΡΙΝ</item>
+        <item quantity="one">%d ΩΡΑ ΠΡΙΝ</item>
+    </plurals>
+    <plurals name="time_mins">
+        <item quantity="other">%d λ</item>
+        <item quantity="one">%d λ</item>
+    </plurals>
+    <plurals name="time_mins_ago">
+        <item quantity="other">%d ΛΕΠΤΑ ΠΡΙΝ</item>
+        <item quantity="one">%d ΛΕΠΤΟ ΠΡΙΝ</item>
+    </plurals>
+    <plurals name="time_secs">
+        <item quantity="other">%d δ</item>
+        <item quantity="one">%dδ</item>
+    </plurals>
+    <plurals name="top_articles_time_window">
+        <item quantity="other">Τελευταίες %s ώρες</item>
+        <item quantity="one">Τελευταία ώρα</item>
+    </plurals>
+    <plurals name="tweet_visibility_education_dialog_non_followers_text">
+        <item quantity="other">Ο χρήστης %1$s και άλλοι δεν σας ακολουθούν.</item>
+        <item quantity="one">Ο χρήστης %1$s δεν σας ακολουθεί.</item>
+    </plurals>
+    <plurals name="undo_send_period_in_seconds">
+        <item quantity="other">%d δευτερόλεπτα</item>
+        <item quantity="one">%d δευτερόλεπτο</item>
+    </plurals>
+    <plurals name="verified_views">
+        <item quantity="other">%d επαληθευμένες προβολές</item>
+        <item quantity="one">%d επαληθευμένη προβολή</item>
+    </plurals>
+</resources>

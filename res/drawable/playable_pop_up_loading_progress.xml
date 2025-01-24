@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rotate
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <shape
+        android:shape="ring"
+        android:useLevel="false"
+        android:innerRadius="@dimen/pop_up_loading_indicator_rim_inner_radius"
+        android:thickness="@dimen/pop_up_loading_indicator_rim_thickness">
+        <gradient
+            android:endColor="@color/pop_up_loading_indicator_rim_progress_color"
+            android:useLevel="false"
+            android:angle="0.0"
+            android:type="sweep"
+            android:centerColor="@color/pop_up_loading_indicator_rim_background_color" />
+    </shape>
+</rotate>

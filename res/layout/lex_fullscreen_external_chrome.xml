@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1"
+        android:shrinkColumns="1">
+        <TableRow
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:id="@id/close"
+                android:background="?selectableItemBackgroundBorderless"
+                android:padding="@dimen/space_8"
+                android:focusable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_vector_close_white_with_bg_circle"
+                android:contentDescription="@string/ps__accessibility_close" />
+            <com.twitter.ui.components.button.legacy.TwitterButton
+                android:ellipsize="end"
+                android:layout_gravity="center"
+                android:id="@id/event_cta"
+                android:padding="@dimen/space_8"
+                android:visibility="invisible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_12"
+                android:layout_marginBottom="@dimen/space_12"
+                android:maxLines="1"
+                style="@style/LexEventCtaButton" />
+            <ImageButton
+                android:id="@id/video_player_dock_button"
+                android:background="?selectableItemBackgroundBorderless"
+                android:padding="@dimen/space_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_video_dock_with_bg_circle"
+                android:contentDescription="@string/av_player_button_dock" />
+        </TableRow>
+    </TableLayout>
+</merge>

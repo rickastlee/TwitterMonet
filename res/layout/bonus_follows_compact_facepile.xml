@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.media.ui.image.UserImageView
+        style="@style/BonusFollowsCompactFacepile" />
+    <com.twitter.media.ui.image.UserImageView
+        android:layout_marginStart="-8.0dip"
+        style="@style/BonusFollowsCompactFacepile" />
+    <com.twitter.media.ui.image.UserImageView
+        android:layout_marginStart="-8.0dip"
+        style="@style/BonusFollowsCompactFacepile" />
+    <com.twitter.media.ui.image.UserImageView
+        android:layout_marginStart="-8.0dip"
+        style="@style/BonusFollowsCompactFacepile" />
+    <com.twitter.media.ui.image.UserImageView
+        android:layout_marginStart="-8.0dip"
+        style="@style/BonusFollowsCompactFacepile" />
+    <com.twitter.media.ui.image.UserImageView
+        android:layout_marginStart="-8.0dip"
+        style="@style/BonusFollowsCompactFacepile" />
+    <com.twitter.media.ui.image.UserImageView
+        android:layout_marginStart="-8.0dip"
+        style="@style/BonusFollowsCompactFacepile" />
+    <com.twitter.media.ui.image.UserImageView
+        android:layout_marginStart="-8.0dip"
+        style="@style/BonusFollowsCompactFacepile" />
+</LinearLayout>

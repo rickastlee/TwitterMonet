@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    android:id="@id/tweet_view_constraint_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <tag
+        android:value="com.twitter.tweetview.core.ui.TweetViewViewDelegateBinder"
+        android:id="@id/viewBinder" />
+    <tag
+        android:value="com.twitter.tweetview.core.TweetViewViewModel"
+        android:id="@id/viewModel" />
+    <com.twitter.ui.socialproof.SocialProofView
+        android:id="@id/tweet_social_proof"
+        android:paddingBottom="@dimen/space_4"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_4"
+        android:translationX="@dimen/social_proof_icon_offset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tweet_profile_image"
+        app:layout_constraintTop_toTopOf="parent"
+        style="?tweetViewSocialProofStyle">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@id/social_proof_container"
+            android:background="@drawable/ripple_pressed_selector_rectangle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ViewStub
+                android:layout_gravity="center_vertical"
+                android:id="@id/social_proof_face_pile_stub"
+                android:layout="@layout/tweet_social_proof_facepile"
+                android:inflatedId="@id/social_proof_face_pile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/social_proof_facepile_margin" />
+            <com.twitter.ui.widget.UnpaddedTextLayoutView
+                android:textSize="@dimen/font_size_small"
+                android:id="@id/social_proof_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:removeVerticalPadding="true"
+                style="@style/SocialProofTextView" />
+        </LinearLayout>
+        <tag
+            android:value="com.twitter.tweetview.core.ui.socialproof.SocialProofViewDelegateBinder"
+            android:id="@id/viewBinder" />
+        <tag
+            android:value="com.twitter.tweetview.core.TweetViewViewModel"
+            android:id="@id/viewModel" />
+    </com.twitter.ui.socialproof.SocialProofView>
+    <com.twitter.ui.tweet.TweetHeaderView
+        android:id="@id/tweet_header"
+        android:paddingTop="@dimen/vertical_connector_margin"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/tweet_avatar_start_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tweet_profile_image"
+        app:layout_constraintTop_toTopOf="@id/tweet_profile_image"
+        app:layout_goneMarginEnd="@dimen/space_12"
+        app:layout_goneMarginTop="@dimen/list_row_padding_vertical"
+        style="?tweetViewHeaderStyle">
+        <tag
+            android:value="TweetHeader"
+            android:id="@id/weaverComponent" />
+    </com.twitter.ui.tweet.TweetHeaderView>
+    <com.twitter.ui.user.UserLabelView
+        android:id="@id/user_label_view"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/tweet_avatar_start_margin"
+        app:layout_constraintStart_toEndOf="@id/tweet_profile_image"
+        app:layout_constraintTop_toBottomOf="@id/tweet_header"
+        style="?tweetViewUserLabelStyle">
+        <tag
+            android:value="UserLabel"
+            android:id="@id/weaverComponent" />
+    </com.twitter.ui.user.UserLabelView>
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="vertical"
+        android:id="@id/content_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_end="@dimen/list_row_padding_horizontal" />
+    <com.twitter.ui.widget.UnpaddedTextLayoutView
+        android:textColorLink="?abstractColorLink"
+        android:id="@id/tweet_reply_context"
+        android:paddingTop="@dimen/reply_context_reduced_vertical_padding"
+        android:paddingBottom="@dimen/reply_context_reduced_vertical_padding"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/tweet_avatar_start_margin"
+        app:layout_constraintEnd_toEndOf="@id/content_end"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/tweet_profile_image"
+        app:layout_constraintTop_toBottomOf="@id/user_label_view"
+        app:layout_constraintWidth="true"
+        app:removeHorizontalPadding="true"
+        style="?tweetViewReplyContextStyle">
+        <tag
+            android:value="ReplyContext"
+            android:id="@id/weaverComponent" />
+    </com.twitter.ui.widget.UnpaddedTextLayoutView>
+    <com.twitter.tweetview.core.QuoteView
+        android:id="@id/tweet_quote"
+        android:visibility="gone"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?tweetQuoteLayoutMarginTop"
+        android:importantForAccessibility="noHideDescendants"
+        android:layout_marginStart="@dimen/tweet_avatar_start_margin"
+        app:layout_constraintEnd_toEndOf="@id/content_end"
+        app:layout_constraintStart_toEndOf="@id/tweet_profile_image"
+        app:layout_constraintTop_toBottomOf="@id/non_compliant_interstitial"
+        style="?tweetViewQuoteViewStyle">
+        <tag
+            android:value="com.twitter.tweetview.core.ui.quote.QuoteViewDelegateBinder"
+            android:id="@id/viewBinder" />
+        <tag
+            android:value="com.twitter.tweetview.core.TweetViewViewModel"
+            android:id="@id/viewModel" />
+    </com.twitter.tweetview.core.QuoteView>
+    <ViewStub
+        android:id="@id/tweet_inner_tombstone"
+        android:background="@drawable/list_row_background"
+        android:layout="@layout/tweet_inner_tombstone_layout_no_constraint_layout_padding"
+        android:inflatedId="@id/tweet_inner_tombstone"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_top_margin"
+        android:layout_marginStart="@dimen/tweet_avatar_start_margin"
+        app:layout_constraintEnd_toEndOf="@id/content_end"
+        app:layout_constraintStart_toEndOf="@id/tweet_profile_image"
+        app:layout_constraintTop_toBottomOf="@id/tweet_quote">
+        <tag
+            android:value="InnerTombstoneStub"
+            android:id="@id/weaverComponent" />
+    </ViewStub>
+    <ViewStub
+        android:id="@id/non_compliant_interstitial"
+        android:layout="@layout/tweet_non_compliant_tombstone_layout_no_constraint_layout_padding"
+        android:inflatedId="@id/non_compliant_interstitial"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_top_margin"
+        android:layout_marginStart="@dimen/tweet_avatar_start_margin"
+        app:layout_constraintEnd_toEndOf="@id/content_end"
+        app:layout_constraintStart_toEndOf="@id/tweet_profile_image"
+        app:layout_constraintTop_toBottomOf="@id/tweet_content_text">
+        <tag
+            android:value="NonCompliantTombstoneStub"
+            android:id="@id/weaverComponent" />
+    </ViewStub>
+    <com.twitter.ui.widget.TextContentView
+        android:id="@id/tweet_content_text"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_2"
+        android:layout_marginStart="@dimen/tweet_avatar_start_margin"
+        app:contentSize="@dimen/font_size_normal"
+        app:layout_constraintEnd_toEndOf="@id/content_end"
+        app:layout_constraintStart_toEndOf="@id/tweet_profile_image"
+        app:layout_constraintTop_toBottomOf="@id/tweet_reply_context"
+        style="?tweetViewContentStyle">
+        <tag
+            android:value="TextContent"
+            android:id="@id/weaverComponent" />
+    </com.twitter.ui.widget.TextContentView>
+    <com.twitter.media.ui.image.UserImageView
+        android:id="@id/tweet_profile_image"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_1"
+        android:layout_marginStart="@dimen/space_12"
+        android:layout_marginEnd="@dimen/image_margin_end"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tweet_social_proof"
+        app:layout_goneMarginTop="@dimen/list_row_padding_vertical"
+        style="?tweetViewProfileImageStyle">
+        <tag
+            android:value="RingedUserImage"
+            android:id="@id/weaverComponent" />
+    </com.twitter.media.ui.image.UserImageView>
+    <ViewStub
+        android:id="@id/inline_social_proof"
+        android:layout="@layout/tweet_inline_social_proof"
+        android:inflatedId="@id/inline_social_proof"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_top_margin"
+        android:layout_marginStart="@dimen/tweet_avatar_start_margin"
+        app:layout_constraintEnd_toEndOf="@id/content_end"
+        app:layout_constraintStart_toEndOf="@id/tweet_profile_image"
+        app:layout_constraintTop_toBottomOf="@id/tweet_quote">
+        <tag
+            android:value="InlineSocialProofStub"
+            android:id="@id/weaverComponent" />
+    </ViewStub>
+    <ViewStub
+        android:id="@id/conversation_controls"
+        android:layout="@layout/tweet_conversation_controls"
+        android:inflatedId="@id/conversation_controls"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/tweet_avatar_start_margin"
+        app:layout_constraintEnd_toEndOf="@id/content_end"
+        app:layout_constraintStart_toEndOf="@id/tweet_profile_image"
+        app:layout_constraintTop_toBottomOf="@id/inline_social_proof">
+        <tag
+            android:value="ConversationControlsStub"
+            android:id="@id/weaverComponent" />
+    </ViewStub>
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@id/card_media_barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="tweet_header,user_label_view,tweet_reply_context,         tweet_content_text,non_compliant_interstitial,possibly_sensitive_warning,tweet_profile_image" />
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@id/actions_barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="possibly_sensitive_warning,         tweet_inner_tombstone,tweet_quote,tweet_content_text,tweet_reply_context,tweet_header, inline_social_proof" />
+    <android.widget.Space
+        android:id="@id/inline_action_gone_margin"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        app:layout_constraintEnd_toEndOf="@id/content_end"
+        app:layout_constraintStart_toEndOf="@id/tweet_profile_image"
+        app:layout_constraintTop_toBottomOf="@id/actions_barrier"
+        app:layout_goneMarginTop="@dimen/list_row_padding_vertical" />
+</merge>

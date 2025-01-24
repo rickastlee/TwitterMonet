@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.ui.components.button.legacy.ToggleTwitterButton
+    android:id="@id/live_event_reminder_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/live_event_remind_me"
+    twitter:styleIdOff="?mediumToggledOffButtonStyle"
+    twitter:styleIdOn="?mediumToggledOnButtonStyle"
+    twitter:textIdOff="@string/live_event_remind_me"
+    twitter:textIdOn="@string/live_event_remind_me_set"
+    style="@style/TwitterButtonMediumRegular"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto" />

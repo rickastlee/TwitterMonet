@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+            <FrameLayout
+                android:id="@id/broadcast_check_button_container"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/ps__timecode_share_option_minimum_height">
+                <tv.periscope.android.view.PsTextView
+                    android:textSize="16.0sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/ps__white"
+                    android:layout_gravity="start|center"
+                    android:id="@id/share_broadcast_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/ps__standard_spacing_16" />
+                <tv.periscope.android.view.PsCheckButton
+                    android:layout_gravity="end|center"
+                    android:id="@id/broadcast_check_button"
+                    android:layout_marginEnd="@dimen/ps__standard_spacing_16"
+                    custom:ps__checkedColorFilter="@color/ps__white"
+                    style="@style/ps__IconButton" />
+            </FrameLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@id/timecode_option"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true">
+                <View
+                    android:background="@color/ps__light_grey_50"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0dip" />
+                <FrameLayout
+                    android:id="@id/timecode_check_button_container"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/ps__timecode_share_option_minimum_height">
+                    <tv.periscope.android.view.PsTextView
+                        android:textSize="16.0sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/ps__white"
+                        android:layout_gravity="start|center"
+                        android:id="@id/share_timecode_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/ps__standard_spacing_16" />
+                    <tv.periscope.android.view.PsCheckButton
+                        android:layout_gravity="end|center"
+                        android:id="@id/timecode_check_button"
+                        android:layout_marginEnd="@dimen/ps__standard_spacing_16"
+                        custom:ps__checkedColorFilter="@color/ps__white"
+                        style="@style/ps__IconButton" />
+                </FrameLayout>
+            </LinearLayout>
+            <include
+                android:id="@id/scrub_view_container"
+                layout="@layout/ps__start_time_scrubber_sheet" />
+            <View
+                android:id="@id/options_divider"
+                android:background="@color/ps__light_grey_50"
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip" />
+            <HorizontalScrollView
+                android:layout_gravity="bottom"
+                android:id="@id/share_actions_scroll_view"
+                android:scrollbars="none"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:id="@id/share_actions_container"
+                    android:paddingTop="@dimen/ps__standard_spacing_20"
+                    android:paddingBottom="@dimen/ps__standard_spacing_20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/ps__standard_spacing_16"
+                    android:paddingEnd="0.0dip" />
+            </HorizontalScrollView>
+        </LinearLayout>
+    </RelativeLayout>
+</merge>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout
+        android:id="@id/stop_broadcast_icon_container"
+        android:background="@drawable/stop_button_background"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/camera_button_height">
+        <com.twitter.ui.widget.TintableImageButton
+            android:id="@id/stop_broadcast_icon_button"
+            android:padding="@dimen/camera_capture_controls_inner_padding"
+            android:focusable="false"
+            android:clickable="false"
+            android:layout_width="@dimen/camera_button_height"
+            android:layout_height="@dimen/camera_button_height"
+            android:src="@drawable/ic_vector_close_red"
+            android:contentDescription="@string/ps__accessibility_stop_broadcast"
+            android:alpha="0.0" />
+    </FrameLayout>
+    <FrameLayout
+        android:id="@id/stop_broadcast_text_button"
+        android:background="@drawable/stop_button_background"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/camera_button_height">
+        <com.twitter.ui.components.button.legacy.TwitterButton
+            android:layout_gravity="center"
+            android:id="@id/stop_broadcast_text_button_actual"
+            android:focusable="false"
+            android:clickable="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/stop_broadcast_button_label"
+            app:labelColor="@color/branded_red"
+            app:labelPressedColor="@color/branded_red"
+            style="@style/TwitterButtonMediumBrandText" />
+    </FrameLayout>
+</merge>

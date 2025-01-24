@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.twitter.ui.view.TimelineRecyclerView
+        android:orientation="horizontal"
+        android:id="@id/list_recycler_view"
+        android:paddingTop="@dimen/space_8"
+        android:paddingBottom="@dimen/space_8"
+        android:clipToPadding="false"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:importantForAccessibility="noHideDescendants"
+        android:paddingStart="@dimen/space_8"
+        android:paddingEnd="@dimen/space_8"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textColor="?abstractColorDeepGray"
+        android:gravity="center"
+        android:id="@id/empty_pinned_state"
+        android:padding="@dimen/space_20"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/pinned_list_carousel_empty_message" />
+</FrameLayout>

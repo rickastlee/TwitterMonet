@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="bottom"
+    android:layout_gravity="bottom"
+    android:orientation="vertical"
+    android:id="@id/action_sheet_recycler_view_holder"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/space_16"
+    android:layout_marginEnd="@dimen/space_16"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.core.ui.components.dialog.bottomsheet.GripperView
+        android:layout_gravity="center_horizontal"
+        android:id="@id/handle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <FrameLayout
+        android:layout_gravity="bottom"
+        android:id="@id/fragment_sheet_room_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+    <tag
+        android:value="RoomFragmentSheet"
+        android:id="@id/weaverComponent" />
+</LinearLayout>

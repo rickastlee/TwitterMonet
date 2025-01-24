@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.ui.components.text.legacy.TypefacesTextView
+    android:id="@id/av_badge_hd"
+    android:background="@drawable/bg_media_badge"
+    android:text="@string/hd_badge_label"
+    style="@style/MixedMediaTextBadge"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

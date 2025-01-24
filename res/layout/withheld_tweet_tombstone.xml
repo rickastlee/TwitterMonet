@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.ui.widget.TombstoneView
+    android:id="@id/interstitial_view"
+    android:visibility="gone"
+    twitter:verticalConnector="@drawable/vertical_connector"
+    twitter:verticalConnectorMargin="@dimen/vertical_connector_margin"
+    twitter:verticalConnectorWidth="@dimen/vertical_connector_width"
+    style="@style/ListRow.Tombstone"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <tag
+        android:value="WithheldTombstone"
+        android:id="@id/weaverComponent" />
+</com.twitter.ui.widget.TombstoneView>

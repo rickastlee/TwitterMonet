@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.ui.components.button.legacy.ToggleTwitterButton
+    android:id="@id/follow_nudge_focal_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    twitter:shouldToggleOnClick="false"
+    twitter:styleIdOff="?smallToggledOffButtonStyle"
+    twitter:styleIdOn="?smallToggledOnButtonStyle"
+    style="@style/TwitterButtonXSmallBrandFilled"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <tag
+        android:value="FollowNudgeButton"
+        android:id="@id/weaverComponent" />
+</com.twitter.ui.components.button.legacy.ToggleTwitterButton>

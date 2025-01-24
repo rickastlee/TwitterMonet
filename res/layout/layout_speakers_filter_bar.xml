@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.tabs.TabLayout
+    android:id="@id/tab_speakers_filter"
+    android:background="@null"
+    android:clipToPadding="false"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/space_12"
+    android:paddingEnd="@dimen/space_12"
+    app:tabGravity="start"
+    app:tabIndicatorHeight="0.0dip"
+    app:tabMinWidth="0.0dip"
+    app:tabMode="scrollable"
+    app:tabPaddingEnd="@dimen/space_4"
+    app:tabPaddingStart="@dimen/space_4"
+    app:tabRippleColor="@null"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.tabs.TabItem
+        android:layout="@layout/layout_tab_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/speakers_tab_all" />
+    <com.google.android.material.tabs.TabItem
+        android:layout="@layout/layout_tab_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/speakers_tab_cohosts" />
+    <com.google.android.material.tabs.TabItem
+        android:layout="@layout/layout_tab_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/speakers_tab_speakers" />
+    <com.google.android.material.tabs.TabItem
+        android:layout="@layout/layout_tab_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/speakers_tab_requests" />
+    <com.google.android.material.tabs.TabItem
+        android:layout="@layout/layout_tab_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/speakers_tab_listeners" />
+    <com.google.android.material.tabs.TabItem
+        android:layout="@layout/layout_tab_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/speakers_tab_removed" />
+</com.google.android.material.tabs.TabLayout>

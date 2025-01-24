@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="horizontal"
+    android:id="@id/tweet_row_view_pivot_container"
+    android:background="@drawable/tweet_row_view_pivot_background"
+    android:paddingTop="@dimen/space_16"
+    android:paddingBottom="@dimen/space_16"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="?timelineRowHorizontalPadding"
+    android:paddingEnd="?timelineRowHorizontalPadding"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.media.ui.fresco.FrescoMediaImageView
+        android:gravity="center"
+        android:id="@id/tweet_row_view_pivot_icon"
+        android:layout_width="@dimen/pivot_icon_width"
+        android:layout_height="@dimen/pivot_icon_height"
+        android:layout_marginEnd="@dimen/space_8" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textStyle="bold"
+        android:textColor="@color/branded_red"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:id="@id/tweet_row_view_pivot_state_badge"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:maxLines="@integer/single_line"
+        android:includeFontPadding="false" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textColor="@color/gray_300"
+        android:gravity="center"
+        android:id="@id/tweet_row_view_pivot_divider"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:text="@string/dot"
+        android:includeFontPadding="false"
+        android:layout_marginStart="@dimen/space_4"
+        android:layout_marginEnd="@dimen/space_4" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textStyle="bold"
+        android:ellipsize="end"
+        android:gravity="start|center"
+        android:id="@id/tweet_row_view_pivot_content"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:maxLines="@integer/single_line"
+        android:includeFontPadding="false" />
+    <tag
+        android:value="ForwardPivot"
+        android:id="@id/weaverComponent" />
+</LinearLayout>

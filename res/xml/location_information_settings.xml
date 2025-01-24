@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Preference
+        android:selectable="false"
+        android:summary="@string/settings_location_info_item_detail"
+        app:order="10" />
+    <SwitchPreference
+        android:title="@string/settings_location_access_title"
+        android:key="allow_location_history_personalization"
+        android:summary="@string/settings_location_access_summary"
+        android:order="20" />
+    <SwitchPreference
+        android:title="@string/settings_precise_location_personalization_title"
+        android:key="allow_precise_location"
+        android:summary="@string/settings_precise_location_summary"
+        android:order="30" />
+    <com.twitter.settings.widget.LinkablePreferenceCompat
+        android:selectable="false"
+        android:key="pref_location_permission_message"
+        android:summary="@string/settings_no_location_permission_message"
+        android:order="40">
+        <intent
+            android:action="android.settings.APPLICATION_DETAILS_SETTINGS"
+            android:data="package:com.twitter.android" />
+    </com.twitter.settings.widget.LinkablePreferenceCompat>
+    <com.twitter.settings.widget.LinkablePreferenceCompat
+        android:selectable="false"
+        android:key="pref_system_location_message"
+        android:summary="@string/settings_location_services_message"
+        android:order="50">
+        <intent
+            android:action="android.settings.LOCATION_SOURCE_SETTINGS" />
+    </com.twitter.settings.widget.LinkablePreferenceCompat>
+    <Preference
+        android:key="trends_or_explore"
+        android:order="60" />
+</PreferenceScreen>

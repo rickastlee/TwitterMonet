@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    style="@style/ListRow"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:layout_gravity="center"
+        android:id="@id/education"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/muted_keywords_v2_education"
+        style="@style/MutedKeywordListEducationText" />
+</FrameLayout>

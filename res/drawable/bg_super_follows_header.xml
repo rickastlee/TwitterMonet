@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@id/oval_item_base"
+        android:top="-200.0dip"
+        android:bottom="0.0dip"
+        android:start="-200.0dip"
+        android:end="-50.0dip">
+        <shape
+            android:shape="oval">
+            <solid
+                android:color="@color/super_follows_solid" />
+        </shape>
+    </item>
+    <item
+        android:id="@id/oval_radial_bottom_left"
+        android:top="-200.0dip"
+        android:bottom="0.0dip"
+        android:start="-200.0dip"
+        android:end="-50.0dip">
+        <shape
+            android:shape="oval">
+            <gradient
+                android:startColor="@color/plum_600"
+                android:endColor="@android:color/transparent"
+                android:angle="0.0"
+                android:type="radial"
+                android:centerX="0.3"
+                android:centerY="1.0"
+                android:gradientRadius="50.0%" />
+        </shape>
+    </item>
+    <item
+        android:id="@id/oval_radial_top_right"
+        android:top="-200.0dip"
+        android:bottom="0.0dip"
+        android:start="-200.0dip"
+        android:end="-50.0dip">
+        <shape
+            android:shape="oval">
+            <gradient
+                android:startColor="@color/plum_400"
+                android:endColor="@android:color/transparent"
+                android:angle="0.0"
+                android:type="radial"
+                android:centerX="0.9"
+                android:centerY="0.3"
+                android:gradientRadius="50.0%" />
+        </shape>
+    </item>
+    <item
+        android:id="@id/oval_radial_bottom_right"
+        android:top="-200.0dip"
+        android:bottom="0.0dip"
+        android:start="-200.0dip"
+        android:end="-50.0dip">
+        <shape
+            android:shape="oval">
+            <gradient
+                android:startColor="@color/red_400"
+                android:endColor="@android:color/transparent"
+                android:angle="0.0"
+                android:type="radial"
+                android:centerX="0.8"
+                android:centerY="0.8"
+                android:gradientRadius="50.0%" />
+        </shape>
+    </item>
+    <item
+        android:id="@id/oval_radial_top_left"
+        android:top="-200.0dip"
+        android:bottom="0.0dip"
+        android:start="-200.0dip"
+        android:end="-50.0dip">
+        <shape
+            android:shape="oval">
+            <gradient
+                android:startColor="@color/magenta_500"
+                android:endColor="@android:color/transparent"
+                android:angle="0.0"
+                android:type="radial"
+                android:centerX="0.4"
+                android:centerY="0.4"
+                android:gradientRadius="79.99999%" />
+        </shape>
+    </item>
+</layer-list>

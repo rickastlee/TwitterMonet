@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <com.twitter.media.ui.fresco.FrescoDraweeView
+        android:id="@id/image_drawee_view"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:importantForAccessibility="no"
+        twitter:placeholderImage="?abstractColorFadedGray" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/primary_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ocf_screen_padding_wide"
+        android:layout_marginBottom="@dimen/space_16"
+        android:layout_marginStart="@dimen/ocf_screen_padding_wide"
+        android:layout_marginEnd="@dimen/ocf_screen_padding_wide"
+        style="@style/OcfHeadline1Text" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/secondary_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_16"
+        android:layout_marginStart="@dimen/ocf_screen_padding_wide"
+        android:layout_marginEnd="@dimen/ocf_screen_padding_wide"
+        style="@style/OcfSubtext2Text" />
+</LinearLayout>

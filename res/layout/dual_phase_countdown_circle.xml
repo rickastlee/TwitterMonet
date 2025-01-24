@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar
+        android:layout_gravity="center"
+        android:id="@id/ring_progress"
+        android:background="@drawable/dual_phase_countdown_circle_ring_progress_background"
+        android:layout_width="32.0sp"
+        android:layout_height="32.0sp"
+        android:progressDrawable="@drawable/dual_phase_countdown_circle_ring_progress"
+        android:rotation="270.0"
+        style="?android:progressBarStyleHorizontal" />
+    <ProgressBar
+        android:layout_gravity="center"
+        android:id="@id/fill_progress"
+        android:layout_width="16.0sp"
+        android:layout_height="16.0sp"
+        android:progressDrawable="@drawable/dual_phase_countdown_circle_fill_progress"
+        style="?android:progressBarStyleHorizontal" />
+    <com.twitter.subsystem.composer.ComposerCountView
+        android:textSize="@dimen/font_size_xsmall"
+        android:layout_gravity="center"
+        android:id="@id/character_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        style="@style/CharCount" />
+</merge>

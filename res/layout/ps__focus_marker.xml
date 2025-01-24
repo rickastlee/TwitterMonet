@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout
+        android:id="@id/focus_marker_container"
+        android:layout_width="55.0dip"
+        android:layout_height="55.0dip"
+        android:alpha="0.0">
+        <ImageView
+            android:id="@id/focus_marker_fill"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:src="@drawable/ps__focus_marker_fill" />
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:src="@drawable/ps__focus_marker_outline" />
+    </FrameLayout>
+</merge>

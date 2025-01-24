@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.ui.view.GroupedRowView
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="horizontal"
+        style="@style/ListRow">
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/title"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            style="@style/SearchSuggestionViewTitle" />
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@id/tapahead"
+            android:layout_width="@dimen/tapahead_icon_size"
+            android:layout_height="@dimen/tapahead_icon_size"
+            android:src="?iconTapAhead"
+            android:contentDescription="@string/button_tapahead"
+            app:tint="?coreColorInlineAction" />
+    </LinearLayout>
+</com.twitter.ui.view.GroupedRowView>

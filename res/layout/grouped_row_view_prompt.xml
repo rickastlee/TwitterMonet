@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.ui.view.GroupedRowView
+    android:id="@id/grouped_row_view_prompt"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ViewStub
+        android:id="@id/grouped_row_view_prompt_container_stub"
+        android:layout="@layout/tweet_row_view_prompt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_12"
+        android:layout_marginHorizontal="@dimen/space_12" />
+</com.twitter.ui.view.GroupedRowView>

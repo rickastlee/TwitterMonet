@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <tag
+        android:value="com.twitter.tweetview.core.ui.TweetViewViewDelegateBinder"
+        android:id="@id/viewBinder" />
+    <tag
+        android:value="com.twitter.tweetview.core.TweetViewViewModel"
+        android:id="@id/viewModel" />
+    <com.twitter.ui.widget.TintableImageView
+        android:id="@id/tweet_curation_action"
+        android:layout_width="@dimen/curation_action_size"
+        android:layout_height="@dimen/curation_action_size"
+        android:layout_marginBottom="@dimen/space_4"
+        android:importantForAccessibility="no"
+        android:layout_marginEnd="@dimen/space_4"
+        app:layout_constraintBottom_toTopOf="@id/card_media_tweet_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="?tweetViewCurationActionStyle">
+        <tag
+            android:value="CurationAction"
+            android:id="@id/weaverComponent" />
+    </com.twitter.ui.widget.TintableImageView>
+    <com.twitter.ui.widget.BadgeView
+        android:id="@id/tweet_promoted_badge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_8"
+        android:layout_marginBottom="@dimen/space_12"
+        android:layout_marginStart="@dimen/space_16"
+        app:badgeIcon="@drawable/ic_vector_promoted_pill"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_media_tweet_container"
+        app:showTextOnly="false"
+        style="@style/BadgeView">
+        <tag
+            android:value="com.twitter.tweetview.core.ui.badge.BadgeViewDelegateBinder"
+            android:id="@id/viewBinder" />
+        <tag
+            android:value="com.twitter.tweetview.core.TweetViewViewModel"
+            android:id="@id/viewModel" />
+    </com.twitter.ui.widget.BadgeView>
+    <com.twitter.tweetview.core.TweetViewContentHostContainer
+        android:id="@id/card_media_tweet_container"
+        android:visibility="gone"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_16"
+        android:layout_marginEnd="@dimen/space_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tweet_curation_action"
+        style="?tweetViewTweetViewContentHostContainer">
+        <tag
+            android:value="ContentHostContainer"
+            android:id="@id/weaverComponent" />
+    </com.twitter.tweetview.core.TweetViewContentHostContainer>
+</merge>

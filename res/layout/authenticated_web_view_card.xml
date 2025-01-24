@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@id/card_container"
+    android:background="@drawable/card_border_with_rounded_corners_selector"
+    android:focusable="true"
+    android:clickable="true"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <com.twitter.media.ui.fresco.FrescoMediaImageView
+        android:id="@id/card_image"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        twitter:defaultDrawable="@drawable/drawable_color_placeholder_bg"
+        twitter:errorDrawable="@drawable/bg_tweet_placeholder_photo_error"
+        twitter:layout_constraintTop_toTopOf="parent"
+        twitter:scaleType="fill">
+        <com.twitter.media.ui.fresco.FrescoDraweeView
+            android:id="@id/image"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            twitter:roundBottomEnd="false"
+            twitter:roundBottomStart="false"
+            twitter:roundedCornerRadius="@dimen/card_inner_corner_radius" />
+    </com.twitter.media.ui.fresco.FrescoMediaImageView>
+    <com.twitter.ui.components.button.legacy.TwitterButton
+        android:textSize="@dimen/font_size_small"
+        android:id="@id/card_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/card_default_spacing"
+        android:layout_marginBottom="@dimen/card_default_spacing"
+        android:text="@string/cta_view_web"
+        android:layout_marginEnd="@dimen/card_default_spacing"
+        twitter:layout_constraintBottom_toBottomOf="parent"
+        twitter:layout_constraintEnd_toEndOf="parent"
+        twitter:layout_constraintStart_toEndOf="@id/card_description"
+        twitter:layout_constraintTop_toBottomOf="@id/card_image"
+        style="@style/TwitterButtonMediumCondensedBold" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textColor="?coreColorPrimaryText"
+        android:ellipsize="end"
+        android:id="@id/card_title"
+        android:background="@drawable/bg_card_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/card_default_spacing"
+        android:maxLines="2"
+        twitter:layout_constrainedWidth="true"
+        twitter:layout_constraintStart_toStartOf="parent"
+        twitter:layout_constraintTop_toBottomOf="@id/card_image" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_small"
+        android:textColor="?coreColorSecondaryText"
+        android:ellipsize="end"
+        android:id="@id/card_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/card_default_spacing"
+        android:maxLines="2"
+        android:layout_marginStart="@dimen/card_default_spacing"
+        android:layout_marginEnd="@dimen/card_default_spacing"
+        twitter:layout_constrainedWidth="true"
+        twitter:layout_constraintBottom_toBottomOf="parent"
+        twitter:layout_constraintEnd_toStartOf="@id/card_button"
+        twitter:layout_constraintHorizontal_chainStyle="spread_inside"
+        twitter:layout_constraintStart_toStartOf="parent"
+        twitter:layout_constraintTop_toBottomOf="@id/card_title" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_small"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:ellipsize="middle"
+        android:id="@id/card_tag"
+        android:background="@drawable/bg_media_badge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/card_spacing_small"
+        android:layout_marginBottom="@dimen/card_default_spacing"
+        android:singleLine="true"
+        android:paddingStart="@dimen/card_spacing_small"
+        android:paddingEnd="@dimen/card_spacing_small"
+        android:layout_marginStart="@dimen/card_default_spacing"
+        android:layout_marginEnd="@dimen/card_spacing_small"
+        twitter:layout_constraintBottom_toBottomOf="@id/card_image"
+        twitter:layout_constraintStart_toStartOf="@id/card_image" />
+</androidx.constraintlayout.widget.ConstraintLayout>

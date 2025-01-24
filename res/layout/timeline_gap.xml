@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.android.widget.GapView
+    android:id="@id/gap"
+    android:background="@drawable/list_row_background"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    app:gapText="@string/show_more_tweets"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" />

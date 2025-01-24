@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="@drawable/bg_in_stream_ads_advertiser_attribution"
+    android:padding="@dimen/space_8"
+    android:visibility="gone"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout
+        android:layout_gravity="center"
+        android:background="@drawable/bg_in_stream_ads_advertiser_attribution_avatar"
+        android:padding="@dimen/space_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <com.twitter.media.ui.image.UserImageView
+            android:layout_gravity="center_vertical"
+            android:id="@id/advertiser_avatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            twitter:imageType="profile"
+            twitter:roundingStrategy="circle"
+            twitter:userImageSize="nano" />
+    </FrameLayout>
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_small"
+        android:textColor="@color/white"
+        android:ellipsize="end"
+        android:layout_gravity="center_vertical"
+        android:id="@id/attribution_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:layout_marginStart="@dimen/space_4" />
+</LinearLayout>

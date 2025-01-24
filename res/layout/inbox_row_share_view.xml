@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.ui.widget.HighlightedRelativeLayout
+    android:clipChildren="false"
+    android:descendantFocusability="blocksDescendants"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/share_cell_height"
+    style="@style/ShareSuggestionRow"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <com.twitter.dm.ui.DMAvatar
+        android:id="@id/dm_avatar"
+        twitter:dmImageSize="@dimen/share_suggestion_image_size"
+        style="@style/ShareSheetAvatarContainer" />
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@id/name_holder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/center_line"
+        android:layout_marginEnd="@dimen/share_sheet_item_padding_end"
+        android:layout_toEndOf="@id/dm_avatar">
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_normal"
+            android:textStyle="bold"
+            android:textColor="@color/text"
+            android:ellipsize="end"
+            android:id="@id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:layout_marginEnd="@dimen/dm_inbox_verified_badge_margin_sides" />
+        <ImageView
+            android:id="@id/dm_inbox_verified_icon"
+            android:visibility="gone"
+            android:layout_width="14.0dip"
+            android:layout_height="14.0dip"
+            android:src="?iconVerified"
+            android:scaleType="fitCenter"
+            android:contentDescription="@string/icon_verified"
+            twitter:tint="?verifiedBadgeColor" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_normal"
+            android:textColor="?coreColorSecondaryText"
+            android:ellipsize="end"
+            android:id="@id/username"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:layout_marginStart="@dimen/dm_inbox_verified_badge_margin_sides"
+            twitter:antiSpoofing="true" />
+    </LinearLayout>
+    <View
+        android:id="@id/center_line"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_centerVertical="true" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/preview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/suggested_conversation_subtext"
+        android:layout_below="@id/center_line"
+        android:paddingEnd="@dimen/message_row_preview_end_padding"
+        android:layout_marginEnd="10.0dip"
+        android:layout_toEndOf="@id/dm_avatar"
+        style="@style/ShareSuggestionRowPreview" />
+    <ImageView
+        android:id="@id/checkmark"
+        android:visibility="gone"
+        android:layout_width="24.0dip"
+        android:layout_height="24.0dip"
+        android:src="?iconCheckmark"
+        android:scaleType="fitCenter"
+        android:layout_centerVertical="true"
+        android:contentDescription="@null"
+        android:layout_marginEnd="@dimen/space_16"
+        android:layout_alignParentEnd="true"
+        twitter:tint="@color/gray_300" />
+</com.twitter.ui.widget.HighlightedRelativeLayout>

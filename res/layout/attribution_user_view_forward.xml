@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.ui.user.VideoAttributionUserView
+    android:id="@id/site_user"
+    android:background="@drawable/bg_video_user_attribution"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/space_1"
+    android:paddingEnd="@dimen/space_1"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_small"
+        android:textColor="?abstractColorDeepGray"
+        android:id="@id/default_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/video_attribution_from"
+        android:layout_alignParentStart="true" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_small"
+        android:textStyle="bold"
+        android:textColor="?coreColorPrimaryText"
+        android:id="@id/name_item"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_4"
+        android:layout_toEndOf="@id/default_text" />
+    <ImageView
+        android:id="@id/protected_item"
+        android:visibility="gone"
+        android:layout_width="@dimen/font_size_small"
+        android:layout_height="@dimen/font_size_small"
+        android:src="?iconProtected"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/icon_protected"
+        android:layout_marginStart="@dimen/space_2"
+        android:layout_toEndOf="@id/name_item"
+        app:tint="?coreColorBadgeProtected" />
+    <ImageView
+        android:id="@id/verified_item"
+        android:visibility="gone"
+        android:layout_width="@dimen/font_size_small"
+        android:layout_height="@dimen/font_size_small"
+        android:src="?iconVerified"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/icon_verified"
+        android:layout_marginStart="@dimen/space_2"
+        android:layout_toEndOf="@id/protected_item"
+        app:tint="?coreColorBadgeVerified" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_small"
+        android:textColor="?abstractColorDeepGray"
+        android:ellipsize="end"
+        android:id="@id/screenname_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:layout_marginStart="@dimen/space_4"
+        android:layout_toEndOf="@id/verified_item" />
+</com.twitter.ui.user.VideoAttributionUserView>

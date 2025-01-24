@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:id="@id/engagement_nudge_expanded"
+    android:padding="@dimen/space_16"
+    android:visibility="gone"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:layout_gravity="center_horizontal"
+        android:id="@id/expanded_heading_image"
+        android:layout_width="32.0dip"
+        android:layout_height="32.0dip"
+        android:layout_marginTop="@dimen/space_8"
+        android:layout_marginBottom="@dimen/space_16"
+        android:src="@drawable/article_nudge_title_icon"
+        android:scaleType="fitXY" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_headline_1"
+        android:textStyle="bold"
+        android:textColor="?coreColorPrimaryText"
+        android:gravity="start"
+        android:id="@id/expanded_heading_label"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_16"
+        android:text="@string/retweet_dialog_article_nudge_prompt_heading" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textColor="?coreColorSecondaryText"
+        android:gravity="start"
+        android:id="@id/expanded_label"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_16"
+        android:text="@string/retweet_dialog_article_nudge_prompt_title" />
+    <com.twitter.ui.components.button.legacy.TwitterButton
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:id="@id/nudge_cta"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_12"
+        android:text="@string/soft_intervention_nudge_find_out_more"
+        style="@style/TwitterButtonMediumBrandFilled" />
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/url_nudge_context_view" />
+</LinearLayout>

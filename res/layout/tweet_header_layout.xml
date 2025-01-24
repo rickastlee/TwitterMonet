@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:clipToPadding="false"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout
+        android:id="@id/tweet_profile_image_container"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/username"
+        app:layout_constraintEnd_toStartOf="@id/name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/name">
+        <FrameLayout
+            android:id="@id/animation_container"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+        <com.twitter.media.ui.image.UserImageView
+            android:id="@id/tweet_profile_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?tweetViewProfileImageStyle">
+            <tag
+                android:value="RingedUserImage"
+                android:id="@id/weaverComponent" />
+        </com.twitter.media.ui.image.UserImageView>
+        <ImageView
+            android:layout_gravity="end|bottom|center"
+            android:id="@id/audio_space_live_live_badge"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            android:contentDescription="@null"
+            app:srcCompat="@drawable/ic_vector_audio_space_indicator" />
+        <tag
+            android:value="OuterUserImage"
+            android:id="@id/weaverComponent" />
+    </FrameLayout>
+    <com.twitter.ui.user.MultilineUsernameView
+        android:ellipsize="end"
+        android:id="@id/name"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_4"
+        android:importantForAccessibility="no"
+        android:layout_marginHorizontal="@dimen/space_8"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toTopOf="@id/username"
+        app:layout_constraintEnd_toStartOf="@id/tweet_curation_action"
+        app:layout_constraintStart_toEndOf="@id/tweet_profile_image_container"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_chainStyle="packed"
+        style="@style/ImmersiveTweetHeader.Primary" />
+    <com.twitter.ui.widget.BadgeView
+        android:textColor="@color/lighter_gray"
+        android:id="@id/promoted_badge"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/promoted_without_advertiser"
+        app:layout_constraintBottom_toBottomOf="@id/username"
+        app:layout_constraintEnd_toStartOf="@id/text_separator"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@id/name"
+        app:layout_constraintTop_toTopOf="@id/username"
+        style="@style/BadgeView" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/text_separator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/en_dot"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="@id/promoted_badge"
+        app:layout_constraintEnd_toStartOf="@id/username"
+        app:layout_constraintStart_toEndOf="@id/promoted_badge"
+        app:layout_constraintTop_toTopOf="@id/promoted_badge"
+        style="@style/ImmersiveTweetHeader.Secondary" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:ellipsize="end"
+        android:id="@id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:importantForAccessibility="no"
+        app:antiSpoofing="true"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tweet_edit_badge"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/text_separator"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        style="@style/ImmersiveTweetHeader.Secondary" />
+    <ImageView
+        android:id="@id/tweet_edit_badge"
+        android:paddingTop="@dimen/space_2"
+        android:paddingBottom="@dimen/space_2"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="0.0dip"
+        android:adjustViewBounds="true"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="@id/username"
+        app:layout_constraintEnd_toEndOf="@id/name"
+        app:layout_constraintStart_toEndOf="@id/username"
+        app:layout_constraintTop_toTopOf="@id/username" />
+    <com.twitter.ui.widget.TintableImageView
+        android:id="@id/tweet_curation_action"
+        android:padding="@dimen/immersive_explore_curation_action_padding"
+        android:layout_width="@dimen/immersive_explore_curation_action_size"
+        android:layout_height="@dimen/immersive_explore_curation_action_size"
+        android:foreground="@drawable/ripple_selector_oval"
+        android:scaleType="centerInside"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="@id/name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/name"
+        style="?tweetViewCurationActionStyle">
+        <tag
+            android:value="CurationAction"
+            android:id="@id/weaverComponent" />
+    </com.twitter.ui.widget.TintableImageView>
+    <tag
+        android:value="com.twitter.explore.immersive.ui.tweetheader.ImmersiveTweetHeaderViewDelegateBinder"
+        android:id="@id/viewBinder" />
+    <tag
+        android:value="com.twitter.tweetview.core.TweetViewViewModel"
+        android:id="@id/viewModel" />
+</androidx.constraintlayout.widget.ConstraintLayout>

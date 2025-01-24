@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="locale"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <View
+        android:layout_gravity="top"
+        android:id="@id/divider_line"
+        android:background="@color/ps__divider"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip" />
+    <tv.periscope.android.view.PsTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textColor="@color/ps__primary_text"
+        android:layout_gravity="start|center"
+        android:id="@id/divider_title"
+        android:padding="@dimen/ps__standard_spacing_16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="true" />
+</FrameLayout>

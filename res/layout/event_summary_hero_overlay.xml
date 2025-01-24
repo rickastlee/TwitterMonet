@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:id="@id/event_summary_hero_overlay"
+    android:paddingBottom="@dimen/space_12"
+    android:clipChildren="false"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/space_16"
+    android:paddingEnd="@dimen/space_16"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include
+        layout="@layout/event_summary_hero_subtitle" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textColor="@color/white"
+        android:id="@id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="3"
+        style="@style/GuideText.HeroHeadline" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textColor="@color/white"
+        android:ellipsize="end"
+        android:id="@id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_4"
+        android:layout_marginBottom="@dimen/space_8"
+        android:maxLines="2"
+        style="@style/GuideText.Normal" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@id/grouped_trends_contents_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textColor="@color/white"
+            android:id="@id/grouped_trends_contents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:importantForAccessibility="noHideDescendants"
+            android:paddingEnd="@dimen/space_4"
+            style="@style/GuideText.HeroPreHeadline.Normal" />
+    </LinearLayout>
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@id/social_proof_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <com.twitter.ui.widget.FacepileView
+            android:id="@id/face_pile"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_4"
+            android:layout_marginBottom="@dimen/space_4"
+            android:layout_marginEnd="@dimen/space_4"
+            app:avatarSize="@dimen/mini_user_image_size"
+            app:maxAvatars="2"
+            app:overlapPercent="0.25" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textColor="@color/white"
+            android:ellipsize="end"
+            android:id="@id/social_proof_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            style="?guideCellSubtitleStyle" />
+    </LinearLayout>
+    <com.twitter.ui.widget.BadgeView
+        android:textColor="@color/lighter_gray"
+        android:id="@id/promoted_badge"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_2"
+        style="@style/BadgeView.Guide" />
+</LinearLayout>

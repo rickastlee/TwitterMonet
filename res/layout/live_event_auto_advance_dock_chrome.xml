@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@id/live_event_auto_advance_root"
+    android:focusable="true"
+    android:clickable="true"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.twitter.media.ui.fresco.FrescoMediaImageView
+        android:id="@id/next_video_thumbnail"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        app:defaultDrawable="@color/black"
+        app:errorDrawable="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:scaleType="fill" />
+    <com.twitter.ui.view.CircleProgressBar
+        android:id="@id/circle_progress"
+        android:layout_width="@dimen/live_event_circle_progress_size"
+        android:layout_height="@dimen/live_event_circle_progress_size"
+        android:contentDescription="@string/live_event_up_next_content_description"
+        app:centerDrawable="@drawable/ic_vector_play"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+        app:progressBackgroundColor="@color/white"
+        app:progressColor="@color/twitter_blue" />
+</androidx.constraintlayout.widget.ConstraintLayout>

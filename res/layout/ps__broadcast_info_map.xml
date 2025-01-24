@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:padding="@dimen/ps__standard_spacing_16"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto">
+    <com.google.android.gms.maps.MapView
+        android:id="@id/map"
+        android:clickable="false"
+        android:layout_width="fill_parent"
+        android:layout_height="168.0dip"
+        map:cameraZoom="12.0"
+        map:liteMode="true"
+        map:uiMapToolbar="false" />
+    <tv.periscope.android.ui.view.LocalTimeView
+        android:textSize="12.0sp"
+        android:textStyle="bold"
+        android:id="@id/broadcast_local_time"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="3.0dip" />
+</FrameLayout>

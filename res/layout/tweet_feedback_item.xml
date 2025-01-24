@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/full_page_carousel_horizontal_padding"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@drawable/feedback_card_background"
+        android:paddingBottom="@dimen/space_8"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <View
+            android:id="@id/tweet_button_divider"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/border_thickness"
+            android:layout_marginBottom="@dimen/space_8"
+            twitter:layout_constraintBottom_toTopOf="@id/barrier"
+            twitter:layout_constraintEnd_toEndOf="parent"
+            twitter:layout_constraintStart_toStartOf="parent"
+            style="@style/HorizontalRule" />
+        <com.twitter.tweetview.core.QuoteView
+            android:id="@id/tweet_quote"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            twitter:layout_constraintBottom_toTopOf="@id/tweet_button_divider"
+            twitter:layout_constraintEnd_toEndOf="parent"
+            twitter:layout_constraintStart_toStartOf="parent"
+            twitter:layout_constraintTop_toTopOf="parent"
+            style="@style/FeedbackQuoteView" />
+        <com.twitter.ui.widget.TombstoneView
+            android:id="@id/interstitial_view"
+            android:visibility="gone"
+            android:layout_margin="@dimen/space_8"
+            twitter:layout_constraintBottom_toTopOf="@id/tweet_button_divider"
+            twitter:layout_constraintEnd_toEndOf="parent"
+            twitter:layout_constraintStart_toStartOf="parent"
+            twitter:layout_constraintTop_toTopOf="parent"
+            style="@style/ListRow.Tombstone" />
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@id/barrier"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            twitter:barrierDirection="top"
+            twitter:constraint_referenced_ids="negative_button,positive_button"
+            twitter:layout_constraintEnd_toEndOf="parent"
+            twitter:layout_constraintStart_toStartOf="parent" />
+        <com.twitter.ui.components.button.compose.HorizonComposeButton
+            android:id="@id/negative_button"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_12"
+            android:layout_marginEnd="@dimen/space_2"
+            twitter:layout_constraintEnd_toStartOf="@id/skip"
+            twitter:layout_constraintStart_toStartOf="parent"
+            twitter:layout_constraintTop_toBottomOf="@id/tweet_button_divider"
+            style="@style/TwitterButtonMediumRegular" />
+        <com.twitter.ui.components.button.compose.HorizonComposeButton
+            android:id="@id/skip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_8"
+            android:text="@string/feedback_button_skip"
+            twitter:layout_constraintBottom_toBottomOf="parent"
+            twitter:layout_constraintEnd_toStartOf="@id/positive_button"
+            twitter:layout_constraintStart_toEndOf="@id/negative_button"
+            twitter:layout_constraintTop_toBottomOf="@id/tweet_button_divider"
+            style="@style/TwitterButtonMediumPrimaryText" />
+        <com.twitter.ui.components.button.compose.HorizonComposeButton
+            android:id="@id/positive_button"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_2"
+            android:layout_marginEnd="@dimen/space_12"
+            twitter:layout_constraintEnd_toEndOf="parent"
+            twitter:layout_constraintStart_toEndOf="@id/skip"
+            twitter:layout_constraintTop_toBottomOf="@id/tweet_button_divider"
+            style="@style/TwitterButtonMediumPrimaryFilled" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

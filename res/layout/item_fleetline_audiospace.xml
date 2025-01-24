@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:paddingTop="@dimen/space_8"
+    android:paddingBottom="6.0dip"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/fleetline_height"
+    android:paddingStart="3.0dip"
+    android:paddingEnd="3.0dip"
+    android:layout_marginStart="6.0dip"
+    android:layout_marginEnd="6.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout
+        android:id="@id/animation_container"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_width="0.0dip"
+        android:layout_height="@dimen/fleetline_spaces_item_height"
+        app:layout_constraintBottom_toBottomOf="@id/fleet_audiospace_avatar_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/fleet_audiospace_avatar_container" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@id/fleet_audiospace_avatar_container"
+        android:background="@drawable/fleetsline_audiospace_multi_item_bg"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_width="0.0dip"
+        android:layout_height="@dimen/fleetline_spaces_item_height"
+        android:paddingStart="2.0dip"
+        android:paddingEnd="2.0dip"
+        app:layout_constraintBottom_toTopOf="@id/fleet_audiospace_space_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:textSize="@dimen/font_size_small"
+            android:gravity="center"
+            android:id="@id/fleet_audiospace_info_text"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:fontFamily="?fontFamilyMedium"
+            android:paddingStart="8.0dip"
+            android:paddingEnd="@dimen/space_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/fleet_audiospace_user_image_3"
+            app:layout_constraintTop_toTopOf="parent" />
+        <com.twitter.media.ui.image.UserImageView
+            android:id="@id/fleet_audiospace_user_image_3"
+            android:visibility="gone"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:layout_width="54.0dip"
+            android:layout_height="54.0dip"
+            android:layout_marginStart="70.0dip"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:scaleMode="fit"
+            app:userImageSize="normal" />
+        <com.twitter.media.ui.image.UserImageView
+            android:id="@id/fleet_audiospace_user_image_2"
+            android:visibility="gone"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:layout_width="54.0dip"
+            android:layout_height="54.0dip"
+            android:layout_marginStart="35.0dip"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:scaleMode="fit"
+            app:userImageSize="normal" />
+        <com.twitter.media.ui.image.UserImageView
+            android:id="@id/fleet_audiospace_user_image_1"
+            android:layout_width="54.0dip"
+            android:layout_height="54.0dip"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:scaleMode="fit"
+            app:userImageSize="normal" />
+        <ImageView
+            android:id="@id/fleetline_employee_only_badge"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_audio_space_indicator_employee_only"
+            android:scaleType="fitCenter"
+            android:contentDescription="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@id/fleetline_super_follower_only_badge"
+        android:visibility="gone"
+        android:layout_width="12.0dip"
+        android:layout_height="12.0dip"
+        android:src="@drawable/ic_vector_superfollow_stroke"
+        android:scaleType="fitCenter"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toBottomOf="@id/fleet_audiospace_space_name"
+        app:layout_constraintEnd_toStartOf="@id/fleet_audiospace_space_name"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/fleet_audiospace_space_name"
+        app:tint="?abstractColorText" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_xsmall"
+        android:textColor="?abstractColorText"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:id="@id/fleet_audiospace_space_name"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:lines="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/fleetline_super_follower_only_badge"
+        app:layout_constraintTop_toBottomOf="@id/fleet_audiospace_avatar_container"
+        app:layout_goneMarginStart="0.0dip" />
+    <tag
+        android:value="com.twitter.rooms.ui.spacebar.item.compact.FleetlineAudioSpaceItemViewModel"
+        android:id="@id/viewModel" />
+    <tag
+        android:value="com.twitter.weaver.base.WeaverViewDelegateBinder"
+        android:id="@id/viewBinder" />
+</androidx.constraintlayout.widget.ConstraintLayout>

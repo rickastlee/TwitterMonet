@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="@color/list_bg"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <View
+        android:layout_marginBottom="@dimen/space_12"
+        style="@style/HorizontalRule" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/profile_smart_blocked_autoblocked_by_twitter_title"
+        style="@style/ProfileNotAllowedHeader" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/profile_smart_blocked_autoblocked_by_twitter_description"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@style/ProfileNotAllowedBody" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/profile_smart_blocked_remember_the_human_title"
+        style="@style/ProfileNotAllowedTitle" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/profile_smart_blocked_remember_the_human_description"
+        style="@style/ProfileNotAllowedBody" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/profile_smart_blocked_avoid_repetitive_title"
+        style="@style/ProfileNotAllowedTitle" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/profile_smart_blocked_avoid_repetitive_description"
+        style="@style/ProfileNotAllowedBody" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/profile_smart_blocked_skip_insults_title"
+        style="@style/ProfileNotAllowedTitle" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/profile_smart_blocked_skip_insults_description"
+        style="@style/ProfileNotAllowedBody" />
+</LinearLayout>

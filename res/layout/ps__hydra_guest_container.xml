@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@id/hydra_guest_container"
+    android:visibility="gone"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/ps__standard_spacing_10"
+    android:paddingEnd="@dimen/ps__min_touch_target_size"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

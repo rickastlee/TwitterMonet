@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include
+        android:id="@id/stat_divider"
+        layout="@layout/divider" />
+    <com.google.android.flexbox.FlexboxLayout
+        android:layout_below="@id/stat_divider"
+        app:dividerDrawableHorizontal="@drawable/divider_line"
+        app:flexWrap="wrap"
+        app:showDividerHorizontal="middle"
+        style="@style/TweetStats">
+        <com.twitter.ui.tweet.TweetStatView
+            android:id="@id/retweets_stat"
+            style="@style/TweetStatItem" />
+        <com.twitter.ui.tweet.TweetStatView
+            android:id="@id/quote_tweets_stat"
+            style="@style/TweetStatItem" />
+        <com.twitter.ui.tweet.TweetStatView
+            android:id="@id/favorites_stat"
+            style="@style/TweetStatItem" />
+        <com.twitter.ui.tweet.TweetStatView
+            android:id="@id/bookmarks_stat"
+            style="@style/TweetStatItem" />
+    </com.google.android.flexbox.FlexboxLayout>
+    <tag
+        android:value="FocalTweetStats"
+        android:id="@id/weaverComponent" />
+</RelativeLayout>

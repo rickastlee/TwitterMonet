@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:id="@id/emptyLayout"
+    android:visibility="gone"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="32.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <tag
+        android:value="EmptyLayout"
+        android:id="@id/weaverComponent" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_large"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24.0dip"
+        android:text="@string/open_asset_prompt">
+        <tag
+            android:value="EmptyText"
+            android:id="@id/weaverComponent" />
+    </com.twitter.ui.components.text.legacy.TypefacesTextView>
+    <androidx.core.widget.ContentLoadingProgressBar
+        android:id="@id/loading"
+        android:layout_width="40.0dip"
+        android:layout_height="40.0dip"
+        style="@style/Widget.AppCompat.ProgressBar">
+        <tag
+            android:value="LoadingBar"
+            android:id="@id/weaverComponent" />
+    </androidx.core.widget.ContentLoadingProgressBar>
+    <com.twitter.ui.components.button.compose.HorizonComposeButton
+        android:icon="@drawable/ic_vector_heart_burst"
+        android:id="@id/openButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/open_asset"
+        style="@style/TwitterButtonLargeBrandFilled">
+        <tag
+            android:value="OpenAsset"
+            android:id="@id/weaverComponent" />
+    </com.twitter.ui.components.button.compose.HorizonComposeButton>
+</LinearLayout>

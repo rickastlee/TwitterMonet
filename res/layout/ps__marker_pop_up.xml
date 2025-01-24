@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@id/marker_view"
+    android:paddingTop="@dimen/ps__standard_spacing_10"
+    android:paddingBottom="@dimen/ps__standard_spacing_10"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/ps__standard_spacing_10"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:id="@id/icon_participants"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ps__ic_participants"
+        android:scaleType="center"
+        android:layout_centerVertical="true"
+        android:contentDescription="@null" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textAppearance="?android:textAppearanceSmall"
+        android:textSize="@dimen/font_size_small"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:id="@id/count_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/ps__standard_spacing_10"
+        android:layout_marginEnd="@dimen/ps__standard_spacing_10"
+        android:layout_toEndOf="@id/icon_participants" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textAppearance="?android:textAppearanceSmall"
+        android:textSize="@dimen/font_size_xsmall"
+        android:textColor="@android:color/white"
+        android:id="@id/peak_title"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ps__peak_value"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="-5.0dip"
+        android:layout_marginEnd="@dimen/ps__standard_spacing_10"
+        android:layout_toEndOf="@id/count_value" />
+</RelativeLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <com.twitter.ui.widget.TwitterPreferenceCategory
+        twitter:allowDividerAbove="false"
+        twitter:allowDividerBelow="true">
+        <Preference
+            android:enabled="false"
+            android:title="@string/reader_pref_summary" />
+        <DropDownPreference
+            android:persistent="true"
+            android:entries="@array/reader_text_sizes_label"
+            android:title="@string/reader_text_size_label"
+            android:key="reader_mode_text_size"
+            android:summary="%s"
+            android:defaultValue="@string/reader_mode_text_size_medium"
+            android:entryValues="@array/reader_text_sizes" />
+    </com.twitter.ui.widget.TwitterPreferenceCategory>
+</PreferenceScreen>

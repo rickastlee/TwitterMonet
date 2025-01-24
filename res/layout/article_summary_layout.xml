@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:orientation="horizontal"
+    android:paddingTop="@dimen/space_12"
+    android:paddingBottom="@dimen/space_8"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:foreground="?selectableItemBackground"
+    android:paddingHorizontal="@dimen/space_16"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@id/thumbnail_barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="start"
+        app:constraint_referenced_ids="thumbnail_view" />
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@id/social_proof_barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="thumbnail_view, description" />
+    <androidx.constraintlayout.widget.Group
+        android:id="@id/thumbnail_group"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="space, thumbnail_view" />
+    <Space
+        android:id="@id/space"
+        android:visibility="visible"
+        android:layout_width="@dimen/space_12"
+        android:layout_height="fill_parent"
+        app:layout_constraintEnd_toStartOf="@id/thumbnail_view"
+        app:layout_constraintStart_toEndOf="@id/thumbnail_barrier" />
+    <com.twitter.media.ui.fresco.FrescoMediaImageView
+        android:id="@id/thumbnail_view"
+        android:visibility="visible"
+        android:layout_width="88.0dip"
+        android:layout_height="88.0dip"
+        android:layout_marginBottom="@dimen/space_12"
+        app:defaultDrawable="@drawable/drawable_color_placeholder_bg"
+        app:imageCornerRadius="@dimen/corner_radius_large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/space"
+        app:layout_constraintTop_toTopOf="parent"
+        app:scaleType="fill" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:ellipsize="end"
+        android:id="@id/domain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toStartOf="@id/supporting_text_separator"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/GuideCellText.Secondary.SingleLine.Bold" />
+    <androidx.constraintlayout.widget.Group
+        android:id="@id/timestamp_group"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="supporting_text_separator, timestamp" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/supporting_text_separator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/en_dot"
+        app:layout_constraintEnd_toStartOf="@id/timestamp"
+        app:layout_constraintStart_toEndOf="@id/domain"
+        style="@style/GuideCellText.Secondary.SingleLine" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/timestamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/thumbnail_barrier"
+        app:layout_constraintStart_toEndOf="@id/supporting_text_separator"
+        style="@style/GuideCellText.Secondary.SingleLine" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_headline_2"
+        android:textStyle="bold"
+        android:id="@id/title"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_8"
+        android:maxLines="4"
+        app:layout_constraintEnd_toStartOf="@id/thumbnail_barrier"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/domain" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textColor="?coreColorSecondaryText"
+        android:ellipsize="end"
+        android:id="@id/description"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_4"
+        android:maxLines="2"
+        app:largeTextBoldOverride="false"
+        app:layout_constraintEnd_toStartOf="@id/thumbnail_barrier"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+    <LinearLayout
+        android:id="@id/social_proof_container"
+        android:paddingTop="@dimen/space_8"
+        android:paddingBottom="@dimen/space_8"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:foreground="?selectableItemBackground"
+        app:layout_constraintTop_toBottomOf="@id/social_proof_barrier"
+        app:layout_goneMarginTop="@dimen/space_8">
+        <com.twitter.ui.widget.FacepileView
+            android:id="@id/face_pile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:avatarSize="@dimen/nano_user_image_size"
+            app:maxAvatars="10" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textStyle="bold"
+            android:textColor="?colorPrimary"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:id="@id/social_proof_text"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:maxLines="1"
+            android:layout_marginStart="@dimen/space_8" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

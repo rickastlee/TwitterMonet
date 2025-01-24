@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:id="@id/root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <include
+            layout="@layout/toolbar_container" />
+        <com.twitter.ui.widget.TwitterEditText
+            android:id="@id/muted_keyword_composer_keyword"
+            android:layout_marginTop="@dimen/standard_spacing"
+            android:hint="@string/muted_keywords_composer_keyword_hint"
+            android:maxLines="5"
+            android:inputType="textNoSuggestions"
+            android:imeOptions="actionNext"
+            style="@style/MutedKeywordEdit" />
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true">
+                <com.twitter.ui.components.text.legacy.TypefacesTextView
+                    android:textSize="@dimen/font_size_normal"
+                    android:textStyle="normal"
+                    android:textColor="?coreColorPrimaryText"
+                    android:id="@id/muted_keyword_composer_update_keyword_text"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/standard_spacing"
+                    android:maxLines="5"
+                    android:textAlignment="viewStart"
+                    style="@style/MutedKeywordEdit" />
+                <com.twitter.ui.components.text.legacy.TypefacesTextView
+                    android:id="@id/help_text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mute_keywords_composer_help_text"
+                    android:textAlignment="viewStart"
+                    style="@style/MutedKeywordComposerEducationText" />
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/border_thickness"
+                    style="@style/HorizontalRule" />
+                <com.twitter.ui.components.text.legacy.TypefacesTextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/muted_keyword_composer_section_where"
+                    style="@style/PreferenceCategoryVDLHeaderStyle" />
+                <LinearLayout
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:id="@id/muted_keyword_composer_show_in_timeline"
+                    android:background="@drawable/list_row_background"
+                    android:paddingTop="@dimen/list_row_padding_vertical_small"
+                    android:paddingBottom="@dimen/list_row_padding_vertical_small"
+                    android:clickable="true"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/list_row_padding_horizontal"
+                    android:paddingEnd="@dimen/list_row_padding_horizontal">
+                    <com.twitter.ui.components.text.legacy.TypefacesTextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:text="@string/muted_keyword_composer_show_in_surface_timeline"
+                        android:layout_weight="1.0"
+                        android:textAlignment="viewStart"
+                        style="@style/MuteKeywordHeaderText" />
+                    <CheckBox
+                        android:id="@id/muted_keyword_composer_show_in_timeline_check"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:id="@id/muted_keyword_composer_show_in_notifications"
+                    android:background="@drawable/list_row_background"
+                    android:paddingTop="@dimen/list_row_padding_vertical_small"
+                    android:paddingBottom="@dimen/list_row_padding_vertical_small"
+                    android:clickable="true"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/list_row_padding_horizontal"
+                    android:paddingEnd="@dimen/list_row_padding_horizontal">
+                    <com.twitter.ui.components.text.legacy.TypefacesTextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:text="@string/muted_keyword_composer_show_in_surface_notifications"
+                        android:layout_weight="1.0"
+                        android:textAlignment="viewStart"
+                        style="@style/MuteKeywordHeaderText" />
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@id/muted_keyword_composer_show_in_notifications_check"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <RadioGroup
+                    android:id="@id/muted_keyword_composer_radio_group"
+                    android:background="@drawable/list_row_background"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/list_row_padding_horizontal"
+                    android:paddingEnd="@dimen/list_row_padding_horizontal">
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/border_thickness"
+                        style="@style/HorizontalRule" />
+                    <RadioButton
+                        android:layout_gravity="start"
+                        android:id="@id/muted_keyword_composer_option_anyone_check"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/muted_keyword_composer_surface_notifications_option_anyone"
+                        android:textAlignment="textStart"
+                        android:layoutDirection="rtl" />
+                    <RadioButton
+                        android:layout_gravity="start"
+                        android:id="@id/muted_keyword_composer_option_only_follow_check"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/muted_keyword_composer_surface_notifications_option_only_follow"
+                        android:textAlignment="textStart"
+                        android:layoutDirection="rtl" />
+                </RadioGroup>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/border_thickness"
+                    style="@style/HorizontalRule" />
+                <com.twitter.ui.components.text.legacy.TypefacesTextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/muted_keyword_composer_section_duration"
+                    style="@style/PreferenceCategoryVDLHeaderStyle" />
+                <com.twitter.app.safety.mutedkeywords.composer.CheckboxListChoiceView
+                    android:id="@id/muted_keyword_composer_valid_until"
+                    android:background="@drawable/list_row_background"
+                    android:paddingTop="@dimen/section_padding"
+                    android:paddingBottom="@dimen/section_padding"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/list_row_padding_horizontal"
+                    android:paddingEnd="@dimen/list_row_padding_horizontal" />
+                <View
+                    android:id="@id/delete_button_gap"
+                    android:visibility="gone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/border_thickness"
+                    style="@style/HorizontalRule" />
+                <com.twitter.ui.components.text.legacy.TypefacesTextView
+                    android:textColor="@color/destructive_red"
+                    android:id="@id/delete_view"
+                    android:background="@drawable/list_row_background"
+                    android:paddingTop="@dimen/section_padding"
+                    android:paddingBottom="@dimen/section_padding"
+                    android:visibility="gone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/delete_word"
+                    android:textAlignment="viewStart"
+                    android:paddingStart="@dimen/list_row_padding_horizontal"
+                    android:paddingEnd="@dimen/list_row_padding_horizontal"
+                    style="@style/MuteKeywordHeaderText" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout
+        android:id="@id/shop_spotlight_container"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <include
+            layout="@layout/shop_carousel" />
+    </FrameLayout>
+    <FrameLayout
+        android:id="@id/shop_button_container"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <include
+            layout="@layout/shopbutton_view" />
+    </FrameLayout>
+    <tag
+        android:value="shop_module_binder"
+        android:id="@id/weaverComponent" />
+</LinearLayout>

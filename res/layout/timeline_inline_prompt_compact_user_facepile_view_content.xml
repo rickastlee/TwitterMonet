@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:orientation="vertical"
+        android:paddingTop="@dimen/space_12"
+        android:paddingBottom="@dimen/space_12"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/space_16"
+        android:paddingEnd="@dimen/medium_button_start_end_margin">
+        <ImageView
+            android:id="@id/caret"
+            android:background="@drawable/ripple_pressed_selector_rectangle"
+            android:clickable="true"
+            android:layout_width="@dimen/space_24"
+            android:layout_height="@dimen/space_24"
+            android:src="@drawable/ic_vector_close"
+            android:contentDescription="?dismissString"
+            twitter:layout_constraintEnd_toEndOf="parent"
+            twitter:layout_constraintHorizontal_bias="1.0"
+            twitter:layout_constraintStart_toEndOf="@id/header"
+            twitter:layout_constraintTop_toTopOf="parent"
+            twitter:tint="?coreColorInlineAction"
+            style="@style/TimelineMessageCaretIcon" />
+        <LinearLayout
+            android:gravity="start"
+            android:layout_gravity="start"
+            android:orientation="vertical"
+            android:id="@id/buttons_container"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_32"
+            android:paddingHorizontal="@dimen/space_32"
+            twitter:layout_constraintBottom_toBottomOf="parent"
+            twitter:layout_constraintStart_toStartOf="parent">
+            <com.twitter.ui.components.button.compose.HorizonComposeButton
+                android:id="@id/primary_action"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TimelineMessagePrimaryAction" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textSize="@dimen/font_size_body"
+                android:textColor="?coreColorPrimaryText"
+                android:id="@id/body"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/space_28"
+                android:paddingHorizontal="@dimen/space_32" />
+            <com.twitter.ui.widget.UnpaddedTextLayoutView
+                android:textSize="@dimen/font_size_small"
+                android:textStyle="bold"
+                android:textColor="?textColorSecondary"
+                android:id="@id/social_context_text"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_2"
+                android:layout_marginBottom="@dimen/space_4" />
+        </LinearLayout>
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_large"
+            android:textColor="?coreColorPrimaryText"
+            android:id="@id/header"
+            android:paddingBottom="@dimen/space_12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            twitter:layout_constraintStart_toStartOf="parent"
+            twitter:layout_constraintTop_toTopOf="parent" />
+        <include
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            twitter:layout_constraintEnd_toEndOf="parent"
+            twitter:layout_constraintHorizontal_bias="0.0"
+            twitter:layout_constraintStart_toStartOf="parent"
+            twitter:layout_constraintTop_toBottomOf="@id/header"
+            layout="@layout/bonus_follows_compact_facepile_and_button_container" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</merge>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <FrameLayout
+            android:id="@id/slate_extra"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/slate_view_text_padding"
+            android:layout_marginEnd="@dimen/slate_view_text_padding"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+        <com.twitter.media.ui.fresco.FrescoMediaImageView
+            android:id="@id/slate_image"
+            android:layout_width="0.0dip"
+            android:layout_height="0.0dip"
+            android:contentDescription="@string/live_event_header_image_content_description"
+            app:defaultDrawable="@drawable/ic_vector_placeholder_live_nomargin"
+            app:errorDrawable="@drawable/ic_vector_placeholder_error_nomargin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:scaleType="fill">
+            <com.twitter.media.ui.fresco.FrescoDraweeView
+                android:id="@id/image"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+        </com.twitter.media.ui.fresco.FrescoMediaImageView>
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/slate_attribution"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/slate_view_text_padding"
+            android:paddingEnd="@dimen/slate_view_text_padding"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            style="@style/LiveEventSlateText.Attribution" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/slate_display_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/slate_view_text_padding"
+            android:layout_marginStart="@dimen/slate_view_text_padding"
+            android:layout_marginEnd="@dimen/slate_view_text_padding"
+            app:layout_constraintBottom_toTopOf="@id/slate_attribution"
+            app:layout_constraintStart_toStartOf="parent"
+            style="@style/LiveEventSlateText.DisplayName" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/slate_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/slate_view_text_padding"
+            android:layout_marginStart="@dimen/slate_view_text_padding"
+            android:layout_marginEnd="@dimen/slate_view_text_padding"
+            app:layout_constraintBottom_toTopOf="@id/slate_display_name"
+            app:layout_constraintStart_toStartOf="parent"
+            style="@style/LiveEventSlateText.Title" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/slate_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/slate_view_text_padding"
+            android:layout_marginStart="@dimen/slate_view_text_padding"
+            android:layout_marginEnd="@dimen/slate_view_text_padding"
+            app:layout_constraintBottom_toTopOf="@id/slate_title"
+            app:layout_constraintStart_toStartOf="parent"
+            style="@style/LiveEventSlateText.Label" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</merge>

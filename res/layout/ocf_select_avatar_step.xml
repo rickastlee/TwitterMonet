@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:orientation="vertical"
+    android:id="@id/avatar_container"
+    android:paddingTop="@dimen/ocf_screen_padding_wide"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
+        android:id="@id/avatar_upload_cta"
+        android:background="@drawable/ocf_setup_profile_avatar_container"
+        android:paddingBottom="@dimen/ocf_large_spacing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="@dimen/setup_profile_avatar_container_outer_length"
+        android:minHeight="@dimen/setup_profile_avatar_container_outer_length"
+        android:paddingHorizontal="@dimen/ocf_large_spacing">
+        <ImageView
+            android:layout_gravity="center_horizontal"
+            android:layout_width="@dimen/setup_profile_avatar_cta_image_size"
+            android:layout_height="@dimen/setup_profile_avatar_cta_image_size"
+            android:layout_marginTop="@dimen/setup_profile_avatar_cta_image_margin_top"
+            android:src="@drawable/ic_vector_camera_plus"
+            android:maxHeight="@dimen/setup_profile_avatar_cta_image_max_height"
+            android:contentDescription="@null"
+            twitter:tint="@color/twitter_blue" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/setup_profile_avatar_cta_text_margin_top"
+            android:text="@string/profile_photo_cta_text"
+            style="@style/SetupProfileImageCtaStyle" />
+    </LinearLayout>
+    <com.twitter.media.ui.image.UserImageView
+        android:layout_gravity="center"
+        android:id="@id/avatar_image"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        twitter:imageCornerRadius="@dimen/setup_profile_avatar_container_inner_corner_radius"
+        twitter:scaleType="fill"
+        twitter:userImageSize="@dimen/setup_profile_avatar_container_inner_length" />
+</FrameLayout>

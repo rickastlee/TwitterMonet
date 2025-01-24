@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:id="@id/avatar_container"
+        android:padding="@dimen/profile_avatar_padding"
+        android:layout_width="@dimen/profile_avatar_background_height"
+        android:layout_height="@dimen/profile_avatar_background_height"
+        app:layout_constraintBottom_toBottomOf="@id/profile_background_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_background_image">
+        <com.twitter.media.ui.image.UserImageView
+            android:id="@id/user_image"
+            android:layout_width="@dimen/profile_avatar_height"
+            android:layout_height="@dimen/profile_avatar_height"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/spaces_profile_profile_image"
+            app:singleImageView="true"
+            app:userImageSize="@dimen/user_image_size" />
+    </RelativeLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@id/name_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_8"
+        android:layout_marginBottom="@dimen/space_8"
+        android:layout_below="@id/avatar_container"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true">
+        <include
+            layout="@layout/user_info_name" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:id="@id/screenname_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="?userWithBioScreenNameStyle" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textSize="?followsYouTextSize"
+                android:textColor="?coreColorSecondaryText"
+                android:id="@id/follows_you"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="?followsYouText"
+                android:layout_marginStart="@dimen/space_4"
+                style="?profileFollowsYouStyle" />
+        </LinearLayout>
+    </LinearLayout>
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/profile_description_item"
+        android:visibility="visible"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name_container"
+        android:lineSpacingExtra="2.0sp"
+        android:layout_toStartOf="@id/action_button_layout"
+        android:layout_alignParentEnd="true"
+        style="?userWithBioDescriptionStyle" />
+    <com.twitter.ui.widget.BadgeView
+        android:id="@id/promoted"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile_description_item"
+        style="@style/BadgeView" />
+</merge>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:background="@color/ps__black_70"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@id/waiting_for_request_accept_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <tv.periscope.android.view.PsButton
+            android:gravity="center_horizontal"
+            android:id="@id/cancel_call_in_button"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/ps__standard_spacing_40"
+            android:text="@string/ps__hydra_cancel_call_in"
+            android:textAllCaps="false"
+            android:layout_marginStart="@dimen/ps__standard_spacing_40"
+            android:layout_marginEnd="@dimen/ps__standard_spacing_40"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            style="@style/ps__Button" />
+        <tv.periscope.android.view.PsTextView
+            android:textSize="@dimen/ps__standard_text_size"
+            android:textColor="@color/ps__white"
+            android:gravity="center_horizontal"
+            android:id="@id/description"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="60.0dip"
+            android:text="@string/ps__hydra_cancel_call_in_description"
+            app:layout_constraintBottom_toTopOf="@id/cancel_call_in_button"
+            app:layout_constraintEnd_toEndOf="@id/cancel_call_in_button"
+            app:layout_constraintStart_toStartOf="@id/cancel_call_in_button" />
+        <tv.periscope.android.view.PsTextView
+            android:textSize="18.0sp"
+            android:textColor="@color/ps__white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/ps__standard_spacing_20"
+            android:text="@string/ps__hydra_waiting_to_be_brought_in"
+            app:layout_constraintBottom_toTopOf="@id/description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:id="@id/request_accept_and_preview_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <tv.periscope.android.view.PsTextView
+            android:textSize="@dimen/font_size_xlarge"
+            android:textColor="@color/ps__white"
+            android:gravity="center"
+            android:id="@id/joining_as_guest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/ps__standard_spacing_40"
+            android:text="@string/ps__hydra_joining_as_guest"
+            app:layout_constraintBottom_toTopOf="@id/preview_container"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+        <FrameLayout
+            android:id="@id/preview_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <tv.periscope.android.view.SquareCardView
+                android:layout_gravity="center"
+                android:id="@id/profile_image_container"
+                android:layout_width="@dimen/ps__hydra_stream_container_medium_width"
+                android:layout_height="@dimen/ps__hydra_stream_container_medium_width"
+                app:cardCornerRadius="@dimen/ps__hydra_stream_container_radius">
+                <tv.periscope.android.hydra.HydraAudioIndicatingProfileImage
+                    android:id="@id/profile_image"
+                    android:background="@color/ps__grey"
+                    android:padding="@dimen/ps__standard_spacing_20"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:contentDescription="@string/ps__accessibility_joining_as_guest" />
+                <View
+                    android:id="@id/profile_image_overlay"
+                    android:background="@color/ps__hydra_overlay_red"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" />
+                <ProgressBar
+                    android:layout_gravity="center"
+                    android:id="@id/progress_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:indeterminate="true" />
+            </tv.periscope.android.view.SquareCardView>
+            <tv.periscope.android.view.PsTextView
+                android:textSize="50.0sp"
+                android:textColor="@color/ps__white"
+                android:layout_gravity="center"
+                android:id="@id/countdown_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </FrameLayout>
+        <tv.periscope.android.view.PsButton
+            android:textSize="@dimen/font_size_normal"
+            android:textStyle="bold"
+            android:id="@id/cancel_button"
+            android:layout_width="150.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ps__standard_spacing_30"
+            android:text="@string/ps__hydra_cancel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/preview_container"
+            style="@style/ps__DoneBtn" />
+        <tv.periscope.android.view.PsButton
+            android:textColor="@color/ps__white"
+            android:gravity="center"
+            android:id="@id/hang_up_button"
+            android:background="@color/ps__red"
+            android:layout_width="300.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/ps__standard_spacing_10"
+            android:minWidth="@dimen/ps__btn_min_width"
+            android:minHeight="@dimen/ps__btn_min_height"
+            android:text="@string/ps__hydra_hang_up"
+            app:layout_constraintBottom_toTopOf="@id/stop_sharing"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+        <tv.periscope.android.view.PsTextView
+            android:textSize="@dimen/ps__standard_text_size"
+            android:textColor="@color/ps__white"
+            android:id="@id/stop_sharing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/ps__standard_spacing_40"
+            android:text="@string/ps__hydra_stop_sharing"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

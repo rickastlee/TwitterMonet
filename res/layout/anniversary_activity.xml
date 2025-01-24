@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <include
+            layout="@layout/app_toolbar_with_dismiss" />
+        <com.twitter.media.ui.fresco.FrescoMediaImageView
+            android:id="@id/anniversary_landing_image"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            twitter:aspect_ratio="@dimen/defaultCropAspectRatio"
+            twitter:defaultDrawable="@color/gray_200_opacity_30"
+            twitter:scaleType="fill" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_large"
+            android:textColor="?coreColorPrimaryText"
+            android:gravity="center_horizontal"
+            android:id="@id/anniversary_landing_message"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16.0dip"
+            android:text="@string/anniversary_landing_message" />
+        <com.twitter.ui.components.button.legacy.TwitterButton
+            android:layout_gravity="center_horizontal"
+            android:id="@id/anniversary_landing_action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16.0dip"
+            android:text="@string/anniversary_landing_action"
+            style="@style/TwitterButtonLargeBrandFilled" />
+    </LinearLayout>
+    <tag
+        android:value="Anniversary"
+        android:id="@id/weaverComponent" />
+</ScrollView>

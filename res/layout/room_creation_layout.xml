@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:id="@id/room_creation_container_wrapper"
+        android:paddingBottom="@dimen/space_20"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/space_32">
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_32">
+            <com.twitter.ui.widget.TintableImageButton
+                android:layout_gravity="end"
+                android:id="@id/scheduled_spaces_icon"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:foreground="@drawable/ripple_selector_oval"
+                android:src="@drawable/ic_vector_schedule"
+                android:tint="?coreColorPrimaryText"
+                android:contentDescription="@string/multi_scheduled_spaces_entry_text"
+                android:layout_marginStart="@dimen/space_12" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textSize="@dimen/font_size_title_4"
+                android:textStyle="bold"
+                android:textColor="?coreColorPrimaryText"
+                android:gravity="start|center"
+                android:layout_gravity="start"
+                android:id="@id/header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/create_audio_space_title" />
+        </FrameLayout>
+        <com.twitter.narrowcast.ui.StickyNarrowcastButton
+            android:id="@id/sticky_narrowcast_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_16"
+            app:hasStroke="true" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@id/room_creation_container"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <com.twitter.ui.widget.TwitterEditText
+                android:textSize="@dimen/font_size_headline_2"
+                android:textColor="?coreColorPrimaryText"
+                android:textColorHint="@color/gray_300"
+                android:gravity="start"
+                android:layout_gravity="center_vertical"
+                android:id="@id/room_description_edit_text"
+                android:background="@null"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:hint="@string/room_description_hint"
+                android:maxLines="3"
+                android:layout_weight="1.0"
+                android:inputType="textMultiLine"
+                android:imeOptions="actionDone" />
+            <com.twitter.subsystem.composer.ComposerCountProgressBarView
+                android:layout_gravity="center_vertical"
+                android:id="@id/room_description_composer_count"
+                android:visibility="visible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:spaceLowTextColor="@color/white_opacity_80">
+                <include
+                    android:id="@id/composer_count_progress_bar_content"
+                    layout="@layout/composer_count_progress_bar_content" />
+            </com.twitter.subsystem.composer.ComposerCountProgressBarView>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@id/room_creation_auto_join_container"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <com.twitter.rooms.utils.RoomPrivacyCheckBox
+                android:id="@id/room_privacy_check_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textSize="@dimen/font_size_normal"
+                android:textColor="?coreColorPrimaryText"
+                android:gravity="start"
+                android:layout_gravity="center"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/open_audio_space_subtitle" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textSize="@dimen/font_size_large"
+                android:textStyle="bold"
+                android:textColor="?coreColorPrimaryText"
+                android:gravity="center"
+                android:layout_gravity="start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/open_audio_space_description" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textSize="@dimen/font_size_xsmall"
+                android:textColor="?coreColorDeepGray50"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_20"
+                android:text="@string/open_audio_space_text" />
+        </LinearLayout>
+        <include
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_32"
+            android:layout_marginBottom="@dimen/space_16"
+            layout="@layout/room_topics_tagging_viewstub" />
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:id="@id/recording_layout"
+            android:paddingBottom="@dimen/space_20"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textSize="@dimen/font_size_normal"
+                android:textStyle="bold"
+                android:textColor="?coreColorPrimaryText"
+                android:layout_gravity="center_horizontal"
+                android:id="@id/record_text"
+                android:paddingTop="@dimen/space_4"
+                android:paddingBottom="@dimen/space_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/record_space_toggle_text"
+                android:paddingEnd="@dimen/space_24"
+                android:layout_alignParentStart="true" />
+            <ImageView
+                android:layout_gravity="center_horizontal"
+                android:id="@id/recording_info"
+                android:paddingTop="@dimen/space_8"
+                android:paddingBottom="@dimen/space_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_vector_information_circle"
+                android:layout_alignTop="@id/record_text"
+                android:layout_alignBottom="@id/record_text"
+                android:contentDescription="null"
+                android:layout_alignEnd="@id/record_text"
+                app:tint="@color/twitter_blue" />
+            <androidx.appcompat.widget.SwitchCompat
+                android:layout_gravity="center_horizontal"
+                android:id="@id/record_toggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/record_text"
+                android:layout_alignBottom="@id/record_text"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+        <include
+            layout="@layout/room_incognito_space_switch" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textColor="@color/white"
+                android:id="@id/start_room_button"
+                android:background="@drawable/rounded_rectangle_purple_gradient"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_12"
+                android:layout_marginBottom="@dimen/space_12"
+                android:text="@string/start_space"
+                android:layout_weight="2.0"
+                style="@style/SpacesCustomButton" />
+            <com.twitter.ui.widget.TintableImageButton
+                android:layout_gravity="center"
+                android:id="@id/schedule_room_image_button"
+                android:background="@drawable/bg_circle_action_icon_gray_50"
+                android:padding="@dimen/space_12"
+                android:visibility="gone"
+                android:layout_width="@dimen/action_button_size_medium"
+                android:layout_height="@dimen/action_button_size_medium"
+                android:src="@drawable/ic_vector_schedule"
+                android:tint="?coreColorPrimaryText"
+                android:contentDescription="@string/schedule_audio_space"
+                android:layout_marginStart="@dimen/space_12"
+                style="@style/SpaceActionButton" />
+        </LinearLayout>
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_normal"
+            android:textColor="?coreColorTextLink"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:id="@id/about_spaces_link"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/spaces_info_link_text" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

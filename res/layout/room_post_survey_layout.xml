@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="bottom"
+    android:layout_gravity="bottom"
+    android:orientation="vertical"
+    android:id="@id/action_sheet_recycler_view_holder"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/space_16"
+    android:layout_marginEnd="@dimen/space_16"
+    app:layout_behavior="@string/twitter_bottom_sheet_behavior"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.twitter.core.ui.components.dialog.bottomsheet.GripperView
+        android:layout_gravity="center_horizontal"
+        android:id="@id/handle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@id/survey_details_container"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@id/survey_details_header"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@id/go_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_chevron_left"
+                android:contentDescription="@string/back"
+                android:layout_marginStart="20.0dip"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/survey_details_title" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textSize="@dimen/font_size_xlarge"
+                android:textStyle="bold"
+                android:textColor="?coreColorPrimaryText"
+                android:gravity="center"
+                android:id="@id/survey_details_title"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:text="@string/space_survey_details_title"
+                android:layout_marginStart="@dimen/space_64"
+                android:layout_marginEnd="@dimen/space_64"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textSize="@dimen/font_size_normal"
+                android:textStyle="bold"
+                android:textColor="@color/twitter_blue"
+                android:gravity="center"
+                android:id="@id/survey_details_skip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/space_survey_details_skip"
+                android:layout_marginEnd="16.0dip"
+                app:layout_constraintBottom_toBottomOf="@id/survey_details_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/survey_details_title" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textSize="@dimen/font_size_normal"
+                android:textStyle="bold"
+                android:textColor="@color/gray_700"
+                android:gravity="center"
+                android:id="@id/survey_details_subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/space_survey_details_subtitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/survey_details_title" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <com.twitter.rooms.ui.utils.survey.view.PostSurveyItemView
+            android:id="@id/space_survey_could_not_hear_speakers"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/space_survey_item_could_not_hear_speakers" />
+        <com.twitter.rooms.ui.utils.survey.view.PostSurveyItemView
+            android:id="@id/space_survey_could_not_hear_me"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/space_survey_item_could_not_hear_me" />
+        <com.twitter.rooms.ui.utils.survey.view.PostSurveyItemView
+            android:id="@id/space_survey_echoing"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/space_survey_item_echoing" />
+        <com.twitter.rooms.ui.utils.survey.view.PostSurveyItemView
+            android:id="@id/space_survey_problem_joining"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/space_survey_item_problem_joining" />
+        <com.twitter.rooms.ui.utils.survey.view.PostSurveyItemView
+            android:id="@id/space_survey_stability"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/space_survey_item_connection_and_stability" />
+        <com.twitter.rooms.ui.utils.survey.view.PostSurveyItemView
+            android:id="@id/space_survey_scheduled"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/space_survey_item_could_not_start_scheduled_space" />
+        <com.twitter.rooms.ui.utils.survey.view.PostSurveyItemView
+            android:id="@id/space_survey_mute"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/space_survey_item_mute_did_not_work" />
+        <com.twitter.rooms.ui.utils.survey.view.PostSurveyItemView
+            android:id="@id/space_survey_speaker_requests"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/space_survey_item_manage_speaker_requests" />
+        <com.twitter.rooms.ui.utils.survey.view.PostSurveyItemView
+            android:id="@id/space_survey_item_did_not_like"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/space_survey_item_did_not_like" />
+        <com.twitter.rooms.ui.utils.survey.view.PostSurveyItemView
+            android:id="@id/space_survey_other"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/space_survey_item_other" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_large"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:id="@id/space_survey_submit"
+            android:background="@drawable/blue_action_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_16"
+            android:layout_marginTop="@dimen/space_20"
+            android:layout_marginRight="@dimen/space_16"
+            android:layout_marginBottom="@dimen/space_20"
+            android:text="@string/space_survey_submit"
+            style="@style/SpaceActionButton" />
+    </LinearLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@id/survey_landing_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="48.0dip">
+        <ImageView
+            android:id="@id/close_sheet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17.0dip"
+            android:src="@drawable/ic_close_sheet"
+            android:contentDescription="@string/ps__accessibility_close"
+            android:layout_marginStart="20.0dip"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="?coreColorPrimaryText" />
+        <ImageView
+            android:id="@id/survey_positive_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40.0dip"
+            android:src="@drawable/ic_survey_positive"
+            android:contentDescription="@string/space_survey_positive"
+            app:layout_constraintEnd_toStartOf="@id/survey_negative_image"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/survey_title" />
+        <ImageView
+            android:id="@id/survey_negative_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40.0dip"
+            android:src="@drawable/ic_survey_negative"
+            android:contentDescription="@string/space_survey_negative"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/survey_positive_image"
+            app:layout_constraintTop_toBottomOf="@id/survey_title" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_xlarge"
+            android:textStyle="bold"
+            android:textColor="?coreColorPrimaryText"
+            android:gravity="center"
+            android:id="@id/survey_title"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24.0dip"
+            android:text="@string/space_survey_title"
+            android:maxLines="5"
+            android:layout_marginStart="30.0dip"
+            android:layout_marginEnd="30.0dip"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/close_sheet" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_small"
+            android:textColor="?coreColorPrimaryText"
+            android:gravity="center"
+            android:id="@id/survey_positive_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8.0dip"
+            android:text="@string/space_survey_positive"
+            android:importantForAccessibility="no"
+            app:layout_constraintEnd_toEndOf="@id/survey_positive_image"
+            app:layout_constraintStart_toEndOf="@id/survey_positive_image"
+            app:layout_constraintStart_toStartOf="@id/survey_positive_image"
+            app:layout_constraintTop_toBottomOf="@id/survey_positive_image" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_small"
+            android:textColor="?coreColorPrimaryText"
+            android:gravity="center"
+            android:id="@id/survey_negative_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8.0dip"
+            android:text="@string/space_survey_negative"
+            android:importantForAccessibility="no"
+            app:layout_constraintEnd_toEndOf="@id/survey_negative_image"
+            app:layout_constraintStart_toEndOf="@id/survey_negative_image"
+            app:layout_constraintStart_toStartOf="@id/survey_negative_image"
+            app:layout_constraintTop_toBottomOf="@id/survey_negative_image" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

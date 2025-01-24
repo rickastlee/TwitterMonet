@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.ui.user.UserView
+    android:id="@id/speaker_user_view"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <com.twitter.media.ui.image.UserImageView
+            android:id="@id/user_image"
+            android:layout_width="@dimen/space_56"
+            android:layout_height="@dimen/space_56"
+            android:scaleType="centerCrop"
+            android:contentDescription="@null"
+            android:layout_marginStart="@dimen/space_16"
+            android:layout_marginVertical="@dimen/space_12"
+            twitter:avatar_should_animate="false"
+            twitter:layout_constraintBottom_toBottomOf="parent"
+            twitter:layout_constraintStart_toStartOf="parent"
+            twitter:layout_constraintTop_toTopOf="parent" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@id/name_container"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_12"
+            android:layout_marginStart="@dimen/space_8"
+            twitter:layout_constraintEnd_toStartOf="@id/button_container"
+            twitter:layout_constraintStart_toEndOf="@id/user_image"
+            twitter:layout_constraintTop_toTopOf="parent">
+            <include
+                layout="@layout/user_info_name" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:id="@id/screenname_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                style="?userWithBioScreenNameStyle" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textSize="?followsYouTextSize"
+                android:textColor="?coreColorSecondaryText"
+                android:id="@id/follows_you"
+                android:background="@drawable/bg_follows_you"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_2"
+                android:text="?followsYouText" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@id/button_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/space_16"
+            twitter:layout_constraintEnd_toEndOf="parent"
+            twitter:layout_constraintTop_toTopOf="parent">
+            <com.twitter.ui.components.button.legacy.ToggleTwitterButton
+                android:id="@id/follow_button"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/follow"
+                android:height="@dimen/user_follow_btn_min_height"
+                twitter:iconSize="@dimen/follow_button_icon_size"
+                twitter:iconSrc="?iconFollow"
+                twitter:shouldToggleOnClick="false"
+                twitter:styleIdOff="?mediumToggledOffButtonStyle"
+                twitter:styleIdOn="?mediumToggledOnButtonStyle"
+                twitter:toggleIconSize="@dimen/follow_button_icon_size"
+                twitter:toggleIconSrc="?iconFollowing"
+                style="@style/TwitterButtonMediumBrandOutlined" />
+            <com.twitter.ui.components.button.legacy.TwitterButton
+                android:id="@id/pending_button"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pending"
+                android:height="@dimen/user_follow_btn_min_height"
+                twitter:iconSrc="?iconPending"
+                twitter:toggleIconSize="@dimen/follow_button_icon_size"
+                style="@style/TwitterButtonMediumRegular" />
+            <com.twitter.ui.components.button.legacy.TwitterButton
+                android:id="@id/block_button_twitter_button"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/blocked"
+                twitter:iconColor="@color/destructive_red"
+                twitter:iconSrc="?iconBlocked"
+                style="@style/TwitterButtonMediumRegularRed" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.twitter.ui.user.UserView>

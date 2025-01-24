@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.twitter.media.ui.fresco.FrescoMediaImageView
+        android:id="@id/bottom_bar_preview_image"
+        android:layout_width="@dimen/bottom_bar_icon_size"
+        android:layout_height="@dimen/bottom_bar_icon_size"
+        android:layout_marginTop="@dimen/space_12"
+        android:layout_marginBottom="@dimen/space_12"
+        android:foreground="@drawable/preview_image_border"
+        android:layout_marginEnd="@dimen/space_12"
+        app:imageCornerRadius="@dimen/playable_preview_image_radius"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:scaleType="fit" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textColor="?coreColorSecondaryText"
+        android:ellipsize="end"
+        android:id="@id/bottom_bar_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_bar_preview_image"
+        app:layout_constraintStart_toStartOf="@id/bottom_bar_title"
+        app:layout_constraintTop_toBottomOf="@id/bottom_bar_title" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textStyle="bold"
+        android:textColor="?coreColorPrimaryText"
+        android:ellipsize="end"
+        android:id="@id/bottom_bar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:includeFontPadding="false"
+        android:layout_marginStart="@dimen/space_12"
+        android:layout_marginEnd="@dimen/space_12"
+        app:layout_constraintBottom_toTopOf="@id/bottom_bar_subtitle"
+        app:layout_constraintStart_toEndOf="@id/bottom_bar_preview_image"
+        app:layout_constraintTop_toTopOf="@id/bottom_bar_preview_image" />
+</androidx.constraintlayout.widget.ConstraintLayout>

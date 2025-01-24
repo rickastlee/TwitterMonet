@@ -1,0 +1,8 @@
+{
+    "keys": [
+        "scribe_error_sample_size",
+        "rweb_media_carousel_enabled",
+        "account_2fa3_enabled",
+        "aaid_reset_prompt_enabled"
+    ]
+}

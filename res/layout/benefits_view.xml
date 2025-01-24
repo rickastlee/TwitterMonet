@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/benefits_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_8"
+        android:maxLines="2"
+        style="@style/BenefitsTitle" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/benefits_subtitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_8"
+        android:minLines="2"
+        twitter:layout_constraintTop_toBottomOf="@id/benefits_title"
+        style="@style/BenefitsSubtitle" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@id/by_creator"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_8"
+        twitter:layout_constraintStart_toStartOf="@id/benefits_subtitle"
+        twitter:layout_constraintTop_toBottomOf="@id/benefits_subtitle">
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textColor="?coreColorSecondaryText"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/en_dash"
+            android:importantForAccessibility="no" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_normal"
+            android:textStyle="bold"
+            android:textColor="?coreColorSecondaryText"
+            android:layout_gravity="center_vertical"
+            android:id="@id/user_name_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <com.twitter.media.ui.image.UserImageView
+            android:layout_gravity="center_vertical"
+            android:id="@id/user_avatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            android:layout_marginStart="@dimen/space_12"
+            twitter:imageType="profile"
+            twitter:roundingStrategy="circle"
+            twitter:userImageSize="@dimen/creator_intro_user_image_size" />
+    </LinearLayout>
+    <FrameLayout
+        android:id="@id/asset_container"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_40"
+        twitter:layout_constraintBottom_toBottomOf="parent"
+        twitter:layout_constraintEnd_toEndOf="parent"
+        twitter:layout_constraintStart_toStartOf="parent"
+        twitter:layout_constraintTop_toBottomOf="@id/benefits_subtitle" />
+</androidx.constraintlayout.widget.ConstraintLayout>

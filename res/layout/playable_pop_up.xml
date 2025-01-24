@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_margin="10.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.twitter.ui.view.TwitterSafeDefaultsWebView
+        android:id="@id/webview"
+        android:visibility="gone"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        app:layout_constraintBottom_toTopOf="@id/bottom_bar_divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <include
+        layout="@layout/playable_pop_up_loading_screen" />
+    <ImageView
+        android:id="@id/browser_bottom_bar_close"
+        android:padding="@dimen/space_12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_compose_action_dismiss_media"
+        android:contentDescription="@string/button_action_dismiss"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <include
+        layout="@layout/playable_pop_up_error_screen" />
+    <include
+        layout="@layout/playable_pop_up_bottom_bar" />
+    <tag
+        android:value="com.twitter.revenue.playable.weavercomponents.PlayableViewModel"
+        android:id="@id/viewModel" />
+    <tag
+        android:value="com.twitter.weaver.base.WeaverViewDelegateBinder"
+        android:id="@id/viewBinder" />
+    <tag
+        android:value="PlayableViewBinder"
+        android:id="@id/viewBinderNamed" />
+</androidx.constraintlayout.widget.ConstraintLayout>

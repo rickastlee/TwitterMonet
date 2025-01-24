@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@id/countdown_text_container"
+    android:background="@drawable/commerce_drop_countdown_background"
+    android:padding="@dimen/space_8"
+    android:visibility="gone"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:importantForAccessibility="noHideDescendants"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/hours"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        twitter:layout_constraintEnd_toStartOf="@id/hours_suffix"
+        twitter:layout_constraintStart_toStartOf="parent"
+        style="@style/ProductDropCountdownText" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/hours_suffix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hours_suffix"
+        twitter:layout_constraintEnd_toStartOf="@id/minutes"
+        twitter:layout_constraintStart_toEndOf="@id/hours"
+        style="@style/ProductDropCountdownText" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/minutes"
+        android:layout_width="18.0sp"
+        android:layout_height="wrap_content"
+        twitter:layout_constraintEnd_toStartOf="@id/minutes_suffix"
+        twitter:layout_constraintStart_toEndOf="@id/hours_suffix"
+        style="@style/ProductDropCountdownText" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/minutes_suffix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/minutes_suffix"
+        twitter:layout_constraintEnd_toStartOf="@id/seconds"
+        twitter:layout_constraintStart_toEndOf="@id/minutes"
+        style="@style/ProductDropCountdownText" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/seconds"
+        android:layout_width="18.0sp"
+        android:layout_height="wrap_content"
+        twitter:layout_constraintEnd_toStartOf="@id/seconds_suffix"
+        twitter:layout_constraintStart_toEndOf="@id/minutes_suffix"
+        style="@style/ProductDropCountdownText" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/seconds_suffix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/seconds_suffix"
+        twitter:layout_constraintEnd_toEndOf="parent"
+        twitter:layout_constraintStart_toEndOf="@id/seconds"
+        style="@style/ProductDropCountdownText" />
+</androidx.constraintlayout.widget.ConstraintLayout>

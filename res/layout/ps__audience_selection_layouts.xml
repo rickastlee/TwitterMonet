@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@id/pre_broadcast_details_container"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <tv.periscope.android.ui.broadcaster.prebroadcast.PreBroadcastView
+        android:id="@id/pre_broadcast_details"
+        android:background="@color/ps__bg_pre_broadcast"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+    <include
+        android:id="@id/audience_selection"
+        android:visibility="gone"
+        layout="@layout/ps__audience_selection_layout" />
+    <include
+        android:id="@id/create_private_channel"
+        android:visibility="gone"
+        layout="@layout/ps__private_channel_layout" />
+    <include
+        android:id="@id/manage_private_channel"
+        android:visibility="gone"
+        layout="@layout/ps__private_channel_layout" />
+    <tv.periscope.android.ui.user.UserPickerSheet
+        android:id="@id/create_channel_user_picker_sheet"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+    <tv.periscope.android.ui.user.UserPickerSheet
+        android:id="@id/manage_channel_user_picker_sheet"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+    <FrameLayout
+        android:id="@id/audience_progress_bar_container"
+        android:visibility="gone"
+        android:clickable="true"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <include
+            android:layout_gravity="center"
+            android:id="@id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            layout="@layout/ps__progressbar_loading" />
+    </FrameLayout>
+</FrameLayout>

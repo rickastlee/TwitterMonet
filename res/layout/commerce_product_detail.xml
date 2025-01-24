@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@id/image_recycler_view"
+        android:clipToPadding="false"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:overScrollMode="never"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    <View
+        android:id="@id/scroll_blocker"
+        android:focusable="false"
+        android:clickable="true"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:elevation="@dimen/space_16" />
+    <com.google.android.material.card.MaterialCardView
+        android:id="@id/bottom_sheet"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:behavior_draggable="true"
+        app:behavior_fitToContents="false"
+        app:behavior_hideable="false"
+        app:cardElevation="@dimen/space_32"
+        app:layout_behavior="@string/twitter_bottom_sheet_behavior">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:background="?abstractColorCellBackground"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <com.twitter.core.ui.components.dialog.bottomsheet.GripperView
+                android:id="@id/card_handle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <include
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:layout_marginTop="@dimen/space_8"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card_handle"
+                layout="@layout/commerce_product_detail_bottom_sheet_content" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_gravity="bottom"
+        android:id="@id/bottom_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/space_32">
+        <View
+            android:id="@id/lower_scroll_gradient"
+            android:background="@drawable/lower_scroll_gradient"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/product_scroll_gradient_height"
+            app:layout_constraintTop_toTopOf="parent" />
+        <View
+            android:id="@id/button_background"
+            android:background="?abstractColorCellBackground"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            app:layout_constraintBottom_toTopOf="@id/subscriber_text"
+            app:layout_constraintTop_toBottomOf="@id/lower_scroll_gradient" />
+        <include
+            android:id="@id/drop_button_group"
+            android:paddingTop="@dimen/space_36"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_12"
+            android:layout_marginStart="@dimen/space_32"
+            app:layout_constraintBottom_toTopOf="@id/subscriber_text"
+            app:layout_constraintEnd_toStartOf="@id/compose_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lower_scroll_gradient"
+            layout="@layout/product_drop_card_buttons" />
+        <com.twitter.ui.components.button.compose.HorizonComposeButton
+            android:icon="@drawable/ic_vector_compose"
+            android:id="@id/compose_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/product_drop_compose_tweet"
+            android:layout_marginEnd="@dimen/space_32"
+            app:layout_constraintBottom_toBottomOf="@id/drop_button_group"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/drop_button_group"
+            style="@style/TwitterButtonSmallPrimaryOutlined" />
+        <View
+            android:id="@id/subscriber_content_background"
+            android:background="?abstractColorCellBackground"
+            android:layout_width="0.0dip"
+            android:layout_height="0.0dip"
+            app:layout_constraintBottom_toBottomOf="@id/subscriber_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/subscriber_text" />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@id/subscriber_count_icon"
+            android:layout_width="14.0dip"
+            android:layout_height="14.0dip"
+            android:tint="?abstractColorDeepGray"
+            android:layout_marginEnd="@dimen/space_8"
+            app:layout_constraintBottom_toBottomOf="@id/subscriber_text"
+            app:layout_constraintEnd_toStartOf="@id/subscriber_text"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/subscriber_text"
+            app:layout_constraintVertical_bias="0.5"
+            app:srcCompat="@drawable/ic_vector_people_group" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:gravity="center_horizontal"
+            android:id="@id/subscriber_text"
+            android:background="?abstractColorCellBackground"
+            android:paddingTop="@dimen/space_4"
+            android:paddingBottom="@dimen/space_8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/subscriber_count_icon"
+            style="@style/ProductDropSubText" />
+        <androidx.constraintlayout.widget.Group
+            android:id="@id/subscription_info_group"
+            android:visibility="gone"
+            android:layout_width="0.0dip"
+            android:layout_height="0.0dip"
+            app:constraint_referenced_ids="subscriber_count_icon,subscriber_text" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:layout_gravity="start|center|top"
+        android:id="@id/back_button"
+        android:background="@drawable/commerce_back_button_drawable"
+        android:padding="@dimen/space_8"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14.0dip"
+        android:foreground="?actionBarItemBackground"
+        android:src="@drawable/ic_vector_arrow_left"
+        android:contentDescription="@string/button_toolbar_back"
+        android:layout_marginStart="@dimen/product_drop_card_padding"
+        android:elevation="@dimen/space_16"
+        app:tint="@color/white" />
+    <FrameLayout
+        android:id="@id/loading_indicator"
+        android:background="?abstractColorCellBackground"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <ProgressBar
+            android:layout_gravity="center"
+            android:id="@id/progress_bar_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:indeterminateOnly="true"
+            style="?android:progressBarStyleLarge" />
+    </FrameLayout>
+    <tag
+        android:value="CommerceProductDrop"
+        android:id="@id/weaverComponent" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.media.ui.fresco.FrescoMediaImageView
+        android:id="@id/user_label_image"
+        android:visibility="gone"
+        android:layout_width="@dimen/mini_user_image_size"
+        android:layout_height="@dimen/mini_user_image_size" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:ellipsize="end"
+        android:id="@id/user_label_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false" />
+</merge>

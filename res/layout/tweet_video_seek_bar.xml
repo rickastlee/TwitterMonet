@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.explore.immersive.ImmersiveVideoScrubberControlView
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/video_progress_height"
+    android:importantForAccessibility="no"
+    style="?android:progressBarStyleHorizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <tag
+        android:value="com.twitter.explore.immersive.ui.progressbar.VideoProgressBarViewDelegateBinder"
+        android:id="@id/viewBinder" />
+    <tag
+        android:value="com.twitter.tweetview.core.TweetViewViewModel"
+        android:id="@id/viewModel" />
+</com.twitter.explore.immersive.ImmersiveVideoScrubberControlView>

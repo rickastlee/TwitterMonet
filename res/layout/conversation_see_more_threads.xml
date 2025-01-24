@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="@drawable/list_row_background"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <View
+        android:id="@id/top_divider"
+        android:background="?coreColorAppBackground"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/section_divider_height" />
+    <View
+        android:id="@id/top_line_divider"
+        android:background="?coreColorBorder"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/border_thickness" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textColor="?abstractColorLink"
+        android:gravity="center"
+        android:id="@id/content"
+        android:paddingTop="@dimen/show_more_threads_padding"
+        android:paddingBottom="@dimen/show_more_threads_padding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/conversations_more_replies"
+        android:layout_centerInParent="true" />
+    <ProgressBar
+        android:id="@id/progress"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        style="?android:progressBarStyleSmall" />
+    <View
+        android:id="@id/bottom_divider"
+        android:background="?coreColorAppBackground"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/section_divider_height"
+        android:layout_below="@id/content" />
+    <tag
+        android:value="ShowMoreCursor"
+        android:id="@id/weaverComponent" />
+</RelativeLayout>

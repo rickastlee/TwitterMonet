@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@id/root"
+    android:visibility="gone"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout
+        android:id="@id/about_module_container"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <include
+            android:id="@id/about_module_viewstub"
+            layout="@layout/about_module_view_stub" />
+    </FrameLayout>
+    <FrameLayout
+        android:id="@id/about_module_v1_container"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <include
+            android:id="@id/about_module_v1_viewstub"
+            layout="@layout/about_module_v1_view_stub" />
+    </FrameLayout>
+    <FrameLayout
+        android:id="@id/shop_module_container"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <include
+            layout="@layout/shop_module_view_stub" />
+    </FrameLayout>
+    <FrameLayout
+        android:id="@id/link_module_container"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <include
+            layout="@layout/link_module_view_stub" />
+    </FrameLayout>
+    <FrameLayout
+        android:id="@id/mobile_app_module_container"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <include
+            layout="@layout/mobile_app_module_view_stub" />
+    </FrameLayout>
+    <ViewStub
+        android:id="@id/communities_module_container"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <FrameLayout
+        android:id="@id/no_module_container"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <include
+            layout="@layout/no_module_view_stub" />
+    </FrameLayout>
+    <ViewStub
+        android:id="@id/jobs_module_container"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <tag
+        android:value="ProfileModuleContainerBinder"
+        android:id="@id/weaverComponent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

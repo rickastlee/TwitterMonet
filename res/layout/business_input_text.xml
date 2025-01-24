@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include
+        android:id="@id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        layout="@layout/app_toolbar" />
+    <com.twitter.ui.widget.TwitterEditText
+        android:id="@id/professional_edit_text"
+        android:paddingLeft="@dimen/space_16"
+        android:paddingTop="@dimen/space_32"
+        android:paddingRight="@dimen/space_16"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        style="@style/TwitterEditText">
+        <tag
+            android:value="EditText"
+            android:id="@id/weaverComponent" />
+    </com.twitter.ui.widget.TwitterEditText>
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/public_information"
+        android:paddingBottom="@dimen/space_12"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/professional_edit_text"
+        style="@style/BusinessInfoSubtext2" />
+    <tag
+        android:value="BusinessInputText"
+        android:id="@id/weaverComponent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

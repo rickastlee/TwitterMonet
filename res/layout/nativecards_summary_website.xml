@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="horizontal"
+    android:id="@id/card_container"
+    android:padding="@dimen/border_thickness"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <com.twitter.media.ui.fresco.FrescoMediaImageView
+            android:id="@id/card_image"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/website_card_short_media_width"
+            android:contentDescription="@string/image_profile_default"
+            twitter:defaultDrawable="@drawable/drawable_color_placeholder_bg"
+            twitter:errorDrawable="@drawable/bg_tweet_placeholder_photo_error"
+            twitter:scaleType="fill">
+            <com.twitter.media.ui.fresco.FrescoDraweeView
+                android:id="@id/image"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/website_card_short_media_width"
+                twitter:roundBottomEnd="false"
+                twitter:roundTopEnd="false"
+                twitter:roundedCornerRadius="@dimen/card_inner_corner_radius"
+                twitter:viewAspectRatio="1.0" />
+        </com.twitter.media.ui.fresco.FrescoMediaImageView>
+        <View
+            android:background="?coreColorBorder"
+            android:layout_width="@dimen/border_thickness"
+            android:layout_height="@dimen/website_card_short_media_width"
+            android:layout_alignEnd="@id/card_image" />
+    </RelativeLayout>
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0"
+        android:paddingStart="@dimen/space_12"
+        android:paddingEnd="@dimen/space_12">
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_normal"
+            android:textColor="?coreColorPrimaryText"
+            android:ellipsize="end"
+            android:id="@id/card_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:textAlignment="viewStart" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_normal"
+            android:textColor="?coreColorSecondaryText"
+            android:ellipsize="end"
+            android:id="@id/card_url"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textAlignment="viewStart" />
+    </LinearLayout>
+</LinearLayout>

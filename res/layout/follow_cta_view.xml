@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.ui.user.UserView
+    android:id="@id/follow_cta_user_view"
+    android:visibility="gone"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    style="@style/ListRow.WhoToFollow"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <com.twitter.media.ui.image.UserImageView
+        android:id="@id/user_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        android:importantForAccessibility="no"
+        android:layout_marginEnd="@dimen/image_margin_end"
+        android:layout_alignParentStart="true"
+        twitter:singleImageView="true" />
+    <LinearLayout
+        android:gravity="start"
+        android:orientation="vertical"
+        android:id="@id/screenname_profile_items"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@id/follow_button"
+        android:layout_toEndOf="@id/user_image">
+        <include
+            android:layout_gravity="start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2.0dip"
+            android:minHeight="@dimen/verified_icon_intrinsic_height"
+            layout="@layout/user_info_name" />
+        <com.twitter.ui.widget.UnpaddedTypefacesTextView
+            android:textColor="@color/white"
+            android:layout_gravity="start"
+            android:id="@id/screenname_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/manual_name_username_padding"
+            android:maxLines="1" />
+    </LinearLayout>
+    <com.twitter.ui.components.button.legacy.ToggleTwitterButton
+        android:id="@id/follow_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/follow"
+        android:height="@dimen/user_follow_btn_min_height"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/are_following"
+        android:layout_marginStart="@dimen/space_12"
+        android:layout_alignParentEnd="true"
+        twitter:iconSize="@dimen/follow_button_icon_size"
+        twitter:iconSrc="?iconFollow"
+        twitter:shouldToggleOnClick="false"
+        twitter:styleIdOff="@style/TwitterButtonSmallInvertedOutlined"
+        twitter:styleIdOn="@style/TwitterButtonSmallInvertedOutlined"
+        twitter:toggleIconSize="@dimen/follow_button_icon_size"
+        twitter:toggleIconSrc="?iconFollowing"
+        style="@style/TwitterButtonSmallInvertedOutlined" />
+</com.twitter.ui.user.UserView>

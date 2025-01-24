@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <include
+        layout="@layout/app_toolbar" />
+    <com.twitter.ui.view.RtlViewPager
+        android:id="@id/pager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <com.twitter.ui.navigation.HorizonTabLayout
+            android:layout_gravity="top"
+            android:id="@id/tab_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            style="@style/TabLayoutStyle.Main" />
+    </com.twitter.ui.view.RtlViewPager>
+</LinearLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:padding="@dimen/space_12"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/secondary_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="?guideHeroPreHeadlineStylePrimary" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/primary_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@style/GuideText.HeroHeadline" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/tertiary_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/liveevent_card_spacing_half"
+        style="?guideHeroSubHeadlineStyle" />
+</LinearLayout>

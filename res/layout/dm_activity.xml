@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@id/dm_activity_panel"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:id="@id/dm_activity_panel_foreground"
+        android:background="?coreColorAppBackground"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:contentDescription="@null"
+        android:alpha="0.0" />
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@id/root_coordinator_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <ViewSwitcher
+                android:id="@id/toolbar_switcher"
+                android:background="?coreColorAppBackground"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                style="?toolBarStyle">
+                <include
+                    layout="@layout/toolbar_container" />
+                <include
+                    android:id="@id/secondary_toolbar"
+                    android:visibility="gone"
+                    layout="@layout/app_toolbar_with_dismiss" />
+            </ViewSwitcher>
+            <RelativeLayout
+                android:id="@id/fragment_container"
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:layout_weight="1.0" />
+        </LinearLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</FrameLayout>

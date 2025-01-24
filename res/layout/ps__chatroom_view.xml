@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@id/chat_view_container"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <View
+        android:id="@id/dont_give_hearts"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/ps__height_of_click_jack_chatroom_view"
+        android:layout_alignParentBottom="true" />
+    <RelativeLayout
+        android:id="@id/chat_container"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/friends_watching_view_above_bottom_tray">
+        <tv.periscope.android.ui.chat.ChatMessageContainerView
+            android:id="@id/chat_messages_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="@dimen/ps__standard_spacing_16"
+            android:layout_alignParentBottom="true"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_alignParentStart="true" />
+    </RelativeLayout>
+    <tv.periscope.android.ui.love.HeartContainerView
+        android:id="@id/hearts_view"
+        android:focusable="false"
+        android:layout_width="@dimen/ps__heart_container_width"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="24.0dip"
+        android:layout_above="@id/participants"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_alignParentEnd="true"
+        style="@style/ps__HeartContainer" />
+    <tv.periscope.android.ui.broadcast.BottomTray
+        android:layout_gravity="bottom"
+        android:id="@id/bottom_tray"
+        android:focusableInTouchMode="true"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="60.0dip"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/ps__standard_spacing_10" />
+    <tv.periscope.android.ui.broadcast.ParticipantCountView
+        android:layout_gravity="end"
+        android:id="@id/participants"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0.0dip"
+        android:minWidth="@dimen/ps__min_touch_target_size"
+        android:minHeight="@dimen/ps__min_touch_target_size"
+        android:layout_above="@id/bottom_tray"
+        android:layout_marginStart="@dimen/ps__standard_spacing_8"
+        android:layout_marginEnd="5.0dip"
+        android:layout_alignParentEnd="true" />
+    <ViewStub
+        android:id="@id/friends_watching_view_above_bottom_tray"
+        android:paddingTop="@dimen/ps__friends_watching_tap_padding"
+        android:paddingBottom="@dimen/ps__friends_watching_tap_padding"
+        android:layout="@layout/ps__friends_watching_stub_above_bottom_tray"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="@dimen/ps__friends_watching_tap_margin_offset"
+        android:layout_marginBottom="@dimen/ps__friends_watching_tap_margin_offset"
+        android:layout_above="@id/bottom_tray"
+        android:layout_marginStart="@dimen/ps__standard_spacing_10"
+        android:layout_marginEnd="@dimen/ps__friends_watching_end_margin" />
+    <View
+        android:id="@id/moderator_overlay"
+        android:background="@color/ps__bg_moderator_overlay"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+    <ViewStub
+        android:id="@id/moderator_container"
+        android:layout="@layout/ps__moderator_container"
+        android:inflatedId="@id/moderator_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

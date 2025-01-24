@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:animateLayoutChanges="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include
+        android:id="@id/toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/app_toolbar" />
+    <com.twitter.ui.widget.TwitterEditText
+        android:textSize="@dimen/font_size_normal"
+        android:textColor="@color/twitter_blue"
+        android:id="@id/input_handle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:inputType="textNoSuggestions"
+        android:imeOptions="actionDone"
+        android:imeActionLabel="@string/tipjar_action_save"
+        android:paddingStart="@dimen/space_12"
+        android:paddingEnd="@dimen/space_12"
+        app:labelColor="?coreColorPrimaryText"
+        app:labelFontStyle="bold"
+        style="@style/TwitterEditText" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_small"
+        android:textColor="?coreColorSecondaryText"
+        android:id="@id/text_info"
+        android:paddingTop="@dimen/space_12"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tipjar_input_rationale"
+        android:paddingStart="@dimen/space_12"
+        android:paddingEnd="@dimen/space_12" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_small"
+        android:textColor="?coreColorTextLink"
+        android:autoLink="web"
+        android:id="@id/text_preview"
+        android:paddingTop="@dimen/space_4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/space_12"
+        android:paddingEnd="@dimen/space_12" />
+    <tag
+        android:value="TipJarEdit"
+        android:id="@id/weaverComponent" />
+</LinearLayout>

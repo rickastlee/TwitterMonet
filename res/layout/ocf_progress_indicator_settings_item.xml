@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/ocf_standard_spacing"
+    android:layout_marginBottom="@dimen/ocf_standard_spacing"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/primary_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_4"
+        android:layout_marginBottom="@dimen/space_8"
+        style="@style/OcfSubtext2Text.PrimaryBold" />
+    <ProgressBar
+        android:id="@id/progress_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="4.0dip"
+        android:max="100"
+        android:indeterminate="false"
+        android:progressDrawable="@drawable/ocf_progress_bar"
+        android:min="0"
+        style="?android:progressBarStyleHorizontal" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/secondary_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_4"
+        android:layout_marginBottom="@dimen/space_8"
+        style="@style/OcfSubtext3Text" />
+</LinearLayout>

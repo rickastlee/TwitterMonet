@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageButton
+        android:gravity="start|center"
+        android:id="@id/back_button"
+        android:background="@null"
+        android:padding="@dimen/ocf_standard_spacing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:foreground="@drawable/ripple_selector_oval"
+        android:src="@drawable/ic_ocf_back_button"
+        android:scaleType="center"
+        android:contentDescription="@string/back"
+        app:tint="?coreColorPrimaryText" />
+    <ImageView
+        android:gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/ocf_standard_spacing"
+        android:src="@drawable/ic_vector_twitter"
+        android:contentDescription="@null"
+        app:tint="?dynamicColorGray1100" />
+    <ViewStub
+        android:gravity="end|center"
+        android:id="@id/top_toolbar_end_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</FrameLayout>

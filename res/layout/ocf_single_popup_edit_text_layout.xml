@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.ui.widget.PopupEditText
+    android:id="@id/text_field"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:inputType="textCapWords|textNoSuggestions"
+    android:imeOptions="actionDone|flagNoExtractUi"
+    android:textAlignment="viewStart"
+    app:threshold="0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" />

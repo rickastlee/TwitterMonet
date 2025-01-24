@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include
+        android:id="@id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        layout="@layout/app_toolbar" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@id/category_row"
+        android:background="@drawable/ripple_pressed_selector_rectangle"
+        android:clickable="true"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/category"
+            style="@style/RowHeaderText" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/category_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/RowDetailText" />
+        <View
+            android:background="?abstractColorDivider"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/channels_item_separator_height" />
+    </LinearLayout>
+    <androidx.appcompat.widget.SwitchCompat
+        android:textSize="@dimen/professional_settings_header_text"
+        android:id="@id/category_switch"
+        android:paddingTop="@dimen/space_16"
+        android:paddingBottom="@dimen/space_16"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:text="@string/category_switch_title"
+        android:paddingStart="?listPreferredItemPaddingStart"
+        android:paddingEnd="?listPreferredItemPaddingEnd"
+        android:showText="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/category_row" />
+    <View
+        android:id="@id/category_switch_lower_divider"
+        android:background="?abstractColorDivider"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/channels_item_separator_height"
+        app:layout_constraintTop_toBottomOf="@id/category_switch" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@id/module_row"
+        android:background="@drawable/ripple_pressed_selector_rectangle"
+        android:visibility="gone"
+        android:clickable="true"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/category_switch_lower_divider">
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/profile_spotlight"
+            style="@style/RowHeaderText" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/module_subtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/RowDetailText" />
+        <View
+            android:background="?abstractColorDivider"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/channels_item_separator_height" />
+    </LinearLayout>
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textAppearance="?textAppearanceListItem"
+        android:textColor="@color/twitter_blue"
+        android:id="@id/account_type_row"
+        android:background="@drawable/ripple_pressed_selector_rectangle"
+        android:paddingTop="@dimen/space_16"
+        android:paddingBottom="@dimen/space_16"
+        android:clickable="true"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:text="@string/switch_account_type"
+        android:importantForAccessibility="yes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/module_row"
+        style="@style/ProfessionalSettingsHorizontalPadding" />
+    <View
+        android:id="@id/divider_one"
+        android:background="?abstractColorDivider"
+        android:layout_width="0.0dip"
+        android:layout_height="@dimen/channels_item_separator_height"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/account_type_row" />
+    <tag
+        android:value="ProfessionalSettings"
+        android:id="@id/weaverComponent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

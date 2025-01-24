@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="horizontal"
+    android:background="@drawable/room_topic_bg_selector"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/space_20"
+    android:paddingVertical="10.0dip"
+    style="@style/TwitterButtonMediumBase"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textStyle="bold"
+        android:textColor="@drawable/room_topic_text_selector"
+        android:id="@id/room_topic_item_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <tag
+        android:value="RoomTopic"
+        android:id="@id/weaverComponent" />
+</LinearLayout>

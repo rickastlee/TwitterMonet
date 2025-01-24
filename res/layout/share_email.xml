@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <CheckBox
+        android:enabled="true"
+        android:textSize="@dimen/font_size_xsmall"
+        android:textColor="?coreColorSecondaryText"
+        android:gravity="top"
+        android:id="@id/share_email_conditions"
+        android:visibility="gone"
+        android:clickable="true"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="@string/share_email_conditions" />
+    <com.twitter.ui.widget.TwitterEditText
+        android:enabled="false"
+        android:id="@id/share_email_input"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your email address"
+        android:inputType="textEmailAddress"
+        android:layout_marginStart="@dimen/space_32"
+        app:labelText="Email address"
+        style="@style/TwitterEditText.Primary" />
+</LinearLayout>

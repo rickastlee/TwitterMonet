@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:icon="?toolbarShareIcon"
+        android:id="@id/menu_share"
+        android:title="@string/button_action_share"
+        android:contentDescription="@string/share_button"
+        app:order="1"
+        app:showAsAction="ifRoom" />
+    <item
+        android:icon="?toolbarOverflowIcon"
+        android:id="@id/menu_more_options"
+        android:title="@string/more_options"
+        android:contentDescription="@string/more_options"
+        app:order="2"
+        app:showAsAction="ifRoom" />
+</menu>

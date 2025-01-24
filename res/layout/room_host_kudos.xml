@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:gravity="center"
+        android:id="@id/calendar_icon"
+        android:layout_width="@dimen/space_40"
+        android:layout_height="@dimen/space_40"
+        android:layout_marginTop="@dimen/space_36"
+        android:src="@drawable/ic_vector_calendar"
+        android:contentDescription="@null"
+        android:layout_marginHorizontal="@dimen/space_32"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/purple_500" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_title_3"
+        android:textStyle="bold"
+        android:textColor="?coreColorPrimaryText"
+        android:gravity="start"
+        android:id="@id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_20"
+        android:text="@string/host_kudos_prompt_title_next_week"
+        android:layout_marginHorizontal="@dimen/space_32"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/calendar_icon" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_body"
+        android:textStyle="bold"
+        android:textColor="?coreColorSecondaryText"
+        android:gravity="start"
+        android:id="@id/subtitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_8"
+        android:text="@string/host_kudos_prompt_subtitle"
+        android:layout_marginHorizontal="@dimen/space_32"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textColor="?coreColorOnPrimary"
+        android:layout_gravity="center"
+        android:id="@id/schedule_space_button"
+        android:background="@drawable/rounded_rect_fill_black"
+        android:clickable="true"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_32"
+        android:layout_marginBottom="@dimen/space_16"
+        android:foreground="@drawable/ripple_selector_rounded_rectangle"
+        android:text="@string/host_kudos_schedule_space_cta"
+        android:layout_marginHorizontal="@dimen/space_32"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/subtitle"
+        style="@style/SpacesCustomButton" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textColor="?coreColorPrimaryText"
+        android:layout_gravity="center"
+        android:id="@id/skip_button"
+        android:background="@drawable/rounded_rectangle_gray_border"
+        android:clickable="true"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_8"
+        android:layout_marginBottom="@dimen/space_36"
+        android:foreground="@drawable/ripple_selector_rounded_rectangle"
+        android:text="@string/host_kudos_skip_cta"
+        android:layout_marginHorizontal="@dimen/space_32"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/schedule_space_button"
+        style="@style/SpacesCustomButton" />
+    <tag
+        android:value="RoomHostKudos"
+        android:id="@id/weaverComponent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="?android:listPreferredItemHeight"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/footer_text"
+        android:paddingTop="8.0dip"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6.0dip"
+        android:layout_centerHorizontal="true" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/progress_dot"
+        android:focusable="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6.0dip"
+        android:layout_below="@id/footer_text"
+        android:layout_centerHorizontal="true"
+        android:importantForAccessibility="no"
+        style="@style/Dot" />
+    <ProgressBar
+        android:id="@id/progress_bar"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="?android:listPreferredItemHeight"
+        android:layout_centerHorizontal="true"
+        style="?android:progressBarStyleSmall" />
+    <View
+        android:id="@id/footer_padding"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip" />
+</RelativeLayout>

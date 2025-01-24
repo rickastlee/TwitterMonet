@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@id/focal_tweet_social_context_badge_barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierAllowsGoneWidgets="false"
+        app:barrierDirection="end"
+        app:constraint_referenced_ids="focal_tweet_social_context_badge" />
+    <androidx.legacy.widget.Space
+        android:id="@id/focal_tweet_social_context_badge_barrier_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/image_margin_end"
+        app:layout_constraintEnd_toStartOf="@id/focal_tweet_social_context"
+        app:layout_constraintStart_toEndOf="@id/focal_tweet_social_context_badge_barrier" />
+    <com.twitter.ui.widget.TintableImageView
+        android:id="@id/focal_tweet_social_context_badge"
+        android:layout_width="@dimen/space_12"
+        android:layout_height="@dimen/space_12"
+        android:layout_marginTop="@dimen/social_context_badge_padding"
+        android:layout_marginEnd="@dimen/tweet_avatar_start_margin"
+        app:layout_constraintEnd_toStartOf="@id/badge_anchor"
+        app:layout_constraintTop_toTopOf="@id/focal_tweet_social_context">
+        <tag
+            android:value="SocialContextBadge"
+            android:id="@id/weaverComponent" />
+    </com.twitter.ui.widget.TintableImageView>
+    <include
+        android:id="@id/focal_tweet_social_context"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/focal_tweet_social_context_badge_barrier_margin"
+        app:layout_constraintTop_toTopOf="parent"
+        layout="@layout/component_social_context" />
+</merge>

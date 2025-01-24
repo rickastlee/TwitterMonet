@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <View
+        android:background="?coreColorAppBackground"
+        android:focusable="false"
+        android:clickable="false"
+        android:layout_width="fill_parent"
+        android:layout_height="8.0dip" />
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/border_thickness"
+        style="@style/HorizontalRule" />
+</LinearLayout>

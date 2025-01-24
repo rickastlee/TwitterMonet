@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:paddingTop="@dimen/composer_list_top_padding"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="48.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <tag
+        android:value="com.twitter.weaver.base.WeaverViewDelegateBinder"
+        android:id="@id/viewBinder" />
+    <tag
+        android:value="ReplyTweetViewDelegateBinder"
+        android:id="@id/viewBinderNamed" />
+    <tag
+        android:value="com.twitter.composer.selfthread.replytweet.ReplyTweetViewModel"
+        android:id="@id/viewModel" />
+    <com.twitter.tweetview.core.TweetView
+        android:layout_gravity="top"
+        android:id="@id/tweet"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/self_thread_composer_content_end_margin"
+        style="@style/TweetView.ComposerReply" />
+    <ProgressBar
+        android:layout_gravity="center"
+        android:id="@id/loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        style="?android:progressBarStyleSmall" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textColor="?coreColorSecondaryText"
+        android:layout_gravity="center"
+        android:id="@id/error_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tweet_load_failed" />
+</FrameLayout>

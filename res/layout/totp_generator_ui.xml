@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <include
+        layout="@layout/toolbar_container" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textColor="?coreColorPrimaryText"
+        android:gravity="center_horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/totp_padding_top"
+        android:text="@string/totp_description"
+        android:layout_marginStart="@dimen/totp_padding_sides"
+        android:layout_marginEnd="@dimen/totp_padding_sides" />
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/totp_padding_code"
+        android:layout_marginBottom="@dimen/totp_padding_code">
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_jumbo"
+            android:textColor="?coreColorPrimaryText"
+            android:gravity="center"
+            android:id="@id/totp_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/totp_description" />
+        <ProgressBar
+            android:id="@id/totp_expiration_progressbar"
+            android:layout_width="@dimen/totp_progress_size"
+            android:layout_height="@dimen/totp_progress_size"
+            android:indeterminate="false"
+            android:progressDrawable="@drawable/circular_progress_bar"
+            android:rotationY="180.0"
+            android:layout_marginStart="@dimen/totp_padding_code"
+            style="?android:progressBarStyleHorizontal" />
+    </LinearLayout>
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textColor="?coreColorPrimaryText"
+        android:gravity="center_horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/totp_refresh_warning"
+        android:layout_marginStart="@dimen/totp_padding_sides"
+        android:layout_marginEnd="@dimen/totp_padding_sides" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textColor="?coreColorPrimaryText"
+        android:gravity="center_horizontal"
+        android:id="@id/help_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/totp_hc_padding_top"
+        android:text="@string/totp_3rd_party_authenticator_help_text" />
+</LinearLayout>

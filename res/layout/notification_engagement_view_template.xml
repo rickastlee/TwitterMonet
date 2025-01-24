@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_8"
+        android:baselineAligned="false"
+        android:weightSum="3.0"
+        android:layout_marginStart="@dimen/space_12"
+        android:layout_marginEnd="@dimen/space_12">
+        <FrameLayout
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0">
+            <ImageView
+                android:layout_width="18.0dip"
+                android:layout_height="18.0dip"
+                android:src="@drawable/ic_vector_reply_stroke"
+                android:tint="?colorControlNormal"
+                android:contentDescription="@string/button_action_reply" />
+            <TextView
+                android:textSize="@dimen/font_size_small"
+                android:textColor="?colorControlNormal"
+                android:ellipsize="end"
+                android:id="@id/reply_count"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/space_12"
+                android:layout_marginStart="@dimen/space_20"
+                android:layout_marginEnd="@dimen/space_12" />
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0">
+            <ImageView
+                android:layout_width="18.0dip"
+                android:layout_height="18.0dip"
+                android:src="@drawable/ic_vector_retweet_stroke"
+                android:tint="?colorControlNormal"
+                android:contentDescription="@string/button_action_retweet" />
+            <TextView
+                android:textSize="@dimen/font_size_small"
+                android:textColor="?colorControlNormal"
+                android:ellipsize="end"
+                android:id="@id/retweet_count"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/space_12"
+                android:layout_marginStart="@dimen/space_20"
+                android:layout_marginEnd="@dimen/space_12" />
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0">
+            <ImageView
+                android:layout_width="18.0dip"
+                android:layout_height="18.0dip"
+                android:src="@drawable/ic_vector_heart_stroke"
+                android:tint="?colorControlNormal"
+                android:contentDescription="@string/button_action_like" />
+            <TextView
+                android:textSize="@dimen/font_size_small"
+                android:textColor="?colorControlNormal"
+                android:ellipsize="end"
+                android:id="@id/favorite_count"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/space_12"
+                android:layout_marginStart="@dimen/space_20"
+                android:layout_marginEnd="@dimen/space_12" />
+        </FrameLayout>
+    </LinearLayout>
+</merge>

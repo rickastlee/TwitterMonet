@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <include
+        android:id="@id/_header"
+        layout="@layout/layout_space_header" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@id/room_subscription_preview_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        custom:layout_constraintBottom_toBottomOf="parent"
+        custom:layout_constraintEnd_toEndOf="parent"
+        custom:layout_constraintStart_toStartOf="parent"
+        custom:layout_constraintTop_toBottomOf="@id/_header"
+        custom:layout_constraintVertical_weight="1.0">
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_subtext_1"
+            android:textColor="?coreColorPrimaryText"
+            android:id="@id/room_subscription_super_followers_label"
+            android:background="@drawable/recording_icon"
+            android:paddingTop="@dimen/space_4"
+            android:paddingBottom="@dimen/space_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/super_followers_label"
+            android:drawablePadding="@dimen/space_4"
+            android:drawableStart="@drawable/ic_super_follow_spaces"
+            android:paddingStart="@dimen/space_8"
+            android:paddingEnd="@dimen/space_8"
+            android:layout_marginStart="@dimen/space_20"
+            android:drawableTint="@color/super_follows_solid"
+            custom:layout_constraintStart_toStartOf="parent"
+            custom:layout_constraintTop_toTopOf="parent"
+            style="@style/TextBold" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_large"
+            android:textStyle="bold"
+            android:textColor="?coreColorPrimaryText"
+            android:ellipsize="end"
+            android:gravity="start"
+            android:id="@id/room_subscription_text_description"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_16"
+            android:maxLines="3"
+            android:layout_marginStart="@dimen/space_16"
+            android:layout_marginEnd="@dimen/space_16"
+            custom:layout_constraintBottom_toTopOf="@id/room_subscription_room_tagged_topics"
+            custom:layout_constraintEnd_toEndOf="parent"
+            custom:layout_constraintStart_toStartOf="parent"
+            custom:layout_constraintTop_toBottomOf="@id/room_subscription_super_followers_label" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_small"
+            android:textColor="?coreColorSecondaryText"
+            android:ellipsize="end"
+            android:id="@id/room_subscription_room_tagged_topics"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_4"
+            android:layout_marginBottom="@dimen/space_16"
+            android:maxLines="2"
+            android:textAlignment="textStart"
+            android:layout_marginHorizontal="@dimen/space_16"
+            custom:layout_constraintBottom_toTopOf="@id/room_subscription_creator_host_image"
+            custom:layout_constraintEnd_toEndOf="parent"
+            custom:layout_constraintStart_toStartOf="parent"
+            custom:layout_constraintTop_toBottomOf="@id/room_subscription_text_description" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_jumbo"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:id="@id/room_subscription_num_participants"
+            android:background="@drawable/bg_circle_action_icon_gray_50"
+            android:layout_width="@dimen/super_follower_user_image_size"
+            android:layout_height="@dimen/super_follower_user_image_size"
+            custom:layout_constraintBottom_toBottomOf="@id/room_subscription_creator_host_image"
+            custom:layout_constraintStart_toStartOf="@id/room_subscription_overlap"
+            custom:layout_constraintTop_toTopOf="@id/room_subscription_creator_host_image" />
+        <Space
+            android:id="@id/room_subscription_overlap"
+            android:layout_width="@dimen/space_16"
+            android:layout_height="wrap_content"
+            custom:layout_constraintBottom_toTopOf="@id/room_subscription_button_subtext"
+            custom:layout_constraintEnd_toEndOf="parent"
+            custom:layout_constraintStart_toStartOf="parent"
+            custom:layout_constraintTop_toBottomOf="@id/room_subscription_room_tagged_topics" />
+        <com.twitter.media.ui.image.UserImageView
+            android:id="@id/room_subscription_creator_host_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_16"
+            android:layout_marginBottom="@dimen/space_16"
+            custom:layout_constraintBottom_toTopOf="@id/room_subscription_button_subtext"
+            custom:layout_constraintEnd_toEndOf="@id/room_subscription_overlap"
+            custom:layout_constraintTop_toBottomOf="@id/room_subscription_room_tagged_topics"
+            custom:userImageSize="@dimen/super_follower_user_image_size" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_small"
+            android:textColor="?coreColorSecondaryText"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:id="@id/room_subscription_button_subtext"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/super_followers_error_desc"
+            android:paddingStart="@dimen/space_20"
+            android:paddingEnd="@dimen/space_20"
+            android:accessibilityTraversalAfter="@id/room_consumption_preview_join_space"
+            custom:layout_constraintBottom_toTopOf="@id/room_subscription_open_sf"
+            custom:layout_constraintEnd_toEndOf="parent"
+            custom:layout_constraintStart_toStartOf="parent"
+            custom:layout_constraintTop_toBottomOf="@id/room_subscription_creator_host_image" />
+        <com.twitter.rooms.ui.core.schedule.details.RoomTicketPurchaseButton
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:id="@id/room_subscription_open_sf"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_12"
+            android:layout_marginBottom="@dimen/space_32"
+            android:layout_marginStart="@dimen/space_20"
+            android:layout_marginEnd="@dimen/space_20"
+            android:accessibilityTraversalAfter="@id/room_subscription_text_description"
+            custom:layout_constraintBottom_toBottomOf="parent"
+            custom:layout_constraintEnd_toEndOf="parent"
+            custom:layout_constraintStart_toStartOf="parent"
+            custom:layout_constraintTop_toBottomOf="@id/room_subscription_button_subtext" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <tag
+        android:value="RoomSubscriptionPrompt"
+        android:id="@id/weaverComponent" />
+</LinearLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <include
+        layout="@layout/section_divider" />
+    <RelativeLayout
+        android:paddingTop="@dimen/list_row_padding_vertical"
+        android:paddingBottom="@dimen/list_row_padding_vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/list_row_padding_horizontal"
+        android:paddingEnd="@dimen/list_row_padding_horizontal">
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_normal"
+            android:textStyle="bold"
+            android:textColor="?coreColorPrimaryText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/conversations_user_list_divider_text"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/user_checkbox"
+            android:layout_alignParentStart="true" />
+        <include
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            layout="@layout/user_checkbox" />
+    </RelativeLayout>
+</LinearLayout>

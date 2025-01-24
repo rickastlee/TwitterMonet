@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
+        android:id="@id/banner_upload_cta"
+        android:background="?abstractColorFadedGray"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/setup_profile_header_screen_header_container_height"
+        android:layout_alignParentTop="true">
+        <ImageView
+            android:gravity="center"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/setup_profile_header_cta_image_max_height"
+            android:layout_marginTop="@dimen/setup_profile_header_cta_image_margin_top"
+            android:src="@drawable/ic_vector_camera_plus"
+            android:contentDescription="@string/setup_profile_upload_header_image_content_description"
+            twitter:tint="@color/twitter_blue" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:gravity="center"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/profile_module_header_cta_text_margin_top"
+            android:text="@string/profile_module_choose_header_cta_text"
+            style="@style/ProfileModuleImageCtaStyle" />
+    </LinearLayout>
+    <com.twitter.media.ui.image.MediaImageView
+        android:id="@id/banner_image"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/setup_profile_header_screen_header_container_height"
+        android:layout_alignParentTop="true"
+        twitter:singleImageView="true">
+        <com.twitter.media.ui.image.RichImageView
+            android:id="@id/image"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            twitter:cornerRadiusTopLeft="@dimen/profile_card_corner_radius"
+            twitter:cornerRadiusTopRight="@dimen/profile_card_corner_radius"
+            twitter:fixedSize="true" />
+    </com.twitter.media.ui.image.MediaImageView>
+    <com.twitter.media.ui.image.UserImageView
+        android:id="@id/user_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/banner_image"
+        android:layout_marginStart="@dimen/list_row_padding_horizontal"
+        twitter:defaultDrawable="@drawable/drawable_color_placeholder_bg"
+        twitter:singleImageView="true"
+        twitter:userImageSize="@dimen/setup_profile_header_screen_avatar_container_height" />
+</RelativeLayout>

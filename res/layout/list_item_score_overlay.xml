@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.moments.core.ui.widget.ScoreView
+    android:id="@id/score_card_container"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    style="@style/MomentsScore"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/moments_standard_spacing"
+        layout="@layout/moments_score_overlay" />
+</com.twitter.moments.core.ui.widget.ScoreView>

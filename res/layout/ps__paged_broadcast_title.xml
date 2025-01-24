@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <tv.periscope.android.ui.broadcast.info.view.BroadcastTitleViewPager
+        android:id="@id/pager"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <tv.periscope.android.view.DotsPageIndicator
+        android:layout_gravity="center_horizontal"
+        android:id="@id/indicator"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/ps__standard_spacing_5"
+        custom:ps__count="2"
+        custom:ps__dotSize="18.0dip"
+        custom:ps__selectedPosition="0" />
+</LinearLayout>

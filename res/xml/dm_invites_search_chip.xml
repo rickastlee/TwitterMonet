@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<chip
+    android:textAppearance="@style/DmInvitesChipText"
+    app:chipBackgroundColor="@android:color/transparent"
+    app:chipStrokeColor="#ffebeef0"
+    app:chipStrokeWidth="1.0dip"
+    app:closeIconEnabled="false"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" />

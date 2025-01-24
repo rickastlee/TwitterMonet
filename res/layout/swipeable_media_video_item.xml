@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.ui.widget.RoundedRectViewMask
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.media.av.autoplay.ui.VideoContainerHost
+        android:id="@id/media_item"
+        android:background="@drawable/component_divider"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+</com.twitter.ui.widget.RoundedRectViewMask>

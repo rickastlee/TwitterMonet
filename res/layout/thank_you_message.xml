@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="horizontal"
+    android:id="@id/thank_you_container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    style="@style/ToastView"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@id/toast_icon"
+        android:layout_width="@dimen/space_24"
+        android:layout_height="@dimen/space_24"
+        android:src="@drawable/ic_vector_error_circle"
+        android:importantForAccessibility="no"
+        app:tint="@color/twitter_blue"
+        style="@style/ToastIcon" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:layout_gravity="center_vertical"
+        android:id="@id/toast_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/ToastTitle" />
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.ui.components.text.legacy.TypefacesTextView
+    android:textSize="@dimen/font_size_large"
+    android:textStyle="bold"
+    android:textColor="?coreColorPrimaryText"
+    android:paddingTop="@dimen/list_row_padding_vertical"
+    android:paddingBottom="@dimen/list_row_padding_vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/list_preferred_height"
+    android:paddingStart="@dimen/list_row_padding_horizontal"
+    android:paddingEnd="@dimen/list_row_padding_horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

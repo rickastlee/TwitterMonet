@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:gravity="bottom"
+    android:layout_gravity="bottom"
+    android:visibility="invisible"
+    android:clipChildren="false"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="0.0dip"
+    android:paddingEnd="@dimen/space_2"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.twitter.media.av.ui.control.SeekBarContainer
+        android:id="@id/seekbar_container"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/pause"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        <SeekBar
+            android:id="@id/mediacontroller_progress"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/space_32"
+            android:layout_marginBottom="-8.0dip"
+            android:maxHeight="7.0dip"
+            android:minHeight="7.0dip"
+            android:paddingStart="13.659973dip"
+            android:paddingEnd="11.659973dip"
+            style="@style/AVViewCountMediaSeekBar" />
+    </com.twitter.media.av.ui.control.SeekBarContainer>
+    <ImageButton
+        android:id="@id/pause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-4.0dip"
+        android:layout_marginBottom="@dimen/space_2"
+        android:contentDescription="@string/play"
+        android:layout_marginStart="@dimen/space_4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/seekbar_container"
+        style="@style/PlayPauseButton" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_small"
+        android:textColor="@color/white"
+        android:id="@id/view_count"
+        android:background="@color/clear"
+        android:paddingTop="@dimen/av_view_count_text_top_padding"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="4.0dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/pause"
+        app:layout_constraintTop_toBottomOf="@id/seekbar_container" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_small"
+        android:textColor="@color/white"
+        android:id="@id/countdown"
+        android:background="@color/clear"
+        android:paddingTop="@dimen/av_view_count_text_top_padding"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:paddingStart="0.0dip"
+        android:paddingEnd="4.0dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/pause"
+        app:layout_constraintTop_toBottomOf="@id/seekbar_container" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_small"
+        android:textColor="@color/white"
+        android:id="@id/time_current"
+        android:background="@color/clear"
+        android:paddingTop="@dimen/av_view_count_text_top_padding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="0.0dip"
+        android:paddingEnd="@dimen/space_2"
+        app:layout_constraintEnd_toStartOf="@id/time"
+        app:layout_constraintTop_toBottomOf="@id/seekbar_container" />
+    <LinearLayout
+        android:id="@id/skip"
+        android:paddingBottom="@dimen/space_8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="0.0dip"
+        android:paddingEnd="6.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <include
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/bg_media_badge_padding"
+            layout="@layout/av_autoplay_skip_badge_count_down" />
+        <ViewStub
+            android:id="@id/skip_badge_with_pip_count_down"
+            android:layout="@layout/av_autoplay_skip_badge_with_pip_count_down"
+            android:inflatedId="@id/skip_badge_with_pip_count_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_small"
+        android:textColor="@color/white"
+        android:id="@id/time"
+        android:paddingTop="@dimen/av_view_count_text_top_padding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="1.0dip"
+        android:paddingEnd="11.0dip"
+        app:layout_constraintEnd_toStartOf="@id/skip"
+        app:layout_constraintTop_toBottomOf="@id/seekbar_container" />
+</androidx.constraintlayout.widget.ConstraintLayout>

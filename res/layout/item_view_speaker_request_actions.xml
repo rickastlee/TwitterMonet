@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.twitter.ui.components.button.legacy.TwitterButton
+        android:id="@id/approve_action"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:text="@string/speakers_action_approve"
+        android:layout_marginEnd="@dimen/space_8"
+        app:layout_constraintEnd_toStartOf="@id/deny_action"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/TwitterButtonMediumBrandOutlined" />
+    <com.twitter.ui.components.button.legacy.TwitterButton
+        android:id="@id/deny_action"
+        android:visibility="gone"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:text="@string/speakers_action_deny"
+        android:layout_marginEnd="@dimen/space_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/approve_action"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/TwitterButtonMediumDestructiveOutlined" />
+</androidx.constraintlayout.widget.ConstraintLayout>

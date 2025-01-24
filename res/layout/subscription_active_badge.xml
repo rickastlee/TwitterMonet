@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="horizontal"
+    android:id="@id/subscription_badge"
+    android:background="@drawable/bg_active_rounded_stroke_border"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/space_16"
+    android:paddingVertical="@dimen/space_8"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:layout_gravity="center_vertical"
+        android:layout_width="@dimen/space_16"
+        android:layout_height="@dimen/space_16"
+        android:src="@drawable/ic_vector_checkmark_circle_fill"
+        android:importantForAccessibility="no"
+        app:tint="?colorPrimary" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_small"
+        android:textStyle="normal"
+        android:id="@id/active_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/subscriptions_active_icon_title"
+        android:layout_marginStart="@dimen/space_8"
+        style="@style/PrimaryText" />
+</LinearLayout>

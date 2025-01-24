@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_gravity="bottom"
+    android:id="@id/docker_room"
+    android:background="?coreColorAppBackground"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/docker_height"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View
+        android:id="@id/divider"
+        android:background="?coreColorBorder"
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dip"
+        app:layout_constraintTop_toTopOf="parent" />
+    <View
+        android:id="@id/docker_room_bar"
+        android:background="@color/purple_500"
+        android:visibility="invisible"
+        android:layout_width="fill_parent"
+        android:layout_height="3.0dip"
+        app:layout_constraintTop_toTopOf="parent" />
+    <com.twitter.common.ui.isTalkingView.IsTalkingView
+        android:gravity="center"
+        android:layout_gravity="center_vertical"
+        android:id="@id/docker_room_isTalking_indicator"
+        android:visibility="gone"
+        android:layout_width="20.0dip"
+        android:layout_height="15.0dip"
+        android:layout_marginStart="@dimen/space_8"
+        android:layout_marginEnd="@dimen/space_4"
+        app:animationDuration="200"
+        app:barColor="@color/spaces_dock_speaking_color"
+        app:layout_constraintBottom_toTopOf="@id/docker_room_participant"
+        app:layout_constraintEnd_toStartOf="@id/docker_room_isTalking_name"
+        app:layout_constraintStart_toEndOf="@id/docker_notification_indicator"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_small"
+        android:textStyle="bold"
+        android:textColor="@color/spaces_dock_no_speaker_color"
+        android:ellipsize="end"
+        android:id="@id/docker_room_isTalking_name"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:textAlignment="viewStart"
+        app:layout_constraintBottom_toBottomOf="@id/docker_room_isTalking_indicator"
+        app:layout_constraintEnd_toStartOf="@id/room_actions_container"
+        app:layout_constraintStart_toEndOf="@id/docker_room_isTalking_indicator"
+        app:layout_constraintTop_toTopOf="@id/docker_room_isTalking_indicator" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_small"
+        android:textStyle="bold"
+        android:textColor="?coreColorSecondaryText"
+        android:ellipsize="end"
+        android:id="@id/docker_room_participant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3.0dip"
+        android:text="@string/only_you_are_here"
+        android:maxLines="1"
+        android:textAlignment="viewStart"
+        android:layout_marginEnd="@dimen/space_4"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/room_actions_container"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/docker_room_isTalking_indicator"
+        app:layout_constraintTop_toBottomOf="@id/docker_room_isTalking_indicator" />
+    <View
+        android:id="@id/docker_notification_indicator"
+        android:background="@drawable/bg_notification_dot"
+        android:visibility="visible"
+        android:layout_width="6.0dip"
+        android:layout_height="6.0dip"
+        android:layout_marginStart="@dimen/space_12"
+        app:layout_constraintBottom_toBottomOf="@id/docker_room_participant"
+        app:layout_constraintEnd_toStartOf="@id/docker_room_participant"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/docker_room_participant" />
+    <ImageView
+        android:id="@id/super_follower_indicator"
+        android:visibility="gone"
+        android:layout_width="@dimen/space_12"
+        android:layout_height="@dimen/space_12"
+        android:src="@drawable/ic_vector_superfollow_stroke"
+        android:importantForAccessibility="no"
+        android:layout_marginStart="@dimen/space_8"
+        app:layout_constraintBottom_toBottomOf="@id/docker_room_participant"
+        app:layout_constraintEnd_toStartOf="@id/room_actions_container"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/docker_room_participant"
+        app:layout_constraintTop_toTopOf="@id/docker_room_participant"
+        app:tint="?coreColorSecondaryText" />
+    <LinearLayout
+        android:layout_gravity="end|center"
+        android:orientation="horizontal"
+        android:id="@id/room_actions_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/space_20"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <include
+            android:id="@id/room_docker_reaction_viewstub"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/docker_height"
+            layout="@layout/room_docker_reaction_viewstub" />
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@id/mute_button"
+            android:padding="@dimen/space_4"
+            android:layout_width="@dimen/docker_reaction_button_size"
+            android:layout_height="@dimen/docker_reaction_button_size"
+            android:foreground="@drawable/ripple_selector_oval"
+            android:src="@drawable/ic_micro_muted"
+            android:contentDescription="@string/umute_room_button" />
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@id/close_room"
+            android:padding="@dimen/space_4"
+            android:layout_width="@dimen/docker_reaction_button_size"
+            android:layout_height="@dimen/docker_reaction_button_size"
+            android:foreground="@drawable/ripple_selector_oval"
+            android:src="@drawable/ic_vector_close"
+            android:contentDescription="@string/close_room_button"
+            android:layout_marginStart="@dimen/space_20"
+            app:tint="?coreColorPrimaryText" />
+    </LinearLayout>
+    <tag
+        android:value="RoomDocker"
+        android:id="@id/weaverComponent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

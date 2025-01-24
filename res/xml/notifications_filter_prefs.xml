@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <com.twitter.ui.widget.PreferenceTopCategoryCompat
+        android:title="@string/advanced_notification_filter_category">
+        <com.twitter.notifications.settings.TaggedCheckboxPreference
+            android:title="@string/advanced_notification_filter_not_following"
+            android:key="notification_filter_not_following" />
+        <com.twitter.settings.widget.LinkableCheckBoxPreferenceCompat
+            android:title="@string/advanced_notification_filter_not_following_me"
+            android:key="notification_filter_not_following_me"
+            twitter:checkboxTag="@string/not_following_filter_checkbox_tag"
+            twitter:multilineTitle="true" />
+        <com.twitter.settings.widget.LinkableCheckBoxPreferenceCompat
+            android:title="@string/advanced_notification_filter_new_users"
+            android:key="notification_filter_new_users"
+            twitter:multilineTitle="true" />
+        <com.twitter.settings.widget.LinkableCheckBoxPreferenceCompat
+            android:title="@string/advanced_notification_filter_default_profile_image"
+            android:key="notification_filter_default_profile_image"
+            twitter:multilineTitle="true" />
+        <com.twitter.settings.widget.LinkableCheckBoxPreferenceCompat
+            android:title="@string/advanced_notification_filter_no_confirmed_email"
+            android:key="notification_filter_no_confirmed_email"
+            twitter:multilineTitle="true" />
+        <com.twitter.settings.widget.LinkableCheckBoxPreferenceCompat
+            android:title="@string/advanced_notification_filter_no_confirmed_phone"
+            android:key="notification_filter_no_confirmed_phone"
+            twitter:multilineTitle="true" />
+        <com.twitter.settings.widget.LinkablePreferenceCompat
+            android:selectable="false"
+            android:key="filters_education"
+            android:summary="@string/advanced_notification_filter_education"
+            twitter:clickableUrl="@string/learn_more_about_filters" />
+    </com.twitter.ui.widget.PreferenceTopCategoryCompat>
+</PreferenceScreen>

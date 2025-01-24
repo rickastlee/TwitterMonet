@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:orientation="vertical"
+    android:id="@id/dialog_panel"
+    android:background="?coreColorAppBackground"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip">
+        <com.twitter.media.ui.fresco.FrescoMediaImageView
+            android:gravity="center"
+            android:id="@id/header_image"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_marginTop="@dimen/space_24"
+            android:layout_marginBottom="@dimen/space_24"
+            android:contentDescription="@null"
+            android:paddingStart="@dimen/space_16"
+            android:paddingEnd="@dimen/space_16"
+            app:layout_constraintBottom_toTopOf="@id/guideline"
+            app:layout_constraintTop_toTopOf="parent" />
+        <androidx.constraintlayout.widget.Guideline
+            android:orientation="horizontal"
+            android:id="@id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_percent="0.33" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_jumbo"
+            android:textColor="?coreColorPrimaryText"
+            android:gravity="center"
+            android:id="@id/dialog_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/addressbook_connection_title_content_description"
+            android:paddingStart="@dimen/prompt_fullscreen_text_padding_horizontal"
+            android:paddingEnd="@dimen/prompt_fullscreen_text_padding_horizontal"
+            app:layout_constraintBottom_toTopOf="@id/buttons"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guideline"
+            app:layout_constraintVertical_chainStyle="spread_inside" />
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:id="@id/buttons"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/dialog_message"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dialog_title">
+            <com.twitter.ui.components.button.legacy.TwitterButton
+                android:gravity="center"
+                android:id="@id/button_positive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TwitterButtonLargeBrandFilled" />
+            <com.twitter.ui.components.button.legacy.TwitterButton
+                android:gravity="center"
+                android:id="@id/button_negative"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/addressbook_connection_secondary_button_top"
+                style="@style/TwitterButtonLargeBrandText" />
+        </LinearLayout>
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_small"
+            android:textColor="?coreColorSecondaryText"
+            android:id="@id/dialog_message"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_16"
+            android:paddingStart="@dimen/addressbook_connection_side_padding"
+            android:paddingEnd="@dimen/addressbook_connection_side_padding"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/buttons" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

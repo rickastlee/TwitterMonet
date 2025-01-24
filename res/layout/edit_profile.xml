@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <include
+        layout="@layout/app_toolbar" />
+    <ScrollView
+        android:id="@id/scroll_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <RelativeLayout
+            android:id="@id/wrapper"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <com.twitter.profiles.HeaderImageView
+                android:id="@id/header_image"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="100.0dip"
+                android:layout_alignParentTop="true"
+                twitter:defaultDrawable="@drawable/drawable_color_deep_gray"
+                twitter:scaleType="fill">
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:src="@color/black_opacity_50"
+                    android:contentDescription="@string/overlay_content_description" />
+                <com.twitter.ui.widget.TintableImageView
+                    android:layout_gravity="center"
+                    android:layout_width="@dimen/profile_camera_size"
+                    android:layout_height="@dimen/profile_camera_size"
+                    android:src="@drawable/ic_vector_camera_plus_stroke"
+                    android:contentDescription="@string/button_camera"
+                    twitter:tintColorList="@color/white_opacity_85" />
+            </com.twitter.profiles.HeaderImageView>
+            <ImageView
+                android:background="?coreColorAppBackground"
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_alignParentTop="true"
+                android:contentDescription="@null"
+                android:alpha="0.0" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@id/profile_information"
+                android:paddingTop="@dimen/list_row_padding_vertical"
+                android:paddingBottom="@dimen/list_row_padding_vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/avatar_image"
+                android:paddingStart="@dimen/list_row_padding_horizontal"
+                android:paddingEnd="@dimen/list_row_padding_horizontal">
+                <com.twitter.ui.widget.TwitterEditText
+                    android:id="@id/edit_name"
+                    android:hint="@string/edit_profile_name_hint"
+                    twitter:labelText="@string/edit_profile_name"
+                    style="@style/TwitterEditProfile" />
+                <com.twitter.ui.components.inlinecallout.HorizonInlineCalloutView
+                    android:id="@id/inline_callout_name"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <tag
+                        android:value="VerifiedNameInlineCallout"
+                        android:id="@id/weaverComponent" />
+                </com.twitter.ui.components.inlinecallout.HorizonInlineCalloutView>
+                <com.twitter.ui.widget.TwitterEditText
+                    android:id="@id/edit_username"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="Username"
+                    twitter:labelText="Username"
+                    style="@style/TwitterEditProfile" />
+                <com.twitter.ui.widget.TwitterEditText
+                    android:id="@id/edit_bio"
+                    twitter:labelText="@string/edit_profile_bio"
+                    style="@style/TwitterEditBio" />
+                <com.twitter.ui.widget.PopupEditText
+                    android:id="@id/edit_location"
+                    android:maxLength="@integer/profile_location_max_length"
+                    android:inputType="textNoSuggestions"
+                    android:imeOptions="flagNoExtractUi"
+                    twitter:labelText="@string/edit_profile_location"
+                    twitter:threshold="0"
+                    style="@style/TwitterEditProfile" />
+                <com.twitter.ui.widget.TwitterEditText
+                    android:id="@id/edit_web_url"
+                    android:maxLength="@integer/profile_url_max_length"
+                    android:inputType="textUri"
+                    twitter:labelText="@string/edit_profile_website"
+                    style="@style/TwitterEditProfile" />
+                <com.twitter.ui.widget.TwitterEditText
+                    android:id="@id/birthdate_field"
+                    android:focusable="false"
+                    android:hint="@string/edit_profile_birthdate_hint"
+                    twitter:labelText="@string/edit_profile_birthdate"
+                    style="@style/TwitterEditProfile" />
+                <com.twitter.ui.components.button.compose.HorizonComposeButton
+                    android:id="@id/switch_to_professional_label"
+                    android:paddingTop="@dimen/space_16"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/TwitterButtonMediumPrimaryOutlined" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@id/verified_phone_container"
+                android:background="?coreColorAppBackground"
+                android:focusable="true"
+                android:visibility="gone"
+                android:clickable="true"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:foreground="?android:selectableItemBackground"
+                android:layout_below="@id/profile_information">
+                <include
+                    android:id="@id/verified_phone_field"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/switch_preference" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@id/tip_jar_container"
+                android:background="?coreColorAppBackground"
+                android:focusable="true"
+                android:clickable="true"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/space_16"
+                android:foreground="?android:selectableItemBackground"
+                android:layout_below="@id/verified_phone_container">
+                <include
+                    android:id="@id/tip_jar_field"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/switch_preference" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

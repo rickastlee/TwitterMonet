@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@id/divider"
+        android:background="@color/gray_200"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:contentDescription="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@id/profile_basic_user_info_layout"
+        android:padding="@dimen/ps__standard_spacing_16"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <tv.periscope.android.ui.chat.AvatarImageView
+            android:layout_gravity="center"
+            android:id="@id/profile_avatar"
+            android:layout_width="60.0dip"
+            android:layout_height="60.0dip"
+            android:src="@drawable/ps__ic_periscope_logo"
+            android:scaleType="centerCrop"
+            android:contentDescription="@null"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ps__standard_spacing_16"
+            app:layout_constraintBottom_toBottomOf="@id/profile_avatar"
+            app:layout_constraintStart_toEndOf="@id/profile_avatar"
+            app:layout_constraintTop_toTopOf="@id/profile_avatar">
+            <tv.periscope.android.view.PsTextView
+                android:textSize="13.0sp"
+                android:textColor="@color/gray_700"
+                android:id="@id/following"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/unfollow"
+                android:drawablePadding="@dimen/ps__standard_spacing_10"
+                android:drawableStart="@drawable/ps__ic_following" />
+            <tv.periscope.android.view.PsTextView
+                android:textSize="@dimen/font_size_normal"
+                android:textStyle="bold"
+                android:textColor="@color/gray_700"
+                android:id="@id/display_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <tv.periscope.android.view.PsTextView
+                    android:textSize="@dimen/font_size_small"
+                    android:textColor="@color/gray_700"
+                    android:id="@id/username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <tv.periscope.android.view.PsTextView
+                    android:textSize="@dimen/font_size_small"
+                    android:textColor="@color/gray_700"
+                    android:id="@id/num_follower"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/ps__standard_spacing_10" />
+            </LinearLayout>
+        </LinearLayout>
+        <tv.periscope.android.hydra.utils.InviteCheckButton
+            android:id="@id/invite_check_button"
+            android:layout_width="@dimen/ps__twitter_check_button_size"
+            android:layout_height="@dimen/ps__twitter_check_button_size"
+            android:layout_marginStart="@dimen/ps__standard_spacing_16"
+            app:layout_constraintBottom_toBottomOf="@id/profile_avatar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/profile_avatar" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

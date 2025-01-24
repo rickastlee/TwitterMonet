@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tv.periscope.android.view.PsTextView
+    android:textSize="@dimen/font_size_large"
+    android:gravity="center"
+    android:id="@id/report_reason_list_title"
+    android:background="?coreColorElevatedBackground"
+    android:paddingTop="@dimen/ps__standard_spacing_16"
+    android:paddingBottom="@dimen/ps__standard_spacing_16"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/ps__standard_spacing_24"
+    android:paddingEnd="@dimen/ps__standard_spacing_24"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

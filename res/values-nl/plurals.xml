@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="admin_tools_subtitle_members">
+        <item quantity="other">%d leden</item>
+        <item quantity="one">%d lid</item>
+    </plurals>
+    <plurals name="badge_item_count">
+        <item quantity="other">%d nieuwe items</item>
+        <item quantity="one">%d nieuw item</item>
+    </plurals>
+    <plurals name="cohost_current_count">
+        <item quantity="other">%1$d co-hosts</item>
+        <item quantity="one">%1$d co-host</item>
+    </plurals>
+    <plurals name="community_member_count">
+        <item quantity="other">%d Community-leden</item>
+        <item quantity="one">%d Community-lid</item>
+    </plurals>
+    <plurals name="community_moderator_count">
+        <item quantity="other">%d Moderators</item>
+        <item quantity="one">%d Moderator</item>
+    </plurals>
+    <plurals name="community_navigation_join_requests_label">
+        <item quantity="other">%s verzoeken</item>
+        <item quantity="one">%s verzoek</item>
+    </plurals>
+    <plurals name="community_navigation_new_unread_tweets_label">
+        <item quantity="other">%s nieuwe posts</item>
+        <item quantity="one">%s nieuwe post</item>
+    </plurals>
+    <plurals name="community_navigation_pending_reports_label">
+        <item quantity="other">%s rapporten</item>
+        <item quantity="one">%s rapport</item>
+    </plurals>
+    <plurals name="composer_count_progress_overflow_warning">
+        <item quantity="other">%d teken(s) te lang</item>
+        <item quantity="one">%d teken(s) te lang</item>
+    </plurals>
+    <plurals name="composer_count_progress_warning">
+        <item quantity="other">%d teken(s) resterend</item>
+        <item quantity="one">%d teken(s) resterend</item>
+    </plurals>
+    <plurals name="content_description_fleet_item_space_with_others">
+        <item quantity="other">Space van %1$s met %2$d anderen</item>
+        <item quantity="one">Space van %1$s met %2$d ander</item>
+    </plurals>
+    <plurals name="data_sync_notif_title">
+        <item quantity="other">%d nieuwe interacties</item>
+        <item quantity="one">%d nieuwe interactie</item>
+    </plurals>
+    <plurals name="days">
+        <item quantity="other">%d dagen</item>
+        <item quantity="one">%d dag</item>
+    </plurals>
+    <plurals name="dm_add_people_failure">
+        <item quantity="other">%d gebruikers kunnen niet worden toegevoegd aan deze groep.</item>
+        <item quantity="one">Gebruiker kan niet worden toegevoegd aan deze groep.</item>
+    </plurals>
+    <plurals name="dm_add_people_success">
+        <item quantity="other">Heeft %d gebruikers aan de groep toegevoegd.</item>
+        <item quantity="one">Heeft gebruiker aan de groep toegevoegd.</item>
+    </plurals>
+    <plurals name="dm_follower_count_no_joined_date">
+        <item quantity="other">{num_followers} volgers</item>
+        <item quantity="one">{num_followers} volger</item>
+    </plurals>
+    <plurals name="dm_group_account_name">
+        <item quantity="other">%d personen</item>
+        <item quantity="one">1 persoon</item>
+    </plurals>
+    <plurals name="dm_group_chat_count">
+        <item quantity="other">Groepsgesprek met %d personen</item>
+        <item quantity="one">Groepsgesprek met %d persoon</item>
+    </plurals>
+    <plurals name="dm_group_conversation_participant_count">
+        <item quantity="other">%1$d personen</item>
+        <item quantity="one">%1$d persoon</item>
+    </plurals>
+    <plurals name="dm_group_participant_count">
+        <item quantity="other">Er zijn %1$s in deze groep</item>
+        <item quantity="one">Er is %1$s in deze groep</item>
+    </plurals>
+    <plurals name="dm_group_participant_count_person_details">
+        <item quantity="other">%1$s andere persoon</item>
+        <item quantity="one">%1$s andere persoon</item>
+    </plurals>
+    <plurals name="dm_image_profile">
+        <item quantity="other">"Profielfoto's voor %s"</item>
+        <item quantity="one">Profielfoto van %s</item>
+    </plurals>
+    <plurals name="dm_new_people_you_may_know">
+        <item quantity="other">%d nieuwe personen die je misschien kent</item>
+        <item quantity="one">%d nieuwe persoon die je misschien kent</item>
+    </plurals>
+    <plurals name="dm_new_requests">
+        <item quantity="other">%d nieuwe verzoeken</item>
+        <item quantity="one">%d nieuw verzoek</item>
+    </plurals>
+    <plurals name="dm_participant_added_by_deleted_user">
+        <item quantity="other">{participants} zijn toegevoegd</item>
+        <item quantity="one">{participants} is toegevoegd</item>
+    </plurals>
+    <plurals name="dm_pending_requests">
+        <item quantity="other">%s openstaande verzoeken</item>
+        <item quantity="one">%d openstaand verzoek</item>
+    </plurals>
+    <plurals name="dm_people_you_may_know">
+        <item quantity="other">%d personen die je misschien kent</item>
+        <item quantity="one">%d persoon die je misschien kent</item>
+    </plurals>
+    <plurals name="dm_pinned_conversations_max_count_exceeded_title">
+        <item quantity="other">Je kan maximaal %d chats vastmaken</item>
+        <item quantity="one">Je kan maximaal %d chat vastmaken</item>
+    </plurals>
+    <plurals name="dm_state_seen_by">
+        <item quantity="other">Gezien door %d personen</item>
+        <item quantity="one">Gezien door %d persoon</item>
+    </plurals>
+    <plurals name="dm_unread_messages">
+        <item quantity="other">%d ongelezen berichten</item>
+        <item quantity="one">%d ongelezen bericht</item>
+    </plurals>
+    <plurals name="dm_user_joined_and_follower_count">
+        <item quantity="other">Lid geworden op {joined_date} • {num_followers} volgers</item>
+        <item quantity="one">Lid geworden op {joined_date} • {num_followers} volger</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="other">%d seconden vooruitspoelen</item>
+        <item quantity="one">%d seconde vooruitspoelen</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="other">%d seconden terugspoelen</item>
+        <item quantity="one">%d seconde terugspoelen</item>
+    </plurals>
+    <plurals name="facepile_content_description">
+        <item quantity="other">"Profielfoto's voor %s"</item>
+        <item quantity="one">Profielfoto van %s</item>
+    </plurals>
+    <plurals name="full_screen_gallery_header_add">
+        <item quantity="other">%d toevoegen</item>
+        <item quantity="one">%d toevoegen</item>
+    </plurals>
+    <plurals name="graphql_errors_button">
+        <item quantity="other">%d Fouten</item>
+        <item quantity="one">%d Fout</item>
+    </plurals>
+    <plurals name="guest_management_max_cohost_count_label">
+        <item quantity="other">Je mag maximaal %1$d co-hosts toevoegen.</item>
+        <item quantity="one">Je mag maximaal %1$d co-hosts toevoegen.</item>
+    </plurals>
+    <plurals name="guest_management_open_cohost_count_label">
+        <item quantity="other">Voeg maximaal %1$d mensen toe.</item>
+        <item quantity="one">Voeg nog %1$d persoon toe.</item>
+    </plurals>
+    <plurals name="host_kudos_num_followers_gained">
+        <item quantity="other">Je hebt %1$d nieuwe volgers!</item>
+        <item quantity="one">Je hebt %1$d nieuwe volger!</item>
+    </plurals>
+    <plurals name="hours">
+        <item quantity="other">%d uur</item>
+        <item quantity="one">%d uur</item>
+    </plurals>
+    <plurals name="humanization_prompt_followers">
+        <item quantity="other">%1$s volg %2$s.</item>
+        <item quantity="one">%1$s volgt %2$s.</item>
+    </plurals>
+    <plurals name="humanization_prompt_topics">
+        <item quantity="other">Jij en %1$s volgen allebei de Onderwerpen %2$s.</item>
+        <item quantity="one">Jij en %1$s volgen allebei het Onderwerp %2$s.</item>
+    </plurals>
+    <plurals name="likes">
+        <item quantity="other">%d vind-ik-leuks</item>
+        <item quantity="one">%d vind-ik-leuk</item>
+    </plurals>
+    <plurals name="list_member_count">
+        <item quantity="other">Leden</item>
+        <item quantity="one">Lid</item>
+    </plurals>
+    <plurals name="media_alt_text_prompt_dialog_message">
+        <item quantity="other">"Goede afbeeldingsbeschrijvingen zijn beknopt maar toch gedetailleerd. Zorg ervoor dat je de tekst in de afbeelding zelf samenvat of uitschrijft.
+
+Je beschrijvingen maken X toegankelijk voor mensen met een beperking, en voor iedereen die meer context wil.
+
+Je kan deze herinnering uitschakelen in Toegankelijkheidsinstellingen."</item>
+        <item quantity="one">"Goede afbeeldingsbeschrijvingen zijn beknopt maar toch gedetailleerd. Zorg ervoor dat je de tekst in de afbeelding zelf samenvat of uitschrijft.
+
+Je beschrijving maakt X toegankelijk voor mensen met een beperking, en voor iedereen die meer context wil.
+
+Je kan deze herinnering uitschakelen in Toegankelijkheidsinstellingen."</item>
+    </plurals>
+    <plurals name="media_alt_text_prompt_dialog_positive_btn_text">
+        <item quantity="other">Beschrijvingen toevoegen</item>
+        <item quantity="one">Beschrijving toevoegen</item>
+    </plurals>
+    <plurals name="media_alt_text_prompt_dialog_title">
+        <item quantity="other">Vergeet niet je afbeeldingen toegankelijk te maken</item>
+        <item quantity="one">Vergeet niet je afbeelding toegankelijk te maken</item>
+    </plurals>
+    <plurals name="media_monetization_settings_categories_selected">
+        <item quantity="other">%d categorieën geselecteerd</item>
+        <item quantity="one">%d categorie geselecteerd</item>
+    </plurals>
+    <plurals name="media_tag_remaining">
+        <item quantity="other">Je kunt nog %d personen taggen.</item>
+        <item quantity="one">Je kunt nog %d persoon taggen.</item>
+    </plurals>
+    <plurals name="media_tag_tagged">
+        <item quantity="other">%d personen getagd</item>
+        <item quantity="one">%d persoon getagd</item>
+    </plurals>
+    <plurals name="member_count">
+        <item quantity="other">%s leden</item>
+        <item quantity="one">%s lid</item>
+    </plurals>
+    <plurals name="members">
+        <item quantity="other">%s leden</item>
+        <item quantity="one">%s lid</item>
+    </plurals>
+    <plurals name="minutes">
+        <item quantity="other">%d minuten</item>
+        <item quantity="one">%d minuut</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d nieuwe meldingen</item>
+        <item quantity="one">%d nieuwe melding</item>
+    </plurals>
+    <plurals name="muted_keyword_bulk_delete_success">
+        <item quantity="other">%d woorden verwijderd</item>
+        <item quantity="one">%d woord verwijderd</item>
+    </plurals>
+    <plurals name="muted_keyword_selected_count">
+        <item quantity="other">%d geselecteerd</item>
+        <item quantity="one">%d geselecteerd</item>
+    </plurals>
+    <plurals name="narrowcast_community_member_count">
+        <item quantity="other">%s leden</item>
+        <item quantity="one">%s lid</item>
+    </plurals>
+    <plurals name="narrowcast_trusted_friends_count">
+        <item quantity="other">%s personen</item>
+        <item quantity="one">%s persoon</item>
+    </plurals>
+    <plurals name="others">
+        <item quantity="other">%d anderen</item>
+        <item quantity="one">1 ander</item>
+    </plurals>
+    <plurals name="product_count">
+        <item quantity="other">%1$d producten</item>
+        <item quantity="one">%1$d product</item>
+    </plurals>
+    <plurals name="profile_creator_subscriptions_count">
+        <item quantity="other">Abonnementen</item>
+        <item quantity="one">Abonnement</item>
+    </plurals>
+    <plurals name="profile_follower_count">
+        <item quantity="other">Volgers</item>
+        <item quantity="one">Volger</item>
+    </plurals>
+    <plurals name="profile_friends_following_others">
+        <item quantity="other">%d anderen</item>
+        <item quantity="one">%d ander</item>
+    </plurals>
+    <plurals name="profile_super_followers_count">
+        <item quantity="other">Abonnees</item>
+        <item quantity="one">Abonnee</item>
+    </plurals>
+    <plurals name="profile_toolbar_subtitle_articles">
+        <item quantity="other">%s Artikelen</item>
+        <item quantity="one">%s Artikel</item>
+    </plurals>
+    <plurals name="profile_toolbar_subtitle_likes">
+        <item quantity="other">%s vind-ik-leuks</item>
+        <item quantity="one">%s vind-ik-leuk</item>
+    </plurals>
+    <plurals name="profile_toolbar_subtitle_media">
+        <item quantity="other">"%s foto's en video's"</item>
+        <item quantity="one">%s foto</item>
+    </plurals>
+    <plurals name="profile_toolbar_subtitle_timeline">
+        <item quantity="other">%s posts</item>
+        <item quantity="one">%s post</item>
+    </plurals>
+    <plurals name="ps__accessibility_broadcaster_stats_graph_peak_msg">
+        <item quantity="other">Grafiek over kijkers van de uitzending. Je had %1$d kijkers tijdens een piek om %2$s.</item>
+        <item quantity="zero">Grafiek over kijkers van de uitzending.</item>
+        <item quantity="one">Grafiek over kijkers van de uitzending. Je had %1$d kijker tijdens een piek om %2$s.</item>
+    </plurals>
+    <plurals name="ps__accessibility_broadcaster_stats_graph_point_msg">
+        <item quantity="other">Je had %1$d kijkers om %2$s.</item>
+        <item quantity="one">Je had %1$d kijker om %2$s.</item>
+    </plurals>
+    <plurals name="ps__invite_follower">
+        <item quantity="other">%d volgers</item>
+        <item quantity="zero">Geen volgers</item>
+        <item quantity="one">%d volger</item>
+    </plurals>
+    <plurals name="ps__invited_num_followers_embolden">
+        <item quantity="other">*%1$s* heeft %2$s personen uitgenodigd</item>
+        <item quantity="one">*%1$s* heeft %2$s persoon uitgenodigd</item>
+    </plurals>
+    <plurals name="ps__moderation_report_muted_by_moderator">
+        <item quantity="other">*Genegeerd door* %1$s (%2$d)</item>
+        <item quantity="one">*Genegeerd door* %1$s</item>
+    </plurals>
+    <plurals name="ps__moderation_report_unmuted_by_moderator">
+        <item quantity="other">*Niet meer genegeerd door* %1$s (%2$d)</item>
+        <item quantity="one">*Niet meer genegeerd door* %1$s</item>
+    </plurals>
+    <plurals name="ps__new_messages">
+        <item quantity="other">%1$d nieuwe berichten</item>
+        <item quantity="one">%1$d nieuw bericht</item>
+    </plurals>
+    <plurals name="ps__num_hearts">
+        <item quantity="other">%s hartjes</item>
+        <item quantity="one">%s hartje</item>
+    </plurals>
+    <plurals name="ps__stats_live_viewers">
+        <item quantity="other">KIJKERS</item>
+        <item quantity="one">KIJKER</item>
+    </plurals>
+    <plurals name="ps__stats_replay_viewers">
+        <item quantity="other">HERHALINGKIJKERS</item>
+        <item quantity="one">HERHALINGKIJKER</item>
+    </plurals>
+    <plurals name="ps__time_format_days">
+        <item quantity="other">%d dagen</item>
+        <item quantity="one">%d dag</item>
+    </plurals>
+    <plurals name="ps__time_format_hours">
+        <item quantity="other">%d uur</item>
+        <item quantity="one">%d uur</item>
+    </plurals>
+    <plurals name="ps__time_format_minutes">
+        <item quantity="other">%d minuten</item>
+        <item quantity="one">%d minuut</item>
+    </plurals>
+    <plurals name="ps__time_format_seconds">
+        <item quantity="other">%d seconds</item>
+        <item quantity="one">%d seconde</item>
+    </plurals>
+    <plurals name="recording_replay_count_preview">
+        <item quantity="other">%s herhalingen</item>
+        <item quantity="one">%s herhaling</item>
+    </plurals>
+    <plurals name="relationship_followers_following_others">
+        <item quantity="other">%d anderen</item>
+        <item quantity="one">%d ander</item>
+    </plurals>
+    <plurals name="replies">
+        <item quantity="other">%d antwoorden</item>
+        <item quantity="one">%d antwoord</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_and_n_others">
+        <item quantity="other">Als antwoord op ﻿%1$s en %2$d anderen﻿</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_and_n_others_exclusive">
+        <item quantity="other">Je antwoordt op ﻿%1$s en %2$d anderen﻿. Je antwoord is ook zichtbaar voor andere Abonnees.</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_and_n_others_in_space">
+        <item quantity="other">Als antwoord op ﻿%1$s en %2$d anderen﻿ in ﻿%3$s﻿</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_someone_and_n_others">
+        <item quantity="other">Als antwoord op ﻿%1$s, %2$s en %3$d anderen﻿</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_someone_and_n_others_exclusive">
+        <item quantity="other">Je antwoordt op ﻿%1$s %2$s en %3$d anderen﻿. Je antwoord is ook zichtbaar voor andere Abonnees.</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_someone_and_n_others_in_space">
+        <item quantity="other">Als antwoord op ﻿%1$s %2$s en %3$d anderen﻿ in ﻿%4$s﻿</item>
+    </plurals>
+    <plurals name="reported_tweet_reported_by">
+        <item quantity="other">Gerapporteerd door {{}}%1$s leden{{}}</item>
+        <item quantity="one">Gerapporteerd door {{}}%1$s{{}}</item>
+    </plurals>
+    <plurals name="retweets">
+        <item quantity="other">%d reposts</item>
+        <item quantity="one">%d repost</item>
+    </plurals>
+    <plurals name="safety_mode_preview_description">
+        <item quantity="other">We hebben %d potentieel beledigende of spammy accounts gemarkeerd.</item>
+        <item quantity="one">We hebben %d potentieel beledigend of spammy account gemarkeerd.</item>
+    </plurals>
+    <plurals name="seconds">
+        <item quantity="other">%d seconden</item>
+        <item quantity="one">%d seconde</item>
+    </plurals>
+    <plurals name="send_cohost_invite">
+        <item quantity="other">Uitnodigingen versturen voor co-hosts</item>
+        <item quantity="one">Uitnodiging versturen voor co-host</item>
+    </plurals>
+    <plurals name="settings_notif_tweets_count">
+        <item quantity="other">%d personen</item>
+        <item quantity="one">%d persoon</item>
+    </plurals>
+    <plurals name="social_follow_and_follow_and_others">
+        <item quantity="other">%1$s, %2$s en %3$d anderen volgen</item>
+        <item quantity="one">%1$s, %2$s en %3$d ander volgen</item>
+    </plurals>
+    <plurals name="spaces_additional_participants">
+        <item quantity="other">+ %1$s andere luisteraars</item>
+        <item quantity="one">+ %1$s andere luisteraar</item>
+    </plurals>
+    <plurals name="spaces_blocked_warning">
+        <item quantity="other">Je hebt %1$d personen geblokkeerd die aan het praten zijn</item>
+        <item quantity="one">Je hebt %1$d persoon geblokkeerd die aan het praten is</item>
+    </plurals>
+    <plurals name="spaces_card_social_proof_in_progress">
+        <item quantity="other">%1$s zijn in deze Space</item>
+        <item quantity="one">%1$s is in deze Space</item>
+    </plurals>
+    <plurals name="spaces_card_social_proof_replay">
+        <item quantity="other">%1$s namen deel aan deze Space</item>
+        <item quantity="one">%1$s nam deel aan deze Space</item>
+    </plurals>
+    <plurals name="spaces_invite_confirmation">
+        <item quantity="other">%1$d mensen zijn voor deze Space uitgenodigd</item>
+        <item quantity="one">%1$d persoon is voor deze Space uitgenodigd</item>
+    </plurals>
+    <plurals name="speakers_current_count">
+        <item quantity="other">%1$d sprekers</item>
+        <item quantity="one">%1$d spreker</item>
+    </plurals>
+    <plurals name="speakers_listeners_count">
+        <item quantity="other">%1$d mensen luisteren mee</item>
+        <item quantity="one">%1$d persoon luistert mee</item>
+    </plurals>
+    <plurals name="speakers_open_spots_count">
+        <item quantity="other">%1$d open plaatsen</item>
+        <item quantity="one">%1$d open plaats</item>
+    </plurals>
+    <plurals name="speakers_requests_count">
+        <item quantity="other">%1$d verzoeken</item>
+        <item quantity="one">%1$d verzoek</item>
+    </plurals>
+    <plurals name="stat_label_bookmarks">
+        <item quantity="other">Bladwijzers</item>
+        <item quantity="one">Bladwijzer</item>
+    </plurals>
+    <plurals name="stat_label_likes_sentence_case">
+        <item quantity="other">Vind-ik-leuks</item>
+        <item quantity="one">Vind-ik-leuk</item>
+    </plurals>
+    <plurals name="stat_label_quote_tweets">
+        <item quantity="other">Geciteerd</item>
+        <item quantity="one">Geciteerd</item>
+    </plurals>
+    <plurals name="stat_label_retweets_sentence_case">
+        <item quantity="other">Reposts</item>
+        <item quantity="one">Repost</item>
+    </plurals>
+    <plurals name="stat_label_verified_views_sentence_case">
+        <item quantity="other">Geverifieerde weergaven</item>
+        <item quantity="one">Geverifieerde weergave</item>
+    </plurals>
+    <plurals name="stat_label_views_sentence_case">
+        <item quantity="other">Weergaven</item>
+        <item quantity="one">Weergave</item>
+    </plurals>
+    <plurals name="subscription_duration_days">
+        <item quantity="other">%d dagen</item>
+        <item quantity="one">dag</item>
+    </plurals>
+    <plurals name="subscription_duration_months">
+        <item quantity="other">%d maanden</item>
+        <item quantity="one">maand</item>
+    </plurals>
+    <plurals name="subscription_duration_years">
+        <item quantity="other">%d jaar</item>
+        <item quantity="one">jaar</item>
+    </plurals>
+    <plurals name="time_days">
+        <item quantity="other">%d d</item>
+        <item quantity="one">%d d</item>
+    </plurals>
+    <plurals name="time_days_ago">
+        <item quantity="other">%d DAGEN GELEDEN</item>
+        <item quantity="one">%d DAG GELEDEN</item>
+    </plurals>
+    <plurals name="time_hours">
+        <item quantity="other">%d u</item>
+        <item quantity="one">%d u</item>
+    </plurals>
+    <plurals name="time_hours_ago">
+        <item quantity="other">%d UUR GELEDEN</item>
+        <item quantity="one">%d UUR GELEDEN</item>
+    </plurals>
+    <plurals name="time_mins">
+        <item quantity="other">%d m</item>
+        <item quantity="one">%d m</item>
+    </plurals>
+    <plurals name="time_mins_ago">
+        <item quantity="other">%d MINUTEN GELEDEN</item>
+        <item quantity="one">%d MINUUT GELEDEN</item>
+    </plurals>
+    <plurals name="time_secs">
+        <item quantity="other">%d s</item>
+        <item quantity="one">%ds</item>
+    </plurals>
+    <plurals name="top_articles_time_window">
+        <item quantity="other">Afgelopen %s uur</item>
+        <item quantity="one">Afgelopen uur</item>
+    </plurals>
+    <plurals name="tweet_visibility_education_dialog_non_followers_text">
+        <item quantity="other">%1$s en anderen volgen jou niet.</item>
+        <item quantity="one">%1$s volgt jou niet.</item>
+    </plurals>
+    <plurals name="undo_send_period_in_seconds">
+        <item quantity="other">%d seconden</item>
+        <item quantity="one">%d seconde</item>
+    </plurals>
+    <plurals name="verified_views">
+        <item quantity="other">%d geverifieerde weergaven</item>
+        <item quantity="one">%d geverifieerde weergave</item>
+    </plurals>
+</resources>

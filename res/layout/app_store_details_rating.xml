@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="horizontal"
+    android:id="@id/ratingContainer"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RatingBar
+        android:id="@id/ratingBar"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_2"
+        android:stepSize="0.1"
+        android:layout_marginStart="@dimen/space_8"
+        android:progressTint="?coreColorSecondaryText"
+        android:progressBackgroundTint="?coreColorSecondaryText"
+        android:secondaryProgressTint="@color/clear"
+        app:layout_goneMarginStart="@dimen/space_12"
+        style="@style/Widget.AppCompat.RatingBar.Small" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textColor="?coreColorSecondaryText"
+        android:ellipsize="end"
+        android:id="@id/numRatings"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_2"
+        android:maxLines="1"
+        android:includeFontPadding="false"
+        android:textAlignment="viewStart"
+        android:layout_marginStart="@dimen/space_4" />
+</LinearLayout>

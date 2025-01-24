@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="horizontal"
+    android:paddingTop="@dimen/user_suggestion_vertical_padding"
+    android:paddingBottom="@dimen/user_suggestion_vertical_padding"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/user_suggestion_horizontal_padding"
+    android:paddingEnd="@dimen/user_suggestion_horizontal_padding"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.media.ui.image.UserImageView
+        android:id="@id/user_image"
+        style="@style/SmallUserImage" />
+    <RelativeLayout
+        android:layout_gravity="center_vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <include
+            layout="@layout/user_info_name_legacy" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/screenname_item"
+            android:layout_below="@id/name_layout"
+            style="@style/Username" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:ellipsize="none"
+            android:id="@id/cannot_tag"
+            android:visibility="gone"
+            android:text="@string/cannot_photo_tag"
+            android:singleLine="true"
+            android:layout_alignBaseline="@id/screenname_item"
+            android:paddingStart="3.0dip"
+            android:layout_toEndOf="@id/screenname_item"
+            style="@style/Username" />
+        <ImageView
+            android:layout_gravity="right"
+            android:id="@id/user_selected"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_accept_default"
+            android:layout_centerInParent="true"
+            android:contentDescription="@null"
+            android:paddingEnd="12.0dip"
+            android:layout_alignParentEnd="true" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_xxsmall"
+            android:textColor="@color/text_field_secondary_text"
+            android:id="@id/debug_source_text"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:paddingBottom="?toolBarSize"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:animateLayoutChanges="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.ui.view.TwitterSafeDefaultsWebView
+        android:id="@id/webview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="?toolBarSize" />
+    <include
+        android:id="@id/progress_bar"
+        layout="@layout/progress_bar" />
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:id="@id/webview_message"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_xlarge"
+            android:textColor="?abstractColorDeepGray"
+            android:gravity="center"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/webview_error_message_line_space"
+            android:text="@string/webview_error_loading" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_large"
+            android:textColor="?abstractColorDeepGray"
+            android:gravity="center"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/webview_tap_to_retry" />
+    </LinearLayout>
+    <tag
+        android:value="GrokWebView"
+        android:id="@id/weaverComponent" />
+</FrameLayout>

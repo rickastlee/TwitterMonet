@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@id/top_controls_container"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ViewStub
+        android:id="@id/stop_broadcast_button_stub"
+        android:layout="@layout/stop_broadcast_button"
+        android:inflatedId="@id/stop_broadcast_button"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/capture_back_button"
+        app:layout_constraintTop_toTopOf="parent" />
+    <com.twitter.ui.widget.TintableImageButton
+        android:id="@id/capture_back_button"
+        android:background="@drawable/camera_capture_circle_button_bg"
+        android:padding="@dimen/camera_capture_controls_inner_padding"
+        android:layout_width="@dimen/camera_button_height"
+        android:layout_height="@dimen/camera_button_height"
+        android:foreground="@drawable/ripple_selector_oval"
+        android:src="?toolbarUpIndicator"
+        android:contentDescription="@string/back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/white" />
+    <FrameLayout
+        android:orientation="horizontal"
+        android:id="@id/chat_options_wrapper_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@id/hearts_enabled_toggle"
+        app:layout_constraintTop_toTopOf="parent">
+        <Spinner
+            android:id="@id/chat_options_toggle_spinner"
+            android:padding="@dimen/camera_capture_controls_inner_padding"
+            android:visibility="visible"
+            android:layout_width="@dimen/camera_button_height"
+            android:layout_height="@dimen/camera_button_height"
+            android:foreground="@drawable/ripple_selector_oval"
+            android:contentDescription="@string/chat_options"
+            android:layout_marginEnd="@dimen/space_16" />
+        <ImageView
+            android:id="@id/chat_options_toggle"
+            android:background="@drawable/camera_capture_circle_button_bg"
+            android:padding="@dimen/camera_capture_controls_inner_padding"
+            android:layout_width="@dimen/camera_button_height"
+            android:layout_height="@dimen/camera_button_height"
+            android:foreground="@drawable/ripple_selector_oval"
+            android:src="@drawable/ic_vector_messages"
+            android:importantForAccessibility="no"
+            android:layout_marginEnd="@dimen/space_16"
+            app:contentDescriptionOff="@string/heart_off"
+            app:contentDescriptionOn="@string/heart_on"
+            app:layout_constraintEnd_toStartOf="@id/camera_flash_toggle"
+            app:layout_constraintTop_toTopOf="parent"
+            app:state_toggled_on="true"
+            app:tint="@color/white" />
+    </FrameLayout>
+    <com.twitter.ui.widget.ToggleImageButton
+        android:id="@id/hearts_enabled_toggle"
+        android:background="@drawable/camera_capture_circle_button_bg"
+        android:padding="@dimen/camera_capture_controls_inner_padding"
+        android:layout_width="@dimen/camera_button_height"
+        android:layout_height="@dimen/camera_button_height"
+        android:foreground="@drawable/ripple_selector_oval"
+        android:src="@drawable/live_hearts_toggle"
+        android:tint="@color/white"
+        android:layout_marginEnd="@dimen/space_16"
+        app:contentDescriptionOff="@string/heart_off"
+        app:contentDescriptionOn="@string/heart_on"
+        app:layout_constraintEnd_toStartOf="@id/camera_flash_toggle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:state_toggled_on="false" />
+    <com.twitter.ui.widget.ToggleImageButton
+        android:id="@id/camera_flash_toggle"
+        android:background="@drawable/camera_capture_circle_button_bg"
+        android:padding="@dimen/camera_capture_controls_inner_padding"
+        android:layout_width="@dimen/camera_button_height"
+        android:layout_height="@dimen/camera_button_height"
+        android:foreground="@drawable/ripple_selector_oval"
+        android:src="@drawable/camera_flash_toggle"
+        android:layout_marginEnd="@dimen/space_16"
+        app:contentDescriptionOff="@string/flash_off"
+        app:contentDescriptionOn="@string/flash_on"
+        app:layout_constraintEnd_toStartOf="@id/camera_flip"
+        app:layout_constraintTop_toTopOf="parent" />
+    <com.twitter.ui.widget.ToggleImageButton
+        android:id="@id/camera_flip"
+        android:background="@drawable/camera_capture_circle_button_bg"
+        android:padding="@dimen/camera_capture_controls_inner_padding"
+        android:layout_width="@dimen/camera_button_height"
+        android:layout_height="@dimen/camera_button_height"
+        android:foreground="@drawable/ripple_selector_oval"
+        android:src="@drawable/ic_vector_camera_flip_white"
+        android:layout_marginEnd="@dimen/space_16"
+        app:contentDescriptionOff="@string/camera_flip_to_front"
+        app:contentDescriptionOn="@string/camera_flip_to_rear"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

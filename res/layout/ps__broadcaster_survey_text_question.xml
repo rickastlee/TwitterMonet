@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/ps__broadcaster_survey_margin"
+    android:paddingEnd="@dimen/ps__broadcaster_survey_margin"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <tv.periscope.android.view.PsTextView
+        android:textSize="@dimen/font_size_xlarge"
+        android:textStyle="bold"
+        android:textColor="@color/ps__white"
+        android:id="@id/broadcaster_survey_text_question_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ps__standard_spacing_16"
+        android:layout_marginBottom="@dimen/ps__standard_spacing_8" />
+    <tv.periscope.android.view.PsTextView
+        android:textSize="@dimen/font_size_xsmall"
+        android:textColor="@color/ps__white"
+        android:id="@id/broadcaster_survey_text_question_description"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@id/broadcaster_survey_text_question_reasons"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ps__broadcaster_survey_margin"
+        android:layout_marginBottom="@dimen/ps__broadcaster_survey_margin" />
+    <tv.periscope.android.view.PsEditText
+        android:textSize="@dimen/font_size_normal"
+        android:textColor="@color/ps__white"
+        android:textColorHint="@color/white_opacity_50"
+        android:gravity="start|center|top"
+        android:id="@id/broadcaster_survey_text_question_box"
+        android:background="@drawable/ps__rounded_corner_edittext"
+        android:padding="@dimen/ps__standard_spacing_10"
+        android:focusable="auto"
+        android:focusableInTouchMode="true"
+        android:scrollbars="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_marginTop="@dimen/ps__standard_spacing_16"
+        android:hint="@string/ps__broadcaster_survey_feedback_edittext_placeholder"
+        android:maxLines="4"
+        android:lines="3"
+        android:layout_weight="1.0"
+        android:inputType="textMultiLine"
+        android:textCursorDrawable="@drawable/ps__bg_cursor_white" />
+    <tv.periscope.android.view.PsTextView
+        android:textSize="@dimen/font_size_xsmall"
+        android:textColor="@color/ps__white_60"
+        android:layout_gravity="end"
+        android:id="@id/broadcaster_survey_question_box_character_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ps__standard_spacing_8" />
+</LinearLayout>

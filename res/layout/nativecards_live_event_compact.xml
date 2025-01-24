@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingStart="@dimen/liveevent_card_spacing_half"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/nativecards_live_compact_card_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/liveevent_card_spacing_half"
+        twitter:layout_constraintBottom_toTopOf="@id/nativecards_live_compact_card_title"
+        twitter:layout_constraintEnd_toStartOf="@id/nativecards_live_compact_card_image_border"
+        twitter:layout_constraintHorizontal_bias="0.0"
+        twitter:layout_constraintStart_toStartOf="parent"
+        twitter:layout_constraintTop_toTopOf="parent"
+        twitter:layout_constraintVertical_chainStyle="packed"
+        twitter:layout_constraintWidth="true"
+        style="@style/GuideCellText.Secondary.SingleLine" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/nativecards_live_compact_card_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:layout_marginEnd="@dimen/liveevent_card_spacing_half"
+        twitter:layout_constraintBottom_toBottomOf="parent"
+        twitter:layout_constraintEnd_toStartOf="@id/nativecards_live_compact_card_image_border"
+        twitter:layout_constraintHorizontal_bias="0.0"
+        twitter:layout_constraintStart_toStartOf="parent"
+        twitter:layout_constraintTop_toBottomOf="@id/nativecards_live_compact_card_category"
+        twitter:layout_constraintWidth="true"
+        style="@style/GuideCellText.Primary" />
+    <View
+        android:id="@id/nativecards_live_compact_card_image_border"
+        android:background="?coreColorBorder"
+        android:layout_width="@dimen/border_thickness"
+        android:layout_height="fill_parent"
+        twitter:layout_constraintEnd_toStartOf="@id/card_image" />
+    <com.twitter.media.ui.fresco.FrescoMediaImageView
+        android:id="@id/card_image"
+        android:layout_width="@dimen/horizontal_component_media_size"
+        android:layout_height="@dimen/horizontal_component_media_size"
+        twitter:defaultDrawable="@drawable/drawable_color_placeholder_bg"
+        twitter:errorDrawable="@drawable/bg_tweet_placeholder_photo_error"
+        twitter:layout_constraintBottom_toBottomOf="parent"
+        twitter:layout_constraintEnd_toEndOf="parent"
+        twitter:layout_constraintTop_toTopOf="parent"
+        twitter:scaleType="fill">
+        <com.twitter.media.ui.fresco.FrescoDraweeView
+            android:id="@id/image"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            twitter:roundBottomEnd="true"
+            twitter:roundBottomStart="false"
+            twitter:roundTopEnd="true"
+            twitter:roundTopStart="false"
+            twitter:roundedCornerRadius="@dimen/card_inner_corner_radius" />
+    </com.twitter.media.ui.fresco.FrescoMediaImageView>
+</androidx.constraintlayout.widget.ConstraintLayout>

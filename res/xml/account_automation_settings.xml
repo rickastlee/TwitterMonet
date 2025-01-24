@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.twitter.settings.widget.LinkablePreferenceCompat
+        android:title="@string/automation_setup_automation_title"
+        android:summary="@string/automation_setup_automation_summary"
+        app:alwaysDisplayUrl="true"
+        app:clickableUrl="@string/automation_help_center" />
+    <Preference
+        android:key="connect_managing_account"
+        app:isPreferenceVisible="false" />
+    <Preference
+        android:title="@string/automation_managing_account"
+        android:key="managing_account"
+        app:isPreferenceVisible="false" />
+    <Preference
+        android:key="change_managing_account"
+        app:isPreferenceVisible="false" />
+    <Preference
+        android:key="automation_opt_out"
+        app:isPreferenceVisible="false" />
+</PreferenceScreen>

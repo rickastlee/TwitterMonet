@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <include
+        android:id="@id/top_toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/ocf_top_toolbar" />
+    <ScrollView
+        style="@style/FormContainerScrollView">
+        <RelativeLayout
+            android:padding="@dimen/ocf_large_spacing"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:id="@id/primary_text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                style="@style/OcfTitle3Text" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:id="@id/secondary_text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ocf_standard_spacing"
+                android:layout_below="@id/primary_text"
+                style="@style/OcfBodyText" />
+            <include
+                android:layout_gravity="center"
+                android:id="@id/profile_card"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/setup_profile_header_screen_outer_container_height"
+                android:layout_marginTop="@dimen/ocf_large_spacing"
+                android:layout_below="@id/secondary_text"
+                android:layout_marginStart="@dimen/list_row_padding_horizontal"
+                android:layout_marginEnd="@dimen/list_row_padding_horizontal"
+                layout="@layout/ocf_select_banner_profile_card_layout" />
+        </RelativeLayout>
+    </ScrollView>
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/bottom_cta_navigation_bar" />
+</LinearLayout>

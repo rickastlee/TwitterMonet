@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.ui.widget.PreferenceTopCategory
+        android:title="@string/guide_tab_title_explore"
+        android:key="pref_explore_category">
+        <Preference
+            android:key="pref_trends" />
+        <Preference
+            android:title="@string/search_settings"
+            android:key="pref_search_settings" />
+    </com.twitter.ui.widget.PreferenceTopCategory>
+    <PreferenceCategory
+        android:title="@string/settings_content_pref_language"
+        android:key="category_language">
+        <Preference
+            android:title="@string/settings_app_language_title"
+            android:key="pref_app_language"
+            android:summary="@string/settings_app_language_subtitle" />
+        <Preference
+            android:title="@string/settings_language_title"
+            android:key="pref_content_language"
+            android:summary="@string/settings_language_subtitle" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="@string/settings_category_safety_title"
+        android:key="category_content">
+        <Preference
+            android:title="@string/block_list"
+            android:key="block_list" />
+        <Preference
+            android:title="@string/mute_list"
+            android:key="mute_list" />
+    </PreferenceCategory>
+</PreferenceScreen>

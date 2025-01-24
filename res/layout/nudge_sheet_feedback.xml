@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/modal_sheet_background"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <com.twitter.core.ui.components.dialog.bottomsheet.GripperView
+            android:layout_gravity="center_horizontal"
+            android:id="@id/feedback_gripper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_xlarge"
+            android:textStyle="bold"
+            android:textColor="?coreColorPrimaryText"
+            android:id="@id/feedback_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_24"
+            android:layout_marginHorizontal="@dimen/space_16" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_normal"
+            android:textColor="?coreColorSecondaryText"
+            android:id="@id/feedback_description_primary"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_16"
+            android:lineSpacingExtra="@dimen/space_1"
+            android:layout_marginHorizontal="@dimen/space_16" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_normal"
+            android:textColor="?coreColorSecondaryText"
+            android:id="@id/feedback_description_secondary"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_16"
+            android:lineSpacingExtra="@dimen/space_1"
+            android:layout_marginHorizontal="@dimen/space_16" />
+        <com.twitter.ui.components.button.legacy.TwitterButton
+            android:id="@id/feedback_button_positive"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_24"
+            android:layout_marginHorizontal="@dimen/space_16"
+            android:paddingVertical="@dimen/space_8"
+            style="@style/NudgeFeedbackButton" />
+        <com.twitter.ui.components.button.legacy.TwitterButton
+            android:id="@id/feedback_button_negative"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/space_16"
+            android:paddingVertical="@dimen/space_8"
+            style="@style/NudgeFeedbackButton" />
+    </LinearLayout>
+</ScrollView>

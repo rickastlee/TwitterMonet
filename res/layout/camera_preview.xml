@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tv.periscope.android.ui.broadcaster.BroadcasterView
+    android:id="@id/broadcaster_view"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    twitter:ps__actionSheet="@id/viewer_action_sheet"
+    twitter:ps__bottomDragChild="@id/menu_view_pager"
+    twitter:ps__dragChild="@id/main_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <FrameLayout
+        android:id="@id/main_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <tv.periscope.android.ui.broadcaster.CameraPreviewLayout
+            android:layout_gravity="center_horizontal"
+            android:id="@id/camera_preview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:soundEffectsEnabled="false">
+            <include
+                layout="@layout/preview_container" />
+            <View
+                android:layout_gravity="bottom"
+                android:id="@id/chat_room_scrim"
+                android:background="@drawable/ps__bg_gradient_up_overlay"
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/ps__text_protection_scrim_height" />
+            <ViewStub
+                android:layout_gravity="end"
+                android:id="@id/acc_broadcaster_actions"
+                android:visibility="gone"
+                android:layout="@layout/ps__accessibility_broadcaster_actions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50.0dip" />
+            <tv.periscope.android.ui.broadcaster.FocusMarkerView
+                android:id="@id/focus_marker_view"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+        </tv.periscope.android.ui.broadcaster.CameraPreviewLayout>
+        <ViewStub
+            android:id="@id/grid_overlay_stub"
+            android:layout="@layout/camera_grid"
+            android:inflatedId="@id/grid_overlay"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+        <ViewStub
+            android:id="@id/chatroom_view_stub"
+            android:layout="@layout/ps__broadcaster_chat_room_view"
+            android:inflatedId="@id/chatroom_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+        <include
+            layout="@layout/ps__hydra_guest_container" />
+    </FrameLayout>
+    <tv.periscope.android.view.ActionSheet
+        android:theme="@style/ps__DefaultActionSheet"
+        android:id="@id/viewer_action_sheet"
+        android:background="@null"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-100.0dip" />
+    <tv.periscope.android.ui.broadcast.view.MenuViewPager
+        android:id="@id/menu_view_pager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+    <ViewStub
+        android:layout_gravity="center"
+        android:id="@id/copyright_violation_overlay_stub"
+        android:visibility="gone"
+        android:layout="@layout/ps__copyright_violation_overlay"
+        android:inflatedId="@id/copyright_violation_overlay"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+</tv.periscope.android.ui.broadcaster.BroadcasterView>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="horizontal"
+    android:background="@drawable/toast_color_bg_rounded_corners"
+    android:padding="@dimen/space_12"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <tag
+        android:value="AuthorAppealForwardPivot"
+        android:id="@id/weaverComponent" />
+    <com.twitter.media.ui.fresco.FrescoMediaImageView
+        android:id="@id/tweet_row_view_pivot_icon"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/tweet_row_view_pivot_state_badge"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/tweet_row_view_pivot_divider"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:layout_gravity="center"
+        android:layout_width="@dimen/space_24"
+        android:layout_height="@dimen/space_24"
+        android:src="@drawable/ic_vector_information_circle_fill"
+        android:importantForAccessibility="no"
+        android:layout_marginEnd="@dimen/space_12"
+        app:tint="@color/twitter_blue" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textColor="?coreColorPrimaryText"
+        android:id="@id/tweet_row_view_pivot_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

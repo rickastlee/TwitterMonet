@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="@dimen/profile_edit_birthdate_popup_width"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/profile_edit_birthdate_popup_footer_margin_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_xlarge"
+            android:textStyle="bold"
+            android:textColor="?coreColorPrimaryText"
+            android:gravity="start"
+            android:id="@id/edit_birthdate_visibility_header"
+            android:paddingTop="@dimen/profile_edit_birthdate_popup_header_padding_top"
+            android:paddingBottom="@dimen/profile_edit_birthdate_popup_header_padding_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/profile_edit_birthdate_popup_header_padding_side"
+            android:paddingEnd="@dimen/profile_edit_birthdate_popup_header_padding_side" />
+        <ListView
+            android:id="@android:id/list"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/profile_edit_birthdate_popup_listview_height"
+            android:divider="@null" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_xsmall"
+            android:textColor="?coreColorTextLink"
+            android:id="@id/edit_birthdate_visibility_footer"
+            android:paddingTop="@dimen/profile_edit_birthdate_popup_footer_padding_top"
+            android:paddingBottom="@dimen/profile_edit_birthdate_popup_footer_padding_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/edit_birthdate_visibility_description_selection_link"
+            android:paddingStart="@dimen/profile_edit_birthdate_popup_footer_padding_side"
+            android:paddingEnd="@dimen/profile_edit_birthdate_popup_footer_padding_side" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="center"
+    android:orientation="vertical"
+    android:id="@id/copyright_violation_overlay"
+    android:background="@android:color/black"
+    android:paddingLeft="@dimen/ps__standard_spacing_40"
+    android:paddingRight="@dimen/ps__standard_spacing_40"
+    android:visibility="visible"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <tv.periscope.android.view.PsTextView
+        android:textSize="21.0sp"
+        android:textStyle="bold"
+        android:textColor="@color/ps__white"
+        android:gravity="center"
+        android:id="@id/copyright_violation_overlay_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/ps__copyright_violation_viewer_modal_title"
+        android:textAlignment="center" />
+    <tv.periscope.android.view.PsTextView
+        android:textSize="14.0sp"
+        android:textColor="@color/ps__white_50"
+        android:gravity="center"
+        android:id="@id/copyright_violation_overlay_description"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ps__standard_spacing_16"
+        android:text="@string/ps__copyright_violation_viewer_modal_description_format_with_copyright_holder"
+        android:textAlignment="center" />
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ps__standard_spacing_40">
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@id/copyright_violation_actions"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <tv.periscope.android.view.PsButton
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:id="@id/copyright_violation_primary_action"
+                android:paddingLeft="@dimen/ps__standard_spacing_10"
+                android:paddingTop="@dimen/ps__standard_spacing_8"
+                android:paddingRight="@dimen/ps__standard_spacing_10"
+                android:paddingBottom="@dimen/ps__standard_spacing_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ps__standard_spacing_10"
+                android:layout_marginBottom="@dimen/ps__standard_spacing_8"
+                android:text="@string/ps__copyright_violation_got_it"
+                android:textAllCaps="false"
+                style="@style/ps__CopyrightViolationModal_PrimaryButtonStyle" />
+            <tv.periscope.android.view.PsButton
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:id="@id/copyright_violation_secondary_action"
+                android:paddingLeft="@dimen/ps__standard_spacing_10"
+                android:paddingTop="@dimen/ps__standard_spacing_8"
+                android:paddingRight="@dimen/ps__standard_spacing_10"
+                android:paddingBottom="@dimen/ps__standard_spacing_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ps__standard_spacing_10"
+                android:layout_marginBottom="@dimen/ps__standard_spacing_8"
+                android:text="@string/ps__copyright_violation_dispute_claim"
+                android:textAllCaps="false"
+                style="@style/ps__CopyrightViolationModal_SecondaryButtonStyle" />
+        </LinearLayout>
+        <ProgressBar
+            android:layout_gravity="center"
+            android:id="@id/copyright_violation_progress_bar"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.ProgressBar" />
+    </FrameLayout>
+</LinearLayout>

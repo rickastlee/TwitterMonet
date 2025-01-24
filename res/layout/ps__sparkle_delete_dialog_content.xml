@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:paddingTop="34.0dip"
+    android:paddingBottom="33.0dip"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="24.0dip"
+    android:paddingEnd="24.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <tv.periscope.android.view.PsTextView
+        android:textSize="20.0sp"
+        android:textColor="@color/ps__primary_text"
+        android:id="@id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/ps__delete_broadcast_dialog" />
+    <tv.periscope.android.view.PsTextView
+        android:textColor="@color/ps__super_heart_delete_broadcast_warning"
+        android:id="@id/description"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ps__standard_spacing_20" />
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:id="@id/delete"
+        android:background="@drawable/ps__rounded_rect_red"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24.0dip"
+        android:minHeight="@dimen/ps__standard_button_min_height">
+        <tv.periscope.android.view.PsTextView
+            android:textSize="@dimen/ps__dialog_btn_text_size"
+            android:textColor="@color/ps__super_heart_delete_broadcast_button"
+            android:id="@id/delete_button_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ps__action_sheet_delete_broadcast"
+            android:textAllCaps="true" />
+        <tv.periscope.android.view.PsTextView
+            android:textSize="14.0sp"
+            android:textColor="@color/ps__super_heart_delete_broadcast_button"
+            android:id="@id/delete_button_subtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:id="@id/hide"
+        android:background="@drawable/ps__bg_button_blue_hollow"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ps__standard_spacing_10"
+        android:minHeight="45.0dip">
+        <tv.periscope.android.view.PsTextView
+            android:textSize="16.0sp"
+            android:textColor="@color/ps__blue"
+            android:id="@id/hide_button_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ps__hide_broadcast"
+            android:textAllCaps="true" />
+        <tv.periscope.android.view.PsTextView
+            android:textSize="14.0sp"
+            android:textColor="@color/ps__blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ps__action_sheet_hide_broadcast_subtext_sparkle" />
+    </LinearLayout>
+</LinearLayout>

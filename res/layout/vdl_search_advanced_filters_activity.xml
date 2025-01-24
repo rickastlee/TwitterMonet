@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@id/parent_advance_search_view"
+    android:padding="@dimen/space_12"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <include
+        android:id="@id/search_advanced_filters_layout"
+        android:visibility="visible"
+        layout="@layout/search_advanced_filters_layout" />
+    <include
+        android:id="@id/author_filter_layout"
+        android:visibility="gone"
+        layout="@layout/author_filter_layout" />
+    <include
+        android:id="@id/dates_filter_layout"
+        android:visibility="gone"
+        layout="@layout/dates_filter_layout" />
+</FrameLayout>

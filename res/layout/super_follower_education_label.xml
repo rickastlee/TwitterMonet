@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View
+        android:id="@id/super_follower_label_background"
+        android:background="@color/black_opacity_20"
+        android:layout_width="0.0dip"
+        android:layout_height="@dimen/super_follower_label_background_height"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@id/super_follow_icon"
+        android:background="@drawable/plum_circle_background"
+        android:padding="@dimen/super_follower_icon_padding"
+        android:layout_width="@dimen/super_follower_icon_size"
+        android:layout_height="@dimen/super_follower_icon_size"
+        android:src="@drawable/ic_vector_superfollow_stroke"
+        android:importantForAccessibility="no"
+        android:layout_marginStart="@dimen/spaces_card_padding"
+        app:layout_constraintBottom_toBottomOf="@id/super_follower_label_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/super_follower_label_background"
+        app:tint="@color/white" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:id="@id/super_follower_label"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:text="@string/super_followers_card_label"
+        android:layout_marginStart="@dimen/space_8"
+        app:layout_constraintBottom_toBottomOf="@id/super_follower_label_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/super_follow_icon"
+        app:layout_constraintTop_toTopOf="@id/super_follower_label_background" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+    android:shape="ring"
+    android:useLevel="false"
+    android:innerRadius="@dimen/pop_up_loading_indicator_rim_inner_radius"
+    android:thickness="@dimen/pop_up_loading_indicator_rim_thickness"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid
+        android:color="@color/pop_up_loading_indicator_rim_background_color" />
+</shape>

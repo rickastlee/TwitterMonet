@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@id/reply_context"
+    android:visibility="gone"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/self_thread_composer_vertical_connector_margin"
+    android:minHeight="@dimen/space_12"
+    android:layout_marginStart="12.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Space
+        android:id="@id/profile_image_placeholder"
+        android:layout_width="@dimen/self_thread_composer_user_avatar_size"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <View
+        android:id="@id/vertical_connector"
+        android:background="@drawable/vertical_connector"
+        android:layout_width="@dimen/vertical_connector_width"
+        android:layout_height="0.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/profile_image_placeholder"
+        app:layout_constraintStart_toStartOf="@id/profile_image_placeholder"
+        app:layout_constraintTop_toTopOf="parent" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/reply_context_text"
+        android:paddingTop="12.0dip"
+        android:paddingBottom="4.0dip"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10.0dip"
+        android:layout_marginEnd="@dimen/self_thread_composer_content_end_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/profile_image_placeholder"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/ReplyContextView.Clickable" />
+</androidx.constraintlayout.widget.ConstraintLayout>

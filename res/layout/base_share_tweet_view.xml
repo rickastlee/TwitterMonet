@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <include
+            android:layout_gravity="start|center"
+            android:id="@id/tweet_profile_image_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/space_4"
+            layout="@layout/off_platform_share_tweet_view_profile_container" />
+        <com.twitter.ui.tweet.TweetHeaderView
+            android:layout_gravity="start|center"
+            android:id="@id/tweet_header"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            app:shouldStackUsername="true"
+            style="?tweetViewHeaderStyle">
+            <tag
+                android:value="FocalTweetHeaderView"
+                android:id="@id/weaverComponent" />
+        </com.twitter.ui.tweet.TweetHeaderView>
+        <ImageView
+            android:layout_gravity="end|center|top"
+            android:layout_width="@dimen/off_platform_share_twitter_logo_size"
+            android:layout_height="@dimen/off_platform_share_twitter_logo_size"
+            android:importantForAccessibility="no"
+            android:layout_marginStart="@dimen/space_12"
+            app:srcCompat="@drawable/ic_vector_twitter"
+            app:tint="?dynamicColorGray1100" />
+    </LinearLayout>
+    <com.twitter.ui.widget.UnpaddedTextLayoutView
+        android:id="@id/tweet_reply_context"
+        android:paddingTop="@dimen/space_2"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:removeHorizontalPadding="true"
+        style="?tweetViewReplyContextStyle">
+        <tag
+            android:value="ReplyContext"
+            android:id="@id/weaverComponent" />
+    </com.twitter.ui.widget.UnpaddedTextLayoutView>
+    <com.twitter.ui.widget.TextContentView
+        android:id="@id/tweet_content_text"
+        android:visibility="visible"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_8"
+        style="?tweetViewContentStyle">
+        <tag
+            android:value="TextContent"
+            android:id="@id/weaverComponent" />
+    </com.twitter.ui.widget.TextContentView>
+    <ViewStub
+        android:id="@id/twitter_sensitive_interstitial"
+        android:inflatedId="@id/twitter_sensitive_interstitial"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_top_margin">
+        <tag
+            android:value="SensitiveMediaInterstitialStub"
+            android:id="@id/weaverComponent" />
+    </ViewStub>
+    <ViewStub
+        android:id="@id/user_sensitive_interstitial"
+        android:inflatedId="@id/user_sensitive_interstitial"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_top_margin">
+        <tag
+            android:value="UserSensitiveInterstitialStub"
+            android:id="@id/weaverComponent" />
+    </ViewStub>
+    <com.twitter.tweetview.core.TweetViewContentHostContainer
+        android:id="@id/card_media_tweet_container"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_top_margin"
+        app:fullBleedOffsetEnd="?screenshotTweetFullBleedOffsetEnd"
+        app:fullBleedOffsetStart="?screenshotTweetFullBleedOffsetStart"
+        style="?tweetViewTweetViewContentHostContainer">
+        <tag
+            android:value="ContentHostContainer"
+            android:id="@id/weaverComponent" />
+    </com.twitter.tweetview.core.TweetViewContentHostContainer>
+    <com.twitter.ui.widget.TextLayoutView
+        android:textSize="@dimen/font_size_subtext_3"
+        android:textColor="?abstractColorDeepGray"
+        android:id="@id/tweet_media_tags"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_top_margin">
+        <tag
+            android:value="MediaTags"
+            android:id="@id/weaverComponent" />
+    </com.twitter.ui.widget.TextLayoutView>
+    <com.twitter.tweetview.core.QuoteView
+        android:id="@id/tweet_quote"
+        android:visibility="visible"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?tweetQuoteLayoutMarginTop"
+        style="?tweetViewQuoteViewStyle">
+        <tag
+            android:value="OffPlatformShareTweetQuoteView"
+            android:id="@id/weaverComponent" />
+    </com.twitter.tweetview.core.QuoteView>
+    <ViewStub
+        android:id="@id/birdwatch_pivot"
+        android:layout="@layout/tweet_view_birdwatch_pivot"
+        android:inflatedId="@id/birdwatch_pivot"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_top_margin">
+        <tag
+            android:value="BirdwatchPivotStub"
+            android:id="@id/weaverComponent" />
+    </ViewStub>
+    <ViewStub
+        android:id="@id/inline_social_proof"
+        android:layout="@layout/tweet_inline_social_proof"
+        android:inflatedId="@id/inline_social_proof"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_top_margin">
+        <tag
+            android:value="InlineSocialProofStub"
+            android:id="@id/weaverComponent" />
+    </ViewStub>
+</merge>

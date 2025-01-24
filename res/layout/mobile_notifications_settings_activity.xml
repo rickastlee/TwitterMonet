@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:id="@id/notifications_settings_container"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <include
+        layout="@layout/toolbar_container" />
+    <com.twitter.ui.widget.TwitterEditText
+        android:id="@id/filter"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:layout_marginStart="8.0dip"
+        android:layout_marginEnd="8.0dip"
+        style="@style/TwitterEditText" />
+    <com.twitter.ui.view.ShortcutEnabledRecyclerView
+        android:orientation="vertical"
+        android:id="@id/list"
+        android:scrollbars="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        twitter:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    <ViewStub
+        android:id="@id/empty_view_stub"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+</LinearLayout>

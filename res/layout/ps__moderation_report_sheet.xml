@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@id/list"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+    <tv.periscope.android.view.PsButton
+        android:textColor="@color/ps__white"
+        android:layout_gravity="bottom|center"
+        android:id="@id/block_button"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ps__standard_spacing_20"
+        android:layout_marginBottom="@dimen/ps__standard_spacing_20"
+        style="@style/ps__Button" />
+    <include
+        android:layout_gravity="center"
+        android:id="@id/loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/ps__progressbar_loading" />
+</FrameLayout>

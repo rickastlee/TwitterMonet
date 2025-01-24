@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView
+        android:id="@id/scroll_view_cta"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:fillViewport="true"
+        android:layout_weight="1.0">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <ViewStub
+                android:id="@id/header_components_stub"
+                android:layout="@layout/ocf_generic_components_list"
+                android:inflatedId="@id/header_components"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+            <ViewStub
+                android:id="@id/content_header_components_stub"
+                android:layout="@layout/ocf_generic_components_list"
+                android:inflatedId="@id/content_header_components"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/ocf_screen_spacing"
+                android:layout_marginEnd="@dimen/ocf_screen_spacing" />
+        </LinearLayout>
+    </ScrollView>
+    <ViewStub
+        android:id="@id/pinned_footer_components_stub"
+        android:layout="@layout/ocf_generic_components_list"
+        android:inflatedId="@id/pinned_footer_components"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ocf_screen_spacing"
+        android:layout_marginEnd="@dimen/ocf_screen_spacing" />
+    <ViewStub
+        android:id="@id/bottom_stub"
+        android:layout="@layout/bottom_cta_navigation_bar"
+        android:inflatedId="@id/bottom_bar_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ocf_screen_spacing"
+        android:layout_marginEnd="@dimen/ocf_screen_spacing" />
+</LinearLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@id/prompt_inner_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@style/PromptView">
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/prompt_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            style="@style/PromptText" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/prompt_subtitle"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            style="@style/PromptDescriptionText" />
+        <com.twitter.ui.components.button.legacy.TwitterButton
+            android:layout_gravity="center"
+            android:id="@id/prompt_btn"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/PromptButton" />
+    </LinearLayout>
+    <com.twitter.ui.widget.TintableImageView
+        android:id="@id/dismiss"
+        android:padding="@dimen/prompt_dismiss_padding"
+        android:visibility="gone"
+        android:clickable="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="?iconClose"
+        android:scaleType="fitCenter"
+        android:layout_alignParentTop="true"
+        android:contentDescription="?dismissString"
+        android:layout_alignParentEnd="true"
+        twitter:tintColorList="?abstractColorMediumGray" />
+</merge>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <include
+            layout="@layout/standardized_nudge_sheet" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@id/engagement_nudge_container"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/space_8"
+            android:layout_marginBottom="@dimen/space_16"
+            android:layout_marginStart="@dimen/space_16"
+            android:layout_marginEnd="@dimen/space_16">
+            <include
+                android:layout_gravity="bottom"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/tweet_engagement_action_sheet_engagement_nudge_condensed" />
+            <include
+                android:layout_gravity="bottom"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/tweet_engagement_action_sheet_engagement_nudge_expanded" />
+        </LinearLayout>
+        <include
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_12"
+            layout="@layout/action_sheet" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

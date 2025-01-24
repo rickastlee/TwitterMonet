@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:theme="@style/ThemeOverlay.Dialog.BottomSheet"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/space_20"
+    android:paddingEnd="@dimen/space_20"
+    app:layout_behavior="@string/twitter_bottom_sheet_behavior"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.twitter.core.ui.components.dialog.bottomsheet.GripperView
+        android:id="@id/handle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_xlarge"
+        android:textStyle="bold"
+        android:textColor="?coreColorPrimaryText"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_24"
+        android:text="@string/switch_to_listening_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textColor="?coreColorSecondaryText"
+        android:layout_gravity="start"
+        android:id="@id/description"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_20"
+        android:text="@string/cohost_switch_to_listening_description"
+        android:layout_marginStart="@dimen/space_12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textColor="?coreColorAppBackground"
+        android:id="@id/switch_to_listening"
+        android:background="@drawable/rounded_rectangle_twitter_blue"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_36"
+        android:layout_marginBottom="@dimen/space_32"
+        android:text="@string/cohost_switch_to_listening_button_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/description"
+        style="@style/SpacesCustomButton" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textColor="?coreColorPrimaryText"
+        android:id="@id/cancel_button"
+        android:background="@drawable/rounded_rectangle_grey"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_16"
+        android:layout_marginBottom="@dimen/space_32"
+        android:text="@string/cancel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/switch_to_listening"
+        style="@style/SpacesCustomButton" />
+</androidx.constraintlayout.widget.ConstraintLayout>

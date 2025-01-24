@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_small"
+        android:gravity="center_vertical"
+        android:id="@id/broadcast_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"
+        android:textAllCaps="true"
+        android:paddingHorizontal="@dimen/space_8"
+        android:paddingVertical="@dimen/space_2" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_small"
+        android:gravity="center_vertical"
+        android:id="@id/viewers_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"
+        android:drawablePadding="@dimen/space_4"
+        android:paddingHorizontal="@dimen/space_8"
+        android:paddingVertical="@dimen/space_2" />
+    <tag
+        android:value="BroadcastTitle"
+        android:id="@id/weaverComponent" />
+</LinearLayout>

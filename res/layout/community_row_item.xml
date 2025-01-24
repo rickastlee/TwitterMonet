@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.twitter.media.ui.image.UserImageView
+        android:id="@id/community_avatar"
+        android:layout_width="@dimen/space_56"
+        android:layout_height="@dimen/space_56"
+        android:scaleType="centerCrop"
+        android:contentDescription="@null"
+        android:layout_marginStart="@dimen/space_16"
+        android:layout_marginVertical="@dimen/space_12"
+        app:avatar_should_animate="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@id/name_container"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_12"
+        android:layout_marginHorizontal="@dimen/space_8"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toStartOf="@id/action_button"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/community_avatar"
+        app:layout_constraintTop_toTopOf="parent">
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:ellipsize="end"
+            android:id="@id/community_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            style="?userInfoNameStyle" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/members_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            style="?userWithBioScreenNameStyle" />
+    </LinearLayout>
+    <com.twitter.ui.components.button.legacy.TwitterButton
+        android:id="@id/action_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_16"
+        android:minWidth="60.0dip"
+        android:text="@string/end_screen_communities_view_cta"
+        android:height="@dimen/user_follow_btn_min_height"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/TwitterButtonMediumPrimaryOutlined" />
+    <tag
+        android:value="CommunityRowItem"
+        android:id="@id/weaverComponent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

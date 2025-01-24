@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<actions>
+    <action
+        intentName="actions.intent.CREATE_SOCIAL_MEDIA_POSTING">
+        <shortcut-entity-set-reference
+            entitySetId="createSocialMediaPosting" />
+        <fulfillment
+            urlTemplate="twitter://post?app_action=create_social_media_posting{&amp;text}">
+            <parameter-mapping
+                intentParameter="socialMediaPosting.articleBody"
+                urlParameter="text" />
+        </fulfillment>
+    </action>
+    <entity-set
+        entitySetId="createSocialMediaPosting">
+        <entity
+            description="Compose Tweet"
+            identifier="actions.intent.CREATE_SOCIAL_MEDIA_POSTING"
+            name="Tweet"
+            url="twitter://post?app_action=create_social_media_posting" />
+    </entity-set>
+    <action
+        intentName="actions.intent.CREATE_PHOTOGRAPH">
+        <shortcut-entity-set-reference
+            entitySetId="createPhotograph" />
+        <fulfillment
+            urlTemplate="twitter://camera?app_action=create_photograph" />
+    </action>
+    <entity-set
+        entitySetId="createPhotograph">
+        <entity
+            description="Open Twitter camera"
+            identifier="actions.intent.CREATE_PHOTOGRAPH"
+            name="Twitter Camera"
+            url="twitter://camera?app_action=create_photograph" />
+    </entity-set>
+    <action
+        intentName="actions.intent.GET_ACCOUNT">
+        <shortcut-entity-set-reference
+            entitySetId="getAccount" />
+        <fulfillment
+            urlTemplate="twitter://account?app_action=get_account" />
+    </action>
+    <entity-set
+        entitySetId="getAccount">
+        <entity
+            description="Open my Twitter profile page"
+            identifier="actions.intent.GET_ACCOUNT"
+            name="Twitter Account"
+            url="twitter://account?app_action=get_account" />
+    </entity-set>
+    <action
+        intentName="actions.intent.UPDATE_ACCOUNT">
+        <shortcut-entity-set-reference
+            entitySetId="updateAccount" />
+        <fulfillment
+            urlTemplate="twitter://profiles/edit?app_action=update_account" />
+    </action>
+    <entity-set
+        entitySetId="updateAccount">
+        <entity
+            description="Edit my Twitter bio info"
+            identifier="actions.intent.UPDATE_ACCOUNT"
+            name="Edit Twitter Account"
+            url="twitter://profiles/edit?app_action=update_account" />
+    </entity-set>
+    <action
+        intentName="actions.intent.GET_NEWS_ARTICLE">
+        <shortcut-entity-set-reference
+            entitySetId="getNewsArticle" />
+        <fulfillment
+            urlTemplate="twitter://search?app_action=get_news_article{&amp;query}">
+            <parameter-mapping
+                intentParameter="newsArticle.about.name"
+                required="true"
+                urlParameter="query" />
+        </fulfillment>
+        <fulfillment
+            urlTemplate="twitter://explore?app_action=get_news_article" />
+    </action>
+    <entity-set
+        entitySetId="getNewsArticle">
+        <entity
+            description="Show news on Twitter"
+            identifier="actions.intent.GET_NEWS_ARTICLE"
+            name="News on Twitter"
+            url="twitter://explore?app_action=get_news_article" />
+    </entity-set>
+    <action
+        intentName="actions.intent.OPEN_APP_FEATURE">
+        <parameter
+            name="feature">
+            <entity-set-reference
+                entitySetId="FeatureEntitySet" />
+        </parameter>
+        <fulfillment
+            urlTemplate="twitter://{appFeature}?app_action=open_app_feature">
+            <parameter-mapping
+                entityMatchRequired="true"
+                intentParameter="feature"
+                urlParameter="appFeature" />
+        </fulfillment>
+    </action>
+    <entity-set
+        entitySetId="FeatureEntitySet">
+        <entity
+            identifier="mentions"
+            name="notifications"
+            url="twitter://mentions?app_action=open_app_feature">
+            <potential-action
+                description="Open my Twitter notifications"
+                identifier="actions.intent.OPEN_APP_FEATURE"
+                name="Twitter Notifications"
+                url="twitter://mentions?app_action=open_app_feature" />
+        </entity>
+        <entity
+            identifier="lists"
+            name="lists"
+            url="twitter://lists?app_action=open_app_feature">
+            <potential-action
+                description="Open my Twitter lists"
+                identifier="actions.intent.OPEN_APP_FEATURE"
+                name="Twitter Lists"
+                url="twitter://lists?app_action=open_app_feature" />
+        </entity>
+    </entity-set>
+    <action
+        intentName="actions.intent.UPDATE_SOFTWARE_APPLICATION">
+        <parameter
+            name="softwareApplication.softwareSetting.name">
+            <entity-set-reference
+                entitySetId="SettingEntitySet" />
+        </parameter>
+        <fulfillment
+            urlTemplate="twitter://settings/{setting}?app_action=update_software_application">
+            <parameter-mapping
+                entityMatchRequired="true"
+                intentParameter="softwareApplication.softwareSetting.name"
+                urlParameter="setting" />
+        </fulfillment>
+    </action>
+    <entity-set
+        entitySetId="SettingEntitySet">
+        <entity
+            identifier="account"
+            name="account"
+            url="twitter://settings/account?app_action=update_software_application">
+            <potential-action
+                description="Open my Twitter account settings"
+                identifier="actions.intent.UPDATE_SOFTWARE_APPLICATION"
+                name="Twitter Account Settings"
+                url="twitter://settings/account?app_action=update_software_application" />
+        </entity>
+        <entity
+            alternateName="@array/explore_synonym"
+            identifier="explore"
+            name="explore"
+            url="twitter://settings/explore?app_action=update_software_application">
+            <potential-action
+                description="Open my Twitter explore settings"
+                identifier="actions.intent.UPDATE_SOFTWARE_APPLICATION"
+                name="Twitter Explore Settings"
+                url="twitter://settings/explore?app_action=update_software_application" />
+        </entity>
+        <entity
+            identifier="email"
+            name="email"
+            url="twitter://settings/email?app_action=update_software_application">
+            <potential-action
+                description="Open my Twitter email settings"
+                identifier="actions.intent.UPDATE_SOFTWARE_APPLICATION"
+                name="Twitter Email Settings"
+                url="twitter://settings/email?app_action=update_software_application" />
+        </entity>
+        <entity
+            identifier="security"
+            name="security"
+            url="twitter://settings/security?app_action=update_software_application">
+            <potential-action
+                description="Open my Twitter security settings"
+                identifier="actions.intent.UPDATE_SOFTWARE_APPLICATION"
+                name="Twitter Security Settings"
+                url="twitter://settings/security?app_action=update_software_application" />
+        </entity>
+        <entity
+            identifier="os_notifications"
+            name="notifications"
+            url="twitter://settings/os_notifications?app_action=update_software_application">
+            <potential-action
+                description="Open Twitter system notification settings"
+                identifier="actions.intent.UPDATE_SOFTWARE_APPLICATION"
+                name="Twitter Notification Settings"
+                url="twitter://settings/os_notifications?app_action=update_software_application" />
+        </entity>
+    </entity-set>
+    <action
+        intentName="actions.intent.GET_THING">
+        <shortcut-entity-set-reference
+            entitySetId="getThing" />
+        <fulfillment
+            urlTemplate="twitter://search?app_action=get_thing{&amp;query}">
+            <parameter-mapping
+                intentParameter="thing.name"
+                required="true"
+                urlParameter="query" />
+        </fulfillment>
+        <fulfillment
+            urlTemplate="twitter://explore?app_action=get_thing" />
+    </action>
+    <entity-set
+        entitySetId="getThing">
+        <entity
+            description="Open search on X"
+            identifier="actions.intent.GET_THING"
+            name="Search X"
+            url="twitter://explore?app_action=get_thing" />
+    </entity-set>
+</actions>

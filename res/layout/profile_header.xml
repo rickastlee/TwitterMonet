@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_gravity="bottom"
+    android:orientation="vertical"
+    android:background="?coreColorToolbarBg"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <com.twitter.profiles.HeaderImageView
+        android:id="@id/profile_header"
+        android:background="@color/twitter_blue"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        twitter:crossfadeDuration="@integer/profile_header_crossfade_duration"
+        twitter:filterColor="@android:color/transparent"
+        twitter:filterMaxOpacity="0.0"
+        twitter:imageType="profile_header"
+        twitter:overlayDrawable="@android:color/transparent" />
+    <include
+        android:layout_gravity="bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        layout="@layout/profile_button_bar" />
+    <include
+        layout="@layout/profile_details" />
+</LinearLayout>

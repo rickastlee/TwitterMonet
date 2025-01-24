@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.ui.widget.PreferenceTopCategoryCompat
+        android:title="@string/settings_display_and_sound_media_title"
+        android:key="category_photo">
+        <SwitchPreference
+            android:title="@string/settings_media_forward"
+            android:key="media_forward"
+            android:defaultValue="true" />
+    </com.twitter.ui.widget.PreferenceTopCategoryCompat>
+    <com.twitter.ui.widget.TwitterPreferenceCategory
+        android:title="@string/settings_display_title">
+        <Preference
+            android:title="@string/settings_dark_mode"
+            android:key="dark_mode" />
+    </com.twitter.ui.widget.TwitterPreferenceCategory>
+    <com.twitter.ui.widget.TwitterPreferenceCategory
+        android:title="@string/settings_sound_title">
+        <SwitchPreference
+            android:title="@string/settings_sound_effects"
+            android:key="sound_effects"
+            android:defaultValue="true" />
+    </com.twitter.ui.widget.TwitterPreferenceCategory>
+    <com.twitter.ui.widget.TwitterPreferenceCategory
+        android:title="@string/settings_web_browser_title">
+        <SwitchPreference
+            android:title="@string/settings_in_app_browser"
+            android:key="in_app_browser"
+            android:summary="@string/settings_in_app_browser_summary"
+            android:defaultValue="true" />
+    </com.twitter.ui.widget.TwitterPreferenceCategory>
+</PreferenceScreen>

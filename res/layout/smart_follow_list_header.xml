@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.ui.widget.SmartFollowHeaderView
+    android:orientation="horizontal"
+    android:background="?coreColorAppBackground"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/smart_follow_header_height"
+    android:paddingStart="?timelineRowHorizontalPadding"
+    android:paddingEnd="?timelineRowHorizontalPadding"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

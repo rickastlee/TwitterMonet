@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@id/broadcast_action_item"
+    android:background="?android:selectableItemBackground"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="?android:listPreferredItemHeight"
+    android:paddingStart="@dimen/ps__standard_margin"
+    android:paddingEnd="@dimen/ps__standard_margin"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <tv.periscope.android.view.PsImageView
+        android:id="@id/icon"
+        android:layout_width="40.0dip"
+        android:layout_height="40.0dip"
+        android:scaleType="centerInside"
+        android:layout_centerVertical="true"
+        android:contentDescription="@null"
+        custom:ps__tint="@color/ps__white" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="16.0dip"
+        android:layout_toEndOf="@id/icon">
+        <tv.periscope.android.view.PsTextView
+            android:textSize="16.0sp"
+            android:textColor="@color/ps__white"
+            android:id="@id/label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <tv.periscope.android.view.PsTextView
+            android:textSize="12.0sp"
+            android:textColor="@color/ps__white_alpha_half"
+            android:id="@id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</RelativeLayout>

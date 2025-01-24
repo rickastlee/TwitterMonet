@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.android.liveevent.landing.hero.audiospace.AudioSpaceHeroComposeView
+        android:id="@id/activity_live_event_audiospace_hero_slate"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+</merge>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:padding="@dimen/ps__standard_spacing_20"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <tv.periscope.android.view.PsImageView
+        android:id="@id/avatar"
+        android:layout_width="@dimen/ps__blockee_dialog_avatar_size"
+        android:layout_height="@dimen/ps__blockee_dialog_avatar_size"
+        android:src="@drawable/ps__avatar_placeholder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <tv.periscope.android.view.PsImageView
+        android:layout_width="@dimen/ps__blockee_dialog_block_size"
+        android:layout_height="@dimen/ps__blockee_dialog_block_size"
+        android:src="@drawable/ps__bg_avatar_first_gift_heart"
+        app:layout_constraintBottom_toBottomOf="@id/avatar"
+        app:layout_constraintEnd_toEndOf="@id/avatar" />
+    <tv.periscope.android.view.PsTextView
+        android:textSize="@dimen/ps__blockee_dialog_text_size"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:id="@id/question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ps__standard_spacing_30"
+        android:text="@string/ps__blockee_modal_question"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/avatar" />
+    <tv.periscope.android.view.PsTextView
+        android:textSize="@dimen/ps__standard_text_size"
+        android:textColor="@color/ps__light_grey"
+        android:gravity="center"
+        android:id="@id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ps__standard_spacing_8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/question" />
+    <tv.periscope.android.view.PsButton
+        android:textSize="@dimen/ps__dialog_btn_text_size"
+        android:id="@id/confirm"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ps__standard_spacing_30"
+        android:text="@string/ps__blockee_modal_confirm_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/description"
+        style="@style/ps__Button" />
+    <tv.periscope.android.view.PsButton
+        android:textSize="@dimen/ps__dialog_btn_text_size"
+        android:id="@id/cancel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ps__standard_spacing_16"
+        android:text="@string/ps__blockee_modal_cancel_button"
+        app:layout_constraintTop_toBottomOf="@id/confirm"
+        style="@style/ps__Button.Hollow" />
+</androidx.constraintlayout.widget.ConstraintLayout>

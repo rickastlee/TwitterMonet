@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/space_48"
+    app:behavior_hideable="false"
+    app:behavior_skipCollapsed="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.twitter.core.ui.components.dialog.bottomsheet.GripperView
+        android:layout_gravity="center_horizontal"
+        android:id="@id/gripper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_title_3"
+        android:id="@id/title"
+        android:paddingTop="@dimen/space_16"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/alt_text_image_description_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gripper"
+        style="@style/PrimaryText" />
+    <androidx.core.widget.NestedScrollView
+        android:id="@id/text_container"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0"
+        app:layout_constraintBottom_toTopOf="@id/button_dismiss"
+        app:layout_constraintTop_toBottomOf="@id/title">
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_normal"
+            android:textColor="?abstractColorText"
+            android:id="@id/text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11.0dip"
+            android:text="Testing"
+            android:minLines="2" />
+    </androidx.core.widget.NestedScrollView>
+    <com.twitter.ui.components.button.legacy.TwitterButton
+        android:id="@id/button_dismiss"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30.0dip"
+        android:layout_marginBottom="34.0dip"
+        android:minHeight="44.0dip"
+        android:text="@string/button_action_dismiss"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_container"
+        style="@style/TwitterButtonLargePrimaryOutlined" />
+</LinearLayout>

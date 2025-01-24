@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/mobile_app_card_height"
+    app:cardCornerRadius="@dimen/corner_radius_large"
+    app:cardUseCompatPadding="false"
+    style="@style/ModuleCardStyle"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@id/mobile_app_item_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <com.twitter.media.ui.fresco.FrescoMediaImageView
+            android:id="@id/mobile_app_icon"
+            android:importantForAccessibility="no"
+            app:defaultDrawable="@drawable/mobile_app_icon_default_google_app_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/MobileAppIconStyle" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/mobile_app_name_text"
+            app:layout_constraintBottom_toTopOf="@id/mobile_app_subtitle_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/mobile_app_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/ModuleCardTitleStyle" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/mobile_app_subtitle_text"
+            app:layout_constraintBottom_toTopOf="@id/mobile_app_primary_category_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/mobile_app_icon"
+            app:layout_constraintTop_toBottomOf="@id/mobile_app_name_text"
+            style="@style/ModuleCardSubtitleStyle" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/mobile_app_primary_category_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/mobile_app_icon"
+            app:layout_constraintTop_toBottomOf="@id/mobile_app_subtitle_text"
+            style="@style/MobileAppCategoryStyle" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/mobile_app_rating_text"
+            app:layout_constraintBottom_toBottomOf="@id/mobile_app_primary_category_text"
+            app:layout_constraintStart_toEndOf="@id/mobile_app_primary_category_text"
+            app:layout_constraintTop_toTopOf="@id/mobile_app_primary_category_text"
+            style="@style/MobileAppRatingStyle" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/mobile_app_price_text"
+            app:layout_constraintBottom_toBottomOf="@id/mobile_app_primary_category_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@id/mobile_app_rating_text"
+            app:layout_constraintTop_toTopOf="@id/mobile_app_primary_category_text"
+            style="@style/MobileAppPriceStyle" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

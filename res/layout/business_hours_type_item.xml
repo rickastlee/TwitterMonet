@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:clickable="false"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <com.twitter.business.moduleconfiguration.businessinfo.hours.BusinessHoursRowView
+        android:id="@id/no_hours_row"
+        android:background="@drawable/ripple_pressed_selector_rectangle"
+        android:clickable="true"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        custom:headerText="@string/no_hours_title"
+        custom:layout_constraintTop_toTopOf="parent"
+        custom:subText="@string/no_hours_subtext" />
+    <com.twitter.business.moduleconfiguration.businessinfo.hours.BusinessHoursRowView
+        android:id="@id/always_open_row"
+        android:background="@drawable/ripple_pressed_selector_rectangle"
+        android:clickable="true"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        custom:headerText="@string/always_open_title"
+        custom:layout_constraintTop_toBottomOf="@id/no_hours_row"
+        custom:subText="@string/always_open_subtext" />
+    <com.twitter.business.moduleconfiguration.businessinfo.hours.BusinessHoursRowView
+        android:id="@id/custom_hours_row"
+        android:background="@drawable/ripple_pressed_selector_rectangle"
+        android:clickable="true"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        custom:headerText="@string/custom_hours_title"
+        custom:layout_constraintTop_toBottomOf="@id/always_open_row"
+        custom:subText="@string/custom_hours_subtext" />
+</androidx.constraintlayout.widget.ConstraintLayout>

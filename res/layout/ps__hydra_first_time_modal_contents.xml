@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:background="@color/ps__app_background"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/ps__standard_spacing_20"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:layout_gravity="center_horizontal"
+        android:id="@id/banner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ps__standard_spacing_30"
+        android:contentDescription="@null" />
+    <tv.periscope.android.view.PsTextView
+        android:textSize="@dimen/font_size_prompt_title"
+        android:textStyle="bold"
+        android:textColor="@color/ps__primary_text"
+        android:layout_gravity="center_horizontal"
+        android:id="@id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ps__standard_spacing_30"
+        android:text="@string/ps__hydra_first_time_modal_title" />
+    <tv.periscope.android.view.PsTextView
+        android:textSize="@dimen/ps__dialog_title_text_size"
+        android:textColor="@color/ps__primary_text"
+        android:gravity="center_horizontal"
+        android:id="@id/description"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ps__standard_spacing_16"
+        android:layout_marginStart="@dimen/ps__standard_spacing_20"
+        android:layout_marginEnd="@dimen/ps__standard_spacing_20" />
+    <tv.periscope.android.view.PsButton
+        android:id="@id/confirm"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ps__standard_spacing_30"
+        android:layout_marginBottom="@dimen/ps__standard_spacing_30"
+        android:text="@string/ps__hydra_first_time_modal_confirm"
+        android:layout_marginStart="@dimen/ps__standard_spacing_20"
+        android:layout_marginEnd="@dimen/ps__standard_spacing_20"
+        style="@style/ps__Button" />
+</LinearLayout>

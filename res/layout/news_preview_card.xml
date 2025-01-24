@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.ui.view.GroupedRowView
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <com.twitter.media.ui.image.MediaImageView
+            android:id="@id/news_image"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            twitter:aspect_ratio="@dimen/sixteen_by_nine_aspect_ratio"
+            twitter:scaleType="fill" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="@dimen/space_12"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:id="@id/pre_title_text"
+                android:paddingBottom="@dimen/space_4"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                style="?guideCellPretitleStyle" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:id="@id/title_text"
+                android:paddingBottom="@dimen/space_4"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                style="?guideCellTitleStyle" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textSize="@dimen/font_size_normal"
+                android:ellipsize="end"
+                android:id="@id/post_title_text"
+                android:paddingBottom="@dimen/space_4"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="3"
+                android:singleLine="false"
+                style="?guideCellSubtitleStyle" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textColor="?abstractColorLink"
+                android:id="@id/pivot_text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Read More"
+                style="?guideCellSubtitleStyle" />
+        </LinearLayout>
+    </LinearLayout>
+</com.twitter.ui.view.GroupedRowView>

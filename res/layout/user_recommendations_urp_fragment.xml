@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:id="@id/container"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include
+        android:id="@id/top_toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/ocf_top_toolbar" />
+    <FrameLayout
+        android:id="@id/content"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0">
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <FrameLayout
+                android:id="@id/fallback_fragment_container"
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+            <com.twitter.ui.view.RtlViewPager
+                android:id="@id/view_pager"
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+                <com.twitter.ui.navigation.FullTabLayout
+                    android:layout_gravity="top"
+                    android:id="@id/tab_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:splitMotionEvents="false"
+                    style="@style/TabLayoutStyle.Main" />
+            </com.twitter.ui.view.RtlViewPager>
+            <com.google.android.material.appbar.AppBarLayout
+                android:background="?coreColorAppBackground"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <com.google.android.material.appbar.CollapsingToolbarLayout
+                    android:id="@id/header_container"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed|enterAlwaysCollapsed" />
+            </com.google.android.material.appbar.AppBarLayout>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+        <ViewStub
+            android:id="@id/empty_view_stub"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+        <FrameLayout
+            android:id="@id/progress_bar"
+            android:background="?coreColorAppBackground"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <ProgressBar
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminate="true"
+                style="?android:progressBarStyle" />
+        </FrameLayout>
+    </FrameLayout>
+    <include
+        android:id="@id/bottom_navigation_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/bottom_cta_navigation_bar" />
+</LinearLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:id="@id/dialog_panel"
+    android:background="?coreColorAppBackground"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListView
+        android:layout_gravity="start"
+        android:id="@android:id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0"
+        style="@style/List.Accounts" />
+    <LinearLayout
+        android:layout_gravity="start"
+        android:orientation="vertical"
+        android:id="@id/buttons_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@style/List.Accounts">
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/new_account"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/accounts_dialog_new_account"
+            style="@style/AccountAction" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/add_account"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/accounts_dialog_add_account"
+            style="@style/AccountAction" />
+    </LinearLayout>
+</LinearLayout>

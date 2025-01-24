@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.common.ui.isTalkingView.IsTalkingView
+    android:gravity="center"
+    android:layout_gravity="center_vertical"
+    android:id="@id/room_user_isTalking_indicator"
+    android:visibility="visible"
+    android:layout_width="20.0dip"
+    android:layout_height="15.0dip"
+    android:contentDescription="@string/speaker_mic_label_talking"
+    app:animationDuration="200"
+    app:barColor="@color/purple_500"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" />

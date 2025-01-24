@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tv.periscope.android.ui.broadcast.view.BroadcastTipView
+    android:id="@id/broadcast_tip"
+    android:background="@drawable/ps__bg_broadcast_tip"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="6.0dip"
+    android:layout_marginStart="10.0dip"
+    android:layout_marginEnd="10.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <ViewStub
+            android:id="@id/ad_attribution_container_stub"
+            android:layout="@layout/video_attribution_ad_container"
+            android:inflatedId="@id/ad_attribution_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@id/view_counts_attribution_layout"
+            android:paddingTop="@dimen/space_8"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <ViewStub
+                android:id="@id/divider_interpunct_stub"
+                android:layout="@layout/video_attribution_divider_interpunct_forward"
+                android:inflatedId="@id/divider_interpunct"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent" />
+            <ViewStub
+                android:id="@id/attribution_user_view_stub"
+                android:layout="@layout/attribution_user_view_forward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </FrameLayout>
+    <ViewStub
+        android:id="@id/title_and_description_stub"
+        android:layout="@layout/video_attribution_title_and_description_container"
+        android:inflatedId="@id/title_and_description_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

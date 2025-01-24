@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@id/activity_unified_landing_coordinator_layout"
+        android:background="?android:windowBackground"
+        android:clipChildren="false"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <FrameLayout
+            android:id="@id/fragment_container"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        <com.google.android.material.appbar.AppBarLayout
+            android:orientation="vertical"
+            android:id="@id/activity_unified_landing_app_bar_layout"
+            android:background="?coreColorToolbarBg"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:elevation="0.0dip">
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="vertical"
+                android:id="@id/activity_unified_landing_header_container"
+                android:fitsSystemWindows="true"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="?toolBarSize"
+                android:minHeight="?toolBarSize"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed" />
+            <View
+                android:id="@id/activity_live_event_section_divider"
+                android:background="?coreColorBorder"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/space_1" />
+        </com.google.android.material.appbar.AppBarLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@id/toolbar_container"
+            android:clipChildren="false"
+            android:layout_width="fill_parent"
+            android:layout_height="?toolBarSize"
+            app:layout_anchor="@id/activity_unified_landing_app_bar_layout">
+            <include
+                layout="@layout/toolbar_container" />
+            <FrameLayout
+                android:id="@id/share_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <tag
+        android:value="ULP"
+        android:id="@id/weaverComponent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

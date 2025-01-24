@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.ui.widget.ToggleImageButton
+    android:id="@id/cc_toggle_background"
+    android:background="@drawable/timeline_bg_audio_toggle_button"
+    android:visibility="gone"
+    android:layout_width="@dimen/cc_toggle_button_bg_size"
+    android:layout_height="@dimen/cc_toggle_button_bg_size"
+    android:foreground="@drawable/ripple_selector_oval"
+    android:src="@drawable/av_cc_toggle_button"
+    android:paddingHorizontal="@dimen/space_4"
+    android:paddingVertical="@dimen/cc_toggle_button_vertical_padding"
+    app:contentDescriptionOff="@string/cc_toggle_button_description_off"
+    app:contentDescriptionOn="@string/cc_toggle_button_description_on"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" />

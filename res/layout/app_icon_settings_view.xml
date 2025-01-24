@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.recyclerview.widget.RecyclerView
+        android:gravity="center"
+        android:id="@id/app_icon_recycler_view"
+        android:background="@null"
+        android:paddingBottom="@dimen/space_16"
+        android:clipToPadding="false"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        app:layout_constraintBottom_toTopOf="@id/app_icon_grid_view_info_note"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@id/app_icon_grid_view_info_icon"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_vector_information_circle"
+        android:contentDescription="@string/app_icon_info_note_content_description"
+        android:paddingStart="@dimen/space_16"
+        app:layout_constraintBottom_toBottomOf="@id/app_icon_grid_view_info_note"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/app_icon_grid_view_info_note"
+        app:tint="?coreColorSecondaryText" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_small"
+        android:textColor="?coreColorSecondaryText"
+        android:id="@id/app_icon_grid_view_info_note"
+        android:padding="@dimen/space_16"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/app_icon_grid_view_info_icon" />
+</androidx.constraintlayout.widget.ConstraintLayout>

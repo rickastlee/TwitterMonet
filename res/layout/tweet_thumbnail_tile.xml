@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="?selectableItemBackground"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/items_horizontal_margin"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.twitter.media.ui.fresco.FrescoMediaImageView
+        android:id="@id/thumbnail_view"
+        android:layout_width="@dimen/tweet_video_tile_width"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/video_content_description"
+        app:aspect_ratio="0.75"
+        app:imageCornerRadius="@dimen/corner_radius_medium"
+        app:scaleType="fill" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@id/view_count_container"
+        android:background="@drawable/view_count_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_8"
+        android:importantForAccessibility="noHideDescendants"
+        android:paddingHorizontal="@dimen/space_4"
+        android:paddingVertical="@dimen/space_2"
+        app:layout_constraintBottom_toBottomOf="@id/thumbnail_view"
+        app:layout_constraintLeft_toLeftOf="@id/thumbnail_view">
+        <View
+            android:id="@id/view_icon"
+            android:background="@drawable/ic_view"
+            android:layout_width="@dimen/views_icon_size"
+            android:layout_height="@dimen/views_icon_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_normal"
+            android:textColor="@color/white"
+            android:id="@id/view_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_8"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/view_icon"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

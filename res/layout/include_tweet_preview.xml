@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_headline_2"
+        android:textColor="?coreColorSecondaryText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16.0dip"
+        android:text="@string/tweet_preview_title"
+        android:layout_marginHorizontal="16.0dip" />
+    <Space
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="16.0dip"
+        android:layout_weight="1.0" />
+    <com.twitter.tweetview.core.TweetView
+        android:id="@id/previewTweet"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:layout="@layout/branded_like_preview_tweet_view"
+        style="@style/TweetView" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_body"
+        android:textColor="?coreColorSecondaryText"
+        android:id="@id/reduced_motion_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16.0dip"
+        android:text="@string/reduce_motion_message"
+        android:layout_marginHorizontal="16.0dip">
+        <tag
+            android:value="ReduceMotionMessage"
+            android:id="@id/weaverComponent" />
+    </com.twitter.ui.components.text.legacy.TypefacesTextView>
+    <Space
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0" />
+</LinearLayout>

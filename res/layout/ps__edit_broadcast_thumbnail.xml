@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <tv.periscope.android.view.PsTextView
+        android:textSize="16.0sp"
+        android:textColor="@color/ps__white"
+        android:id="@id/label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/ps__standard_spacing_10"
+        android:layout_marginTop="@dimen/ps__standard_spacing_5"
+        android:text="@string/ps__thumbnail" />
+    <include
+        layout="@layout/ps__thumbnail_carousel" />
+</LinearLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:gravity="center_vertical"
+    android:id="@id/spaces_search_view"
+    android:background="?inputBoxBackground"
+    android:visibility="gone"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/space_40"
+    android:paddingStart="?searchQueryViewInsetStart"
+    android:paddingEnd="?searchQueryViewInsetEnd"
+    android:layout_marginHorizontal="@dimen/space_16"
+    android:layout_marginVertical="@dimen/space_8"
+    android:paddingVertical="?searchQueryViewInsetTopBottom"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textStyle="?boldOverrideStyle"
+        android:textColorHint="?coreColorSecondaryText"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:id="@id/query_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/spaces_search_hint"
+        android:maxLines="1"
+        android:drawablePadding="@dimen/space_4"
+        android:drawableStart="@drawable/ic_vector_search_stroke"
+        android:drawableTint="?coreColorSecondaryText"
+        android:paddingHorizontal="@dimen/space_12"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <item
+            android:id="@id/bold"
+            android:title="@string/context_menu_rich_text_bold" />
+        <item
+            android:id="@id/italic"
+            android:title="@string/context_menu_rich_text_italic" />
+    </group>
+</menu>

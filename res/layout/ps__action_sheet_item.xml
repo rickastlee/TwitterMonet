@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:gravity="center_vertical"
+    android:id="@id/broadcast_action_item"
+    android:background="?android:selectableItemBackground"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="?android:listPreferredItemHeight"
+    android:paddingStart="16.0dip"
+    android:paddingEnd="16.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_gravity="start|center"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@id/icon"
+            android:layout_width="40.0dip"
+            android:layout_height="40.0dip"
+            android:scaleType="centerInside"
+            android:contentDescription="@null" />
+        <ImageView
+            android:id="@id/profile_image"
+            android:visibility="gone"
+            android:layout_width="40.0dip"
+            android:layout_height="40.0dip"
+            android:scaleType="centerInside"
+            android:contentDescription="@null" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16.0dip">
+            <tv.periscope.android.view.PsTextView
+                android:textSize="16.0sp"
+                android:id="@id/label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <tv.periscope.android.view.UsernameBadgeView
+                android:id="@id/username"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2.0dip"
+                custom:ps__usernameTextSize="12.0sp" />
+            <tv.periscope.android.view.PsTextView
+                android:textSize="@dimen/font_size_xsmall"
+                android:id="@id/description"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView
+        android:layout_gravity="end|center"
+        android:id="@id/secondary_icon"
+        android:visibility="gone"
+        android:layout_width="40.0dip"
+        android:layout_height="40.0dip"
+        android:scaleType="centerInside"
+        android:contentDescription="@null" />
+</FrameLayout>

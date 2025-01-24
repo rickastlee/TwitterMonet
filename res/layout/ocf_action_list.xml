@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@id/action_list_container"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <ImageButton
+        android:id="@id/back_button"
+        android:background="@drawable/close_icon_circular_background"
+        android:padding="@dimen/space_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_12"
+        android:foreground="@drawable/ripple_selector_oval"
+        android:src="@drawable/ic_vector_close"
+        android:contentDescription="@string/back"
+        android:layout_marginStart="@dimen/space_12"
+        android:elevation="@dimen/space_4"
+        twitter:layout_constraintStart_toStartOf="parent"
+        twitter:layout_constraintTop_toTopOf="parent"
+        twitter:tint="?coreColorPrimaryText" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@id/action_list_recycler_view"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        android:overScrollMode="never"
+        twitter:flow_verticalBias="0.0"
+        twitter:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        twitter:layout_constraintBottom_toTopOf="@id/bottom_stacked_navigation"
+        twitter:layout_constraintEnd_toEndOf="parent"
+        twitter:layout_constraintStart_toStartOf="parent"
+        twitter:layout_constraintTop_toTopOf="parent" />
+    <include
+        android:id="@id/bottom_stacked_navigation"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ocf_standard_spacing"
+        android:layout_marginBottom="@dimen/space_20"
+        android:layout_marginStart="@dimen/space_20"
+        android:layout_marginEnd="@dimen/space_20"
+        twitter:layout_constraintBottom_toBottomOf="parent"
+        twitter:layout_constraintEnd_toEndOf="parent"
+        twitter:layout_constraintStart_toStartOf="parent"
+        layout="@layout/bottom_stacked_cta_navigation" />
+    <tag
+        android:value="ActionList"
+        android:id="@id/weaverComponent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

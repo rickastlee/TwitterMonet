@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.twitter.ui.components.button.legacy.HashflagTwitterButton
+        android:gravity="center"
+        android:id="@id/view_shop_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/view_shop"
+        android:layout_marginHorizontal="@dimen/space_16"
+        app:iconSrc="@drawable/ic_vector_shopping_stroke"
+        style="@style/ShopButtonStyle" />
+    <tag
+        android:value="shop_button_binder"
+        android:id="@id/weaverComponent" />
+</androidx.appcompat.widget.LinearLayoutCompat>

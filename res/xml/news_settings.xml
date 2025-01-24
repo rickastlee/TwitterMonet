@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference
+        android:selectable="false"
+        android:summary="@string/news_subtitle"
+        android:order="1" />
+    <Preference
+        android:icon="@drawable/ic_vector_fire_stroke"
+        android:title="@string/news_top_articles_title"
+        android:key="top_articles"
+        android:summary="@string/news_top_articles_subtitle"
+        android:order="2"
+        android:widgetLayout="@layout/settings_navigation_indicator" />
+    <Preference
+        android:icon="@drawable/ic_vector_book_stroke_on"
+        android:title="@string/news_reader_mode_title"
+        android:selectable="false"
+        android:key="reader_mode"
+        android:summary="@string/news_reader_mode_subtitle"
+        android:order="3"
+        android:widgetLayout="@layout/settings_navigation_indicator" />
+</PreferenceScreen>

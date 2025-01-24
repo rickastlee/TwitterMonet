@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="admin_tools_subtitle_members">
+        <item quantity="other">%d jäsentä</item>
+        <item quantity="one">%d jäsen</item>
+    </plurals>
+    <plurals name="badge_item_count">
+        <item quantity="other">%d uutta kohdetta</item>
+        <item quantity="one">%d uusi kohde</item>
+    </plurals>
+    <plurals name="cohost_current_count">
+        <item quantity="other">%1$d co-hostia</item>
+        <item quantity="one">%1$d co-host</item>
+    </plurals>
+    <plurals name="community_member_count">
+        <item quantity="other">%d Yhteisön jäsentä</item>
+        <item quantity="one">%d Yhteisön jäsen</item>
+    </plurals>
+    <plurals name="community_moderator_count">
+        <item quantity="other">%d moderaattoria</item>
+        <item quantity="one">%d moderaattori</item>
+    </plurals>
+    <plurals name="community_navigation_join_requests_label">
+        <item quantity="other">%s pyyntöä</item>
+        <item quantity="one">%s pyyntö</item>
+    </plurals>
+    <plurals name="community_navigation_new_unread_tweets_label">
+        <item quantity="other">%s uutta julkaisua</item>
+        <item quantity="one">%s uusi julkaisu</item>
+    </plurals>
+    <plurals name="community_navigation_pending_reports_label">
+        <item quantity="other">%s ilmiantoa</item>
+        <item quantity="one">%s ilmianto</item>
+    </plurals>
+    <plurals name="composer_count_progress_overflow_warning">
+        <item quantity="other">%d merkkiä liian pitkä</item>
+        <item quantity="one">%d merkin liian pitkä</item>
+    </plurals>
+    <plurals name="composer_count_progress_warning">
+        <item quantity="other">%d merkkiä jäljellä</item>
+        <item quantity="one">%d merkki jäljellä</item>
+    </plurals>
+    <plurals name="content_description_fleet_item_space_with_others">
+        <item quantity="other">Käyttäjän %1$s huone %2$d muun kanssa</item>
+        <item quantity="one">Käyttäjän %1$s huone %2$d muun kanssa</item>
+    </plurals>
+    <plurals name="data_sync_notif_title">
+        <item quantity="other">%d uutta toimintaa</item>
+        <item quantity="one">%d uusi toiminta</item>
+    </plurals>
+    <plurals name="days">
+        <item quantity="other">%d päivää</item>
+        <item quantity="one">%d päivä</item>
+    </plurals>
+    <plurals name="dm_add_people_failure">
+        <item quantity="other">%d käyttäjää ei voitu lisätä tähän ryhmään.</item>
+        <item quantity="one">Käyttäjää ei voitu lisätä tähän ryhmään.</item>
+    </plurals>
+    <plurals name="dm_add_people_success">
+        <item quantity="other">Lisättiin %d käyttäjää ryhmään.</item>
+        <item quantity="one">Lisättiin käyttäjä ryhmään.</item>
+    </plurals>
+    <plurals name="dm_follower_count_no_joined_date">
+        <item quantity="other">{num_followers} seuraajaa</item>
+        <item quantity="one">{num_followers} seuraaja</item>
+    </plurals>
+    <plurals name="dm_group_account_name">
+        <item quantity="other">%d henkilöä</item>
+        <item quantity="one">1 henkilö</item>
+    </plurals>
+    <plurals name="dm_group_chat_count">
+        <item quantity="other">Ryhmäkeskustelu %d ihmisen kanssa</item>
+        <item quantity="one">Ryhmäkeskustelu %d ihmisen kanssa</item>
+    </plurals>
+    <plurals name="dm_group_conversation_participant_count">
+        <item quantity="other">%1$d henkilöä</item>
+        <item quantity="one">%1$d henkilö</item>
+    </plurals>
+    <plurals name="dm_group_participant_count">
+        <item quantity="other">Tässä ryhmässä on %1$s</item>
+        <item quantity="one">Tässä ryhmässä on %1$s</item>
+    </plurals>
+    <plurals name="dm_group_participant_count_person_details">
+        <item quantity="other">%1$s muuta ihmistä</item>
+        <item quantity="one">%1$s muu</item>
+    </plurals>
+    <plurals name="dm_image_profile">
+        <item quantity="other">Profiilikuvat kohteelle %s</item>
+        <item quantity="one">Profiilikuva kohteelle %s</item>
+    </plurals>
+    <plurals name="dm_new_people_you_may_know">
+        <item quantity="other">%d uutta ihmistä, jotka saatat tuntea</item>
+        <item quantity="one">%d uusi ihminen, jonka saatat tuntea</item>
+    </plurals>
+    <plurals name="dm_new_requests">
+        <item quantity="other">%d uutta pyyntöä</item>
+        <item quantity="one">%d uusi pyyntö</item>
+    </plurals>
+    <plurals name="dm_participant_added_by_deleted_user">
+        <item quantity="other">{participants} lisättiin</item>
+        <item quantity="one">{participants} lisättiin</item>
+    </plurals>
+    <plurals name="dm_pending_requests">
+        <item quantity="other">%s odottavaa pyyntöä</item>
+        <item quantity="one">%d odottava pyyntö</item>
+    </plurals>
+    <plurals name="dm_people_you_may_know">
+        <item quantity="other">%d ihmistä, jotka saatat tuntea</item>
+        <item quantity="one">%d ihminen, jonka saatat tuntea</item>
+    </plurals>
+    <plurals name="dm_pinned_conversations_max_count_exceeded_title">
+        <item quantity="other">Voit kiinnittää vain %d keskustelua</item>
+        <item quantity="one">Voit kiinnittää vain %d keskustelun</item>
+    </plurals>
+    <plurals name="dm_state_seen_by">
+        <item quantity="other">Nähnyt %d henkilöä</item>
+        <item quantity="one">Nähnyt %d henkilö</item>
+    </plurals>
+    <plurals name="dm_unread_messages">
+        <item quantity="other">%d lukematonta viestiä</item>
+        <item quantity="one">%d lukematon viesti</item>
+    </plurals>
+    <plurals name="dm_user_joined_and_follower_count">
+        <item quantity="other">Liittynyt {joined_date} • {num_followers} seuraajaa</item>
+        <item quantity="one">Liittynyt {joined_date} • {num_followers} seuraaja</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="other">Siirry eteenpäin %d sekuntia</item>
+        <item quantity="one">Siirry eteenpäin %d sekunti</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="other">Siirry taaksepäin %d sekuntia</item>
+        <item quantity="one">Siirry taaksepäin %d sekunti</item>
+    </plurals>
+    <plurals name="facepile_content_description">
+        <item quantity="other">Profiilikuvat kohteelle %s</item>
+        <item quantity="one">Profiilikuva kohteelle %s</item>
+    </plurals>
+    <plurals name="full_screen_gallery_header_add">
+        <item quantity="other">Lisää %d</item>
+        <item quantity="one">Lisää %d</item>
+    </plurals>
+    <plurals name="graphql_errors_button">
+        <item quantity="other">%d -virheitä</item>
+        <item quantity="one">%d -virhe</item>
+    </plurals>
+    <plurals name="guest_management_max_cohost_count_label">
+        <item quantity="other">Voit nimetä enintään %1$d co-hostia.</item>
+        <item quantity="one">Voit nimetä enintään %1$d co-hostia.</item>
+    </plurals>
+    <plurals name="guest_management_open_cohost_count_label">
+        <item quantity="other">Lisää enintään %1$d muuta ihmistä.</item>
+        <item quantity="one">Lisää enintään %1$d muu henkilö.</item>
+    </plurals>
+    <plurals name="host_kudos_num_followers_gained">
+        <item quantity="other">Sait %1$d uutta seuraajaa!</item>
+        <item quantity="one">Sait %1$d uuden seuraajan!</item>
+    </plurals>
+    <plurals name="hours">
+        <item quantity="other">%d tunnin</item>
+        <item quantity="one">%d tunnin</item>
+    </plurals>
+    <plurals name="humanization_prompt_followers">
+        <item quantity="other">%1$s seuraa käyttäjää %2$s.</item>
+        <item quantity="one">%1$s seuraa käyttäjää %2$s.</item>
+    </plurals>
+    <plurals name="humanization_prompt_topics">
+        <item quantity="other">Sinä ja %1$s seuraatte molemmat aiheita %2$s.</item>
+        <item quantity="one">Sinä ja %1$s seuraatte molemmat aihetta %2$s.</item>
+    </plurals>
+    <plurals name="likes">
+        <item quantity="other">%d tykkäystä</item>
+        <item quantity="one">%d tykkäys</item>
+    </plurals>
+    <plurals name="list_member_count">
+        <item quantity="other">jäsentä</item>
+        <item quantity="one">jäsen</item>
+    </plurals>
+    <plurals name="media_alt_text_prompt_dialog_message">
+        <item quantity="other">"Hyvät kuvailut ovat tiiviitä, mutta täsmällisiä. Muista myös kirjoittaa kuvassa näkyvä teksti, tarvittaessa tiivistäen.
+
+Kuvailusi tekevät X:stä saavutettavan näkövammaisille ja enemmän kontekstia kaipaaville.
+
+Voit poistaa tämän muistutuksen käytöstä saavutettavuusasetuksista."</item>
+        <item quantity="one">"Hyvät kuvailut ovat tiiviitä, mutta täsmällisiä. Muista myös kirjoittaa kuvassa näkyvä teksti, tarvittaessa tiivistäen.
+
+Kuvailusi tekee X:stä saavutettavan näkövammaisille ja enemmän kontekstia kaipaaville.
+
+Voit poistaa tämän muistutuksen käytöstä saavutettavuusasetuksista."</item>
+    </plurals>
+    <plurals name="media_alt_text_prompt_dialog_positive_btn_text">
+        <item quantity="other">Lisää kuvailut</item>
+        <item quantity="one">Lisää kuvailu</item>
+    </plurals>
+    <plurals name="media_alt_text_prompt_dialog_title">
+        <item quantity="other">Muista tehdä kuvistasi saavutettavia</item>
+        <item quantity="one">Muista tehdä kuvastasi saavutettava</item>
+    </plurals>
+    <plurals name="media_monetization_settings_categories_selected">
+        <item quantity="other">%d luokkaa valittu</item>
+        <item quantity="one">%d luokka valittu</item>
+    </plurals>
+    <plurals name="media_tag_remaining">
+        <item quantity="other">Merkitse vielä enintään %d henkilöä.</item>
+        <item quantity="one">Merkitse vielä enintään %d henkilöä.</item>
+    </plurals>
+    <plurals name="media_tag_tagged">
+        <item quantity="other">%d henkilöä merkitty</item>
+        <item quantity="one">%d henkilö merkitty</item>
+    </plurals>
+    <plurals name="member_count">
+        <item quantity="other">%s jäsentä</item>
+        <item quantity="one">%s jäsen</item>
+    </plurals>
+    <plurals name="members">
+        <item quantity="other">%s jäsentä</item>
+        <item quantity="one">%s jäsen</item>
+    </plurals>
+    <plurals name="minutes">
+        <item quantity="other">%d minuuttia</item>
+        <item quantity="one">%d minuutti</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d uutta ilmoitusta</item>
+        <item quantity="one">%d uusi ilmoitus</item>
+    </plurals>
+    <plurals name="muted_keyword_bulk_delete_success">
+        <item quantity="other">Poistettu %d sanaa</item>
+        <item quantity="one">Poistettu %d sana</item>
+    </plurals>
+    <plurals name="muted_keyword_selected_count">
+        <item quantity="other">%d valittu</item>
+        <item quantity="one">%d valittu</item>
+    </plurals>
+    <plurals name="narrowcast_community_member_count">
+        <item quantity="other">%s jäsentä</item>
+        <item quantity="one">%s jäsen</item>
+    </plurals>
+    <plurals name="narrowcast_trusted_friends_count">
+        <item quantity="other">%s henkilöä</item>
+        <item quantity="one">%s henkilö</item>
+    </plurals>
+    <plurals name="others">
+        <item quantity="other">%d muuta</item>
+        <item quantity="one">1 muu</item>
+    </plurals>
+    <plurals name="product_count">
+        <item quantity="other">%1$d tuotetta</item>
+        <item quantity="one">%1$d tuote</item>
+    </plurals>
+    <plurals name="profile_creator_subscriptions_count">
+        <item quantity="other">tilausta</item>
+        <item quantity="one">tilaus</item>
+    </plurals>
+    <plurals name="profile_follower_count">
+        <item quantity="other">seuraajaa</item>
+        <item quantity="one">seuraaja</item>
+    </plurals>
+    <plurals name="profile_friends_following_others">
+        <item quantity="other">%d muuta</item>
+        <item quantity="one">%d muu</item>
+    </plurals>
+    <plurals name="profile_super_followers_count">
+        <item quantity="other">Tilaajat</item>
+        <item quantity="one">Tilaaja</item>
+    </plurals>
+    <plurals name="profile_toolbar_subtitle_articles">
+        <item quantity="other">%s artikkelia</item>
+        <item quantity="one">%s artikkeli</item>
+    </plurals>
+    <plurals name="profile_toolbar_subtitle_likes">
+        <item quantity="other">%s tykkäystä</item>
+        <item quantity="one">%s tykkäys</item>
+    </plurals>
+    <plurals name="profile_toolbar_subtitle_media">
+        <item quantity="other">%s Kuvat ja videot</item>
+        <item quantity="one">%s kuva</item>
+    </plurals>
+    <plurals name="profile_toolbar_subtitle_timeline">
+        <item quantity="other">%s julkaisua</item>
+        <item quantity="one">%s julkaisu</item>
+    </plurals>
+    <plurals name="ps__accessibility_broadcaster_stats_graph_peak_msg">
+        <item quantity="other">Lähetyksen katsojatilasto. Sinulla oli enimmillään %1$d katsojaa kohdassa %2$s.</item>
+        <item quantity="zero">Lähetyksen katsojatilasto</item>
+        <item quantity="one">Lähetyksen katsojatilasto. Sinulla oli enimmillään %1$d katsoja kohdassa %2$s.</item>
+    </plurals>
+    <plurals name="ps__accessibility_broadcaster_stats_graph_point_msg">
+        <item quantity="other">Sinulla oli %1$d katsojaa kohdassa %2$s.</item>
+        <item quantity="one">Sinulla oli %1$d katsoja kohdassa %2$s.</item>
+    </plurals>
+    <plurals name="ps__invite_follower">
+        <item quantity="other">%d seuraajaa</item>
+        <item quantity="zero">Ei seuraajia</item>
+        <item quantity="one">%d seuraaja</item>
+    </plurals>
+    <plurals name="ps__invited_num_followers_embolden">
+        <item quantity="other">*%1$s* kutsui %2$s henkilöä</item>
+        <item quantity="one">*%1$s* kutsui %2$s henkilön</item>
+    </plurals>
+    <plurals name="ps__moderation_report_muted_by_moderator">
+        <item quantity="other">%1$s *hiljentänyt* (%2$d)</item>
+        <item quantity="one">%1$s *hiljentänyt*</item>
+    </plurals>
+    <plurals name="ps__moderation_report_unmuted_by_moderator">
+        <item quantity="other">%1$s *poisti hiljennyksen* (%2$d)</item>
+        <item quantity="one">%1$s *poisti hiljennyksen*</item>
+    </plurals>
+    <plurals name="ps__new_messages">
+        <item quantity="other">%1$d uutta viestiä</item>
+        <item quantity="one">%1$d uusi viesti</item>
+    </plurals>
+    <plurals name="ps__num_hearts">
+        <item quantity="other">%s sydäntä</item>
+        <item quantity="one">%s sydän</item>
+    </plurals>
+    <plurals name="ps__stats_live_viewers">
+        <item quantity="other">LIVEKATSOJAT</item>
+        <item quantity="one">LIVEKATSOJA</item>
+    </plurals>
+    <plurals name="ps__stats_replay_viewers">
+        <item quantity="other">UUSINTAKATSOJAT</item>
+        <item quantity="one">UUSINTAKATSOJA</item>
+    </plurals>
+    <plurals name="ps__time_format_days">
+        <item quantity="other">%d päivää</item>
+        <item quantity="one">%d päivä</item>
+    </plurals>
+    <plurals name="ps__time_format_hours">
+        <item quantity="other">%d tuntia</item>
+        <item quantity="one">%d tunti</item>
+    </plurals>
+    <plurals name="ps__time_format_minutes">
+        <item quantity="other">%d minuuttia</item>
+        <item quantity="one">%d minuutti</item>
+    </plurals>
+    <plurals name="ps__time_format_seconds">
+        <item quantity="other">%d sekuntia</item>
+        <item quantity="one">%d sekunti</item>
+    </plurals>
+    <plurals name="recording_replay_count_preview">
+        <item quantity="other">%s uusintakatselua</item>
+        <item quantity="one">%s toista uudelleen</item>
+    </plurals>
+    <plurals name="relationship_followers_following_others">
+        <item quantity="other">%d muuta</item>
+        <item quantity="one">%d muu</item>
+    </plurals>
+    <plurals name="replies">
+        <item quantity="other">%d vastausta</item>
+        <item quantity="one">%d vastaus</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_and_n_others">
+        <item quantity="other">Vastaus käyttäjälle ﻿%1$s ja %2$d muulle﻿</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_and_n_others_exclusive">
+        <item quantity="other">Vastataan käyttäjälle ﻿%1$s ja %2$d muulle﻿. Vastauksesi näkyy myös muille Tilaajille.</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_and_n_others_in_space">
+        <item quantity="other">Vastataan käyttäjälle ﻿%1$s ja %2$d muulle﻿ Huoneessa ﻿%3$s﻿</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_someone_and_n_others">
+        <item quantity="other">Vastauksena käyttäjille ﻿%1$s, %2$s ja %3$d muulle﻿</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_someone_and_n_others_exclusive">
+        <item quantity="other">Vastataan käyttäjälle ﻿%1$s %2$s ja %3$d muulle﻿. Vastauksesi näkyy myös muille tilaajille.</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_someone_and_n_others_in_space">
+        <item quantity="other">Vastataan käyttäjille ﻿%1$s %2$s ja %3$d muulle﻿ Huoneessa ﻿%4$s﻿</item>
+    </plurals>
+    <plurals name="reported_tweet_reported_by">
+        <item quantity="other">Ilmiantanut {{}}%1$s jäsentä{{}}</item>
+        <item quantity="one">{{}}%1$s{{}} ilmiantoi</item>
+    </plurals>
+    <plurals name="retweets">
+        <item quantity="other">%d uudelleenjulkaisua</item>
+        <item quantity="one">%d uudelleenjulkaisu</item>
+    </plurals>
+    <plurals name="safety_mode_preview_description">
+        <item quantity="other">Olemme merkinneet %d mahdollisesti häiritsevää tai roskapostittavaa tiliä.</item>
+        <item quantity="one">Olemme merkinneet %d mahdollisesti häiritsevän tai roskapostittavan tilin.</item>
+    </plurals>
+    <plurals name="seconds">
+        <item quantity="other">%d sekuntia</item>
+        <item quantity="one">%d sekunti</item>
+    </plurals>
+    <plurals name="send_cohost_invite">
+        <item quantity="other">Lähetä co-host-kutsuja</item>
+        <item quantity="one">Lähetä co-host-kutsu</item>
+    </plurals>
+    <plurals name="settings_notif_tweets_count">
+        <item quantity="other">%d henkilöä</item>
+        <item quantity="one">%d käyttäjä</item>
+    </plurals>
+    <plurals name="social_follow_and_follow_and_others">
+        <item quantity="other">%1$s, %2$s ja %3$d muuta seuraavat</item>
+        <item quantity="one">%1$s, %2$s ja %3$d muuta seuraavat</item>
+    </plurals>
+    <plurals name="spaces_additional_participants">
+        <item quantity="other">+%1$s muuta kuuntelijaa</item>
+        <item quantity="one">+%1$s muu kuuntelija</item>
+    </plurals>
+    <plurals name="spaces_blocked_warning">
+        <item quantity="other">Olet estänyt %1$d puhujaa</item>
+        <item quantity="one">Olet estänyt %1$d puhujan</item>
+    </plurals>
+    <plurals name="spaces_card_social_proof_in_progress">
+        <item quantity="other">%1$s ovat tässä Huoneessa</item>
+        <item quantity="one">%1$s on tässä Huoneessa</item>
+    </plurals>
+    <plurals name="spaces_card_social_proof_replay">
+        <item quantity="other">%1$s oli tässä Huoneessa</item>
+        <item quantity="one">%1$s oli tässä Huoneessa</item>
+    </plurals>
+    <plurals name="spaces_invite_confirmation">
+        <item quantity="other">%1$d ihmistä on kutsuttu tähän Huoneeseen</item>
+        <item quantity="one">%1$d henkilö on kutsuttu tähän huoneeseen</item>
+    </plurals>
+    <plurals name="speakers_current_count">
+        <item quantity="other">%1$d puhujaa</item>
+        <item quantity="one">%1$d puhuja</item>
+    </plurals>
+    <plurals name="speakers_listeners_count">
+        <item quantity="other">%1$d ihmistä kuuntelee</item>
+        <item quantity="one">%1$d henkilö kuuntelee</item>
+    </plurals>
+    <plurals name="speakers_open_spots_count">
+        <item quantity="other">%1$d avointa paikkaa</item>
+        <item quantity="one">%1$d avoin paikka</item>
+    </plurals>
+    <plurals name="speakers_requests_count">
+        <item quantity="other">%1$d pyyntöä</item>
+        <item quantity="one">%1$d pyyntö</item>
+    </plurals>
+    <plurals name="stat_label_bookmarks">
+        <item quantity="other">Kirjanmerkit</item>
+        <item quantity="one">Kirjanmerkki</item>
+    </plurals>
+    <plurals name="stat_label_likes_sentence_case">
+        <item quantity="other">tykkäystä</item>
+        <item quantity="one">tykkäys</item>
+    </plurals>
+    <plurals name="stat_label_quote_tweets">
+        <item quantity="other">lainausta</item>
+        <item quantity="one">lainaus</item>
+    </plurals>
+    <plurals name="stat_label_retweets_sentence_case">
+        <item quantity="other">Uudelleenjulkaisua</item>
+        <item quantity="one">Uudelleenjulkaisu</item>
+    </plurals>
+    <plurals name="stat_label_verified_views_sentence_case">
+        <item quantity="other">Varmennetut näytöt</item>
+        <item quantity="one">Varmennettu näyttö</item>
+    </plurals>
+    <plurals name="stat_label_views_sentence_case">
+        <item quantity="other">Näytöt</item>
+        <item quantity="one">Näyttö</item>
+    </plurals>
+    <plurals name="subscription_duration_days">
+        <item quantity="other">%d päivää</item>
+        <item quantity="one">päivä</item>
+    </plurals>
+    <plurals name="subscription_duration_months">
+        <item quantity="other">%d kuukautta</item>
+        <item quantity="one">kuukausi</item>
+    </plurals>
+    <plurals name="subscription_duration_years">
+        <item quantity="other">%d vuotta</item>
+        <item quantity="one">vuosi</item>
+    </plurals>
+    <plurals name="time_days">
+        <item quantity="other">%d pv</item>
+        <item quantity="one">%d pv</item>
+    </plurals>
+    <plurals name="time_days_ago">
+        <item quantity="other">%d PÄIVÄÄ SITTEN</item>
+        <item quantity="one">%d PÄIVÄ SITTEN</item>
+    </plurals>
+    <plurals name="time_hours">
+        <item quantity="other">%d h</item>
+        <item quantity="one">%d h</item>
+    </plurals>
+    <plurals name="time_hours_ago">
+        <item quantity="other">%d TUNTIA SITTEN</item>
+        <item quantity="one">%d TUNTI SITTEN</item>
+    </plurals>
+    <plurals name="time_mins">
+        <item quantity="other">%d min</item>
+        <item quantity="one">%d min</item>
+    </plurals>
+    <plurals name="time_mins_ago">
+        <item quantity="other">%d MINUUTTIA SITTEN</item>
+        <item quantity="one">%d MINUUTTI SITTEN</item>
+    </plurals>
+    <plurals name="time_secs">
+        <item quantity="other">%d s</item>
+        <item quantity="one">%d s</item>
+    </plurals>
+    <plurals name="top_articles_time_window">
+        <item quantity="other">Viimeiset %s tuntia</item>
+        <item quantity="one">Viimeinen tunti</item>
+    </plurals>
+    <plurals name="tweet_visibility_education_dialog_non_followers_text">
+        <item quantity="other">Muun muassa %1$s ei seuraa sinua.</item>
+        <item quantity="one">%1$s ei seuraa sinua.</item>
+    </plurals>
+    <plurals name="undo_send_period_in_seconds">
+        <item quantity="other">%d sekuntia</item>
+        <item quantity="one">%d sekunti</item>
+    </plurals>
+    <plurals name="verified_views">
+        <item quantity="other">%d varmennettua näyttöä</item>
+        <item quantity="one">%d varmennettu näyttö</item>
+    </plurals>
+</resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingHorizontal="@dimen/full_page_carousel_horizontal_padding"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@drawable/feedback_card_background"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <com.twitter.ui.widget.timeline.TimelineCompactPromptView
+            android:id="@id/compact_prompt_view"
+            android:background="@drawable/list_row_background"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            twitter:layout_constraintEnd_toEndOf="parent"
+            twitter:layout_constraintStart_toStartOf="parent"
+            twitter:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:paddingTop="@dimen/space_16"
+    android:paddingBottom="@dimen/space_16"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingStart="@dimen/space_24"
+    android:paddingEnd="@dimen/space_24"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.ui.components.button.legacy.TwitterButton
+        android:textSize="@dimen/font_size_large"
+        android:id="@id/see_conversation_button"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_12"
+        android:text="@string/conversation_control_edu_see_conversation_button"
+        style="@style/TwitterButtonLargeBrandFilled" />
+    <com.twitter.ui.components.button.legacy.TwitterButton
+        android:textSize="@dimen/font_size_large"
+        android:id="@id/got_it_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/got_it"
+        style="@style/TwitterButtonLargeNeutral" />
+</LinearLayout>

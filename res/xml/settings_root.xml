@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference
+        android:selectable="false"
+        android:key="pref_teams_contributors_limited_access"
+        android:summary="@string/teams_contributors_limited_access_modify_settings"
+        android:order="0" />
+    <Preference
+        android:icon="@drawable/ic_vector_person_stroke"
+        android:title="@string/settings_account_item_title"
+        android:key="pref_account"
+        android:summary="@string/settings_account_item_detail"
+        android:order="10" />
+    <Preference
+        android:icon="@drawable/ic_vector_lock_stroke"
+        android:title="@string/settings_security_account_access_item_title"
+        android:key="pref_security_and_account_access"
+        android:summary="@string/settings_security_account_access_item_detail"
+        android:order="20" />
+    <Preference
+        android:icon="@drawable/ic_vector_twitter"
+        android:title="@string/settings_subscription_title"
+        android:key="pref_twitter_blue"
+        android:summary="@string/settings_subscription_summary"
+        android:order="21" />
+    <Preference
+        android:icon="@drawable/ic_vector_money_stroke"
+        android:title="@string/settings_monetization_title"
+        android:key="pref_monetization"
+        android:summary="@string/settings_monetization_summary"
+        android:order="22" />
+    <Preference
+        android:icon="@drawable/ic_vector_safety"
+        android:title="@string/settings_privacy_and_safety_title"
+        android:key="pref_privacy_and_safety"
+        android:summary="@string/settings_privacy_safety_item_detail"
+        android:order="30" />
+    <Preference
+        android:icon="@drawable/ic_vector_notifications_stroke"
+        android:title="@string/settings_notification_title"
+        android:key="pref_notifications"
+        android:summary="@string/settings_notification_item_detail"
+        android:order="40" />
+    <Preference
+        android:icon="@drawable/ic_vector_accessibility_circle"
+        android:title="@string/settings_accessibility_display_languages_title"
+        android:key="pref_accessibility_display_and_languages"
+        android:summary="@string/settings_accessibility_detail"
+        android:order="50" />
+    <Preference
+        android:icon="@drawable/ic_vector_more_circle"
+        android:title="@string/settings_additional_resources_item_title"
+        android:key="pref_additional_resources"
+        android:summary="@string/settings_additional_resources_item_detail"
+        android:order="60" />
+    <Preference
+        android:icon="@drawable/ic_vector_heart_broken_stroke"
+        android:title="@string/settings_deactivate_title"
+        android:key="pref_deactivate"
+        android:summary="@string/settings_deactivate_for_soft_user_item_detail"
+        android:order="70" />
+    <Preference
+        android:icon="@drawable/ic_vector_incoming"
+        android:title="@string/settings_download_data_item_title"
+        android:key="pref_download_archive"
+        android:summary="@string/settings_download_data_item_detail"
+        android:order="80" />
+    <Preference
+        android:icon="@drawable/ic_vector_eye"
+        android:title="@string/settings_proxy_title"
+        android:key="pref_proxy"
+        android:order="90" />
+    <Preference
+        android:icon="@drawable/ic_vector_settings_stroke"
+        android:title="@string/developer_settings_title"
+        android:key="pref_developer"
+        android:order="100" />
+</PreferenceScreen>

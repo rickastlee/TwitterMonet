@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.media.legacy.widget.MediaEditButtonContainer
+    android:orientation="vertical"
+    android:id="@id/composer_edit_buttons"
+    android:paddingTop="48.0dip"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:importantForAccessibility="noHideDescendants"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <android.widget.Space
+        android:layout_width="wrap_content"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0" />
+    <LinearLayout
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:id="@id/floating_action_button_container"
+        android:padding="12.0dip"
+        android:clipToPadding="false"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <android.widget.Space
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0" />
+        <ImageButton
+            android:layout_gravity="center_vertical"
+            android:id="@id/composer_sensitive_media_button"
+            android:background="@drawable/attachment_button_background"
+            android:padding="@dimen/button_icon_only_padding"
+            android:layout_width="@dimen/medium_button_height"
+            android:layout_height="@dimen/medium_button_height"
+            android:src="@drawable/ic_vector_flag_fill"
+            android:scaleType="fitCenter"
+            android:contentDescription="@null"
+            twitter:tint="@color/twitter_blue" />
+        <ImageButton
+            android:layout_gravity="center_vertical"
+            android:id="@id/composer_alt_text_media_button"
+            android:background="@drawable/attachment_button_background"
+            android:padding="@dimen/button_icon_only_padding"
+            android:layout_width="@dimen/medium_button_height"
+            android:layout_height="@dimen/medium_button_height"
+            android:src="@drawable/ic_vector_alt_plus"
+            android:scaleType="fitCenter"
+            android:contentDescription="@null"
+            android:layout_marginStart="12.0dip" />
+        <com.twitter.ui.components.button.legacy.TwitterButton
+            android:gravity="end"
+            android:id="@id/composer_edit_media_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/composer_edit_button_description"
+            android:layout_marginStart="12.0dip"
+            twitter:iconSrc="?toolbarOverflowIcon"
+            style="?composerEditMediaButtonStyle" />
+    </LinearLayout>
+</com.twitter.media.legacy.widget.MediaEditButtonContainer>

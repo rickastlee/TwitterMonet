@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <View
+        android:background="?coreColorTertiary"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/border_thickness" />
+    <include
+        android:id="@id/persistent_reply_box"
+        layout="@layout/persistent_reply_box" />
+</LinearLayout>

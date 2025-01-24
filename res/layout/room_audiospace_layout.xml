@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_gravity="bottom"
+    android:id="@id/audiospace_layout"
+    android:descendantFocusability="beforeDescendants"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include
+        android:id="@id/_header"
+        layout="@layout/layout_space_header" />
+    <androidx.legacy.widget.Space
+        android:id="@id/tags_spacer"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/space_24"
+        app:layout_constraintTop_toBottomOf="@id/_header" />
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@id/tags_flow"
+        android:paddingBottom="@dimen/space_4"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_16"
+        android:layout_marginEnd="@dimen/space_16"
+        app:constraint_referenced_ids="record_icon, super_followers_label, community_label"
+        app:flow_horizontalAlign="start"
+        app:flow_horizontalBias="0.0"
+        app:flow_horizontalGap="@dimen/space_4"
+        app:flow_horizontalStyle="packed"
+        app:flow_wrapMode="chain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tags_spacer" />
+    <com.twitter.common.ui.RoomRecordingAnimationView
+        android:id="@id/record_icon"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_subtext_1"
+        android:textColor="?coreColorPrimaryText"
+        android:id="@id/super_followers_label"
+        android:background="@drawable/recording_icon"
+        android:paddingTop="@dimen/space_4"
+        android:paddingBottom="@dimen/space_4"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/super_followers_label"
+        android:drawablePadding="@dimen/space_4"
+        android:drawableStart="@drawable/ic_vector_superfollow"
+        android:paddingStart="@dimen/space_8"
+        android:paddingEnd="@dimen/space_8"
+        android:drawableTint="@color/super_follows_solid"
+        style="@style/TextBold" />
+    <include
+        android:id="@id/community_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/room_community_label" />
+    <View
+        android:id="@id/record_icon_overlay"
+        android:background="?coreColorAppBackgroundTranslucent"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        app:layout_constraintBottom_toBottomOf="@id/record_icon"
+        app:layout_constraintEnd_toEndOf="@id/record_icon"
+        app:layout_constraintStart_toStartOf="@id/record_icon"
+        app:layout_constraintTop_toTopOf="@id/record_icon" />
+    <com.twitter.ui.widget.TwitterEditText
+        android:textSize="@dimen/font_size_large"
+        android:textStyle="bold"
+        android:textColor="?coreColorPrimaryText"
+        android:textColorHint="@color/gray_300"
+        android:gravity="start"
+        android:id="@id/room_description_edit_text"
+        android:background="@null"
+        android:visibility="gone"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:hint="@string/room_description_hint"
+        android:drawablePadding="@dimen/space_4"
+        android:inputType="textMultiLine"
+        android:imeOptions="actionDone"
+        android:drawableStart="@drawable/ic_vector_pencil_icon"
+        app:layout_constraintEnd_toStartOf="@id/room_description_composer_count"
+        app:layout_constraintStart_toStartOf="@id/room_recycler_view"
+        app:layout_constraintTop_toBottomOf="@id/tags_flow"
+        app:layout_goneMarginTop="@dimen/space_12" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_large"
+        android:textColor="?coreColorPrimaryText"
+        android:ellipsize="end"
+        android:gravity="start"
+        android:id="@id/room_description"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_16"
+        android:layout_marginStart="@dimen/space_16"
+        android:layout_marginEnd="@dimen/space_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tags_flow"
+        app:layout_goneMarginTop="@dimen/space_12" />
+    <com.twitter.subsystem.composer.ComposerCountProgressBarView
+        android:id="@id/room_description_composer_count"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/space_2"
+        android:layout_marginEnd="@dimen/space_12"
+        app:layout_constraintBottom_toBottomOf="@id/room_description_edit_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/room_description_edit_text"
+        app:spaceLowTextColor="@color/white_opacity_80">
+        <include
+            android:id="@id/composer_count_progress_bar_content"
+            layout="@layout/composer_count_progress_bar_content" />
+    </com.twitter.subsystem.composer.ComposerCountProgressBarView>
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@id/header_barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierAllowsGoneWidgets="false"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="room_description, room_description_edit_text, _header" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_small"
+        android:textColor="?coreColorSecondaryText"
+        android:ellipsize="end"
+        android:id="@id/room_tagged_topics"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_4"
+        android:layout_marginBottom="@dimen/space_16"
+        android:maxLines="2"
+        android:layout_marginHorizontal="@dimen/space_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header_barrier" />
+    <ViewStub
+        android:id="@id/room_pivot_container_stub"
+        android:layout="@layout/tweet_view_soft_intervention_pivot_v2"
+        android:inflatedId="@id/room_pivot_container_stub"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/room_tagged_topics" />
+    <com.twitter.rooms.subsystem.api.utils.BottomSheetRecyclerView
+        android:id="@id/room_recycler_view"
+        android:paddingBottom="@dimen/space_12"
+        android:clipToPadding="false"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_marginTop="@dimen/space_12"
+        android:minHeight="150.0dip"
+        android:layout_marginStart="@dimen/space_16"
+        android:layout_marginEnd="@dimen/space_16"
+        app:layout_constraintBottom_toTopOf="@id/divider"
+        app:layout_constraintHeight_default="wrap"
+        app:layout_constraintTop_toBottomOf="@id/room_pivot_container_stub"
+        app:layout_constraintVertical_bias="0.0" />
+    <ScrollView
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/room_recycler_view"
+        app:layout_constraintEnd_toEndOf="@id/room_recycler_view"
+        app:layout_constraintStart_toStartOf="@id/room_recycler_view">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_16"
+            android:layout_marginEnd="@dimen/space_16">
+            <include
+                android:id="@id/muted_everyone_banner"
+                android:visibility="gone"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/space_8"
+                layout="@layout/new_item_banner" />
+            <include
+                android:id="@id/requested_speakers_banner"
+                android:visibility="gone"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                layout="@layout/new_item_banner" />
+            <include
+                android:id="@id/cohost_invite_banner"
+                android:background="@drawable/rounded_rectangle_purple_gradient"
+                android:visibility="gone"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                layout="@layout/new_item_banner" />
+        </LinearLayout>
+    </ScrollView>
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16.0dip"
+        app:layout_constraintBottom_toBottomOf="@id/room_recycler_view"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        layout="@layout/component_transcriptions" />
+    <include
+        android:id="@id/text_edit_overlay"
+        layout="@layout/audiospace_description_layout" />
+    <include
+        android:id="@id/room_share_nudge"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/room_recycler_view"
+        app:layout_constraintVertical_bias="1.0"
+        layout="@layout/room_nudge_viewstub" />
+    <View
+        android:id="@id/divider"
+        android:background="?coreColorBorder"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/room_divider_height"
+        android:layout_marginBottom="@dimen/space_8"
+        app:layout_constraintBottom_toTopOf="@id/room_action_mute_container" />
+    <ImageView
+        android:id="@id/room_action_speakers"
+        android:src="@drawable/ic_vector_people_stroke"
+        android:contentDescription="@string/guests_room_button"
+        android:layout_marginEnd="@dimen/space_16"
+        android:layout_toStartOf="@id/room_action_react"
+        android:accessibilityTraversalAfter="@id/room_action_mute_container"
+        app:layout_constraintBottom_toBottomOf="@id/room_action_mute_container"
+        app:layout_constraintEnd_toStartOf="@id/room_action_react"
+        app:layout_constraintTop_toTopOf="@id/room_action_mute_container"
+        app:tint="?coreColorPrimaryText"
+        style="@style/SpaceActionButton" />
+    <View
+        android:id="@id/room_react_tooltip_anchor"
+        android:visibility="gone"
+        android:layout_width="1.0dip"
+        android:layout_height="1.0dip"
+        app:layout_constraintBottom_toTopOf="@id/room_action_react"
+        app:layout_constraintStart_toStartOf="@id/room_action_react" />
+    <ImageView
+        android:id="@id/room_action_react"
+        android:src="@drawable/ic_room_react"
+        android:contentDescription="@string/react_room_button"
+        android:layout_marginEnd="@dimen/space_16"
+        android:layout_toStartOf="@id/room_action_share"
+        android:accessibilityTraversalAfter="@id/room_action_speakers"
+        app:layout_constraintBottom_toBottomOf="@id/room_action_mute_container"
+        app:layout_constraintEnd_toStartOf="@id/bottom_end_action_button_barrier"
+        app:layout_constraintTop_toTopOf="@id/room_action_mute_container"
+        app:tint="?coreColorPrimaryText"
+        style="@style/SpaceActionButton" />
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@id/bottom_end_action_button_barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="start"
+        app:constraint_referenced_ids="room_action_share, room_action_clip" />
+    <ImageView
+        android:id="@id/room_action_share"
+        android:visibility="gone"
+        android:src="@drawable/ic_vector_share_android"
+        android:contentDescription="@string/share_room_button"
+        android:layout_marginEnd="@dimen/space_16"
+        android:layout_alignParentEnd="true"
+        android:accessibilityTraversalAfter="@id/room_action_react"
+        app:layout_constraintBottom_toBottomOf="@id/room_action_mute_container"
+        app:layout_constraintEnd_toStartOf="@id/room_action_tweet_about_space"
+        app:layout_constraintTop_toTopOf="@id/room_action_mute_container"
+        app:tint="?coreColorPrimaryText"
+        style="@style/SpaceActionButton" />
+    <ImageView
+        android:id="@id/room_action_clip"
+        android:visibility="invisible"
+        android:src="@drawable/ic_vector_clip_stroke"
+        android:contentDescription="@string/create_clip_button"
+        android:layout_marginEnd="@dimen/space_16"
+        android:layout_alignParentEnd="true"
+        android:accessibilityTraversalAfter="@id/room_action_share"
+        app:layout_constraintBottom_toBottomOf="@id/room_action_mute_container"
+        app:layout_constraintEnd_toStartOf="@id/room_action_tweet_about_space"
+        app:layout_constraintTop_toTopOf="@id/room_action_mute_container"
+        app:tint="?coreColorPrimaryText"
+        style="@style/SpaceActionButton" />
+    <ImageView
+        android:id="@id/room_action_tweet_about_space"
+        android:background="@drawable/circle_action_icon_blue"
+        android:visibility="gone"
+        android:src="@drawable/ic_room_setting_share_tweet_white"
+        android:contentDescription="@string/room_action_tweet_about_space_description"
+        android:layout_marginEnd="@dimen/space_16"
+        android:layout_alignParentEnd="true"
+        android:accessibilityTraversalAfter="@id/room_action_share"
+        app:layout_constraintBottom_toBottomOf="@id/room_action_mute_container"
+        app:layout_constraintEnd_toStartOf="@id/room_action_entity_reply"
+        app:layout_constraintTop_toTopOf="@id/room_action_mute_container"
+        style="@style/SpaceActionButton" />
+    <include
+        android:id="@id/room_action_entity_reply"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/space_16"
+        android:layout_alignParentEnd="true"
+        app:layout_constraintBottom_toBottomOf="@id/room_action_mute_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/room_action_mute_container"
+        layout="@layout/room_audiospace_reply_button" />
+    <RelativeLayout
+        android:id="@id/room_action_mute_container"
+        android:layout_width="@dimen/mute_button_container_width"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_12"
+        android:accessibilityTraversalAfter="@id/room_description"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        <ImageView
+            android:id="@id/room_action_mute"
+            android:background="@drawable/circle_mic_muted"
+            android:padding="@dimen/space_16"
+            android:duplicateParentState="true"
+            android:layout_width="@dimen/mute_button_size"
+            android:layout_height="@dimen/mute_button_size"
+            android:layout_marginBottom="@dimen/space_8"
+            android:src="@drawable/ic_micro_unmuted"
+            android:scaleType="centerInside"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@string/mute_room_button" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_xsmall"
+            android:textColor="?coreColorPrimaryText"
+            android:gravity="center"
+            android:id="@id/room_action_mute_label"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/mic_off"
+            android:layout_below="@id/room_action_mute"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <include
+        android:id="@id/room_private_reaction_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_16"
+        app:layout_constraintBottom_toTopOf="@id/divider"
+        app:layout_constraintStart_toEndOf="parent"
+        layout="@layout/room_private_reaction_layout" />
+    <include
+        android:id="@id/container_settings"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="0.0dip"
+        android:accessibilityTraversalAfter="@id/room_action_tweet_about_space"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_default="wrap"
+        app:layout_constraintTop_toBottomOf="@id/room_tagged_topics"
+        app:layout_constraintVertical_bias="0.0"
+        layout="@layout/room_audiospace_settings" />
+    <androidx.constraintlayout.widget.Group
+        android:id="@id/anything_behind_container_settings"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="room_action_mute_container,room_action_speakers,             room_react_tooltip_anchor,room_action_react,room_action_share, room_action_clip,             room_action_tweet_about_space, room_action_entity_reply, room_action_share, divider " />
+    <View
+        android:id="@id/view_error_mask"
+        android:background="?coreColorPopupBackground"
+        android:clickable="true"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:alpha="0.5"
+        app:layout_constraintBottom_toBottomOf="@id/divider"
+        app:layout_constraintTop_toTopOf="@id/room_description_edit_text" />
+    <include
+        android:id="@id/container_removed_list"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/room_tagged_topics"
+        app:layout_constraintVertical_bias="0.0"
+        layout="@layout/room_audiospace_remove_list" />
+</androidx.constraintlayout.widget.ConstraintLayout>

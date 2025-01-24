@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.twitter.media.ui.image.AspectRatioFrameLayout
+        android:id="@id/aspect_ratio_frame_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:aspect_ratio="@dimen/one_and_a_half_to_one_aspect_ratio"
+        app:scaleMode="height">
+        <androidx.cardview.widget.CardView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            app:cardBackgroundColor="@color/ps__transparent"
+            app:cardCornerRadius="@dimen/card_inner_corner_radius"
+            app:cardElevation="0.0dip"
+            app:contentPadding="0.0dip">
+            <com.google.android.gms.ads.nativead.MediaView
+                android:id="@id/ad_media"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+            <include
+                android:layout_gravity="end|bottom|center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/space_8"
+                android:layout_marginEnd="@dimen/space_8"
+                layout="@layout/website_vanity_url_text" />
+        </androidx.cardview.widget.CardView>
+    </com.twitter.media.ui.image.AspectRatioFrameLayout>
+</LinearLayout>

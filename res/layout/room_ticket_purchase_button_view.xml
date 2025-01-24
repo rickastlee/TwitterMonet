@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_large"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@id/room_ticket_button"
+        android:background="@drawable/rounded_rectangle_purple_gradient"
+        android:paddingTop="@dimen/space_12"
+        android:paddingBottom="@dimen/space_12"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/space_16"
+        android:paddingEnd="@dimen/space_16" />
+    <ProgressBar
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@id/room_ticket_loader"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/space_32"
+        android:indeterminateTint="@color/white" />
+</FrameLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:gravity="center_vertical"
+    android:id="@id/user_row_container"
+    android:background="?android:selectableItemBackground"
+    android:paddingTop="8.0dip"
+    android:paddingBottom="8.0dip"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="locale"
+    android:paddingStart="@dimen/ps__standard_spacing_16"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@id/profile_image"
+        android:layout_width="@dimen/ps__feed_row_height"
+        android:layout_height="@dimen/ps__feed_row_height"
+        android:scaleType="centerCrop"
+        android:contentDescription="@null" />
+    <tv.periscope.android.view.PsTextView
+        android:textSize="16.0sp"
+        android:textColor="@color/ps__superfan_rank_color"
+        android:id="@id/rank"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ps__standard_spacing_16"
+        android:layout_marginBottom="5.0dip"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/ps__standard_spacing_16"
+        android:layout_marginEnd="1.0dip"
+        android:layout_toEndOf="@id/profile_image" />
+    <tv.periscope.android.view.PsFollowButton
+        android:id="@id/follow"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="8.0dip"
+        android:layout_alignParentEnd="true"
+        style="@style/ps__IconButton" />
+    <tv.periscope.android.view.PsImageView
+        android:id="@id/muted"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ps__ic_mute_notifications"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/ps__accessibility_muted"
+        android:layout_marginEnd="1.0dip"
+        android:layout_toStartOf="@id/follow"
+        custom:ps__tint="@color/ps__bg_light_grey" />
+    <tv.periscope.android.view.PsTextView
+        android:textSize="16.0sp"
+        android:textColor="@color/ps__primary_text"
+        android:id="@id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/ps__standard_spacing_16"
+        android:layout_toStartOf="@id/muted"
+        android:layout_toEndOf="@id/rank" />
+</RelativeLayout>

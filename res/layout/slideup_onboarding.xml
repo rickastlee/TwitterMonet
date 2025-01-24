@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@id/slideup_onboarding"
+    android:background="@color/black_opacity_40"
+    android:visibility="gone"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/space_56"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_body"
+        android:textColor="@color/white"
+        android:layout_gravity="center|top"
+        android:id="@id/onboarding_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_16"
+        android:text="@string/immersive_player_onboarding_text"
+        android:importantForAccessibility="yes"
+        android:fontFamily="@string/sans_serif_thin" />
+</FrameLayout>

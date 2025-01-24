@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:gravity="end"
+        android:layout_gravity="end"
+        android:orientation="horizontal"
+        android:id="@id/button_bar"
+        android:background="?coreColorToolbarBg"
+        android:paddingTop="@dimen/space_12"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/space_12"
+        android:paddingEnd="@dimen/space_12">
+        <com.twitter.ui.components.button.legacy.TwitterButton
+            android:id="@id/button_bar_ads_companion"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/button_ads_companion"
+            android:layout_marginEnd="@dimen/space_8"
+            twitter:nodpiBaseIconName="ic_open_ads"
+            style="@style/TwitterButtonMediumRegular" />
+        <FrameLayout
+            android:id="@id/button_bar_overflow_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <com.twitter.ui.components.button.legacy.TwitterButton
+                android:id="@id/button_bar_overflow"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/more_options_a11y_action"
+                android:layout_marginEnd="@dimen/space_8"
+                twitter:iconSrc="?iconOverflow"
+                style="?profileBarButtonStyle" />
+        </FrameLayout>
+        <FrameLayout
+            android:id="@id/button_bar_tipjar_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <com.twitter.ui.components.button.legacy.TwitterButton
+                android:id="@id/button_bar_tipjar"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/button_tipjar"
+                android:layout_marginEnd="@dimen/space_8"
+                twitter:iconSrc="?iconMonetize"
+                style="?profileBarButtonStyle" />
+        </FrameLayout>
+        <FrameLayout
+            android:id="@id/button_bar_direct_message_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <com.twitter.ui.components.button.legacy.TwitterButton
+                android:id="@id/button_bar_direct_message"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/button_direct_message"
+                android:layout_marginEnd="@dimen/space_8"
+                twitter:iconSrc="?iconComposeDm"
+                style="?profileBarButtonStyle" />
+        </FrameLayout>
+        <FrameLayout
+            android:id="@id/button_bar_device_follow_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <com.twitter.ui.components.button.legacy.TwitterButton
+                android:id="@id/button_bar_device_follow_notifications"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/button_device_follow"
+                android:layout_marginEnd="@dimen/space_8"
+                twitter:iconSrc="?iconNotificationsFollow"
+                style="?profileBarButtonStyle" />
+            <com.twitter.ui.components.button.legacy.TwitterButton
+                android:id="@id/button_bar_device_following_notifications"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/button_device_following"
+                android:layout_marginEnd="@dimen/space_8"
+                twitter:iconSrc="?iconNotificationsFollowing"
+                style="?profileBarButtonStyle" />
+        </FrameLayout>
+        <FrameLayout
+            android:id="@id/button_bar_secondary_cta_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <com.twitter.ui.components.button.legacy.TwitterButton
+                android:id="@id/button_bar_super_follow_icon_only"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/space_8"
+                twitter:iconColor="@color/super_follows_solid"
+                twitter:iconSrc="?iconSuperFollow"
+                twitter:strokeColor="@color/super_follows_solid"
+                style="?profileBarButtonStyle" />
+            <com.twitter.ui.components.button.legacy.TwitterButton
+                android:id="@id/button_bar_following_icon_only"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/unfollow"
+                android:layout_marginEnd="@dimen/space_8"
+                twitter:iconSrc="?iconFollowing"
+                style="?profileBarButtonStyle" />
+        </FrameLayout>
+        <com.twitter.ui.components.button.legacy.TwitterButton
+            android:id="@id/button_bar_follow"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/follow"
+            twitter:iconSrc="?iconFollow"
+            style="?mediumToggledOffButtonStyle" />
+        <com.twitter.ui.components.button.legacy.TwitterButton
+            android:id="@id/button_bar_super_follow"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/super_follow"
+            twitter:fillColor="@color/super_follows_solid"
+            twitter:fillPressedColor="@color/plum_100"
+            twitter:labelColor="@color/white"
+            style="?mediumToggledOffButtonStyle" />
+        <com.twitter.ui.components.button.legacy.TwitterButton
+            android:id="@id/button_bar_following"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/unfollow"
+            twitter:iconSrc="?iconFollowing"
+            style="?mediumToggledOnButtonStyle" />
+        <com.twitter.ui.components.button.legacy.TwitterButton
+            android:id="@id/button_bar_super_following"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/super_following"
+            twitter:fillColor="@color/clear"
+            twitter:fillPressedColor="@color/plum_100"
+            twitter:labelColor="@color/super_follows_solid"
+            twitter:strokeColor="@color/super_follows_solid"
+            twitter:strokePressedColor="@color/super_follows_solid"
+            style="?mediumToggledOnButtonStyle" />
+        <com.twitter.ui.components.button.legacy.TwitterButton
+            android:id="@id/button_bar_pending"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pending"
+            twitter:iconSrc="?iconPending"
+            style="?profileEditButtonStyle" />
+        <com.twitter.ui.components.button.legacy.TwitterButton
+            android:id="@id/button_bar_autoblocked"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/autoblocked"
+            twitter:iconColor="@color/destructive_red"
+            twitter:iconSrc="?iconBlocked"
+            twitter:nodpiBaseIconName="ic_blocked"
+            style="@style/TwitterButtonMediumRegularRed" />
+        <com.twitter.ui.components.button.legacy.TwitterButton
+            android:id="@id/button_bar_blocked"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/unblock"
+            twitter:iconColor="@color/destructive_red"
+            twitter:iconSrc="?iconBlocked"
+            style="@style/TwitterButtonMediumRegularRed" />
+        <com.twitter.ui.components.button.legacy.TwitterButton
+            android:id="@id/button_edit_profile"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/edit_profile"
+            style="?profileEditButtonStyle" />
+    </LinearLayout>
+</merge>

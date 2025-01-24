@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_gravity="center_horizontal"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.ui.widget.LandscapeAwareAspectRatioFrameLayout
+        android:id="@id/lex_video_wrapper"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <include
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/video_container_host" />
+        <ViewStub
+            android:id="@id/error_view"
+            android:layout="@layout/video_error_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+    </com.twitter.ui.widget.LandscapeAwareAspectRatioFrameLayout>
+</LinearLayout>

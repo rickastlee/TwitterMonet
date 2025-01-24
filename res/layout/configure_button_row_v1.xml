@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:paddingBottom="@dimen/space_12"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    style="@style/ModuleOverviewHorizontalPadding"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.twitter.ui.components.button.compose.HorizonComposeButton
+        android:id="@id/feature_spotlight_button"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:text="@string/feature_a_spotlight"
+        android:layout_marginStart="@dimen/space_2"
+        android:layout_marginEnd="@dimen/space_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/TwitterButtonSmallPrimaryOutlined" />
+    <com.twitter.ui.components.button.compose.HorizonComposeButton
+        android:id="@id/disable_spotlight_button"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:text="@string/disable_featured_spotlight"
+        android:layout_marginStart="@dimen/space_2"
+        android:layout_marginEnd="@dimen/space_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/TwitterButtonSmallPrimaryOutlined" />
+</androidx.constraintlayout.widget.ConstraintLayout>

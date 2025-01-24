@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:fitsSystemWindows="true"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@id/appbar"
+        android:background="@color/clear"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@id/collapsing_toolbar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:contentScrim="@color/clear"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:titleEnabled="false">
+            <androidx.compose.ui.platform.ComposeView
+                android:id="@id/header_compose_view"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="?toolBarSize" />
+            <androidx.appcompat.widget.Toolbar
+                android:id="@id/toolbar"
+                android:layout_width="fill_parent"
+                android:layout_height="?toolBarSize"
+                android:layoutDirection="?forceLayoutDirection"
+                app:layout_collapseMode="pin"
+                style="?toolBarStyle" />
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+        <com.twitter.ui.navigation.HorizonTabLayout
+            android:id="@id/tab_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:tabMode="fixed"
+            style="@style/TabLayoutStyle.Main" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@id/view_pager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

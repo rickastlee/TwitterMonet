@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.ui.user.UserSocialView
+    android:id="@id/user_social_view"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    style="@style/ListRow.WhoToFollow"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.ui.socialproof.SocialBylineView
+        android:id="@id/social_byline"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@style/SocialProof.WhoToFollow" />
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/social_byline">
+        <include
+            layout="@layout/user_with_bio_follow_and_remove" />
+    </RelativeLayout>
+</com.twitter.ui.user.UserSocialView>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <include
+        layout="@layout/divider_no_margin" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@android:id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@style/PreferenceCategoryVDLHeaderStyle" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@android:id/summary"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@style/PreferenceCategoryVDLSummaryStyle" />
+</LinearLayout>

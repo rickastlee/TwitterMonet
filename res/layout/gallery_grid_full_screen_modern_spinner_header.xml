@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.gallerygrid.widget.GalleryGridSpinnerToolbar
+    android:id="@id/gallery_grid_toolbar"
+    android:background="?toolbarBackground"
+    android:layout_width="fill_parent"
+    android:layout_height="?toolBarSize"
+    android:minHeight="?toolBarSize"
+    style="@style/ToolBarStyle.WithDismiss"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

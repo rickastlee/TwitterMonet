@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <include
+        layout="@layout/av_chrome_subtitle_view" />
+    <RelativeLayout
+        android:gravity="center_vertical"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:id="@id/av_media_controller_controls"
+        android:background="@drawable/bg_dark_to_clear_gradient"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/live_event_video_hero_control_icon_expanded_size"
+        android:layoutDirection="ltr">
+        <ImageButton
+            android:id="@id/live_event_pause_button"
+            android:background="@null"
+            android:padding="@dimen/space_16"
+            android:visibility="gone"
+            android:layout_width="@dimen/live_event_video_hero_control_icon_expanded_size"
+            android:layout_height="@dimen/live_event_video_hero_control_icon_expanded_size"
+            android:foreground="@drawable/ripple_selector_oval"
+            android:src="@drawable/ic_vector_play_nomargins"
+            android:scaleType="fitCenter"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/play"
+            android:layout_marginEnd="-8.0dip"
+            android:layout_alignParentStart="true"
+            twitter:tint="@color/video_icon_tint" />
+        <LinearLayout
+            android:id="@id/badge_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/live_event_pause_button">
+            <include
+                android:id="@id/periscope_badge_container"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/periscope_card_badge_height"
+                android:layout_marginStart="@dimen/space_8"
+                android:layout_marginEnd="@dimen/space_8"
+                layout="@layout/periscope_badge" />
+            <include
+                android:id="@id/video_badge_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_8"
+                android:layout_marginEnd="@dimen/space_8"
+                layout="@layout/av_badge_view_count" />
+        </LinearLayout>
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_small"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:ellipsize="end"
+            android:id="@id/live_event_broadcaster"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/playback_controls"
+            android:layout_toEndOf="@id/badge_container"
+            twitter:antiSpoofing="true" />
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:id="@id/playback_controls"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true">
+            <com.twitter.ui.widget.ToggleImageButton
+                android:enabled="false"
+                android:id="@id/sound_button"
+                android:padding="@dimen/space_16"
+                android:layout_width="@dimen/live_event_video_hero_control_icon_expanded_size"
+                android:layout_height="@dimen/live_event_video_hero_control_icon_expanded_size"
+                android:foreground="@drawable/ripple_selector_oval"
+                android:src="@drawable/ic_sound"
+                android:scaleType="fitCenter"
+                android:contentDescription="@string/moments_mute"
+                android:layout_marginEnd="-8.0dip"
+                twitter:tintColorList="@color/ic_color_gallery_default" />
+            <com.twitter.ui.widget.TintableImageButton
+                android:id="@id/live_event_fullscreen_button"
+                android:background="@null"
+                android:padding="@dimen/space_16"
+                android:visibility="gone"
+                android:layout_width="@dimen/live_event_video_hero_control_icon_expanded_size"
+                android:layout_height="@dimen/live_event_video_hero_control_icon_expanded_size"
+                android:foreground="@drawable/ripple_selector_oval"
+                android:src="@drawable/ic_vector_media_expand"
+                android:scaleType="fitCenter"
+                android:contentDescription="@string/av_player_button_fullscreen"
+                android:layout_marginStart="-8.0dip"
+                twitter:tintColorList="@color/ic_color_gallery_default" />
+        </LinearLayout>
+    </RelativeLayout>
+    <ViewStub
+        android:layout_gravity="bottom"
+        android:id="@id/live_event_video_ad_controls"
+        android:layout="@layout/live_event_video_hero_ad_controls"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <ViewStub
+        android:id="@id/live_event_video_error"
+        android:layout="@layout/live_event_player_status_error"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+    <ViewStub
+        android:id="@id/live_event_video_retry"
+        android:layout="@layout/live_event_player_status_retry"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+    <tv.periscope.android.view.PsLoading
+        android:layout_gravity="top"
+        android:id="@id/live_event_loading_view"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="118.0dip"
+        twitter:ps__halfHeight="true" />
+    <ViewStub
+        android:id="@id/live_event_video_auto_advance"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+</FrameLayout>

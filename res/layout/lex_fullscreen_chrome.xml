@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tv.periscope.android.view.RootDragLayout
+    android:id="@id/root"
+    android:focusable="false"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    twitter:ps__actionSheet="@id/viewer_action_sheet"
+    twitter:ps__bottomDragChild="@id/menu_view_pager"
+    twitter:ps__dragChild="@id/drag_child"
+    twitter:ps__extrasActionSheet="@id/secondary_action_sheet"
+    twitter:ps__swipeDismissChild="@id/player_view"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <com.twitter.media.av.ui.ClosedCaptionsView
+        android:id="@id/closed_caption_view"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        twitter:viewType="fullscreen" />
+    <tv.periscope.android.view.PlayerView
+        android:id="@id/player_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+    <tv.periscope.android.view.PsTextView
+        android:textSize="@dimen/font_size_small"
+        android:textColor="@color/ps__white"
+        android:gravity="center"
+        android:layout_gravity="bottom|center"
+        android:id="@id/theatre_mode_entry_text"
+        android:paddingBottom="@dimen/ps__standard_spacing_24"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/ps__exit_theatre_mode_text"
+        android:paddingStart="@dimen/ps__standard_spacing_10"
+        android:paddingEnd="@dimen/ps__standard_spacing_10" />
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
+        android:id="@id/special_heart_cta_container"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="139.0dip">
+        <tv.periscope.android.view.PsImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ps__special_heart_cta" />
+        <tv.periscope.android.view.PsTextView
+            android:textSize="@dimen/font_size_large"
+            android:textStyle="bold"
+            android:textColor="@color/ps__white"
+            android:id="@id/special_heart_cta_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ps__standard_spacing_10" />
+        <tv.periscope.android.view.PsTextView
+            android:textSize="@dimen/font_size_small"
+            android:textColor="@color/ps__white"
+            android:id="@id/special_heart_cta_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ps__standard_spacing_5" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_gravity="end"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <tv.periscope.android.view.PsPillTextView
+            android:layout_gravity="end|center|top"
+            android:id="@id/tweak_video_info"
+            android:visibility="gone"
+            android:layout_marginTop="50.0dip"
+            android:layout_marginEnd="@dimen/ps__standard_spacing_16"
+            twitter:ps__pillColor="@color/ps__black_25"
+            style="@style/ps__Pill" />
+        <tv.periscope.android.view.PsPillTextView
+            android:layout_gravity="end|center|top"
+            android:id="@id/tweak_bitrate_info"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/ps__standard_spacing_16"
+            android:layout_marginEnd="@dimen/ps__standard_spacing_16"
+            twitter:ps__pillColor="@color/ps__black_25"
+            style="@style/ps__Pill" />
+        <tv.periscope.android.view.PsPillTextView
+            android:layout_gravity="end|center|top"
+            android:id="@id/tweak_latency_info"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/ps__standard_spacing_16"
+            android:layout_marginEnd="@dimen/ps__standard_spacing_16"
+            twitter:ps__pillColor="@color/ps__black_25"
+            style="@style/ps__Pill" />
+        <ViewStub
+            android:id="@id/acc_viewer_actions"
+            android:visibility="gone"
+            android:layout="@layout/ps__accessibility_viewer_actions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20.0dip" />
+    </LinearLayout>
+    <ViewStub
+        android:id="@id/hydra_guest_container"
+        android:layout="@layout/ps__hydra_guest_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ps__standard_spacing_40" />
+    <include
+        layout="@layout/ps__broadcast_title" />
+    <ViewStub
+        android:layout_gravity="center"
+        android:id="@id/broadcast_ended_overlay_stub"
+        android:visibility="gone"
+        android:layout="@layout/ps__broadcast_ended_overlay"
+        android:inflatedId="@id/broadcast_ended_overlay"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+    <tv.periscope.android.ui.user.UserPickerSheet
+        android:id="@id/user_picker_sheet"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+    <tv.periscope.android.view.ActionSheet
+        android:id="@id/viewer_action_sheet"
+        android:background="@null"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-100.0dip"
+        style="@style/ps__DefaultActionSheet" />
+    <tv.periscope.android.view.ActionSheet
+        android:theme="@style/ps__BroadcastActionSheet"
+        android:id="@id/secondary_action_sheet"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <tv.periscope.android.ui.broadcast.view.MenuViewPager
+        android:theme="@style/ps__BroadcastActionSheet"
+        android:id="@id/menu_view_pager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+    <tv.periscope.android.view.TweetSheet
+        android:id="@id/tweet_sheet"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <ViewStub
+        android:layout_gravity="center"
+        android:id="@id/copyright_violation_overlay_stub"
+        android:visibility="gone"
+        android:layout="@layout/ps__copyright_violation_overlay"
+        android:inflatedId="@id/copyright_violation_overlay"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+    <ViewStub
+        android:id="@id/broadcaster_survey_stub"
+        android:layout="@layout/ps__broadcaster_survey_sheet"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+</tv.periscope.android.view.RootDragLayout>

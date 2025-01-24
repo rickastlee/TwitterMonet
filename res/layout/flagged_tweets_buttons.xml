@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textStyle="bold"
+        android:textColor="@color/twitter_blue"
+        android:gravity="center"
+        android:id="@id/report_button"
+        android:background="?selectableItemBackground"
+        android:padding="@dimen/space_12"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/report_button" />
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/border_thickness"
+        layout="@layout/divider" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textStyle="bold"
+        android:textColor="@color/twitter_blue"
+        android:gravity="center"
+        android:id="@id/unflag_button"
+        android:background="?selectableItemBackground"
+        android:padding="@dimen/space_12"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/unflag_button" />
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/border_thickness"
+        layout="@layout/divider" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textStyle="bold"
+        android:textColor="@color/destructive_red"
+        android:gravity="center"
+        android:id="@id/block_button"
+        android:background="?selectableItemBackground"
+        android:padding="@dimen/space_12"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/block_button" />
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/border_thickness"
+        layout="@layout/divider" />
+</LinearLayout>

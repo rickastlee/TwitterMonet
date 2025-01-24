@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageButton
+    android:background="@color/clear"
+    android:padding="@dimen/space_12"
+    android:layout_width="@dimen/immersive_explore_curation_action_size"
+    android:layout_height="@dimen/immersive_explore_curation_action_size"
+    android:foreground="@drawable/ripple_selector_oval"
+    android:src="@drawable/ic_vector_media_playback_speed"
+    android:contentDescription="@string/immersive_video_playback_speed_option"
+    twitter:contentDescriptionOn="@string/immersive_video_playback_speed_option"
+    twitter:tint="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <tag
+        android:value="PlaybackSpeedOption"
+        android:id="@id/weaverComponent" />
+</ImageButton>

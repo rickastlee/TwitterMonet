@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_24"
+        android:importantForAccessibility="noHideDescendants"
+        android:outlineSpotShadowColor="?abstractColorText"
+        android:outlineAmbientShadowColor="?abstractColorText"
+        app:cardBackgroundColor="@color/clear"
+        app:cardCornerRadius="@dimen/space_12"
+        app:cardElevation="@dimen/space_4">
+        <ImageView
+            android:id="@id/card_background"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bg_vip_label"
+            android:contentDescription="@null" />
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_4"
+        android:importantForAccessibility="noHideDescendants"
+        android:layout_marginStart="@dimen/space_16"
+        android:layout_marginEnd="@dimen/space_16"
+        android:outlineSpotShadowColor="?abstractColorText"
+        android:outlineAmbientShadowColor="?abstractColorText"
+        app:cardBackgroundColor="@color/clear"
+        app:cardCornerRadius="@dimen/space_12"
+        app:cardElevation="@dimen/space_8">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:background="@drawable/bg_rounded_rect"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@id/tweet_dash"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/space_24"
+                android:layout_marginTop="@dimen/space_8"
+                android:layout_marginBottom="@dimen/space_16"
+                android:src="@drawable/ic_vip_tweet_text"
+                android:contentDescription="@null"
+                android:layout_marginEnd="@dimen/space_16"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/user_name"
+                app:layout_constraintTop_toBottomOf="@id/user_name" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@id/super_follow_badge"
+                android:layout_width="@dimen/font_size_normal"
+                android:layout_height="@dimen/font_size_normal"
+                android:src="@drawable/ic_vector_superfollow"
+                android:tint="@color/plum_500"
+                android:baselineAlignBottom="true"
+                android:layout_marginStart="@dimen/space_4"
+                app:layout_constraintBottom_toBottomOf="@id/user_name"
+                app:layout_constraintEnd_toStartOf="@id/user_handle"
+                app:layout_constraintStart_toEndOf="@id/user_name"
+                app:layout_constraintTop_toTopOf="@id/user_name" />
+            <com.twitter.media.ui.image.UserImageView
+                android:id="@id/user_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_16"
+                android:contentDescription="@null"
+                android:layout_marginStart="@dimen/space_24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:userImageSize="normal" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textSize="@dimen/font_size_small"
+                android:textColor="?coreColorSecondaryText"
+                android:ellipsize="end"
+                android:id="@id/user_handle"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_16"
+                android:maxLines="1"
+                android:layout_marginStart="@dimen/space_4"
+                android:layout_marginEnd="@dimen/space_16"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/super_follow_badge"
+                app:layout_constraintTop_toTopOf="parent" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textSize="@dimen/font_size_small"
+                android:textStyle="bold"
+                android:textColor="?coreColorPrimaryText"
+                android:ellipsize="end"
+                android:id="@id/user_name"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_16"
+                android:maxLines="1"
+                android:layout_marginStart="10.0dip"
+                app:antiSpoofing="true"
+                app:layout_constraintStart_toEndOf="@id/user_image"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</FrameLayout>

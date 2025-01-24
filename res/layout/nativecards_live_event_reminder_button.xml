@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:background="@drawable/border_top_gray"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <com.twitter.ui.components.button.legacy.ToggleTwitterButton
+        android:gravity="center"
+        android:orientation="vertical"
+        android:id="@id/nativecards_live_event_reminder_button"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        twitter:shouldToggleOnClick="true"
+        twitter:styleIdOff="@style/LiveEventReminderButton.Off"
+        twitter:styleIdOn="@style/LiveEventReminderButton.On"
+        twitter:textIdOff="@string/live_event_remind_me"
+        twitter:textIdOn="@string/live_event_remind_me_set"
+        twitter:toggleIconSize="@dimen/live_event_card_remind_me_button_height"
+        twitter:toggleIconSrc="?iconCheckmarkCircleFill"
+        style="@style/LiveEventReminderButton.Off" />
+</FrameLayout>

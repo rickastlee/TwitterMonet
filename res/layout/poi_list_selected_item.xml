@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="@color/twitter_blue"
+    style="@style/ListRow.PoiItem"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:gravity="center_vertical"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0">
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textColor="@color/white"
+            android:id="@id/poi_item_name"
+            android:layout_alignParentStart="true"
+            style="@style/PoiListElement.Text.Primary" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textColor="@color/white"
+            android:id="@id/poi_item_handle"
+            android:layout_alignBaseline="@id/poi_item_name"
+            android:layout_toEndOf="@id/poi_item_name"
+            style="@style/PoiListElement.Text.Secondary" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textColor="@color/white"
+            android:id="@id/poi_item_address"
+            android:layout_below="@id/poi_item_name"
+            android:layout_alignParentStart="true"
+            style="@style/PoiListElement.Text.Secondary" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textColor="@color/white"
+            android:id="@id/poi_item_distance"
+            android:layout_below="@id/poi_item_name"
+            android:layout_toEndOf="@id/poi_item_address"
+            style="@style/PoiListElement.Text.Secondary" />
+    </RelativeLayout>
+    <ImageView
+        android:id="@id/poi_deselect"
+        android:contentDescription="@string/delete"
+        style="@style/PoiListElement.Deselect" />
+</LinearLayout>

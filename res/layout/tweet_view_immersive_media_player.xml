@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    android:id="@id/tweet_view_constraint_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ViewStub
+        android:id="@id/video_container"
+        android:layout="@layout/tweet_immersive_video_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <tag
+            android:value="com.twitter.explore.immersive.ui.stub.VideoTweetViewStubDelegateBinder"
+            android:id="@id/viewBinder" />
+        <tag
+            android:value="com.twitter.tweetview.core.TweetViewViewModel"
+            android:id="@id/viewModel" />
+    </ViewStub>
+    <com.twitter.tweetview.core.TweetViewContentHostContainer
+        android:id="@id/card_media_tweet_container"
+        android:visibility="gone"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="?tweetViewTweetViewContentHostContainer">
+        <tag
+            android:value="ImmersiveContentHostContainer"
+            android:id="@id/weaverComponent" />
+    </com.twitter.tweetview.core.TweetViewContentHostContainer>
+    <ViewStub
+        android:id="@id/chrome_portrait"
+        android:layout="@layout/immersive_media_player_chrome_portrait"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <tag
+            android:value="ImmersiveChromePortraitViewStub"
+            android:id="@id/weaverComponent" />
+    </ViewStub>
+    <ViewStub
+        android:id="@id/chrome_landscape"
+        android:layout="@layout/immersive_media_player_chrome_landscape"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <tag
+            android:value="ImmersiveChromeLandscapeViewStub"
+            android:id="@id/weaverComponent" />
+    </ViewStub>
+    <ImageView
+        android:id="@id/playback_control_rewind"
+        android:visibility="invisible"
+        android:layout_width="@dimen/playback_control_size"
+        android:layout_height="@dimen/playback_control_size"
+        android:src="@drawable/ic_vector_rewind_white_tint"
+        android:importantForAccessibility="no"
+        android:layout_marginEnd="@dimen/space_28"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/playback_control_fast_forward"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <tag
+            android:value="PlaybackControlRewind"
+            android:id="@id/weaverComponent" />
+    </ImageView>
+    <ImageView
+        android:id="@id/playback_control_fast_forward"
+        android:visibility="invisible"
+        android:layout_width="@dimen/playback_control_size"
+        android:layout_height="@dimen/playback_control_size"
+        android:src="@drawable/ic_vector_fastforward_white_tint"
+        android:importantForAccessibility="no"
+        android:layout_marginStart="@dimen/space_28"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/playback_control_rewind"
+        app:layout_constraintTop_toTopOf="parent">
+        <tag
+            android:value="PlaybackControlForward"
+            android:id="@id/weaverComponent" />
+    </ImageView>
+    <tag
+        android:value="com.twitter.tweetview.core.TweetViewViewModel"
+        android:id="@id/viewModel" />
+    <tag
+        android:value="TweetViewImmersiveViewDelegateBinder"
+        android:id="@id/viewBinderNamed" />
+    <tag
+        android:value="com.twitter.tweetview.core.ui.TweetViewViewDelegateBinder"
+        android:id="@id/viewBinder" />
+</merge>

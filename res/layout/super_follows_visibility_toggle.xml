@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:id="@id/super_follows_visibility_module"
+    android:visibility="gone"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/space_32"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textStyle="bold"
+        android:id="@id/visibility_subtitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_8"
+        android:text="@string/super_follow_badge_subtitle"
+        app:fontFamily="?fontFamilyHeavy" />
+    <RelativeLayout
+        android:id="@id/visibility_switch_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_4"
+        android:layout_marginBottom="@dimen/space_12">
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_normal"
+            android:textColor="?coreColorSecondaryText"
+            android:id="@id/visibility_description"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/super_follow_badge_description"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/space_16"
+            android:layout_toStartOf="@id/visibility_toggle"
+            android:layout_alignParentStart="true" />
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@id/visibility_toggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textColor="@color/black"
+        android:id="@id/visibility_explanation"
+        android:background="@drawable/bg_privacy_toggle_explanation"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_12"
+        android:text="@string/super_follow_badge_explanation"
+        android:paddingHorizontal="@dimen/space_16"
+        android:paddingVertical="@dimen/space_12" />
+</LinearLayout>

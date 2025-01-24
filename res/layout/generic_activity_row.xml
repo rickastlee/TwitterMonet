@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.ui.view.GroupedRowView
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:id="@id/activity_row"
+        android:paddingTop="@dimen/activity_header_padding_top"
+        android:clipToPadding="false"
+        style="@style/ListRow.Activity">
+        <FrameLayout
+            android:id="@id/icon_container"
+            android:layout_width="?tweetViewUserImageSize"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/social_proof_container"
+            android:layout_marginEnd="@dimen/image_margin_end"
+            android:layout_alignParentStart="true">
+            <ImageView
+                android:layout_gravity="end|center|top"
+                android:id="@id/icon"
+                android:contentDescription="@null"
+                style="@style/ActivityIcon" />
+        </FrameLayout>
+        <FrameLayout
+            android:id="@id/social_proof_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/icon_container">
+            <ViewStub
+                android:id="@id/social_proof"
+                android:layout="@layout/generic_activity_social_proof"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </FrameLayout>
+        <FrameLayout
+            android:id="@id/caret_container"
+            android:paddingTop="@dimen/image_margin_top"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tweet_action_margin_vertical"
+            android:layout_alignTop="@id/icon_container"
+            android:layout_marginEnd="@dimen/tweet_action_margin_vertical"
+            android:layout_alignParentEnd="true">
+            <ViewStub
+                android:id="@id/caret"
+                android:layout="@layout/generic_activity_caret"
+                android:inflatedId="@id/caret_inflated"
+                style="@style/ModuleCaretIcon" />
+        </FrameLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@id/notification_content_layout_wrapper"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/social_proof_container"
+            android:layout_toEndOf="@id/icon_container">
+            <ViewStub
+                android:id="@id/face_pile"
+                android:layout="@layout/activity_face_pile"
+                android:inflatedId="@id/face_pile_inflated"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textSize="@dimen/font_size_normal"
+                android:textColor="?coreColorPrimaryText"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:id="@id/display_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="?activityIconHeight"
+                android:maxLines="4"
+                android:includeFontPadding="false" />
+            <ViewStub
+                android:id="@id/context"
+                android:layout="@layout/generic_activity_context"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ViewStub
+                android:id="@id/show_all_text"
+                android:layout="@layout/generic_activity_show_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <FrameLayout
+                android:id="@id/notification_unified_card_container"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/card_spacing_medium" />
+            <FrameLayout
+                android:id="@id/spaces_card"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/card_spacing_medium" />
+            <com.twitter.notifications.timeline.ui.NotificationAutoPlayableViewHost
+                android:id="@id/notification_media_container"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/card_spacing_medium" />
+            <ViewStub
+                android:id="@id/interstitial_view_stub"
+                android:layout="@layout/generic_activity_row_tombstone_view"
+                android:inflatedId="@id/interstitial_view"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/card_spacing_medium" />
+            <ViewStub
+                android:id="@id/notification_tweet_view_stub"
+                android:layout="@layout/generic_activity_row_tweet_view"
+                android:inflatedId="@id/notification_tweet_view"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/card_spacing_medium" />
+            <ViewStub
+                android:id="@id/tweet_inline_actions"
+                android:layout="@layout/async_inline_actions"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:layout_marginLeft="-10.0dip"
+                android:layout_marginBottom="-10.0dip"
+                android:importantForAccessibility="noHideDescendants">
+                <tag
+                    android:value="inline_action_view_stub"
+                    android:id="@id/viewBinderNamed" />
+                <tag
+                    android:value="com.twitter.tweetview.core.ui.TweetViewViewStubDelegateBinder"
+                    android:id="@id/viewBinder" />
+                <tag
+                    android:value="com.twitter.tweetview.core.TweetViewViewModel"
+                    android:id="@id/viewModel" />
+            </ViewStub>
+            <ViewStub
+                android:id="@id/notification_tweet_prompt_container_stub"
+                android:layout="@layout/tweet_row_view_prompt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/card_spacing_medium" />
+        </LinearLayout>
+    </RelativeLayout>
+</com.twitter.ui.view.GroupedRowView>

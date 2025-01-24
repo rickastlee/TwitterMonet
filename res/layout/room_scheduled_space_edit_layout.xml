@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_gravity="bottom"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/space_20"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingStart="@dimen/space_20"
+    android:paddingEnd="@dimen/space_20"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.twitter.core.ui.components.dialog.bottomsheet.GripperView
+        android:layout_gravity="center_horizontal"
+        android:id="@id/handle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_12">
+        <ImageView
+            android:layout_gravity="start|center"
+            android:id="@id/scheduled_space_edit_back_button"
+            android:padding="@dimen/space_2"
+            android:layout_width="@dimen/space_24"
+            android:layout_height="@dimen/space_24"
+            android:src="@drawable/ic_chevron_left"
+            android:contentDescription="@string/schedule_button_back" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_xlarge"
+            android:textStyle="bold"
+            android:textColor="?coreColorPrimaryText"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:id="@id/scheduled_space_edit_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/scheduled_space_edit_title" />
+    </FrameLayout>
+    <com.twitter.ui.widget.TwitterEditText
+        android:id="@id/scheduled_space_edit_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:inputType="text"
+        android:imeOptions="actionDone"
+        app:labelColor="?coreColorPrimaryText"
+        app:labelFontStyle="bold"
+        app:labelText="@string/scheduled_space_edit_name_field"
+        style="@style/TwitterEditText" />
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_8"
+        android:layout_marginBottom="@dimen/space_4"
+        layout="@layout/room_scheduled_space_edit_topics_viewstub" />
+    <com.twitter.ui.widget.TwitterEditText
+        android:id="@id/scheduled_space_edit_date"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:inputType="none"
+        app:labelColor="?coreColorPrimaryText"
+        app:labelFontStyle="bold"
+        app:labelText="@string/scheduled_space_edit_date_field"
+        style="@style/TwitterEditText" />
+    <com.twitter.ui.widget.TwitterEditText
+        android:id="@id/scheduled_space_edit_time"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:inputType="none"
+        app:labelColor="?coreColorPrimaryText"
+        app:labelFontStyle="bold"
+        app:labelText="@string/scheduled_space_edit_time_field"
+        style="@style/TwitterEditText" />
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:id="@id/recording_layout"
+        android:paddingTop="@dimen/space_12"
+        android:paddingBottom="@dimen/space_16"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_normal"
+            android:textStyle="bold"
+            android:textColor="?coreColorPrimaryText"
+            android:layout_gravity="center_horizontal"
+            android:id="@id/record_text"
+            android:paddingTop="@dimen/space_4"
+            android:paddingBottom="@dimen/space_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/record_space_toggle_text"
+            android:paddingEnd="@dimen/space_24"
+            android:layout_alignParentStart="true" />
+        <ImageView
+            android:layout_gravity="center_horizontal"
+            android:id="@id/recording_info"
+            android:paddingTop="@dimen/space_8"
+            android:paddingBottom="@dimen/space_8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_vector_information_circle"
+            android:layout_alignTop="@id/record_text"
+            android:layout_alignBottom="@id/record_text"
+            android:contentDescription="null"
+            android:layout_alignEnd="@id/record_text"
+            app:tint="@color/twitter_blue" />
+        <androidx.appcompat.widget.SwitchCompat
+            android:layout_gravity="center_horizontal"
+            android:id="@id/record_toggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/record_text"
+            android:layout_alignBottom="@id/record_text"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_small"
+        android:textColor="@color/gray_700_opacity_80"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_12"
+        android:text="@string/edit_space_subtext" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textColor="@color/white"
+        android:layout_gravity="center"
+        android:id="@id/scheduled_space_edit_save_button"
+        android:background="@drawable/rounded_rectangle_purple_gradient"
+        android:clickable="false"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_16"
+        android:foreground="@drawable/ripple_selector_rounded_rectangle"
+        android:text="@string/scheduled_space_edit_save_changes"
+        android:alpha="0.5"
+        style="@style/SpacesCustomButton" />
+    <com.twitter.ui.components.button.legacy.TwitterButton
+        android:textSize="@dimen/font_size_normal"
+        android:textStyle="bold"
+        android:textColor="@color/destructive_red"
+        android:id="@id/scheduled_space_edit_cancel_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_12"
+        android:text="@string/schedule_button_cancel"
+        style="@style/TwitterButtonLargeDestructiveText" />
+    <tag
+        android:value="RoomScheduledSpaceEdit"
+        android:id="@id/weaverComponent" />
+</LinearLayout>

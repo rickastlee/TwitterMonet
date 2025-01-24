@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.feature.subscriptions.settings.redesign.SettingsUpsellCardView
+    android:id="@id/setting_upsell_card"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/space_4"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

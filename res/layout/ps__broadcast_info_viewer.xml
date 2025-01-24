@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@id/broadcast_viewer_row_container"
+    android:background="?android:selectableItemBackground"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="locale"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@id/profile_image"
+        android:layout_width="@dimen/ps__avatar_size"
+        android:layout_height="@dimen/ps__avatar_size"
+        android:layout_marginTop="@dimen/ps__standard_spacing_16"
+        android:src="@drawable/ps__pyml_profile_image_placeholder"
+        android:layout_centerVertical="true"
+        android:contentDescription="@null"
+        android:layout_marginStart="@dimen/ps__standard_spacing_16" />
+    <tv.periscope.android.ui.love.HeartView
+        android:id="@id/baby_heart"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5.0dip"
+        android:layout_marginStart="40.0dip" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ps__standard_spacing_16"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/ps__standard_spacing_16"
+        android:layout_toEndOf="@id/profile_image">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <tv.periscope.android.view.UsernameBadgeView
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:id="@id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                custom:ps__usernameTextColor="@color/ps__white"
+                custom:ps__usernameTextSize="@dimen/font_size_normal" />
+        </LinearLayout>
+        <tv.periscope.android.view.PsTextView
+            android:textSize="14.0sp"
+            android:textColor="@color/ps__white_alpha_half"
+            android:id="@id/heart_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2.0dip" />
+    </LinearLayout>
+</RelativeLayout>

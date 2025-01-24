@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="horizontal"
+    android:paddingTop="@dimen/space_12"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:importantForAccessibility="no"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <tag
+        android:value="ConversationControls"
+        android:id="@id/weaverComponent" />
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@id/conversation_controls_context_icon"
+        android:background="@drawable/blue_circle_bg"
+        android:padding="@dimen/space_4"
+        android:visibility="gone"
+        android:layout_width="@dimen/space_20"
+        android:layout_height="@dimen/space_20"
+        android:importantForAccessibility="no"
+        android:layout_marginEnd="@dimen/space_4"
+        app:tint="@color/white" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_small"
+        android:textColor="@color/tweet_text_clickable_color"
+        android:layout_gravity="center"
+        android:id="@id/conversation_controls_context_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="@integer/double_lines" />
+</LinearLayout>

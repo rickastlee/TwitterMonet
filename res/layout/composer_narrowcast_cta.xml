@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <tag
+        android:value="com.twitter.composer.conversationcontrol.narrowcasting.ComposerNarrowcastCtaViewModel"
+        android:id="@id/viewModel" />
+    <tag
+        android:value="com.twitter.weaver.base.WeaverViewDelegateBinder"
+        android:id="@id/viewBinder" />
+    <tag
+        android:value="narrowcast_control"
+        android:id="@id/viewBinderNamed" />
+    <include
+        android:id="@id/conversation_controls_narrowcast_context_divider"
+        android:background="?coreColorSectionDivider"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/border_thickness"
+        layout="@layout/divider_no_margin" />
+    <CheckBox
+        android:textSize="@dimen/font_size_small"
+        android:textColor="?coreColorSecondaryText"
+        android:id="@id/conversation_controls_narrowcast_broadcast_all"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_8"
+        android:checked="false"
+        android:text="@string/composer_broadcast_to_followers"
+        android:layout_marginStart="10.0dip"
+        android:buttonTint="@color/narrowcast_broadcast_all_check_color" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:duplicateParentState="true"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/space_16"
+        android:paddingVertical="@dimen/space_8">
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:id="@id/conversation_controls_narrowcast_context_icon"
+            android:duplicateParentState="true"
+            android:layout_width="@dimen/space_16"
+            android:layout_height="@dimen/space_16"
+            android:src="@drawable/ic_vector_communities"
+            android:importantForAccessibility="no"
+            android:layout_marginEnd="@dimen/conversation_control_cta_icon_text_margin"
+            app:tint="?coreColorSecondaryText" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_small"
+            android:textColor="?coreColorSecondaryText"
+            android:layout_gravity="center_vertical"
+            android:id="@id/conversation_controls_narrowcast_context_text"
+            android:duplicateParentState="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

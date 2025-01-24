@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@id/appbar"
+            android:background="?coreColorToolbarBg"
+            android:fitsSystemWindows="true"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:elevation="0.0dip">
+            <FrameLayout
+                android:fitsSystemWindows="true"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="16.0dip"
+                app:layout_scrollFlags="scroll">
+                <include
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    layout="@layout/channel_details_header_view" />
+            </FrameLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+        <FrameLayout
+            android:id="@id/fragment_container"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <FrameLayout
+        android:id="@id/toolbar_container"
+        android:layout_width="fill_parent"
+        android:layout_height="?toolBarSize">
+        <include
+            layout="@layout/app_toolbar" />
+        <FrameLayout
+            android:id="@id/share_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <tag
+                android:value="ChannelsShare"
+                android:id="@id/weaverComponent" />
+        </FrameLayout>
+        <FrameLayout
+            android:id="@id/more_options_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <tag
+                android:value="ChannelsMoreOptions"
+                android:id="@id/weaverComponent" />
+        </FrameLayout>
+    </FrameLayout>
+    <tag
+        android:value="ChannelsDetails"
+        android:id="@id/weaverComponent" />
+</FrameLayout>

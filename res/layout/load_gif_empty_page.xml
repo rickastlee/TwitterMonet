@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:id="@id/gif_empty_page"
+    android:visibility="gone"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textColor="?abstractColorDeepGray"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14.0dip"
+        android:text="@string/found_media_empty_page_message" />
+    <com.twitter.ui.components.button.legacy.TwitterButton
+        android:textSize="@dimen/font_size_normal"
+        android:layout_gravity="center_horizontal"
+        android:id="@id/retry_another_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14.0dip"
+        android:text="@string/found_media_empty_page_retry"
+        android:paddingStart="16.0dip"
+        android:paddingEnd="16.0dip"
+        style="@style/TwitterButtonLargeRegular" />
+</LinearLayout>

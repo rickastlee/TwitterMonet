@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:paddingTop="@dimen/space_8"
+    android:paddingBottom="@dimen/space_8"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <com.twitter.ui.user.BaseUserView
+        android:id="@id/user_view"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:importantForAccessibility="no"
+        android:layout_marginEnd="@dimen/space_8"
+        twitter:layout_constraintEnd_toStartOf="@id/view_shop_button"
+        twitter:layout_constraintStart_toStartOf="parent"
+        twitter:layout_constraintTop_toTopOf="parent">
+        <com.twitter.media.ui.image.UserImageView
+            android:id="@id/user_image"
+            android:paddingTop="@dimen/space_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="@dimen/space_8"
+            android:layout_alignParentStart="true"
+            twitter:userImageSize="mini" />
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/user_image">
+            <com.twitter.ui.user.MultilineUsernameView
+                android:textSize="@dimen/font_size_normal"
+                android:textStyle="bold"
+                android:ellipsize="end"
+                android:id="@id/name_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="2" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textSize="@dimen/font_size_subtext_2"
+                android:textColor="?abstractColorDeepGray"
+                android:ellipsize="end"
+                android:id="@id/product_count_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="2" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <ImageView
+            android:id="@id/protected_item"
+            android:visibility="gone"
+            android:layout_width="0.0dip"
+            android:layout_height="0.0dip" />
+        <ImageView
+            android:id="@id/verified_item"
+            android:visibility="gone"
+            android:layout_width="0.0dip"
+            android:layout_height="0.0dip" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/screenname_item"
+            android:visibility="gone"
+            android:layout_width="0.0dip"
+            android:layout_height="0.0dip" />
+    </com.twitter.ui.user.BaseUserView>
+    <com.twitter.ui.components.button.legacy.TwitterButton
+        android:textSize="@dimen/font_size_subtext_1"
+        android:textStyle="bold"
+        android:id="@id/view_shop_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cta_view_shop"
+        twitter:labelMargin="0.0dip"
+        twitter:layout_constraintBottom_toBottomOf="parent"
+        twitter:layout_constraintEnd_toEndOf="parent"
+        twitter:layout_constraintTop_toTopOf="parent"
+        style="@style/TwitterButtonXSmallBrandText" />
+</androidx.constraintlayout.widget.ConstraintLayout>

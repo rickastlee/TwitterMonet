@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <include
+        layout="@layout/toolbar_container" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/space_16"
+        android:paddingVertical="@dimen/space_8">
+        <com.twitter.ui.components.button.compose.HorizonComposeButton
+            android:textSize="@dimen/font_size_large"
+            android:id="@id/log_in_button"
+            android:layout_width="fill_parent"
+            android:layout_height="32.0dip"
+            android:text="@string/button_log_in_text"
+            android:layout_weight="1.0"
+            android:paddingEnd="@dimen/space_8"
+            style="@style/TwitterButtonMediumPrimaryOutlined" />
+        <com.twitter.ui.components.button.compose.HorizonComposeButton
+            android:textSize="@dimen/font_size_large"
+            android:id="@id/sign_up_button"
+            android:layout_width="fill_parent"
+            android:layout_height="32.0dip"
+            android:text="@string/button_sign_up_text"
+            android:layout_weight="1.0"
+            android:paddingStart="@dimen/space_8"
+            style="@style/TwitterButtonMedium" />
+    </LinearLayout>
+    <com.twitter.ui.view.TwitterSafeDefaultsWebView
+        android:id="@id/webview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+</LinearLayout>

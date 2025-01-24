@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@id/card_container"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <com.twitter.card.CardMediaView
+        android:id="@id/media_container"
+        android:background="@drawable/nativecards_media_border_right"
+        android:layout_width="@dimen/card_wide_width"
+        android:layout_height="wrap_content"
+        android:paddingEnd="@dimen/border_thickness"
+        twitter:hideBottomDivider="true" />
+    <com.twitter.card.widget.StatsAndCtaView
+        android:id="@id/stats_and_cta_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/card_default_spacing"
+        android:layout_marginBottom="10.0dip"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="@dimen/card_horizontal_margin"
+        android:layout_marginEnd="@dimen/card_horizontal_margin"
+        android:layout_toEndOf="@id/media_container" />
+</RelativeLayout>

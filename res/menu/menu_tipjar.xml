@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:icon="@drawable/ic_bandcamp_icon"
+        android:id="@id/action_bandcamp"
+        android:title="@string/tipjar_send_bandcamp" />
+    <item
+        android:icon="@drawable/ic_cash_app_icon"
+        android:id="@id/action_cashapp"
+        android:title="@string/tipjar_send_cashapp" />
+    <item
+        android:icon="@drawable/ic_chipper_app_icon"
+        android:id="@id/action_chipper"
+        android:title="@string/tipjar_send_chipper" />
+    <item
+        android:icon="@drawable/ic_patreon_icon"
+        android:id="@id/action_patreon"
+        android:title="@string/tipjar_send_patreon" />
+    <item
+        android:icon="@drawable/ic_patreon_icon"
+        android:id="@id/action_paypal"
+        android:title="@string/tipjar_send_paypal" />
+    <item
+        android:icon="@drawable/ic_razorpay_icon"
+        android:id="@id/action_razorpay"
+        android:title="@string/tipjar_send_razorpay" />
+    <item
+        android:icon="@drawable/ic_venmo_logo"
+        android:id="@id/action_venmo"
+        android:title="@string/tipjar_send_venmo" />
+    <item
+        android:icon="@drawable/ic_wealthsimple_app_icon"
+        android:id="@id/action_wealthsimple"
+        android:title="@string/tipjar_send_wealthsimple" />
+</menu>

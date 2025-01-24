@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:background="@drawable/bg_rect_round"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:backgroundTint="@color/black_opacity_75"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@id/container_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <tag
+        android:value="com.twitter.transcription.ui.TranscriptionListViewModel"
+        android:id="@id/viewModel" />
+    <tag
+        android:value="com.twitter.weaver.base.WeaverViewDelegateBinder"
+        android:id="@id/viewBinder" />
+    <tag
+        android:value="TranscriptionList"
+        android:id="@id/viewBinderNamed" />
+</FrameLayout>

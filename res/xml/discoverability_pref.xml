@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <com.twitter.ui.widget.PreferenceTopCategory
+        android:title="@string/settings_category_discoverability_title">
+        <com.twitter.settings.widget.MultilineCheckBoxPreference
+            android:persistent="false"
+            android:title="@string/settings_email_disco_title"
+            android:key="discoverable_by_email" />
+        <com.twitter.settings.widget.MultilineCheckBoxPreference
+            android:persistent="false"
+            android:title="@string/settings_phone_disco_title"
+            android:key="discoverable_by_mobile_phone" />
+    </com.twitter.ui.widget.PreferenceTopCategory>
+    <PreferenceCategory
+        android:title="@string/contacts">
+        <com.twitter.settings.widget.LinkableCheckBoxPreference
+            android:title="@string/sync_addressbook_contacts"
+            android:key="upload_contacts"
+            android:summary="@string/upload_contacts_summary"
+            twitter:clickableUrl="@string/url_learn_more_about_addressbook_connection" />
+        <com.twitter.android.widget.DividerPreference />
+        <Preference
+            android:title="@string/remove_all_contacts"
+            android:key="upload_contacts_disconnect" />
+        <Preference
+            android:selectable="false"
+            android:summary="@string/upload_contacts_disconnect_summary" />
+    </PreferenceCategory>
+</PreferenceScreen>

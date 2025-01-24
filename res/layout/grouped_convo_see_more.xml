@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.ui.view.GroupedRowView
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/list_row_padding_vertical"
+        android:paddingStart="?timelineRowHorizontalPadding"
+        android:paddingEnd="?timelineRowHorizontalPadding">
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@id/connector"
+            android:layout_width="?tweetViewUserImageSize"
+            android:layout_height="fill_parent"
+            android:minHeight="@dimen/list_row_gap_min_height"
+            android:layout_centerVertical="true">
+            <Space
+                android:contentDescription="@null"
+                style="@style/ConversationHeader.Top" />
+            <include
+                layout="@layout/conversation_dots" />
+            <Space
+                android:visibility="invisible"
+                android:contentDescription="@null"
+                style="@style/ConversationHeader.Bottom" />
+        </LinearLayout>
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_normal"
+            android:textColor="?abstractColorLink"
+            android:ellipsize="end"
+            android:id="@id/content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/conversations_more_replies"
+            android:maxLines="2"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/list_row_padding_horizontal"
+            android:layout_toEndOf="@id/connector" />
+        <ProgressBar
+            android:id="@id/progress"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            style="?android:progressBarStyleSmall" />
+    </RelativeLayout>
+    <tag
+        android:value="ShowMoreCursor"
+        android:id="@id/weaverComponent" />
+</com.twitter.ui.view.GroupedRowView>

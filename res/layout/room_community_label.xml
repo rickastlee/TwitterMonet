@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="center"
+    android:background="@drawable/room_community_label_bg"
+    android:paddingTop="6.0dip"
+    android:paddingBottom="6.0dip"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:foreground="?selectableItemBackground"
+    android:paddingStart="10.0dip"
+    android:paddingEnd="10.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:id="@id/community_icon"
+        android:layout_width="@dimen/space_12"
+        android:layout_height="@dimen/space_12"
+        android:src="@drawable/ic_vector_communities"
+        android:importantForAccessibility="no" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_subtext_1"
+        android:textColor="?coreColorPrimaryText"
+        android:ellipsize="end"
+        android:id="@id/community_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:fontFamily="?fontFamilyMedium"
+        android:paddingStart="6.0dip" />
+</LinearLayout>

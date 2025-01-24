@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <tag
+            android:value="safety_education_prompt"
+            android:id="@id/weaverComponent" />
+        <ImageButton
+            android:id="@id/close_button"
+            android:background="@null"
+            android:padding="@dimen/space_12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:foreground="@drawable/ripple_selector_oval"
+            android:src="@drawable/ic_vector_close"
+            android:scaleType="center"
+            android:contentDescription="@string/back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="?coreColorPrimary" />
+        <androidx.constraintlayout.widget.Guideline
+            android:orientation="vertical"
+            android:id="@id/guideline_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_begin="@dimen/space_32" />
+        <androidx.constraintlayout.widget.Guideline
+            android:orientation="vertical"
+            android:id="@id/guideline_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_end="@dimen/space_32" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_title_3"
+            android:textStyle="bold"
+            android:id="@id/title"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:text="@string/safety_education_prompt_title"
+            android:importantForAccessibility="yes"
+            app:layout_constraintBottom_toTopOf="@id/subtitle"
+            app:layout_constraintEnd_toEndOf="@id/guideline_end"
+            app:layout_constraintStart_toStartOf="@id/guideline_start"
+            app:layout_constraintTop_toBottomOf="@id/close_button"
+            app:layout_constraintVertical_bias="0.3"
+            app:layout_constraintVertical_chainStyle="packed" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_body"
+            android:textColor="?textColorSecondary"
+            android:id="@id/subtitle"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_8"
+            android:text="@string/safety_education_prompt_subtitle"
+            android:importantForAccessibility="yes"
+            app:layout_constraintBottom_toTopOf="@id/mute_subheading"
+            app:layout_constraintEnd_toEndOf="@id/guideline_end"
+            app:layout_constraintStart_toStartOf="@id/guideline_start"
+            app:layout_constraintTop_toBottomOf="@id/title" />
+        <ImageView
+            android:id="@id/icon_mute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_vector_speaker_off"
+            android:scaleType="fitStart"
+            android:importantForAccessibility="no"
+            app:layout_constraintEnd_toStartOf="@id/mute_subheading"
+            app:layout_constraintStart_toStartOf="@id/guideline_start"
+            app:layout_constraintTop_toTopOf="@id/mute_subheading" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_headline_2"
+            android:textStyle="bold"
+            android:id="@id/mute_subheading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_28"
+            android:text="@string/safety_education_prompt_mute_subheading"
+            android:importantForAccessibility="yes"
+            android:layout_marginStart="@dimen/space_24"
+            app:layout_constraintBottom_toTopOf="@id/mute_description"
+            app:layout_constraintStart_toEndOf="@id/icon_mute"
+            app:layout_constraintTop_toBottomOf="@id/subtitle" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_subtext_1"
+            android:textColor="?textColorSecondary"
+            android:id="@id/mute_description"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_4"
+            android:text="@string/safety_education_prompt_mute_description"
+            android:importantForAccessibility="yes"
+            app:layout_constraintBottom_toTopOf="@id/unfollow_subheading"
+            app:layout_constraintEnd_toEndOf="@id/guideline_end"
+            app:layout_constraintStart_toStartOf="@id/mute_subheading"
+            app:layout_constraintTop_toBottomOf="@id/mute_subheading" />
+        <ImageView
+            android:id="@id/icon_unfollow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_vector_follow_close_stroke"
+            android:scaleType="fitStart"
+            android:importantForAccessibility="no"
+            android:layout_marginEnd="@dimen/space_32"
+            app:layout_constraintEnd_toStartOf="@id/unfollow_subheading"
+            app:layout_constraintStart_toStartOf="@id/guideline_start"
+            app:layout_constraintTop_toTopOf="@id/unfollow_subheading" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_headline_2"
+            android:textStyle="bold"
+            android:id="@id/unfollow_subheading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_28"
+            android:text="@string/safety_education_prompt_unfollow_subheading"
+            android:importantForAccessibility="yes"
+            android:layout_marginStart="@dimen/space_24"
+            app:layout_constraintBottom_toTopOf="@id/unfollow_description"
+            app:layout_constraintStart_toEndOf="@id/icon_unfollow"
+            app:layout_constraintTop_toBottomOf="@id/mute_description" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_subtext_1"
+            android:textColor="?textColorSecondary"
+            android:id="@id/unfollow_description"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_4"
+            android:text="@string/safety_education_prompt_unfollow_description"
+            android:importantForAccessibility="yes"
+            app:layout_constraintBottom_toTopOf="@id/block_subheading"
+            app:layout_constraintEnd_toEndOf="@id/guideline_end"
+            app:layout_constraintStart_toStartOf="@id/unfollow_subheading"
+            app:layout_constraintTop_toBottomOf="@id/unfollow_subheading" />
+        <ImageView
+            android:id="@id/icon_block"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_vector_no"
+            android:scaleType="fitStart"
+            android:importantForAccessibility="no"
+            android:layout_marginEnd="@dimen/space_32"
+            app:layout_constraintEnd_toStartOf="@id/block_subheading"
+            app:layout_constraintStart_toStartOf="@id/guideline_start"
+            app:layout_constraintTop_toTopOf="@id/block_subheading" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_headline_2"
+            android:textStyle="bold"
+            android:id="@id/block_subheading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_28"
+            android:text="@string/safety_education_prompt_block_subheading"
+            android:importantForAccessibility="yes"
+            android:layout_marginStart="@dimen/space_24"
+            app:layout_constraintBottom_toTopOf="@id/block_description"
+            app:layout_constraintStart_toEndOf="@id/icon_block"
+            app:layout_constraintTop_toBottomOf="@id/unfollow_description" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_subtext_1"
+            android:textColor="?textColorSecondary"
+            android:id="@id/block_description"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_4"
+            android:text="@string/safety_education_prompt_block_description"
+            android:importantForAccessibility="yes"
+            app:layout_constraintBottom_toTopOf="@id/report_subheading"
+            app:layout_constraintEnd_toEndOf="@id/guideline_end"
+            app:layout_constraintStart_toStartOf="@id/block_subheading"
+            app:layout_constraintTop_toBottomOf="@id/block_subheading" />
+        <ImageView
+            android:id="@id/icon_report"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_vector_flag"
+            android:scaleType="fitStart"
+            android:importantForAccessibility="no"
+            android:layout_marginEnd="@dimen/space_32"
+            app:layout_constraintEnd_toStartOf="@id/report_subheading"
+            app:layout_constraintStart_toStartOf="@id/guideline_start"
+            app:layout_constraintTop_toTopOf="@id/report_subheading" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_headline_2"
+            android:textStyle="bold"
+            android:id="@id/report_subheading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_28"
+            android:text="@string/safety_education_prompt_report_subheading"
+            android:importantForAccessibility="yes"
+            android:layout_marginStart="@dimen/space_24"
+            app:layout_constraintBottom_toTopOf="@id/report_description"
+            app:layout_constraintHorizontal_weight="5.0"
+            app:layout_constraintStart_toEndOf="@id/icon_report"
+            app:layout_constraintTop_toBottomOf="@id/block_description" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_subtext_1"
+            android:textColor="?textColorSecondary"
+            android:id="@id/report_description"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_4"
+            android:text="@string/safety_education_prompt_report_description"
+            android:importantForAccessibility="yes"
+            app:layout_constraintBottom_toTopOf="@id/done_button"
+            app:layout_constraintEnd_toEndOf="@id/guideline_end"
+            app:layout_constraintStart_toStartOf="@id/report_subheading"
+            app:layout_constraintTop_toBottomOf="@id/report_subheading" />
+        <com.twitter.ui.components.button.compose.HorizonComposeButton
+            android:textSize="@dimen/font_size_headline_2"
+            android:id="@id/done_button"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_28"
+            android:layout_marginBottom="@dimen/space_28"
+            android:text="@string/safety_education_prompt_cta"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/guideline_end"
+            app:layout_constraintStart_toStartOf="@id/guideline_start"
+            app:layout_constraintTop_toBottomOf="@id/report_description"
+            style="@style/TwitterButtonXLargePrimaryFilled" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

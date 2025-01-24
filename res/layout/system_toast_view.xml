@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@id/drag_swipe_container"
+    android:focusable="true"
+    android:layout_width="0.0dip"
+    android:layout_height="wrap_content"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.0"
+    style="@style/ToastView"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@id/icon_text_layout"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/toast_action_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/IconTextLayout">
+        <ImageView
+            android:id="@id/toast_icon"
+            android:layout_width="@dimen/space_24"
+            android:layout_height="@dimen/space_24"
+            android:importantForAccessibility="no"
+            app:layout_constraintEnd_toStartOf="@id/toast_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/ToastIcon" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/toast_title"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/toast_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/ToastTitle" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <com.twitter.ui.components.button.legacy.TwitterButton
+        android:id="@id/toast_action_button"
+        android:visibility="gone"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        style="@style/ToastActionButton" />
+</androidx.constraintlayout.widget.ConstraintLayout>

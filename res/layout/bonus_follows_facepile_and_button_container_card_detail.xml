@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@id/facepile_and_button_container"
+    android:visibility="gone"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@id/chevron_right"
+        android:padding="@dimen/bonus_follows_padding_half"
+        android:clickable="true"
+        android:layout_width="@dimen/space_28"
+        android:layout_height="@dimen/space_28"
+        android:src="@drawable/ic_vector_chevron_right"
+        android:contentDescription="?dismissString"
+        android:layout_marginStart="@dimen/bonus_follows_padding"
+        android:layout_marginEnd="@dimen/bonus_follows_padding"
+        twitter:layout_constraintBottom_toBottomOf="@id/detail_text"
+        twitter:layout_constraintEnd_toEndOf="parent"
+        twitter:layout_constraintStart_toEndOf="@id/detail_text"
+        twitter:layout_constraintTop_toTopOf="@id/detail_text"
+        twitter:tint="?dynamicColorGray700" />
+    <LinearLayout
+        android:gravity="start"
+        android:id="@id/button_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        twitter:layout_constraintBottom_toBottomOf="@id/face_pile_container"
+        twitter:layout_constraintEnd_toEndOf="parent"
+        twitter:layout_constraintStart_toEndOf="@id/face_pile_container"
+        twitter:layout_constraintTop_toTopOf="@id/face_pile_container">
+        <com.twitter.ui.components.button.legacy.ToggleTwitterButton
+            android:id="@id/follow_all_button"
+            android:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/follow_all"
+            android:contentDescription="@string/follow_all"
+            twitter:shouldToggleOnClick="false"
+            twitter:styleIdOff="?largeToggledOffButtonStyle"
+            twitter:styleIdOn="?largeToggledOnButtonStyle"
+            twitter:textIdOff="@string/follow_all"
+            twitter:textIdOn="@string/unfollow"
+            style="@style/TwitterButtonMediumBrandOutlined" />
+    </LinearLayout>
+    <LinearLayout
+        android:gravity="start"
+        android:orientation="horizontal"
+        android:id="@id/face_pile_container"
+        android:background="@drawable/ripple_pressed_selector_rectangle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/bonus_follows_padding"
+        twitter:layout_constraintEnd_toStartOf="@id/button_container"
+        twitter:layout_constraintHorizontal_chainStyle="spread_inside"
+        twitter:layout_constraintStart_toStartOf="parent"
+        twitter:layout_constraintTop_toBottomOf="@id/detail_text">
+        <ViewStub
+            android:layout_gravity="center_vertical"
+            android:id="@id/bonus_follows_face_pile_stub"
+            android:layout="@layout/bonus_follows_compact_facepile"
+            android:inflatedId="@id/bonus_follows_face_pile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/social_proof_facepile_margin" />
+    </LinearLayout>
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_body"
+        android:textStyle="bold"
+        android:textColor="?coreColorPrimaryText"
+        android:id="@id/detail_text"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:maxLines="@integer/double_lines"
+        twitter:layout_constraintEnd_toStartOf="@id/chevron_right"
+        twitter:layout_constraintStart_toStartOf="parent"
+        twitter:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

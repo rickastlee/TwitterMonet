@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="118.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <com.twitter.media.ui.fresco.FrescoMediaImageView
+        android:id="@id/cover_image_view"
+        android:layout_width="110.0dip"
+        android:layout_height="110.0dip"
+        android:layout_marginTop="@dimen/space_4"
+        android:layout_marginBottom="@dimen/space_4"
+        android:layout_marginStart="@dimen/space_4"
+        twitter:imageCornerRadius="@dimen/corner_radius_medium"
+        twitter:layout_constraintBottom_toBottomOf="parent"
+        twitter:layout_constraintStart_toStartOf="parent"
+        twitter:layout_constraintTop_toTopOf="parent"
+        twitter:scaleType="fill" />
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="horizontal"
+        android:id="@id/horizontal_50_percent_guideline"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        twitter:layout_constraintGuide_percent="0.5" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:gravity="bottom"
+        android:id="@id/product_title_text_view"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        android:layout_marginBottom="@dimen/space_2"
+        android:layout_marginStart="@dimen/space_12"
+        android:layout_marginEnd="@dimen/space_8"
+        twitter:layout_constraintBottom_toTopOf="@id/horizontal_50_percent_guideline"
+        twitter:layout_constraintEnd_toEndOf="parent"
+        twitter:layout_constraintStart_toEndOf="@id/cover_image_view"
+        twitter:layout_constraintTop_toTopOf="@id/cover_image_view"
+        style="@style/ProductDetailsComponentTitlesText" />
+    <com.twitter.ui.user.BaseUserView
+        android:id="@id/user_view"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_2"
+        android:layout_marginBottom="@dimen/space_4"
+        android:maxHeight="53.0dip"
+        android:layout_marginStart="@dimen/space_12"
+        android:layout_marginEnd="@dimen/space_8"
+        twitter:layout_constraintEnd_toEndOf="parent"
+        twitter:layout_constraintStart_toEndOf="@id/cover_image_view"
+        twitter:layout_constraintTop_toBottomOf="@id/horizontal_50_percent_guideline">
+        <com.twitter.media.ui.image.UserImageView
+            android:id="@id/user_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/space_4"
+            android:layout_toStartOf="@id/user_view"
+            twitter:userImageSize="pico" />
+        <com.twitter.ui.user.MultilineUsernameView
+            android:textSize="@dimen/font_size_small"
+            android:textStyle="normal"
+            android:textColor="?coreColorSecondaryText"
+            android:ellipsize="end"
+            android:id="@id/name_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/user_image"
+            style="?userInfoNameStyle" />
+        <ImageView
+            android:id="@id/protected_item"
+            android:visibility="gone"
+            android:layout_width="0.0dip"
+            android:layout_height="0.0dip" />
+        <ImageView
+            android:id="@id/verified_item"
+            android:visibility="gone"
+            android:layout_width="0.0dip"
+            android:layout_height="0.0dip" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/screenname_item"
+            android:visibility="gone"
+            android:layout_width="0.0dip"
+            android:layout_height="0.0dip" />
+    </com.twitter.ui.user.BaseUserView>
+</androidx.constraintlayout.widget.ConstraintLayout>

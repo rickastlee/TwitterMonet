@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:gravity="center_vertical"
+    android:id="@id/create_group_row_container"
+    android:background="?android:selectableItemBackground"
+    android:paddingTop="8.0dip"
+    android:paddingBottom="8.0dip"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="locale"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <tv.periscope.android.view.PsTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textStyle="bold"
+        android:textColor="@color/ps__blue"
+        android:gravity="center"
+        android:id="@id/plus_sign"
+        android:layout_width="@dimen/ps__feed_row_height"
+        android:layout_height="@dimen/ps__feed_row_height"
+        android:text="+"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/ps__standard_spacing_16" />
+    <tv.periscope.android.view.PsTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textColor="@color/ps__blue"
+        android:id="@id/create_channel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ps__channels_create"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/ps__standard_spacing_16"
+        android:layout_toEndOf="@id/plus_sign" />
+    <tv.periscope.android.view.PsTextView
+        android:textSize="12.0sp"
+        android:textColor="@color/ps__secondary_text"
+        android:ellipsize="end"
+        android:id="@id/channel_members"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ps__standard_spacing_16"
+        android:maxLines="1"
+        android:layout_below="@id/create_channel"
+        android:paddingEnd="@dimen/ps__standard_spacing_16"
+        android:layout_marginEnd="@dimen/ps__min_touch_target_size"
+        android:layout_alignStart="@id/create_channel" />
+</RelativeLayout>

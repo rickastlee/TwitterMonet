@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.card.common.preview.CardPreviewView
+    android:id="@id/card_preview"
+    android:visibility="gone"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/card_compose_preview_container_vertical_margin"
+    android:layout_marginBottom="@dimen/card_compose_preview_container_vertical_margin"
+    android:layout_marginStart="@dimen/card_compose_preview_container_horizontal_margin"
+    android:layout_marginEnd="@dimen/card_compose_preview_container_horizontal_margin"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.twitter.card.common.preview.CardPreviewContainer
+        android:id="@id/show_container"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_gravity="center|right|top"
+            android:id="@id/remove_card"
+            android:background="@drawable/card_preview_dismiss_bg"
+            android:layout_width="@dimen/card_compose_preview_remove_size"
+            android:layout_height="@dimen/card_compose_preview_remove_size"
+            android:layout_marginTop="@dimen/card_compose_preview_remove_margin"
+            android:layout_marginBottom="@dimen/card_compose_preview_remove_margin"
+            android:src="@drawable/ic_vector_close"
+            android:contentDescription="@string/remove_preview"
+            android:layout_marginStart="@dimen/card_compose_preview_remove_margin"
+            android:layout_marginEnd="@dimen/card_compose_preview_remove_margin"
+            app:tint="@color/white" />
+    </com.twitter.card.common.preview.CardPreviewContainer>
+    <com.twitter.card.common.preview.CardPreviewContainer
+        android:id="@id/hide_container"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_gravity="center|right|top"
+            android:background="@drawable/card_preview_dismiss_bg"
+            android:layout_width="@dimen/card_compose_preview_remove_size"
+            android:layout_height="@dimen/card_compose_preview_remove_size"
+            android:layout_marginTop="@dimen/card_compose_preview_remove_margin"
+            android:layout_marginBottom="@dimen/card_compose_preview_remove_margin"
+            android:src="@drawable/ic_vector_close"
+            android:contentDescription="@null"
+            android:layout_marginStart="@dimen/card_compose_preview_remove_margin"
+            android:layout_marginEnd="@dimen/card_compose_preview_remove_margin"
+            app:tint="@color/white" />
+    </com.twitter.card.common.preview.CardPreviewContainer>
+</com.twitter.card.common.preview.CardPreviewView>

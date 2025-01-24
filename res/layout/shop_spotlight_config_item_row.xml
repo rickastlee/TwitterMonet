@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="@drawable/ripple_pressed_selector_rectangle"
+    android:focusable="true"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/shop_spotlight_row_header"
+        android:focusable="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        style="@style/BusinessInfoHeaderText" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/shop_spotlight_row_subtext"
+        android:focusable="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/shop_spotlight_row_header"
+        style="@style/BusinessInfoDetailText" />
+    <View
+        android:id="@id/divider"
+        android:background="?abstractColorDivider"
+        android:focusable="false"
+        android:layout_width="0.0dip"
+        android:layout_height="@dimen/channels_item_separator_height"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/shop_spotlight_row_subtext" />
+</androidx.constraintlayout.widget.ConstraintLayout>

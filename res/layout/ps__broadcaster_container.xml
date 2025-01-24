@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@id/broadcaster_container"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="locale"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <tv.periscope.android.view.MaskImageView
+        android:id="@id/header_profile_image"
+        android:layout_width="@dimen/ps__avatar_size"
+        android:layout_height="@dimen/ps__avatar_size"
+        android:layout_marginTop="@dimen/ps__standard_spacing_16"
+        android:layout_marginStart="@dimen/ps__standard_spacing_16"
+        custom:ps__maskType="ps__oval" />
+    <tv.periscope.android.view.PsTextView
+        android:textSize="16.0sp"
+        android:textColor="@color/ps__white"
+        android:id="@id/broadcaster"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ps__standard_spacing_16"
+        android:layout_marginStart="@dimen/ps__standard_spacing_16"
+        android:layout_toEndOf="@id/header_profile_image" />
+    <tv.periscope.android.view.UsernameBadgeView
+        android:id="@id/broadcaster_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6.0dip"
+        android:layout_marginBottom="@dimen/ps__standard_spacing_16"
+        android:layout_below="@id/broadcaster"
+        android:layout_alignStart="@id/broadcaster"
+        custom:ps__usernameTextColor="@color/ps__white_alpha_half"
+        custom:ps__usernameTextSize="14.0sp" />
+</RelativeLayout>

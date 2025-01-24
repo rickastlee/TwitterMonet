@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:id="@id/room_audio_space_container"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/space_20"
+    android:paddingEnd="@dimen/space_20"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:id="@id/container_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_12">
+            <ImageView
+                android:layout_gravity="start|center"
+                android:id="@id/schedule_room_back_button"
+                android:padding="@dimen/space_2"
+                android:layout_width="@dimen/space_24"
+                android:layout_height="@dimen/space_24"
+                android:src="@drawable/ic_chevron_left"
+                android:contentDescription="@string/schedule_button_back" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textSize="@dimen/font_size_xlarge"
+                android:textStyle="bold"
+                android:textColor="?coreColorPrimaryText"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/schedule_audio_space_tickets_title" />
+        </FrameLayout>
+        <FrameLayout
+            android:background="@drawable/rounded_rectangle_grey"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_48"
+            android:layout_marginBottom="@dimen/space_12">
+            <com.twitter.ui.widget.TwitterEditText
+                android:textColor="?coreColorPrimaryText"
+                android:id="@id/schedule_space_volume_button"
+                android:background="@null"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                style="@style/SpacesCustomButton.WithIcon" />
+            <ImageView
+                android:layout_gravity="start|center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_vector_ticket"
+                android:contentDescription="@null"
+                android:layout_marginStart="@dimen/space_20"
+                app:tint="@color/gray_700" />
+        </FrameLayout>
+        <FrameLayout
+            android:background="@drawable/rounded_rectangle_grey"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_64">
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textColor="?coreColorPrimaryText"
+                android:id="@id/schedule_space_price_button"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                style="@style/SpacesCustomButton.WithIcon" />
+            <ImageView
+                android:layout_gravity="start|center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_vector_money"
+                android:contentDescription="@null"
+                android:layout_marginStart="@dimen/space_20"
+                app:tint="@color/gray_700" />
+        </FrameLayout>
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_xsmall"
+            android:textColor="?coreColorTextLink"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:id="@id/learn_more_ticketing_link"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_12"
+            android:text="@string/learn_more_about_tickets" />
+    </LinearLayout>
+    <include
+        android:id="@id/container_info"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_16"
+        layout="@layout/room_schedule_space_ticket_info" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textColor="@color/white"
+        android:layout_gravity="center"
+        android:id="@id/schedule_space_done_button"
+        android:background="@drawable/rounded_rectangle_purple_gradient"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_32"
+        android:text="@string/done"
+        style="@style/SpacesCustomButton" />
+</LinearLayout>

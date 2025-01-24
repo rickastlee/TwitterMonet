@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageButton
+    android:background="@color/ps__transparent"
+    android:padding="@dimen/space_12"
+    android:layout_width="@dimen/immersive_explore_curation_action_size"
+    android:layout_height="@dimen/immersive_explore_curation_action_size"
+    android:foreground="@drawable/ripple_selector_oval"
+    android:src="@drawable/ic_vector_media_dock"
+    android:contentDescription="@string/picture_in_picture"
+    twitter:contentDescriptionOn="@string/picture_in_picture"
+    twitter:tint="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <tag
+        android:value="com.twitter.explore.immersive.ui.pip.PictureInPictureViewDelegateBinder"
+        android:id="@id/viewBinder" />
+    <tag
+        android:value="com.twitter.tweetview.core.TweetViewViewModel"
+        android:id="@id/viewModel" />
+</ImageButton>

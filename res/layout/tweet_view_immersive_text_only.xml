@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    android:id="@id/tweet_view_constraint_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include
+        android:id="@id/tweet_header"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/explore_tab_gap"
+        android:layout_marginHorizontal="@dimen/tweet_avatar_start_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        layout="@layout/tweet_header_layout" />
+    <com.twitter.ui.widget.TextContentView
+        android:id="@id/tweet_content_text"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        android:layout_marginHorizontal="@dimen/tweet_avatar_start_margin"
+        android:layout_marginVertical="@dimen/space_8"
+        app:layout_constraintBottom_toTopOf="@id/tweet_inline_actions"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tweet_header"
+        style="?tweetViewContentStyle">
+        <tag
+            android:value="com.twitter.explore.immersive.ui.textcontent.ImmersiveTextContentTextOnlyTweetViewDelegateBinder"
+            android:id="@id/viewBinder" />
+        <tag
+            android:value="com.twitter.tweetview.core.TweetViewViewModel"
+            android:id="@id/viewModel" />
+    </com.twitter.ui.widget.TextContentView>
+    <com.twitter.ui.view.AsyncView
+        android:id="@id/tweet_inline_actions"
+        android:layout_width="0.0dip"
+        android:layout_height="@dimen/inline_action_height"
+        android:layout_marginBottom="@dimen/space_4"
+        android:importantForAccessibility="noHideDescendants"
+        android:layout_marginEnd="@dimen/space_32"
+        app:layout="@layout/gallery_inline_actions"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        <tag
+            android:value="InlineActionBar"
+            android:id="@id/weaverComponent" />
+    </com.twitter.ui.view.AsyncView>
+    <tag
+        android:value="com.twitter.tweetview.core.TweetViewViewModel"
+        android:id="@id/viewModel" />
+    <tag
+        android:value="TweetViewImmersiveViewDelegateBinder"
+        android:id="@id/viewBinderNamed" />
+    <tag
+        android:value="com.twitter.tweetview.core.ui.TweetViewViewDelegateBinder"
+        android:id="@id/viewBinder" />
+</merge>

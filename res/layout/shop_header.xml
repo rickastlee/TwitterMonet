@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.twitter.media.ui.fresco.FrescoMediaImageView
+        android:id="@id/profile_header_image"
+        android:background="@color/twitter_blue"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/shop_profile_header_height"
+        app:layout_constraintTop_toTopOf="parent"
+        app:scaleType="fill" />
+    <androidx.appcompat.widget.Toolbar
+        android:id="@id/toolbar"
+        android:background="@null"
+        android:layout_width="fill_parent"
+        android:layout_height="?toolBarSize"
+        android:layoutDirection="?forceLayoutDirection"
+        app:layout_constraintTop_toTopOf="@id/profile_header_image"
+        app:navigationIcon="@drawable/toolbar_up_with_bg_circle"
+        style="?statusToolbarStyle" />
+    <com.twitter.media.ui.image.UserImageView
+        android:id="@id/profile_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_16"
+        android:layout_marginBottom="@dimen/space_16"
+        android:layout_marginStart="@dimen/space_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_header_image"
+        app:userImageSize="small" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/profile_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_4"
+        android:layout_marginStart="@dimen/space_12"
+        app:layout_constraintBottom_toTopOf="@id/profile_username"
+        app:layout_constraintStart_toEndOf="@id/profile_image"
+        app:layout_constraintTop_toTopOf="@id/profile_image"
+        app:layout_constraintVertical_chainStyle="packed"
+        style="@style/ShopHeader.Primary" />
+    <ImageView
+        android:id="@id/profile_badge"
+        android:visibility="gone"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        android:contentDescription="@string/profile_badge_verified"
+        android:layout_marginStart="@dimen/space_4"
+        app:layout_constraintBottom_toBottomOf="@id/profile_name"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintStart_toEndOf="@id/profile_name"
+        app:layout_constraintTop_toTopOf="@id/profile_name" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/profile_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:antiSpoofing="true"
+        app:layout_constraintBottom_toBottomOf="@id/profile_image"
+        app:layout_constraintStart_toStartOf="@id/profile_name"
+        app:layout_constraintTop_toBottomOf="@id/profile_name"
+        style="@style/ShopHeader.Secondary" />
+</androidx.constraintlayout.widget.ConstraintLayout>

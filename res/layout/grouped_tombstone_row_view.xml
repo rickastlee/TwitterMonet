@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.ui.view.GroupedRowView
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <com.twitter.ui.widget.TombstoneView
+        android:id="@id/tombstone_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="?timelineRowHorizontalPadding"
+        android:paddingEnd="?timelineRowHorizontalPadding"
+        twitter:verticalConnector="@drawable/vertical_connector"
+        twitter:verticalConnectorMargin="@dimen/vertical_connector_margin"
+        twitter:verticalConnectorWidth="@dimen/vertical_connector_width" />
+    <tag
+        android:value="com.twitter.timeline.itembinder.ui.ShowMoreCursorPromptViewModel"
+        android:id="@id/viewModel" />
+    <tag
+        android:value="com.twitter.weaver.base.WeaverViewDelegateBinder"
+        android:id="@id/viewBinder" />
+    <tag
+        android:value="ShowMoreCursorPromptViewDelegate"
+        android:id="@id/viewBinderNamed" />
+</com.twitter.ui.view.GroupedRowView>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:background="@drawable/bg_settings_view"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:elevation="8.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.common.ui.settings.ConsumptionPreviewSettingsView
+        android:id="@id/previewMoreSettingsView"
+        android:layout_width="230.0dip"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/space_horizontal_size_small"
+        android:paddingEnd="@dimen/space_horizontal_size_small" />
+</FrameLayout>

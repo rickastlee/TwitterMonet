@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="event_header_image_height">48.0dip</dimen>
+    <dimen name="font_size_body">15.0sp</dimen>
+    <dimen name="font_size_headline_1">20.0sp</dimen>
+    <dimen name="font_size_headline_2">17.0sp</dimen>
+    <dimen name="font_size_jumbo">30.0sp</dimen>
+    <dimen name="font_size_large">18.0sp</dimen>
+    <dimen name="font_size_normal">15.0sp</dimen>
+    <dimen name="font_size_prompt_long_title">16.0sp</dimen>
+    <dimen name="font_size_small">13.0sp</dimen>
+    <dimen name="font_size_subtext_1">14.0sp</dimen>
+    <dimen name="font_size_subtext_2">13.0sp</dimen>
+    <dimen name="font_size_subtext_3">11.0sp</dimen>
+    <dimen name="font_size_title_1">34.0sp</dimen>
+    <dimen name="font_size_title_2">31.0sp</dimen>
+    <dimen name="font_size_title_3">26.0sp</dimen>
+    <dimen name="font_size_title_4">23.0sp</dimen>
+    <dimen name="font_size_xlarge">22.0sp</dimen>
+    <dimen name="font_size_xsmall">11.0sp</dimen>
+    <dimen name="font_size_xxsmall">9.0sp</dimen>
+    <dimen name="navigation_drawer_width">300.0dip</dimen>
+    <dimen name="prompt_long_message_header_margin">16.0dip</dimen>
+    <dimen name="line_height_body">20.0sp</dimen>
+    <dimen name="line_height_headline_1">24.0sp</dimen>
+    <dimen name="line_height_subtext_1">16.0sp</dimen>
+    <dimen name="line_height_subtext_2">16.0sp</dimen>
+    <dimen name="line_height_subtext_3">12.0sp</dimen>
+    <dimen name="line_height_title_1">40.0sp</dimen>
+    <dimen name="line_height_title_2">36.0sp</dimen>
+    <dimen name="line_height_title_3">32.0sp</dimen>
+    <dimen name="line_height_title_4">28.0sp</dimen>
+</resources>

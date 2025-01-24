@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@id/top_score_container"
+        android:layout_width="fill_parent"
+        android:layout_height="44.0dip"
+        android:layout_weight="1.0">
+        <com.twitter.media.ui.fresco.FrescoMediaImageView
+            android:id="@id/live_event_card_score_card_top_team_avatar"
+            android:padding="@dimen/space_4"
+            android:layout_width="40.0dip"
+            android:layout_height="fill_parent"
+            android:contentDescription="@null"
+            android:importantForAccessibility="no"
+            twitter:defaultDrawable="@drawable/ic_white_circle_opacity_40"
+            twitter:placeholderImage="@drawable/ic_white_circle_opacity_40"
+            twitter:roundingStrategy="circle"
+            twitter:scaleMode="fit" />
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:paddingEnd="@dimen/space_8">
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textSize="@dimen/font_size_normal"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:gravity="end"
+                android:id="@id/live_event_card_score_card_top_team_name"
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:importantForAccessibility="no" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textSize="@dimen/font_size_small"
+                android:textStyle="bold"
+                android:gravity="end"
+                android:id="@id/live_event_card_score_card_top_team_score"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:importantForAccessibility="no" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textSize="@dimen/font_size_small"
+                android:gravity="end"
+                android:id="@id/event_score_card_top_team_secondary_score"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@id/bottom_score_container"
+        android:layout_width="fill_parent"
+        android:layout_height="44.0dip"
+        android:layout_weight="1.0">
+        <com.twitter.media.ui.fresco.FrescoMediaImageView
+            android:id="@id/live_event_card_score_card_bottom_team_avatar"
+            android:padding="@dimen/space_4"
+            android:layout_width="40.0dip"
+            android:layout_height="fill_parent"
+            android:contentDescription="@null"
+            android:importantForAccessibility="no"
+            twitter:defaultDrawable="@drawable/ic_white_circle_opacity_40"
+            twitter:placeholderImage="@drawable/ic_white_circle_opacity_40"
+            twitter:roundingStrategy="circle"
+            twitter:scaleMode="fit" />
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:paddingEnd="@dimen/space_8">
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textSize="@dimen/font_size_normal"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:gravity="end"
+                android:id="@id/live_event_card_score_card_bottom_team_name"
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:importantForAccessibility="no" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textSize="@dimen/font_size_small"
+                android:textStyle="bold"
+                android:gravity="end"
+                android:id="@id/live_event_card_score_card_bottom_team_score"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:importantForAccessibility="no" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textSize="@dimen/font_size_small"
+                android:gravity="end"
+                android:id="@id/event_score_card_bottom_team_secondary_score"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

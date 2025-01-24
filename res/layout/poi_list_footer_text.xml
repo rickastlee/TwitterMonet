@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textAppearance="@style/PoiListElement.Text.Primary"
+        android:textColor="?abstractColorLink"
+        android:layout_gravity="center_vertical"
+        android:id="@id/poi_list_footer_text_view"
+        android:layout_width="fill_parent"
+        style="@style/ListRow.PoiItem" />
+    <include
+        android:layout_gravity="bottom"
+        android:id="@id/divider"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/border_thickness"
+        android:layout_marginStart="0.0dip"
+        android:layout_marginEnd="0.0dip"
+        layout="@layout/divider" />
+</merge>

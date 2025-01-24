@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference
+        android:summary="@string/settings_mute_block_item_detail"
+        android:order="10" />
+    <Preference
+        android:title="@string/block_list"
+        android:key="block_list"
+        android:order="20" />
+    <Preference
+        android:title="@string/mute_list"
+        android:key="mute_list"
+        android:order="30" />
+    <Preference
+        android:title="@string/settings_notifications_muted_keywords"
+        android:key="muted_keywords"
+        android:order="40" />
+    <Preference
+        android:title="@string/settings_muted_notifications"
+        android:key="muted_notifications"
+        android:order="50" />
+</PreferenceScreen>

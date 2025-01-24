@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <tv.periscope.android.ui.chat.ChatMessageRecyclerView
+        android:id="@id/chat_list"
+        android:background="@color/ps__transparent"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentStart="true" />
+    <FrameLayout
+        android:id="@id/unread_button_container"
+        android:padding="@dimen/ps__standard_spacing_10"
+        android:focusable="true"
+        android:visibility="gone"
+        android:clickable="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+        <tv.periscope.android.view.PsButton
+            android:textSize="12.0sp"
+            android:textStyle="bold"
+            android:textColor="@color/ps__white"
+            android:id="@id/unread_button"
+            android:background="@drawable/ps__bg_unread_button"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/ps__chat_unread_button_height"
+            android:minWidth="0.0dip"
+            android:minHeight="0.0dip"
+            android:drawablePadding="@dimen/ps__standard_spacing_5"
+            android:textAllCaps="false"
+            android:drawableStart="@drawable/ps__ic_caret_down_small"
+            android:paddingStart="@dimen/ps__standard_spacing_10"
+            android:paddingEnd="@dimen/ps__standard_spacing_10" />
+    </FrameLayout>
+    <tv.periscope.android.view.PsTextView
+        android:textSize="12.0sp"
+        android:textStyle="bold"
+        android:textColor="@color/ps__white"
+        android:gravity="center"
+        android:id="@id/scrollable_chat_prompt"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ps__scrollable_chats_prompt"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+</merge>

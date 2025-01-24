@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:scrollbars="none"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <tag
+        android:value="com.twitter.app.safetymode.implementation.SafetyModePreviewViewModel"
+        android:id="@id/viewModel" />
+    <tag
+        android:value="com.twitter.weaver.base.WeaverViewDelegateBinder"
+        android:id="@id/viewBinder" />
+    <tag
+        android:value="safety_mode_preview"
+        android:id="@id/viewBinderNamed" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:id="@id/back_button"
+            android:background="@null"
+            android:padding="@dimen/ocf_standard_spacing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:foreground="@drawable/ripple_selector_oval"
+            android:src="@drawable/ic_vector_close"
+            android:scaleType="center"
+            android:contentDescription="@string/button_exit"
+            app:tint="?coreColorPrimary" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_32"
+            android:layout_marginEnd="@dimen/space_32">
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/safety_mode_preview_image_height"
+                android:layout_marginBottom="@dimen/space_32"
+                android:src="@drawable/safety_mode_cone"
+                android:importantForAccessibility="no" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/safety_mode_preview_title"
+                style="@style/OcfTitle3Text" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@id/preview_flagged_accounts_container"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <com.twitter.ui.widget.FacepileView
+                    android:id="@id/facepile"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/facepile_height"
+                    android:layout_marginTop="@dimen/space_16"
+                    android:layout_marginBottom="@dimen/space_8" />
+                <com.twitter.ui.components.text.legacy.TypefacesTextView
+                    android:id="@id/flagged_accounts_description"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/space_8"
+                    style="@style/OcfSubtext2Text" />
+                <com.twitter.ui.components.text.legacy.TypefacesTextView
+                    android:textStyle="bold"
+                    android:textColor="@color/twitter_blue"
+                    android:id="@id/preview_flagged_accounts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/review_flagged_accounts"
+                    style="@style/OcfSubtext2Text" />
+            </LinearLayout>
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textStyle="bold"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_48"
+                android:layout_marginBottom="@dimen/space_16"
+                android:text="@string/safety_mode_box_title"
+                style="@style/OcfHeadline1Text" />
+            <include
+                layout="@layout/safety_mode_toggle" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:id="@id/more_info_button"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/space_48"
+                android:text="@string/safety_mode_more_info" />
+            <com.twitter.ui.components.button.compose.HorizonComposeButton
+                android:id="@id/done_button"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/space_32"
+                android:text="@string/done"
+                style="@style/TwitterButtonXLargePrimaryFilled" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/space_8"
+                android:text="@string/safety_mode_emergency_services"
+                style="@style/OcfSubtext2Text" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

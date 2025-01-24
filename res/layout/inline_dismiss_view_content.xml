@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ProgressBar
+        android:id="@id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="confirmation_text,undo_feedback" />
+    <androidx.constraintlayout.widget.Group
+        android:id="@id/confirmation_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="confirmation_text,feedback_items,border" />
+    <View
+        android:id="@id/border"
+        android:background="@drawable/inline_dismiss_background"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        app:layout_constraintBottom_toBottomOf="@id/feedback_items"
+        app:layout_constraintEnd_toEndOf="@id/undo_feedback"
+        app:layout_constraintStart_toStartOf="@id/confirmation_text"
+        app:layout_constraintTop_toTopOf="@id/confirmation_text" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/undo_feedback"
+        android:padding="@dimen/inline_dismiss_item_padding"
+        android:focusable="true"
+        android:clickable="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/inline_dismiss_undo"
+        android:contentDescription="@string/inline_dismiss_undo"
+        android:layout_marginStart="@dimen/inline_dismiss_undo_inside_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/confirmation_text"
+        style="@style/InlineDismissUndoButton" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/confirmation_text"
+        android:paddingTop="@dimen/inline_dismiss_item_padding"
+        android:paddingBottom="@dimen/inline_dismiss_item_padding"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/inline_dismiss_item_padding"
+        app:layout_constraintEnd_toStartOf="@id/undo_feedback"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/InlineDismissConfirmationText" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@id/feedback_items"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/inline_dismiss_divider"
+        android:showDividers="beginning|middle"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barrier" />
+</merge>

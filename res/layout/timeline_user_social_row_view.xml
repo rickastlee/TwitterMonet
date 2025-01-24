@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.ui.user.UserSocialView
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    style="@style/ListRow.WhoToFollow"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:id="@id/social_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+        <com.twitter.ui.socialproof.SocialBylineView
+            android:id="@id/social_byline"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/SocialProof.WhoToFollow" />
+    </RelativeLayout>
+    <com.twitter.media.ui.image.UserImageView
+        android:id="@id/user_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/social_container"
+        android:contentDescription="@null"
+        android:layout_marginEnd="@dimen/image_margin_end"
+        android:layout_alignParentStart="true"
+        twitter:singleImageView="true" />
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:id="@id/action_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/social_container"
+        android:layout_centerVertical="false"
+        android:layout_alignParentEnd="true">
+        <com.twitter.ui.widget.TintableImageView
+            android:id="@id/muted_item"
+            android:paddingLeft="@dimen/btn_follow_padding_horiz"
+            android:paddingRight="@dimen/btn_follow_padding_horiz"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="?iconMute"
+            android:contentDescription="@null"
+            twitter:tintColorList="@color/block_mute_icon_tint" />
+        <com.twitter.ui.widget.TintableImageView
+            android:id="@id/curation_action_item"
+            android:background="?selectableItemBackgroundBorderless"
+            android:padding="@dimen/space_8"
+            android:visibility="gone"
+            android:layout_width="@dimen/curation_action_size"
+            android:layout_height="@dimen/curation_action_size"
+            android:src="@drawable/ic_vector_overflow"
+            android:scaleType="fitCenter"
+            twitter:tint="?coreColorCaret" />
+        <FrameLayout
+            android:id="@id/follow_button_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <com.twitter.ui.components.button.legacy.ToggleTwitterButton
+                android:id="@id/follow_button"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/follow"
+                android:height="@dimen/user_follow_btn_min_height"
+                android:contentDescription="@string/are_following"
+                twitter:iconSize="@dimen/follow_button_icon_size"
+                twitter:iconSrc="?iconFollow"
+                twitter:shouldToggleOnClick="false"
+                twitter:styleIdOff="?mediumToggledOffButtonStyle"
+                twitter:styleIdOn="?mediumToggledOnButtonStyle"
+                twitter:toggleIconSize="@dimen/follow_button_icon_size"
+                twitter:toggleIconSrc="?iconFollowing"
+                style="@style/TwitterButtonMediumBrandOutlined" />
+            <com.twitter.ui.components.button.legacy.TwitterButton
+                android:id="@id/pending_button"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pending"
+                twitter:iconSrc="?iconPending"
+                style="@style/TwitterButtonMediumRegular" />
+            <com.twitter.ui.components.button.legacy.TwitterButton
+                android:id="@id/block_button_twitter_button"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/unblock"
+                twitter:iconSrc="?iconBlocked"
+                style="@style/TwitterButtonMediumRegularRedFilled" />
+            <com.twitter.ui.components.button.legacy.TwitterButton
+                android:id="@id/autoblock_button"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/autoblocked"
+                twitter:iconSrc="?iconBlocked"
+                style="@style/TwitterButtonMediumRegularRedFilled" />
+            <com.twitter.ui.components.button.legacy.TwitterButton
+                android:id="@id/subscribe_button"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/super_follow"
+                style="@style/TwitterButtonMediumPrimaryFilled" />
+        </FrameLayout>
+        <com.twitter.ui.widget.TintableImageView
+            android:gravity="center_vertical"
+            android:id="@id/dismiss"
+            android:padding="@dimen/dismiss_button_padding"
+            android:visibility="gone"
+            android:layout_width="@dimen/dismiss_button_size"
+            android:layout_height="@dimen/dismiss_button_size"
+            android:layout_marginStart="8.0dip"
+            style="@style/InlineDismissStyle" />
+        <com.twitter.ui.widget.TintableImageView
+            android:gravity="center_vertical"
+            android:id="@id/dismiss_center_large"
+            android:padding="@dimen/dismiss_button_padding"
+            android:visibility="gone"
+            android:layout_width="@dimen/large_dismiss_button_size"
+            android:layout_height="@dimen/large_dismiss_button_size"
+            android:layout_marginStart="8.0dip"
+            style="@style/InlineDismissStyle" />
+    </LinearLayout>
+    <include
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/verified_icon_intrinsic_height"
+        android:layout_below="@id/social_container"
+        android:layout_toStartOf="@id/action_layout"
+        android:layout_toEndOf="@id/user_image"
+        layout="@layout/user_info_name" />
+    <LinearLayout
+        android:gravity="left"
+        android:orientation="vertical"
+        android:id="@id/screenname_profile_items"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name_layout"
+        android:layout_toEndOf="@id/user_image">
+        <com.twitter.ui.widget.UnpaddedTypefacesTextView
+            android:layout_gravity="start"
+            android:id="@id/screenname_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/manual_name_username_padding"
+            android:maxLines="1"
+            style="?userWithBioScreenNameStyle" />
+        <com.twitter.ui.user.UserLabelView
+            android:id="@id/user_label_view"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_2"
+            style="@style/UserLabelView" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/profile_description_item"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4.0sp"
+            android:lineSpacingExtra="2.0sp"
+            style="?userWithBioDescriptionStyle" />
+    </LinearLayout>
+    <com.twitter.ui.widget.BadgeView
+        android:id="@id/promoted"
+        android:visibility="gone"
+        android:layout_below="@id/screenname_profile_items"
+        android:layout_toEndOf="@id/user_image"
+        style="@style/Promoted.User" />
+</com.twitter.ui.user.UserSocialView>

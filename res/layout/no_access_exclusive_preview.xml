@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@id/no_access_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_jumbo"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:id="@id/num_participants"
+        android:background="@drawable/bg_circle_action_icon_gray_50"
+        android:visibility="gone"
+        android:layout_width="@dimen/super_follower_user_image_size"
+        android:layout_height="@dimen/super_follower_user_image_size"
+        custom:layout_constraintBottom_toBottomOf="@id/creator_host_image"
+        custom:layout_constraintStart_toStartOf="@id/overlap"
+        custom:layout_constraintTop_toTopOf="@id/creator_host_image" />
+    <Space
+        android:id="@id/overlap"
+        android:visibility="gone"
+        android:layout_width="@dimen/space_16"
+        android:layout_height="wrap_content"
+        custom:layout_constraintBottom_toBottomOf="parent"
+        custom:layout_constraintEnd_toEndOf="parent"
+        custom:layout_constraintStart_toStartOf="parent"
+        custom:layout_constraintTop_toTopOf="parent" />
+    <com.twitter.media.ui.image.UserImageView
+        android:id="@id/creator_host_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_16"
+        android:layout_marginBottom="@dimen/space_16"
+        custom:layout_constraintBottom_toBottomOf="parent"
+        custom:layout_constraintEnd_toEndOf="@id/overlap"
+        custom:layout_constraintTop_toTopOf="parent"
+        custom:userImageSize="@dimen/super_follower_user_image_size" />
+    <tag
+        android:value="NoAccessExclusivePreview"
+        android:id="@id/weaverComponent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

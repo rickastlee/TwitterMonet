@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.ui.components.button.legacy.ToggleTwitterButton
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/live_follow"
+    android:layout_marginEnd="@dimen/profile_button_margin"
+    twitter:iconSize="@dimen/follow_button_icon_size"
+    twitter:styleIdOff="?smallToggledOffButtonStyle"
+    twitter:styleIdOn="?smallToggledOnButtonStyle"
+    twitter:toggleIconSize="@dimen/follow_button_icon_size"
+    style="@style/TwitterButtonLargeBrandOutlined"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto" />

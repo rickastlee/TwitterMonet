@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@id/broadcast_tip_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8.0dip"
+        android:layout_marginBottom="8.0dip"
+        android:src="@drawable/tip_lightbulb"
+        android:contentDescription="@null"
+        android:layout_marginStart="8.0dip" />
+    <FrameLayout
+        android:id="@id/broadcast_tip_close"
+        android:visibility="gone"
+        android:layout_width="@dimen/ps__btn_min_height"
+        android:layout_height="@dimen/ps__btn_min_height"
+        android:layout_alignParentEnd="true">
+        <tv.periscope.android.view.PsImageView
+            android:layout_gravity="end|center|top"
+            android:layout_width="@dimen/ps__broadcast_tip_btn_close"
+            android:layout_height="@dimen/ps__broadcast_tip_btn_close"
+            android:layout_marginTop="8.0dip"
+            android:src="@drawable/ps__ic_close"
+            android:scaleType="fitXY"
+            android:layout_marginEnd="8.0dip"
+            custom:ps__tint="@color/ps__bg_blue" />
+    </FrameLayout>
+    <tv.periscope.android.view.PsTextView
+        android:textSize="14.0sp"
+        android:textColor="@color/ps__primary_text"
+        android:id="@id/broadcast_tip_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8.0dip"
+        android:layout_marginBottom="8.0dip"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="8.0dip"
+        android:layout_marginEnd="8.0dip"
+        android:layout_toStartOf="@id/broadcast_tip_close"
+        android:layout_toEndOf="@id/broadcast_tip_image" />
+</merge>

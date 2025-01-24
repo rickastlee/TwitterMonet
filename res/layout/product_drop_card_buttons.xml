@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.ui.components.button.legacy.TwitterButton
+        android:id="@id/subscribe_button"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/remind_me"
+        style="@style/TwitterButtonMediumPrimaryFilled" />
+    <com.twitter.ui.components.button.legacy.TwitterButton
+        android:icon="@drawable/ic_vector_checkmark_circle_fill"
+        android:id="@id/unsubscribe_button"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/reminder_set"
+        style="@style/TwitterButtonMediumPrimaryOutlined" />
+    <com.twitter.ui.components.button.legacy.TwitterButton
+        android:id="@id/shop_on_website_button"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/shop_on_website"
+        style="@style/TwitterButtonMediumPrimaryFilled" />
+</FrameLayout>

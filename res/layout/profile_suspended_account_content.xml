@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_xlarge"
+        android:textStyle="bold"
+        android:textColor="?coreColorPrimaryText"
+        android:gravity="center"
+        android:id="@id/suspended_account_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/block_warning_line_space"
+        android:text="@string/profile_suspended_account_title" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textStyle="normal"
+        android:textColor="?coreColorSecondaryText"
+        android:gravity="center"
+        android:id="@id/suspended_account_message"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+</merge>

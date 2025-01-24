@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:icon="?toolbarFilterIcon"
+        android:id="@id/menu_time_window_filter"
+        android:title="@string/top_articles_time_window_menu_item_title"
+        android:showAsAction="never"
+        app:showAsAction="ifRoom" />
+</menu>

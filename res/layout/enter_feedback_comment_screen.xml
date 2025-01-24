@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="@drawable/border_top_bottom_gray"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/feedback_input_screen_header_height">
+        <ImageView
+            android:id="@id/back_button"
+            android:background="@drawable/bg_nav_item"
+            android:layout_width="@dimen/feedback_input_screen_back_button_width"
+            android:layout_height="fill_parent"
+            android:src="?toolbarDismissIcon"
+            android:scaleType="center"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/button_toolbar_back"
+            android:paddingEnd="@dimen/feedback_input_screen_back_button_padding_right"
+            android:layout_alignParentStart="true"
+            app:tint="?coreColorPrimaryText" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_jumbo"
+            android:textColor="?coreColorPrimaryText"
+            android:gravity="center_vertical"
+            android:id="@id/name_item"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="@string/feedback_add_comment"
+            android:layout_toEndOf="@id/back_button" />
+    </RelativeLayout>
+    <EditText
+        android:textSize="@dimen/font_size_large"
+        android:textColor="?coreColorPrimaryText"
+        android:textColorHint="?coreColorSecondaryText"
+        android:gravity="center|left|top"
+        android:id="@id/feedback_comment"
+        android:background="@drawable/border_bottom_gray"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_marginTop="@dimen/feedback_input_screen_comment_text_top_margin"
+        android:hint="@string/feedback_add_comment_hint_format"
+        android:layout_weight="1.0"
+        android:lineSpacingMultiplier="1.2"
+        android:inputType="textAutoCorrect|textCapSentences|textMultiLine"
+        android:imeOptions="flagNoEnterAction"
+        android:fontFamily="?fontFamilyLight"
+        android:paddingStart="@dimen/feedback_input_screen_comment_text_left_right_padding"
+        android:paddingEnd="@dimen/feedback_input_screen_comment_text_left_right_padding" />
+    <com.twitter.ui.components.button.legacy.TwitterButton
+        android:textSize="@dimen/feedback_card_medium_text_size"
+        android:layout_gravity="bottom"
+        android:id="@id/add_feedback_comment_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/feedback_input_screen_comment_button_top_bottom_margin"
+        android:layout_marginBottom="@dimen/feedback_input_screen_comment_button_top_bottom_margin"
+        android:text="@string/feedback_send_to"
+        android:layout_marginStart="@dimen/feedback_input_screen_comment_button_left_right_margin"
+        android:layout_marginEnd="@dimen/feedback_input_screen_comment_button_left_right_margin"
+        style="@style/TwitterButtonMediumBrandFilled" />
+</LinearLayout>

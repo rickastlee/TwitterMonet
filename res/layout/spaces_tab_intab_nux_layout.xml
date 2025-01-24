@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto">
+    <ImageButton
+        android:id="@id/spaces_tab_intab_nux_close"
+        android:background="@drawable/bg_oval"
+        android:layout_width="@dimen/spaces_in_tab_welcome_nux_close_button_size_dp"
+        android:layout_height="@dimen/spaces_in_tab_welcome_nux_close_button_size_dp"
+        android:layout_marginTop="@dimen/space_20"
+        android:foreground="@drawable/ripple_selector_oval"
+        android:src="@drawable/ic_vector_close"
+        android:layout_alignParentTop="true"
+        android:contentDescription="@string/spaces_tab_welcome_nux_close_button"
+        android:layout_marginEnd="@dimen/space_20"
+        android:layout_alignParentEnd="true"
+        android:elevation="@dimen/space_1"
+        android:backgroundTint="@color/black_opacity_30"
+        fresco:tint="@color/white" />
+    <ScrollView
+        android:background="?coreColorAppBackground"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@id/spaces_tab_welcome_nux_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@id/twitter_logo"
+                android:layout_width="@dimen/spaces_in_tab_welcome_nux_close_button_size_dp"
+                android:layout_height="@dimen/spaces_in_tab_welcome_nux_close_button_size_dp"
+                android:layout_marginTop="@dimen/space_20"
+                android:contentDescription="@null"
+                android:elevation="@dimen/space_1"
+                fresco:layout_constraintLeft_toLeftOf="parent"
+                fresco:layout_constraintRight_toRightOf="parent"
+                fresco:layout_constraintTop_toTopOf="parent"
+                fresco:srcCompat="@drawable/ic_vector_twitter_white" />
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@id/spaces_tab_ellipse_background"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/spaces_in_tab_ellipse_background_image_dp"
+                android:contentDescription="@null"
+                fresco:actualImageScaleType="fitXY"
+                fresco:layout_constraintEnd_toEndOf="parent"
+                fresco:layout_constraintStart_toStartOf="parent"
+                fresco:layout_constraintTop_toTopOf="parent"
+                style="?takeoverDialogImageStyle" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textSize="@dimen/font_size_title_2"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:id="@id/spaces_tab_in_tab_header"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_48"
+                android:text="@string/spaces_tab_intab_nux_header"
+                android:layout_marginStart="@dimen/space_32"
+                android:layout_marginEnd="@dimen/space_80"
+                fresco:layout_constraintTop_toTopOf="@id/twitter_logo" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textSize="@dimen/font_size_headline_2"
+                android:textColor="@color/white"
+                android:id="@id/spaces_tab_in_tab_subheader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_8"
+                android:text="@string/spaces_tab_intab_nux_subheader"
+                android:layout_marginHorizontal="@dimen/space_32"
+                fresco:layout_constraintStart_toStartOf="parent"
+                fresco:layout_constraintTop_toBottomOf="@id/spaces_tab_in_tab_header" />
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:layout_gravity="center"
+                android:id="@id/spaces_tab_cover_background"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/spaces_in_tab_cover_background_image_dp"
+                android:contentDescription="@null"
+                fresco:actualImageScaleType="fitStart"
+                fresco:layout_constraintTop_toBottomOf="@id/spaces_tab_in_tab_subheader"
+                style="?takeoverDialogImageStyle" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textSize="@dimen/font_size_title_4"
+                android:textStyle="bold"
+                android:textColor="?coreColorPrimaryText"
+                android:id="@id/spaces_tab_in_tab_intro_header"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_8"
+                android:text="@string/spaces_tab_intab_nux_intro_header"
+                android:layout_marginHorizontal="@dimen/space_32"
+                fresco:layout_constraintStart_toStartOf="parent"
+                fresco:layout_constraintTop_toBottomOf="@id/spaces_tab_cover_background" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textSize="@dimen/font_size_headline_2"
+                android:id="@id/spaces_tab_in_tab_intro_subheader"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_8"
+                android:text="@string/spaces_tab_intab_nux_intro_description"
+                android:layout_marginHorizontal="@dimen/space_32"
+                fresco:layout_constraintStart_toStartOf="parent"
+                fresco:layout_constraintTop_toBottomOf="@id/spaces_tab_in_tab_intro_header" />
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:layout_gravity="center"
+                android:id="@id/spaces_tab_in_space_background"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/spaces_in_tab_in_space_background_image_dp"
+                android:layout_marginTop="@dimen/space_20"
+                android:contentDescription="@null"
+                fresco:actualImageScaleType="fitXY"
+                fresco:layout_constraintTop_toBottomOf="@id/spaces_tab_in_tab_intro_subheader"
+                style="?takeoverDialogImageStyle" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textSize="@dimen/font_size_title_4"
+                android:textStyle="bold"
+                android:textColor="?coreColorPrimaryText"
+                android:id="@id/spaces_tab_in_tab_conversation_header"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_32"
+                android:text="@string/spaces_tab_intab_nux_conversation_header"
+                android:layout_marginHorizontal="@dimen/space_32"
+                fresco:layout_constraintStart_toStartOf="parent"
+                fresco:layout_constraintTop_toBottomOf="@id/spaces_tab_in_space_background" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textSize="@dimen/font_size_headline_2"
+                android:id="@id/spaces_tab_in_tab_conversation_subheader"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_8"
+                android:text="@string/spaces_tab_intab_nux_conversation_description"
+                android:layout_marginHorizontal="@dimen/space_32"
+                fresco:layout_constraintStart_toStartOf="parent"
+                fresco:layout_constraintTop_toBottomOf="@id/spaces_tab_in_tab_conversation_header" />
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:layout_gravity="center"
+                android:id="@id/spaces_tab_cards_background"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/spaces_in_tab_cards_background_image_dp"
+                android:layout_marginTop="@dimen/space_20"
+                android:contentDescription="@null"
+                fresco:actualImageScaleType="fitXY"
+                fresco:layout_constraintTop_toBottomOf="@id/spaces_tab_in_tab_conversation_subheader"
+                style="?takeoverDialogImageStyle" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textSize="@dimen/font_size_title_4"
+                android:textStyle="bold"
+                android:textColor="?coreColorPrimaryText"
+                android:id="@id/spaces_tab_in_tab_listening_header"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_32"
+                android:text="@string/spaces_tab_intab_nux_listening_header"
+                android:layout_marginHorizontal="@dimen/space_32"
+                fresco:layout_constraintStart_toStartOf="parent"
+                fresco:layout_constraintTop_toBottomOf="@id/spaces_tab_cards_background" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textSize="@dimen/font_size_headline_2"
+                android:id="@id/spaces_tab_in_tab_listening_subheader"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_8"
+                android:text="@string/spaces_tab_intab_nux_listening_description"
+                android:layout_marginHorizontal="@dimen/space_32"
+                fresco:layout_constraintStart_toStartOf="parent"
+                fresco:layout_constraintTop_toBottomOf="@id/spaces_tab_in_tab_listening_header" />
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:layout_gravity="center"
+                android:id="@id/spaces_tab_listen_background"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/spaces_in_tab_listen_background_image_dp"
+                android:layout_marginTop="@dimen/space_32"
+                android:contentDescription="@null"
+                fresco:actualImageScaleType="fitXY"
+                fresco:layout_constraintTop_toBottomOf="@id/spaces_tab_in_tab_listening_subheader"
+                style="?takeoverDialogImageStyle" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textSize="@dimen/font_size_large"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:id="@id/spaces_tab_intab_nux_button"
+                android:background="@drawable/rounded_rectangle_black"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_32"
+                android:layout_marginBottom="@dimen/space_40"
+                android:foreground="@drawable/ripple_selector_rounded_rectangle"
+                android:text="@string/spaces_tab_intab_nux_button"
+                android:layout_marginHorizontal="@dimen/space_32"
+                android:paddingVertical="@dimen/space_12"
+                fresco:layout_constraintBottom_toBottomOf="parent"
+                fresco:layout_constraintEnd_toEndOf="parent"
+                fresco:layout_constraintEnd_toStartOf="parent"
+                fresco:layout_constraintTop_toBottomOf="@id/spaces_tab_listen_background"
+                style="@style/SpacePrimaryButton" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</RelativeLayout>

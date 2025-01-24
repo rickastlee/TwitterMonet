@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:contentDescription="@string/conversation_control_cta_content_description"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <tag
+        android:value="ConversationControl"
+        android:id="@id/weaverComponent" />
+    <include
+        android:id="@id/conversation_controls_context_divider"
+        android:background="?coreColorSectionDivider"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/border_thickness"
+        layout="@layout/divider_no_margin" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:background="?selectableItemBackground"
+        android:padding="@dimen/space_16"
+        android:duplicateParentState="true"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:id="@id/conversation_controls_context_icon"
+            android:duplicateParentState="true"
+            android:layout_width="@dimen/space_16"
+            android:layout_height="@dimen/space_16"
+            android:src="@drawable/ic_vector_twitter"
+            android:importantForAccessibility="no"
+            android:layout_marginEnd="@dimen/conversation_control_cta_icon_text_margin"
+            app:tint="@color/conversation_control_drawable_color" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_small"
+            android:textColor="@color/conversation_control_text_color"
+            android:layout_gravity="center_vertical"
+            android:id="@id/conversation_controls_context_text"
+            android:duplicateParentState="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="@integer/single_line" />
+    </LinearLayout>
+</LinearLayout>

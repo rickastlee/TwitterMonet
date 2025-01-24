@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference
+        android:selectable="false"
+        android:summary="@string/verification_subtitle"
+        android:order="1" />
+    <Preference
+        android:icon="@drawable/ic_vector_verified_stroke"
+        android:visibility="gone"
+        android:title="@string/blue_checkmark_title"
+        android:key="blue_checkmark"
+        android:summary="@string/blue_checkmark_description"
+        android:order="2"
+        android:widgetLayout="@layout/settings_navigation_indicator" />
+    <Preference
+        android:icon="@drawable/ic_vector_moderator_stroke"
+        android:title="@string/identity_title"
+        android:key="id_verification"
+        android:summary="@string/identity_description"
+        android:order="3"
+        android:widgetLayout="@layout/settings_navigation_indicator" />
+</PreferenceScreen>

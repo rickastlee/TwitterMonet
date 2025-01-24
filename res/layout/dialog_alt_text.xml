@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.core.ui.components.dialog.bottomsheet.GripperView
+        android:layout_gravity="center_horizontal"
+        android:id="@id/gripper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_large"
+        android:textStyle="bold"
+        android:gravity="start"
+        android:id="@id/primary_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_16"
+        android:text="@string/alt_dialog_title"
+        android:layout_marginStart="@dimen/space_16"
+        android:layout_marginEnd="@dimen/space_12" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_normal"
+        android:gravity="start"
+        android:id="@id/secondary_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_16"
+        android:layout_marginBottom="@dimen/space_8"
+        android:text="@string/alt_dialog_description"
+        android:minLines="3"
+        android:layout_marginStart="@dimen/space_16"
+        android:layout_marginEnd="@dimen/space_16" />
+    <com.twitter.ui.components.button.legacy.TwitterButton
+        android:enabled="true"
+        android:id="@id/alt_text_cta"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_12"
+        android:layout_marginBottom="@dimen/space_8"
+        android:text="@string/alt_text_cta_label_yes"
+        android:height="45.0dip"
+        android:layout_marginStart="@dimen/space_16"
+        android:layout_marginEnd="@dimen/space_16"
+        style="@style/TwitterButtonXSmallBrandFilled" />
+    <com.twitter.ui.components.button.legacy.TwitterButton
+        android:enabled="true"
+        android:id="@id/cancel_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_8"
+        android:layout_marginBottom="@dimen/space_20"
+        android:text="@string/alt_text_cta_label_no"
+        android:height="45.0dip"
+        android:layout_marginStart="@dimen/space_16"
+        android:layout_marginEnd="@dimen/space_16"
+        style="@style/TwitterButtonSmallCondensedRegular" />
+</LinearLayout>

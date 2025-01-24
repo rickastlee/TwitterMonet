@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/space_16"
+    android:layout_marginBottom="@dimen/space_8"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_title_4"
+        android:textStyle="bold"
+        android:textColor="?coreColorPrimaryText"
+        android:gravity="start"
+        android:id="@id/spaces_tab_section_header_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textColor="?coreColorSecondaryText"
+        android:gravity="start"
+        android:id="@id/spaces_tab_section_header_subtitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_2" />
+    <tag
+        android:value="SpacesTabSectionHeader"
+        android:id="@id/weaverComponent" />
+</LinearLayout>

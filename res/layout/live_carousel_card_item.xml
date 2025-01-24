@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_width="@dimen/live_card_width"
+    android:layout_height="fill_parent"
+    android:layout_marginStart="@dimen/live_inter_event_spacing"
+    android:layout_marginEnd="@dimen/live_inter_event_spacing"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@id/live_event_parent"
+        android:background="@drawable/live_event_rounded_card_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <RelativeLayout
+            android:id="@id/image_container"
+            android:paddingLeft="@dimen/border_thickness"
+            android:paddingTop="@dimen/border_thickness"
+            android:paddingRight="@dimen/border_thickness"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <com.twitter.media.ui.fresco.FrescoMediaImageView
+                android:id="@id/live_carousel_item_image"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/live_card_image_height"
+                android:contentDescription="@string/live_image_description"
+                twitter:scaleType="fill" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@id/live_event_caret"
+                android:background="@drawable/live_event_caret"
+                android:layout_marginBottom="@dimen/live_event_margin"
+                android:src="@drawable/ic_chevron_down"
+                android:contentDescription="@string/button_action_options_module"
+                android:layout_alignEnd="@id/live_carousel_item_image"
+                twitter:tint="@color/white"
+                style="@style/LiveEventCaretIcon" />
+            <com.twitter.ui.widget.UnpaddedTypefacesTextView
+                android:ellipsize="end"
+                android:gravity="center"
+                android:id="@id/live_carousel_item_badge"
+                android:layout_marginBottom="@dimen/live_event_badge_margin"
+                android:maxLines="@integer/double_lines"
+                android:layout_alignBottom="@id/live_carousel_item_image"
+                android:layout_marginStart="@dimen/live_event_badge_margin"
+                style="@style/LiveVideoBadge.Card" />
+            <FrameLayout
+                android:background="?coreColorBorder"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/border_thickness"
+                android:layout_alignBottom="@id/live_carousel_item_image" />
+        </RelativeLayout>
+        <FrameLayout
+            android:id="@id/live_event_text_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0"
+            android:paddingStart="@dimen/live_event_margin"
+            android:paddingEnd="@dimen/live_event_margin">
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:gravity="center_vertical"
+                android:id="@id/live_carousel_item_title"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="@dimen/live_event_content_margin_top"
+                android:layout_marginBottom="@dimen/live_event_content_margin_bottom"
+                android:minLines="@integer/double_lines"
+                style="@style/LiveEventCardTitle" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:id="@id/live_event_broadcast_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/live_event_content_margin_top"
+                android:layout_marginBottom="@dimen/live_event_content_margin_top">
+                <com.twitter.media.ui.image.UserImageView
+                    android:layout_gravity="center_vertical"
+                    android:id="@id/user_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/live_event_broadcast_margin"
+                    twitter:overlayDrawable="@null"
+                    twitter:userImageSize="small" />
+                <LinearLayout
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <com.twitter.ui.components.text.legacy.TypefacesTextView
+                        android:textStyle="bold"
+                        android:textColor="?coreColorPrimaryText"
+                        android:ellipsize="end"
+                        android:id="@id/user_display_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="@integer/single_line" />
+                    <com.twitter.ui.components.text.legacy.TypefacesTextView
+                        android:textColor="?coreColorSecondaryText"
+                        android:ellipsize="end"
+                        android:id="@id/user_handle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="@integer/single_line" />
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@id/live_event_card_cta_layout"
+        android:background="@drawable/live_event_rounded_card_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@id/live_event_cta_icon"
+            android:layout_width="@dimen/live_cta_icon_size"
+            android:layout_height="@dimen/live_cta_icon_size"
+            android:src="@drawable/ic_vector_arrow_right_circle_fill"
+            android:layout_above="@id/space"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@null"
+            twitter:tint="@color/twitter_blue" />
+        <Space
+            android:id="@id/space"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/space_1"
+            android:layout_centerInParent="true" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_small"
+            android:textColor="?coreColorTextLink"
+            android:id="@id/live_carousel_item_cta_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/live_event_cta_spacing"
+            android:layout_below="@id/space"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <include
+        layout="@layout/live_event_score_card" />
+</FrameLayout>

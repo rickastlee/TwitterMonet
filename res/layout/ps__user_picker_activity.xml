@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="@color/ps__app_background"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:id="@id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <tv.periscope.android.view.PsImageView
+            android:id="@id/close_or_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3.0dip"
+            android:src="@drawable/ps__ic_close"
+            custom:ps__tint="@color/ps__bg_blue"
+            style="@style/ps__ToolbarBtn" />
+        <FrameLayout
+            android:id="@id/title_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ps__standard_spacing_16"
+            android:layout_marginStart="@dimen/ps__indented_list_left_padding"
+            android:layout_marginEnd="@dimen/ps__standard_spacing_16"
+            android:layout_alignParentStart="true">
+            <tv.periscope.android.view.PsTextView
+                android:textColor="@color/ps__primary_text"
+                android:id="@id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/ps__ToolbarTitle" />
+            <tv.periscope.android.view.PsEditText
+                android:textColor="@color/ps__primary_text"
+                android:textColorHint="@color/ps__light_grey"
+                android:id="@id/search_query"
+                android:background="@null"
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/ps__search_people_hint"
+                android:inputType="text"
+                android:imeOptions="actionSearch"
+                style="@style/ps__ToolbarTitle" />
+        </FrameLayout>
+        <tv.periscope.android.view.PsTextView
+            android:textSize="12.0sp"
+            android:textColor="@color/ps__secondary_text"
+            android:id="@id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8.0dip"
+            android:layout_marginBottom="@dimen/ps__standard_spacing_16"
+            android:layout_below="@id/title_container"
+            android:layout_marginStart="@dimen/ps__indented_list_left_padding"
+            android:layout_marginEnd="@dimen/ps__standard_spacing_16"
+            android:layout_toStartOf="@id/search_or_close"
+            android:layout_alignParentStart="true" />
+        <tv.periscope.android.view.PsImageView
+            android:id="@id/search_or_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3.0dip"
+            android:src="@drawable/ps__ic_search"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            custom:ps__tint="@color/ps__bg_blue"
+            style="@style/ps__ToolbarBtn" />
+    </RelativeLayout>
+    <View
+        android:id="@id/divider"
+        android:background="@color/ps__divider"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:layout_below="@id/header" />
+    <tv.periscope.android.view.PsRecyclerView
+        android:id="@id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/done_count"
+        android:layout_below="@id/divider" />
+    <tv.periscope.android.view.PsButton
+        android:textSize="16.0sp"
+        android:id="@id/done_count"
+        android:background="@color/ps__main_primary"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="54.0dip"
+        android:layout_alignParentBottom="true"
+        style="@style/ps__Button" />
+</RelativeLayout>

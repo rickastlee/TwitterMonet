@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.ui.view.GroupedRowView
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/condensed_tweet_row_background"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <ViewStub
+            android:id="@id/interstitial_view_stub"
+            android:layout="@layout/withheld_tweet_tombstone"
+            android:inflatedId="@id/interstitial_view"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <tag
+                android:value="WithheldTombstoneStub"
+                android:id="@id/weaverComponent" />
+        </ViewStub>
+        <com.twitter.tweetview.core.LinearLayoutTweetView
+            android:id="@id/row"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            style="@style/LinearLayoutTweetView.ListRow" />
+        <ViewStub
+            android:id="@id/tweet_row_view_pivot_container_stub"
+            android:layout="@layout/tweet_row_view_pivot"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <tag
+                android:value="ForwardPivotStub"
+                android:id="@id/weaverComponent" />
+        </ViewStub>
+    </LinearLayout>
+</com.twitter.ui.view.GroupedRowView>

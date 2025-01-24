@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:id="@id/broadcast_card_attribution_container"
+    android:background="@drawable/card_border_with_bottom_rounded_corners_selector"
+    android:layout_width="0.0dip"
+    android:layout_height="wrap_content"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/broadcast_media_barrier"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.legacy.widget.Space
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/space_4" />
+    <ViewStub
+        android:id="@id/attribution_user_view_stub"
+        android:layout="@layout/attribution_user_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <com.twitter.ui.user.VideoAttributionInviteeUserView
+        android:id="@id/attribution_user_view_invitee"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/card_spacing_medium"
+        android:layout_marginStart="@dimen/card_spacing_medium"
+        android:layout_marginEnd="@dimen/card_spacing_medium" />
+    <ViewStub
+        android:id="@id/attribution_periscope_user_view_stub"
+        android:layout="@layout/attribution_periscope_user_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textColor="?coreColorPrimaryText"
+        android:ellipsize="end"
+        android:id="@id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:layout_marginStart="@dimen/inset_medium"
+        android:layout_marginEnd="@dimen/inset_medium" />
+    <tv.periscope.android.view.PsTextView
+        android:textStyle="bold"
+        android:textColor="@color/twitter_blue"
+        android:gravity="center"
+        android:id="@id/invite_button"
+        android:background="@drawable/rounded_rect_blue_border"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/invitee_action_button_height"
+        android:layout_margin="@dimen/card_spacing_medium"
+        android:text="@string/accept_invitation" />
+    <androidx.legacy.widget.Space
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/space_8" />
+</LinearLayout>

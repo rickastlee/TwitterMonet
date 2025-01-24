@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.ui.widget.PreferenceTopCategory
+        android:title="@string/data_saver"
+        android:key="category_data_saver">
+        <SwitchPreference
+            android:title="@string/data_saver"
+            android:key="pref_data_saver"
+            android:summary="@string/settings_data_saver_summary"
+            android:defaultValue="false" />
+    </com.twitter.ui.widget.PreferenceTopCategory>
+    <com.twitter.ui.widget.LegacyTwitterPreferenceCategory
+        android:title="@string/settings_data_image_title"
+        android:key="category_photo">
+        <com.twitter.settings.widget.TwitterDropDownPreference
+            android:entries="@array/media_quality_entries"
+            android:title="@string/settings_image_quality_title"
+            android:key="image_quality"
+            android:summary="@string/settings_image_quality_description"
+            android:defaultValue="@null"
+            android:dialogTitle="@string/settings_image_quality_title"
+            android:entryValues="@array/media_quality_values" />
+        <com.twitter.settings.widget.TwitterDropDownPreference
+            android:entries="@array/media_quality_entries"
+            android:title="@string/settings_image_quality_upload_title"
+            android:key="image_quality_upload"
+            android:summary="@string/settings_image_quality_upload_description"
+            android:defaultValue="@null"
+            android:dialogTitle="@string/settings_image_quality_upload_title"
+            android:entryValues="@array/media_quality_values" />
+    </com.twitter.ui.widget.LegacyTwitterPreferenceCategory>
+    <com.twitter.ui.widget.LegacyTwitterPreferenceCategory
+        android:title="@string/settings_video_data_title"
+        android:key="category_autoplay">
+        <com.twitter.settings.widget.TwitterDropDownPreference
+            android:entries="@array/media_quality_entries"
+            android:title="@string/settings_video_quality_title"
+            android:key="video_quality"
+            android:summary="@string/settings_media_quality_description"
+            android:defaultValue="@null"
+            android:dialogTitle="@string/settings_video_quality_title"
+            android:entryValues="@array/media_quality_values" />
+        <com.twitter.settings.widget.TwitterDropDownPreference
+            android:entries="@array/media_quality_entries"
+            android:title="@string/settings_video_quality_720p_upload_title"
+            android:key="video_quality_720p_upload"
+            android:summary="@string/settings_video_quality_720p_upload_description"
+            android:defaultValue="@null"
+            android:dialogTitle="@string/settings_video_quality_720p_upload_title"
+            android:entryValues="@array/media_quality_values" />
+        <com.twitter.settings.widget.TwitterDropDownPreference
+            android:entries="@array/media_quality_entries"
+            android:title="@string/settings_video_quality_1080_upload_title"
+            android:key="video_quality_upload"
+            android:summary="@string/settings_video_quality_1080_upload_description"
+            android:defaultValue="@null"
+            android:dialogTitle="@string/settings_video_quality_1080_upload_title"
+            android:entryValues="@array/media_quality_values" />
+        <com.twitter.settings.widget.TwitterDropDownPreference
+            android:entries="@array/auto_play_entries"
+            android:title="@string/settings_video_autoplay_title"
+            android:key="video_autoplay"
+            android:summary="@string/settings_video_autoplay_description"
+            android:defaultValue="@null"
+            android:dialogTitle="@string/settings_video_autoplay_title"
+            android:entryValues="@array/auto_play_values" />
+    </com.twitter.ui.widget.LegacyTwitterPreferenceCategory>
+    <com.twitter.ui.widget.LegacyTwitterPreferenceCategory
+        android:title="@string/settings_data_sync"
+        android:key="category_data_sync">
+        <SwitchPreference
+            android:title="@string/settings_sync_data_title"
+            android:key="sync_data" />
+        <com.twitter.settings.widget.TwitterDropDownPreference
+            android:persistent="false"
+            android:entries="@array/refresh_intervals"
+            android:title="@string/settings_polling_interval_title"
+            android:key="polling_interval"
+            android:summary="%s"
+            android:dependency="sync_data"
+            android:defaultValue="1440"
+            android:entryValues="@array/refresh_interval_values" />
+        <Preference
+            android:selectable="false"
+            android:summary="@string/settings_data_sync_summary" />
+    </com.twitter.ui.widget.LegacyTwitterPreferenceCategory>
+</PreferenceScreen>

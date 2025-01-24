@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:gravity="bottom"
+    android:orientation="horizontal"
+    android:padding="@dimen/space_8"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/live_event_video_ad_controls_height"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <include
+        android:layout_gravity="start|bottom|center"
+        android:id="@id/av_badge_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/av_badge" />
+    <include
+        android:layout_gravity="end|bottom|center"
+        android:id="@id/av_autoplay_skip_outer_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/av_autoplay_skip_badge_count_down" />
+</FrameLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@id/root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include
+        android:id="@id/toolbar"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:minHeight="?toolBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        layout="@layout/app_toolbar" />
+    <ScrollView
+        android:id="@id/alt_text_scrollview"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        app:layout_constraintBottom_toTopOf="@id/alt_text_edit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+        <com.twitter.media.ui.image.EditableMediaView
+            android:id="@id/alt_text_photo"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:aspect_ratio="1.0"
+            app:scaleType="fit" />
+    </ScrollView>
+    <com.twitter.ui.widget.TwitterEditText
+        android:id="@id/alt_text_edit"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:hint="@string/add_alt_text_hint"
+        android:layout_marginHorizontal="@dimen/alt_text_margin_left_right"
+        app:layout_constraintBottom_toTopOf="@id/alt_text_description_link"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        style="@style/TwitterAltText" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textColor="@color/twitter_blue"
+        android:layout_gravity="start|bottom|center"
+        android:id="@id/alt_text_description_link"
+        android:background="?selectableItemBackground"
+        android:paddingBottom="@dimen/alt_text_margin_bottom"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:text="@string/alt_text_description_link"
+        android:paddingStart="@dimen/alt_text_margin_left_right"
+        android:paddingEnd="@dimen/alt_text_margin_left_right"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+    <tag
+        android:value="AltTextActivity"
+        android:id="@id/weaverComponent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

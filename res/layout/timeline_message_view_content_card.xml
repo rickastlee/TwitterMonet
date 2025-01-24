@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.card.MaterialCardView
+            android:id="@id/card_container"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/corner_radius_x_large"
+            app:cardElevation="@dimen/bonus_follows_card_elevation"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:rippleColor="@android:color/transparent">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:padding="@dimen/space_16"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:gravity="start"
+                    android:orientation="vertical"
+                    android:id="@id/buttons_container"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/timeline_message_button_section_margin_top">
+                    <com.twitter.ui.components.button.compose.HorizonComposeButton
+                        android:id="@id/primary_action"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/TimelineMessagePrimaryAction" />
+                    <com.twitter.ui.components.button.compose.HorizonComposeButton
+                        android:id="@id/secondary_action"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_16"
+                        style="@style/TimelineMessageSecondaryAction" />
+                </LinearLayout>
+                <com.twitter.ui.components.text.legacy.TypefacesTextView
+                    android:textSize="@dimen/font_size_body"
+                    android:textColor="?coreColorSecondaryText"
+                    android:gravity="start"
+                    android:id="@id/body"
+                    android:paddingTop="@dimen/space_8"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/timeline_message_padding_bottom_above_buttons"
+                    app:layout_constraintTop_toBottomOf="@id/facepile_and_button_container" />
+                <include
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/bonus_follows_facepile_and_button_container_card_detail" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <com.twitter.ui.widget.UnpaddedTextLayoutView
+            android:textSize="@dimen/font_size_small"
+            android:textStyle="bold"
+            android:textColor="?textColorSecondary"
+            android:id="@id/social_context_text"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_2"
+            android:layout_marginBottom="@dimen/space_4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/card_container" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</merge>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:id="@id/header"
+        android:padding="@dimen/space_8"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <include
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            layout="@layout/close_button" />
+        <include
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            layout="@layout/ocf_twitter_logo" />
+    </RelativeLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@id/survey_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/header"
+        android:layout_centerInParent="true">
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/space_36">
+                <com.twitter.ui.components.text.legacy.TypefacesTextView
+                    android:textSize="@dimen/font_size_large"
+                    android:id="@id/question_text"
+                    android:paddingBottom="@dimen/space_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/PrimaryText" />
+                <com.twitter.ui.components.text.legacy.TypefacesTextView
+                    android:textSize="@dimen/font_size_normal"
+                    android:id="@id/question_subtext"
+                    android:paddingBottom="@dimen/space_28"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/SecondaryText" />
+                <FrameLayout
+                    android:textSize="@dimen/font_size_normal"
+                    android:id="@id/choice_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </ScrollView>
+        <FrameLayout
+            android:layout_gravity="bottom"
+            android:background="?coreColorDeepGray30"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/space_1" />
+        <com.twitter.ui.components.button.legacy.TwitterButton
+            android:enabled="false"
+            android:layout_gravity="end|bottom|center"
+            android:id="@id/next_button"
+            android:paddingLeft="@dimen/space_16"
+            android:paddingRight="@dimen/space_16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/space_12"
+            android:text="@string/next"
+            style="@style/TwitterButtonMediumBrandFilled" />
+        <com.twitter.ui.components.button.legacy.TwitterButton
+            android:enabled="false"
+            android:layout_gravity="end|bottom|center"
+            android:id="@id/done_button"
+            android:paddingLeft="@dimen/space_16"
+            android:paddingRight="@dimen/space_16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/space_12"
+            android:text="@string/done"
+            style="@style/TwitterButtonMediumBrandFilled" />
+    </LinearLayout>
+</RelativeLayout>

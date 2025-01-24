@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.ui.components.text.legacy.TypefacesTextView
+    android:gravity="center_vertical"
+    android:id="@android:id/text1"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/profile_edit_birthdate_popup_item_height"
+    android:drawablePadding="@dimen/profile_edit_birthdate_visibility_field_padding"
+    android:paddingStart="@dimen/profile_edit_birthdate_popup_item_padding_side"
+    android:paddingEnd="@dimen/profile_edit_birthdate_popup_item_padding_side"
+    app:largeTextBoldOverride="false"
+    style="@style/TwitterEditProfile"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" />

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/ps__standard_spacing_10"
+    android:paddingTop="@dimen/ps__standard_spacing_10"
+    android:paddingRight="@dimen/ps__standard_spacing_10"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <tv.periscope.android.view.PsTextView
+        android:textSize="16.0sp"
+        android:textColor="@color/ps__white"
+        android:id="@id/label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ps__start_point" />
+    <include
+        layout="@layout/ps__start_time_scrubber_sheet" />
+</LinearLayout>

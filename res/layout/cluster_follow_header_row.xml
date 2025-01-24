@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingEnd="@dimen/profile_header_avatar_border"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textStyle="bold"
+        android:textColor="?coreColorSecondaryText"
+        android:ellipsize="end"
+        android:id="@id/title"
+        android:padding="@dimen/space_12"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:scrollHorizontally="true"
+        android:layout_weight="1.0" />
+    <ImageView
+        android:id="@id/dismiss"
+        android:padding="@dimen/profile_dismiss_button_border"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_dialog_close_no_border"
+        android:contentDescription="@string/button_action_dismiss"
+        android:layout_marginEnd="@dimen/profile_dismiss_button_margin_right" />
+</LinearLayout>

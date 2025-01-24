@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <View
+        android:id="@id/upper_divider"
+        android:background="?abstractColorDivider"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/channels_item_separator_height"
+        twitter:layout_constraintEnd_toEndOf="parent"
+        twitter:layout_constraintStart_toStartOf="parent"
+        twitter:layout_constraintTop_toTopOf="parent" />
+    <Space
+        android:id="@id/upper_divider_space"
+        android:layout_width="0.0dip"
+        android:layout_height="@dimen/space_12"
+        twitter:layout_constraintTop_toBottomOf="@id/upper_divider" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_small"
+        android:textStyle="bold"
+        android:textColor="?abstractColorText"
+        android:id="@id/about_text"
+        android:paddingBottom="@dimen/space_12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_12"
+        android:layout_marginEnd="@dimen/space_12"
+        twitter:layout_constraintStart_toStartOf="parent"
+        twitter:layout_constraintTop_toBottomOf="@id/upper_divider_space" />
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="horizontal"
+        android:id="@id/upper_guideline"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        twitter:layout_constraintTop_toBottomOf="@id/about_text" />
+    <com.twitter.media.ui.fresco.FrescoMediaImageView
+        android:layout_gravity="center"
+        android:id="@id/map_thumbnail"
+        android:background="@drawable/map_background_selector"
+        android:clickable="true"
+        android:layout_width="@dimen/map_thumbnail_size"
+        android:layout_height="@dimen/map_thumbnail_size"
+        android:foregroundGravity="center"
+        android:importantForAccessibility="no"
+        android:layout_marginStart="@dimen/space_12"
+        twitter:defaultDrawable="@drawable/ic_map_pin"
+        twitter:imageCornerRadius="@dimen/corner_radius_medium"
+        twitter:layout_constraintStart_toStartOf="parent"
+        twitter:layout_constraintTop_toBottomOf="@id/about_text" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_small"
+        android:ellipsize="end"
+        android:id="@id/website_url"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:layout_marginStart="@dimen/space_12"
+        android:layout_marginEnd="@dimen/space_12"
+        twitter:layout_constraintEnd_toEndOf="parent"
+        twitter:layout_constraintStart_toEndOf="@id/map_thumbnail"
+        twitter:layout_constraintTop_toBottomOf="@id/about_text" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_small"
+        android:textColor="?abstractColorText"
+        android:ellipsize="end"
+        android:id="@id/address_text"
+        android:focusable="true"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_4"
+        android:layout_marginStart="@dimen/space_12"
+        android:layout_marginEnd="@dimen/space_12"
+        twitter:layout_constraintEnd_toEndOf="parent"
+        twitter:layout_constraintStart_toEndOf="@id/map_thumbnail"
+        twitter:layout_constraintTop_toBottomOf="@id/website_url" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_small"
+        android:textColor="?abstractColorText"
+        android:ellipsize="end"
+        android:id="@id/open_closed_text"
+        android:focusable="true"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_4"
+        android:maxLines="2"
+        android:layout_marginStart="@dimen/space_12"
+        android:layout_marginEnd="@dimen/space_12"
+        twitter:layout_constraintEnd_toEndOf="parent"
+        twitter:layout_constraintStart_toEndOf="@id/map_thumbnail"
+        twitter:layout_constraintTop_toBottomOf="@id/address_text" />
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@id/text_bottom_barrier"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        twitter:barrierDirection="bottom"
+        twitter:constraint_referenced_ids="open_closed_text,map_thumbnail" />
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="vertical"
+        android:id="@id/start_padding"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        twitter:layout_constraintGuide_begin="@dimen/space_12" />
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="vertical"
+        android:id="@id/end_padding"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        twitter:layout_constraintGuide_end="@dimen/space_12" />
+    <com.twitter.ui.components.button.compose.HorizonComposeButton
+        android:id="@id/directions_button"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_8"
+        android:text="@string/directions_button_text"
+        twitter:layout_constraintEnd_toStartOf="@id/button_center_space"
+        twitter:layout_constraintStart_toEndOf="@id/start_padding"
+        twitter:layout_constraintTop_toBottomOf="@id/text_bottom_barrier"
+        style="@style/TwitterButtonMediumBrandOutlined" />
+    <Space
+        android:id="@id/button_center_space"
+        android:layout_width="@dimen/space_12"
+        android:layout_height="0.0dip"
+        twitter:layout_constraintBottom_toBottomOf="@id/directions_button"
+        twitter:layout_constraintEnd_toStartOf="@id/contact_button"
+        twitter:layout_constraintStart_toEndOf="@id/directions_button"
+        twitter:layout_constraintTop_toTopOf="@id/directions_button" />
+    <com.twitter.ui.components.button.compose.HorizonComposeButton
+        android:id="@id/contact_button"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_8"
+        android:text="@string/contact_button_text"
+        twitter:layout_constraintEnd_toStartOf="@id/end_padding"
+        twitter:layout_constraintStart_toEndOf="@id/button_center_space"
+        twitter:layout_constraintTop_toBottomOf="@id/text_bottom_barrier"
+        style="@style/TwitterButtonMediumBrandOutlined" />
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@id/button_bottom_barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        twitter:barrierDirection="bottom"
+        twitter:constraint_referenced_ids="directions_button,contact_button" />
+    <View
+        android:id="@id/lower_divider"
+        android:background="?abstractColorDivider"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/channels_item_separator_height"
+        android:layout_marginTop="@dimen/space_12"
+        twitter:layout_constraintBottom_toBottomOf="parent"
+        twitter:layout_constraintTop_toBottomOf="@id/button_bottom_barrier" />
+    <androidx.constraintlayout.widget.Group
+        android:id="@id/divider_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        twitter:constraint_referenced_ids="upper_divider,upper_divider_space,lower_divider" />
+    <View
+        android:id="@id/interaction_blocking_overlay"
+        android:clickable="true"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        android:importantForAccessibility="no"
+        twitter:layout_constraintBottom_toBottomOf="@id/text_bottom_barrier"
+        twitter:layout_constraintEnd_toEndOf="parent"
+        twitter:layout_constraintStart_toStartOf="parent"
+        twitter:layout_constraintTop_toTopOf="parent" />
+    <View
+        android:id="@id/interaction_blocking_overlay2"
+        android:clickable="true"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        android:importantForAccessibility="no"
+        twitter:layout_constraintBottom_toBottomOf="parent"
+        twitter:layout_constraintEnd_toEndOf="@id/directions_button"
+        twitter:layout_constraintStart_toStartOf="parent"
+        twitter:layout_constraintTop_toTopOf="parent" />
+    <View
+        android:id="@id/interaction_blocking_overlay_all"
+        android:clickable="true"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        android:importantForAccessibility="no"
+        twitter:layout_constraintBottom_toBottomOf="parent"
+        twitter:layout_constraintEnd_toEndOf="parent"
+        twitter:layout_constraintStart_toStartOf="parent"
+        twitter:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.Group
+        android:id="@id/blocking_overlay_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        twitter:constraint_referenced_ids="interaction_blocking_overlay,interaction_blocking_overlay2" />
+    <tag
+        android:value="AboutModule"
+        android:id="@id/weaverComponent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

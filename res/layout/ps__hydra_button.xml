@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.ui.widget.ToggleImageButton
+    android:id="@id/twitter_hydra_button"
+    android:background="@drawable/camera_capture_circle_button_bg"
+    android:padding="@dimen/camera_capture_controls_inner_padding"
+    android:visibility="gone"
+    android:layout_width="@dimen/camera_button_height"
+    android:layout_height="@dimen/camera_button_height"
+    android:foreground="@drawable/ripple_selector_oval"
+    android:src="@drawable/ps__ic_hydra"
+    android:layout_marginEnd="@dimen/space_16"
+    app:contentDescriptionOff="@string/ps__broadcasting_hydra_off"
+    app:contentDescriptionOn="@string/ps__broadcasting_hydra_on"
+    style="@style/ps__IconButton"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

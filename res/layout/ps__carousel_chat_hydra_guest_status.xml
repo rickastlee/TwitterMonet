@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_width="300.0dip"
+    android:layout_height="fill_parent"
+    android:layout_marginBottom="@dimen/ps__standard_spacing_10"
+    android:paddingStart="@dimen/ps__standard_spacing_10"
+    android:paddingEnd="@dimen/ps__standard_spacing_10"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <FrameLayout
+        android:layout_gravity="bottom|center"
+        android:id="@id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <include
+            android:id="@id/chat_message_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            layout="@layout/ps__chat_hydra_guest_call_in_state" />
+    </FrameLayout>
+    <tv.periscope.android.view.PsTextView
+        android:textSize="@dimen/ps__standard_text_size"
+        android:textColor="@color/ps__light_grey"
+        android:ellipsize="end"
+        android:layout_gravity="bottom|center"
+        android:id="@id/chat_message_subtext"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1" />
+</FrameLayout>

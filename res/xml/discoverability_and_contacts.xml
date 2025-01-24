@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <com.twitter.ui.widget.PreferenceTopCategoryCompat
+        android:title="@string/settings_category_discoverability_title"
+        android:order="10">
+        <SwitchPreference
+            android:title="@string/settings_email_disco_title"
+            android:key="discoverable_by_email"
+            android:order="11"
+            twitter:multilineTitle="true" />
+        <SwitchPreference
+            android:title="@string/settings_phone_disco_title"
+            android:key="discoverable_by_phone"
+            android:order="12"
+            twitter:multilineTitle="true" />
+    </com.twitter.ui.widget.PreferenceTopCategoryCompat>
+    <com.twitter.ui.widget.PreferenceTopCategoryCompat
+        android:title="@string/contacts"
+        android:order="20">
+        <com.twitter.settings.widget.LinkableSwitchPreferenceCompat
+            android:title="@string/sync_addressbook_contacts"
+            android:key="upload_contacts"
+            android:summary="@string/upload_contacts_summary"
+            android:order="21"
+            twitter:clickableUrl="@string/url_learn_more_about_addressbook_connection" />
+        <Preference
+            android:key="upload_contacts_disconnect"
+            android:summary="@string/upload_contacts_disconnect_summary"
+            android:order="22" />
+    </com.twitter.ui.widget.PreferenceTopCategoryCompat>
+</PreferenceScreen>

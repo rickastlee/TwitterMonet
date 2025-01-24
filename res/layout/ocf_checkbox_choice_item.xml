@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="top"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/space_24"
+    android:baselineAligned="false"
+    android:weightSum="1.0"
+    android:layout_marginHorizontal="@dimen/space_32"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:paddingEnd="@dimen/ocf_small_spacing">
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/choice_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            style="@style/OcfChoiceSelectionText" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/choice_subtext"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_4"
+            style="@style/OcfSubtext1Text" />
+    </LinearLayout>
+    <CheckBox
+        android:id="@id/choice_checkbox"
+        android:focusable="false"
+        android:clickable="false"
+        android:saveEnabled="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="0.0dip"
+        android:minHeight="0.0dip"
+        android:layout_weight="0.0"
+        android:importantForAccessibility="no" />
+</LinearLayout>

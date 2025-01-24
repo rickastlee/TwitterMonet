@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textColor="@color/white"
+        android:id="@id/supporting_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="?guideHeroPreHeadlineStylePrimary" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textColor="@color/white"
+        android:id="@id/supporting_text_separator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/en_dot"
+        style="?guideHeroPreHeadlineStyle" />
+    <com.twitter.media.ui.image.UserImageView
+        android:id="@id/user_avatar"
+        android:layout_marginEnd="@dimen/moments_standard_spacing_half"
+        twitter:cornerRadius="@dimen/corner_radius_large"
+        twitter:userImageSize="@dimen/moments_author_avatar_size"
+        style="@style/MomentsGuideAuthorAvatar" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textColor="@color/white"
+        android:ellipsize="end"
+        android:id="@id/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        twitter:antiSpoofing="true"
+        style="?guideHeroPreHeadlineStyle" />
+    <ImageView
+        android:id="@id/verified_badge"
+        android:contentDescription="@null"
+        android:layout_marginStart="@dimen/space_2"
+        twitter:tint="@color/white"
+        style="@style/MomentsGuideVerifiedBadge" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textColor="@color/white"
+        android:id="@id/user_attribution_separator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/en_dot"
+        style="?guideHeroPreHeadlineStyle" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textColor="@color/white"
+        android:id="@id/timestamp_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="?guideHeroPreHeadlineStyle" />
+    <com.twitter.ui.widget.TightTextView
+        android:id="@id/live_badge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/LiveVideoBadge.EventSummary" />
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.ui.components.text.legacy.TypefacesTextView
+    android:textSize="@dimen/font_size_small"
+    android:textColor="?coreColorSecondaryText"
+    android:ellipsize="end"
+    android:id="@id/vanity_url"
+    android:paddingTop="@dimen/space_4"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:maxLines="1"
+    android:textAlignment="viewStart"
+    android:paddingHorizontal="@dimen/space_2"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

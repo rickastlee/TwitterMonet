@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:paddingTop="@dimen/list_row_padding_horizontal"
+    android:paddingBottom="@dimen/list_row_padding_horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.twitter.media.ui.image.UserImageView
+        android:id="@id/profile_image"
+        android:layout_width="@dimen/user_image_size"
+        android:layout_height="@dimen/user_image_size"
+        android:layout_centerVertical="true"
+        android:paddingStart="@dimen/space_16" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textAppearance="?android:textAppearanceMedium"
+        android:ellipsize="end"
+        android:id="@android:id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:paddingStart="@dimen/list_row_padding_horizontal"
+        app:layout_constraintStart_toEndOf="@id/profile_image" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textAppearance="?android:textAppearanceSmall"
+        android:textColor="?coreColorSecondaryText"
+        android:id="@android:id/summary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:paddingStart="@dimen/list_row_padding_horizontal"
+        app:layout_constraintStart_toEndOf="@id/profile_image"
+        app:layout_constraintTop_toBottomOf="@android:id/title" />
+</androidx.constraintlayout.widget.ConstraintLayout>

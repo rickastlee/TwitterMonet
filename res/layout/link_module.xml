@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/link_module_card_height"
+    app:cardCornerRadius="@dimen/corner_radius_x_large"
+    style="@style/ModuleCardStyle"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@id/link_module_layout"
+        android:background="@drawable/ripple_pressed_selector_rectangle"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <ImageView
+            android:id="@id/link_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/LinkIconStyle" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/link_cta_text"
+            app:layout_constraintBottom_toTopOf="@id/link_domain_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/link_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/ModuleCardTitleStyle" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/link_domain_text"
+            android:layout_marginBottom="@dimen/space_12"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/link_icon"
+            style="@style/ModuleCardSubtitleStyle" />
+        <View
+            android:id="@id/interaction_blocking_overlay"
+            android:clickable="true"
+            android:layout_width="0.0dip"
+            android:layout_height="0.0dip"
+            android:importantForAccessibility="no"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <tag
+        android:value="LinkModule"
+        android:id="@id/weaverComponent" />
+</com.google.android.material.card.MaterialCardView>

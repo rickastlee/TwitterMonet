@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        app:layout_constraintBottom_toTopOf="@id/room_barrier"
+        app:layout_constraintTop_toTopOf="parent"
+        layout="@layout/scrolling_header_activity" />
+    <com.twitter.profiles.animation.BalloonSetAnimationView
+        android:id="@id/balloon_container"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        app:layout_constraintBottom_toBottomOf="@id/container"
+        app:layout_constraintTop_toTopOf="@id/container" />
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@id/room_barrier"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top"
+        app:constraint_referenced_ids="docker_room,room_replay_dock" />
+    <include
+        android:id="@id/docker_room"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/docker_height"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_goneMarginTop="0.0dip"
+        layout="@layout/room_docker_viewstub" />
+    <include
+        android:id="@id/room_replay_dock"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/docker_height"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_goneMarginTop="0.0dip"
+        layout="@layout/room_replay_dock_viewstub" />
+</androidx.constraintlayout.widget.ConstraintLayout>

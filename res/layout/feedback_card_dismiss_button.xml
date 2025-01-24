@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageView
+    android:id="@id/feedback_dismiss_button"
+    android:paddingTop="@dimen/feedback_card_dismiss_button_internal_padding"
+    android:paddingBottom="@dimen/feedback_card_dismiss_button_internal_padding"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/feedback_card_dismiss_button_corner_margin"
+    android:src="@drawable/feedback_dismiss"
+    android:scaleType="center"
+    android:contentDescription="@string/button_action_dismiss"
+    android:paddingStart="@dimen/feedback_card_dismiss_button_internal_padding"
+    android:paddingEnd="@dimen/feedback_card_dismiss_button_internal_padding"
+    android:layout_marginStart="@dimen/feedback_card_dismiss_button_corner_margin"
+    android:layout_marginEnd="@dimen/feedback_card_dismiss_button_corner_margin"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

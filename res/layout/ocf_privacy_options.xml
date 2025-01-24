@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="?coreColorAppBackground"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <include
+        layout="@layout/ocf_top_toolbar" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0"
+        android:paddingStart="@dimen/ocf_screen_padding_wide"
+        android:paddingEnd="@dimen/ocf_screen_padding_wide">
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/primary_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ocf_standard_spacing"
+            android:maxLines="2"
+            style="@style/OcfTitle3Text" />
+        <include
+            android:id="@id/discoverable_by_phone"
+            layout="@layout/ocf_checkbox_settings_item" />
+        <include
+            android:id="@id/discoverable_by_email"
+            layout="@layout/ocf_checkbox_settings_item" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference
+        android:summary="@string/settings_accessibility_detail"
+        android:order="10" />
+    <Preference
+        android:icon="@drawable/ic_vector_accessibility_alt"
+        android:title="@string/settings_accessibility_pref_title"
+        android:key="pref_accessibility"
+        android:summary="@string/settings_accessibility_pref_detail"
+        android:order="20" />
+    <Preference
+        android:icon="@drawable/ic_vector_paintbrush_stroke"
+        android:title="@string/settings_display_pref_title"
+        android:key="pref_display"
+        android:summary="@string/settings_display_pref_summary"
+        android:order="30" />
+    <Preference
+        android:icon="@drawable/ic_vector_globe_stroke"
+        android:title="@string/settings_languages_item_title"
+        android:key="pref_languages"
+        android:summary="@string/settings_languages_item_detail"
+        android:order="40" />
+    <Preference
+        android:icon="@drawable/ic_vector_bar_chart"
+        android:title="@string/settings_data_usage_item_title"
+        android:key="pref_data_usage"
+        android:summary="@string/settings_data_usage_item_detail"
+        android:order="50" />
+</PreferenceScreen>

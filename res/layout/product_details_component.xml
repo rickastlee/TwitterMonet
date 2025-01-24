@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:paddingTop="@dimen/space_8"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textColor="?coreColorPrimaryText"
+        android:id="@id/product_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="viewStart"
+        android:layout_marginStart="@dimen/space_12"
+        twitter:layout_constrainedWidth="true"
+        twitter:layout_constraintBottom_toTopOf="@id/vanity_url"
+        twitter:layout_constraintEnd_toStartOf="@id/formatted_price"
+        twitter:layout_constraintHorizontal_bias="0.0"
+        twitter:layout_constraintStart_toStartOf="parent"
+        twitter:layout_constraintTop_toTopOf="parent"
+        style="@style/ProductDetailsComponentTitlesText" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/formatted_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="viewStart"
+        android:layout_marginStart="@dimen/space_8"
+        android:layout_marginEnd="@dimen/space_12"
+        twitter:layout_constraintEnd_toEndOf="parent"
+        twitter:layout_constraintTop_toTopOf="@id/product_name"
+        style="@style/ProductDetailsComponentPriceText" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/vanity_url"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="viewStart"
+        android:layout_marginStart="@dimen/space_12"
+        android:layout_marginEnd="@dimen/space_12"
+        android:paddingVertical="@dimen/space_4"
+        twitter:layout_constrainedWidth="true"
+        twitter:layout_constraintBottom_toBottomOf="parent"
+        twitter:layout_constraintEnd_toStartOf="@id/formatted_price"
+        twitter:layout_constraintHorizontal_bias="0.0"
+        twitter:layout_constraintStart_toStartOf="parent"
+        twitter:layout_constraintTop_toBottomOf="@id/product_name"
+        style="@style/BaseDetailsComponentSubtitlesText" />
+</androidx.constraintlayout.widget.ConstraintLayout>

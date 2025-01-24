@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="?coreColorAppBackground"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <include
+        layout="@layout/spaces_search_toolbar" />
+    <FrameLayout
+        android:id="@id/space_tab_error_layout"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:layout_gravity="start"
+                android:paddingTop="@dimen/space_36"
+                android:paddingBottom="@dimen/space_8"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/spaces_tab_failed_fetch_error_message"
+                android:paddingHorizontal="@dimen/space_32"
+                style="@style/TLEmptyViewText" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:layout_gravity="start"
+                android:paddingBottom="@dimen/space_28"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/spaces_tab_failed_fetch_error_descriptor"
+                android:paddingHorizontal="@dimen/space_32"
+                style="@style/TLEmptyViewDescriptionText" />
+            <com.twitter.ui.components.button.legacy.TwitterButton
+                android:layout_gravity="start"
+                android:id="@id/spaces_tab_button_retry"
+                android:paddingBottom="@dimen/space_16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/spaces_tab_failed_button_retry"
+                android:layout_marginHorizontal="@dimen/space_32"
+                style="@style/VDLEmptyStateSecondaryButton" />
+        </LinearLayout>
+    </FrameLayout>
+    <ProgressBar
+        android:layout_gravity="center"
+        android:id="@id/spaces_loading_view"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        style="?android:progressBarStyle" />
+    <HorizontalScrollView
+        android:id="@id/pills_layout_scroller"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_8" />
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@id/swipe_refresh_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@id/spaces_tab_layout_recycler_view"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/space_16" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    <tag
+        android:value="SpacesTab"
+        android:id="@id/weaverComponent" />
+</LinearLayout>

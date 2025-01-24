@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference
+        android:selectable="false"
+        android:key="early_access_description"
+        android:summary="@string/early_access_subtitle"
+        android:order="1" />
+    <Preference
+        android:icon="@drawable/ic_vector_drafts"
+        android:title="@string/early_access_longform_title"
+        android:selectable="false"
+        android:key="longer_tweets"
+        android:summary="@string/early_access_longform_subtitle"
+        android:order="2" />
+    <Preference
+        android:icon="@drawable/ic_vector_write_stroke"
+        android:title="@string/early_access_edit_tweet_title"
+        android:selectable="false"
+        android:key="edit_tweet"
+        android:summary="@string/early_access_edit_tweet_subtitle"
+        android:order="3" />
+    <Preference
+        android:icon="@drawable/ic_vector_person_stroke"
+        android:title="@string/settings_profile_customization_title"
+        android:key="profile_customization"
+        android:summary="@string/settings_profile_customization_description"
+        android:order="4"
+        android:widgetLayout="@layout/settings_navigation_indicator" />
+    <Preference
+        android:icon="@drawable/ic_vector_camera_video_stroke"
+        android:title="@string/early_access_1080p_video_title"
+        android:key="1080p_video"
+        android:summary="@string/early_access_1080p_video_subtitle"
+        android:order="5"
+        android:widgetLayout="@layout/settings_navigation_indicator" />
+    <Preference
+        android:icon="@drawable/ic_vector_camera_video_stroke"
+        android:title="@string/early_access_longer_video_title"
+        android:selectable="false"
+        android:key="longer_video"
+        android:summary="@string/early_access_longer_video_subtitle"
+        android:order="6" />
+    <Preference
+        android:icon="@drawable/ic_vector_undo"
+        android:title="@string/early_access_undo_tweet_title"
+        android:key="undo_tweet"
+        android:summary="@string/early_access_undo_tweet_subtitle"
+        android:order="7"
+        android:widgetLayout="@layout/settings_navigation_indicator" />
+    <Preference
+        android:icon="@drawable/ic_vector_bookmark_stroke"
+        android:title="@string/early_access_bookmark_folders_title"
+        android:key="bookmark_folders"
+        android:summary="@string/early_access_bookmark_folders_subtitle"
+        android:order="8"
+        android:widgetLayout="@layout/settings_navigation_indicator" />
+</PreferenceScreen>

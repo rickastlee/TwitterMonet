@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout
+        android:layout_gravity="top"
+        android:background="@drawable/location_item_icon_bg_stroke_gray"
+        android:layout_width="@dimen/location_icon_circle_size"
+        android:layout_height="@dimen/location_icon_circle_size">
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@id/location_icon"
+            android:background="@null"
+            android:padding="@dimen/space_2"
+            android:layout_width="@dimen/location_icon_size"
+            android:layout_height="@dimen/location_icon_size"
+            android:src="@drawable/ic_vector_location"
+            android:contentDescription="@null"
+            app:tint="@color/twitter_blue" />
+    </FrameLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_gravity="center_vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_16">
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/location_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/location_details"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/CameraLocationItemName" />
+        <TextSwitcher
+            android:id="@id/location_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/location_map_tile"
+            app:layout_constraintStart_toStartOf="@id/location_name"
+            app:layout_constraintTop_toBottomOf="@id/location_name">
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/CameraLocationItemDescription" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/CameraLocationItemDescription" />
+        </TextSwitcher>
+        <com.twitter.media.ui.image.AspectRatioFrameLayout
+            android:id="@id/location_map_tile"
+            android:background="@drawable/location_map_tile_background"
+            android:padding="1.0px"
+            android:visibility="gone"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_12"
+            app:aspect_ratio="@dimen/sixteen_by_nine_aspect_ratio"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/location_details"
+            app:layout_constraintTop_toBottomOf="@id/location_details">
+            <ImageView
+                android:layout_gravity="center"
+                android:id="@id/location_map_snapshot"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:contentDescription="@null" />
+            <com.twitter.camera.view.location.LocationRippleDot
+                android:layout_gravity="center"
+                android:id="@id/location_ripple_dot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </com.twitter.media.ui.image.AspectRatioFrameLayout>
+        <ImageView
+            android:id="@id/selected_location_check_mark"
+            android:visibility="gone"
+            android:layout_width="@dimen/location_checkmark_icon_size"
+            android:layout_height="@dimen/location_checkmark_icon_size"
+            android:src="@drawable/ic_vector_checkmark_circle_fill_green_tint"
+            android:contentDescription="@string/selected_location"
+            app:layout_constraintBottom_toBottomOf="@id/location_details"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/location_name" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</merge>

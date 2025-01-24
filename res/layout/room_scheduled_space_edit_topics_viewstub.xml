@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewStub
+    android:layout="@layout/room_scheduled_space_edit_topics_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <tag
+        android:value="RoomScheduledTopicsTaggingStub"
+        android:id="@id/weaverComponent" />
+</ViewStub>

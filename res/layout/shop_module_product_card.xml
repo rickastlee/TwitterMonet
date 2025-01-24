@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    android:id="@id/product_card_view"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/shop_product_card_height"
+    app:cardCornerRadius="@dimen/corner_radius_large"
+    app:cardElevation="@dimen/shop_product_card_elevation"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include
+        layout="@layout/product_overflow_button" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@id/shop_item_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:paddingEnd="@dimen/space_16">
+        <com.twitter.media.ui.fresco.FrescoMediaImageView
+            android:id="@id/shop_item_image_view"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:scaleType="fill"
+            style="@style/ProductImageStyle" />
+        <ImageView
+            android:id="@id/missing_image_thumbnail"
+            android:visibility="gone"
+            android:layout_width="0.0dip"
+            android:layout_height="0.0dip"
+            android:contentDescription="@string/product_card_product_image"
+            app:layout_constraintBottom_toBottomOf="@id/shop_item_image_view"
+            app:layout_constraintEnd_toEndOf="@id/shop_item_image_view"
+            app:layout_constraintStart_toStartOf="@id/shop_item_image_view"
+            app:layout_constraintTop_toTopOf="@id/shop_item_image_view"
+            style="@style/EmptyProductImageStyle" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/shop_item_header"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@id/shop_item_image_view"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/ProductTitleStyle" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/shop_item_summary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@id/shop_item_image_view"
+            app:layout_constraintTop_toBottomOf="@id/shop_item_header"
+            style="@style/ProductCategoryStyle" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/shop_item_price_text"
+            style="@style/ProductPriceStyle" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/shop_item_original_price_text"
+            style="@style/ProductOriginalPriceStyle" />
+        <androidx.constraintlayout.helper.widget.Flow
+            android:id="@id/price_flow"
+            app:constraint_referenced_ids="shop_item_price_text, shop_item_original_price_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/shop_item_image_view"
+            style="@style/PriceFlowStyle" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_headline_2"
+        android:textStyle="bold"
+        android:textColor="?coreColorPrimaryText"
+        android:gravity="center"
+        android:id="@id/custom_amount_max_value_toast"
+        android:visibility="gone"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/space_32"
+        android:layout_marginTop="@dimen/space_12"
+        android:layout_marginRight="@dimen/space_32"
+        app:autoSizeMaxTextSize="@dimen/amount_text_size"
+        app:autoSizeMinTextSize="@dimen/font_size_normal"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/amount_text_size"
+        android:textColor="?coreColorPrimaryText"
+        android:gravity="center"
+        android:id="@id/custom_amount"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/space_32"
+        android:layout_marginTop="@dimen/space_24"
+        android:layout_marginRight="@dimen/space_32"
+        android:maxLines="1"
+        app:autoSizeMaxTextSize="@dimen/amount_text_size"
+        app:autoSizeMinTextSize="@dimen/font_size_normal"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@id/custom_amount_keypad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@id/custom_amount_keypad"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_24"
+        android:layout_marginBottom="@dimen/space_20"
+        app:layout_constraintBottom_toTopOf="@id/custom_amount_footer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/custom_amount">
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/custom_amount_keypad_1"
+            android:tag="1"
+            android:text="@string/tipjar_keypad_1"
+            app:layout_constraintBottom_toTopOf="@id/custom_amount_keypad_4"
+            app:layout_constraintEnd_toStartOf="@id/custom_amount_keypad_2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/KeypadStyle" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/custom_amount_keypad_2"
+            android:tag="2"
+            android:text="@string/tipjar_keypad_2"
+            app:layout_constraintBottom_toTopOf="@id/custom_amount_keypad_5"
+            app:layout_constraintEnd_toStartOf="@id/custom_amount_keypad_3"
+            app:layout_constraintStart_toEndOf="@id/custom_amount_keypad_1"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/KeypadStyle" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/custom_amount_keypad_3"
+            android:tag="3"
+            android:text="@string/tipjar_keypad_3"
+            app:layout_constraintBottom_toTopOf="@id/custom_amount_keypad_6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/custom_amount_keypad_2"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/KeypadStyle" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/custom_amount_keypad_4"
+            android:tag="4"
+            android:text="@string/tipjar_keypad_4"
+            app:layout_constraintBottom_toTopOf="@id/custom_amount_keypad_7"
+            app:layout_constraintEnd_toStartOf="@id/custom_amount_keypad_5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/custom_amount_keypad_1"
+            style="@style/KeypadStyle" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/custom_amount_keypad_5"
+            android:tag="5"
+            android:text="@string/tipjar_keypad_5"
+            app:layout_constraintBottom_toTopOf="@id/custom_amount_keypad_8"
+            app:layout_constraintEnd_toStartOf="@id/custom_amount_keypad_6"
+            app:layout_constraintStart_toEndOf="@id/custom_amount_keypad_4"
+            app:layout_constraintTop_toBottomOf="@id/custom_amount_keypad_2"
+            style="@style/KeypadStyle" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/custom_amount_keypad_6"
+            android:tag="6"
+            android:text="@string/tipjar_keypad_6"
+            app:layout_constraintBottom_toTopOf="@id/custom_amount_keypad_9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/custom_amount_keypad_5"
+            app:layout_constraintTop_toBottomOf="@id/custom_amount_keypad_3"
+            style="@style/KeypadStyle" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/custom_amount_keypad_7"
+            android:tag="7"
+            android:text="@string/tipjar_keypad_7"
+            app:layout_constraintBottom_toTopOf="@id/custom_amount_keypad_decimal"
+            app:layout_constraintEnd_toStartOf="@id/custom_amount_keypad_8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/custom_amount_keypad_4"
+            style="@style/KeypadStyle" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/custom_amount_keypad_8"
+            android:tag="8"
+            android:text="@string/tipjar_keypad_8"
+            app:layout_constraintBottom_toTopOf="@id/custom_amount_keypad_0"
+            app:layout_constraintEnd_toStartOf="@id/custom_amount_keypad_9"
+            app:layout_constraintStart_toEndOf="@id/custom_amount_keypad_7"
+            app:layout_constraintTop_toBottomOf="@id/custom_amount_keypad_5"
+            style="@style/KeypadStyle" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/custom_amount_keypad_9"
+            android:tag="9"
+            android:text="@string/tipjar_keypad_9"
+            app:layout_constraintBottom_toTopOf="@id/custom_amount_keypad_backspace"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/custom_amount_keypad_8"
+            app:layout_constraintTop_toBottomOf="@id/custom_amount_keypad_6"
+            style="@style/KeypadStyle" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/custom_amount_keypad_decimal"
+            android:tag="."
+            android:text="@string/tipjar_keypad_decimal_point"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/custom_amount_keypad_0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/custom_amount_keypad_7"
+            style="@style/KeypadStyle" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/custom_amount_keypad_0"
+            android:tag="0"
+            android:text="@string/tipjar_keypad_0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/custom_amount_keypad_backspace"
+            app:layout_constraintStart_toEndOf="@id/custom_amount_keypad_decimal"
+            app:layout_constraintTop_toBottomOf="@id/custom_amount_keypad_8"
+            style="@style/KeypadStyle" />
+        <com.twitter.ui.widget.TintableImageView
+            android:id="@id/custom_amount_keypad_backspace"
+            android:padding="12.0dip"
+            android:layout_height="0.0dip"
+            android:src="@drawable/ic_vector_arrow_left"
+            android:contentDescription="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/custom_amount_keypad_0"
+            app:layout_constraintTop_toTopOf="@id/custom_amount_keypad_0"
+            app:tint="?coreColorPrimaryText"
+            style="@style/KeypadStyle" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <include
+        android:id="@id/custom_amount_footer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/custom_amount_keypad"
+        layout="@layout/layout_tips_footer" />
+    <tag
+        android:value="TipJarBitcoinCustomAmountScreen"
+        android:id="@id/weaverComponent" />
+    <tag
+        android:value="com.twitter.tipjar.implementation.send.screen.custom.TipJarBitcoinCustomAmountScreenViewModel"
+        android:id="@id/viewModel" />
+    <tag
+        android:value="com.twitter.weaver.base.WeaverViewDelegateBinder"
+        android:id="@id/viewBinder" />
+</androidx.constraintlayout.widget.ConstraintLayout>

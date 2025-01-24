@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@id/compose_encrypted_toggle"
+        android:title="@string/dm_secret_conv_toggle_title"
+        app:actionLayout="@layout/dm_encrypted_toggle"
+        app:showAsAction="always" />
+</menu>

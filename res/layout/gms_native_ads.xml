@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.ui.view.GroupedRowView
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.gms.ads.nativead.NativeAdView
+        android:id="@id/gms_native_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <com.twitter.tweetview.core.LinearLayoutTweetView
+            android:id="@id/row"
+            android:background="@drawable/list_row_background"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            style="@style/LinearLayoutTweetView.ListRow" />
+    </com.google.android.gms.ads.nativead.NativeAdView>
+</com.twitter.ui.view.GroupedRowView>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:orientation="vertical"
+    android:padding="@dimen/space_8"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <com.twitter.ui.user.BaseUserView
+        android:id="@id/user_view"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:importantForAccessibility="no"
+        twitter:layout_constraintEnd_toEndOf="parent"
+        twitter:layout_constraintStart_toStartOf="parent"
+        twitter:layout_constraintTop_toTopOf="parent">
+        <com.twitter.media.ui.image.UserImageView
+            android:id="@id/user_image"
+            android:paddingTop="@dimen/space_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="@dimen/space_8"
+            android:layout_alignParentStart="true"
+            twitter:userImageSize="mini" />
+        <com.twitter.ui.user.MultilineUsernameView
+            android:textSize="@dimen/font_size_normal"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            android:id="@id/name_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/user_image" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textColor="?textColorSecondary"
+            android:ellipsize="end"
+            android:id="@id/screenname_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/name_item" />
+    </com.twitter.ui.user.BaseUserView>
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textStyle="bold"
+        android:id="@id/job_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_4"
+        twitter:layout_constraintEnd_toEndOf="parent"
+        twitter:layout_constraintStart_toStartOf="parent"
+        twitter:layout_constraintTop_toBottomOf="@id/user_view" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textColor="?textColorSecondary"
+        android:id="@id/job_location"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_4"
+        android:drawablePadding="@dimen/space_2"
+        android:drawableStart="@drawable/job_card_location_icon"
+        android:drawableTint="?textColorSecondary"
+        twitter:layout_constraintEnd_toEndOf="parent"
+        twitter:layout_constraintStart_toStartOf="parent"
+        twitter:layout_constraintTop_toBottomOf="@id/job_title" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textColor="?textColorSecondary"
+        android:id="@id/job_salary"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_4"
+        android:drawablePadding="@dimen/space_2"
+        android:drawableStart="@drawable/job_card_salary_icon"
+        android:drawableTint="?textColorSecondary"
+        twitter:layout_constraintEnd_toEndOf="parent"
+        twitter:layout_constraintStart_toStartOf="parent"
+        twitter:layout_constraintTop_toBottomOf="@id/job_location" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textColor="?textColorSecondary"
+        android:id="@id/job_description"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_12"
+        twitter:layout_constraintEnd_toEndOf="parent"
+        twitter:layout_constraintStart_toStartOf="parent"
+        twitter:layout_constraintTop_toBottomOf="@id/job_salary" />
+    <com.twitter.ui.components.button.legacy.TwitterButton
+        android:id="@id/view_job_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_12"
+        android:text="@string/view_job_button"
+        twitter:layout_constraintBottom_toBottomOf="parent"
+        twitter:layout_constraintEnd_toEndOf="parent"
+        twitter:layout_constraintStart_toStartOf="parent"
+        twitter:layout_constraintTop_toBottomOf="@id/job_description"
+        style="@style/TwitterButtonSmallPrimaryFilled" />
+</androidx.constraintlayout.widget.ConstraintLayout>

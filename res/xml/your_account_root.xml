@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference
+        android:summary="@string/settings_account_item_detail"
+        android:order="10" />
+    <Preference
+        android:icon="@drawable/ic_vector_person_stroke"
+        android:title="@string/settings_account_information_item_title"
+        android:key="pref_account"
+        android:summary="@string/settings_account_information_item_detail"
+        android:order="20" />
+    <Preference
+        android:icon="@drawable/ic_vector_lock_stroke"
+        android:title="@string/settings_change_password_item_title"
+        android:key="pref_change_your_password"
+        android:summary="@string/settings_change_password_item_detail"
+        android:order="30" />
+    <Preference
+        android:icon="@drawable/ic_vector_incoming"
+        android:title="@string/settings_download_data_item_title"
+        android:key="pref_download_archive"
+        android:summary="@string/settings_download_data_item_detail"
+        android:order="40" />
+    <Preference
+        android:icon="@drawable/ic_vector_heart_broken_stroke"
+        android:title="@string/settings_deactivate_account_title"
+        android:key="pref_deactivate_account"
+        android:summary="@string/settings_deactivate_item_detail"
+        android:order="50" />
+</PreferenceScreen>

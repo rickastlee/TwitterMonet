@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="horizontal"
+    android:id="@id/module_configuration_row"
+    android:background="@drawable/ripple_pressed_selector_rectangle"
+    android:clickable="true"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0">
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/header_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="top"
+            style="@style/ModuleOverviewHeaderText" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/body_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="bottom"
+            style="@style/ModuleOverviewDetailText" />
+    </LinearLayout>
+    <androidx.appcompat.widget.SwitchCompat
+        android:layout_gravity="center"
+        android:id="@id/module_visibility_switch"
+        android:clickable="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:importantForAccessibility="no" />
+</LinearLayout>

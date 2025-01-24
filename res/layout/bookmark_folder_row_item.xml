@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/folder_row_item_height"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.twitter.media.ui.fresco.FrescoMediaImageView
+        android:layout_gravity="center"
+        android:id="@id/folder_image"
+        android:layout_width="@dimen/space_48"
+        android:layout_height="@dimen/space_48"
+        android:layout_marginTop="@dimen/space_16"
+        android:layout_marginBottom="@dimen/space_16"
+        android:layout_marginStart="@dimen/space_24"
+        app:layout_constraintBottom_toBottomOf="@id/clickable_view"
+        app:layout_constraintStart_toStartOf="@id/clickable_view"
+        app:layout_constraintTop_toTopOf="@id/clickable_view"
+        app:roundingStrategy="circle"
+        app:scaleType="fill" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textAppearance="@style/BookmarkFolderTitle"
+        android:ellipsize="end"
+        android:id="@id/title"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_16"
+        android:layout_marginEnd="@dimen/space_16"
+        app:layout_constraintBottom_toBottomOf="@id/clickable_view"
+        app:layout_constraintEnd_toStartOf="@id/action_image"
+        app:layout_constraintStart_toEndOf="@id/folder_image"
+        app:layout_constraintTop_toTopOf="@id/clickable_view" />
+    <ImageView
+        android:id="@id/action_image"
+        android:layout_width="@dimen/space_24"
+        android:layout_height="@dimen/space_24"
+        android:contentDescription="@null"
+        android:layout_marginEnd="@dimen/space_16"
+        app:layout_constraintBottom_toBottomOf="@id/clickable_view"
+        app:layout_constraintEnd_toEndOf="@id/clickable_view"
+        app:layout_constraintTop_toTopOf="@id/clickable_view" />
+    <View
+        android:id="@id/clickable_view"
+        android:background="?selectableItemBackground"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

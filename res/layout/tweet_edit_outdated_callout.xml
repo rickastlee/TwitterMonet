@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:layout_gravity="top"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/font_size_subtext_2"
+        android:layout_marginTop="@dimen/space_1"
+        android:src="?iconWrite"
+        android:adjustViewBounds="true"
+        android:layout_marginEnd="@dimen/space_4"
+        app:tint="@color/gray_700" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_subtext_2"
+        android:textColor="@color/gray_700"
+        android:layout_gravity="right"
+        android:id="@id/outdated_callout_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/outdated_callout_tweet"
+        android:fontFamily="?fontFamilyMedium" />
+    <tag
+        android:value="EditOutdatedCallout"
+        android:id="@id/weaverComponent" />
+</LinearLayout>

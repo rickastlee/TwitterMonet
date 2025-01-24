@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="center"
+    android:id="@id/video_player_attribution"
+    android:background="@drawable/video_fullscreen_attribution_button"
+    android:visibility="gone"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/space_12"
+    android:minHeight="@dimen/fullscreen_attribution_min_height"
+    android:layout_centerHorizontal="true"
+    android:paddingStart="@dimen/space_12"
+    android:paddingEnd="@dimen/space_12"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <FrameLayout
+        android:layout_gravity="center"
+        android:id="@id/attribution_avatar_container"
+        android:background="@drawable/bg_in_stream_ads_advertiser_attribution_avatar"
+        android:padding="@dimen/space_1"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <com.twitter.media.ui.image.UserImageView
+            android:layout_gravity="center_vertical"
+            android:id="@id/attribution_avatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            twitter:imageType="profile"
+            twitter:roundingStrategy="circle"
+            twitter:userImageSize="nano" />
+    </FrameLayout>
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_small"
+        android:textColor="@color/white"
+        android:id="@id/attribution_cta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_4" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_small"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:ellipsize="end"
+        android:id="@id/attribution_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="@dimen/fullscreen_attribution_max_width"
+        android:maxLines="1"
+        android:layout_marginStart="@dimen/space_4" />
+</LinearLayout>

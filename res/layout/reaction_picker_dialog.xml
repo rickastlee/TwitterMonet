@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="@android:color/transparent"
+    android:paddingTop="@dimen/reaction_picker_shadow_y_padding"
+    android:paddingBottom="@dimen/reaction_picker_shadow_y_padding"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/reaction_picker_side_padding"
+    android:paddingEnd="@dimen/reaction_picker_side_padding"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@id/up_arrow"
+        android:layout_width="12.0dip"
+        android:layout_height="@dimen/reaction_picker_arrow_height"
+        android:src="@drawable/ic_tip_top"
+        android:elevation="@dimen/reaction_picker_elevation"
+        app:tint="?coreColorPopupBackground" />
+    <com.twitter.chat.messages.reactionpicker.ReactionPickerView
+        android:id="@id/picker_view"
+        android:background="@drawable/reactions_picker_background"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/reaction_picker_elevation" />
+    <ImageView
+        android:id="@id/down_arrow"
+        android:layout_width="12.0dip"
+        android:layout_height="@dimen/reaction_picker_arrow_height"
+        android:src="@drawable/ic_tip_bottom"
+        android:elevation="@dimen/reaction_picker_elevation"
+        app:tint="?coreColorPopupBackground" />
+</LinearLayout>

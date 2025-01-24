@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <Preference
+        android:summary="@string/settings_ads_business_partners_detail"
+        android:order="10" />
+    <com.twitter.settings.widget.LinkableSwitchPreferenceCompat
+        android:title="@string/settings_data_sharing_title"
+        android:key="third_party_data_sharing"
+        android:summary="@string/settings_data_sharing_summary"
+        android:order="20"
+        twitter:alwaysDisplayUrl="true"
+        twitter:clickableUrl="@string/learn_more_share_data_with_partners"
+        twitter:multilineTitle="true" />
+</PreferenceScreen>

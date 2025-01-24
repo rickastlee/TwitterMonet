@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:gravity="center_vertical"
+    android:id="@id/search_row_container"
+    android:background="?android:selectableItemBackground"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="locale"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <View
+        android:background="@color/ps__divider"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:layout_alignParentTop="true" />
+    <RelativeLayout
+        android:paddingTop="@dimen/ps__standard_spacing_16"
+        android:paddingBottom="@dimen/ps__standard_spacing_16"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <tv.periscope.android.view.PsTextView
+            android:textSize="@dimen/font_size_normal"
+            android:textColor="@color/ps__secondary_text"
+            android:id="@id/search_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ps__audience_selection_search_mutual_followers"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/ps__standard_spacing_16"
+            android:layout_marginEnd="@dimen/ps__standard_spacing_16"
+            android:layout_alignParentStart="true" />
+        <tv.periscope.android.view.PsImageView
+            android:id="@id/search_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ps__ic_search_blue"
+            android:scaleType="center"
+            android:layout_marginEnd="@dimen/ps__standard_spacing_16"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <View
+        android:background="@color/ps__divider"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

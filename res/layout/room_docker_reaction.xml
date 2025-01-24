@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@id/reaction_image"
+        android:background="@drawable/bg_reaction_image"
+        android:padding="@dimen/space_8"
+        android:visibility="gone"
+        android:layout_width="@dimen/avatar_width"
+        android:layout_height="@dimen/avatar_width"
+        android:src="@drawable/ic_emoji_1"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:scaleX="1.0"
+        android:scaleY="1.0"
+        android:importantForAccessibility="no"
+        android:elevation="@dimen/space_8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/reaction_button"
+        app:layout_constraintStart_toStartOf="@id/reaction_button"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@id/reaction_button"
+        android:padding="@dimen/space_4"
+        android:visibility="visible"
+        android:layout_width="@dimen/docker_reaction_button_size"
+        android:layout_height="@dimen/docker_reaction_button_size"
+        android:foreground="@drawable/ripple_selector_oval"
+        android:src="@drawable/ic_room_react"
+        android:contentDescription="@string/react_room_button"
+        android:layout_marginStart="@dimen/space_16"
+        android:layout_marginEnd="@dimen/space_20"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="?coreColorPrimaryText" />
+    <View
+        android:id="@id/reaction_tooltip_anchor"
+        android:visibility="gone"
+        android:layout_width="1.0dip"
+        android:layout_height="1.0dip"
+        android:layout_marginEnd="@dimen/space_20"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ViewStub
+        android:id="@id/persistent_reaction_stub"
+        android:visibility="gone"
+        android:layout="@layout/room_raised_hand_reaction_layout"
+        android:inflatedId="@id/persistent_reaction_stub"
+        android:layout_width="@dimen/avatar_width"
+        android:layout_height="@dimen/avatar_width"
+        app:layout_constraintBottom_toBottomOf="@id/reaction_button"
+        app:layout_constraintEnd_toEndOf="@id/reaction_button"
+        app:layout_constraintStart_toStartOf="@id/reaction_button"
+        app:layout_constraintTop_toTopOf="@id/reaction_button" />
+    <tag
+        android:value="RoomDockerReaction"
+        android:id="@id/weaverComponent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

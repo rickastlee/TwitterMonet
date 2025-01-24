@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <tag
+        android:value="BirdwatchPivot"
+        android:id="@id/weaverComponent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@id/content"
+        android:background="@drawable/tweet_row_view_birdwatch_pivot_background_mask"
+        android:clipChildren="true"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:foreground="@drawable/tweet_row_view_birdwatch_pivot_background"
+        android:clipToOutline="true">
+        <View
+            android:id="@id/top_row_background"
+            android:background="@drawable/tweet_row_view_birdwatch_pivot_header_background"
+            android:layout_width="0.0dip"
+            android:layout_height="0.0dip"
+            app:layout_constraintBottom_toTopOf="@id/labelBarrier"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@id/icon"
+            android:layout_width="16.0dip"
+            android:layout_height="16.0dip"
+            android:layout_marginTop="@dimen/space_12"
+            android:src="@drawable/ic_vector_people_crowd"
+            android:importantForAccessibility="no"
+            android:layout_marginStart="@dimen/space_12"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:tint="@color/twitter_blue" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_subtext_1"
+            android:textStyle="bold"
+            android:textColor="?coreColorPrimaryText"
+            android:id="@id/birdwatch_pivot_header"
+            android:paddingBottom="@dimen/space_12"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:text="@string/birdwatch_pivot_header_title"
+            android:includeFontPadding="false"
+            android:layout_marginStart="@dimen/space_4"
+            android:layout_marginEnd="@dimen/space_12"
+            app:layout_constraintEnd_toStartOf="@id/birdwatch_pivot_arrow"
+            app:layout_constraintStart_toEndOf="@id/icon"
+            app:layout_constraintTop_toTopOf="@id/icon" />
+        <View
+            android:id="@id/birdwatch_pivot_arrow"
+            android:background="@drawable/ic_vector_arrow_right"
+            android:layout_width="@dimen/font_size_normal"
+            android:layout_height="@dimen/font_size_normal"
+            android:layout_marginStart="@dimen/space_8"
+            android:layout_marginEnd="@dimen/space_12"
+            android:backgroundTint="?coreColorPrimaryText"
+            app:layout_constraintBottom_toBottomOf="@id/icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/icon" />
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@id/labelBarrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="birdwatch_pivot_header" />
+        <View
+            android:id="@id/subheader_row_background"
+            android:background="@drawable/tweet_row_view_birdwatch_pivot_subheader_background"
+            android:layout_width="0.0dip"
+            android:layout_height="0.0dip"
+            app:layout_constraintBottom_toBottomOf="@id/labelSubheaderBarrier"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/labelBarrier" />
+        <ImageView
+            android:id="@id/icon_subheader"
+            android:layout_width="16.0dip"
+            android:layout_height="16.0dip"
+            android:src="@drawable/ic_vector_eye_off"
+            android:importantForAccessibility="no"
+            android:layout_marginStart="@dimen/space_12"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/subheader_row_background"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:tint="@color/gray_700" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_subtext_1"
+            android:textStyle="bold"
+            android:textColor="@color/gray_700"
+            android:id="@id/birdwatch_pivot_subheader"
+            android:paddingBottom="@dimen/space_12"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:layout_marginStart="@dimen/space_4"
+            android:layout_marginEnd="@dimen/space_12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/icon_subheader"
+            app:layout_constraintTop_toBottomOf="@id/labelBarrier" />
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@id/labelSubheaderBarrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="birdwatch_pivot_subheader" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_body"
+            android:textColor="@color/gray_700"
+            android:id="@id/birdwatch_pivot_subtitle"
+            android:paddingBottom="@dimen/space_12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_12"
+            android:paddingStart="@dimen/space_12"
+            android:paddingEnd="@dimen/space_12"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/labelSubheaderBarrier" />
+        <ImageView
+            android:id="@id/birdwatch_pivot_cta_divider"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/space_2"
+            android:src="@drawable/tweet_row_view_birdwatch_pivot_cta_divider_tentative"
+            android:importantForAccessibility="no"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/birdwatch_pivot_subtitle" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_subtext_1"
+            android:textColor="?coreColorPrimaryText"
+            android:id="@id/birdwatch_pivot_cta_prompt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/space_12"
+            android:paddingEnd="@dimen/space_12"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="@id/birdwatch_pivot_cta_title"
+            app:layout_constraintEnd_toStartOf="@id/birdwatch_pivot_cta_title"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/birdwatch_pivot_cta_title" />
+        <com.twitter.ui.components.button.legacy.TwitterButton
+            android:id="@id/birdwatch_pivot_cta_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_12"
+            android:layout_marginBottom="@dimen/space_12"
+            android:layout_marginEnd="@dimen/space_12"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintTop_toBottomOf="@id/birdwatch_pivot_cta_divider"
+            app:styleIdOff="@style/TwitterButtonMediumInvertedOutlined"
+            app:styleIdOn="@style/TwitterButtonMediumBrandOutlined"
+            style="@style/TwitterButtonSmallPrimaryOutlined" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_subtext_2"
+        android:textColor="?coreColorSecondaryText"
+        android:id="@id/birdwatch_pivot_footer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_12"
+        android:includeFontPadding="false"
+        android:layout_marginStart="@dimen/space_4"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintTop_toBottomOf="@id/content" />
+</androidx.constraintlayout.widget.ConstraintLayout>

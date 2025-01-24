@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_gravity="bottom"
+    android:orientation="vertical"
+    android:background="?coreColorToolbarBg"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="vertical"
+        android:paddingTop="@dimen/space_8"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="?profileNameFontSize"
+            android:textStyle="bold"
+            android:textColor="?coreColorPrimaryText"
+            android:id="@id/name"
+            android:background="@drawable/ripple_pressed_selector_rectangle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0.0dip"
+            android:includeFontPadding="false"
+            android:paddingStart="@dimen/space_12"
+            android:paddingEnd="@dimen/space_12" />
+        <LinearLayout
+            android:id="@id/user_name_container"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/profile_text_margin_x_small"
+            android:layout_marginBottom="6.0dip"
+            android:paddingStart="@dimen/space_12"
+            android:paddingEnd="@dimen/space_12">
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textSize="?statsSizeForSmall"
+                android:textColor="?coreColorSecondaryText"
+                android:id="@id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                twitter:antiSpoofing="true" />
+            <include
+                android:id="@id/follows_you"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                layout="@layout/profile_follows_you" />
+        </LinearLayout>
+        <com.twitter.ui.user.UserLabelView
+            android:id="@id/user_label_view"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_12"
+            android:layout_marginEnd="@dimen/space_12"
+            twitter:wrapText="true"
+            style="@style/UserLabelView.Clickable" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@id/profile_follow_module_holder"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/profile_text_margin_x_small"
+            android:layout_marginBottom="6.0dip">
+            <com.twitter.app.profiles.ProfileHeaderSocialProofCaret
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/profile_header_social_proof_caret_height"
+                twitter:caretFillColor="?coreColorSectionDivider"
+                twitter:caretStrokeColor="?coreColorBorder"
+                twitter:caretStrokeWidth="@dimen/profile_header_social_proof_caret_stroke" />
+            <include
+                android:id="@id/bonus_follows_view"
+                android:background="?coreColorSectionDivider"
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/bonus_follows_layout" />
+            <ListView
+                android:id="@id/cluster_follow_listview"
+                android:background="?coreColorSectionDivider"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:divider="?coreColorBorder"
+                android:dividerHeight="@dimen/border_thickness"
+                android:footerDividersEnabled="true"
+                android:contentDescription="@string/cluster_follow_listview_content_description" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@id/profile_user_details"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6.0dip"
+            android:layout_marginBottom="0.0dip"
+            android:paddingStart="@dimen/space_12"
+            android:paddingEnd="@dimen/space_12">
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textSize="@dimen/font_size_normal"
+                android:textColor="?coreColorPrimaryText"
+                android:id="@id/user_bio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:textAlignment="viewStart" />
+            <ViewStub
+                android:id="@id/translation_view_stub"
+                android:layout="@layout/profile_bio_translation"
+                android:inflatedId="@id/translation_container"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@id/icon_items_container"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/profile_icon_item_text_margin" />
+        </LinearLayout>
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@id/stats_container"
+            android:paddingTop="0.0dip"
+            android:paddingBottom="0.0dip"
+            android:layout_marginTop="@dimen/profile_stats_margin_top"
+            android:layout_marginBottom="0.0dip"
+            android:paddingStart="@dimen/profile_stats_padding"
+            android:paddingEnd="@dimen/profile_stats_padding"
+            twitter:flexWrap="wrap"
+            style="@style/TweetStats">
+            <com.twitter.ui.tweet.TweetStatView
+                android:id="@id/following_stat"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                style="@style/ProfileStatView" />
+            <com.twitter.ui.tweet.TweetStatView
+                android:id="@id/followers_stat"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                style="@style/ProfileStatView" />
+            <com.twitter.ui.tweet.TweetStatView
+                android:id="@id/creator_subscriptions_stat"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                style="@style/ProfileStatView" />
+            <com.twitter.ui.tweet.TweetStatView
+                android:id="@id/super_followers_stat"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                style="@style/ProfileStatView" />
+        </com.google.android.flexbox.FlexboxLayout>
+        <com.twitter.ui.socialproof.SocialProofView
+            android:id="@id/profile_social_proof"
+            android:paddingBottom="@dimen/space_4"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_4"
+            android:translationX="@dimen/social_proof_icon_offset"
+            style="@style/SocialProofView">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:id="@id/social_proof_container"
+                android:background="@drawable/ripple_pressed_selector_rectangle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ViewStub
+                    android:layout_gravity="center_vertical"
+                    android:id="@id/social_proof_face_pile_stub"
+                    android:layout="@layout/profile_social_proof_facepile"
+                    android:inflatedId="@id/social_proof_face_pile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/social_proof_facepile_margin" />
+                <com.twitter.ui.widget.UnpaddedTextLayoutView
+                    android:textSize="@dimen/font_size_small"
+                    android:id="@id/social_proof_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/SocialProofTextView" />
+            </LinearLayout>
+        </com.twitter.ui.socialproof.SocialProofView>
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_normal"
+            android:id="@id/profile_muted"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            style="@style/ProfileMuteState" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/profile_teams_contributee"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/teams_profile_contributor_message"
+            style="@style/ProfileTeamsContributeeState" />
+    </LinearLayout>
+    <include
+        layout="@layout/profile_module_container" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@id/profile_cwc_interstitial"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@id/profile_header_divider"
+            android:background="@drawable/bg_section_divider"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/section_divider_height" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:paddingTop="@dimen/space_28"
+            android:paddingBottom="@dimen/space_28"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/space_12"
+            android:paddingEnd="@dimen/space_12">
+            <include
+                layout="@layout/profile_withheld_warning_content" />
+        </LinearLayout>
+        <View
+            android:background="@drawable/bg_section_divider"
+            android:layout_width="fill_parent"
+            android:layout_height="8.0dip" />
+    </LinearLayout>
+</LinearLayout>

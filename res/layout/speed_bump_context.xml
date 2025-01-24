@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@id/camera_context"
+    android:visibility="gone"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@id/speed_bump_context_top_controls_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <include
+            layout="@layout/context_back_button" />
+        <include
+            layout="@layout/mute_button" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <include
+        layout="@layout/speed_bump_context_bar" />
+    <include
+        layout="@layout/nav_bar_scrim_divider" />
+</FrameLayout>

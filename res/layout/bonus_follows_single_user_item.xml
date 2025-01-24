@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.ui.view.GroupedRowView
+    android:background="@drawable/ripple_pressed_selector_rectangle"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <com.twitter.ui.user.BaseUserView
+        android:id="@id/user_view"
+        android:paddingTop="@dimen/space_12"
+        android:paddingBottom="@dimen/space_12"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_8"
+        android:layout_marginEnd="@dimen/space_8">
+        <include
+            layout="@layout/user_with_bio" />
+        <FrameLayout
+            android:id="@id/action_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true">
+            <com.twitter.ui.widget.TintableImageView
+                android:layout_gravity="center_vertical"
+                android:id="@id/dismiss"
+                android:padding="@dimen/prompt_dismiss_padding"
+                android:focusable="true"
+                android:clickable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="?iconClose"
+                android:scaleType="fitCenter"
+                android:contentDescription="?dismissString"
+                twitter:tintColorList="?abstractColorMediumGray" />
+        </FrameLayout>
+    </com.twitter.ui.user.BaseUserView>
+</com.twitter.ui.view.GroupedRowView>

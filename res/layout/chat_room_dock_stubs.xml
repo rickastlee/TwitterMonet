@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@id/barrier"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        twitter:barrierDirection="top"
+        twitter:constraint_referenced_ids="docker_room,room_replay_dock" />
+    <ViewStub
+        android:id="@id/room_replay_dock"
+        android:layout="@layout/room_replay_dock"
+        android:inflatedId="@id/room_replay_dock"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/space_64"
+        twitter:layout_constraintBottom_toBottomOf="parent"
+        twitter:layout_constraintEnd_toEndOf="parent"
+        twitter:layout_constraintStart_toStartOf="parent">
+        <tag
+            android:value="RoomReplayDockViewStub"
+            android:id="@id/weaverComponent" />
+    </ViewStub>
+    <ViewStub
+        android:id="@id/docker_room"
+        android:layout="@layout/room_docker"
+        android:inflatedId="@id/docker_room"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/space_64"
+        twitter:layout_constraintBottom_toBottomOf="parent"
+        twitter:layout_constraintEnd_toEndOf="parent"
+        twitter:layout_constraintStart_toStartOf="parent">
+        <tag
+            android:value="RoomDockerStub"
+            android:id="@id/weaverComponent" />
+    </ViewStub>
+</androidx.constraintlayout.widget.ConstraintLayout>

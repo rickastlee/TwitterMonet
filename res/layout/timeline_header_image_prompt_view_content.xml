@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+        <FrameLayout
+            android:orientation="horizontal"
+            android:id="@id/header_background"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_32">
+            <com.twitter.media.ui.fresco.FrescoMediaImageView
+                android:id="@id/header_image"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitCenter"
+                android:contentDescription="@string/timeline_message_header_image_content_description" />
+            <ImageView
+                android:id="@id/caret"
+                android:padding="@dimen/space_8"
+                android:focusable="true"
+                android:clickable="true"
+                android:layout_width="@dimen/space_32"
+                android:layout_height="@dimen/space_32"
+                android:src="@drawable/ic_vector_overflow"
+                android:contentDescription="@string/timeline_message_caret_content_description"
+                app:tint="?coreColorInlineAction"
+                style="@style/TimelineMessageHeaderImagePromptDismiss" />
+        </FrameLayout>
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_title_3"
+            android:textStyle="bold"
+            android:textColor="?coreColorPrimaryText"
+            android:layout_gravity="start"
+            android:id="@id/header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_8"
+            android:paddingHorizontal="@dimen/space_32" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_body"
+            android:textColor="?coreColorPrimaryText"
+            android:id="@id/body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_28"
+            android:paddingHorizontal="@dimen/space_32" />
+        <LinearLayout
+            android:gravity="start"
+            android:layout_gravity="start"
+            android:orientation="vertical"
+            android:id="@id/buttons_container"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_32"
+            android:paddingHorizontal="@dimen/space_32">
+            <com.twitter.ui.components.button.compose.HorizonComposeButton
+                android:id="@id/primary_action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TimelineMessagePrimaryAction" />
+            <com.twitter.ui.components.button.compose.HorizonComposeButton
+                android:id="@id/secondary_action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_16"
+                style="@style/TimelineMessageSecondaryAction" />
+        </LinearLayout>
+    </LinearLayout>
+</merge>

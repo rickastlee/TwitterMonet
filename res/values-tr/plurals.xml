@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="admin_tools_subtitle_members">
+        <item quantity="other">%d üye</item>
+        <item quantity="one">%d üye</item>
+    </plurals>
+    <plurals name="badge_item_count">
+        <item quantity="other">%d yeni öğe</item>
+        <item quantity="one">%d yeni öğe</item>
+    </plurals>
+    <plurals name="cohost_current_count">
+        <item quantity="other">%1$d yardımcı</item>
+        <item quantity="one">%1$d yardımcı</item>
+    </plurals>
+    <plurals name="community_member_count">
+        <item quantity="other">%d Topluluk Üyesi</item>
+        <item quantity="one">%d Topluluk üyesi</item>
+    </plurals>
+    <plurals name="community_moderator_count">
+        <item quantity="other">%d Moderatör</item>
+        <item quantity="one">%d Moderatör</item>
+    </plurals>
+    <plurals name="community_navigation_join_requests_label">
+        <item quantity="other">%s istek</item>
+        <item quantity="one">%s istek</item>
+    </plurals>
+    <plurals name="community_navigation_new_unread_tweets_label">
+        <item quantity="other">%s yeni gönderi</item>
+        <item quantity="one">%s yeni gönderi</item>
+    </plurals>
+    <plurals name="community_navigation_pending_reports_label">
+        <item quantity="other">%s bildirim</item>
+        <item quantity="one">%s bildirim</item>
+    </plurals>
+    <plurals name="composer_count_progress_overflow_warning">
+        <item quantity="other">%d karakter fazla</item>
+        <item quantity="one">%d karakter fazla</item>
+    </plurals>
+    <plurals name="composer_count_progress_warning">
+        <item quantity="other">%d karakter kaldı</item>
+        <item quantity="one">%d karakter kaldı</item>
+    </plurals>
+    <plurals name="content_description_fleet_item_space_with_others">
+        <item quantity="other">%1$s adlı kullanıcının diğer %2$d kişiyle sürdürdüğü sohbet odası</item>
+        <item quantity="one">%1$s adlı kullanıcının diğer %2$d kişiyle sürdürdüğü sohbet odası</item>
+    </plurals>
+    <plurals name="data_sync_notif_title">
+        <item quantity="other">%d yeni etkileşim</item>
+        <item quantity="one">%d yeni etkileşim</item>
+    </plurals>
+    <plurals name="days">
+        <item quantity="other">%d gün</item>
+        <item quantity="one">%d gün</item>
+    </plurals>
+    <plurals name="dm_add_people_failure">
+        <item quantity="other">%d kullanıcı bu gruba eklenemedi.</item>
+        <item quantity="one">Kullanıcı bu gruba eklenemedi.</item>
+    </plurals>
+    <plurals name="dm_add_people_success">
+        <item quantity="other">%d kullanıcı gruba eklendi.</item>
+        <item quantity="one">Kullanıcı gruba eklendi.</item>
+    </plurals>
+    <plurals name="dm_follower_count_no_joined_date">
+        <item quantity="other">{num_followers} Takipçi</item>
+        <item quantity="one">{num_followers} Takipçi</item>
+    </plurals>
+    <plurals name="dm_group_account_name">
+        <item quantity="other">%d kişi</item>
+        <item quantity="one">1 kişi</item>
+    </plurals>
+    <plurals name="dm_group_chat_count">
+        <item quantity="other">%d kişiyle toplu sohbet</item>
+        <item quantity="one">%d kişiyle toplu sohbet</item>
+    </plurals>
+    <plurals name="dm_group_conversation_participant_count">
+        <item quantity="other">%1$d kişi</item>
+        <item quantity="one">%1$d kişi</item>
+    </plurals>
+    <plurals name="dm_group_participant_count">
+        <item quantity="other">Bu grupta %1$s kişi var</item>
+        <item quantity="one">Bu grupta %1$s kişi var</item>
+    </plurals>
+    <plurals name="dm_group_participant_count_person_details">
+        <item quantity="other">diğer %1$s kişi</item>
+        <item quantity="one">diğer %1$s kişi</item>
+    </plurals>
+    <plurals name="dm_image_profile">
+        <item quantity="other">%s adlı kullanıcının profil resimleri</item>
+        <item quantity="one">%s adlı kişinin profil resmi</item>
+    </plurals>
+    <plurals name="dm_new_people_you_may_know">
+        <item quantity="other">%d tanıyor olabileceğin yeni kişi</item>
+        <item quantity="one">Tanıyor olabileceğin %d yeni kişi</item>
+    </plurals>
+    <plurals name="dm_new_requests">
+        <item quantity="other">%d yeni istek</item>
+        <item quantity="one">%d yeni istek</item>
+    </plurals>
+    <plurals name="dm_participant_added_by_deleted_user">
+        <item quantity="other">{participants} eklendi</item>
+        <item quantity="one">{participants} eklendi</item>
+    </plurals>
+    <plurals name="dm_pending_requests">
+        <item quantity="other">%s bekleyen istek</item>
+        <item quantity="one">%d bekleyen istek</item>
+    </plurals>
+    <plurals name="dm_people_you_may_know">
+        <item quantity="other">Tanıyor olabileceğin %d kişi</item>
+        <item quantity="one">Tanıyor olabileceğin %d kişi</item>
+    </plurals>
+    <plurals name="dm_pinned_conversations_max_count_exceeded_title">
+        <item quantity="other">Yalnızca %d sohbet sabitleyebilirsin</item>
+        <item quantity="one">Yalnızca %d sohbet sabitleyebilirsin</item>
+    </plurals>
+    <plurals name="dm_state_seen_by">
+        <item quantity="other">%d kişi gördü</item>
+        <item quantity="one">%d kişi gördü</item>
+    </plurals>
+    <plurals name="dm_unread_messages">
+        <item quantity="other">%d okunmamış mesaj</item>
+        <item quantity="one">%d okunmamış mesaj</item>
+    </plurals>
+    <plurals name="dm_user_joined_and_follower_count">
+        <item quantity="other">{joined_date} Tarihinde • {num_followers} Takipçi Katıldı</item>
+        <item quantity="one">{joined_date} Tarihinde • {num_followers} Takipçi Katıldı</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="other">%d saniye ileri sar</item>
+        <item quantity="one">%d saniye ileri sar</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="other">%d saniye geri sar</item>
+        <item quantity="one">%d saniye geri sar</item>
+    </plurals>
+    <plurals name="facepile_content_description">
+        <item quantity="other">%s adlı kullanıcının profil resimleri</item>
+        <item quantity="one">%s adlı kullanıcının profil resmi</item>
+    </plurals>
+    <plurals name="full_screen_gallery_header_add">
+        <item quantity="other">%d adet ekle</item>
+        <item quantity="one">%d adet ekle</item>
+    </plurals>
+    <plurals name="graphql_errors_button">
+        <item quantity="other">%d Hataları</item>
+        <item quantity="one">%d Hatası</item>
+    </plurals>
+    <plurals name="guest_management_max_cohost_count_label">
+        <item quantity="other">Yalnızca %1$d yardımcı eklemene izin verilir</item>
+        <item quantity="one">Yalnızca %1$d yardımcı eklemene izin verilir</item>
+    </plurals>
+    <plurals name="guest_management_open_cohost_count_label">
+        <item quantity="other">En fazla %1$d kişi daha ekle.</item>
+        <item quantity="one">En fazla %1$d kişi daha ekle.</item>
+    </plurals>
+    <plurals name="host_kudos_num_followers_gained">
+        <item quantity="other">%1$d yeni takipçin var!</item>
+        <item quantity="one">%1$d yeni takipçin var!</item>
+    </plurals>
+    <plurals name="hours">
+        <item quantity="other">%d saat</item>
+        <item quantity="one">%d saat</item>
+    </plurals>
+    <plurals name="humanization_prompt_followers">
+        <item quantity="other">%1$s, %2$s adlı kullanıcıyı takip ediyor.</item>
+        <item quantity="one">%1$s, %2$s adlı kullanıcıyı takip ediyor.</item>
+    </plurals>
+    <plurals name="humanization_prompt_topics">
+        <item quantity="other">Sen ve %1$s, %2$s konularını takip ediyorsunuz.</item>
+        <item quantity="one">Sen ve %1$s, %2$s konusunu takip ediyorsunuz.</item>
+    </plurals>
+    <plurals name="likes">
+        <item quantity="other">%d beğeni</item>
+        <item quantity="one">%d beğeni</item>
+    </plurals>
+    <plurals name="list_member_count">
+        <item quantity="other">Üye</item>
+        <item quantity="one">Üye</item>
+    </plurals>
+    <plurals name="media_alt_text_prompt_dialog_message">
+        <item quantity="other">"İyi resim açıklamaları, kısa ve öz ancak ayrıntılı olur. Resimde bulunan herhangi bir metni özetlediğinden veya tamamen yazdığından emin ol.
+
+Yazdığın açıklamalar, X'i engelli kişiler ve daha fazla bağlama ihtiyaç duyanlar için erişilebilir kılar.
+
+Bu hatırlatıcıyı Erişilebilirlik Ayarlarında devre dışı bırakabilirsin."</item>
+        <item quantity="one">"İyi resim açıklamaları, kısa ve öz ancak ayrıntılı olur. Resimde bulunan herhangi bir metni özetlediğinden veya tamamen yazdığından emin ol.
+
+Yazdığın açıklamalar, X'i engelli kişiler ve daha fazla bağlama ihtiyaç duyanlar için erişilebilir kılar.
+
+Bu hatırlatıcıyı Erişilebilirlik Ayarlarında devre dışı bırakabilirsin."</item>
+    </plurals>
+    <plurals name="media_alt_text_prompt_dialog_positive_btn_text">
+        <item quantity="other">Açıklama ekle</item>
+        <item quantity="one">Açıklama ekle</item>
+    </plurals>
+    <plurals name="media_alt_text_prompt_dialog_title">
+        <item quantity="other">Resimlerini erişilebilir kılmayı unutma</item>
+        <item quantity="one">Resmini erişilebilir kılmayı unutma</item>
+    </plurals>
+    <plurals name="media_monetization_settings_categories_selected">
+        <item quantity="other">%d kategori seçildi</item>
+        <item quantity="one">%d kategori seçildi</item>
+    </plurals>
+    <plurals name="media_tag_remaining">
+        <item quantity="other">%d kişiye kadar daha etiketle</item>
+        <item quantity="one">%d kişiye kadar etiketle.</item>
+    </plurals>
+    <plurals name="media_tag_tagged">
+        <item quantity="other">%d kişi etiketlendi</item>
+        <item quantity="one">%d kişi etiketlendi</item>
+    </plurals>
+    <plurals name="member_count">
+        <item quantity="other">%s Üye</item>
+        <item quantity="one">%s Üye</item>
+    </plurals>
+    <plurals name="members">
+        <item quantity="other">%s üye</item>
+        <item quantity="one">%s üye</item>
+    </plurals>
+    <plurals name="minutes">
+        <item quantity="other">%d dakika</item>
+        <item quantity="one">%d dakika</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d yeni bildirim</item>
+        <item quantity="one">%d yeni bildirim</item>
+    </plurals>
+    <plurals name="muted_keyword_bulk_delete_success">
+        <item quantity="other">%d kelime silindi</item>
+        <item quantity="one">%d kelime silindi</item>
+    </plurals>
+    <plurals name="muted_keyword_selected_count">
+        <item quantity="other">%d seçildi</item>
+        <item quantity="one">%d seçildi</item>
+    </plurals>
+    <plurals name="narrowcast_community_member_count">
+        <item quantity="other">%s Üye</item>
+        <item quantity="one">%s Üye</item>
+    </plurals>
+    <plurals name="narrowcast_trusted_friends_count">
+        <item quantity="other">%s kişi</item>
+        <item quantity="one">%s kişi</item>
+    </plurals>
+    <plurals name="others">
+        <item quantity="other">diğer %d kişi</item>
+        <item quantity="one">diğer 1 kişi</item>
+    </plurals>
+    <plurals name="product_count">
+        <item quantity="other">%1$d ürün</item>
+        <item quantity="one">%1$d ürün</item>
+    </plurals>
+    <plurals name="profile_creator_subscriptions_count">
+        <item quantity="other">Abonelikler</item>
+        <item quantity="one">Abonelik</item>
+    </plurals>
+    <plurals name="profile_follower_count">
+        <item quantity="other">Takipçi</item>
+        <item quantity="one">Takipçi</item>
+    </plurals>
+    <plurals name="profile_friends_following_others">
+        <item quantity="other">%d kişi daha</item>
+        <item quantity="one">%d kişi daha</item>
+    </plurals>
+    <plurals name="profile_super_followers_count">
+        <item quantity="other">Aboneler</item>
+        <item quantity="one">Abone</item>
+    </plurals>
+    <plurals name="profile_toolbar_subtitle_articles">
+        <item quantity="other">%s Makale</item>
+        <item quantity="one">%s Makale</item>
+    </plurals>
+    <plurals name="profile_toolbar_subtitle_likes">
+        <item quantity="other">%s Beğeni</item>
+        <item quantity="one">%s Beğeni</item>
+    </plurals>
+    <plurals name="profile_toolbar_subtitle_media">
+        <item quantity="other">%s Fotoğraflar ve videolar</item>
+        <item quantity="one">%s Fotoğraf</item>
+    </plurals>
+    <plurals name="profile_toolbar_subtitle_timeline">
+        <item quantity="other">%s gönderileri</item>
+        <item quantity="one">%s gönderisi</item>
+    </plurals>
+    <plurals name="ps__accessibility_broadcaster_stats_graph_peak_msg">
+        <item quantity="other">Yayıncı seyirci grafiği. %2$s sürede %1$d ile en yüksek seyirci sayısına ulaştın.</item>
+        <item quantity="zero">Yayıncı seyirci grafiği</item>
+        <item quantity="one">Yayıncı seyirci grafiği. %2$s sürede %1$d ile en yüksek seyirci sayısına ulaştın.</item>
+    </plurals>
+    <plurals name="ps__accessibility_broadcaster_stats_graph_point_msg">
+        <item quantity="other">%2$s sürede %1$d seyircin oldu.</item>
+        <item quantity="one">%2$s sürede %1$d seyircin oldu.</item>
+    </plurals>
+    <plurals name="ps__invite_follower">
+        <item quantity="other">%d takipçi</item>
+        <item quantity="zero">Hiç takipçi yok</item>
+        <item quantity="one">%d takipçi</item>
+    </plurals>
+    <plurals name="ps__invited_num_followers_embolden">
+        <item quantity="other">*%1$s*, %2$s kişi davet etti</item>
+        <item quantity="one">*%1$s*, %2$s kişi davet etti</item>
+    </plurals>
+    <plurals name="ps__moderation_report_muted_by_moderator">
+        <item quantity="other">%1$s (%2$d) *tarafından sessize alındı*</item>
+        <item quantity="one">%1$s *tarafından sessize alındı*</item>
+    </plurals>
+    <plurals name="ps__moderation_report_unmuted_by_moderator">
+        <item quantity="other">%1$s (%2$d) *tarafından sesi açıldı*</item>
+        <item quantity="one">%1$s *tarafından sesi açıldı*</item>
+    </plurals>
+    <plurals name="ps__new_messages">
+        <item quantity="other">%1$d Yeni Mesaj</item>
+        <item quantity="one">%1$d Yeni Mesaj</item>
+    </plurals>
+    <plurals name="ps__num_hearts">
+        <item quantity="other">%s kalp</item>
+        <item quantity="one">%s kalp</item>
+    </plurals>
+    <plurals name="ps__stats_live_viewers">
+        <item quantity="other">CANLI İZLEYİCİ</item>
+        <item quantity="one">CANLI İZLEYİCİ</item>
+    </plurals>
+    <plurals name="ps__stats_replay_viewers">
+        <item quantity="other">YENİDEN OYNATAN İZLEYİCİ</item>
+        <item quantity="one">YENİDEN OYNATAN İZLEYİCİ</item>
+    </plurals>
+    <plurals name="ps__time_format_days">
+        <item quantity="other">%d Gün</item>
+        <item quantity="one">%d Gün</item>
+    </plurals>
+    <plurals name="ps__time_format_hours">
+        <item quantity="other">%d Saat</item>
+        <item quantity="one">%d Saat</item>
+    </plurals>
+    <plurals name="ps__time_format_minutes">
+        <item quantity="other">%d Dakika</item>
+        <item quantity="one">%d Dakika</item>
+    </plurals>
+    <plurals name="ps__time_format_seconds">
+        <item quantity="other">%d Saniye</item>
+        <item quantity="one">%d Saniye</item>
+    </plurals>
+    <plurals name="recording_replay_count_preview">
+        <item quantity="other">%s tekrar yayın</item>
+        <item quantity="one">%s yeniden oynat</item>
+    </plurals>
+    <plurals name="relationship_followers_following_others">
+        <item quantity="other">diğer %d kişi</item>
+        <item quantity="one">diğer %d kişi</item>
+    </plurals>
+    <plurals name="replies">
+        <item quantity="other">%d yanıt</item>
+        <item quantity="one">%d yanıt</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_and_n_others">
+        <item quantity="other">﻿%1$s ve diğer %2$d kişiye﻿ yanıt olarak</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_and_n_others_exclusive">
+        <item quantity="other">%1$s﻿ ve %2$d kullanıcıya﻿ daha yanıt veriyorsun. Yanıtın diğer Abonelere de görünür olacak.</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_and_n_others_in_space">
+        <item quantity="other">﻿%3$s﻿ sohbet odasındaki ﻿%1$s ve %2$d diğer﻿ kullanıcıya yanıt olarak</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_someone_and_n_others">
+        <item quantity="other">﻿%1$s %2$s ve diğer %3$d kişiye﻿ yanıt olarak</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_someone_and_n_others_exclusive">
+        <item quantity="other">﻿%1$s %2$s ve %3$d kullanıcıya﻿ daha yanıt veriyorsun. Yanıtın diğer Abonelere de görünür olacak.</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_someone_and_n_others_in_space">
+        <item quantity="other">﻿%4$s﻿ sohbet odasındaki ﻿%1$s, %2$s ve %3$d diğer﻿ kullanıcıya yanıt olarak</item>
+    </plurals>
+    <plurals name="reported_tweet_reported_by">
+        <item quantity="other">{{}}%1$s üyeleri{{}} tarafından bildirildi</item>
+        <item quantity="one">{{}}%1$s{{}} tarafından bildirildi</item>
+    </plurals>
+    <plurals name="retweets">
+        <item quantity="other">%d yeniden gönderi</item>
+        <item quantity="one">%d yeniden gönderi</item>
+    </plurals>
+    <plurals name="safety_mode_preview_description">
+        <item quantity="other">Taciz veya spam içerme olasılığı nedeniyle %d hesabı işaretledik.</item>
+        <item quantity="one">Taciz veya spam içerme olasılığı nedeniyle %d hesabı işaretledik.</item>
+    </plurals>
+    <plurals name="seconds">
+        <item quantity="other">%d saniye</item>
+        <item quantity="one">%d saniye</item>
+    </plurals>
+    <plurals name="send_cohost_invite">
+        <item quantity="other">Yardımcı daveti gönder</item>
+        <item quantity="one">Yardımcı daveti gönder</item>
+    </plurals>
+    <plurals name="settings_notif_tweets_count">
+        <item quantity="other">%d kişi</item>
+        <item quantity="one">%d kişi</item>
+    </plurals>
+    <plurals name="social_follow_and_follow_and_others">
+        <item quantity="other">%1$s, %2$s ve %3$d diğer kişi takip ediyor</item>
+        <item quantity="one">%1$s, %2$s ve diğer %3$d kişi takip ediyor</item>
+    </plurals>
+    <plurals name="spaces_additional_participants">
+        <item quantity="other">+%1$s dinleyici daha</item>
+        <item quantity="one">+%1$s dinleyici daha</item>
+    </plurals>
+    <plurals name="spaces_blocked_warning">
+        <item quantity="other">Konuşan %1$d kişiyi engellediniz</item>
+        <item quantity="one">Konuşan %1$d kişiyi engellediniz</item>
+    </plurals>
+    <plurals name="spaces_card_social_proof_in_progress">
+        <item quantity="other">%1$s bu Sohbet Odasında</item>
+        <item quantity="one">%1$s bu Sohbet Odasında</item>
+    </plurals>
+    <plurals name="spaces_card_social_proof_replay">
+        <item quantity="other">%1$s, bu Sohbet Odasındaydı</item>
+        <item quantity="one">%1$s, bu Sohbet Odasındaydı</item>
+    </plurals>
+    <plurals name="spaces_invite_confirmation">
+        <item quantity="other">%1$d kişi bu Sohbet Odasına davet edildi</item>
+        <item quantity="one">%1$d kişi bu Sohbet Odasına davet edildi</item>
+    </plurals>
+    <plurals name="speakers_current_count">
+        <item quantity="other">%1$d konuşmacı</item>
+        <item quantity="one">%1$d konuşmacı</item>
+    </plurals>
+    <plurals name="speakers_listeners_count">
+        <item quantity="other">%1$d kişi dinliyor</item>
+        <item quantity="one">%1$d kişi dinliyor</item>
+    </plurals>
+    <plurals name="speakers_open_spots_count">
+        <item quantity="other">%1$d boş yer</item>
+        <item quantity="one">%1$d boş yer</item>
+    </plurals>
+    <plurals name="speakers_requests_count">
+        <item quantity="other">%1$d istek</item>
+        <item quantity="one">%1$d istek</item>
+    </plurals>
+    <plurals name="stat_label_bookmarks">
+        <item quantity="other">Yer işaretleri</item>
+        <item quantity="one">Yer işareti</item>
+    </plurals>
+    <plurals name="stat_label_likes_sentence_case">
+        <item quantity="other">Beğeni</item>
+        <item quantity="one">Beğeni</item>
+    </plurals>
+    <plurals name="stat_label_quote_tweets">
+        <item quantity="other">Alıntılar</item>
+        <item quantity="one">Alıntı</item>
+    </plurals>
+    <plurals name="stat_label_retweets_sentence_case">
+        <item quantity="other">Yeniden gönderiler</item>
+        <item quantity="one">Yeniden gönderi</item>
+    </plurals>
+    <plurals name="stat_label_verified_views_sentence_case">
+        <item quantity="other">Onaylanmış Görüntülenme</item>
+        <item quantity="one">Onaylanmış Görüntülenme</item>
+    </plurals>
+    <plurals name="stat_label_views_sentence_case">
+        <item quantity="other">Görüntüleme</item>
+        <item quantity="one">Görüntüleme</item>
+    </plurals>
+    <plurals name="subscription_duration_days">
+        <item quantity="other">%d gün</item>
+        <item quantity="one">gün</item>
+    </plurals>
+    <plurals name="subscription_duration_months">
+        <item quantity="other">%d ay</item>
+        <item quantity="one">ay</item>
+    </plurals>
+    <plurals name="subscription_duration_years">
+        <item quantity="other">%d yıl</item>
+        <item quantity="one">yıl</item>
+    </plurals>
+    <plurals name="time_days">
+        <item quantity="other">%d gün</item>
+        <item quantity="one">%d gün</item>
+    </plurals>
+    <plurals name="time_days_ago">
+        <item quantity="other">%d GÜN ÖNCE</item>
+        <item quantity="one">%d GÜN ÖNCE</item>
+    </plurals>
+    <plurals name="time_hours">
+        <item quantity="other">%d sa</item>
+        <item quantity="one">%d sa</item>
+    </plurals>
+    <plurals name="time_hours_ago">
+        <item quantity="other">%d SAAT ÖNCE</item>
+        <item quantity="one">%d SAAT ÖNCE</item>
+    </plurals>
+    <plurals name="time_mins">
+        <item quantity="other">%d dk</item>
+        <item quantity="one">%d dk</item>
+    </plurals>
+    <plurals name="time_mins_ago">
+        <item quantity="other">%d DAKİKA ÖNCE</item>
+        <item quantity="one">%d DAKİKA ÖNCE</item>
+    </plurals>
+    <plurals name="time_secs">
+        <item quantity="other">%d sn</item>
+        <item quantity="one">%dsn</item>
+    </plurals>
+    <plurals name="top_articles_time_window">
+        <item quantity="other">Son %s saat</item>
+        <item quantity="one">Son bir saat</item>
+    </plurals>
+    <plurals name="tweet_visibility_education_dialog_non_followers_text">
+        <item quantity="other">%1$s ve diğerleri seni takip etmiyor.</item>
+        <item quantity="one">%1$s seni takip etmiyor.</item>
+    </plurals>
+    <plurals name="undo_send_period_in_seconds">
+        <item quantity="other">%d saniye</item>
+        <item quantity="one">%d saniye</item>
+    </plurals>
+    <plurals name="verified_views">
+        <item quantity="other">%d onaylanmış görüntülenme</item>
+        <item quantity="one">%d onaylanmış görüntülenme</item>
+    </plurals>
+</resources>

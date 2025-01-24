@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="end"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <include
+        android:layout_gravity="end|center"
+        android:id="@id/count_progress_bar_wrapper"
+        android:layout_width="@dimen/character_count_progress_bar_container_width"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/standard_spacing"
+        layout="@layout/composer_count_progress_bar" />
+    <com.twitter.ui.components.button.legacy.TwitterButton
+        android:enabled="false"
+        android:layout_gravity="center_vertical"
+        android:id="@id/tweet_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/post_button_reply"
+        style="?inlineReplyTweetButtonStyle" />
+</LinearLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/ocf_screen_padding_wide"
+    android:layout_marginTop="@dimen/ocf_large_spacing"
+    android:layout_marginRight="@dimen/ocf_screen_padding_wide"
+    android:layout_marginBottom="@dimen/ocf_large_spacing"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/ocf_step_default_text_size"
+        android:textColor="?coreColorTextLink"
+        android:layout_gravity="center"
+        android:id="@id/show_more_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

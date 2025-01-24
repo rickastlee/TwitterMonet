@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:icon="@drawable/ic_admin_tools"
+        android:id="@id/action_admin_tools"
+        android:title="@string/admin_tools_action"
+        app:showAsAction="ifRoom" />
+    <item
+        android:icon="@drawable/ic_toolbar_search_circle"
+        android:id="@id/action_search_tweet"
+        android:visible="false"
+        android:title="@string/search_in_community"
+        app:showAsAction="ifRoom" />
+    <item
+        android:icon="@drawable/ic_vector_flag"
+        android:id="@id/action_report_community"
+        android:title="@string/report_community_menu_option"
+        app:showAsAction="collapseActionView" />
+    <item
+        android:id="@id/action_learn_more_about_communities"
+        android:title="@string/learn_more_about_communities_option"
+        app:showAsAction="collapseActionView" />
+    <item
+        android:icon="@drawable/ic_vector_exiting"
+        android:id="@id/action_leave_community"
+        android:visible="false"
+        android:title="@string/leave_community_option"
+        app:showAsAction="collapseActionView" />
+    <item
+        android:id="@id/action_join_community"
+        android:visible="false"
+        android:title="@string/join_community_option"
+        app:showAsAction="collapseActionView" />
+    <item
+        android:id="@id/action_ask_to_join_community"
+        android:visible="false"
+        android:title="@string/ask_to_join_community_option"
+        app:showAsAction="collapseActionView" />
+</menu>

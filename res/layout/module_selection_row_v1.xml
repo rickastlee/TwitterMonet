@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@id/module_configuration_row"
+    android:background="@drawable/ripple_pressed_selector_rectangle"
+    android:clickable="true"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:screenReaderFocusable="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/header_text"
+        android:focusable="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/ModuleOverviewHeaderTextV1" />
+    <com.twitter.ui.widget.TightTextView
+        android:id="@id/active_label"
+        android:focusable="false"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/a11y_featured"
+        app:layout_constraintBottom_toBottomOf="@id/header_text"
+        app:layout_constraintStart_toEndOf="@id/header_text"
+        app:text="@string/module_featured"
+        style="@style/ModuleOverviewHeaderLabel" />
+    <com.twitter.ui.widget.TightTextView
+        android:id="@id/disabled_label"
+        android:focusable="false"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/a11y_disabled"
+        app:layout_constraintBottom_toBottomOf="@id/header_text"
+        app:layout_constraintStart_toEndOf="@id/header_text"
+        app:text="@string/spotlight_disabled"
+        style="@style/ModuleOverviewDisabledHeaderLabel" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/body_text"
+        android:focusable="false"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@id/arrow_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header_text"
+        style="@style/ModuleOverviewDetailText" />
+    <ImageView
+        android:id="@id/arrow_view"
+        android:focusable="false"
+        android:layout_width="@dimen/arrow_icon_side"
+        android:layout_height="@dimen/arrow_icon_side"
+        android:src="@drawable/ic_vector_arrow_right"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/ModuleOverviewArrowIcon" />
+</androidx.constraintlayout.widget.ConstraintLayout>

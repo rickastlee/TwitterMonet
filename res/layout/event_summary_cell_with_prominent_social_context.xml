@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:paddingTop="0.0dip"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:descendantFocusability="blocksDescendants"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false"
+    android:paddingEnd="0.0dip"
+    style="@style/ListRow.EventCell"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="horizontal"
+        android:id="@id/top_guideline"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="@dimen/space_12" />
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="vertical"
+        android:id="@id/end_guideline"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_end="@dimen/space_16" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textColor="@color/btn_secondary_text_gray"
+        android:id="@id/topic_title_text"
+        android:paddingTop="@dimen/space_2"
+        android:paddingBottom="@dimen/space_2"
+        android:focusable="true"
+        android:clickable="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toTopOf="@id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/top_guideline"
+        style="@style/GuideCellText.Secondary.SingleLine.Bold" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/topic_title_text_separator"
+        android:paddingTop="@dimen/space_2"
+        android:paddingBottom="@dimen/space_2"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/en_dot"
+        app:layout_constraintBottom_toTopOf="@id/title"
+        app:layout_constraintStart_toEndOf="@id/topic_title_text"
+        app:layout_constraintTop_toTopOf="@id/top_guideline"
+        style="@style/GuideCellText.Secondary.SingleLine" />
+    <com.twitter.explore.ui.TopicFollowTextView
+        android:textStyle="bold"
+        android:id="@id/topic_follow"
+        android:paddingTop="@dimen/space_2"
+        android:paddingBottom="@dimen/space_2"
+        android:focusable="true"
+        android:visibility="gone"
+        android:clickable="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:importantForAccessibility="no"
+        android:paddingEnd="@dimen/space_8"
+        app:followingText="@string/social_context_button_following"
+        app:followingTextColor="@color/btn_text_link_blue"
+        app:layout_constraintBottom_toTopOf="@id/title"
+        app:layout_constraintStart_toEndOf="@id/topic_title_text_separator"
+        app:layout_constraintTop_toTopOf="@id/top_guideline"
+        app:notFollowedText="@string/social_context_button_follow_topic"
+        app:notFollowedTextColor="@color/btn_text_link_blue"
+        style="@style/GuideCellText.Secondary.SingleLine" />
+    <com.twitter.ui.widget.TintableImageView
+        android:id="@id/overflow_button"
+        android:focusable="true"
+        android:clickable="true"
+        android:layout_width="@dimen/curation_action_size"
+        android:layout_height="@dimen/curation_action_size"
+        android:src="@drawable/ic_vector_chevron_down"
+        android:importantForAccessibility="no"
+        android:layout_marginEnd="@dimen/space_4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/TweetCurationView" />
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@id/topic_context_header_barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="topic_title_text, overflow_button" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/title"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:maxLines="4"
+        android:layout_marginEnd="@dimen/space_12"
+        android:paddingVertical="@dimen/space_4"
+        app:largeTextBoldOverride="false"
+        app:layout_constraintEnd_toStartOf="@id/thumbnail_container"
+        app:layout_constraintHorizontal_weight="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topic_context_header_barrier"
+        style="?guideCellStrongTitleStyle" />
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/title"
+        app:layout_constraintStart_toStartOf="@id/title"
+        app:layout_constraintTop_toBottomOf="@id/title">
+        <com.twitter.media.ui.image.UserImageView
+            android:id="@id/user_avatar"
+            android:layout_width="18.0sp"
+            android:layout_height="18.0sp"
+            app:cornerRadius="@dimen/corner_radius_large"
+            app:userImageSize="@dimen/moments_author_avatar_size" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:layout_marginStart="@dimen/space_4"
+            app:antiSpoofing="true"
+            style="@style/GuideText.Small.Primary.Bold.SingleLine" />
+        <ImageView
+            android:id="@id/verified_badge"
+            android:visibility="visible"
+            android:layout_width="?momentsSecondaryTextSize"
+            android:layout_height="?momentsSecondaryTextSize"
+            android:src="?iconVerified"
+            android:contentDescription="@null"
+            android:layout_marginStart="@dimen/space_2"
+            app:tint="?coreColorBadgeVerified" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/user_attribution_separator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/en_dot"
+            style="@style/GuideCellText.Secondary.SingleLine" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/supporting_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/GuideCellText.Secondary.SingleLine" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/supporting_text_dot_separator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/en_dot"
+            android:importantForAccessibility="no"
+            style="@style/GuideCellText.Secondary.SingleLine" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/score_event_extra_info"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            style="@style/GuideCellText.Secondary.SingleLine" />
+    </LinearLayout>
+    <FrameLayout
+        android:id="@id/thumbnail_container"
+        android:layout_width="?guideCellThumbnailSize"
+        android:layout_height="?guideCellThumbnailSize"
+        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+        app:layout_constraintTop_toBottomOf="@id/topic_context_header_barrier">
+        <com.twitter.media.ui.fresco.FrescoMediaImageView
+            android:id="@id/thumbnail_view"
+            android:layout_width="?guideCellThumbnailSize"
+            android:layout_height="?guideCellThumbnailSize"
+            app:defaultDrawable="@drawable/drawable_color_placeholder_bg"
+            app:imageCornerRadius="@dimen/corner_radius_large"
+            app:scaleType="fill" />
+        <com.twitter.explore.timeline.events.EventScoreCardView
+            android:id="@id/event_score_card"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <include
+                layout="@layout/event_summary_score_card" />
+        </com.twitter.explore.timeline.events.EventScoreCardView>
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

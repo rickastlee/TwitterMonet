@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View
+        android:layout_gravity="center"
+        android:id="@id/shutter_ripple"
+        android:background="@drawable/camera_shutter_ripple"
+        android:visibility="gone"
+        android:layout_width="@dimen/shutter_size_initial"
+        android:layout_height="@dimen/shutter_size_initial"
+        app:layout_constraintBottom_toBottomOf="@id/camera_shutter_button"
+        app:layout_constraintEnd_toEndOf="@id/camera_shutter_button"
+        app:layout_constraintStart_toStartOf="@id/camera_shutter_button"
+        app:layout_constraintTop_toTopOf="@id/camera_shutter_button" />
+    <com.twitter.camera.view.shutter.CameraShutterButton
+        android:layout_gravity="center"
+        android:id="@id/camera_shutter_button"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/shutter_button_instructions"
+        android:elevation="@dimen/shutter_elevation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_goneMarginBottom="@dimen/mode_switcher_pill_bottom_margin" />
+</androidx.constraintlayout.widget.ConstraintLayout>

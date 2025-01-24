@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.ui.view.GroupedRowView
+    android:background="@drawable/list_row_background"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <com.twitter.ui.components.button.compose.HorizonComposeButton
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:id="@id/button"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/space_12"
+            style="@style/TwitterButtonSmallBrandOutlined" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/text"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            style="@style/ModuleFooterText" />
+    </FrameLayout>
+</com.twitter.ui.view.GroupedRowView>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@id/menu_lists_youre_on"
+        android:title="@string/lists_youre_on"
+        android:showAsAction="never"
+        twitter:showAsAction="never" />
+</menu>

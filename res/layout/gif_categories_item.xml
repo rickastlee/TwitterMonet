@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.media.ui.image.AspectRatioFrameLayout
+    android:id="@id/gif_categories_item"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:foreground="@drawable/ripple_selector_rectangle"
+    twitter:aspect_ratio="1.0"
+    twitter:scaleMode="height"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <com.twitter.media.ui.image.AnimatedGifView
+        android:id="@id/thumbnail"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="centerCrop" />
+    <View
+        android:background="@drawable/bg_found_media_category_item"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textColor="@color/white"
+        android:layout_gravity="bottom|center|left"
+        android:id="@id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16.0dip"
+        android:layout_marginStart="16.0dip" />
+</com.twitter.media.ui.image.AspectRatioFrameLayout>

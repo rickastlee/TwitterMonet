@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="center_vertical"
+    android:descendantFocusability="blocksDescendants"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false"
+    android:minHeight="?android:listPreferredItemHeight"
+    android:paddingStart="15.0dip"
+    android:paddingEnd="?android:scrollbarSize"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_12"
+        android:layout_marginBottom="@dimen/space_12"
+        android:layout_weight="1.0"
+        android:layout_marginEnd="6.0dip">
+        <Spinner
+            android:id="@id/spinner"
+            android:background="@null"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textSize="@dimen/font_size_normal"
+            android:textColor="?android:textColorPrimary"
+            android:id="@id/title"
+            android:fadingEdge="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="?android:textColorSecondary"
+            android:id="@id/selection"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_4"
+            android:maxLines="4"
+            android:layout_below="@id/title"
+            android:layout_alignStart="@android:id/title" />
+    </RelativeLayout>
+    <CheckBox
+        android:id="@id/settings_checkbox"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:visibility="invisible"
+        android:clickable="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

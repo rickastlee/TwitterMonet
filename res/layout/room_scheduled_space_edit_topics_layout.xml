@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:id="@id/room_topics_tagging_container"
+    android:visibility="gone"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textStyle="bold"
+        android:textColor="?coreColorPrimaryText"
+        android:layout_gravity="start"
+        android:id="@id/space_topics_tagging_description_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_8"
+        android:text="@string/space_topics_tagging_description_title" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@id/space_topics_tagging_recycler"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_16" />
+    <View
+        android:background="?coreColorSectionDivider"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/room_divider_height"
+        android:layout_marginBottom="@dimen/space_8" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_small"
+        android:textStyle="normal"
+        android:textColor="?coreColorSecondaryText"
+        android:layout_gravity="start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_8"
+        android:text="@string/space_topics_tagging_description_subtitle" />
+    <tag
+        android:value="RoomScheduledTopicsTagging"
+        android:id="@id/weaverComponent" />
+</LinearLayout>

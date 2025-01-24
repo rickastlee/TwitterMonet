@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:focusable="true"
+    android:clickable="true"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="6.0dip"
+    android:layout_marginStart="@dimen/ps__chat_container_spacing"
+    android:layout_marginEnd="@dimen/ps__chat_container_spacing"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@id/chat_message_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/ps__chat_avatar_size"
+        custom:layout_constrainedWidth="true"
+        custom:layout_constraintBottom_toBottomOf="parent"
+        custom:layout_constraintEnd_toStartOf="@id/action_button"
+        custom:layout_constraintStart_toStartOf="parent"
+        custom:layout_constraintTop_toTopOf="parent">
+        <tv.periscope.android.view.MaskImageView
+            android:id="@id/masked_avatar"
+            android:background="@drawable/ps__bg_chat_avatar"
+            android:layout_width="@dimen/ps__chat_avatar_size"
+            android:layout_height="fill_parent"
+            android:scaleType="centerCrop"
+            android:minHeight="@dimen/ps__chat_avatar_size" />
+        <RelativeLayout
+            android:id="@id/chat_text_container"
+            android:background="@drawable/ps__bg_chat"
+            android:paddingTop="4.0dip"
+            android:paddingBottom="4.0dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/ps__chat_avatar_size"
+            android:paddingStart="8.0dip"
+            android:paddingEnd="10.0dip"
+            android:layout_marginEnd="@dimen/ps__chat_layout_margin_end">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:id="@id/username_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <tv.periscope.android.view.PsImageView
+                    android:id="@id/following_icon"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:src="@drawable/ps__icon_following_context"
+                    android:layout_marginEnd="4.0dip" />
+                <tv.periscope.android.view.PsImageView
+                    android:id="@id/superfan_icon"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ps__superfans_lit"
+                    android:layout_marginEnd="4.0dip" />
+                <tv.periscope.android.view.PsImageView
+                    android:id="@id/contributor_icon"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ps__ic_chatcandy_contributor"
+                    android:layout_marginEnd="4.0dip" />
+                <tv.periscope.android.view.PsImageView
+                    android:layout_gravity="center_vertical"
+                    android:id="@id/vip_badge"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4.0dip" />
+                <tv.periscope.android.view.PsTextView
+                    android:textSize="@dimen/font_size_xsmall"
+                    android:textColor="@color/ps__light_grey"
+                    android:id="@id/username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:id="@id/block_count_icon"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ps__ic_block_small"
+                    android:contentDescription="@string/ps__accessibility_chat_row_blocked"
+                    android:layout_marginStart="4.0dip" />
+                <tv.periscope.android.view.PsTextView
+                    android:textSize="12.0sp"
+                    android:textColor="@color/ps__light_grey"
+                    android:id="@id/block_count"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ps__ic_block_small"
+                    android:layout_marginStart="2.0dip" />
+            </LinearLayout>
+            <tv.periscope.android.view.PsTextView
+                android:textSize="@dimen/font_size_normal"
+                android:textColor="@color/ps__primary_text"
+                android:layout_gravity="start|center"
+                android:id="@id/chat_body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/username_container" />
+            <tv.periscope.android.view.PsTextView
+                android:textSize="14.0sp"
+                android:textStyle="italic"
+                android:textColor="@color/ps__white"
+                android:layout_gravity="start|center"
+                android:id="@id/muted_by_moderator"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </LinearLayout>
+    <ImageView
+        android:id="@id/reply_indicator"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7.0dip"
+        android:src="@drawable/ps__ic_reply_indicator"
+        android:contentDescription="@string/ps__accessibility_chat_row_reply_to"
+        android:layout_marginStart="20.0dip"
+        custom:layout_constraintStart_toStartOf="parent"
+        custom:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@id/block_indicator"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0dip"
+        android:src="@drawable/ps__ic_block"
+        android:contentDescription="@string/ps__accessibility_chat_row_blocked"
+        android:layout_marginStart="8.0dip"
+        custom:layout_constraintStart_toStartOf="parent"
+        custom:layout_constraintTop_toTopOf="parent" />
+    <tv.periscope.android.hydra.broadcaster.HydraGuestActionButton
+        android:id="@id/action_button"
+        android:visibility="gone"
+        android:layout_width="@dimen/ps__standard_button_min_height"
+        android:layout_height="@dimen/ps__standard_button_min_height"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/ps__standard_spacing_10"
+        android:layout_toEndOf="@id/chat_message_container"
+        android:layout_alignParentEnd="true"
+        custom:layout_constraintBottom_toBottomOf="parent"
+        custom:layout_constraintEnd_toEndOf="parent"
+        custom:layout_constraintStart_toEndOf="@id/chat_message_container"
+        custom:layout_constraintTop_toTopOf="parent"
+        custom:ps__countdownTextSize="20.0sp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

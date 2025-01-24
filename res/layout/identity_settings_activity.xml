@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@id/toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="?toolBarSize"
+        android:layoutDirection="?forceLayoutDirection"
+        style="?statusToolbarStyle" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textColor="?coreColorSecondaryText"
+        android:id="@id/identity_settings_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/identity_settings_title"
+        android:layout_marginHorizontal="@dimen/space_20"
+        android:layout_marginVertical="@dimen/space_8" />
+    <com.twitter.ui.components.inlinecallout.HorizonInlineCalloutView
+        android:id="@id/identity_settings_twitter_blue_callout"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/space_20"
+        android:layout_marginVertical="@dimen/space_8" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textColor="?coreColorPrimaryText"
+        android:id="@id/identity_verified"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/identity_settings_id_verified"
+        android:drawablePadding="@dimen/space_16"
+        android:drawableStart="@drawable/ic_vector_moderator_fill"
+        android:drawableTint="?coreColorPrimaryText"
+        android:layout_marginHorizontal="@dimen/space_20"
+        android:layout_marginVertical="@dimen/space_8" />
+    <Switch
+        android:textSize="@dimen/font_size_normal"
+        android:textStyle="bold"
+        android:textColor="?coreColorPrimaryText"
+        android:id="@id/identity_settings_switch"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/identity_settings_switch"
+        android:layout_marginHorizontal="@dimen/space_20"
+        android:layout_marginVertical="@dimen/space_8" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textColor="?coreColorSecondaryText"
+        android:id="@id/identity_settings_description"
+        android:paddingBottom="@dimen/space_16"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/identity_settings_description"
+        android:layout_marginHorizontal="@dimen/space_20" />
+    <View
+        android:background="?coreColorSectionDivider"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/space_1" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textStyle="bold"
+        android:textColor="?coreColorPrimaryText"
+        android:id="@id/identity_settings_help_center"
+        android:background="?selectableItemBackground"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/identity_settings_help_center"
+        android:drawableEnd="@drawable/ic_vector_arrow_up_right"
+        android:drawableTint="?dynamicColorGray200"
+        android:paddingHorizontal="@dimen/space_20"
+        android:paddingVertical="@dimen/space_16" />
+    <tag
+        android:value="IdentitySettingsActivity"
+        android:id="@id/weaverComponent" />
+</LinearLayout>

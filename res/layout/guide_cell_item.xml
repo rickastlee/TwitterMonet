@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="horizontal"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:descendantFocusability="blocksDescendants"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:baselineAligned="false"
+    style="@style/ListRow"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:layout_weight="1.0"
+        android:layout_marginEnd="@dimen/moments_standard_spacing">
+        <LinearLayout
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:id="@id/secondary_text"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                style="?guideCellPretitleStyle" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:id="@id/secondary_badge_text_separator"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/en_dot"
+                android:layout_marginStart="@dimen/moments_nano_spacing"
+                android:layout_marginEnd="@dimen/moments_nano_spacing"
+                style="@style/GuideCellText.Secondary.SingleLine" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:id="@id/secondary_badge_text"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/GuideCellText.Secondary.SingleLine" />
+        </LinearLayout>
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/primary_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_4"
+            twitter:largeTextBoldOverride="false"
+            style="?guideCellTitleStyle" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <com.twitter.media.ui.image.UserImageView
+                android:id="@id/social_proof_avatar"
+                android:visibility="gone"
+                style="@style/SocialProofAvatar" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:id="@id/tertiary_text"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_4"
+                style="?guideCellSubtitleStyle" />
+        </LinearLayout>
+    </LinearLayout>
+    <include
+        android:id="@id/thumbnail_wrapper"
+        android:layout_width="?guideCellThumbnailSize"
+        android:layout_height="?guideCellThumbnailSize"
+        layout="@layout/moments_guide_cell_item_thumbnail" />
+</LinearLayout>

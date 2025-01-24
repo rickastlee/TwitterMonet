@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_gravity="end|center|top"
+            android:id="@id/acc_close"
+            android:nextFocusDown="@id/give_hearts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ps__ic_close"
+            android:contentDescription="@string/ps__accessibility_close"
+            android:layout_marginEnd="@dimen/ps__standard_spacing_16"
+            android:accessibilityTraversalBefore="@id/give_hearts"
+            style="@style/ps__AccessibilityControlBtn" />
+        <ImageView
+            android:layout_gravity="end|center|top"
+            android:id="@id/give_hearts"
+            android:nextFocusUp="@id/acc_close"
+            android:nextFocusDown="@id/broadcaster_info_panel_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20.0dip"
+            android:src="@drawable/ps__heart_fill"
+            android:contentDescription="@string/ps__accessibility_give_hearts"
+            android:layout_marginEnd="@dimen/ps__standard_spacing_16"
+            android:accessibilityTraversalAfter="@id/acc_close"
+            style="@style/ps__AccessibilityControlBtn" />
+        <ImageView
+            android:layout_gravity="end|center|top"
+            android:id="@id/broadcaster_info_panel_btn"
+            android:nextFocusUp="@id/give_hearts"
+            android:nextFocusDown="@id/scrubbing_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20.0dip"
+            android:src="@drawable/ps__ic_information_outline"
+            android:contentDescription="@string/ps__accessibility_show_broadcast_info"
+            android:layout_marginEnd="@dimen/ps__standard_spacing_16"
+            android:accessibilityTraversalBefore="@id/scrubbing_btn"
+            android:accessibilityTraversalAfter="@id/give_hearts"
+            style="@style/ps__AccessibilityControlBtn" />
+        <ImageView
+            android:layout_gravity="end|center|top"
+            android:id="@id/scrubbing_btn"
+            android:nextFocusUp="@id/broadcaster_info_panel_btn"
+            android:nextFocusDown="@id/bottom_tray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20.0dip"
+            android:src="@drawable/ps__ic_scrub_icon"
+            android:contentDescription="@string/ps__accessibility_show_scrubbing_view"
+            android:layout_marginEnd="@dimen/ps__standard_spacing_16"
+            android:accessibilityTraversalBefore="@id/bottom_tray"
+            android:accessibilityTraversalAfter="@id/broadcaster_info_panel_btn"
+            style="@style/ps__AccessibilityControlBtn" />
+    </LinearLayout>
+</ScrollView>

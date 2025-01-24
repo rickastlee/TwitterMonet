@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="@drawable/off_platform_share_tweet_bg"
+    android:padding="@dimen/space_12"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <include
+        android:id="@id/base_tweet_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/base_share_tweet_view" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_subtext_3"
+        android:textColor="?textColorSecondary"
+        android:id="@id/timestamp_text"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_top_margin">
+        <tag
+            android:value="OffPlatformShareTweetTimestamp"
+            android:id="@id/weaverComponent" />
+    </com.twitter.ui.components.text.legacy.TypefacesTextView>
+    <View
+        android:background="?coreColorBorder"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:layout_marginTop="@dimen/space_8" />
+    <include
+        android:layout_gravity="center_vertical"
+        android:id="@id/tweet_inline_actions"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_12"
+        layout="@layout/off_platform_share_tweet_inline_actions" />
+</LinearLayout>

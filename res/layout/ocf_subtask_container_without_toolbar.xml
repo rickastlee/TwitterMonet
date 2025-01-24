@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include
+        android:orientation="horizontal"
+        android:id="@id/top_toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="?toolBarSize"
+        layout="@layout/ocf_subtask_top_toolbar" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:padding="@dimen/ocf_large_spacing"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/primary_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/secondary_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            style="@style/OcfTitle3Text" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/secondary_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ocf_standard_spacing"
+            app:layout_constraintBottom_toTopOf="@id/bottom_stacked_navigation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/primary_text"
+            style="@style/OcfBodyText" />
+        <include
+            android:id="@id/bottom_stacked_navigation"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ocf_standard_spacing"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/secondary_text"
+            layout="@layout/bottom_stacked_cta_navigation" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.ui.socialproof.SocialProofView
+    android:id="@id/facepile_component_social_proof"
+    android:paddingTop="@dimen/space_4"
+    android:paddingBottom="@dimen/space_4"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:translationX="@dimen/social_proof_icon_offset"
+    style="@style/SocialProofView"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@id/social_proof_container"
+        android:background="@drawable/ripple_pressed_selector_rectangle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ViewStub
+            android:layout_gravity="center_vertical"
+            android:id="@id/social_proof_face_pile_stub"
+            android:layout="@layout/profile_social_proof_facepile"
+            android:inflatedId="@id/social_proof_face_pile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/social_proof_facepile_margin" />
+        <com.twitter.ui.widget.UnpaddedTextLayoutView
+            android:textSize="@dimen/font_size_small"
+            android:id="@id/social_proof_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/SocialProofTextView" />
+    </LinearLayout>
+</com.twitter.ui.socialproof.SocialProofView>

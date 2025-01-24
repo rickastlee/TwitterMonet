@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.ui.widget.PreferenceTopCategoryCompat
+        android:title="@string/settings_twitter_activity_section_title">
+        <Preference
+            android:icon="@drawable/ic_vector_people_group_stroke"
+            android:title="@string/settings_audience_item_title"
+            android:key="pref_audience_and_tagging"
+            android:summary="@string/settings_audience_item_detail"
+            android:order="10" />
+        <Preference
+            android:icon="@drawable/ic_vector_pencil_stroke"
+            android:title="@string/settings_your_tweets_item_title"
+            android:key="pref_your_tweets"
+            android:summary="@string/settings_your_tweets_item_detail"
+            android:order="20" />
+        <Preference
+            android:icon="@drawable/ic_vector_timeline_stroke"
+            android:title="@string/settings_content_you_see_item_title"
+            android:key="pref_content_you_see"
+            android:summary="@string/settings_content_you_see_item_detail"
+            android:order="30" />
+        <Preference
+            android:icon="@drawable/ic_vector_safety_mode_stroke"
+            android:title="@string/safety_mode"
+            android:key="pref_safety_mode"
+            android:summary="@string/settings_safety_mode_item_detail"
+            android:order="35" />
+        <Preference
+            android:icon="@drawable/ic_vector_speaker_off"
+            android:title="@string/settings_mute_block_item_title"
+            android:key="pref_mute_and_block"
+            android:summary="@string/settings_mute_block_item_detail"
+            android:order="40" />
+        <Preference
+            android:icon="@drawable/ic_vector_messages_stroke"
+            android:title="@string/settings_dm_item_title"
+            android:key="pref_direct_messages"
+            android:summary="@string/settings_dm_item_detail"
+            android:order="50" />
+        <Preference
+            android:icon="@drawable/ic_vector_spaces_stroke"
+            android:title="@string/settings_category_audiospace_title"
+            android:key="pref_audiospaces"
+            android:summary="@string/settings_category_audiospace_summary"
+            android:order="55" />
+        <Preference
+            android:icon="@drawable/ic_vector_search_person_stroke"
+            android:title="@string/settings_discover_contacts_item_title"
+            android:key="pref_discoverability"
+            android:summary="@string/settings_discover_contacts_item_detail"
+            android:order="60" />
+    </com.twitter.ui.widget.PreferenceTopCategoryCompat>
+    <com.twitter.ui.widget.PreferenceTopCategoryCompat
+        android:title="@string/settings_data_sharing_personalization_section_title"
+        android:key="pref_category_data_sharing">
+        <Preference
+            android:icon="@drawable/ic_vector_promoted_pill_stroke"
+            android:title="@string/settings_ads_prefs_item_title"
+            android:key="pref_ads_preferences"
+            android:summary="@string/settings_ads_prefs_item_detail"
+            android:order="80" />
+        <Preference
+            android:icon="@drawable/ic_vector_heartline"
+            android:title="@string/settings_inferred_identity_item_title"
+            android:key="pref_inferred_identity"
+            android:summary="@string/settings_inferred_identity_item_detail"
+            android:order="95" />
+        <Preference
+            android:icon="@drawable/ic_vector_follow_arrows"
+            android:title="@string/settings_data_sharing_item_title"
+            android:key="pref_data_sharing"
+            android:summary="@string/settings_data_sharing_item_detail"
+            android:order="100" />
+        <Preference
+            android:icon="@drawable/ic_vector_location_stroke"
+            android:title="@string/settings_location_info_item_title"
+            android:key="pref_location"
+            android:summary="@string/settings_location_info_item_detail"
+            android:order="110" />
+    </com.twitter.ui.widget.PreferenceTopCategoryCompat>
+    <com.twitter.ui.widget.PreferenceTopCategoryCompat
+        android:title="@string/settings_privacy_learn_more_section_title"
+        android:key="pref_category_learn_more">
+        <Preference
+            android:title="@string/settings_privacy_center_item_title"
+            android:key="pref_privacy_center"
+            android:order="120" />
+        <Preference
+            android:title="@string/settings_privacy_policy_item_title"
+            android:key="pref_privacy_policy"
+            android:order="130" />
+        <Preference
+            android:title="@string/settings_contact_us_item_title"
+            android:key="pref_contact_us"
+            android:order="140" />
+    </com.twitter.ui.widget.PreferenceTopCategoryCompat>
+</PreferenceScreen>

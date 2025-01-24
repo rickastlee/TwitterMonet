@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/ocf_screen_padding_wide"
+    android:layout_marginEnd="@dimen/ocf_screen_padding_wide"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/item_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/ocf_screen_padding_wide"
+        android:layout_marginTop="@dimen/ocf_standard_spacing"
+        android:layout_marginRight="@dimen/ocf_screen_padding_wide"
+        android:layout_marginBottom="@dimen/ocf_standard_spacing"
+        style="@style/OcfSubtext2Text" />
+</FrameLayout>

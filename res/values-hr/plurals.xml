@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="admin_tools_subtitle_members">
+        <item quantity="other">%d članova</item>
+        <item quantity="one">%d član</item>
+    </plurals>
+    <plurals name="badge_item_count">
+        <item quantity="other">Novih stavki: %d</item>
+        <item quantity="one">%d nova stavka</item>
+    </plurals>
+    <plurals name="cohost_current_count">
+        <item quantity="other">%1$d suvoditelja</item>
+        <item quantity="one">%1$d suvoditelj</item>
+    </plurals>
+    <plurals name="community_member_count">
+        <item quantity="other">%d članova zajednice</item>
+        <item quantity="one">%d član zajednice</item>
+    </plurals>
+    <plurals name="community_moderator_count">
+        <item quantity="other">%d moderatora</item>
+        <item quantity="one">%d moderator</item>
+    </plurals>
+    <plurals name="community_navigation_join_requests_label">
+        <item quantity="other">%s zahtjeva</item>
+        <item quantity="one">%s zahtjev</item>
+    </plurals>
+    <plurals name="community_navigation_new_unread_tweets_label">
+        <item quantity="other">Nove objave: %s</item>
+        <item quantity="one">%s nova objava</item>
+    </plurals>
+    <plurals name="community_navigation_pending_reports_label">
+        <item quantity="other">%s prijava</item>
+        <item quantity="one">%s prijava</item>
+    </plurals>
+    <plurals name="composer_count_progress_overflow_warning">
+        <item quantity="other">Previše znakova: %d</item>
+        <item quantity="one">Previše znakova: %d</item>
+    </plurals>
+    <plurals name="composer_count_progress_warning">
+        <item quantity="other">Preostali broj znakova: %d</item>
+        <item quantity="one">Preostali broj znakova: %d</item>
+    </plurals>
+    <plurals name="content_description_fleet_item_space_with_others">
+        <item quantity="other">Prostor korisnika/ce %1$s uz još njih %2$d</item>
+        <item quantity="one">Prostor korisnika/ce %1$s uz još %2$d osobu</item>
+    </plurals>
+    <plurals name="data_sync_notif_title">
+        <item quantity="other">Novih interakcija: %d</item>
+        <item quantity="one">%d nova interakcija</item>
+    </plurals>
+    <plurals name="days">
+        <item quantity="other">%d dana</item>
+        <item quantity="one">%d dan</item>
+    </plurals>
+    <plurals name="dm_add_people_failure">
+        <item quantity="other">Sljedeći broj korisnika nije moguće dodati u tu grupu: %d.</item>
+        <item quantity="one">Korisnika/cu nije moguće dodati u tu grupu.</item>
+    </plurals>
+    <plurals name="dm_add_people_success">
+        <item quantity="other">U grupu ste dodali sljedeći broj korisnika: %d.</item>
+        <item quantity="one">Korisnik/ca je dodan(a) u grupu.</item>
+    </plurals>
+    <plurals name="dm_follower_count_no_joined_date">
+        <item quantity="other">Broj osoba koje prate: {num_followers}</item>
+        <item quantity="one">{num_followers} osoba koja prati</item>
+    </plurals>
+    <plurals name="dm_group_account_name">
+        <item quantity="other">%d osoba</item>
+        <item quantity="one">1 osoba</item>
+    </plurals>
+    <plurals name="dm_group_chat_count">
+        <item quantity="other">Grupno čavrljanje s ovoliko osoba: %d</item>
+        <item quantity="one">Grupno čavrljanje s %d osobom</item>
+    </plurals>
+    <plurals name="dm_group_conversation_participant_count">
+        <item quantity="other">Broj osoba: %1$d</item>
+        <item quantity="one">%1$d osoba</item>
+    </plurals>
+    <plurals name="dm_group_participant_count">
+        <item quantity="other">U ovoj je grupi sljedeći broj osoba: %1$s</item>
+        <item quantity="one">U ovoj grupi je još %1$s osoba</item>
+    </plurals>
+    <plurals name="dm_group_participant_count_person_details">
+        <item quantity="other">još njih %1$s</item>
+        <item quantity="one">još %1$s osoba</item>
+    </plurals>
+    <plurals name="dm_image_profile">
+        <item quantity="other">Slike profila korisnika/ce %s</item>
+        <item quantity="one">Slika profila korisnika/ce %s</item>
+    </plurals>
+    <plurals name="dm_new_people_you_may_know">
+        <item quantity="other">Osobe koje možda poznajete: %d</item>
+        <item quantity="one">%d osoba koju možda poznajete</item>
+    </plurals>
+    <plurals name="dm_new_requests">
+        <item quantity="other">Novi zahtjevi: %d</item>
+        <item quantity="one">%d novi zahtjev</item>
+    </plurals>
+    <plurals name="dm_participant_added_by_deleted_user">
+        <item quantity="other">Dodani su korisnici {participants}</item>
+        <item quantity="one">{participants} je dodan/a</item>
+    </plurals>
+    <plurals name="dm_pending_requests">
+        <item quantity="other">Zahtjevi na čekanju: %s</item>
+        <item quantity="one">%d zahtjev na čekanju</item>
+    </plurals>
+    <plurals name="dm_people_you_may_know">
+        <item quantity="other">Osobe koje možda poznajete: %d</item>
+        <item quantity="one">%d osoba koju možda poznajete</item>
+    </plurals>
+    <plurals name="dm_pinned_conversations_max_count_exceeded_title">
+        <item quantity="other">Prikvačiti možete samo sljedeći broj razgovora: %d</item>
+        <item quantity="one">Prikvačiti možete samo sljedeći broj razgovora: %d</item>
+    </plurals>
+    <plurals name="dm_state_seen_by">
+        <item quantity="other">Broj osoba koje su vidjele: %d</item>
+        <item quantity="one">Vidjela %d osoba</item>
+    </plurals>
+    <plurals name="dm_unread_messages">
+        <item quantity="other">Nepročitanih poruka: %d</item>
+        <item quantity="one">%d nepročitana poruka</item>
+    </plurals>
+    <plurals name="dm_user_joined_and_follower_count">
+        <item quantity="other">Uključeno njih {joined_date} • Osoba koje prate: {num_followers}</item>
+        <item quantity="one">Uključeno njih {joined_date} • Osoba koje prate: {num_followers}</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="other">Premotavanje unaprijed za %d sekundi</item>
+        <item quantity="one">Premotavanje unaprijed za %d sekundu</item>
+        <item quantity="few">Premotavanje unaprijed za %d sekunde</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="other">Premotavanje unatrag za %d sekundi</item>
+        <item quantity="one">Premotavanje unatrag za %d sekundu</item>
+        <item quantity="few">Premotavanje unatrag za %d sekunde</item>
+    </plurals>
+    <plurals name="facepile_content_description">
+        <item quantity="other">Slike profila korisnika/ce %s</item>
+        <item quantity="one">Slika profila korisnika/ce %s</item>
+    </plurals>
+    <plurals name="full_screen_gallery_header_add">
+        <item quantity="other">Dodaj %d</item>
+        <item quantity="one">Dodaj %d</item>
+    </plurals>
+    <plurals name="graphql_errors_button">
+        <item quantity="other">Broj pogrešaka: %d</item>
+        <item quantity="one">%d pogreška</item>
+    </plurals>
+    <plurals name="guest_management_max_cohost_count_label">
+        <item quantity="other">Možete dodati samo %1$d suvoditelja.</item>
+        <item quantity="one">Možete dodati samo %1$d suvoditelja.</item>
+    </plurals>
+    <plurals name="guest_management_open_cohost_count_label">
+        <item quantity="other">Dodajte još najviše ovoliko ljudi: %1$d.</item>
+        <item quantity="one">Dodajte još najviše %1$d osobu.</item>
+    </plurals>
+    <plurals name="host_kudos_num_followers_gained">
+        <item quantity="other">Počeo vas je pratiti sljedeći broj osoba: %1$d!</item>
+        <item quantity="one">Počela vas je pratiti %1$d osoba!</item>
+    </plurals>
+    <plurals name="hours">
+        <item quantity="other">%d h</item>
+        <item quantity="one">%d h</item>
+    </plurals>
+    <plurals name="humanization_prompt_followers">
+        <item quantity="other">%1$s prate %2$s.</item>
+        <item quantity="one">%1$s prati korisnika/cu %2$s.</item>
+    </plurals>
+    <plurals name="humanization_prompt_topics">
+        <item quantity="other">I vi i %1$s pratite teme %2$s.</item>
+        <item quantity="one">I vi i %1$s pratite temu %2$s.</item>
+    </plurals>
+    <plurals name="likes">
+        <item quantity="other">Oznaka „sviđa mi se”: %d</item>
+        <item quantity="one">%d oznaka „sviđa mi se”</item>
+    </plurals>
+    <plurals name="list_member_count">
+        <item quantity="other">člana/članova</item>
+        <item quantity="one">član</item>
+    </plurals>
+    <plurals name="media_alt_text_prompt_dialog_message">
+        <item quantity="other">"Dobri opisi slika sažeti su, ali detaljni. Obavezno sažmite ili napišite tekst ako ga sama slika sadrži.
+
+Vaši opisi omogućuju pristupačnost platforme X osobama s poteškoćama i svakome kome je potreban dodatni kontekst.
+
+Taj podsjetnik možete isključiti u postavkama pristupačnosti."</item>
+        <item quantity="one">"Dobri opisi slika sažeti su, ali detaljni. Obavezno sažmite ili napišite tekst ako ga sama slika sadrži.
+
+Vaš opis omogućuje pristupačnost platforme X osobama s poteškoćama i svakome kome je potreban dodatni kontekst.
+
+Taj podsjetnik možete isključiti u postavkama pristupačnosti."</item>
+    </plurals>
+    <plurals name="media_alt_text_prompt_dialog_positive_btn_text">
+        <item quantity="other">Dodajte opise</item>
+        <item quantity="one">Dodaj opis</item>
+    </plurals>
+    <plurals name="media_alt_text_prompt_dialog_title">
+        <item quantity="other">Nemojte zaboraviti omogućiti pristupačnost svojih slika</item>
+        <item quantity="one">Nemojte zaboraviti omogućiti pristupačnost svoje slike</item>
+    </plurals>
+    <plurals name="media_monetization_settings_categories_selected">
+        <item quantity="other">Odabrano kategorija: %d</item>
+        <item quantity="one">Odabrano kategorija: %d</item>
+    </plurals>
+    <plurals name="media_tag_remaining">
+        <item quantity="other">Označite još ovoliko osoba: %d.</item>
+        <item quantity="one">Označiti možete još sljedeći broj osoba: %d.</item>
+    </plurals>
+    <plurals name="media_tag_tagged">
+        <item quantity="other">Označeno ovoliko osoba: %d</item>
+        <item quantity="one">%d osoba je označena</item>
+    </plurals>
+    <plurals name="member_count">
+        <item quantity="other">Broj članova: %s</item>
+        <item quantity="one">%s član</item>
+    </plurals>
+    <plurals name="members">
+        <item quantity="other">%s članova</item>
+        <item quantity="one">%s član</item>
+    </plurals>
+    <plurals name="minutes">
+        <item quantity="other">%d min</item>
+        <item quantity="one">%d min</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d novih obavijesti</item>
+        <item quantity="one">%d nova obavijest</item>
+        <item quantity="few">%d nove obavijesti</item>
+    </plurals>
+    <plurals name="muted_keyword_bulk_delete_success">
+        <item quantity="other">Izbrisan je sljedeći broj riječi: %d</item>
+        <item quantity="one">Izbrisan je sljedeći broj riječi: %d</item>
+    </plurals>
+    <plurals name="muted_keyword_selected_count">
+        <item quantity="other">Odabrano: %d</item>
+        <item quantity="one">Odabrano: %d</item>
+    </plurals>
+    <plurals name="narrowcast_community_member_count">
+        <item quantity="other">Broj članova: %s</item>
+        <item quantity="one">%s član</item>
+    </plurals>
+    <plurals name="narrowcast_trusted_friends_count">
+        <item quantity="other">Broj osoba: %s</item>
+        <item quantity="one">%s osoba</item>
+    </plurals>
+    <plurals name="others">
+        <item quantity="other">Još njih %d</item>
+        <item quantity="one">Još jedna osoba</item>
+    </plurals>
+    <plurals name="product_count">
+        <item quantity="other">%1$d proizvod(a)</item>
+        <item quantity="one">%1$d proizvod</item>
+    </plurals>
+    <plurals name="profile_creator_subscriptions_count">
+        <item quantity="other">Pretplate</item>
+        <item quantity="one">Pretplata</item>
+    </plurals>
+    <plurals name="profile_follower_count">
+        <item quantity="other">osoba koje prate</item>
+        <item quantity="one">osoba koja prati</item>
+    </plurals>
+    <plurals name="profile_friends_following_others">
+        <item quantity="other">Još njih %d</item>
+        <item quantity="one">Još njih %d</item>
+    </plurals>
+    <plurals name="profile_super_followers_count">
+        <item quantity="other">pretplatnika</item>
+        <item quantity="one">pretplatnik</item>
+    </plurals>
+    <plurals name="profile_toolbar_subtitle_articles">
+        <item quantity="other">%s Članci</item>
+        <item quantity="one">%s Članak</item>
+    </plurals>
+    <plurals name="profile_toolbar_subtitle_likes">
+        <item quantity="other">Lajkova: %s</item>
+        <item quantity="one">%s lajk</item>
+    </plurals>
+    <plurals name="profile_toolbar_subtitle_media">
+        <item quantity="other">Fotografije i videozapisi – %s</item>
+        <item quantity="one">%s fotografija</item>
+    </plurals>
+    <plurals name="profile_toolbar_subtitle_timeline">
+        <item quantity="other">Broj objava: %s</item>
+        <item quantity="one">%s objava</item>
+    </plurals>
+    <plurals name="ps__accessibility_broadcaster_stats_graph_peak_msg">
+        <item quantity="other">Grafikon gledatelja prijenosa uživo. U %2$s imali ste najveći broj gledatelja: %1$d.</item>
+        <item quantity="zero">Grafikon gledatelja prijenosa uživo</item>
+        <item quantity="one">Grafikon gledatelja prijenosa uživo. U %2$s imali ste najveći broj gledatelja: %1$d.</item>
+    </plurals>
+    <plurals name="ps__accessibility_broadcaster_stats_graph_point_msg">
+        <item quantity="other">U %2$s imali ste sljedeći broj gledatelja: %1$d.</item>
+        <item quantity="one">U %2$s imali ste %1$d gledatelja.</item>
+    </plurals>
+    <plurals name="ps__invite_follower">
+        <item quantity="other">%d osoba koje vas prate</item>
+        <item quantity="zero">Nema osoba koje vas prate</item>
+        <item quantity="one">%d osoba koja vas prati</item>
+    </plurals>
+    <plurals name="ps__invited_num_followers_embolden">
+        <item quantity="other">*%1$s* pozvao/la je sljedeći broj korisnika/ca: %2$s</item>
+        <item quantity="one">*%1$s* pozvao/la je %2$s korisnika/cu</item>
+    </plurals>
+    <plurals name="ps__moderation_report_muted_by_moderator">
+        <item quantity="other">*Onemogućio/la* %1$s (%2$d)</item>
+        <item quantity="one">*Onemogućio/la* %1$s</item>
+    </plurals>
+    <plurals name="ps__moderation_report_unmuted_by_moderator">
+        <item quantity="other">*Omogućio/la* %1$s (%2$d)</item>
+        <item quantity="one">*Omogućio/la* %1$s</item>
+    </plurals>
+    <plurals name="ps__new_messages">
+        <item quantity="other">Novih poruka: %1$d</item>
+        <item quantity="one">%1$d nova poruka</item>
+    </plurals>
+    <plurals name="ps__num_hearts">
+        <item quantity="other">Broj srca: %s</item>
+        <item quantity="one">%s srce</item>
+    </plurals>
+    <plurals name="ps__stats_live_viewers">
+        <item quantity="other">GLEDATELJI UŽIVO</item>
+        <item quantity="one">GLEDATELJ UŽIVO</item>
+    </plurals>
+    <plurals name="ps__stats_replay_viewers">
+        <item quantity="other">GLEDATELJI SNIMKE</item>
+        <item quantity="one">GLEDATELJ SNIMKE</item>
+    </plurals>
+    <plurals name="ps__time_format_days">
+        <item quantity="other">%d dan(a)</item>
+        <item quantity="one">%d dan</item>
+    </plurals>
+    <plurals name="ps__time_format_hours">
+        <item quantity="other">%d h</item>
+        <item quantity="one">%d h</item>
+    </plurals>
+    <plurals name="ps__time_format_minutes">
+        <item quantity="other">%d min</item>
+        <item quantity="one">%d min</item>
+    </plurals>
+    <plurals name="ps__time_format_seconds">
+        <item quantity="other">%d s</item>
+        <item quantity="one">%d s</item>
+    </plurals>
+    <plurals name="recording_replay_count_preview">
+        <item quantity="other">Broj reprodukcija: %s</item>
+        <item quantity="one">%s reprodukcija</item>
+    </plurals>
+    <plurals name="relationship_followers_following_others">
+        <item quantity="other">i još njih %d</item>
+        <item quantity="one">još %d</item>
+    </plurals>
+    <plurals name="replies">
+        <item quantity="other">Odgovora: %d</item>
+        <item quantity="one">%d odgovor</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_and_n_others">
+        <item quantity="other">Odgovor za korisnika/cu ﻿%1$s i još njih %2$d﻿</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_and_n_others_exclusive">
+        <item quantity="other">Odgovarate korisnicima/korisnicama ﻿%1$s i njima još %2$d﻿. Vaš će odgovor biti vidljiv i drugim pretplatnicima.</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_and_n_others_in_space">
+        <item quantity="other">Odgovor koriniku/ci ﻿%1$s i drugima (njih %2$d)﻿ u Prostoru ﻿%3$s﻿</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_someone_and_n_others">
+        <item quantity="other">Odgovor za korisnike ﻿%1$s, %2$s i njih još %3$d﻿</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_someone_and_n_others_exclusive">
+        <item quantity="other">Odgovarate korisnicima/korisnicama ﻿%1$s %2$s i njima još%3$d﻿. Vaš će odgovor biti vidljiv i drugim pretplatnicima.</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_someone_and_n_others_in_space">
+        <item quantity="other">Odgovor korisnicima ﻿%1$s, %2$s i drugima (njih %3$d)﻿ u Prostoru ﻿%4$s﻿</item>
+    </plurals>
+    <plurals name="reported_tweet_reported_by">
+        <item quantity="other">Prijavili članovi: {{}}%1$s{{}}</item>
+        <item quantity="one">Prijavio/la: {{}}%1$s{{}}</item>
+    </plurals>
+    <plurals name="retweets">
+        <item quantity="other">Broj proslijeđenih objava: %d</item>
+        <item quantity="one">%d proslijeđena objava</item>
+    </plurals>
+    <plurals name="safety_mode_preview_description">
+        <item quantity="other">Označili smo sljedeći broj računa koji bi mogli slati uvredljiv ili neželjen sadržaj: %d.</item>
+        <item quantity="one">Označili smo sljedeći broj računa koji bi mogli slati uvredljiv ili neželjen sadržaj: %d.</item>
+    </plurals>
+    <plurals name="seconds">
+        <item quantity="other">%d s</item>
+        <item quantity="one">%d s</item>
+    </plurals>
+    <plurals name="send_cohost_invite">
+        <item quantity="other">Pošalji pozivnice za suvoditelje</item>
+        <item quantity="one">Pošalji pozivnicu za suvoditelja/icu</item>
+    </plurals>
+    <plurals name="settings_notif_tweets_count">
+        <item quantity="other">Broj osoba: %d</item>
+        <item quantity="one">%d osoba</item>
+    </plurals>
+    <plurals name="social_follow_and_follow_and_others">
+        <item quantity="other">Prate %1$s, %2$s i drugi (njih %3$d)</item>
+        <item quantity="one">%1$s, %2$s i još %3$d korisnika/ca prati tog korisnika/cu</item>
+    </plurals>
+    <plurals name="spaces_additional_participants">
+        <item quantity="other">još %1$s slušatelja</item>
+        <item quantity="one">još %1$s slušatelj</item>
+    </plurals>
+    <plurals name="spaces_blocked_warning">
+        <item quantity="other">Blokirali ste sljedeći broj osoba koje govore: %1$d</item>
+        <item quantity="one">Blokirali ste sljedeći broj osoba koje govore: %1$d</item>
+    </plurals>
+    <plurals name="spaces_card_social_proof_in_progress">
+        <item quantity="other">%1$s su u ovom prostoru</item>
+        <item quantity="one">%1$s je u ovom prostoru</item>
+    </plurals>
+    <plurals name="spaces_card_social_proof_replay">
+        <item quantity="other">U tom su Prostoru bili/le %1$s</item>
+        <item quantity="one">U tom je Prostoru bio/la %1$s</item>
+    </plurals>
+    <plurals name="spaces_invite_confirmation">
+        <item quantity="other">U taj je Prostor pozvano %1$d ljudi</item>
+        <item quantity="one">U taj je prostor pozvana %1$d osoba</item>
+    </plurals>
+    <plurals name="speakers_current_count">
+        <item quantity="other">Govornika: %1$d</item>
+        <item quantity="one">%1$d govornik</item>
+    </plurals>
+    <plurals name="speakers_listeners_count">
+        <item quantity="other">Slušatelja: %1$d</item>
+        <item quantity="one">%1$d slušatelj</item>
+    </plurals>
+    <plurals name="speakers_open_spots_count">
+        <item quantity="other">Slobodnih mjesta: %1$d</item>
+        <item quantity="one">%1$d slobodno mjesto</item>
+    </plurals>
+    <plurals name="speakers_requests_count">
+        <item quantity="other">Zahtjeva: %1$d</item>
+        <item quantity="one">%1$d zahtjev</item>
+    </plurals>
+    <plurals name="stat_label_bookmarks">
+        <item quantity="other">Knjižne oznake</item>
+        <item quantity="one">Knjižna oznaka</item>
+    </plurals>
+    <plurals name="stat_label_likes_sentence_case">
+        <item quantity="other">puta označeno sa „sviđa mi se”</item>
+        <item quantity="one">put označeno sa „sviđa mi se”</item>
+    </plurals>
+    <plurals name="stat_label_quote_tweets">
+        <item quantity="other">citata</item>
+        <item quantity="one">Citat</item>
+    </plurals>
+    <plurals name="stat_label_retweets_sentence_case">
+        <item quantity="other">Proslijeđene objave</item>
+        <item quantity="one">Proslijedi objavu</item>
+    </plurals>
+    <plurals name="stat_label_verified_views_sentence_case">
+        <item quantity="other">potvrđenih prikaza</item>
+        <item quantity="one">potvrđeni prikaz</item>
+    </plurals>
+    <plurals name="stat_label_views_sentence_case">
+        <item quantity="other">prikaza</item>
+        <item quantity="one">prikaz</item>
+    </plurals>
+    <plurals name="subscription_duration_days">
+        <item quantity="other">%d dana</item>
+        <item quantity="one">dan</item>
+    </plurals>
+    <plurals name="subscription_duration_months">
+        <item quantity="other">%d mjeseci</item>
+        <item quantity="one">mjesec</item>
+    </plurals>
+    <plurals name="subscription_duration_years">
+        <item quantity="other">%d godine</item>
+        <item quantity="one">godina</item>
+    </plurals>
+    <plurals name="time_days">
+        <item quantity="other">%d d.</item>
+        <item quantity="one">%d d.</item>
+    </plurals>
+    <plurals name="time_days_ago">
+        <item quantity="other">PRIJE %d DANA</item>
+        <item quantity="one">PRIJE %d DAN</item>
+    </plurals>
+    <plurals name="time_hours">
+        <item quantity="other">%d h</item>
+        <item quantity="one">%d h</item>
+    </plurals>
+    <plurals name="time_hours_ago">
+        <item quantity="other">PRIJE %d H</item>
+        <item quantity="one">PRIJE %d H</item>
+    </plurals>
+    <plurals name="time_mins">
+        <item quantity="other">%d m</item>
+        <item quantity="one">%d m</item>
+    </plurals>
+    <plurals name="time_mins_ago">
+        <item quantity="other">PRIJE %d MIN</item>
+        <item quantity="one">PRIJE %d MIN</item>
+    </plurals>
+    <plurals name="time_secs">
+        <item quantity="other">%d s</item>
+        <item quantity="one">%d s</item>
+    </plurals>
+    <plurals name="top_articles_time_window">
+        <item quantity="other">U zadnjih %s h</item>
+        <item quantity="one">U zadnjih jedan sat</item>
+    </plurals>
+    <plurals name="tweet_visibility_education_dialog_non_followers_text">
+        <item quantity="other">%1$s i ostali vas ne prate.</item>
+        <item quantity="one">%1$s vas ne prati.</item>
+    </plurals>
+    <plurals name="undo_send_period_in_seconds">
+        <item quantity="other">%d s</item>
+        <item quantity="one">%d s</item>
+    </plurals>
+    <plurals name="verified_views">
+        <item quantity="other">Potvrđenih prikaza: %d</item>
+        <item quantity="one">%d potvrđeni prikaz</item>
+    </plurals>
+</resources>

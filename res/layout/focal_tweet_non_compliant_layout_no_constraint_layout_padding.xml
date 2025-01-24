@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.ui.widget.TombstoneView
+    android:id="@id/tombstone_view"
+    android:background="@color/clear"
+    android:focusable="true"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    twitter:forceDisableReveal="true"
+    twitter:horizontalRowPaddingOverride="0.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <tag
+        android:value="com.twitter.tweetview.focal.ui.tombstone.FocalTweetNonCompliantViewDelegateBinder"
+        android:id="@id/viewBinder" />
+    <tag
+        android:value="com.twitter.tweetview.core.TweetViewViewModel"
+        android:id="@id/viewModel" />
+</com.twitter.ui.widget.TombstoneView>

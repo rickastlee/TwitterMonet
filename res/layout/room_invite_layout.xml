@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_gravity="bottom"
+    android:id="@id/invite_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout
+        android:id="@id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/space_8"
+        android:paddingEnd="@dimen/space_8"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:layout_gravity="end|center"
+            android:id="@id/room_invite_layout_dismiss_button"
+            android:padding="@dimen/horizontal_padding_small"
+            android:layout_width="@dimen/action_button_size"
+            android:layout_height="@dimen/action_button_size"
+            android:src="@drawable/ic_vector_close"
+            android:contentDescription="@string/ps__accessibility_close"
+            app:tint="?coreColorPrimaryText" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_xlarge"
+            android:textStyle="bold"
+            android:textColor="?coreColorPrimaryText"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:id="@id/room_invite_title"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="@string/open_audio_space_title" />
+    </FrameLayout>
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_large"
+        android:textStyle="bold"
+        android:textColor="?coreColorPrimaryText"
+        android:id="@id/room_invite_layout_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_24"
+        android:text="@string/invite_title"
+        android:layout_marginStart="@dimen/space_16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textColor="?coreColorSecondaryText"
+        android:id="@id/room_invite_layout_subtitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_12"
+        android:text="@string/invite_subtitle"
+        android:layout_marginStart="@dimen/space_16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/room_invite_layout_title" />
+    <FrameLayout
+        android:orientation="vertical"
+        android:id="@id/room_invite_layout_search_bar_container"
+        android:background="?coreColorSectionDivider"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/nav_bar_height"
+        android:layout_marginTop="@dimen/space_16"
+        android:layout_marginBottom="@dimen/space_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/room_invite_layout_subtitle">
+        <View
+            android:id="@id/divider"
+            android:background="?coreColorBorder"
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip" />
+        <com.twitter.ui.widget.TwitterEditText
+            android:textSize="@dimen/font_size_normal"
+            android:textColor="?coreColorSecondaryText"
+            android:textColorHint="?coreColorSecondaryText"
+            android:layout_gravity="center"
+            android:id="@id/room_invite_layout_search_invite"
+            android:background="@null"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/invite_search_label"
+            android:maxLines="1"
+            android:drawablePadding="@dimen/space_8"
+            android:inputType="text"
+            android:imeOptions="actionDone"
+            android:drawableStart="@drawable/ic_search_hint_dark"
+            android:layout_marginStart="@dimen/space_12" />
+        <View
+            android:layout_gravity="bottom"
+            android:id="@id/divider2"
+            android:background="?coreColorBorder"
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip" />
+    </FrameLayout>
+    <com.twitter.rooms.subsystem.api.utils.BottomSheetRecyclerView
+        android:id="@id/room_invite_layout_recycler_view"
+        android:clipToPadding="false"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintBottom_toTopOf="@id/room_invite_layout_footer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/room_invite_layout_search_bar_container"
+        app:layout_constraintVertical_bias="0.0" />
+    <FrameLayout
+        android:id="@id/room_invite_layout_footer"
+        android:padding="@dimen/space_16"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/room_invite_layout_recycler_view">
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_large"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:id="@id/room_invite_layout_start_space"
+            android:background="@drawable/rounded_rectangle_purple_gradient"
+            android:paddingTop="@dimen/space_12"
+            android:paddingBottom="@dimen/space_12"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/start_space"
+            android:paddingStart="@dimen/space_16"
+            android:paddingEnd="@dimen/space_16" />
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

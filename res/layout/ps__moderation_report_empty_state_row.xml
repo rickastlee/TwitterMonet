@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:padding="@dimen/ps__standard_spacing_30"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:layout_gravity="center_horizontal"
+        android:id="@id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/ps__standard_spacing_10"
+        android:contentDescription="@null" />
+    <tv.periscope.android.view.PsTextView
+        android:textSize="20.0sp"
+        android:textColor="@color/ps__white"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_horizontal"
+        android:id="@id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/ps__standard_spacing_10" />
+    <tv.periscope.android.view.PsTextView
+        android:textSize="@dimen/ps__description_text_size"
+        android:textColor="@color/ps__white_50"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_horizontal"
+        android:id="@id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/ps__standard_spacing_30" />
+    <tv.periscope.android.view.PsButton
+        android:layout_gravity="center_horizontal"
+        android:id="@id/add_moderators"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ps__moderation_report_add_moderators"
+        style="@style/ps__Button" />
+    <tv.periscope.android.view.PsTextView
+        android:textSize="@dimen/ps__description_text_size"
+        android:textColor="@color/ps__blue"
+        android:layout_gravity="center_horizontal"
+        android:id="@id/view_blocked_users_button"
+        android:padding="@dimen/ps__standard_spacing_10"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ps__moderation_report_view_blocked_users" />
+</LinearLayout>

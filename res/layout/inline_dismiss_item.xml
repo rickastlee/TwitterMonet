@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.ui.components.text.legacy.TypefacesTextView
+    android:textStyle="bold"
+    android:textColor="?coreColorSecondaryText"
+    android:gravity="center_vertical"
+    android:id="@id/feedback_text"
+    android:background="?android:selectableItemBackground"
+    android:padding="@dimen/inline_dismiss_item_padding"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:drawablePadding="@dimen/inline_dismiss_item_padding"
+    android:drawableTint="?coreColorSecondaryText"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

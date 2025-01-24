@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <item
+        android:icon="?toolbarSearchIcon"
+        android:id="@id/menu_search_profile"
+        android:visible="false"
+        android:title="@string/button_search"
+        twitter:showAsAction="always|collapseActionView" />
+    <item
+        android:id="@id/menu_share"
+        android:title="@string/button_action_share"
+        twitter:order="1"
+        twitter:showAsAction="never" />
+    <item
+        android:id="@id/menu_compose_dm"
+        android:title="@string/users_direct_message"
+        twitter:order="2"
+        twitter:showAsAction="never" />
+    <item
+        android:id="@id/menu_turn_off_retweets"
+        android:title="@string/users_turn_off_retweets"
+        twitter:order="3"
+        twitter:showAsAction="never" />
+    <item
+        android:id="@id/menu_turn_on_retweets"
+        android:title="@string/users_turn_on_retweets"
+        twitter:order="4"
+        twitter:showAsAction="never" />
+    <item
+        android:id="@id/menu_drafts"
+        android:title="@string/drafts"
+        twitter:order="5"
+        twitter:showAsAction="never" />
+    <item
+        android:id="@id/menu_add_remove_from_list"
+        android:title="@string/users_add_remove_from_lists"
+        twitter:order="7"
+        twitter:showAsAction="never" />
+    <item
+        android:id="@id/menu_show_lists"
+        android:title="@string/profile_tab_title_lists_owned_by"
+        twitter:order="8"
+        twitter:showAsAction="never" />
+    <item
+        android:id="@id/menu_show_list_membership"
+        android:title="@string/lists_youre_on"
+        twitter:order="9"
+        twitter:showAsAction="never" />
+    <item
+        android:id="@id/menu_mute"
+        android:title="@string/mute"
+        twitter:order="10"
+        twitter:showAsAction="never" />
+    <item
+        android:id="@id/menu_unmute"
+        android:title="@string/unmute"
+        twitter:order="11"
+        twitter:showAsAction="never" />
+    <item
+        android:id="@id/menu_unblock"
+        android:title="@string/users_unblock"
+        twitter:order="12"
+        twitter:showAsAction="never" />
+    <item
+        android:id="@id/menu_block"
+        android:title="@string/block"
+        twitter:order="13"
+        twitter:showAsAction="never" />
+    <item
+        android:id="@id/menu_remove_autoblock"
+        android:title="@string/remove_autoblock"
+        twitter:order="14"
+        twitter:showAsAction="never" />
+    <item
+        android:id="@id/menu_report"
+        android:title="@string/report"
+        twitter:order="15"
+        twitter:showAsAction="never" />
+    <item
+        android:id="@id/menu_ads_companion"
+        android:title="@string/ads_companion"
+        twitter:order="16"
+        twitter:showAsAction="never" />
+</menu>

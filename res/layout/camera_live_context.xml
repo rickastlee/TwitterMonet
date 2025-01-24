@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:orientation="vertical"
+    android:paddingTop="@dimen/live_container_top_padding"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.twitter.media.ui.image.UserImageView
+        android:id="@id/live_avatar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:importantForAccessibility="no"
+        android:layout_marginStart="@dimen/avatar_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:userImageSize="small" />
+    <com.twitter.ui.autocomplete.PopupSuggestionEditText
+        android:gravity="top"
+        android:id="@id/live_tweet_text"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_12"
+        android:layout_marginStart="@dimen/space_12"
+        android:layout_marginEnd="@dimen/space_12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/live_avatar"
+        style="@style/CameraTweetText" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:orientation="horizontal"
+        android:id="@id/live_hashtag_suggestions"
+        android:visibility="gone"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_16"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="@id/live_tweet_text"
+        app:layout_constraintStart_toStartOf="@id/live_tweet_text"
+        app:layout_constraintTop_toBottomOf="@id/live_tweet_text" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textColor="@color/white"
+        android:id="@id/live_selected_location_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_12"
+        android:layout_marginBottom="@dimen/space_12"
+        android:foreground="?selectableItemBackground"
+        android:text="@string/add_location"
+        android:drawablePadding="@dimen/space_4"
+        android:textAllCaps="false"
+        android:drawableStart="@drawable/ic_vector_location"
+        android:layout_marginEnd="@dimen/space_12"
+        app:drawableTintColor="@color/white"
+        app:iconSize="@dimen/font_size_normal"
+        app:layout_constraintStart_toStartOf="@id/live_tweet_text"
+        app:layout_constraintTop_toBottomOf="@id/live_hashtag_suggestions" />
+</androidx.constraintlayout.widget.ConstraintLayout>

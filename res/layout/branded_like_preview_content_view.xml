@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <tag
+        android:value="FileSelector"
+        android:id="@id/weaverComponent" />
+    <include
+        layout="@layout/include_preview_toolbar" />
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <include
+            layout="@layout/include_empty_layout" />
+        <ScrollView
+            android:id="@id/contentScroll"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <tag
+                android:value="ContentLayout"
+                android:id="@id/weaverComponent" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@id/contentLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <include
+                    layout="@layout/include_animation_preview" />
+                <include
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16.0dip"
+                    layout="@layout/include_tweet_preview" />
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+</LinearLayout>

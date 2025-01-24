@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:id="@id/standardized_nudge_container"
+    android:background="@drawable/action_sheet_soft_intervention_nudge_background"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/space_8"
+    android:layout_marginBottom="@dimen/space_16"
+    android:layout_marginStart="@dimen/space_16"
+    android:layout_marginEnd="@dimen/space_16"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@id/standardized_nudge_expanded"
+        android:padding="@dimen/space_16"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_gravity="center_horizontal"
+            android:id="@id/expanded_icon"
+            android:layout_width="32.0dip"
+            android:layout_height="32.0dip"
+            android:layout_marginTop="@dimen/space_8"
+            android:layout_marginBottom="@dimen/space_16"
+            android:scaleType="fitXY" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_headline_1"
+            android:textStyle="bold"
+            android:textColor="?coreColorPrimaryText"
+            android:gravity="start"
+            android:id="@id/expanded_heading"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_16" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_normal"
+            android:textColor="?coreColorSecondaryText"
+            android:gravity="start"
+            android:id="@id/expanded_subheading"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_16" />
+        <com.twitter.ui.components.button.legacy.TwitterButton
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:id="@id/expanded_nudge_cta"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_12"
+            style="@style/TwitterButtonMediumBrandFilled" />
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@id/standardized_nudge_condensed"
+        android:padding="@dimen/space_12"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_headline_1"
+            android:textColor="?coreColorPrimaryText"
+            android:id="@id/condensed_heading"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/space_12"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/space_12"
+            android:layout_toStartOf="@id/condensed_feedback_button"
+            android:layout_alignParentStart="true" />
+        <com.twitter.ui.widget.TintableImageView
+            android:id="@id/condensed_feedback_button"
+            android:background="?android:selectableItemBackgroundBorderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_vector_information_circle"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/learn_more"
+            android:layout_alignParentEnd="true"
+            custom:tint="?coreColorSecondaryText" />
+    </RelativeLayout>
+    <tag
+        android:value="StandardizedNudgeSheet"
+        android:id="@id/weaverComponent" />
+</LinearLayout>

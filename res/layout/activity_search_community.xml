@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <include
+        android:id="@id/toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="?toolBarSize"
+        layout="@layout/app_toolbar" />
+    <com.twitter.communities.search.CommunitiesSearchComposeView
+        android:id="@id/search_compose_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <tag
+        android:value="CommunitySearch"
+        android:id="@id/weaverComponent" />
+    <FrameLayout
+        android:id="@id/communities_fragment_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@id/save"
+        android:title="@string/save" />
+    <item
+        android:id="@id/high_quality"
+        android:visible="false"
+        android:title="@string/load_high_quality" />
+    <item
+        android:id="@id/load_4k_quality"
+        android:visible="false"
+        android:title="@string/load_4k_quality" />
+</menu>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@id/nudge_content_container"
+        android:background="@drawable/action_sheet_article_nudge_background"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_marginTop="@dimen/space_16"
+        android:layout_marginBottom="@dimen/space_40"
+        android:layout_marginStart="@dimen/space_16"
+        android:layout_marginEnd="@dimen/space_16"
+        custom:layout_constraintBottom_toTopOf="@id/button_container"
+        custom:layout_constraintEnd_toEndOf="parent"
+        custom:layout_constraintStart_toStartOf="parent"
+        custom:layout_constraintTop_toTopOf="parent">
+        <include
+            android:layout_gravity="bottom"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/nudge_content_condensed" />
+        <include
+            android:layout_gravity="bottom"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            layout="@layout/nudge_content_expanded" />
+    </LinearLayout>
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:id="@id/button_container"
+        android:paddingBottom="@dimen/space_16"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/space_24"
+        custom:layout_constraintBottom_toBottomOf="parent"
+        custom:layout_constraintEnd_toEndOf="parent"
+        custom:layout_constraintStart_toStartOf="parent">
+        <com.twitter.features.nudges.base.NudgeSheetButton
+            android:id="@id/primary_button_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/space_16" />
+        <com.twitter.features.nudges.base.NudgeSheetButton
+            android:id="@id/secondary_button_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/space_16" />
+        <com.twitter.features.nudges.base.NudgeSheetButton
+            android:id="@id/tertiary_button_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/space_16" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

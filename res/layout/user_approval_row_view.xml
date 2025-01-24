@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.ui.user.UserApprovalView
+    android:descendantFocusability="blocksDescendants"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    twitter:politicalDrawable="?iconPromotedGov"
+    twitter:promotedDrawable="?iconPromoted"
+    style="@style/ListRow"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <include
+        layout="@layout/user_approval_view" />
+</com.twitter.ui.user.UserApprovalView>

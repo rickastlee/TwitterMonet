@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@id/sample_header_root_constraint_layout"
+    android:background="@color/red_200"
+    android:layout_width="fill_parent"
+    android:layout_height="300.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:id="@id/sample_header_text_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:text="Text is not set" />
+    <tag
+        android:value="sample_page_header_view_binder"
+        android:id="@id/weaverComponent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tv.periscope.android.view.PsTextView
+    android:textColor="@color/ps__white"
+    android:padding="@dimen/ps__standard_spacing_16"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:text=""
+    android:lines="1"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

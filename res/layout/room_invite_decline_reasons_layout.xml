@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_gravity="bottom"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_xlarge"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:id="@id/decline_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_32"
+        android:text="@string/decline_invite_title" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_normal"
+        android:gravity="center"
+        android:id="@id/decline_description"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_8"
+        android:text="@string/decline_invite_description" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:id="@id/decline_listen_button"
+        android:background="@drawable/rounded_rectangle_twitter_blue"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_marginTop="@dimen/space_28"
+        android:layout_marginBottom="@dimen/space_16"
+        android:foreground="@drawable/ripple_selector_rounded_rectangle"
+        android:text="@string/decline_invite_reason_listen"
+        android:layout_weight="500.0"
+        android:layout_marginStart="@dimen/space_32"
+        android:layout_marginEnd="@dimen/space_32"
+        style="@style/SpacesCustomButton" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:id="@id/decline_speak_later_button"
+        android:background="@drawable/rounded_rectangle_twitter_blue"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_16"
+        android:foreground="@drawable/ripple_selector_rounded_rectangle"
+        android:text="@string/decline_invite_reason_speak_later"
+        android:layout_marginStart="@dimen/space_32"
+        android:layout_marginEnd="@dimen/space_32"
+        style="@style/SpacesCustomButton" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:id="@id/decline_no_thanks_button"
+        android:background="@drawable/rounded_rectangle_gray_border"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_8"
+        android:foreground="@drawable/ripple_selector_rounded_rectangle"
+        android:text="@string/decline_invite_reason_no_thanks"
+        android:layout_marginStart="@dimen/space_32"
+        android:layout_marginEnd="@dimen/space_32"
+        style="@style/SpacesCustomButton" />
+    <tag
+        android:value="RoomDeclineInviteReasons"
+        android:id="@id/weaverComponent" />
+</LinearLayout>

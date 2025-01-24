@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:id="@id/card_container"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout
+        android:layout_gravity="center_vertical"
+        android:id="@id/media_view_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical"
+        android:id="@id/content_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/card_default_spacing"
+        android:layout_marginBottom="@dimen/card_horizontal_margin"
+        android:layout_marginStart="@dimen/card_horizontal_margin"
+        android:layout_marginEnd="@dimen/card_horizontal_margin">
+        <include
+            android:id="@id/recipient_info"
+            android:visibility="gone"
+            layout="@layout/dm_card_recipient_info" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@id/cta_container"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

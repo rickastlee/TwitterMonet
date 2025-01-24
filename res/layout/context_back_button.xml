@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.ui.widget.TintableImageButton
+    android:id="@id/context_back_button"
+    android:background="@drawable/black_opacity_40_circle_button_bg"
+    android:padding="6.0dip"
+    android:layout_width="@dimen/camera_button_height"
+    android:layout_height="@dimen/camera_button_height"
+    android:layout_margin="@dimen/space_16"
+    android:foreground="@drawable/ripple_selector_oval"
+    android:src="@drawable/ic_vector_close"
+    android:contentDescription="@string/back"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:tint="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" />

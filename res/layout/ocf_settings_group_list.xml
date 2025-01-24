@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/ocf_standard_spacing"
+    android:layout_marginBottom="@dimen/ocf_standard_spacing"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/primary_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/OcfBodyText.PrimaryBold" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/status_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/ocf_inline_standard_spacing"
+        style="@style/OcfSubtext2Text" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/secondary_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/OcfSubtext2Text" />
+</LinearLayout>

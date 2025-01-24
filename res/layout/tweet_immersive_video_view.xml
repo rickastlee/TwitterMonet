@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.media.av.autoplay.ui.VideoContainerHost
+    android:id="@id/video_container"
+    android:visibility="gone"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:scaleMode="fit"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <tag
+        android:value="com.twitter.explore.immersive.ui.videoplayer.ImmersiveVideoViewDelegateBinder"
+        android:id="@id/viewBinder" />
+    <tag
+        android:value="com.twitter.tweetview.core.TweetViewViewModel"
+        android:id="@id/viewModel" />
+</com.twitter.media.av.autoplay.ui.VideoContainerHost>

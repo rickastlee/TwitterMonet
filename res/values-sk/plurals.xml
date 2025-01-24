@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="admin_tools_subtitle_members">
+        <item quantity="other">Počet členov: %d</item>
+        <item quantity="one">%d člen</item>
+    </plurals>
+    <plurals name="badge_item_count">
+        <item quantity="other">Nové položky: %d</item>
+        <item quantity="one">%d nová položka</item>
+    </plurals>
+    <plurals name="cohost_current_count">
+        <item quantity="other">Spoluhostitelia: %1$d</item>
+        <item quantity="one">%1$d spoluhostiteľ</item>
+    </plurals>
+    <plurals name="community_member_count">
+        <item quantity="other">Členovia Komunity: %d</item>
+        <item quantity="one">%d člen Komunity</item>
+    </plurals>
+    <plurals name="community_moderator_count">
+        <item quantity="other">Moderátori: %d</item>
+        <item quantity="one">%d moderátor</item>
+    </plurals>
+    <plurals name="community_navigation_join_requests_label">
+        <item quantity="other">Žiadosti: %s</item>
+        <item quantity="one">%s žiadosť</item>
+    </plurals>
+    <plurals name="community_navigation_new_unread_tweets_label">
+        <item quantity="other">%s nových príspevkov</item>
+        <item quantity="one">%s nový príspevok</item>
+    </plurals>
+    <plurals name="community_navigation_pending_reports_label">
+        <item quantity="other">Hlásenia: %s</item>
+        <item quantity="one">%s hlásenie</item>
+    </plurals>
+    <plurals name="composer_count_progress_overflow_warning">
+        <item quantity="other">Presahuje povolenú dĺžku o tento počet znakov: %d</item>
+        <item quantity="one">Presahuje povolenú dĺžku o tento počet znakov: %d</item>
+    </plurals>
+    <plurals name="composer_count_progress_warning">
+        <item quantity="other">Zostávajúci počet znakov: %d</item>
+        <item quantity="one">Zostávajúci počet znakov: %d</item>
+    </plurals>
+    <plurals name="content_description_fleet_item_space_with_others">
+        <item quantity="other">Priestor používateľa %1$s s %2$d ďalšími</item>
+        <item quantity="one">Priestor používateľa %1$s s %2$d ďalším</item>
+    </plurals>
+    <plurals name="data_sync_notif_title">
+        <item quantity="other">Nové interakcie: %d</item>
+        <item quantity="one">Nová interakcia: %d</item>
+    </plurals>
+    <plurals name="days">
+        <item quantity="other">%d dní</item>
+        <item quantity="one">%d d.</item>
+    </plurals>
+    <plurals name="dm_add_people_failure">
+        <item quantity="other">Niektorých používateľov (%d) sa nepodarilo pridať do tejto skupiny.</item>
+        <item quantity="one">Používateľa sa nepodarilo pridať do tejto skupiny.</item>
+    </plurals>
+    <plurals name="dm_add_people_success">
+        <item quantity="other">Používatelia (%d) sa pridali do skupiny.</item>
+        <item quantity="one">Používateľ sa pridal do skupiny.</item>
+    </plurals>
+    <plurals name="dm_follower_count_no_joined_date">
+        <item quantity="other">Sledujúci: {num_followers}</item>
+        <item quantity="one">{num_followers} sledujúci</item>
+    </plurals>
+    <plurals name="dm_group_account_name">
+        <item quantity="other">Počet ľudí: %d</item>
+        <item quantity="one">1 osoba</item>
+    </plurals>
+    <plurals name="dm_group_chat_count">
+        <item quantity="other">Skupinový chat s %d ľuďmi</item>
+        <item quantity="one">Skupinový chat s %d osobou</item>
+    </plurals>
+    <plurals name="dm_group_conversation_participant_count">
+        <item quantity="other">Počet osôb: %1$d</item>
+        <item quantity="one">%1$d osoba</item>
+    </plurals>
+    <plurals name="dm_group_participant_count">
+        <item quantity="other">V tejto skupine sú %1$s</item>
+        <item quantity="one">V tejto skupine je %1$s</item>
+    </plurals>
+    <plurals name="dm_group_participant_count_person_details">
+        <item quantity="other">ďalší ľudia (%1$s)</item>
+        <item quantity="one">%1$s ďalšia osoba</item>
+    </plurals>
+    <plurals name="dm_image_profile">
+        <item quantity="other">Profilové obrázky pre: %s</item>
+        <item quantity="one">Profilový obrázok pre: %s</item>
+    </plurals>
+    <plurals name="dm_new_people_you_may_know">
+        <item quantity="other">Noví ľudia, ktorých možno poznáte: %d</item>
+        <item quantity="one">%d nová osoba, ktorú možno poznáte</item>
+    </plurals>
+    <plurals name="dm_new_requests">
+        <item quantity="other">Nové žiadosti: %d</item>
+        <item quantity="one">%d nová žiadosť</item>
+    </plurals>
+    <plurals name="dm_participant_added_by_deleted_user">
+        <item quantity="other">Boli pridaní používatelia {participants}</item>
+        <item quantity="one">Bol pridaný používateľ {participants}</item>
+    </plurals>
+    <plurals name="dm_pending_requests">
+        <item quantity="other">Čakajúce žiadosti: %s</item>
+        <item quantity="one">%d čakajúca žiadosť</item>
+    </plurals>
+    <plurals name="dm_people_you_may_know">
+        <item quantity="other">Ľudia, ktorých možno poznáte: %d</item>
+        <item quantity="one">%d osoba, ktorú možno poznáte</item>
+    </plurals>
+    <plurals name="dm_pinned_conversations_max_count_exceeded_title">
+        <item quantity="other">Maximálny počet chatov, ktoré môžete pripnúť: %d</item>
+        <item quantity="one">Môžete pripnúť len %d chat</item>
+    </plurals>
+    <plurals name="dm_state_seen_by">
+        <item quantity="other">Videlo niekoľko používateľov (%d)</item>
+        <item quantity="one">Videlo niekoľko používateľov (%d)</item>
+    </plurals>
+    <plurals name="dm_unread_messages">
+        <item quantity="other">Počet neprečítaných správ: %d</item>
+        <item quantity="one">%d neprečítaná správa</item>
+    </plurals>
+    <plurals name="dm_user_joined_and_follower_count">
+        <item quantity="other">Pripojený/-á {joined_date} • Sledujúci: {num_followers}</item>
+        <item quantity="one">Pripojený/-á {joined_date} • Sledujúci: {num_followers}</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="other">Pretočiť dopredu o %d sekúnd</item>
+        <item quantity="one">Pretočiť dopredu o %d sekundu</item>
+        <item quantity="few">Pretočiť dopredu o %d sekundy</item>
+        <item quantity="many">Pretočiť dopredu o %d sekundy</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="other">Pretočiť späť o %d sekúnd</item>
+        <item quantity="one">Pretočiť späť o %d sekundu</item>
+        <item quantity="few">Pretočiť späť o %d sekundy</item>
+        <item quantity="many">Pretočiť späť o %d sekundy</item>
+    </plurals>
+    <plurals name="facepile_content_description">
+        <item quantity="other">Profilové obrázky pre: %s</item>
+        <item quantity="one">Profilový obrázok pre: %s</item>
+    </plurals>
+    <plurals name="full_screen_gallery_header_add">
+        <item quantity="other">Pridať %d</item>
+        <item quantity="one">Pridať %d</item>
+    </plurals>
+    <plurals name="graphql_errors_button">
+        <item quantity="other">Chyby: %d</item>
+        <item quantity="one">%d chyba</item>
+    </plurals>
+    <plurals name="guest_management_max_cohost_count_label">
+        <item quantity="other">Povolených máte iba %1$d spoluhostiteľov.</item>
+        <item quantity="one">Máte povoleného len %1$d spoluhostiteľa.</item>
+    </plurals>
+    <plurals name="guest_management_open_cohost_count_label">
+        <item quantity="other">Môžete pridať až %1$d ďalších ľudí.</item>
+        <item quantity="one">Môžete pridať až %1$d ďalšiu osobu.</item>
+    </plurals>
+    <plurals name="host_kudos_num_followers_gained">
+        <item quantity="other">Získali ste nových sledujúcich (%1$d).</item>
+        <item quantity="one">Získali ste %1$d nového sledujúceho.</item>
+    </plurals>
+    <plurals name="hours">
+        <item quantity="other">%d h</item>
+        <item quantity="one">%d h</item>
+    </plurals>
+    <plurals name="humanization_prompt_followers">
+        <item quantity="other">%1$s sleduje %2$s.</item>
+        <item quantity="one">%1$s sleduje: %2$s.</item>
+    </plurals>
+    <plurals name="humanization_prompt_topics">
+        <item quantity="other">Vy aj používateľ %1$s sledujete témy %2$s.</item>
+        <item quantity="one">Vy aj používateľ %1$s sledujete tému %2$s.</item>
+    </plurals>
+    <plurals name="likes">
+        <item quantity="other">Označenia Páči sa: %d</item>
+        <item quantity="one">%d označenie Páči sa</item>
+    </plurals>
+    <plurals name="list_member_count">
+        <item quantity="other">Členovia</item>
+        <item quantity="one">Člen</item>
+    </plurals>
+    <plurals name="media_alt_text_prompt_dialog_message">
+        <item quantity="other">"Dobré opisy obrázkov sú stručné, no pritom podrobné. Vytvorte súhrn alebo výpis všetkého textu na obrázku.
+
+Vďaka vašim opisom bude služba X dostupnejšia nielen pre osoby so zdravotným postihnutím, ale pre všetkých, ktorí potrebujú viac kontextu.
+
+Toto pripomenutie môžete vypnúť v sekcii Nastavenia prístupnosti."</item>
+        <item quantity="one">"Dobré opisy obrázkov sú stručné, no pritom podrobné. Vytvorte súhrn alebo výpis všetkého textu na obrázku.
+
+Vďaka vášmu opisu bude služba X dostupnejšia nielen pre osoby so zdravotným postihnutím, ale pre všetkých, ktorí potrebujú viac kontextu.
+
+Toto pripomenutie môžete vypnúť v sekcii Nastavenia prístupnosti."</item>
+    </plurals>
+    <plurals name="media_alt_text_prompt_dialog_positive_btn_text">
+        <item quantity="other">Pridať popisy</item>
+        <item quantity="one">Pridať popis</item>
+    </plurals>
+    <plurals name="media_alt_text_prompt_dialog_title">
+        <item quantity="other">Nezabudnite na sprístupnenie svojich obrázkov</item>
+        <item quantity="one">Nezabudnite na sprístupnenie svojho obrázka</item>
+    </plurals>
+    <plurals name="media_monetization_settings_categories_selected">
+        <item quantity="other">Vybrané kategórie: %d</item>
+        <item quantity="one">Vybrané kategórie: %d</item>
+    </plurals>
+    <plurals name="media_tag_remaining">
+        <item quantity="other">Označiť môžete ešte %d ďalších ľudí.</item>
+        <item quantity="one">Označiť môžete ešte %d ďalšiu osobu.</item>
+    </plurals>
+    <plurals name="media_tag_tagged">
+        <item quantity="other">Počet označených ľudí: %d</item>
+        <item quantity="one">%d označená osoba</item>
+    </plurals>
+    <plurals name="member_count">
+        <item quantity="other">Členovia: %s</item>
+        <item quantity="one">%s člen</item>
+    </plurals>
+    <plurals name="members">
+        <item quantity="other">Členovia: %s</item>
+        <item quantity="one">%s člen</item>
+    </plurals>
+    <plurals name="minutes">
+        <item quantity="other">%d min</item>
+        <item quantity="one">%d minúta</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d nových upozornení</item>
+        <item quantity="one">%d nové upozornenie</item>
+        <item quantity="few">%d nové upozornenia</item>
+        <item quantity="many">%d new notifications</item>
+    </plurals>
+    <plurals name="muted_keyword_bulk_delete_success">
+        <item quantity="other">Odstránil sa tento počet slov: %d</item>
+        <item quantity="one">Odstránilo sa %d slovo</item>
+    </plurals>
+    <plurals name="muted_keyword_selected_count">
+        <item quantity="other">Vybrané: %d</item>
+        <item quantity="one">Vybrané: %d</item>
+    </plurals>
+    <plurals name="narrowcast_community_member_count">
+        <item quantity="other">Členovia: %s</item>
+        <item quantity="one">%s člen</item>
+    </plurals>
+    <plurals name="narrowcast_trusted_friends_count">
+        <item quantity="other">Počet ľudí: %s</item>
+        <item quantity="one">%s osoba</item>
+    </plurals>
+    <plurals name="others">
+        <item quantity="other">ďalší používatelia (%d)</item>
+        <item quantity="one">1 ďalší</item>
+    </plurals>
+    <plurals name="product_count">
+        <item quantity="other">Produkty: %1$d</item>
+        <item quantity="one">%1$d produkt</item>
+    </plurals>
+    <plurals name="profile_creator_subscriptions_count">
+        <item quantity="other">Predplatné</item>
+        <item quantity="one">Predplatné</item>
+    </plurals>
+    <plurals name="profile_follower_count">
+        <item quantity="other">Sledujúci</item>
+        <item quantity="one">Sledujúci</item>
+    </plurals>
+    <plurals name="profile_friends_following_others">
+        <item quantity="other">ďalší (%d)</item>
+        <item quantity="one">ďalší (%d)</item>
+    </plurals>
+    <plurals name="profile_super_followers_count">
+        <item quantity="other">Predplatitelia</item>
+        <item quantity="one">Predplatiteľ</item>
+    </plurals>
+    <plurals name="profile_toolbar_subtitle_articles">
+        <item quantity="other">Články: %s</item>
+        <item quantity="one">%s článok</item>
+    </plurals>
+    <plurals name="profile_toolbar_subtitle_likes">
+        <item quantity="other">Počet označení „Páči sa mi to“: %s</item>
+        <item quantity="one">%s označenie „Páči sa mi to“</item>
+    </plurals>
+    <plurals name="profile_toolbar_subtitle_media">
+        <item quantity="other">Fotky a videá: %s</item>
+        <item quantity="one">%s fotka</item>
+    </plurals>
+    <plurals name="profile_toolbar_subtitle_timeline">
+        <item quantity="other">%s príspevkov</item>
+        <item quantity="one">%s príspevok</item>
+    </plurals>
+    <plurals name="ps__accessibility_broadcaster_stats_graph_peak_msg">
+        <item quantity="other">Graf divákov vysielaní. V čase %2$s ste mali maximum divákov %1$d.</item>
+        <item quantity="zero">Graf divákov vysielania</item>
+        <item quantity="one">Graf divákov vysielaní. V čase %2$s ste mali maximum %1$d diváka.</item>
+    </plurals>
+    <plurals name="ps__accessibility_broadcaster_stats_graph_point_msg">
+        <item quantity="other">V čase %2$s ste mali tento počet divákov: %1$d.</item>
+        <item quantity="one">V čase %2$s ste mali %1$d diváka.</item>
+    </plurals>
+    <plurals name="ps__invite_follower">
+        <item quantity="other">Počet sledujúcich: %d</item>
+        <item quantity="zero">Žiadni sledujúci</item>
+        <item quantity="one">%d sledujúci</item>
+    </plurals>
+    <plurals name="ps__invited_num_followers_embolden">
+        <item quantity="other">Používateľ *%1$s* pozval niekoľko ľudí (%2$s)</item>
+        <item quantity="one">Používateľ *%1$s* pozval %2$s osobu</item>
+    </plurals>
+    <plurals name="ps__moderation_report_muted_by_moderator">
+        <item quantity="other">*Stíšil používateľ* %1$s (%2$d)</item>
+        <item quantity="one">*Stíšil používateľ* %1$s</item>
+    </plurals>
+    <plurals name="ps__moderation_report_unmuted_by_moderator">
+        <item quantity="other">*Stíšenie zrušil používateľ* %1$s (%2$d)</item>
+        <item quantity="one">*Stíšenie zrušil používateľ* %1$s</item>
+    </plurals>
+    <plurals name="ps__new_messages">
+        <item quantity="other">Nové správy: %1$d</item>
+        <item quantity="one">%1$d nová správa</item>
+    </plurals>
+    <plurals name="ps__num_hearts">
+        <item quantity="other">Srdiečka: %s</item>
+        <item quantity="one">%s srdiečko</item>
+    </plurals>
+    <plurals name="ps__stats_live_viewers">
+        <item quantity="other">DIVÁCI ŽIVÉHO VYSIELANIA</item>
+        <item quantity="one">DIVÁK ŽIVÉHO VYSIELANIA</item>
+    </plurals>
+    <plurals name="ps__stats_replay_viewers">
+        <item quantity="other">DIVÁCI ZÁZNAMU</item>
+        <item quantity="one">DIVÁK ZÁZNAMU</item>
+    </plurals>
+    <plurals name="ps__time_format_days">
+        <item quantity="other">%d d.</item>
+        <item quantity="one">%d d.</item>
+    </plurals>
+    <plurals name="ps__time_format_hours">
+        <item quantity="other">%d h</item>
+        <item quantity="one">%d h</item>
+    </plurals>
+    <plurals name="ps__time_format_minutes">
+        <item quantity="other">%d min</item>
+        <item quantity="one">%d min</item>
+    </plurals>
+    <plurals name="ps__time_format_seconds">
+        <item quantity="other">%d s</item>
+        <item quantity="one">%d s</item>
+    </plurals>
+    <plurals name="recording_replay_count_preview">
+        <item quantity="other">Prehrania: %s</item>
+        <item quantity="one">%s prehratie</item>
+    </plurals>
+    <plurals name="relationship_followers_following_others">
+        <item quantity="other">ďalší (%d)</item>
+        <item quantity="one">%d ďalší</item>
+    </plurals>
+    <plurals name="replies">
+        <item quantity="other">Odpovede: %d</item>
+        <item quantity="one">%d odpoveď</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_and_n_others">
+        <item quantity="other">Odpovedáte používateľovi ﻿%1$s a %2$d ďalším﻿</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_and_n_others_exclusive">
+        <item quantity="other">Odpovedáte používateľovi ﻿%1$s a %2$d ďalším﻿. Vašu odpoveď budú vidieť aj ďalší Predplatitelia.</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_and_n_others_in_space">
+        <item quantity="other">Odpovedáte používateľovi ﻿%1$s a %2$d ďalším﻿ v Priestore ﻿%3$s﻿</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_someone_and_n_others">
+        <item quantity="other">Odpovedáte používateľom ﻿%1$s, %2$s a %3$d ďalším﻿</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_someone_and_n_others_exclusive">
+        <item quantity="other">Odpovedáte používateľom ﻿%1$s %2$s a %3$d ďalším﻿. Vašu odpoveď budú vidieť aj ďalší predplatitelia.</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_someone_and_n_others_in_space">
+        <item quantity="other">Odpovedáte používateľom ﻿%1$s, %2$s a %3$d ďalším﻿ v Priestore ﻿%4$s﻿</item>
+    </plurals>
+    <plurals name="reported_tweet_reported_by">
+        <item quantity="other">Nahlásené {{}}%1$s členmi{{}}</item>
+        <item quantity="one">Nahlásil používateľ {{}}%1$s{{}}</item>
+    </plurals>
+    <plurals name="retweets">
+        <item quantity="other">%d preposlaní</item>
+        <item quantity="one">%d preposlanie</item>
+    </plurals>
+    <plurals name="safety_mode_preview_description">
+        <item quantity="other">Označili sme účty, ktoré sú potenciálne hanlivé alebo šíria spam (spolu %d).</item>
+        <item quantity="one">Označili sme %d účet, ktorý je potenciálne hanlivý alebo šíri spam.</item>
+    </plurals>
+    <plurals name="seconds">
+        <item quantity="other">%d s</item>
+        <item quantity="one">%d sekunda</item>
+    </plurals>
+    <plurals name="send_cohost_invite">
+        <item quantity="other">Pozvať spoluhostiteľov</item>
+        <item quantity="one">Pozvať spoluhostiteľa</item>
+    </plurals>
+    <plurals name="settings_notif_tweets_count">
+        <item quantity="other">%d ľudí</item>
+        <item quantity="one">%d osoba</item>
+    </plurals>
+    <plurals name="social_follow_and_follow_and_others">
+        <item quantity="other">Sledujú používatelia %1$s, %2$s a %3$d ďalší</item>
+        <item quantity="one">Sledujú používatelia %1$s, %2$s a %3$d ďalší</item>
+    </plurals>
+    <plurals name="spaces_additional_participants">
+        <item quantity="other">+ ďalší poslucháči (%1$s)</item>
+        <item quantity="one">+%1$s ďalší poslucháč</item>
+    </plurals>
+    <plurals name="spaces_blocked_warning">
+        <item quantity="other">Zablokovali ste %1$d ľudí, ktorí hovoria</item>
+        <item quantity="one">Zablokovali ste %1$d osobu, ktorá hovorí</item>
+    </plurals>
+    <plurals name="spaces_card_social_proof_in_progress">
+        <item quantity="other">%1$s sú v tomto Priestore</item>
+        <item quantity="one">%1$s sa nachádza v tomto Priestore</item>
+    </plurals>
+    <plurals name="spaces_card_social_proof_replay">
+        <item quantity="other">Používatelia (%1$s) boli v tomto Priestore</item>
+        <item quantity="one">Používateľ (%1$s) bol v tomto Priestore</item>
+    </plurals>
+    <plurals name="spaces_invite_confirmation">
+        <item quantity="other">Do tohto Priestoru bol pozvaný tento počet ľudí: %1$d</item>
+        <item quantity="one">%1$d osoba bola pozvaná do tohto Priestoru</item>
+    </plurals>
+    <plurals name="speakers_current_count">
+        <item quantity="other">Rečníci: %1$d</item>
+        <item quantity="one">%1$d rečník</item>
+    </plurals>
+    <plurals name="speakers_listeners_count">
+        <item quantity="other">Počúva tento počet ľudí: %1$d</item>
+        <item quantity="one">%1$d osoba počúva</item>
+    </plurals>
+    <plurals name="speakers_open_spots_count">
+        <item quantity="other">Otvorené miesta: %1$d</item>
+        <item quantity="one">%1$d otvorené miesto</item>
+    </plurals>
+    <plurals name="speakers_requests_count">
+        <item quantity="other">Žiadosti: %1$d</item>
+        <item quantity="one">%1$d žiadosť</item>
+    </plurals>
+    <plurals name="stat_label_bookmarks">
+        <item quantity="other">Záložky</item>
+        <item quantity="one">Záložka</item>
+    </plurals>
+    <plurals name="stat_label_likes_sentence_case">
+        <item quantity="other">Páči sa</item>
+        <item quantity="one">Páči sa</item>
+    </plurals>
+    <plurals name="stat_label_quote_tweets">
+        <item quantity="other">Citáty</item>
+        <item quantity="one">Citácia</item>
+    </plurals>
+    <plurals name="stat_label_retweets_sentence_case">
+        <item quantity="other">Opätovné uverejnenia</item>
+        <item quantity="one">Opätovne uverejniť</item>
+    </plurals>
+    <plurals name="stat_label_verified_views_sentence_case">
+        <item quantity="other">Overené zobrazenia</item>
+        <item quantity="one">Overené zobrazenie</item>
+    </plurals>
+    <plurals name="stat_label_views_sentence_case">
+        <item quantity="other">Zobrazenia</item>
+        <item quantity="one">Zobrazenie</item>
+    </plurals>
+    <plurals name="subscription_duration_days">
+        <item quantity="other">%d d.</item>
+        <item quantity="one">deň</item>
+    </plurals>
+    <plurals name="subscription_duration_months">
+        <item quantity="other">%d mes.</item>
+        <item quantity="one">mesiac</item>
+    </plurals>
+    <plurals name="subscription_duration_years">
+        <item quantity="other">%d r.</item>
+        <item quantity="one">rok</item>
+    </plurals>
+    <plurals name="time_days">
+        <item quantity="other">%d d.</item>
+        <item quantity="one">%d d.</item>
+    </plurals>
+    <plurals name="time_days_ago">
+        <item quantity="other">PRED %d DŇAMI</item>
+        <item quantity="one">PRED %d DŇOM</item>
+    </plurals>
+    <plurals name="time_hours">
+        <item quantity="other">%d h</item>
+        <item quantity="one">%d h</item>
+    </plurals>
+    <plurals name="time_hours_ago">
+        <item quantity="other">PRED %d HODINAMI</item>
+        <item quantity="one">PRED %d HODINOU</item>
+    </plurals>
+    <plurals name="time_mins">
+        <item quantity="other">%d min</item>
+        <item quantity="one">%d min</item>
+    </plurals>
+    <plurals name="time_mins_ago">
+        <item quantity="other">PRED %d MINÚTAMI</item>
+        <item quantity="one">PRED %d MINÚTOU</item>
+    </plurals>
+    <plurals name="time_secs">
+        <item quantity="other">%d s</item>
+        <item quantity="one">%d s</item>
+    </plurals>
+    <plurals name="top_articles_time_window">
+        <item quantity="other">Posledné hodiny (%s)</item>
+        <item quantity="one">Posledná hodina</item>
+    </plurals>
+    <plurals name="tweet_visibility_education_dialog_non_followers_text">
+        <item quantity="other">Používateľ %1$s a ďalší vás nesledujú.</item>
+        <item quantity="one">%1$s vás nesleduje.</item>
+    </plurals>
+    <plurals name="undo_send_period_in_seconds">
+        <item quantity="other">%d s</item>
+        <item quantity="one">%d sekunda</item>
+    </plurals>
+    <plurals name="verified_views">
+        <item quantity="other">Overené zobrazenia: %d</item>
+        <item quantity="one">%d overené zobrazenie</item>
+    </plurals>
+</resources>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:animateLayoutChanges="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <include
+        layout="@layout/toolbar_container" />
+    <Switch
+        android:textSize="@dimen/font_size_normal"
+        android:textStyle="bold"
+        android:textColor="?coreColorPrimaryText"
+        android:id="@id/monetization_enabled_switch"
+        android:background="?android:selectableItemBackground"
+        android:padding="@dimen/media_monetization_settings_padding"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/media_monetization_settings_monetization" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@id/tag_content_item"
+        android:background="?android:selectableItemBackground"
+        android:padding="@dimen/media_monetization_settings_padding"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_normal"
+            android:textColor="?coreColorPrimaryText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/media_monetization_settings_tag_content" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_small"
+            android:textColor="?abstractColorMediumGray"
+            android:id="@id/tag_selection_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/media_monetization_settings_tag_content_margin" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@id/excluded_tags_item"
+        android:background="?android:selectableItemBackground"
+        android:padding="@dimen/media_monetization_settings_padding"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_normal"
+            android:textColor="?coreColorPrimaryText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/media_monetization_settings_excluded_tags" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_small"
+            android:textColor="?abstractColorMediumGray"
+            android:id="@id/excluded_tag_selection_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/media_monetization_settings_tag_content_margin" />
+    </LinearLayout>
+    <View
+        android:background="?coreColorBorder"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/border_thickness" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_small"
+        android:textColor="?abstractColorMediumGray"
+        android:padding="@dimen/media_monetization_settings_padding"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/media_monetization_settings_footer" />
+</LinearLayout>

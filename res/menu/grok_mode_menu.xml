@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@id/toolbar_grok_mode_regular"
+        android:visible="true"
+        android:title="@string/regular_mode_option" />
+    <item
+        android:id="@id/toolbar_grok_mode_fun"
+        android:visible="true"
+        android:title="@string/fun_mode_option" />
+    <item
+        android:enabled="false"
+        android:id="@id/toolbar_grok_version"
+        android:visible="true"
+        android:title="@string/grok_version" />
+</menu>

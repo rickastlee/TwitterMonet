@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="?coreColorToastBackground"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View
+        android:background="?coreColorBorder"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/border_thickness" />
+    <LinearLayout
+        android:padding="@dimen/space_16"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@id/composer_banner_icon"
+            android:layout_width="@dimen/banner_icon_size"
+            android:layout_height="@dimen/banner_icon_size" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/composer_banner_text"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:layout_marginStart="@dimen/space_8" />
+        <ImageButton
+            android:id="@id/composer_banner_dismiss_button"
+            android:background="@null"
+            android:visibility="visible"
+            android:layout_width="@dimen/space_16"
+            android:layout_height="@dimen/space_16"
+            android:foreground="?selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_vector_close"
+            android:contentDescription="@string/button_action_dismiss"
+            app:tint="?coreColorPrimaryText" />
+    </LinearLayout>
+    <View
+        android:background="?coreColorBorder"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/border_thickness" />
+    <tag
+        android:value="EducationBanner"
+        android:id="@id/weaverComponent" />
+</LinearLayout>

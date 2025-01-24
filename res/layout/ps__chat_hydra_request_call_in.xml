@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/ps__chat_message_margin_6"
+    android:layout_marginStart="@dimen/ps__chat_container_spacing"
+    android:layout_marginEnd="@dimen/ps__chat_container_spacing"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <tv.periscope.android.view.MaskImageView
+        android:id="@id/masked_avatar"
+        android:background="@drawable/ps__bg_chat_avatar"
+        android:layout_width="@dimen/ps__chat_avatar_size"
+        android:layout_height="0.0dip"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@id/text"
+        app:layout_constraintHeight_min="@dimen/ps__chat_avatar_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/text"
+        app:layout_constraintWidth_min="@dimen/ps__chat_avatar_size" />
+    <tv.periscope.android.view.PsTextView
+        android:textSize="@dimen/ps__description_text_size"
+        android:textColor="@color/ps__white"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:id="@id/text"
+        android:background="@drawable/ps__bg_chat"
+        android:paddingTop="@dimen/ps__chat_message_margin_4"
+        android:paddingBottom="@dimen/ps__chat_message_margin_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/ps__chat_avatar_size"
+        android:paddingStart="@dimen/ps__chat_message_margin_8"
+        android:paddingEnd="@dimen/ps__chat_message_margin_10"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/add_cancel_button"
+        app:layout_constraintStart_toEndOf="@id/masked_avatar"
+        app:layout_constraintTop_toTopOf="parent" />
+    <tv.periscope.android.hydra.broadcaster.HydraGuestActionButton
+        android:id="@id/add_cancel_button"
+        android:layout_width="0.0dip"
+        android:layout_height="@dimen/ps__standard_button_min_height"
+        android:layout_marginStart="@dimen/ps__standard_spacing_10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="W,1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/text"
+        app:layout_constraintTop_toTopOf="parent"
+        app:ps__countdownTextSize="20.0sp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

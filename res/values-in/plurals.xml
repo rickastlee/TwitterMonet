@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="admin_tools_subtitle_members">
+        <item quantity="other">%d anggota</item>
+        <item quantity="one">%d anggota</item>
+    </plurals>
+    <plurals name="badge_item_count">
+        <item quantity="other">%d berita baru</item>
+        <item quantity="one">%d item baru</item>
+    </plurals>
+    <plurals name="cohost_current_count">
+        <item quantity="other">%1$d co-host</item>
+        <item quantity="one">%1$d co-host</item>
+    </plurals>
+    <plurals name="community_member_count">
+        <item quantity="other">%d Anggota Komunitas</item>
+        <item quantity="one">%d anggota Komunitas</item>
+    </plurals>
+    <plurals name="community_moderator_count">
+        <item quantity="other">%d Moderator</item>
+        <item quantity="one">%d Moderator</item>
+    </plurals>
+    <plurals name="community_navigation_join_requests_label">
+        <item quantity="other">%s permintaan</item>
+        <item quantity="one">%s permintaan</item>
+    </plurals>
+    <plurals name="community_navigation_new_unread_tweets_label">
+        <item quantity="other">%s postingan baru</item>
+        <item quantity="one">%s postingan baru</item>
+    </plurals>
+    <plurals name="community_navigation_pending_reports_label">
+        <item quantity="other">%s laporan</item>
+        <item quantity="one">%s laporan</item>
+    </plurals>
+    <plurals name="composer_count_progress_overflow_warning">
+        <item quantity="other">%d karakter terlalu panjang</item>
+        <item quantity="one">%d karakter terlalu panjang</item>
+    </plurals>
+    <plurals name="composer_count_progress_warning">
+        <item quantity="other">%d karakter tersisa</item>
+        <item quantity="one">%d karakter tersisa</item>
+    </plurals>
+    <plurals name="content_description_fleet_item_space_with_others">
+        <item quantity="other">Space %1$s dengan %2$d lainnya</item>
+        <item quantity="one">Space %1$s dengan %2$d lainnya</item>
+    </plurals>
+    <plurals name="data_sync_notif_title">
+        <item quantity="other">%d interaksi baru</item>
+        <item quantity="one">%d interaksi baru</item>
+    </plurals>
+    <plurals name="days">
+        <item quantity="other">%d hari</item>
+        <item quantity="one">%d hari</item>
+    </plurals>
+    <plurals name="dm_add_people_failure">
+        <item quantity="other">%d pengguna tidak dapat ditambahkan ke grup ini.</item>
+        <item quantity="one">Pengguna tidak dapat ditambahkan ke grup ini.</item>
+    </plurals>
+    <plurals name="dm_add_people_success">
+        <item quantity="other">Menambahkan %d pengguna ke grup.</item>
+        <item quantity="one">Menambahkan pengguna ke grup.</item>
+    </plurals>
+    <plurals name="dm_follower_count_no_joined_date">
+        <item quantity="other">{num_followers} Pengikut</item>
+        <item quantity="one">{num_followers} Pengikut</item>
+    </plurals>
+    <plurals name="dm_group_account_name">
+        <item quantity="other">%d orang</item>
+        <item quantity="one">1 orang</item>
+    </plurals>
+    <plurals name="dm_group_chat_count">
+        <item quantity="other">Obrolan grup dengan %d orang</item>
+        <item quantity="one">Obrolan grup dengan %d orang</item>
+    </plurals>
+    <plurals name="dm_group_conversation_participant_count">
+        <item quantity="other">%1$d orang</item>
+        <item quantity="one">%1$d orang</item>
+    </plurals>
+    <plurals name="dm_group_participant_count">
+        <item quantity="other">Ada %1$s dalam grup ini</item>
+        <item quantity="one">Ada %1$s dalam grup ini</item>
+    </plurals>
+    <plurals name="dm_group_participant_count_person_details">
+        <item quantity="other">%1$s orang lainnya</item>
+        <item quantity="one">%1$s orang lainnya</item>
+    </plurals>
+    <plurals name="dm_image_profile">
+        <item quantity="other">Gambar profil untuk %s</item>
+        <item quantity="one">Gambar profil untuk %s</item>
+    </plurals>
+    <plurals name="dm_new_people_you_may_know">
+        <item quantity="other">%d orang baru yang mungkin Anda kenal</item>
+        <item quantity="one">%d orang baru yang mungkin Anda kenal</item>
+    </plurals>
+    <plurals name="dm_new_requests">
+        <item quantity="other">%d permintaan baru</item>
+        <item quantity="one">%d permintaan baru</item>
+    </plurals>
+    <plurals name="dm_participant_added_by_deleted_user">
+        <item quantity="other">{participants} ditambahkan</item>
+        <item quantity="one">{participants} ditambahkan</item>
+    </plurals>
+    <plurals name="dm_pending_requests">
+        <item quantity="other">%s permintaan tertunda</item>
+        <item quantity="one">%d permintaan tertunda</item>
+    </plurals>
+    <plurals name="dm_people_you_may_know">
+        <item quantity="other">%d orang yang mungkin Anda kenal</item>
+        <item quantity="one">%d orang yang mungkin Anda kenal</item>
+    </plurals>
+    <plurals name="dm_pinned_conversations_max_count_exceeded_title">
+        <item quantity="other">Anda hanya dapat menyematkan %d obrolan</item>
+        <item quantity="one">Anda hanya dapat menyematkan %d obrolan</item>
+    </plurals>
+    <plurals name="dm_state_seen_by">
+        <item quantity="other">Dilihat oleh %d orang</item>
+        <item quantity="one">Dilihat oleh %d orang</item>
+    </plurals>
+    <plurals name="dm_unread_messages">
+        <item quantity="other">%d pesan belum dibaca</item>
+        <item quantity="one">%d pesan belum terbaca</item>
+    </plurals>
+    <plurals name="dm_user_joined_and_follower_count">
+        <item quantity="other">Bergabung {joined_date} • {num_followers} Pengikut</item>
+        <item quantity="one">Bergabung {joined_date} • {num_followers} Pengikut</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="other">Maju cepat %d detik</item>
+        <item quantity="one">Maju cepat %d detik</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="other">Mundur %d detik</item>
+        <item quantity="one">Mundur %d detik</item>
+    </plurals>
+    <plurals name="facepile_content_description">
+        <item quantity="other">Gambar profil untuk %s</item>
+        <item quantity="one">Gambar profil untuk %s</item>
+    </plurals>
+    <plurals name="full_screen_gallery_header_add">
+        <item quantity="other">Tambahkan %d</item>
+        <item quantity="one">Tambahkan %d</item>
+    </plurals>
+    <plurals name="graphql_errors_button">
+        <item quantity="other">%d Kesalahan</item>
+        <item quantity="one">%d Kesalahan</item>
+    </plurals>
+    <plurals name="guest_management_max_cohost_count_label">
+        <item quantity="other">Anda hanya dapat memiliki %1$d co-host.</item>
+        <item quantity="one">Anda hanya boleh memiliki %1$d co-host.</item>
+    </plurals>
+    <plurals name="guest_management_open_cohost_count_label">
+        <item quantity="other">Tambahkan hingga %1$d orang lagi.</item>
+        <item quantity="one">Tambahkan hingga %1$d orang lagi.</item>
+    </plurals>
+    <plurals name="host_kudos_num_followers_gained">
+        <item quantity="other">Anda memperoleh %1$d pengikut baru!</item>
+        <item quantity="one">Anda memperoleh %1$d pengikut baru!</item>
+    </plurals>
+    <plurals name="hours">
+        <item quantity="other">%d jam</item>
+        <item quantity="one">%d jam</item>
+    </plurals>
+    <plurals name="humanization_prompt_followers">
+        <item quantity="other">%1$s mengikuti %2$s.</item>
+        <item quantity="one">%1$s mengikuti %2$s.</item>
+    </plurals>
+    <plurals name="humanization_prompt_topics">
+        <item quantity="other">Anda dan %1$s sama-sama mengikuti Topik %2$s.</item>
+        <item quantity="one">Anda dan %1$s sama-sama mengikuti Topik %2$s.</item>
+    </plurals>
+    <plurals name="likes">
+        <item quantity="other">%d suka</item>
+        <item quantity="one">%d suka</item>
+    </plurals>
+    <plurals name="list_member_count">
+        <item quantity="other">Anggota</item>
+        <item quantity="one">Anggota</item>
+    </plurals>
+    <plurals name="media_alt_text_prompt_dialog_message">
+        <item quantity="other">"Deskripsi gambar yang baik adalah yang ringkas dan detail. Rangkum atau tuliskan teks yang tertera pada gambar.
+
+Deskripsi Anda akan memudahkan orang-orang yang memiliki disabilitas, dan siapa pun yang ingin mengetahui konteks lebih banyak di X.
+
+Anda dapat menonaktifkan pengingat ini di Pengaturan Aksesibilitas."</item>
+        <item quantity="one">"Deskripsi gambar yang baik adalah yang ringkas dan detail. Rangkum atau tuliskan teks yang tertera pada gambar.
+
+Deskripsi Anda akan memudahkan orang-orang yang memiliki disabilitas, dan siapa pun yang ingin mengetahui konteks lebih banyak di X.
+
+Anda dapat menonaktifkan pengingat ini di Pengaturan Aksesibilitas."</item>
+    </plurals>
+    <plurals name="media_alt_text_prompt_dialog_positive_btn_text">
+        <item quantity="other">Tambahkan deskripsi</item>
+        <item quantity="one">Tambahkan deskripsi</item>
+    </plurals>
+    <plurals name="media_alt_text_prompt_dialog_title">
+        <item quantity="other">Jangan lupa menuliskan deskripsi untuk gambar Anda</item>
+        <item quantity="one">Jangan lupa menuliskan deskripsi untuk gambar Anda</item>
+    </plurals>
+    <plurals name="media_monetization_settings_categories_selected">
+        <item quantity="other">%d kategori dipilih</item>
+        <item quantity="one">%d kategori dipilih</item>
+    </plurals>
+    <plurals name="media_tag_remaining">
+        <item quantity="other">Tandai hingga %d orang lagi.</item>
+        <item quantity="one">Tandai hingga %d orang lagi.</item>
+    </plurals>
+    <plurals name="media_tag_tagged">
+        <item quantity="other">%d orang ditandai</item>
+        <item quantity="one">%d orang ditandai</item>
+    </plurals>
+    <plurals name="member_count">
+        <item quantity="other">%s anggota</item>
+        <item quantity="one">%s Anggota</item>
+    </plurals>
+    <plurals name="members">
+        <item quantity="other">%s anggota</item>
+        <item quantity="one">%s anggota</item>
+    </plurals>
+    <plurals name="minutes">
+        <item quantity="other">%d menit</item>
+        <item quantity="one">%d menit</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d notifikasi baru</item>
+        <item quantity="one">%d notifikasi baru</item>
+    </plurals>
+    <plurals name="muted_keyword_bulk_delete_success">
+        <item quantity="other">%d kata dihapus</item>
+        <item quantity="one">%d kata dihapus</item>
+    </plurals>
+    <plurals name="muted_keyword_selected_count">
+        <item quantity="other">%d dipilih</item>
+        <item quantity="one">%d dipilih</item>
+    </plurals>
+    <plurals name="narrowcast_community_member_count">
+        <item quantity="other">%s Anggota</item>
+        <item quantity="one">%s Anggota</item>
+    </plurals>
+    <plurals name="narrowcast_trusted_friends_count">
+        <item quantity="other">%s orang</item>
+        <item quantity="one">%s orang</item>
+    </plurals>
+    <plurals name="others">
+        <item quantity="other">%d lainnya</item>
+        <item quantity="one">1 lainnya</item>
+    </plurals>
+    <plurals name="product_count">
+        <item quantity="other">%1$d produk</item>
+        <item quantity="one">%1$d produk</item>
+    </plurals>
+    <plurals name="profile_creator_subscriptions_count">
+        <item quantity="other">Langganan</item>
+        <item quantity="one">Langganan</item>
+    </plurals>
+    <plurals name="profile_follower_count">
+        <item quantity="other">Pengikut</item>
+        <item quantity="one">Pengikut</item>
+    </plurals>
+    <plurals name="profile_friends_following_others">
+        <item quantity="other">%d lainnya</item>
+        <item quantity="one">%d lainnya</item>
+    </plurals>
+    <plurals name="profile_super_followers_count">
+        <item quantity="other">Pelanggan</item>
+        <item quantity="one">Pelanggan</item>
+    </plurals>
+    <plurals name="profile_toolbar_subtitle_articles">
+        <item quantity="other">%s Artikel</item>
+        <item quantity="one">%s Artikel</item>
+    </plurals>
+    <plurals name="profile_toolbar_subtitle_likes">
+        <item quantity="other">%s Suka</item>
+        <item quantity="one">%s Suka</item>
+    </plurals>
+    <plurals name="profile_toolbar_subtitle_media">
+        <item quantity="other">%s Foto &amp; video</item>
+        <item quantity="one">%s Foto</item>
+    </plurals>
+    <plurals name="profile_toolbar_subtitle_timeline">
+        <item quantity="other">%s postingan</item>
+        <item quantity="one">%s postingan</item>
+    </plurals>
+    <plurals name="ps__accessibility_broadcaster_stats_graph_peak_msg">
+        <item quantity="other">Grafik penampil siaran. Jumlah penonton terbanyak %1$d pada %2$s.</item>
+        <item quantity="zero">Grafik penampil siaran</item>
+        <item quantity="one">Grafik penampil siaran. Jumlah penonton terbanyak %1$d pada %2$s.</item>
+    </plurals>
+    <plurals name="ps__accessibility_broadcaster_stats_graph_point_msg">
+        <item quantity="other">Anda memiliki %1$d penonton pada %2$s.</item>
+        <item quantity="one">Anda memiliki %1$d penonton pada %2$s.</item>
+    </plurals>
+    <plurals name="ps__invite_follower">
+        <item quantity="other">%d pengikut</item>
+        <item quantity="zero">Tidak ada pengikut</item>
+        <item quantity="one">%d pengikut</item>
+    </plurals>
+    <plurals name="ps__invited_num_followers_embolden">
+        <item quantity="other">*%1$s* mengundang %2$s orang</item>
+        <item quantity="one">*%1$s* mengundang %2$s orang</item>
+    </plurals>
+    <plurals name="ps__moderation_report_muted_by_moderator">
+        <item quantity="other">*Dibisukan oleh* %1$s (%2$d)</item>
+        <item quantity="one">*Dibisukan oleh* %1$s</item>
+    </plurals>
+    <plurals name="ps__moderation_report_unmuted_by_moderator">
+        <item quantity="other">*Dibunyikan oleh* %1$s (%2$d)</item>
+        <item quantity="one">*Dibunyikan oleh* %1$s</item>
+    </plurals>
+    <plurals name="ps__new_messages">
+        <item quantity="other">%1$d Pesan Baru</item>
+        <item quantity="one">%1$d Pesan Baru</item>
+    </plurals>
+    <plurals name="ps__num_hearts">
+        <item quantity="other">%s hati</item>
+        <item quantity="one">%s hati</item>
+    </plurals>
+    <plurals name="ps__stats_live_viewers">
+        <item quantity="other">PENONTON LANGSUNG</item>
+        <item quantity="one">PENONTON LANGSUNG</item>
+    </plurals>
+    <plurals name="ps__stats_replay_viewers">
+        <item quantity="other">PENONTON PEMUTARAN ULANG</item>
+        <item quantity="one">PENONTON PEMUTARAN ULANG</item>
+    </plurals>
+    <plurals name="ps__time_format_days">
+        <item quantity="other">%d Hari</item>
+        <item quantity="one">%d Hari</item>
+    </plurals>
+    <plurals name="ps__time_format_hours">
+        <item quantity="other">%d Jam</item>
+        <item quantity="one">%d Jam</item>
+    </plurals>
+    <plurals name="ps__time_format_minutes">
+        <item quantity="other">%d Menit</item>
+        <item quantity="one">%d Menit</item>
+    </plurals>
+    <plurals name="ps__time_format_seconds">
+        <item quantity="other">%d Detik</item>
+        <item quantity="one">%d Detik</item>
+    </plurals>
+    <plurals name="recording_replay_count_preview">
+        <item quantity="other">%s pemutaran ulang</item>
+        <item quantity="one">%s pemutaran ulang</item>
+    </plurals>
+    <plurals name="relationship_followers_following_others">
+        <item quantity="other">%d lainnya</item>
+        <item quantity="one">%d lainnya</item>
+    </plurals>
+    <plurals name="replies">
+        <item quantity="other">%d balasan</item>
+        <item quantity="one">%d balasan</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_and_n_others">
+        <item quantity="other">Membalas ﻿%1$s dan %2$d lainnya﻿</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_and_n_others_exclusive">
+        <item quantity="other">Membalas ﻿%1$s dan %2$d lainnya﻿. Balasan Anda juga akan terlihat oleh Pelanggan lainnya.</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_and_n_others_in_space">
+        <item quantity="other">Membalas ﻿%1$s dan %2$d lainnya﻿ di ﻿%3$s﻿</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_someone_and_n_others">
+        <item quantity="other">Membalas ﻿%1$s %2$s dan %3$d lainnya﻿</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_someone_and_n_others_exclusive">
+        <item quantity="other">Membalas ﻿%1$s %2$s dan %3$d lainnya﻿. Balasan Anda juga akan terlihat oleh Pelanggan lainnya.</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_someone_and_n_others_in_space">
+        <item quantity="other">Membalas ﻿%1$s %2$s dan %3$d lainnya﻿ di ﻿%4$s﻿</item>
+    </plurals>
+    <plurals name="reported_tweet_reported_by">
+        <item quantity="other">Dilaporkan oleh {{}}%1$s anggota{{}}</item>
+        <item quantity="one">Dilaporkan oleh {{}}%1$s{{}}</item>
+    </plurals>
+    <plurals name="retweets">
+        <item quantity="other">%d posting ulang</item>
+        <item quantity="one">%d posting ulang</item>
+    </plurals>
+    <plurals name="safety_mode_preview_description">
+        <item quantity="other">Kami menandai %d akun yang berpotensi menghina atau spam.</item>
+        <item quantity="one">Kami menandai %d akun yang berpotensi menghina atau spam.</item>
+    </plurals>
+    <plurals name="seconds">
+        <item quantity="other">%d detik</item>
+        <item quantity="one">%d detik</item>
+    </plurals>
+    <plurals name="send_cohost_invite">
+        <item quantity="other">Kirim undangan co-host</item>
+        <item quantity="one">Kirim undangan co-host</item>
+    </plurals>
+    <plurals name="settings_notif_tweets_count">
+        <item quantity="other">%d orang</item>
+        <item quantity="one">%d orang</item>
+    </plurals>
+    <plurals name="social_follow_and_follow_and_others">
+        <item quantity="other">%1$s, %2$s, dan %3$d lainnya mengikuti</item>
+        <item quantity="one">%1$s, %2$s, dan %3$d lainnya mengikuti</item>
+    </plurals>
+    <plurals name="spaces_additional_participants">
+        <item quantity="other">+%1$s pendengar lainnya</item>
+        <item quantity="one">+%1$s pendengar lainnya</item>
+    </plurals>
+    <plurals name="spaces_blocked_warning">
+        <item quantity="other">Anda memblokir %1$d orang yang sedang berbicara</item>
+        <item quantity="one">Anda memblokir %1$d orang yang sedang berbicara</item>
+    </plurals>
+    <plurals name="spaces_card_social_proof_in_progress">
+        <item quantity="other">%1$s ada dalam Space ini</item>
+        <item quantity="one">%1$s ada dalam Space ini</item>
+    </plurals>
+    <plurals name="spaces_card_social_proof_replay">
+        <item quantity="other">%1$s sempat berada dalam Space ini</item>
+        <item quantity="one">%1$s sempat berada dalam Space ini</item>
+    </plurals>
+    <plurals name="spaces_invite_confirmation">
+        <item quantity="other">%1$d orang telah diundang ke Space ini</item>
+        <item quantity="one">%1$d orang diundang ke Space ini</item>
+    </plurals>
+    <plurals name="speakers_current_count">
+        <item quantity="other">%1$d pembicara</item>
+        <item quantity="one">%1$d pembicara</item>
+    </plurals>
+    <plurals name="speakers_listeners_count">
+        <item quantity="other">%1$d orang sedang mendengarkan</item>
+        <item quantity="one">%1$d orang sedang mendengarkan</item>
+    </plurals>
+    <plurals name="speakers_open_spots_count">
+        <item quantity="other">%1$d posisi terbuka</item>
+        <item quantity="one">%1$d posisi terbuka</item>
+    </plurals>
+    <plurals name="speakers_requests_count">
+        <item quantity="other">%1$d permintaan</item>
+        <item quantity="one">%1$d permintaan</item>
+    </plurals>
+    <plurals name="stat_label_bookmarks">
+        <item quantity="other">Markah</item>
+        <item quantity="one">Markah</item>
+    </plurals>
+    <plurals name="stat_label_likes_sentence_case">
+        <item quantity="other">Suka</item>
+        <item quantity="one">Suka</item>
+    </plurals>
+    <plurals name="stat_label_quote_tweets">
+        <item quantity="other">Kutipan</item>
+        <item quantity="one">Kutipan</item>
+    </plurals>
+    <plurals name="stat_label_retweets_sentence_case">
+        <item quantity="other">Posting ulang</item>
+        <item quantity="one">Posting ulang</item>
+    </plurals>
+    <plurals name="stat_label_verified_views_sentence_case">
+        <item quantity="other">Penayangan Terverifikasi</item>
+        <item quantity="one">Penayangan Terverifikasi</item>
+    </plurals>
+    <plurals name="stat_label_views_sentence_case">
+        <item quantity="other">Tayangan</item>
+        <item quantity="one">Lihat</item>
+    </plurals>
+    <plurals name="subscription_duration_days">
+        <item quantity="other">%d hari</item>
+        <item quantity="one">hari</item>
+    </plurals>
+    <plurals name="subscription_duration_months">
+        <item quantity="other">%d bulan</item>
+        <item quantity="one">bulan</item>
+    </plurals>
+    <plurals name="subscription_duration_years">
+        <item quantity="other">%d tahun</item>
+        <item quantity="one">tahun</item>
+    </plurals>
+    <plurals name="time_days">
+        <item quantity="other">%d hari</item>
+        <item quantity="one">%d hari</item>
+    </plurals>
+    <plurals name="time_days_ago">
+        <item quantity="other">%d HARI YANG LALU</item>
+        <item quantity="one">%d HARI YANG LALU</item>
+    </plurals>
+    <plurals name="time_hours">
+        <item quantity="other">%d jam</item>
+        <item quantity="one">%d jam</item>
+    </plurals>
+    <plurals name="time_hours_ago">
+        <item quantity="other">%d JAM YANG LALU</item>
+        <item quantity="one">%d JAM YANG LALU</item>
+    </plurals>
+    <plurals name="time_mins">
+        <item quantity="other">%d menit</item>
+        <item quantity="one">%d menit</item>
+    </plurals>
+    <plurals name="time_mins_ago">
+        <item quantity="other">%d MENIT YANG LALU</item>
+        <item quantity="one">%d MENIT YANG LALU</item>
+    </plurals>
+    <plurals name="time_secs">
+        <item quantity="other">%d detik</item>
+        <item quantity="one">%d detik</item>
+    </plurals>
+    <plurals name="top_articles_time_window">
+        <item quantity="other">%s jam terakhir</item>
+        <item quantity="one">Satu jam terakhir</item>
+    </plurals>
+    <plurals name="tweet_visibility_education_dialog_non_followers_text">
+        <item quantity="other">%1$s dan lainnya tidak mengikuti Anda.</item>
+        <item quantity="one">%1$s tidak mengikuti Anda.</item>
+    </plurals>
+    <plurals name="undo_send_period_in_seconds">
+        <item quantity="other">%d detik</item>
+        <item quantity="one">%d detik</item>
+    </plurals>
+    <plurals name="verified_views">
+        <item quantity="other">%d penayangan terverifikasi</item>
+        <item quantity="one">%d penayangan terverifikasi</item>
+    </plurals>
+</resources>

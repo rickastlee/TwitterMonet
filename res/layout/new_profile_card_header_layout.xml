@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <com.twitter.media.ui.image.MediaImageView
+        android:id="@id/banner_image"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        twitter:aspect_ratio="3.0"
+        twitter:singleImageView="true">
+        <com.twitter.media.ui.image.RichImageView
+            android:id="@id/image"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            twitter:cornerRadiusTopLeft="@dimen/profile_card_corner_radius"
+            twitter:cornerRadiusTopRight="@dimen/profile_card_corner_radius"
+            twitter:fixedSize="true" />
+    </com.twitter.media.ui.image.MediaImageView>
+    <com.twitter.media.ui.image.UserImageView
+        android:id="@id/user_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/banner_image"
+        android:layout_marginStart="@dimen/profile_card_avatar_left_margin"
+        twitter:defaultDrawable="@drawable/drawable_color_placeholder_bg"
+        twitter:singleImageView="true"
+        twitter:userImageSize="@dimen/profile_header_avatar_size_with_border" />
+    <com.twitter.ui.components.button.legacy.ToggleTwitterButton
+        android:id="@id/follow_button"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/profile_header_avatar_border"
+        android:height="@dimen/user_follow_btn_min_height"
+        android:layout_alignBottom="@id/user_image"
+        android:layout_marginEnd="@dimen/profile_card_horizontal_padding"
+        android:layout_alignParentEnd="true"
+        twitter:iconSize="@dimen/follow_button_icon_size"
+        twitter:iconSrc="?iconFollow"
+        twitter:shouldToggleOnClick="false"
+        twitter:styleIdOff="?mediumToggledOffButtonStyle"
+        twitter:styleIdOn="?mediumToggledOnButtonStyle"
+        twitter:toggleIconSize="@dimen/follow_button_icon_size"
+        twitter:toggleIconSrc="?iconFollowing"
+        style="@style/TwitterButtonMediumBrandOutlined" />
+</RelativeLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="dimen" name="live_container_top_padding">@dimen/space_28</item>
+    <dimen name="live_typeahead_suggestions_margin">44.0dip</dimen>
+</resources>

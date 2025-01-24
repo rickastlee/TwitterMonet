@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="account_notif_confirmations">
+        <item>Budete dostávat oznámení o nových postech a odpovědích.</item>
+        <item>Budete dostávat oznámení o nových postech a odpovědích.</item>
+        <item>Budete dostávat oznámení o nových postech pro předplatitele.</item>
+        <item>Budete dostávat oznámení o nových postech s živým videem.</item>
+        <item>Už nebudete dostávat oznámení o nových postech.</item>
+    </string-array>
+    <string-array name="account_notif_options">
+        <item>Všechny posty</item>
+        <item>Všechny posty a odpovědi</item>
+        <item>Posty pouze pro předplatitele</item>
+        <item>Jen živé video</item>
+        <item>Vypnuto</item>
+    </string-array>
+    <string-array name="account_notif_subtitles">
+        <item>Dostávejte oznámení o všech postech od tohoto účtu.</item>
+        <item>Dostávejte oznámení o postech a odpovědích od tohoto účtu.</item>
+        <item>Dostávejte oznámení jen o postech pro předplatitele.</item>
+        <item>Dostávejte oznámení jenom o živých vysíláních.</item>
+        <item>Vypne oznámení o postech od tohoto účtu.</item>
+    </string-array>
+    <string-array name="card_long_press_options">
+        <item>Postovat odkaz</item>
+        <item>Zkopírovat odkaz</item>
+        <item>Odeslat odkaz</item>
+    </string-array>
+    <string-array name="csat_prompt_feedback_variants">
+        <item>Jaká je vaše celková spokojenost s firmou %1$s?</item>
+        <item>Jak jste spokojeni s firmou %1$s?</item>
+        <item>Jaká byla vaše celková poslední spokojenost s firmou %1$s?</item>
+        <item>Jak hodnotíte svou celkovou zkušenost s firmou %1$s?</item>
+        <item>Jak hodnotíte svou celkovou zkušenost s firmou %1$s?</item>
+        <item>Jak hodnotíte svou dosavadní zkušenost s firmou %1$s?</item>
+        <item>Jak hodnotíte svou zkušenost na Twitteru s firmou %1$s?</item>
+        <item>Byli jste spokojeni s poslední zkušeností s firmou %1$s?</item>
+        <item>Nakolik firma %1$s plní vaše očekávání?</item>
+        <item>Jak hodnotíte svou zkušenost hosta u firmy %1$s?</item>
+        <item>Jak hodnotíte svou zkušenost se službami firmy %1$s?</item>
+        <item>Jak hodnotíte svou poslední zkušenost se službami firmy %1$s?</item>
+        <item>Jak hodnotíte svou zkušenost se službami poskytnutými firmou %1$s?</item>
+        <item>Byli jste spokojeni s výsledkem komunikace s firmou %1$s?</item>
+        <item>Jak hodnotíte schopnost řešit vaše problémy se službami firmy %1$s?</item>
+        <item>Jak hodnotíte dobu odezvy firmy %1$s?</item>
+        <item>Jak hodnotíte rychlost poskytování služeb u firmy %1$s?</item>
+        <item>Jak hodnotíte čas, který firma %1$s potřebovala k vyřešení vašich požadavků?</item>
+        <item>Jak hodnotíte čas potřebný k vyřešení vašich problémů se službami firmy %1$s?</item>
+        <item>Jak hodnotíte rychlost řešení vašich požadavků firmou %1$s?</item>
+        <item>Jak hodnotíte odbornost poradce firmy %1$s?</item>
+        <item>Jak jste byli spokojeni s agentem firmy %1$s, který vám pomáhal?</item>
+        <item>Jak jste byli spokojeni s odborníkem firmy %1$s, který vám pomáhal?</item>
+        <item>Jak jste byli spokojeni se zástupcem firmy %1$s, který vám pomáhal?</item>
+        <item>Jak hodnotíte svou poslední zkušenost s bankovními službami firmy %1$s?</item>
+        <item>Jak hodnotíte svou celkovou zkušenost s událostí u firmy %1$s?</item>
+        <item>Jak hodnotíte svou zkušenost s placením účtu u firmy %1$s?</item>
+        <item>Jak hodnotíte svou zkušenost s nákupem u firmy %1$s?</item>
+        <item>Jak hodnotíte svou zkušenost s nakupováním u firmy %1$s?</item>
+        <item>Jak hodnotíte svou zkušenost s doručením zboží od firmy %1$s?</item>
+        <item>Jak hodnotíte svou zkušenost s pronájmem u firmy %1$s?</item>
+        <item>Jak hodnotíte svou poslední návštěvu obchodu %1$s?</item>
+        <item>Jak hodnotíte svůj poslední pobyt v hotelu %1$s?</item>
+        <item>Jak hodnotíte svůj poslední let s firmou %1$s?</item>
+        <item>Jak hodnotíte svou poslední cestu s firmou %1$s?</item>
+        <item>Jak hodnotíte své poslední cestování s firmou %1$s?</item>
+        <item>Jak hodnotíte svou poslední návštěvu u firmy %1$s?</item>
+        <item>Jak hodnotíte své poslední jídlo ve firmě %1$s?</item>
+    </string-array>
+    <string-array name="data_retention_periods">
+        <item>30 dnů</item>
+        <item>12 měsíců</item>
+    </string-array>
+    <string-array name="exo_controls_playback_speeds">
+        <item>0,25×</item>
+        <item>0,5×</item>
+        <item>0,75×</item>
+        <item>Normální</item>
+        <item>1,25×</item>
+        <item>1,5×</item>
+        <item>2×</item>
+    </string-array>
+    <string-array name="nps_prompt_feedback_variants">
+        <item>S jakou pravděpodobností byste příteli doporučili firmu %1$s?</item>
+        <item>S jakou pravděpodobností byste příteli doporučili firmu %1$s?</item>
+        <item>S jakou pravděpodobností byste kolegovi doporučili firmu %1$s?</item>
+        <item>S jakou pravděpodobností byste své rodině doporučili firmu %1$s?</item>
+        <item>S jakou pravděpodobností byste někomu jinému doporučili firmu %1$s?</item>
+        <item>S jakou pravděpodobností byste příteli nebo kolegovi doporučili firmu %1$s?</item>
+        <item>S jakou pravděpodobností byste v budoucnosti nakupovali u firmy %1$s?</item>
+        <item>S jakou pravděpodobností byste doporučili firmu %1$s?</item>
+        <item>Doporučili byste firmu %1$s příteli nebo kolegovi?</item>
+        <item>S jakou pravděpodobností byste příteli doporučili svou zkušenost s firmou %1$s?</item>
+    </string-array>
+    <string-array name="ps__broadcaster_survey_high_rating_reasons">
+        <item>Uspokojivý počet diváků</item>
+        <item>Pozitivní komunita</item>
+        <item>Kvalita videa</item>
+        <item>Zajímavý chat</item>
+    </string-array>
+    <string-array name="ps__broadcaster_survey_low_rating_reasons">
+        <item>Nízký počet diváků</item>
+        <item>Obtěžování</item>
+        <item>Problémy s videem</item>
+        <item>Spam v chatu</item>
+    </string-array>
+    <string-array name="reader_text_sizes">
+        <item>\@string/reader_mode_text_size_large</item>
+        <item>\@string/reader_mode_text_size_medium</item>
+        <item>\@string/reader_mode_text_size_small</item>
+    </string-array>
+    <string-array name="reader_text_sizes_label">
+        <item>\@string/reader_mode_text_size_large_label</item>
+        <item>\@string/reader_mode_text_size_medium_label</item>
+        <item>\@string/reader_mode_text_size_small_label</item>
+    </string-array>
+    <string-array name="refresh_intervals">
+        <item>15 minut</item>
+        <item>30 minut</item>
+        <item>1 hodina</item>
+        <item>2 hodiny</item>
+        <item>4 hodiny</item>
+        <item>Denně</item>
+    </string-array>
+</resources>

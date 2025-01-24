@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:gravity="center_vertical"
+    android:paddingLeft="?searchQueryViewInsetStart"
+    android:paddingTop="?searchQueryViewInsetTopBottom"
+    android:paddingRight="?searchQueryViewInsetEnd"
+    android:paddingBottom="?searchQueryViewInsetTopBottom"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textStyle="?boldOverrideStyle"
+        android:textColorHint="?coreColorSecondaryText"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:id="@id/query_view"
+        android:background="@drawable/round_input_box_background"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:hint="@string/search_hint"
+        android:maxLines="1"
+        android:paddingStart="@dimen/space_12"
+        android:paddingEnd="@dimen/space_12" />
+</RelativeLayout>

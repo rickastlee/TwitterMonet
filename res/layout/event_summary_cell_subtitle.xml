@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/supporting_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/GuideCellText.Secondary.SingleLine.Bold" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/supporting_text_separator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/en_dot"
+        style="@style/GuideCellText.Secondary.SingleLine" />
+    <com.twitter.media.ui.image.UserImageView
+        android:id="@id/user_avatar"
+        android:layout_marginEnd="@dimen/moments_standard_spacing_half"
+        twitter:cornerRadius="@dimen/corner_radius_large"
+        twitter:userImageSize="@dimen/moments_author_avatar_size"
+        style="@style/MomentsGuideAuthorAvatar" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        twitter:antiSpoofing="true"
+        style="@style/GuideText.Small.Primary.Bold.SingleLine" />
+    <ImageView
+        android:id="@id/verified_badge"
+        android:layout_width="?momentsSecondaryTextSize"
+        android:layout_height="?momentsSecondaryTextSize"
+        android:src="?iconVerified"
+        android:contentDescription="@null"
+        android:layout_marginStart="@dimen/space_2"
+        twitter:tint="?coreColorBadgeVerified" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/user_attribution_separator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/en_dot"
+        style="@style/GuideCellText.Secondary.SingleLine" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/timestamp_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/GuideCellText.Secondary.SingleLine" />
+    <com.twitter.ui.widget.TightTextView
+        android:id="@id/live_badge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/LiveVideoBadge.EventSummary" />
+</LinearLayout>

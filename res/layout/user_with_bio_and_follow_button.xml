@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <include
+        layout="@layout/user_with_bio" />
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:id="@id/action_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="false"
+        android:layout_alignParentEnd="true">
+        <com.twitter.ui.widget.TintableImageButton
+            android:id="@id/delete_user_button"
+            android:background="?selectableItemBackgroundBorderless"
+            android:paddingLeft="@dimen/space_8"
+            android:paddingRight="@dimen/space_8"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="?iconClose"
+            twitter:tintColorList="@color/ic_color_action_button_tint" />
+        <com.twitter.ui.widget.TintableImageView
+            android:id="@id/muted_item"
+            android:paddingLeft="@dimen/btn_padding"
+            android:paddingRight="@dimen/btn_padding"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="?iconMute"
+            android:contentDescription="@null"
+            twitter:tintColorList="@color/block_mute_icon_tint" />
+        <com.twitter.ui.widget.ToggleImageButton
+            android:id="@id/block_button"
+            android:background="@drawable/btn_block_action_bg"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="?iconBlocked"
+            twitter:tintColorList="@color/block_mute_icon_tint"
+            twitter:toggleOnClick="false"
+            style="?followImageButtonStyle" />
+        <com.twitter.ui.components.button.legacy.TwitterButton
+            android:id="@id/autoblock_button"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/autoblocked"
+            twitter:iconSrc="?iconBlocked"
+            style="@style/TwitterButtonMediumRegularRedFilled" />
+        <com.twitter.ui.components.button.legacy.TwitterButton
+            android:id="@id/pending_button"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pending"
+            twitter:iconSrc="?iconPending"
+            style="@style/TwitterButtonMediumRegular" />
+        <com.twitter.ui.components.button.legacy.ToggleTwitterButton
+            android:id="@id/follow_button"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/follow"
+            android:height="@dimen/user_follow_btn_min_height"
+            twitter:iconSize="@dimen/follow_button_icon_size"
+            twitter:iconSrc="?iconFollow"
+            twitter:shouldToggleOnClick="false"
+            twitter:styleIdOff="?mediumToggledOffButtonStyle"
+            twitter:styleIdOn="?mediumToggledOnButtonStyle"
+            twitter:toggleIconSize="@dimen/follow_button_icon_size"
+            twitter:toggleIconSrc="?iconFollowing"
+            style="@style/TwitterButtonMediumBrandOutlined" />
+    </LinearLayout>
+</merge>

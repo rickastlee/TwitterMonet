@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <files-path
+        name="public_files"
+        path="public" />
+    <external-files-path
+        name="external_public_files"
+        path="public" />
+    <cache-path
+        name="public_cache"
+        path="public" />
+    <external-cache-path
+        name="external_public_cache"
+        path="public" />
+</paths>

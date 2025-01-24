@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:icon="?toolbarShareIcon"
+        android:id="@id/menu_share"
+        android:title="@string/button_action_share"
+        android:contentDescription="@string/share_button"
+        app:order="3"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@id/menu_block"
+        android:visible="false"
+        android:title="@string/shortcut_block_user"
+        app:order="2"
+        app:showAsAction="never" />
+    <item
+        android:id="@id/menu_report"
+        android:visible="false"
+        android:title="@string/moments_report_moment"
+        app:order="1"
+        app:showAsAction="never" />
+</menu>

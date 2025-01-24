@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <include
+        android:id="@id/ocf_top_toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/ocf_top_toolbar" />
+    <ViewStub
+        android:id="@id/header_components_stub"
+        android:layout="@layout/ocf_generic_components_list"
+        android:inflatedId="@id/header_components"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ocf_screen_padding_wide"
+        android:layout_marginEnd="@dimen/ocf_screen_padding_wide" />
+    <com.twitter.media.ui.fresco.FrescoDraweeView
+        android:id="@id/header_image_drawee_view"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:importantForAccessibility="no"
+        twitter:placeholderImage="?abstractColorFadedGray" />
+    <ScrollView
+        android:id="@id/scroll_view_cta"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:fillViewport="true"
+        android:layout_weight="1.0">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@id/constraint_layout_body"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip">
+            <LinearLayout
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:id="@id/linear_layout_header"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/ocf_screen_padding_wide"
+                android:layout_marginEnd="@dimen/ocf_screen_padding_wide"
+                twitter:layout_constraintBottom_toTopOf="@id/linear_layout_cta_buttons"
+                twitter:layout_constraintEnd_toEndOf="parent"
+                twitter:layout_constraintStart_toStartOf="parent"
+                twitter:layout_constraintTop_toTopOf="parent"
+                twitter:layout_constraintVertical_chainStyle="packed">
+                <com.twitter.ui.components.text.legacy.TypefacesTextView
+                    android:id="@id/primary_text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ocf_screen_padding_wide"
+                    android:layout_marginBottom="@dimen/ocf_standard_spacing"
+                    style="@style/OcfTitle1Text" />
+                <com.twitter.ui.components.text.legacy.TypefacesTextView
+                    android:id="@id/secondary_text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ocf_standard_spacing"
+                    style="@style/OcfBodyText" />
+                <include
+                    android:id="@id/user_header"
+                    android:visibility="gone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ocf_double_standard_spacing"
+                    layout="@layout/ocf_user_header_layout" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@id/linear_layout_cta_buttons"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ocf_double_standard_spacing"
+                android:layout_marginBottom="@dimen/ocf_double_standard_spacing"
+                android:layout_marginStart="@dimen/ocf_screen_padding_wide"
+                android:layout_marginEnd="@dimen/ocf_screen_padding_wide"
+                twitter:layout_constraintBottom_toBottomOf="parent"
+                twitter:layout_constraintEnd_toEndOf="parent"
+                twitter:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/footer_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ocf_screen_padding_wide"
+        android:layout_marginEnd="@dimen/ocf_screen_padding_wide"
+        style="@style/OcfSubtext2Text" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:gravity="center_vertical"
+        android:id="@id/detail_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ocf_jumbo_spacing"
+        android:layout_marginBottom="@dimen/ocf_standard_spacing"
+        android:minHeight="48.0dip"
+        android:layout_marginStart="@dimen/ocf_screen_padding_wide"
+        android:layout_marginEnd="@dimen/ocf_screen_padding_wide"
+        style="@style/OcfBodyText" />
+</LinearLayout>

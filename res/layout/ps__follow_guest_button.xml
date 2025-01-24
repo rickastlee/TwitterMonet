@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@id/follow_guest_button_container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <View
+        android:layout_gravity="center"
+        android:id="@id/follow_guest_button_unchecked"
+        android:background="@drawable/twitter_white_circle_unchecked"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+    <View
+        android:layout_gravity="center"
+        android:id="@id/follow_guest_button_checked"
+        android:background="@drawable/twitter_white_circle_checked"
+        android:visibility="visible"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+    <tv.periscope.android.view.PsImageView
+        android:layout_gravity="center"
+        android:id="@id/follow_guest_button_icon"
+        android:visibility="visible"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="@dimen/ps__standard_spacing_5"
+        android:src="@drawable/ps__ic_check_black"
+        android:scaleType="centerInside" />
+</FrameLayout>

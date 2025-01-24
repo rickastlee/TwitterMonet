@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <com.twitter.android.liveevent.ui.SlateView
+        android:id="@id/nativecards_live_event_slate_view"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        twitter:showImageGradient="ifText"
+        twitter:useSaliencyCropping="false" />
+    <include
+        layout="@layout/nativecards_lex_video" />
+</merge>

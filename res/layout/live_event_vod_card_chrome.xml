@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include
+        android:id="@id/av_badge_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/inset_medium"
+        android:layout_marginBottom="@dimen/inset_medium"
+        android:layout_marginStart="@dimen/inset_medium"
+        android:layout_marginEnd="@dimen/space_4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        layout="@layout/av_badge_view_count" />
+    <ViewStub
+        android:id="@id/attribution_name_stub"
+        android:layout="@layout/live_event_card_chrome_attribution"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_8"
+        android:layout_marginStart="@dimen/space_8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/av_badge_container" />
+    <include
+        layout="@layout/av_loader_view" />
+    <include
+        layout="@layout/av_chrome_subtitle_view" />
+    <include
+        layout="@layout/av_post_playback_replay_view" />
+    <include
+        android:id="@id/av_autoplay_skip_outer_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/inset_medium"
+        android:layout_marginEnd="@dimen/inset_medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        layout="@layout/av_autoplay_skip_badge_count_down" />
+</androidx.constraintlayout.widget.ConstraintLayout>

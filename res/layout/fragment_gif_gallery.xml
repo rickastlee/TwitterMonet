@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <include
+            layout="@layout/gif_auto_play_toggle" />
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@id/swipe_refresh_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <com.twitter.media.legacy.widget.GifGalleryView
+                android:id="@id/list"
+                android:saveEnabled="false"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:divider="@color/clear"
+                android:dividerHeight="4.0dip"
+                twitter:gifGalleryFooterViewLayoutId="@layout/list_footer_view"
+                twitter:gifGalleryMinRowHeight="96.0dip"
+                twitter:gifGalleryVerticalDividerWidth="4.0dip"
+                style="@style/List.Refreshable" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </LinearLayout>
+    <ProgressBar
+        android:layout_gravity="center"
+        android:id="@id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="?android:progressBarStyleLarge" />
+    <include
+        layout="@layout/load_gif_error_page" />
+    <include
+        layout="@layout/load_gif_empty_page" />
+</FrameLayout>

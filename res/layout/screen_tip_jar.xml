@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@id/toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="?toolBarSize"
+        android:layoutDirection="?forceLayoutDirection"
+        app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/menu_help"
+        style="?toolBarStyle" />
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true">
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tipjar_manage_title"
+                android:paddingStart="@dimen/space_12"
+                android:paddingEnd="@dimen/space_12"
+                style="@style/PreferenceCategoryVDLHeaderStyle" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:paddingTop="@dimen/space_12"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@id/toggle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/space_12"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <com.twitter.ui.components.text.legacy.TypefacesTextView
+                    android:textSize="@dimen/font_size_normal"
+                    android:textStyle="bold"
+                    android:textColor="?coreColorPrimaryText"
+                    android:id="@id/text_title"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tipjar_main_allow_title"
+                    android:layout_marginStart="@dimen/space_12"
+                    android:layout_marginEnd="@dimen/space_12"
+                    android:labelFor="@id/toggle"
+                    app:layout_constraintBottom_toTopOf="@id/text_subtitle"
+                    app:layout_constraintEnd_toStartOf="@id/toggle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <com.twitter.ui.components.text.legacy.TypefacesTextView
+                    android:textSize="@dimen/font_size_small"
+                    android:textColor="?coreColorSecondaryText"
+                    android:id="@id/text_subtitle"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="@id/text_title"
+                    app:layout_constraintStart_toStartOf="@id/text_title"
+                    app:layout_constraintTop_toBottomOf="@id/text_title" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <View
+                android:background="?coreColorBorder"
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:layout_marginTop="@dimen/space_8" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@id/bitcoin_lightning_container"
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_8">
+                <com.twitter.ui.components.text.legacy.TypefacesTextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tipjar_bitcoin_lightning_wallet"
+                    android:paddingStart="@dimen/space_12"
+                    android:paddingEnd="@dimen/space_12"
+                    style="@style/PreferenceCategoryVDLHeaderStyle" />
+                <com.twitter.ui.widget.TwitterEditText
+                    android:id="@id/input_strike"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    app:labelText="@string/tipjar_title_strike"
+                    style="@style/TwitterEditText.TipJar" />
+                <com.twitter.ui.components.text.legacy.TypefacesTextView
+                    android:textSize="@dimen/font_size_small"
+                    android:textColor="?coreColorSecondaryText"
+                    android:id="@id/bitcoin_disclaimer"
+                    android:padding="@dimen/space_12"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tipjar_bitcoin_disclaimer" />
+                <View
+                    android:background="?coreColorBorder"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    android:layout_marginTop="@dimen/space_8" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@id/more_payment_options_container"
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_8">
+                <com.twitter.ui.components.text.legacy.TypefacesTextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tipjar_more_payment_options"
+                    android:paddingStart="@dimen/space_12"
+                    android:paddingEnd="@dimen/space_12"
+                    style="@style/PreferenceCategoryVDLHeaderStyle" />
+                <com.twitter.ui.widget.TwitterEditText
+                    android:id="@id/input_bandcamp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    app:labelText="@string/tipjar_title_bandcamp"
+                    style="@style/TwitterEditText.TipJar" />
+                <com.twitter.ui.widget.TwitterEditText
+                    android:id="@id/input_flutterwave"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    app:labelText="@string/tipjar_title_flutterwave"
+                    style="@style/TwitterEditText.TipJar" />
+                <com.twitter.ui.widget.TwitterEditText
+                    android:id="@id/input_bitcoin_address"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    app:labelText="@string/tipjar_title_bitcoin_address"
+                    style="@style/TwitterEditText.TipJar" />
+                <com.twitter.ui.widget.TwitterEditText
+                    android:id="@id/input_cashapp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    app:labelText="@string/tipjar_title_cashapp"
+                    style="@style/TwitterEditText.TipJar" />
+                <com.twitter.ui.widget.TwitterEditText
+                    android:id="@id/input_chipper"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    app:labelText="@string/tipjar_title_chipper"
+                    style="@style/TwitterEditText.TipJar" />
+                <com.twitter.ui.widget.TwitterEditText
+                    android:id="@id/input_ethereum_address"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    app:labelText="@string/tipjar_title_ethereum_address"
+                    style="@style/TwitterEditText.TipJar" />
+                <com.twitter.ui.widget.TwitterEditText
+                    android:id="@id/input_gofundme"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    app:labelText="@string/tipjar_title_gofundme"
+                    style="@style/TwitterEditText.TipJar" />
+                <com.twitter.ui.widget.TwitterEditText
+                    android:id="@id/input_patreon"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    app:labelText="@string/tipjar_title_patreon"
+                    style="@style/TwitterEditText.TipJar" />
+                <com.twitter.ui.widget.TwitterEditText
+                    android:id="@id/input_paypal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    app:labelText="@string/tipjar_title_paypal"
+                    style="@style/TwitterEditText.TipJar" />
+                <com.twitter.ui.widget.TwitterEditText
+                    android:id="@id/input_paga"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    app:labelText="@string/tipjar_title_paga"
+                    style="@style/TwitterEditText.TipJar" />
+                <com.twitter.ui.widget.TwitterEditText
+                    android:id="@id/input_paytm"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    app:labelText="@string/tipjar_title_paytm"
+                    style="@style/TwitterEditText.TipJar" />
+                <com.twitter.ui.widget.TwitterEditText
+                    android:id="@id/input_picpay"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    app:labelText="@string/tipjar_title_picpay"
+                    style="@style/TwitterEditText.TipJar" />
+                <com.twitter.ui.widget.TwitterEditText
+                    android:id="@id/input_razorpay"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    app:labelText="@string/tipjar_title_razorpay"
+                    style="@style/TwitterEditText.TipJar" />
+                <com.twitter.ui.widget.TwitterEditText
+                    android:id="@id/input_venmo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    app:labelText="@string/tipjar_title_venmo"
+                    style="@style/TwitterEditText.TipJar" />
+                <com.twitter.ui.widget.TwitterEditText
+                    android:id="@id/input_wealthsimple"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    app:labelText="@string/tipjar_title_wealthsimple"
+                    style="@style/TwitterEditText.TipJar" />
+                <com.twitter.ui.widget.TwitterEditText
+                    android:id="@id/input_kakaopay"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    app:labelText="@string/tipjar_title_kakaopay"
+                    style="@style/TwitterEditText.TipJar" />
+                <com.twitter.ui.components.text.legacy.TypefacesTextView
+                    android:textSize="@dimen/font_size_small"
+                    android:textColor="?coreColorSecondaryText"
+                    android:padding="@dimen/space_12"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tipjar_direct_tipping_disclaimer" />
+                <View
+                    android:background="?coreColorBorder"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    android:layout_marginTop="@dimen/space_8" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@id/help_container"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_8">
+                <com.twitter.ui.components.text.legacy.TypefacesTextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tipjar_help"
+                    android:paddingStart="@dimen/space_12"
+                    android:paddingEnd="@dimen/space_12"
+                    style="@style/PreferenceCategoryVDLHeaderStyle" />
+                <com.twitter.ui.components.text.legacy.TypefacesTextView
+                    android:textSize="@dimen/font_size_normal"
+                    android:textColor="?coreColorPrimaryText"
+                    android:id="@id/text_help"
+                    android:background="?selectableItemBackground"
+                    android:padding="@dimen/space_16"
+                    android:clickable="true"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tipjar_help_center" />
+                <View
+                    android:background="?coreColorBorder"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    android:layout_marginTop="@dimen/space_8" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@id/legal_container"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_8">
+                <com.twitter.ui.components.text.legacy.TypefacesTextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tipjar_legal"
+                    android:paddingStart="@dimen/space_12"
+                    android:paddingEnd="@dimen/space_12"
+                    style="@style/PreferenceCategoryVDLHeaderStyle" />
+                <com.twitter.ui.components.text.legacy.TypefacesTextView
+                    android:textSize="@dimen/font_size_normal"
+                    android:textColor="?coreColorPrimaryText"
+                    android:id="@id/text_general_tipping_policy"
+                    android:background="?selectableItemBackground"
+                    android:padding="@dimen/space_16"
+                    android:clickable="true"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tipjar_general_tipping_policy" />
+                <com.twitter.ui.components.text.legacy.TypefacesTextView
+                    android:textSize="@dimen/font_size_normal"
+                    android:textColor="?coreColorPrimaryText"
+                    android:id="@id/text_twitter_terms_of_service"
+                    android:background="?selectableItemBackground"
+                    android:padding="@dimen/space_16"
+                    android:clickable="true"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tipjar_twitter_terms_of_service" />
+                <View
+                    android:background="?coreColorBorder"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    android:layout_marginTop="@dimen/space_8" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <View
+        android:id="@id/tip_jar_overlay"
+        android:clickable="true"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+    <tag
+        android:value="TipJar"
+        android:id="@id/weaverComponent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    android:layout_alignParentStart="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <com.twitter.media.ui.image.UserImageView
+        android:id="@id/user_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/image_margin_end"
+        twitter:singleImageView="true" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@id/name_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/action_layout"
+        android:layout_toEndOf="@id/user_image">
+        <include
+            layout="@layout/user_info_name" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/screenname_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?userWithBioScreenNameStyle" />
+        <include
+            android:id="@id/follows_you"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            layout="@layout/profile_follows_you" />
+    </LinearLayout>
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/profile_description_item"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2.0sp"
+        android:layout_below="@id/name_container"
+        android:lineSpacingExtra="2.0sp"
+        android:layout_toEndOf="@id/user_image"
+        style="?userWithBioDescriptionStyle" />
+    <include
+        layout="@layout/user_promoted_info" />
+</merge>

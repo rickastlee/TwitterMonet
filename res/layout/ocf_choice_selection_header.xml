@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:paddingTop="@dimen/space_20"
+    android:paddingBottom="@dimen/space_20"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="vertical"
+        android:id="@id/start_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="@dimen/space_32" />
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="vertical"
+        android:id="@id/end_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_end="@dimen/space_32" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/primary_text"
+        android:visibility="gone"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@id/end_guideline"
+        app:layout_constraintStart_toEndOf="@id/start_guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/OcfTitle3Text" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:id="@id/secondary_text"
+        android:visibility="gone"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_8"
+        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintTop_toBottomOf="@id/primary_text"
+        app:layout_goneMarginTop="@dimen/space_8"
+        style="@style/OcfBodyText" />
+    <com.twitter.ui.widget.TwitterEditText
+        android:enabled="true"
+        android:textColor="?coreColorPrimaryText"
+        android:textColorHint="?coreColorSecondaryText"
+        android:id="@id/header_search_edit_text"
+        android:background="@drawable/round_input_box_background"
+        android:focusable="false"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="?android:listPreferredItemHeightSmall"
+        android:layout_marginTop="@dimen/space_8"
+        android:cursorVisible="false"
+        android:maxLines="1"
+        android:drawablePadding="@dimen/space_8"
+        android:drawableStart="@drawable/ic_vector_search"
+        android:textAlignment="viewStart"
+        android:paddingStart="@dimen/space_12"
+        android:paddingEnd="@dimen/space_12"
+        android:layout_marginStart="@dimen/space_16"
+        android:layout_marginEnd="@dimen/space_16"
+        android:drawableTint="?coreColorSecondaryText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/secondary_text"
+        app:layout_goneMarginTop="@dimen/space_8" />
+    <View
+        android:id="@id/header_lower_divider"
+        android:background="?abstractColorDivider"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/channels_item_separator_height"
+        android:layout_marginTop="@dimen/space_8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header_search_edit_text"
+        app:layout_goneMarginTop="@dimen/space_8" />
+</androidx.constraintlayout.widget.ConstraintLayout>

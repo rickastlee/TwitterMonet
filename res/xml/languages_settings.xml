@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference
+        android:title="@string/settings_app_language_title"
+        android:key="pref_app_language"
+        android:summary="@string/settings_app_language_subtitle"
+        android:order="1" />
+    <Preference
+        android:title="@string/settings_language_title"
+        android:key="pref_content_language"
+        android:summary="@string/settings_language_subtitle"
+        android:order="2" />
+</PreferenceScreen>

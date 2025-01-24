@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.ui.components.text.legacy.TypefacesTextView
+    android:textSize="@dimen/font_size_small"
+    android:textColor="?abstractColorDeepGray"
+    android:id="@id/divider_interpunct"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:text="@string/divider_view_counts_attribution"
+    android:paddingStart="@dimen/space_4"
+    android:paddingEnd="@dimen/space_4"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

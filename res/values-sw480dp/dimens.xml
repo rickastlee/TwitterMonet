@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="font_size_body">17.0sp</dimen>
+    <dimen name="font_size_headline_1">22.0sp</dimen>
+    <dimen name="font_size_headline_2">19.0sp</dimen>
+    <dimen name="font_size_jumbo">34.0sp</dimen>
+    <dimen name="font_size_large">20.0sp</dimen>
+    <dimen name="font_size_normal">17.0sp</dimen>
+    <dimen name="font_size_small">15.0sp</dimen>
+    <dimen name="font_size_subtext_1">16.0sp</dimen>
+    <dimen name="font_size_subtext_2">15.0sp</dimen>
+    <dimen name="font_size_subtext_3">13.0sp</dimen>
+    <dimen name="font_size_title_1">36.0sp</dimen>
+    <dimen name="font_size_title_2">34.0sp</dimen>
+    <dimen name="font_size_title_3">28.0sp</dimen>
+    <dimen name="font_size_title_4">25.0sp</dimen>
+    <dimen name="font_size_xlarge">25.0sp</dimen>
+    <dimen name="line_height_headline_2">23.0sp</dimen>
+    <dimen name="navigation_drawer_width">360.0dip</dimen>
+    <dimen name="line_height_body">23.0sp</dimen>
+    <dimen name="line_height_headline_1">26.0sp</dimen>
+    <dimen name="line_height_subtext_1">18.0sp</dimen>
+    <dimen name="line_height_subtext_2">18.0sp</dimen>
+    <dimen name="line_height_subtext_3">14.0sp</dimen>
+    <dimen name="line_height_title_1">42.0sp</dimen>
+    <dimen name="line_height_title_2">39.0sp</dimen>
+    <dimen name="line_height_title_3">34.0sp</dimen>
+    <dimen name="line_height_title_4">30.0sp</dimen>
+</resources>

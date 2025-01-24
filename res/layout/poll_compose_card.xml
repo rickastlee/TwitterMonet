@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="@drawable/poll_compose_card_border_background"
+    android:paddingBottom="@dimen/poll_compose_card_layout_padding_top_bottom"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <FrameLayout
+        android:id="@id/poll_choices_box"
+        android:paddingTop="@dimen/poll_compose_card_layout_padding_top_bottom"
+        android:paddingBottom="@dimen/poll_compose_card_layout_padding_top_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <LinearLayout
+            android:layout_gravity="bottom"
+            android:orientation="vertical"
+            android:id="@id/poll_choices_container"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:divider="@drawable/poll_compose_row_divider"
+            android:showDividers="middle"
+            android:paddingStart="@dimen/poll_compose_card_layout_padding_left"
+            android:paddingEnd="@dimen/poll_compose_card_layout_padding_right" />
+        <ImageView
+            android:layout_gravity="end|center|top"
+            android:id="@id/poll_card_dismiss"
+            android:contentDescription="@string/poll_compose_dismiss"
+            style="@style/PollComposeDismissStyle" />
+        <FrameLayout
+            android:layout_gravity="end|bottom|center"
+            android:id="@id/poll_card_add_choice_container"
+            android:layout_width="@dimen/poll_compose_card_add_choice_button_size"
+            android:layout_height="@dimen/poll_compose_card_add_choice_button_size">
+            <com.twitter.ui.components.button.legacy.TwitterButton
+                android:layout_gravity="center"
+                android:id="@id/poll_card_add_choice"
+                android:focusable="false"
+                android:clickable="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/poll_compose_add_choice"
+                twitter:iconSrc="@drawable/ic_vector_plus"
+                style="@style/TwitterButtonXSmallBrandText" />
+        </FrameLayout>
+    </FrameLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@id/poll_card_duration"
+        android:background="@drawable/border_top_seamful_light_grey"
+        android:paddingTop="8.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_small"
+            android:textColor="?coreColorSecondaryText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/duration_picker_button_title"
+            android:paddingStart="@dimen/duration_picker_padding_left"
+            android:paddingEnd="@dimen/duration_picker_padding_right" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_normal"
+            android:textColor="@color/twitter_blue"
+            android:id="@id/poll_card_duration_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/duration_picker_padding_left"
+            android:paddingEnd="@dimen/duration_picker_padding_right" />
+    </LinearLayout>
+</LinearLayout>

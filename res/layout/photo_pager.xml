@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@id/pager_container"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@id/pager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+    <FrameLayout
+        android:id="@id/gallery_chrome_root"
+        android:fitsSystemWindows="true"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <FrameLayout
+            android:id="@id/gallery_chrome_inner_root"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <LinearLayout
+                android:orientation="vertical"
+                android:focusable="true"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:importantForAccessibility="yes"
+                android:accessibilityTraversalBefore="@id/gallery_chrome_control_root">
+                <include
+                    layout="@layout/toolbar_container" />
+                <include
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/follow_cta_view" />
+            </LinearLayout>
+            <RelativeLayout
+                android:id="@id/gallery_chrome_control_root"
+                android:focusable="true"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:importantForAccessibility="yes">
+                <include
+                    layout="@layout/photo_pager_chrome_view" />
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:id="@id/gallery_chrome_control_container"
+                    android:background="@color/black_opacity_75"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true">
+                    <ViewStub
+                        android:id="@id/photo_pager_pivot_stub"
+                        android:visibility="gone"
+                        android:inflatedId="@id/photo_pager_pivot"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/space_12"
+                        android:layout_marginEnd="@dimen/space_12" />
+                    <include
+                        layout="@layout/photo_pager_tweet" />
+                    <com.twitter.ui.components.text.legacy.TypefacesTextView
+                        android:textSize="@dimen/font_size_normal"
+                        android:textColor="@color/white_opacity_75"
+                        android:id="@id/alt_text_footer"
+                        android:visibility="gone"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:minLines="2" />
+                    <com.twitter.ui.components.text.legacy.TypefacesTextView
+                        android:textSize="@dimen/font_size_normal"
+                        android:textColor="@color/white_opacity_75"
+                        android:id="@id/gallery_media_tags_view"
+                        android:visibility="gone"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@id/container"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+                        <FrameLayout
+                            android:id="@id/fragment_inline_action_bar_container"
+                            android:visibility="gone"
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/inline_action_bar_gallery_height"
+                            android:paddingHorizontal="@dimen/space_8" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    <include
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        layout="@layout/gallery_quick_reply" />
+                </LinearLayout>
+                <include
+                    android:id="@id/gallery_inline_composer"
+                    android:visibility="gone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    layout="@layout/inline_tweet_composer" />
+            </RelativeLayout>
+        </FrameLayout>
+    </FrameLayout>
+</FrameLayout>

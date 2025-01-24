@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/space_16"
+        android:paddingVertical="@dimen/space_12">
+        <ImageView
+            android:id="@id/inline_callout_icon"
+            android:visibility="gone"
+            android:layout_width="@dimen/inline_callout_icon_size"
+            android:layout_height="@dimen/inline_callout_icon_size"
+            android:importantForAccessibility="no"
+            android:layout_marginEnd="@dimen/space_8"
+            app:tint="?coreColorPrimaryText" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textAppearance="@style/TextAppearance.InlineCallout.Headline"
+                android:id="@id/inline_callout_headline_text"
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textAppearance="@style/TextAppearance.InlineCallout.Subtext"
+                android:id="@id/inline_callout_subtext"
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:textAppearance="@style/TextAppearance.InlineCallout.Cta"
+                android:id="@id/inline_callout_cta_text"
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_12" />
+        </LinearLayout>
+    </LinearLayout>
+</merge>

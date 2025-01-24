@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_gravity="center"
+    android:id="@id/thumbnail_frame"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:id="@id/thumbnail"
+        android:layout_width="@dimen/ps__thumbnail_width"
+        android:layout_height="@dimen/ps__thumbnail_height"
+        android:layout_marginTop="@dimen/ps__standard_spacing_10"
+        android:layout_marginBottom="@dimen/ps__standard_spacing_10"
+        android:contentDescription="@null" />
+    <tv.periscope.android.view.PsPillTextView
+        android:layout_gravity="bottom|center"
+        android:id="@id/current_scrubber_time"
+        android:layout_marginBottom="@dimen/ps__standard_margin"
+        custom:ps__pillColor="@color/ps__black_50"
+        style="@style/ps__Pill" />
+    <ProgressBar
+        android:layout_gravity="center"
+        android:id="@id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true" />
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@id/error_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ps__timecode_sharing_error"
+        android:contentDescription="@null" />
+</FrameLayout>

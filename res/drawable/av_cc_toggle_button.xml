@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:drawable="@drawable/ic_closed_captions_toggle_off"
+        app:state_toggled_on="false" />
+    <item
+        android:drawable="@drawable/ic_closed_captions_toggle_on"
+        app:state_toggled_on="true" />
+</selector>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.media.ui.image.AspectRatioFrameLayout
+    android:layout_gravity="center"
+    android:id="@id/activity_live_event_media_container_wrapper"
+    app:aspect_ratio="1.78"
+    app:scaleMode="height"
+    style="@style/LiveEventHeroContainer"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout
+        android:id="@id/activity_live_event_hero_media_container"
+        android:background="@color/black"
+        style="@style/LiveEventHeroContainerCard" />
+    <View
+        android:id="@id/activity_live_event_content_overlay"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+</com.twitter.media.ui.image.AspectRatioFrameLayout>

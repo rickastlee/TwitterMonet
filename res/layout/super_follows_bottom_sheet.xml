@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:nestedScrollingEnabled="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="@dimen/space_20"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_headline_1"
+            android:gravity="start"
+            android:layout_gravity="center"
+            android:id="@id/sheet_title"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_24"
+            style="@style/PrimaryText" />
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@id/sf_icon"
+            android:visibility="gone"
+            android:layout_width="@dimen/exclusive_spaces_icon_size"
+            android:layout_height="@dimen/exclusive_spaces_icon_size"
+            android:layout_marginTop="@dimen/space_16"
+            android:layout_marginBottom="@dimen/space_16"
+            android:src="@drawable/ic_vector_superfollow_stroke"
+            android:importantForAccessibility="no"
+            app:tint="?coreColorPrimaryText" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_headline_1"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:id="@id/sf_title"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_16"
+            android:text="@string/exclusive_space_access_info_sheet_title"
+            android:layout_marginStart="@dimen/space_16"
+            android:layout_marginEnd="@dimen/space_16"
+            style="@style/PrimaryText" />
+        <include
+            layout="@layout/super_follows_visibility_toggle" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_normal"
+            android:textStyle="bold"
+            android:id="@id/subtitle_1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_8"
+            app:fontFamily="?fontFamilyHeavy" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_normal"
+            android:textColor="?coreColorSecondaryText"
+            android:id="@id/description_1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_4"
+            android:layout_marginBottom="@dimen/space_32" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_normal"
+            android:textStyle="bold"
+            android:id="@id/subtitle_2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:fontFamily="?fontFamilyHeavy" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_normal"
+            android:textColor="?coreColorSecondaryText"
+            android:id="@id/description_2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_4"
+            android:layout_marginBottom="@dimen/space_24" />
+        <com.twitter.ui.components.button.legacy.TwitterButton
+            android:textSize="@dimen/font_size_large"
+            android:id="@id/tell_me_more_button"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/super_follows_info_sheet_tell_me_more"
+            style="@style/TwitterButtonLargePrimaryFilled" />
+        <com.twitter.ui.components.button.legacy.TwitterButton
+            android:textSize="@dimen/font_size_large"
+            android:id="@id/play_store_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/go_to_play_store"
+            style="@style/TwitterButtonLargePrimaryFilled" />
+        <com.twitter.ui.components.button.legacy.TwitterButton
+            android:textSize="@dimen/font_size_large"
+            android:id="@id/learn_more_button"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/learn_more"
+            style="@style/TwitterButtonLargePrimaryOutlined" />
+        <com.twitter.ui.components.button.legacy.TwitterButton
+            android:textSize="@dimen/font_size_large"
+            android:id="@id/cancel_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_8"
+            android:text="@string/super_follow_close"
+            style="@style/TwitterButtonLargeNeutral" />
+    </LinearLayout>
+</ScrollView>

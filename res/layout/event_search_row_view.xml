@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:background="@drawable/suggestion_row_background"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/space_16"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="vertical"
+        android:paddingTop="@dimen/search_suggestion_padding"
+        android:paddingBottom="@dimen/search_suggestion_padding"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0">
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_small"
+            android:textColor="?coreColorSecondaryText"
+            android:id="@id/supportingText"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            twitter:largeTextBoldOverride="false" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_normal"
+            android:textColor="?coreColorPrimaryText"
+            android:ellipsize="end"
+            android:id="@id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:layout_marginEnd="@dimen/space_20"
+            twitter:largeTextBoldOverride="false" />
+    </LinearLayout>
+    <com.twitter.media.ui.fresco.FrescoMediaImageView
+        android:id="@id/thumbnail"
+        android:layout_width="@dimen/typeahead_event_thumbnail_size"
+        android:layout_height="@dimen/typeahead_event_thumbnail_size"
+        android:contentDescription="@string/button_tapahead"
+        android:layout_marginEnd="@dimen/space_16"
+        twitter:defaultDrawable="@drawable/drawable_color_placeholder_bg"
+        twitter:errorDrawable="@drawable/bg_tweet_placeholder_photo_error"
+        twitter:scaleType="fill"
+        twitter:tint="?coreColorInlineAction">
+        <com.twitter.media.ui.fresco.FrescoDraweeView
+            android:id="@id/image"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            twitter:roundedCornerRadius="@dimen/typeahead_event_thumbnail_rounded_corner_radius" />
+    </com.twitter.media.ui.fresco.FrescoMediaImageView>
+</LinearLayout>

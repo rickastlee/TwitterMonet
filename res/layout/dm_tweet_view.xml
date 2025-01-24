@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <tag
+        android:value="com.twitter.tweetview.core.ui.TweetViewViewDelegateBinder"
+        android:id="@id/viewBinder" />
+    <tag
+        android:value="com.twitter.tweetview.core.TweetViewViewModel"
+        android:id="@id/viewModel" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@id/dm_tweet_container"
+        android:padding="@dimen/space_12"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <com.twitter.media.ui.image.UserImageView
+            android:id="@id/tweet_profile_image"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:userImageSize="@dimen/nano_user_image_size"
+            style="?tweetViewProfileImageStyle">
+            <tag
+                android:value="RingedUserImage"
+                android:id="@id/weaverComponent" />
+        </com.twitter.media.ui.image.UserImageView>
+        <include
+            android:ellipsize="start"
+            android:id="@id/tweet_header"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_4"
+            app:layout_constraintBottom_toBottomOf="@id/tweet_profile_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tweet_profile_image"
+            app:layout_constraintTop_toTopOf="@id/tweet_profile_image"
+            layout="@layout/tweet_header_view" />
+        <com.twitter.ui.widget.TextContentView
+            android:id="@id/tweet_content_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_4"
+            app:contentSize="@dimen/font_size_normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tweet_profile_image"
+            style="?tweetViewContentStyle">
+            <tag
+                android:value="TextContent"
+                android:id="@id/weaverComponent" />
+        </com.twitter.ui.widget.TextContentView>
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textColor="@color/twitter_blue"
+            android:id="@id/tweet_quote"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_8"
+            android:text="Show quote"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tweet_content_text" />
+        <com.twitter.tweetview.core.TweetViewContentHostContainer
+            android:id="@id/card_media_tweet_container"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/content_top_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tweet_content_text"
+            style="?tweetViewTweetViewContentHostContainer">
+            <tag
+                android:value="ContentHostContainer"
+                android:id="@id/weaverComponent" />
+        </com.twitter.tweetview.core.TweetViewContentHostContainer>
+        <ViewStub
+            android:id="@id/edit_outdated_callout_container"
+            android:layout="@layout/tweet_edit_outdated_callout"
+            android:inflatedId="@id/edit_outdated_callout_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/card_media_tweet_container"
+            app:layout_constraintWidth_default="wrap">
+            <tag
+                android:value="EditOutdatedCalloutStub"
+                android:id="@id/weaverComponent" />
+        </ViewStub>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</merge>

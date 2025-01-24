@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="?coreColorAppBackground"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <com.twitter.media.ui.image.UserImageView
+            android:id="@id/profile_image"
+            android:paddingTop="@dimen/space_8"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:paddingStart="@dimen/space_8"
+            android:paddingEnd="@dimen/space_8" />
+        <include
+            android:layout_gravity="bottom"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            layout="@layout/profile_button_bar" />
+    </LinearLayout>
+    <include
+        android:id="@id/profile_details_container"
+        layout="@layout/profile_details" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@id/modal_profile_actions_recycler_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+</LinearLayout>

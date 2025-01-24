@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/space_4"
+    android:animateLayoutChanges="true"
+    android:paddingVertical="@dimen/space_12"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_small"
+        android:textColor="?textColorPrimary"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_16"
+        android:text="@string/notif_sending_tweet"
+        android:drawablePadding="@dimen/space_12"
+        android:layout_marginHorizontal="@dimen/space_12"
+        app:drawableStartCompat="@drawable/ic_vector_checkmark_circle_fill"
+        app:drawableTint="@color/twitter_blue" />
+    <RelativeLayout
+        android:id="@id/tweet_preview_container"
+        android:background="@drawable/undo_nudge_tweet_background"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_16"
+        android:layout_marginHorizontal="@dimen/space_12"
+        android:paddingHorizontal="@dimen/space_12"
+        android:paddingVertical="@dimen/space_8">
+        <com.twitter.media.ui.image.TweetMediaView
+            android:id="@id/tweet_media_view"
+            android:layout_width="50.0dip"
+            android:layout_height="50.0dip"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="@dimen/space_8"
+            android:layout_alignParentStart="true" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_small"
+            android:textColor="?textColorPrimary"
+            android:ellipsize="end"
+            android:id="@id/tweet_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="5"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@id/tweet_media_view"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <com.twitter.ui.components.button.legacy.TwitterButton
+        android:id="@id/undo_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/space_12"
+        style="@style/TwitterButtonMediumBrandFilled" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@id/undo_nudge_toxic_tweet_container"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <View
+            android:background="@color/twitter_blue"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/border_thickness"
+            android:layout_marginTop="@dimen/space_12"
+            android:layout_marginBottom="@dimen/space_8" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_normal"
+            android:textStyle="bold"
+            android:textColor="?textColorPrimary"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/undo_nudge_toxic_prompt_title"
+            android:layout_marginHorizontal="@dimen/space_12" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textSize="@dimen/font_size_normal"
+            android:textColor="?textColorPrimary"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/undo_nudge_toxic_prompt_description"
+            android:layout_marginHorizontal="@dimen/space_12" />
+    </LinearLayout>
+</LinearLayout>

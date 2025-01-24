@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="?coreColorAppBackground"
+    android:focusable="false"
+    android:visibility="invisible"
+    android:clickable="false"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <com.twitter.media.ui.fresco.FrescoMediaImageView
+        android:id="@id/thumbnail_image"
+        android:layout_width="@dimen/space_80"
+        android:layout_height="wrap_content"
+        twitter:layout_constraintBottom_toBottomOf="parent"
+        twitter:layout_constraintEnd_toEndOf="parent">
+        <com.twitter.media.ui.fresco.FrescoDraweeView
+            android:id="@id/image"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            twitter:placeholderImage="@drawable/drawable_color_placeholder_bg"
+            twitter:roundedCornerRadius="@dimen/corner_radius_large"
+            twitter:scaleType="fill" />
+    </com.twitter.media.ui.fresco.FrescoMediaImageView>
+</androidx.constraintlayout.widget.ConstraintLayout>

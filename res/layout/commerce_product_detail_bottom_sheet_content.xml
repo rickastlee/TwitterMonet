@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:isScrollContainer="true"
+    android:paddingStart="@dimen/space_32"
+    android:paddingEnd="@dimen/space_32"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.Group
+        android:id="@id/user_info_group"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        app:constraint_referenced_ids="user_image_view,user_name,badge_image_view" />
+    <com.twitter.media.ui.image.UserImageView
+        android:id="@id/user_image_view"
+        android:layout_width="18.0dip"
+        android:layout_height="18.0dip"
+        android:layout_marginEnd="12.0dip"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:userImageSize="18.0dip"
+        style="?tweetViewProfileImageStyle" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textColor="?abstractColorDeepGray"
+        android:id="@id/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6.0dip"
+        app:layout_constraintBottom_toBottomOf="@id/user_image_view"
+        app:layout_constraintStart_toEndOf="@id/user_image_view"
+        app:layout_constraintTop_toTopOf="@id/user_image_view" />
+    <ImageView
+        android:id="@id/badge_image_view"
+        android:layout_width="14.0dip"
+        android:layout_height="14.0dip"
+        android:layout_marginStart="@dimen/space_4"
+        app:layout_constraintBottom_toBottomOf="@id/user_image_view"
+        app:layout_constraintStart_toEndOf="@id/user_name"
+        app:layout_constraintTop_toTopOf="@id/user_image_view" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_title_3"
+        android:textColor="?textColorPrimary"
+        android:id="@id/title"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/user_image_view" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textStyle="bold"
+        android:id="@id/price"
+        android:paddingBottom="@dimen/space_32"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_4"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        style="@style/ProductDropBodyText" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_body"
+        android:textColor="?abstractColorDeepGray"
+        android:id="@id/original_price"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/space_4"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/price"
+        app:layout_constraintTop_toTopOf="@id/price" />
+    <androidx.core.widget.NestedScrollView
+        android:id="@id/bottom_sheet_scroll_view"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintBottom_toTopOf="@id/margin_buffer"
+        app:layout_constraintTop_toBottomOf="@id/price">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <androidx.constraintlayout.widget.Group
+                android:id="@id/drop_date_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="shopping_clock_icon,product_drop_label_text,product_drop_date,drop_date_group_lower_margin" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@id/shopping_clock_icon"
+                android:layout_width="18.0dip"
+                android:layout_height="18.0dip"
+                android:tint="?abstractColorText"
+                android:importantForAccessibility="no"
+                app:layout_constraintBottom_toBottomOf="@id/product_drop_date"
+                app:layout_constraintTop_toTopOf="@id/product_drop_date"
+                app:srcCompat="@drawable/ic_vector_shopping_clock_stroke" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:id="@id/product_drop_label_text"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:text="@string/product_drop_label"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintTop_toTopOf="parent"
+                style="@style/ProductDropLabel" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:id="@id/product_drop_date"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/space_4"
+                android:layout_marginTop="@dimen/space_16"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@id/shopping_clock_icon"
+                app:layout_constraintTop_toBottomOf="@id/product_drop_label_text"
+                style="@style/ProductDropBodyText" />
+            <Space
+                android:id="@id/drop_date_group_lower_margin"
+                android:layout_width="0.0dip"
+                android:layout_height="@dimen/space_16"
+                app:layout_constraintTop_toBottomOf="@id/product_drop_date" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:id="@id/details_label_text"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:text="@string/details_label"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintTop_toBottomOf="@id/drop_date_group_lower_margin"
+                style="@style/ProductDropLabel" />
+            <com.twitter.ui.components.text.legacy.TypefacesTextView
+                android:id="@id/details_text"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_16"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/details_label_text"
+                style="@style/ProductDropBodyText" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+    <View
+        android:id="@id/upper_scroll_gradient"
+        android:background="@drawable/upper_scroll_gradient"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/product_scroll_gradient_height"
+        app:layout_constraintTop_toBottomOf="@id/price" />
+    <View
+        android:id="@id/margin_buffer"
+        android:background="?abstractColorCellBackground"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bottom_sheet_scroll_view" />
+</androidx.constraintlayout.widget.ConstraintLayout>

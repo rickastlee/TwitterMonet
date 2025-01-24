@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Button
+    android:id="@id/narrowcast_button"
+    android:background="@null"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/sticky_narrowcast_height"
+    android:foreground="?selectableItemBackground"
+    android:drawablePadding="@dimen/sticky_narrowcast_arrow_horizontal_padding"
+    android:contentDescription="@string/composer_narrowcast_button_content_description"
+    android:textAllCaps="false"
+    android:drawableEnd="@drawable/ic_narrowcast_button_arrow"
+    android:paddingStart="@dimen/sticky_narrowcast_horizontal_padding"
+    android:paddingEnd="@dimen/sticky_narrowcast_horizontal_padding"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

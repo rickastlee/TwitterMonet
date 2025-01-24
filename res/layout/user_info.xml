@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.media.ui.image.UserImageView
+        android:id="@id/user_image"
+        style="@style/UserImage" />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@id/user_checkbox"
+        android:layout_toEndOf="@id/user_image">
+        <include
+            layout="@layout/user_info_name" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/screenname_item"
+            android:layout_below="@id/name_layout"
+            style="@style/Username" />
+    </RelativeLayout>
+</merge>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:theme="@style/ThemeBase.Notification"
+        android:orientation="horizontal"
+        android:id="@id/notification_header"
+        android:paddingBottom="@dimen/xiaomi_notification_header_padding_bottom"
+        android:clipChildren="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="?notificationHeaderStyle"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+        <FrameLayout
+            android:id="@id/header_icon_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_gravity="center"
+                android:id="@id/icon"
+                android:layout_width="16.0dip"
+                android:layout_height="16.0dip"
+                android:src="@drawable/ic_stat_twitter"
+                android:tint="?colorPrimary"
+                android:contentDescription="@null"
+                app:tint="?colorPrimary" />
+        </FrameLayout>
+        <TextView
+            android:textAppearance="?notificationHeaderAppNameAppearance"
+            android:id="@id/app_name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:maxLength="7"
+            android:layout_marginStart="@dimen/notification_header_app_name_margin_start"
+            android:layout_marginEnd="4.0dip" />
+        <DateTimeView
+            android:textAppearance="@style/TextAppearance.Compat.Notification.Info"
+            android:id="@id/header_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="now"
+            android:layout_marginStart="4.0dip"
+            android:layout_marginEnd="@dimen/notification_header_separating_margin" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textAppearance="@style/TextAppearance.Compat.Notification.Title"
+            android:ellipsize="end"
+            android:id="@id/notification_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1" />
+        <include
+            layout="@layout/verify_icon" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textAppearance="@style/MaterialTextAppearance.App.Subtitle2"
+            android:ellipsize="end"
+            android:id="@id/notification_subtitle"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1" />
+        <TextView
+            android:textAppearance="@style/TextAppearance.Compat.Notification"
+            android:ellipsize="end"
+            android:id="@id/notification_text"
+            android:paddingBottom="@dimen/xiaomi_notification_content_padding"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1" />
+    </LinearLayout>
+</merge>

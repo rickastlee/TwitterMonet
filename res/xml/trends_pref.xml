@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.preference.SwitchPreferenceCompat
+        android:title="@string/personalized_trends_setting_title"
+        android:key="pref_trends_tailored"
+        android:summary="@string/personalized_trends_setting_description"
+        android:order="10"
+        android:defaultValue="true" />
+    <androidx.preference.Preference
+        android:title="@string/trend_locations"
+        android:key="pref_trends_location"
+        android:order="20" />
+    <androidx.preference.Preference
+        android:key="pref_trends_location_description"
+        android:summary="@string/trends_menu_change_loc_description"
+        android:order="30" />
+</androidx.preference.PreferenceScreen>

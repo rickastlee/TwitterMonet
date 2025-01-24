@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@id/playback_controls"
+    android:focusable="true"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <tv.periscope.android.view.PsImageView
+        android:id="@id/backward"
+        android:nextFocusRight="@id/play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ps__ic_rewind_icon"
+        android:contentDescription="@string/ps__accessibility_rewind_button"
+        style="@style/ps__AccessibilityControlBtn" />
+    <tv.periscope.android.view.PsImageView
+        android:id="@id/play"
+        android:nextFocusLeft="@id/backward"
+        android:nextFocusRight="@id/forward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ps__ic_play"
+        android:contentDescription="@string/ps__accessibility_play"
+        android:layout_marginStart="20.0dip"
+        android:layout_marginEnd="20.0dip"
+        android:layout_toEndOf="@id/backward"
+        android:accessibilityTraversalAfter="@id/backward"
+        style="@style/ps__AccessibilityControlBtn" />
+    <tv.periscope.android.view.PsImageView
+        android:id="@id/forward"
+        android:background="@drawable/ps__bg_accessibility_icon_bckd"
+        android:nextFocusLeft="@id/play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ps__ic_fast_forward"
+        android:contentDescription="@string/ps__accessibility_forward_button"
+        android:layout_toEndOf="@id/play"
+        android:accessibilityTraversalAfter="@id/play"
+        style="@style/ps__AccessibilityControlBtn" />
+</RelativeLayout>

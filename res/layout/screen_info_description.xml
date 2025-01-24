@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.ui.components.text.legacy.TypefacesTextView
+    android:textColor="?coreColorSecondaryText"
+    android:id="@id/_description"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/space_24"
+    android:layout_marginEnd="@dimen/space_24"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

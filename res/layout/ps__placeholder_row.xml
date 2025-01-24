@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tv.periscope.android.view.PsTextView
+    android:theme="@style/ps__AudienceSelectionRow"
+    android:id="@id/placeholder_text"
+    android:background="?android:selectableItemBackground"
+    android:paddingTop="8.0dip"
+    android:paddingBottom="8.0dip"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/ps__feed_row_height"
+    android:layout_marginStart="@dimen/ps__standard_spacing_16"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

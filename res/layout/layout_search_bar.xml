@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:background="@drawable/bg_search_bar"
+    android:paddingTop="@dimen/space_8"
+    android:paddingBottom="@dimen/space_8"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/space_12"
+    android:paddingEnd="@dimen/space_12"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.ui.widget.TwitterEditText
+        android:textSize="@dimen/font_size_normal"
+        android:textColor="?coreColorSecondaryText"
+        android:textColorHint="?coreColorSecondaryText"
+        android:layout_gravity="center"
+        android:id="@id/input_search"
+        android:background="@null"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/invite_search_label"
+        android:maxLines="1"
+        android:drawablePadding="@dimen/space_8"
+        android:inputType="text"
+        android:imeOptions="actionDone"
+        android:drawableStart="@drawable/ic_search_hint_dark" />
+</FrameLayout>

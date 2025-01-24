@@ -1,0 +1,3 @@
+com.twitter.database.hydrator.TwitterHydrationRegistrar
+com.twitter.dm.database.hydrator.DMHydrationRegistrar
+com.twitter.search.database.hydrator.SearchHydrationRegistrar

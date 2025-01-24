@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:gravity="center_horizontal"
+    android:layout_gravity="end|bottom|center"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <ViewStub
+        android:id="@id/lazy_fabs"
+        android:layout="@layout/composer_lazy_fabs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_32"
+        twitter:layout_constraintBottom_toBottomOf="parent"
+        twitter:layout_constraintEnd_toEndOf="parent" />
+    <com.twitter.ui.widget.FloatingActionButton
+        android:id="@id/composer_write"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        twitter:layout_constraintBottom_toBottomOf="parent"
+        twitter:layout_constraintEnd_toEndOf="parent"
+        style="@style/FabMenuCompose" />
+</androidx.constraintlayout.widget.ConstraintLayout>

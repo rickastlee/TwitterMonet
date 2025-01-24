@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.twitter.ui.widget.LandscapeAwareAspectRatioFrameLayout
+        android:id="@id/lex_video_wrapper"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        app:layout_constraintDimensionRatio="H,16:9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ViewStub
+            android:id="@id/error_view"
+            android:layout="@layout/video_error_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+        <include
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/video_container_host" />
+    </com.twitter.ui.widget.LandscapeAwareAspectRatioFrameLayout>
+    <com.twitter.android.liveevent.ui.SlateView
+        android:id="@id/broadcast_card_slate"
+        android:visibility="gone"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        app:layout_constraintDimensionRatio="H,16:9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:useSaliencyCropping="false"
+        app:withLabelStyle="badge" />
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@id/broadcast_media_barrier"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="lex_video_wrapper,broadcast_card_slate" />
+    <include
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/broadcast_media_barrier"
+        layout="@layout/broadcast_card_video_chin" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@id/tweet_profile_image_container"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout
+        android:id="@id/animation_container"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+    <com.twitter.media.ui.image.UserImageView
+        android:id="@id/tweet_profile_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="?tweetViewProfileImageStyle">
+        <tag
+            android:value="RingedUserImage"
+            android:id="@id/weaverComponent" />
+    </com.twitter.media.ui.image.UserImageView>
+    <ImageView
+        android:layout_gravity="end|bottom|center"
+        android:id="@id/audio_space_live_live_badge"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitCenter"
+        android:contentDescription="@null"
+        app:srcCompat="@drawable/ic_vector_audio_space_indicator" />
+    <tag
+        android:value="OuterUserImage"
+        android:id="@id/weaverComponent" />
+</FrameLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="horizontal"
+    android:id="@id/incognito_layout"
+    android:paddingTop="@dimen/space_12"
+    android:paddingBottom="@dimen/space_16"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.ui.components.text.legacy.TypefacesTextView
+        android:textSize="@dimen/font_size_normal"
+        android:textStyle="bold"
+        android:textColor="?coreColorPrimaryText"
+        android:layout_gravity="center_horizontal"
+        android:id="@id/incognito_text"
+        android:paddingTop="@dimen/space_4"
+        android:paddingBottom="@dimen/space_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/allow_incognito_toggle_text"
+        android:paddingEnd="@dimen/space_24"
+        android:layout_alignParentStart="true" />
+    <ImageView
+        android:layout_gravity="center_horizontal"
+        android:id="@id/incognito_info"
+        android:paddingTop="@dimen/space_8"
+        android:paddingBottom="@dimen/space_8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_vector_information_circle"
+        android:layout_alignTop="@id/incognito_text"
+        android:layout_alignBottom="@id/incognito_text"
+        android:contentDescription="null"
+        android:layout_alignEnd="@id/incognito_text"
+        app:tint="@color/twitter_blue" />
+    <androidx.appcompat.widget.SwitchCompat
+        android:layout_gravity="center_horizontal"
+        android:id="@id/incognito_toggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/incognito_text"
+        android:layout_alignBottom="@id/incognito_text"
+        android:layout_alignParentEnd="true" />
+</RelativeLayout>

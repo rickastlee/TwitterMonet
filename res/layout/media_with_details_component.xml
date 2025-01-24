@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <com.twitter.media.ui.fresco.FrescoMediaImageView
+        android:id="@id/card_image"
+        android:layout_width="@dimen/horizontal_component_media_size"
+        android:layout_height="@dimen/horizontal_component_media_size"
+        android:contentDescription="@null"
+        android:importantForAccessibility="no"
+        android:textAlignment="viewStart">
+        <com.twitter.media.ui.fresco.FrescoDraweeView
+            android:id="@id/image"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            twitter:failureImage="@drawable/bg_tweet_placeholder_photo_error"
+            twitter:placeholderImage="@drawable/drawable_color_placeholder_bg"
+            twitter:scaleType="fill" />
+    </com.twitter.media.ui.fresco.FrescoMediaImageView>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:paddingTop="@dimen/space_12"
+        android:paddingBottom="@dimen/space_4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="viewEnd"
+        android:layout_marginStart="@dimen/space_4"
+        android:paddingHorizontal="@dimen/space_12">
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/details_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="viewStart"
+            twitter:layout_constraintBottom_toTopOf="@id/details_context"
+            twitter:layout_constraintStart_toStartOf="parent"
+            twitter:layout_constraintTop_toTopOf="parent"
+            style="@style/BaseDetailsComponentTitlesText" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/details_context"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/topic"
+            android:textAlignment="viewStart"
+            android:paddingVertical="@dimen/space_4"
+            twitter:layout_constrainedWidth="true"
+            twitter:layout_constraintBottom_toBottomOf="parent"
+            twitter:layout_constraintHorizontal_bias="1.0"
+            twitter:layout_constraintHorizontal_chainStyle="packed"
+            twitter:layout_constraintStart_toStartOf="parent"
+            twitter:layout_constraintTop_toBottomOf="@id/details_title"
+            twitter:layout_constraintWidth_max="wrap"
+            twitter:layout_constraintWidth_min="1.0dip"
+            style="@style/MediaWithDetailsComponentSubtitlesText" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:textStyle="bold"
+            android:id="@id/details_middle_dot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/en_dot"
+            android:paddingVertical="@dimen/space_4"
+            twitter:layout_constrainedWidth="true"
+            twitter:layout_constraintBaseline_toBaselineOf="@id/details_context"
+            twitter:layout_constraintBottom_toBottomOf="parent"
+            twitter:layout_constraintEnd_toStartOf="@id/details_description"
+            twitter:layout_constraintHorizontal_bias="0.0"
+            twitter:layout_constraintHorizontal_chainStyle="packed"
+            twitter:layout_constraintStart_toEndOf="@id/details_context"
+            twitter:layout_constraintTop_toBottomOf="@id/details_title"
+            twitter:layout_constraintWidth_max="wrap"
+            twitter:layout_constraintWidth_min="1.0dip"
+            style="@style/MediaWithDetailsComponentSubtitlesText" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView
+            android:id="@id/details_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="viewEnd"
+            android:paddingVertical="@dimen/space_4"
+            twitter:layout_constrainedWidth="true"
+            twitter:layout_constraintBaseline_toBaselineOf="@id/details_middle_dot"
+            twitter:layout_constraintBottom_toBottomOf="parent"
+            twitter:layout_constraintEnd_toEndOf="parent"
+            twitter:layout_constraintHorizontal_bias="0.0"
+            twitter:layout_constraintHorizontal_chainStyle="packed"
+            twitter:layout_constraintStart_toEndOf="@id/details_middle_dot"
+            twitter:layout_constraintTop_toBottomOf="@id/details_title"
+            twitter:layout_constraintWidth_max="wrap"
+            twitter:layout_constraintWidth_min="1.0dip"
+            style="@style/MediaWithDetailsComponentSubtitlesText" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
