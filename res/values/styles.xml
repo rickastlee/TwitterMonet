@@ -5729,7 +5729,7 @@
         <item name="abstractColorLightGray">#ff2f3336</item>
         <item name="abstractColorLink">@color/twitter_blue</item>
         <item name="abstractColorMediumGray">#ff505457</item>
-        <item name="abstractColorText">#ffd9d9d9</item>
+        <item name="abstractColorText">@*android:color/system_neutral2_200</item>
         <item name="abstractColorUnread">#ff051d2b</item>
         <item name="abstractElevatedBackground">#ff1b2023</item>
         <item name="abstractElevatedBackgroundShadow">@color/black_opacity_10</item>
